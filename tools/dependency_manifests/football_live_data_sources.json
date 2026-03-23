@@ -1,0 +1,45 @@
+{
+  "project": "DirkOdds live football data sources",
+  "path": "football_predictor",
+  "provider": "mixed",
+  "requirements_file": "requirements.txt",
+  "dependencies": [
+    {
+      "name": "football-data.org",
+      "provider": "football-data.org",
+      "homepage": "https://www.football-data.org/",
+      "used_in": [
+        "football_predictor/live_data.py",
+        "football_predictor/predict_live.py"
+      ],
+      "purpose": "Live and scheduled football match feeds, competition schedules, and historical match synchronization into the local warehouse.",
+      "credit_required": true
+    },
+    {
+      "name": "TheSportsDB",
+      "provider": "thesportsdb",
+      "homepage": "https://www.thesportsdb.com/",
+      "used_in": [
+        "football_predictor/live_data.py",
+        "football_predictor/predict_live.py"
+      ],
+      "purpose": "Supplementary football event schedules and season event synchronization for the local warehouse.",
+      "credit_required": true
+    },
+    {
+      "name": "OpenWeather One Call API 3.0",
+      "provider": "openweather",
+      "homepage": "https://openweathermap.org/api/one-call-3",
+      "used_in": [
+        "football_predictor/weather.py",
+        "football_predictor/predict_live.py"
+      ],
+      "purpose": "Weather context and severity adjustment for upcoming fixture forecasts and simulation drag terms.",
+      "credit_required": true
+    }
+  ],
+  "notes": [
+    "Live source coverage depends on configured API keys, provider plans, and network availability.",
+    "Keep THIRD_PARTY_CREDITS.md aligned with this manifest whenever the live data stack changes."
+  ]
+}

@@ -1,12 +1,29 @@
 #include "egosphere.h"
+#include <math.h>
 #include <stdio.h>
 #include <stdlib.h>
+
+#define DEMO_SAVE_PATH "egosphere_rivals.dat"
 
 static const char *ctx_name(Context c) { return c == CONTEXT_COMBAT ? "COMBAT" : "HABIT"; }
 
 int main(void) {
     Agent a;
+    MindSphereRivalary rivals = {0};
+    MindSphereRivalary reloaded = {0};
+    MindSphereConfig config = mindsphere_default_config();
+    RivalIdentity *marshal;
+    char rival_summary[256];
+    MindSphereNarrativeHooks hooks;
+
     egosphere_init_agent(&a, "NPC_01");
+    config.planner_states = 24;
+    config.planner_actions = 5;
+    config.replay_capacity = 384;
+    config.narrative_protocol_enabled = 1;
+    mindsphere_init_with_config(&rivals, 4, &config);
+    mindsphere_seed_player_profile(&rivals, "Player Echo", 4242u);
+    marshal = mindsphere_add_antithentity(&rivals, "The Ashen Magistrate", "verdict-knight", 1337u);
 
     /* Initialize replay buffer, Q-learner and DQN */
     ReplayBuffer rb;
@@ -41,11 +58,35 @@ int main(void) {
         int next_last_action = action;
         int next_state = (int)ctx * 3 + (next_last_action % 3);
 
+        mindsphere_record_player_style(
+            &rivals,
+            ctx == CONTEXT_COMBAT ? 0.75 : 0.35,
+            action == 1 ? 0.75 : 0.35,
+            action == 0 ? 0.70 : 0.25,
+            action == 2 ? 0.80 : 0.30);
+
         /* push into replay buffer; priority ~ abs(reward) */
         rb_push(&rb, state, action, reward, next_state, 0, fabs(reward) + 1e-3);
 
         /* update Q-table immediately (online) */
         q_update(&q, state, action, reward, next_state, 0);
+        if (marshal) {
+            int rival_action = mindsphere_choose_action(marshal, state);
+            int action_alignment = rival_action % 3;
+            double rival_reward = reward - (action_alignment == action ? 0.1 : -0.05);
+            mindsphere_record_outcome(&rivals, marshal, state, rival_action, rival_reward, next_state, 0);
+            if (t % 75 == 10) {
+                mindsphere_record_dialogue_choice(marshal, -0.03, 0.04, 0.02, 0.01);
+                mindsphere_record_player_choice(&rivals, 0.02, 0.01, 0.03, -0.02);
+            }
+            if (t % 90 == 45) {
+                mindsphere_record_consequence(marshal, 0.8, (t / 45) % 2, (t / 90) % 2 == 0);
+                mindsphere_record_player_choice(&rivals, (t / 45) % 2 ? -0.04 : 0.05, 0.02, 0.0, 0.03);
+            }
+            if (t % 16 == 0) {
+                (void)mindsphere_rehearse_rival(marshal, 12);
+            }
+        }
 
         /* occasionally perform batch training from buffer for DQN and Q (demonstration) */
         if (t % 8 == 0 && rb.count >= 16) {
@@ -82,7 +123,42 @@ int main(void) {
         last_action = next_last_action;
     }
 
+    if (marshal) {
+        mindsphere_describe_rival(marshal, rival_summary, sizeof(rival_summary));
+        printf("rival before save: %s\n", rival_summary);
+        printf("resonance before save: familiarity=%.2f reciprocity=%.2f tension=%.2f permeability=%.2f\n",
+            marshal->player_resonance.familiarity,
+            marshal->player_resonance.reciprocity,
+            marshal->player_resonance.tension,
+            marshal->player_resonance.permeability);
+        mindsphere_collect_narrative_hooks(&rivals, &hooks);
+        printf("narrative field: active=%d revelation=%.2f alliance=%.2f rupture=%.2f ending=%.2f omen=%.2f\n",
+            hooks.active,
+            hooks.revelation_pressure,
+            hooks.alliance_pressure,
+            hooks.rupture_pressure,
+            hooks.ending_pressure,
+            hooks.omen_pressure);
+    }
+
+    if (!mindsphere_save(&rivals, DEMO_SAVE_PATH)) {
+        fprintf(stderr, "failed to save rival state to %s\n", DEMO_SAVE_PATH);
+    } else if (!mindsphere_load(&reloaded, DEMO_SAVE_PATH)) {
+        fprintf(stderr, "failed to reload rival state from %s\n", DEMO_SAVE_PATH);
+    } else if (reloaded.count > 0) {
+        mindsphere_describe_rival(&reloaded.rivals[0], rival_summary, sizeof(rival_summary));
+        printf("rival after load:  %s\n", rival_summary);
+        printf("reloaded planner: states=%d actions=%d replay_capacity=%zu\n", reloaded.config.planner_states, reloaded.config.planner_actions, reloaded.config.replay_capacity);
+        printf("reloaded resonance: familiarity=%.2f reciprocity=%.2f tension=%.2f permeability=%.2f\n",
+            reloaded.rivals[0].player_resonance.familiarity,
+            reloaded.rivals[0].player_resonance.reciprocity,
+            reloaded.rivals[0].player_resonance.tension,
+            reloaded.rivals[0].player_resonance.permeability);
+    }
+
     /* cleanup */
+    mindsphere_free(&reloaded);
+    mindsphere_free(&rivals);
     rb_free(&rb);
     q_free(&q);
     dqn_free(&dqn);

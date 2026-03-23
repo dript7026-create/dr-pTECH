@@ -1,0 +1,38 @@
+{
+  "scene_name": "Egosphere Review Playback",
+  "camera": {
+    "distance": 8.4,
+    "yaw": -34.0,
+    "pitch": 18.0,
+    "center_y": 1.2
+  },
+  "models": [
+    {
+      "name": "Street Plane",
+      "mesh": "playback/meshes/street_plane.obj",
+      "texture": "street_grid",
+      "label": "urbden lane",
+      "position": [0.0, 0.0, 0.0],
+      "rotation": [0.0, 0.0, 0.0],
+      "scale": [1.0, 1.0, 1.0]
+    },
+    {
+      "name": "Courthouse Block",
+      "mesh": "playback/meshes/courthouse_block.obj",
+      "texture": "courthouse_facade",
+      "label": "urbden court",
+      "position": [0.0, 0.0, -1.6],
+      "rotation": [0.0, 0.0, 0.0],
+      "scale": [1.0, 1.0, 1.0]
+    },
+    {
+      "name": "Rival Standee",
+      "mesh": "playback/meshes/rival_standee.obj",
+      "texture": "rival_banner",
+      "label": "rival",
+      "position": [1.75, 0.05, 1.35],
+      "rotation": [0.0, -16.0, 0.0],
+      "scale": [1.0, 1.0, 1.0]
+    }
+  ]
+}

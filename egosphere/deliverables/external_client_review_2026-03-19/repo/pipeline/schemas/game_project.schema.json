@@ -1,0 +1,178 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "drIpTECH Cross-Tool Game Project",
+  "type": "object",
+  "required": [
+    "project_name",
+    "seed",
+    "authoring",
+    "assets",
+    "gameplay",
+    "targets"
+  ],
+  "$defs": {
+    "vector3": {
+      "type": "array",
+      "minItems": 3,
+      "maxItems": 3,
+      "items": { "type": "number" }
+    },
+    "asset": {
+      "type": "object",
+      "required": ["id", "path"],
+      "properties": {
+        "id": { "type": "string" },
+        "path": { "type": "string" },
+        "usage": { "type": "string" },
+        "frames": { "type": "integer", "minimum": 1 },
+        "precache": { "type": "boolean" },
+        "material_profile": { "type": "string" },
+        "asset_type": { "type": "string" }
+      }
+    },
+    "scene": {
+      "type": "object",
+      "required": ["id", "location"],
+      "properties": {
+        "id": { "type": "string" },
+        "scene_type": { "type": "string" },
+        "location": { "type": "string" },
+        "timeline_frames": {
+          "type": "array",
+          "minItems": 2,
+          "maxItems": 2,
+          "items": { "type": "integer" }
+        },
+        "triggers": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["id", "frame", "event"],
+            "properties": {
+              "id": { "type": "string" },
+              "frame": { "type": "integer" },
+              "event": { "type": "string" },
+              "target": { "type": "string" }
+            }
+          }
+        }
+      }
+    },
+    "entity": {
+      "type": "object",
+      "required": ["id", "classname", "spawn"],
+      "properties": {
+        "id": { "type": "string" },
+        "classname": { "type": "string" },
+        "asset_id": { "type": "string" },
+        "spawn": { "$ref": "#/$defs/vector3" },
+        "logic_components": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    },
+    "system": {
+      "oneOf": [
+        { "type": "string" },
+        {
+          "type": "object",
+          "required": ["name"],
+          "properties": {
+            "name": { "type": "string" },
+            "priority": { "type": "integer" },
+            "lifecycle": {
+              "type": "array",
+              "items": { "type": "string" }
+            },
+            "init_fn": { "type": "string" },
+            "tick_fn": { "type": "string" }
+          }
+        }
+      ]
+    }
+  },
+  "properties": {
+    "project_name": { "type": "string" },
+    "seed": { "type": "string" },
+    "authoring": {
+      "type": "object",
+      "required": ["clipstudio", "blender", "idtech2"],
+      "properties": {
+        "clipstudio": {
+          "type": "object",
+          "properties": {
+            "canvas": {
+              "type": "object",
+              "required": ["width", "height", "layers"],
+              "properties": {
+                "width": { "type": "integer", "minimum": 1 },
+                "height": { "type": "integer", "minimum": 1 },
+                "layers": { "type": "integer", "minimum": 1 }
+              }
+            },
+            "timeline_fps": { "type": "integer", "minimum": 1 },
+            "script_symbols": { "type": "array", "items": { "type": "string" } },
+            "layers": { "type": "array", "items": { "type": "object" } },
+            "symbol_bindings": { "type": "array", "items": { "type": "object" } },
+            "frame_tags": { "type": "array", "items": { "type": "object" } },
+            "hitboxes": { "type": "array", "items": { "type": "object" } },
+            "script_bindings": { "type": "array", "items": { "type": "object" } },
+            "export_profile": { "type": "object" }
+          }
+        },
+        "blender": {
+          "type": "object",
+          "properties": {
+            "scale": { "type": "number" },
+            "extrusion_depth": { "type": "number" },
+            "rig_profile": { "type": "string" },
+            "material_profiles": { "type": "array", "items": { "type": "object" } },
+            "rig_overrides": { "type": "array", "items": { "type": "object" } },
+            "nodecraft_graphs": { "type": "array", "items": { "type": "object" } },
+            "scene_build": { "type": "array", "items": { "type": "object" } }
+          }
+        },
+        "idtech2": {
+          "type": "object",
+          "required": ["module_name", "asset_root", "autofactor_prefix"],
+          "properties": {
+            "module_name": { "type": "string" },
+            "asset_root": { "type": "string" },
+            "autofactor_prefix": { "type": "string" },
+            "precache_groups": { "type": "array", "items": { "type": "object" } },
+            "system_dispatch": { "type": "object" },
+            "bootstrap": { "type": "object" }
+          }
+        }
+      }
+    },
+    "assets": {
+      "type": "object",
+      "required": ["tilesets", "sprites", "portraits"],
+      "properties": {
+        "tilesets": { "type": "array", "items": { "$ref": "#/$defs/asset" } },
+        "sprites": { "type": "array", "items": { "$ref": "#/$defs/asset" } },
+        "portraits": { "type": "array", "items": { "$ref": "#/$defs/asset" } }
+      }
+    },
+    "gameplay": {
+      "type": "object",
+      "required": ["scenes", "entities", "systems"],
+      "properties": {
+        "scenes": { "type": "array", "items": { "$ref": "#/$defs/scene" } },
+        "entities": { "type": "array", "items": { "$ref": "#/$defs/entity" } },
+        "systems": { "type": "array", "items": { "$ref": "#/$defs/system" } }
+      }
+    },
+    "targets": {
+      "type": "object",
+      "required": ["clipstudio_bundle", "blender_bundle", "idtech2_bundle"],
+      "properties": {
+        "clipstudio_bundle": { "type": "string" },
+        "blender_bundle": { "type": "string" },
+        "idtech2_bundle": { "type": "string" }
+      }
+    }
+  }
+}

@@ -1,0 +1,187 @@
+{
+  "project": {
+    "name": "Kaiju Gaiden",
+    "canonicalRuntime": "KaijuGaiden/kaijugaiden.c",
+    "relatedPrototypeRoot": "KaijuGaiden/src",
+    "targets": [
+      "TARGET_GB",
+      "TARGET_GBA",
+      "TARGET_HOST"
+    ]
+  },
+  "runtime": {
+    "implementedPhases": [
+      "PHASE_SPLASH",
+      "PHASE_CINEMATIC",
+      "PHASE_TITLE",
+      "PHASE_STAGE_INTRO",
+      "PHASE_COMBAT",
+      "PHASE_BOSS_DEATH",
+      "PHASE_CYPHER_DROP",
+      "PHASE_GAME_OVER",
+      "PHASE_PASSWORD"
+    ],
+    "currentStage": {
+      "name": "Harbor Shore",
+      "boss": "Harbor Leviathan",
+      "reward": "Harbor Cypher"
+    },
+    "combatConstants": {
+      "playerMaxHp": 6,
+      "bossHpPhase1": 12,
+      "bossHpPhase2": 10,
+      "bossHpPhase3": 8,
+      "minionHp": 2,
+      "minionMax": 5,
+      "minionAttackRange": 18,
+      "minionWindupFrames": 14,
+      "minionRecoverFrames": 20,
+      "attackComboWindow": 20,
+      "attackTotalFrames": 14,
+      "attackActiveFrame": 8,
+      "inputBufferFrames": 5,
+      "nanocellMax": 9,
+      "nanocellBoostDurationFrames": 90,
+      "passwordLength": 16
+    },
+    "bossAttackTypes": [
+      "BOSS_ATK_SWEEP",
+      "BOSS_ATK_SPIT",
+      "BOSS_ATK_SLAM",
+      "BOSS_ATK_TIDAL"
+    ],
+    "combatBanners": [
+      "BANNER_NONE",
+      "BANNER_WAVE_CLEAR",
+      "BANNER_BOSS_RISE",
+      "BANNER_DODGE",
+      "BANNER_PERFECT",
+      "BANNER_FINISHER",
+      "BANNER_BOSS_STUN"
+    ]
+  },
+  "assets": {
+    "active": [
+      {
+        "path": "KaijuGaiden/assets/gb/bg_tiles_generated.h",
+        "kind": "background_tiles",
+        "contents": [
+          "ground",
+          "water",
+          "cliff",
+          "sky",
+          "splash",
+          "title"
+        ]
+      },
+      {
+        "path": "KaijuGaiden/assets/gb/hud_tiles_generated.h",
+        "kind": "hud_tiles",
+        "contents": [
+          "player_hp_segment",
+          "boss_hp_bar"
+        ]
+      },
+      {
+        "path": "KaijuGaiden/assets/gb/spr_rei_generated.h",
+        "kind": "player_sprite_tiles",
+        "contents": [
+          "idle",
+          "run",
+          "attack"
+        ]
+      },
+      {
+        "path": "KaijuGaiden/assets/gb/spr_boss_generated.h",
+        "kind": "boss_sprite_tiles",
+        "contents": [
+          "harbor_leviathan_phase_1",
+          "harbor_leviathan_phase_2",
+          "harbor_leviathan_phase_3"
+        ]
+      },
+      {
+        "path": "KaijuGaiden/assets/gb/spr_minion_generated.h",
+        "kind": "minion_sprite_tiles",
+        "contents": [
+          "generic_minion"
+        ]
+      },
+      {
+        "path": "KaijuGaiden/assets/gb/spr_fx_generated.h",
+        "kind": "fx_sprite_tiles",
+        "contents": [
+          "hit_spark",
+          "nanocell_orb"
+        ]
+      },
+      {
+        "path": "KaijuGaiden/assets/gb/spr_cinematic_generated.h",
+        "kind": "cinematic_sprite_tiles",
+        "contents": [
+          "intro_kaiju_a",
+          "intro_kaiju_b"
+        ]
+      }
+    ],
+    "legacy": [
+      "KaijuGaiden/assets/rei_assets.h",
+      "KaijuGaiden/assets/boss_assets.h",
+      "KaijuGaiden/assets/minion1_assets.h",
+      "KaijuGaiden/assets/minion2_assets.h",
+      "KaijuGaiden/assets/minion3_assets.h",
+      "KaijuGaiden/assets/nanocell1_assets.h",
+      "KaijuGaiden/assets/nanocell2_assets.h",
+      "KaijuGaiden/assets/attackfx1_assets.h",
+      "KaijuGaiden/assets/attackfx2_assets.h",
+      "KaijuGaiden/assets/blodfx1_assets.h",
+      "KaijuGaiden/assets/menunewgame_assets.h",
+      "KaijuGaiden/assets/titlescreen_assets.h",
+      "KaijuGaiden/assets/placeholder_assets.h"
+    ],
+    "authoring": [
+      "KaijuGaiden/assets/placeholderassets/Audio",
+      "KaijuGaiden/assets/placeholderassets/Graphical",
+      "KaijuGaiden/assets/titlescreen"
+    ],
+    "planned": [
+      "boss_2_sprite_set",
+      "biome_2_background_set",
+      "expanded_minion_roster",
+      "vn_panel_art",
+      "multiplayer_ui_assets",
+      "full_audio_package"
+    ]
+  },
+  "prototypeModules": [
+    "KaijuGaiden/src/game.c",
+    "KaijuGaiden/src/state.c",
+    "KaijuGaiden/src/password.c",
+    "KaijuGaiden/src/genetics.c",
+    "KaijuGaiden/src/boss.c",
+    "KaijuGaiden/src/boss_manager.c",
+    "KaijuGaiden/src/minion.c",
+    "KaijuGaiden/src/sprites.c",
+    "KaijuGaiden/src/ui.c",
+    "KaijuGaiden/src/vn.c",
+    "KaijuGaiden/src/audio.c",
+    "KaijuGaiden/src/gba_assets_loader.c"
+  ],
+  "validation": {
+    "tools": [
+      "KaijuGaiden/tools/verify_input_contract.py",
+      "KaijuGaiden/tools/verify_dmg_constraints.py"
+    ],
+    "playtest": [
+      "KaijuGaiden/run_qaijockey.py",
+      "KaijuGaiden/dist/kaijugaiden_host.exe"
+    ]
+  },
+  "nextProductionPriorities": [
+    "lock Harbor Shore as baseline encounter",
+    "introduce data-driven stage and boss definitions",
+    "add second boss and second biome",
+    "make cypher consequences mechanically real",
+    "reconcile monolithic runtime with modular prototype architecture"
+  ]
+}

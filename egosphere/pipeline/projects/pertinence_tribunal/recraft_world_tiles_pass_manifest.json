@@ -1,0 +1,1082 @@
+[
+  {
+    "name": "hallowfen_borderlands_skyline_backdrop",
+    "prompt": "cohesive 2D side-view metroidvania environment concept tile, hand-painted souls-like world art, Pertinence: Tribunal visual bible, readable traversal lanes for real-time exploration and real-time combat, consistent side-view scale, coherent lighting, coherent architectural language, no text, full environment panel, production-ready world tile concept, region: Hallowfen Borderlands, visual direction: flood barriers, reed villages, plague warnings, and leaning timber walkways at the frontier of the accusation, palette emphasis: peat black, tannin brown, rotten reed gold, damp bone ivory, rusted lantern orange, asset role: wide atmospheric skyline backdrop establishing the region horizon and weather rhythm, coherent with the other Pertinence: Tribunal world tiles, suitable for interconnected metroidvania world development",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/tiles/world_buildout/hallowfen_borderlands_skyline_backdrop.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "hallowfen_borderlands_far_parallax",
+    "prompt": "cohesive 2D side-view metroidvania environment concept tile, hand-painted souls-like world art, Pertinence: Tribunal visual bible, readable traversal lanes for real-time exploration and real-time combat, consistent side-view scale, coherent lighting, coherent architectural language, no text, full environment panel, production-ready world tile concept, region: Hallowfen Borderlands, visual direction: flood barriers, reed villages, plague warnings, and leaning timber walkways at the frontier of the accusation, palette emphasis: peat black, tannin brown, rotten reed gold, damp bone ivory, rusted lantern orange, asset role: far-distance parallax layer with major silhouettes and long-depth shapes, coherent with the other Pertinence: Tribunal world tiles, suitable for interconnected metroidvania world development",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/tiles/world_buildout/hallowfen_borderlands_far_parallax.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "hallowfen_borderlands_mid_parallax",
+    "prompt": "cohesive 2D side-view metroidvania environment concept tile, hand-painted souls-like world art, Pertinence: Tribunal visual bible, readable traversal lanes for real-time exploration and real-time combat, consistent side-view scale, coherent lighting, coherent architectural language, no text, full environment panel, production-ready world tile concept, region: Hallowfen Borderlands, visual direction: flood barriers, reed villages, plague warnings, and leaning timber walkways at the frontier of the accusation, palette emphasis: peat black, tannin brown, rotten reed gold, damp bone ivory, rusted lantern orange, asset role: mid-distance parallax layer with readable structures and traversal foreshadowing, coherent with the other Pertinence: Tribunal world tiles, suitable for interconnected metroidvania world development",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/tiles/world_buildout/hallowfen_borderlands_mid_parallax.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "hallowfen_borderlands_floor_run",
+    "prompt": "cohesive 2D side-view metroidvania environment concept tile, hand-painted souls-like world art, Pertinence: Tribunal visual bible, readable traversal lanes for real-time exploration and real-time combat, consistent side-view scale, coherent lighting, coherent architectural language, no text, full environment panel, production-ready world tile concept, region: Hallowfen Borderlands, visual direction: flood barriers, reed villages, plague warnings, and leaning timber walkways at the frontier of the accusation, palette emphasis: peat black, tannin brown, rotten reed gold, damp bone ivory, rusted lantern orange, asset role: primary walkable floor tile strip for standard traversal and melee combat footing, coherent with the other Pertinence: Tribunal world tiles, suitable for interconnected metroidvania world development",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/tiles/world_buildout/hallowfen_borderlands_floor_run.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "hallowfen_borderlands_floor_broken",
+    "prompt": "cohesive 2D side-view metroidvania environment concept tile, hand-painted souls-like world art, Pertinence: Tribunal visual bible, readable traversal lanes for real-time exploration and real-time combat, consistent side-view scale, coherent lighting, coherent architectural language, no text, full environment panel, production-ready world tile concept, region: Hallowfen Borderlands, visual direction: flood barriers, reed villages, plague warnings, and leaning timber walkways at the frontier of the accusation, palette emphasis: peat black, tannin brown, rotten reed gold, damp bone ivory, rusted lantern orange, asset role: damaged or interrupted floor tile strip for jumps, drops, and combat spacing variation, coherent with the other Pertinence: Tribunal world tiles, suitable for interconnected metroidvania world development",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/tiles/world_buildout/hallowfen_borderlands_floor_broken.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "hallowfen_borderlands_wall_face",
+    "prompt": "cohesive 2D side-view metroidvania environment concept tile, hand-painted souls-like world art, Pertinence: Tribunal visual bible, readable traversal lanes for real-time exploration and real-time combat, consistent side-view scale, coherent lighting, coherent architectural language, no text, full environment panel, production-ready world tile concept, region: Hallowfen Borderlands, visual direction: flood barriers, reed villages, plague warnings, and leaning timber walkways at the frontier of the accusation, palette emphasis: peat black, tannin brown, rotten reed gold, damp bone ivory, rusted lantern orange, asset role: main wall tile surface with repeatable material logic for full-area construction, coherent with the other Pertinence: Tribunal world tiles, suitable for interconnected metroidvania world development",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/tiles/world_buildout/hallowfen_borderlands_wall_face.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "hallowfen_borderlands_wall_corner",
+    "prompt": "cohesive 2D side-view metroidvania environment concept tile, hand-painted souls-like world art, Pertinence: Tribunal visual bible, readable traversal lanes for real-time exploration and real-time combat, consistent side-view scale, coherent lighting, coherent architectural language, no text, full environment panel, production-ready world tile concept, region: Hallowfen Borderlands, visual direction: flood barriers, reed villages, plague warnings, and leaning timber walkways at the frontier of the accusation, palette emphasis: peat black, tannin brown, rotten reed gold, damp bone ivory, rusted lantern orange, asset role: inner or outer wall corner transition tile with consistent masonry or timber logic, coherent with the other Pertinence: Tribunal world tiles, suitable for interconnected metroidvania world development",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/tiles/world_buildout/hallowfen_borderlands_wall_corner.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "hallowfen_borderlands_platform_bridge",
+    "prompt": "cohesive 2D side-view metroidvania environment concept tile, hand-painted souls-like world art, Pertinence: Tribunal visual bible, readable traversal lanes for real-time exploration and real-time combat, consistent side-view scale, coherent lighting, coherent architectural language, no text, full environment panel, production-ready world tile concept, region: Hallowfen Borderlands, visual direction: flood barriers, reed villages, plague warnings, and leaning timber walkways at the frontier of the accusation, palette emphasis: peat black, tannin brown, rotten reed gold, damp bone ivory, rusted lantern orange, asset role: elevated bridge or platform tile segment for layered traversal routes, coherent with the other Pertinence: Tribunal world tiles, suitable for interconnected metroidvania world development",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/tiles/world_buildout/hallowfen_borderlands_platform_bridge.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "hallowfen_borderlands_gate_arch",
+    "prompt": "cohesive 2D side-view metroidvania environment concept tile, hand-painted souls-like world art, Pertinence: Tribunal visual bible, readable traversal lanes for real-time exploration and real-time combat, consistent side-view scale, coherent lighting, coherent architectural language, no text, full environment panel, production-ready world tile concept, region: Hallowfen Borderlands, visual direction: flood barriers, reed villages, plague warnings, and leaning timber walkways at the frontier of the accusation, palette emphasis: peat black, tannin brown, rotten reed gold, damp bone ivory, rusted lantern orange, asset role: gate, archway, or threshold tile module for chokepoints and route transitions, coherent with the other Pertinence: Tribunal world tiles, suitable for interconnected metroidvania world development",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/tiles/world_buildout/hallowfen_borderlands_gate_arch.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "hallowfen_borderlands_traversal_vertical",
+    "prompt": "cohesive 2D side-view metroidvania environment concept tile, hand-painted souls-like world art, Pertinence: Tribunal visual bible, readable traversal lanes for real-time exploration and real-time combat, consistent side-view scale, coherent lighting, coherent architectural language, no text, full environment panel, production-ready world tile concept, region: Hallowfen Borderlands, visual direction: flood barriers, reed villages, plague warnings, and leaning timber walkways at the frontier of the accusation, palette emphasis: peat black, tannin brown, rotten reed gold, damp bone ivory, rusted lantern orange, asset role: vertical traversal tile setpiece such as ladder shaft, chainwell, or elevator spine, coherent with the other Pertinence: Tribunal world tiles, suitable for interconnected metroidvania world development",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/tiles/world_buildout/hallowfen_borderlands_traversal_vertical.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "hallowfen_borderlands_hazard_overlay",
+    "prompt": "cohesive 2D side-view metroidvania environment concept tile, hand-painted souls-like world art, Pertinence: Tribunal visual bible, readable traversal lanes for real-time exploration and real-time combat, consistent side-view scale, coherent lighting, coherent architectural language, no text, transparent background overlay only, no opaque backdrop, gameplay FX layer, region: Hallowfen Borderlands, visual direction: flood barriers, reed villages, plague warnings, and leaning timber walkways at the frontier of the accusation, palette emphasis: peat black, tannin brown, rotten reed gold, damp bone ivory, rusted lantern orange, asset role: combat hazard or weather overlay supporting the region tone while preserving gameplay readability, coherent with the other Pertinence: Tribunal world tiles, suitable for interconnected metroidvania world development",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/tiles/world_buildout/hallowfen_borderlands_hazard_overlay.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "hallowfen_borderlands_landmark_setpiece",
+    "prompt": "cohesive 2D side-view metroidvania environment concept tile, hand-painted souls-like world art, Pertinence: Tribunal visual bible, readable traversal lanes for real-time exploration and real-time combat, consistent side-view scale, coherent lighting, coherent architectural language, no text, full environment panel, production-ready world tile concept, region: Hallowfen Borderlands, visual direction: flood barriers, reed villages, plague warnings, and leaning timber walkways at the frontier of the accusation, palette emphasis: peat black, tannin brown, rotten reed gold, damp bone ivory, rusted lantern orange, asset role: hero landmark panel anchoring the region identity and route memory, coherent with the other Pertinence: Tribunal world tiles, suitable for interconnected metroidvania world development",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/tiles/world_buildout/hallowfen_borderlands_landmark_setpiece.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "tribunal_causeway_skyline_backdrop",
+    "prompt": "cohesive 2D side-view metroidvania environment concept tile, hand-painted souls-like world art, Pertinence: Tribunal visual bible, readable traversal lanes for real-time exploration and real-time combat, consistent side-view scale, coherent lighting, coherent architectural language, no text, full environment panel, production-ready world tile concept, region: Tribunal Causeway, visual direction: monumental bridges, legal statuary, sealed gates, and militarized checkpoints leading toward the capital court, palette emphasis: cold sandstone, verdict brass, rain slate, signal crimson, fog blue, asset role: wide atmospheric skyline backdrop establishing the region horizon and weather rhythm, coherent with the other Pertinence: Tribunal world tiles, suitable for interconnected metroidvania world development",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/tiles/world_buildout/tribunal_causeway_skyline_backdrop.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "tribunal_causeway_far_parallax",
+    "prompt": "cohesive 2D side-view metroidvania environment concept tile, hand-painted souls-like world art, Pertinence: Tribunal visual bible, readable traversal lanes for real-time exploration and real-time combat, consistent side-view scale, coherent lighting, coherent architectural language, no text, full environment panel, production-ready world tile concept, region: Tribunal Causeway, visual direction: monumental bridges, legal statuary, sealed gates, and militarized checkpoints leading toward the capital court, palette emphasis: cold sandstone, verdict brass, rain slate, signal crimson, fog blue, asset role: far-distance parallax layer with major silhouettes and long-depth shapes, coherent with the other Pertinence: Tribunal world tiles, suitable for interconnected metroidvania world development",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/tiles/world_buildout/tribunal_causeway_far_parallax.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "tribunal_causeway_mid_parallax",
+    "prompt": "cohesive 2D side-view metroidvania environment concept tile, hand-painted souls-like world art, Pertinence: Tribunal visual bible, readable traversal lanes for real-time exploration and real-time combat, consistent side-view scale, coherent lighting, coherent architectural language, no text, full environment panel, production-ready world tile concept, region: Tribunal Causeway, visual direction: monumental bridges, legal statuary, sealed gates, and militarized checkpoints leading toward the capital court, palette emphasis: cold sandstone, verdict brass, rain slate, signal crimson, fog blue, asset role: mid-distance parallax layer with readable structures and traversal foreshadowing, coherent with the other Pertinence: Tribunal world tiles, suitable for interconnected metroidvania world development",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/tiles/world_buildout/tribunal_causeway_mid_parallax.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "tribunal_causeway_floor_run",
+    "prompt": "cohesive 2D side-view metroidvania environment concept tile, hand-painted souls-like world art, Pertinence: Tribunal visual bible, readable traversal lanes for real-time exploration and real-time combat, consistent side-view scale, coherent lighting, coherent architectural language, no text, full environment panel, production-ready world tile concept, region: Tribunal Causeway, visual direction: monumental bridges, legal statuary, sealed gates, and militarized checkpoints leading toward the capital court, palette emphasis: cold sandstone, verdict brass, rain slate, signal crimson, fog blue, asset role: primary walkable floor tile strip for standard traversal and melee combat footing, coherent with the other Pertinence: Tribunal world tiles, suitable for interconnected metroidvania world development",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/tiles/world_buildout/tribunal_causeway_floor_run.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "tribunal_causeway_floor_broken",
+    "prompt": "cohesive 2D side-view metroidvania environment concept tile, hand-painted souls-like world art, Pertinence: Tribunal visual bible, readable traversal lanes for real-time exploration and real-time combat, consistent side-view scale, coherent lighting, coherent architectural language, no text, full environment panel, production-ready world tile concept, region: Tribunal Causeway, visual direction: monumental bridges, legal statuary, sealed gates, and militarized checkpoints leading toward the capital court, palette emphasis: cold sandstone, verdict brass, rain slate, signal crimson, fog blue, asset role: damaged or interrupted floor tile strip for jumps, drops, and combat spacing variation, coherent with the other Pertinence: Tribunal world tiles, suitable for interconnected metroidvania world development",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/tiles/world_buildout/tribunal_causeway_floor_broken.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "tribunal_causeway_wall_face",
+    "prompt": "cohesive 2D side-view metroidvania environment concept tile, hand-painted souls-like world art, Pertinence: Tribunal visual bible, readable traversal lanes for real-time exploration and real-time combat, consistent side-view scale, coherent lighting, coherent architectural language, no text, full environment panel, production-ready world tile concept, region: Tribunal Causeway, visual direction: monumental bridges, legal statuary, sealed gates, and militarized checkpoints leading toward the capital court, palette emphasis: cold sandstone, verdict brass, rain slate, signal crimson, fog blue, asset role: main wall tile surface with repeatable material logic for full-area construction, coherent with the other Pertinence: Tribunal world tiles, suitable for interconnected metroidvania world development",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/tiles/world_buildout/tribunal_causeway_wall_face.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "tribunal_causeway_wall_corner",
+    "prompt": "cohesive 2D side-view metroidvania environment concept tile, hand-painted souls-like world art, Pertinence: Tribunal visual bible, readable traversal lanes for real-time exploration and real-time combat, consistent side-view scale, coherent lighting, coherent architectural language, no text, full environment panel, production-ready world tile concept, region: Tribunal Causeway, visual direction: monumental bridges, legal statuary, sealed gates, and militarized checkpoints leading toward the capital court, palette emphasis: cold sandstone, verdict brass, rain slate, signal crimson, fog blue, asset role: inner or outer wall corner transition tile with consistent masonry or timber logic, coherent with the other Pertinence: Tribunal world tiles, suitable for interconnected metroidvania world development",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/tiles/world_buildout/tribunal_causeway_wall_corner.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "tribunal_causeway_platform_bridge",
+    "prompt": "cohesive 2D side-view metroidvania environment concept tile, hand-painted souls-like world art, Pertinence: Tribunal visual bible, readable traversal lanes for real-time exploration and real-time combat, consistent side-view scale, coherent lighting, coherent architectural language, no text, full environment panel, production-ready world tile concept, region: Tribunal Causeway, visual direction: monumental bridges, legal statuary, sealed gates, and militarized checkpoints leading toward the capital court, palette emphasis: cold sandstone, verdict brass, rain slate, signal crimson, fog blue, asset role: elevated bridge or platform tile segment for layered traversal routes, coherent with the other Pertinence: Tribunal world tiles, suitable for interconnected metroidvania world development",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/tiles/world_buildout/tribunal_causeway_platform_bridge.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "tribunal_causeway_gate_arch",
+    "prompt": "cohesive 2D side-view metroidvania environment concept tile, hand-painted souls-like world art, Pertinence: Tribunal visual bible, readable traversal lanes for real-time exploration and real-time combat, consistent side-view scale, coherent lighting, coherent architectural language, no text, full environment panel, production-ready world tile concept, region: Tribunal Causeway, visual direction: monumental bridges, legal statuary, sealed gates, and militarized checkpoints leading toward the capital court, palette emphasis: cold sandstone, verdict brass, rain slate, signal crimson, fog blue, asset role: gate, archway, or threshold tile module for chokepoints and route transitions, coherent with the other Pertinence: Tribunal world tiles, suitable for interconnected metroidvania world development",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/tiles/world_buildout/tribunal_causeway_gate_arch.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "tribunal_causeway_traversal_vertical",
+    "prompt": "cohesive 2D side-view metroidvania environment concept tile, hand-painted souls-like world art, Pertinence: Tribunal visual bible, readable traversal lanes for real-time exploration and real-time combat, consistent side-view scale, coherent lighting, coherent architectural language, no text, full environment panel, production-ready world tile concept, region: Tribunal Causeway, visual direction: monumental bridges, legal statuary, sealed gates, and militarized checkpoints leading toward the capital court, palette emphasis: cold sandstone, verdict brass, rain slate, signal crimson, fog blue, asset role: vertical traversal tile setpiece such as ladder shaft, chainwell, or elevator spine, coherent with the other Pertinence: Tribunal world tiles, suitable for interconnected metroidvania world development",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/tiles/world_buildout/tribunal_causeway_traversal_vertical.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "tribunal_causeway_hazard_overlay",
+    "prompt": "cohesive 2D side-view metroidvania environment concept tile, hand-painted souls-like world art, Pertinence: Tribunal visual bible, readable traversal lanes for real-time exploration and real-time combat, consistent side-view scale, coherent lighting, coherent architectural language, no text, transparent background overlay only, no opaque backdrop, gameplay FX layer, region: Tribunal Causeway, visual direction: monumental bridges, legal statuary, sealed gates, and militarized checkpoints leading toward the capital court, palette emphasis: cold sandstone, verdict brass, rain slate, signal crimson, fog blue, asset role: combat hazard or weather overlay supporting the region tone while preserving gameplay readability, coherent with the other Pertinence: Tribunal world tiles, suitable for interconnected metroidvania world development",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/tiles/world_buildout/tribunal_causeway_hazard_overlay.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "tribunal_causeway_landmark_setpiece",
+    "prompt": "cohesive 2D side-view metroidvania environment concept tile, hand-painted souls-like world art, Pertinence: Tribunal visual bible, readable traversal lanes for real-time exploration and real-time combat, consistent side-view scale, coherent lighting, coherent architectural language, no text, full environment panel, production-ready world tile concept, region: Tribunal Causeway, visual direction: monumental bridges, legal statuary, sealed gates, and militarized checkpoints leading toward the capital court, palette emphasis: cold sandstone, verdict brass, rain slate, signal crimson, fog blue, asset role: hero landmark panel anchoring the region identity and route memory, coherent with the other Pertinence: Tribunal world tiles, suitable for interconnected metroidvania world development",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/tiles/world_buildout/tribunal_causeway_landmark_setpiece.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "salt_forest_canopy_skyline_backdrop",
+    "prompt": "cohesive 2D side-view metroidvania environment concept tile, hand-painted souls-like world art, Pertinence: Tribunal visual bible, readable traversal lanes for real-time exploration and real-time combat, consistent side-view scale, coherent lighting, coherent architectural language, no text, full environment panel, production-ready world tile concept, region: Salt Forest Canopy, visual direction: root bridges, hanging shrines, salt-crusted trunks, canopy ladders, and watch posts woven through giant trees, palette emphasis: mineral green, bark umber, lichen silver, ash rose, deep marsh teal, asset role: wide atmospheric skyline backdrop establishing the region horizon and weather rhythm, coherent with the other Pertinence: Tribunal world tiles, suitable for interconnected metroidvania world development",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/tiles/world_buildout/salt_forest_canopy_skyline_backdrop.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "salt_forest_canopy_far_parallax",
+    "prompt": "cohesive 2D side-view metroidvania environment concept tile, hand-painted souls-like world art, Pertinence: Tribunal visual bible, readable traversal lanes for real-time exploration and real-time combat, consistent side-view scale, coherent lighting, coherent architectural language, no text, full environment panel, production-ready world tile concept, region: Salt Forest Canopy, visual direction: root bridges, hanging shrines, salt-crusted trunks, canopy ladders, and watch posts woven through giant trees, palette emphasis: mineral green, bark umber, lichen silver, ash rose, deep marsh teal, asset role: far-distance parallax layer with major silhouettes and long-depth shapes, coherent with the other Pertinence: Tribunal world tiles, suitable for interconnected metroidvania world development",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/tiles/world_buildout/salt_forest_canopy_far_parallax.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "salt_forest_canopy_mid_parallax",
+    "prompt": "cohesive 2D side-view metroidvania environment concept tile, hand-painted souls-like world art, Pertinence: Tribunal visual bible, readable traversal lanes for real-time exploration and real-time combat, consistent side-view scale, coherent lighting, coherent architectural language, no text, full environment panel, production-ready world tile concept, region: Salt Forest Canopy, visual direction: root bridges, hanging shrines, salt-crusted trunks, canopy ladders, and watch posts woven through giant trees, palette emphasis: mineral green, bark umber, lichen silver, ash rose, deep marsh teal, asset role: mid-distance parallax layer with readable structures and traversal foreshadowing, coherent with the other Pertinence: Tribunal world tiles, suitable for interconnected metroidvania world development",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/tiles/world_buildout/salt_forest_canopy_mid_parallax.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "salt_forest_canopy_floor_run",
+    "prompt": "cohesive 2D side-view metroidvania environment concept tile, hand-painted souls-like world art, Pertinence: Tribunal visual bible, readable traversal lanes for real-time exploration and real-time combat, consistent side-view scale, coherent lighting, coherent architectural language, no text, full environment panel, production-ready world tile concept, region: Salt Forest Canopy, visual direction: root bridges, hanging shrines, salt-crusted trunks, canopy ladders, and watch posts woven through giant trees, palette emphasis: mineral green, bark umber, lichen silver, ash rose, deep marsh teal, asset role: primary walkable floor tile strip for standard traversal and melee combat footing, coherent with the other Pertinence: Tribunal world tiles, suitable for interconnected metroidvania world development",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/tiles/world_buildout/salt_forest_canopy_floor_run.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "salt_forest_canopy_floor_broken",
+    "prompt": "cohesive 2D side-view metroidvania environment concept tile, hand-painted souls-like world art, Pertinence: Tribunal visual bible, readable traversal lanes for real-time exploration and real-time combat, consistent side-view scale, coherent lighting, coherent architectural language, no text, full environment panel, production-ready world tile concept, region: Salt Forest Canopy, visual direction: root bridges, hanging shrines, salt-crusted trunks, canopy ladders, and watch posts woven through giant trees, palette emphasis: mineral green, bark umber, lichen silver, ash rose, deep marsh teal, asset role: damaged or interrupted floor tile strip for jumps, drops, and combat spacing variation, coherent with the other Pertinence: Tribunal world tiles, suitable for interconnected metroidvania world development",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/tiles/world_buildout/salt_forest_canopy_floor_broken.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "salt_forest_canopy_wall_face",
+    "prompt": "cohesive 2D side-view metroidvania environment concept tile, hand-painted souls-like world art, Pertinence: Tribunal visual bible, readable traversal lanes for real-time exploration and real-time combat, consistent side-view scale, coherent lighting, coherent architectural language, no text, full environment panel, production-ready world tile concept, region: Salt Forest Canopy, visual direction: root bridges, hanging shrines, salt-crusted trunks, canopy ladders, and watch posts woven through giant trees, palette emphasis: mineral green, bark umber, lichen silver, ash rose, deep marsh teal, asset role: main wall tile surface with repeatable material logic for full-area construction, coherent with the other Pertinence: Tribunal world tiles, suitable for interconnected metroidvania world development",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/tiles/world_buildout/salt_forest_canopy_wall_face.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "salt_forest_canopy_wall_corner",
+    "prompt": "cohesive 2D side-view metroidvania environment concept tile, hand-painted souls-like world art, Pertinence: Tribunal visual bible, readable traversal lanes for real-time exploration and real-time combat, consistent side-view scale, coherent lighting, coherent architectural language, no text, full environment panel, production-ready world tile concept, region: Salt Forest Canopy, visual direction: root bridges, hanging shrines, salt-crusted trunks, canopy ladders, and watch posts woven through giant trees, palette emphasis: mineral green, bark umber, lichen silver, ash rose, deep marsh teal, asset role: inner or outer wall corner transition tile with consistent masonry or timber logic, coherent with the other Pertinence: Tribunal world tiles, suitable for interconnected metroidvania world development",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/tiles/world_buildout/salt_forest_canopy_wall_corner.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "salt_forest_canopy_platform_bridge",
+    "prompt": "cohesive 2D side-view metroidvania environment concept tile, hand-painted souls-like world art, Pertinence: Tribunal visual bible, readable traversal lanes for real-time exploration and real-time combat, consistent side-view scale, coherent lighting, coherent architectural language, no text, full environment panel, production-ready world tile concept, region: Salt Forest Canopy, visual direction: root bridges, hanging shrines, salt-crusted trunks, canopy ladders, and watch posts woven through giant trees, palette emphasis: mineral green, bark umber, lichen silver, ash rose, deep marsh teal, asset role: elevated bridge or platform tile segment for layered traversal routes, coherent with the other Pertinence: Tribunal world tiles, suitable for interconnected metroidvania world development",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/tiles/world_buildout/salt_forest_canopy_platform_bridge.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "salt_forest_canopy_gate_arch",
+    "prompt": "cohesive 2D side-view metroidvania environment concept tile, hand-painted souls-like world art, Pertinence: Tribunal visual bible, readable traversal lanes for real-time exploration and real-time combat, consistent side-view scale, coherent lighting, coherent architectural language, no text, full environment panel, production-ready world tile concept, region: Salt Forest Canopy, visual direction: root bridges, hanging shrines, salt-crusted trunks, canopy ladders, and watch posts woven through giant trees, palette emphasis: mineral green, bark umber, lichen silver, ash rose, deep marsh teal, asset role: gate, archway, or threshold tile module for chokepoints and route transitions, coherent with the other Pertinence: Tribunal world tiles, suitable for interconnected metroidvania world development",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/tiles/world_buildout/salt_forest_canopy_gate_arch.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "salt_forest_canopy_traversal_vertical",
+    "prompt": "cohesive 2D side-view metroidvania environment concept tile, hand-painted souls-like world art, Pertinence: Tribunal visual bible, readable traversal lanes for real-time exploration and real-time combat, consistent side-view scale, coherent lighting, coherent architectural language, no text, full environment panel, production-ready world tile concept, region: Salt Forest Canopy, visual direction: root bridges, hanging shrines, salt-crusted trunks, canopy ladders, and watch posts woven through giant trees, palette emphasis: mineral green, bark umber, lichen silver, ash rose, deep marsh teal, asset role: vertical traversal tile setpiece such as ladder shaft, chainwell, or elevator spine, coherent with the other Pertinence: Tribunal world tiles, suitable for interconnected metroidvania world development",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/tiles/world_buildout/salt_forest_canopy_traversal_vertical.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "salt_forest_canopy_hazard_overlay",
+    "prompt": "cohesive 2D side-view metroidvania environment concept tile, hand-painted souls-like world art, Pertinence: Tribunal visual bible, readable traversal lanes for real-time exploration and real-time combat, consistent side-view scale, coherent lighting, coherent architectural language, no text, transparent background overlay only, no opaque backdrop, gameplay FX layer, region: Salt Forest Canopy, visual direction: root bridges, hanging shrines, salt-crusted trunks, canopy ladders, and watch posts woven through giant trees, palette emphasis: mineral green, bark umber, lichen silver, ash rose, deep marsh teal, asset role: combat hazard or weather overlay supporting the region tone while preserving gameplay readability, coherent with the other Pertinence: Tribunal world tiles, suitable for interconnected metroidvania world development",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/tiles/world_buildout/salt_forest_canopy_hazard_overlay.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "salt_forest_canopy_landmark_setpiece",
+    "prompt": "cohesive 2D side-view metroidvania environment concept tile, hand-painted souls-like world art, Pertinence: Tribunal visual bible, readable traversal lanes for real-time exploration and real-time combat, consistent side-view scale, coherent lighting, coherent architectural language, no text, full environment panel, production-ready world tile concept, region: Salt Forest Canopy, visual direction: root bridges, hanging shrines, salt-crusted trunks, canopy ladders, and watch posts woven through giant trees, palette emphasis: mineral green, bark umber, lichen silver, ash rose, deep marsh teal, asset role: hero landmark panel anchoring the region identity and route memory, coherent with the other Pertinence: Tribunal world tiles, suitable for interconnected metroidvania world development",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/tiles/world_buildout/salt_forest_canopy_landmark_setpiece.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "ferry_crypts_skyline_backdrop",
+    "prompt": "cohesive 2D side-view metroidvania environment concept tile, hand-painted souls-like world art, Pertinence: Tribunal visual bible, readable traversal lanes for real-time exploration and real-time combat, consistent side-view scale, coherent lighting, coherent architectural language, no text, full environment panel, production-ready world tile concept, region: Ferry Crypts, visual direction: submerged catacombs, mooring piers, tomb ferries, bone alcoves, and flood-locked passages beneath the river trade, palette emphasis: grave moss, ferry rope brown, candle amber, soaked stone gray, brine black, asset role: wide atmospheric skyline backdrop establishing the region horizon and weather rhythm, coherent with the other Pertinence: Tribunal world tiles, suitable for interconnected metroidvania world development",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/tiles/world_buildout/ferry_crypts_skyline_backdrop.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "ferry_crypts_far_parallax",
+    "prompt": "cohesive 2D side-view metroidvania environment concept tile, hand-painted souls-like world art, Pertinence: Tribunal visual bible, readable traversal lanes for real-time exploration and real-time combat, consistent side-view scale, coherent lighting, coherent architectural language, no text, full environment panel, production-ready world tile concept, region: Ferry Crypts, visual direction: submerged catacombs, mooring piers, tomb ferries, bone alcoves, and flood-locked passages beneath the river trade, palette emphasis: grave moss, ferry rope brown, candle amber, soaked stone gray, brine black, asset role: far-distance parallax layer with major silhouettes and long-depth shapes, coherent with the other Pertinence: Tribunal world tiles, suitable for interconnected metroidvania world development",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/tiles/world_buildout/ferry_crypts_far_parallax.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "ferry_crypts_mid_parallax",
+    "prompt": "cohesive 2D side-view metroidvania environment concept tile, hand-painted souls-like world art, Pertinence: Tribunal visual bible, readable traversal lanes for real-time exploration and real-time combat, consistent side-view scale, coherent lighting, coherent architectural language, no text, full environment panel, production-ready world tile concept, region: Ferry Crypts, visual direction: submerged catacombs, mooring piers, tomb ferries, bone alcoves, and flood-locked passages beneath the river trade, palette emphasis: grave moss, ferry rope brown, candle amber, soaked stone gray, brine black, asset role: mid-distance parallax layer with readable structures and traversal foreshadowing, coherent with the other Pertinence: Tribunal world tiles, suitable for interconnected metroidvania world development",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/tiles/world_buildout/ferry_crypts_mid_parallax.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "ferry_crypts_floor_run",
+    "prompt": "cohesive 2D side-view metroidvania environment concept tile, hand-painted souls-like world art, Pertinence: Tribunal visual bible, readable traversal lanes for real-time exploration and real-time combat, consistent side-view scale, coherent lighting, coherent architectural language, no text, full environment panel, production-ready world tile concept, region: Ferry Crypts, visual direction: submerged catacombs, mooring piers, tomb ferries, bone alcoves, and flood-locked passages beneath the river trade, palette emphasis: grave moss, ferry rope brown, candle amber, soaked stone gray, brine black, asset role: primary walkable floor tile strip for standard traversal and melee combat footing, coherent with the other Pertinence: Tribunal world tiles, suitable for interconnected metroidvania world development",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/tiles/world_buildout/ferry_crypts_floor_run.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "ferry_crypts_floor_broken",
+    "prompt": "cohesive 2D side-view metroidvania environment concept tile, hand-painted souls-like world art, Pertinence: Tribunal visual bible, readable traversal lanes for real-time exploration and real-time combat, consistent side-view scale, coherent lighting, coherent architectural language, no text, full environment panel, production-ready world tile concept, region: Ferry Crypts, visual direction: submerged catacombs, mooring piers, tomb ferries, bone alcoves, and flood-locked passages beneath the river trade, palette emphasis: grave moss, ferry rope brown, candle amber, soaked stone gray, brine black, asset role: damaged or interrupted floor tile strip for jumps, drops, and combat spacing variation, coherent with the other Pertinence: Tribunal world tiles, suitable for interconnected metroidvania world development",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/tiles/world_buildout/ferry_crypts_floor_broken.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "ferry_crypts_wall_face",
+    "prompt": "cohesive 2D side-view metroidvania environment concept tile, hand-painted souls-like world art, Pertinence: Tribunal visual bible, readable traversal lanes for real-time exploration and real-time combat, consistent side-view scale, coherent lighting, coherent architectural language, no text, full environment panel, production-ready world tile concept, region: Ferry Crypts, visual direction: submerged catacombs, mooring piers, tomb ferries, bone alcoves, and flood-locked passages beneath the river trade, palette emphasis: grave moss, ferry rope brown, candle amber, soaked stone gray, brine black, asset role: main wall tile surface with repeatable material logic for full-area construction, coherent with the other Pertinence: Tribunal world tiles, suitable for interconnected metroidvania world development",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/tiles/world_buildout/ferry_crypts_wall_face.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "ferry_crypts_wall_corner",
+    "prompt": "cohesive 2D side-view metroidvania environment concept tile, hand-painted souls-like world art, Pertinence: Tribunal visual bible, readable traversal lanes for real-time exploration and real-time combat, consistent side-view scale, coherent lighting, coherent architectural language, no text, full environment panel, production-ready world tile concept, region: Ferry Crypts, visual direction: submerged catacombs, mooring piers, tomb ferries, bone alcoves, and flood-locked passages beneath the river trade, palette emphasis: grave moss, ferry rope brown, candle amber, soaked stone gray, brine black, asset role: inner or outer wall corner transition tile with consistent masonry or timber logic, coherent with the other Pertinence: Tribunal world tiles, suitable for interconnected metroidvania world development",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/tiles/world_buildout/ferry_crypts_wall_corner.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "ferry_crypts_platform_bridge",
+    "prompt": "cohesive 2D side-view metroidvania environment concept tile, hand-painted souls-like world art, Pertinence: Tribunal visual bible, readable traversal lanes for real-time exploration and real-time combat, consistent side-view scale, coherent lighting, coherent architectural language, no text, full environment panel, production-ready world tile concept, region: Ferry Crypts, visual direction: submerged catacombs, mooring piers, tomb ferries, bone alcoves, and flood-locked passages beneath the river trade, palette emphasis: grave moss, ferry rope brown, candle amber, soaked stone gray, brine black, asset role: elevated bridge or platform tile segment for layered traversal routes, coherent with the other Pertinence: Tribunal world tiles, suitable for interconnected metroidvania world development",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/tiles/world_buildout/ferry_crypts_platform_bridge.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "ferry_crypts_gate_arch",
+    "prompt": "cohesive 2D side-view metroidvania environment concept tile, hand-painted souls-like world art, Pertinence: Tribunal visual bible, readable traversal lanes for real-time exploration and real-time combat, consistent side-view scale, coherent lighting, coherent architectural language, no text, full environment panel, production-ready world tile concept, region: Ferry Crypts, visual direction: submerged catacombs, mooring piers, tomb ferries, bone alcoves, and flood-locked passages beneath the river trade, palette emphasis: grave moss, ferry rope brown, candle amber, soaked stone gray, brine black, asset role: gate, archway, or threshold tile module for chokepoints and route transitions, coherent with the other Pertinence: Tribunal world tiles, suitable for interconnected metroidvania world development",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/tiles/world_buildout/ferry_crypts_gate_arch.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "ferry_crypts_traversal_vertical",
+    "prompt": "cohesive 2D side-view metroidvania environment concept tile, hand-painted souls-like world art, Pertinence: Tribunal visual bible, readable traversal lanes for real-time exploration and real-time combat, consistent side-view scale, coherent lighting, coherent architectural language, no text, full environment panel, production-ready world tile concept, region: Ferry Crypts, visual direction: submerged catacombs, mooring piers, tomb ferries, bone alcoves, and flood-locked passages beneath the river trade, palette emphasis: grave moss, ferry rope brown, candle amber, soaked stone gray, brine black, asset role: vertical traversal tile setpiece such as ladder shaft, chainwell, or elevator spine, coherent with the other Pertinence: Tribunal world tiles, suitable for interconnected metroidvania world development",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/tiles/world_buildout/ferry_crypts_traversal_vertical.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "ferry_crypts_hazard_overlay",
+    "prompt": "cohesive 2D side-view metroidvania environment concept tile, hand-painted souls-like world art, Pertinence: Tribunal visual bible, readable traversal lanes for real-time exploration and real-time combat, consistent side-view scale, coherent lighting, coherent architectural language, no text, transparent background overlay only, no opaque backdrop, gameplay FX layer, region: Ferry Crypts, visual direction: submerged catacombs, mooring piers, tomb ferries, bone alcoves, and flood-locked passages beneath the river trade, palette emphasis: grave moss, ferry rope brown, candle amber, soaked stone gray, brine black, asset role: combat hazard or weather overlay supporting the region tone while preserving gameplay readability, coherent with the other Pertinence: Tribunal world tiles, suitable for interconnected metroidvania world development",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/tiles/world_buildout/ferry_crypts_hazard_overlay.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "ferry_crypts_landmark_setpiece",
+    "prompt": "cohesive 2D side-view metroidvania environment concept tile, hand-painted souls-like world art, Pertinence: Tribunal visual bible, readable traversal lanes for real-time exploration and real-time combat, consistent side-view scale, coherent lighting, coherent architectural language, no text, full environment panel, production-ready world tile concept, region: Ferry Crypts, visual direction: submerged catacombs, mooring piers, tomb ferries, bone alcoves, and flood-locked passages beneath the river trade, palette emphasis: grave moss, ferry rope brown, candle amber, soaked stone gray, brine black, asset role: hero landmark panel anchoring the region identity and route memory, coherent with the other Pertinence: Tribunal world tiles, suitable for interconnected metroidvania world development",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/tiles/world_buildout/ferry_crypts_landmark_setpiece.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "plague_abbey_skyline_backdrop",
+    "prompt": "cohesive 2D side-view metroidvania environment concept tile, hand-painted souls-like world art, Pertinence: Tribunal visual bible, readable traversal lanes for real-time exploration and real-time combat, consistent side-view scale, coherent lighting, coherent architectural language, no text, full environment panel, production-ready world tile concept, region: Plague Abbey, visual direction: diseased cloisters, censor platforms, abbey engines, reliquary halls, and ritual kill-zones for inquisitorial combat, palette emphasis: smoke ivory, mold green, ceremonial scarlet, weathered oak, incense gold, asset role: wide atmospheric skyline backdrop establishing the region horizon and weather rhythm, coherent with the other Pertinence: Tribunal world tiles, suitable for interconnected metroidvania world development",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/tiles/world_buildout/plague_abbey_skyline_backdrop.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "plague_abbey_far_parallax",
+    "prompt": "cohesive 2D side-view metroidvania environment concept tile, hand-painted souls-like world art, Pertinence: Tribunal visual bible, readable traversal lanes for real-time exploration and real-time combat, consistent side-view scale, coherent lighting, coherent architectural language, no text, full environment panel, production-ready world tile concept, region: Plague Abbey, visual direction: diseased cloisters, censor platforms, abbey engines, reliquary halls, and ritual kill-zones for inquisitorial combat, palette emphasis: smoke ivory, mold green, ceremonial scarlet, weathered oak, incense gold, asset role: far-distance parallax layer with major silhouettes and long-depth shapes, coherent with the other Pertinence: Tribunal world tiles, suitable for interconnected metroidvania world development",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/tiles/world_buildout/plague_abbey_far_parallax.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "plague_abbey_mid_parallax",
+    "prompt": "cohesive 2D side-view metroidvania environment concept tile, hand-painted souls-like world art, Pertinence: Tribunal visual bible, readable traversal lanes for real-time exploration and real-time combat, consistent side-view scale, coherent lighting, coherent architectural language, no text, full environment panel, production-ready world tile concept, region: Plague Abbey, visual direction: diseased cloisters, censor platforms, abbey engines, reliquary halls, and ritual kill-zones for inquisitorial combat, palette emphasis: smoke ivory, mold green, ceremonial scarlet, weathered oak, incense gold, asset role: mid-distance parallax layer with readable structures and traversal foreshadowing, coherent with the other Pertinence: Tribunal world tiles, suitable for interconnected metroidvania world development",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/tiles/world_buildout/plague_abbey_mid_parallax.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "plague_abbey_floor_run",
+    "prompt": "cohesive 2D side-view metroidvania environment concept tile, hand-painted souls-like world art, Pertinence: Tribunal visual bible, readable traversal lanes for real-time exploration and real-time combat, consistent side-view scale, coherent lighting, coherent architectural language, no text, full environment panel, production-ready world tile concept, region: Plague Abbey, visual direction: diseased cloisters, censor platforms, abbey engines, reliquary halls, and ritual kill-zones for inquisitorial combat, palette emphasis: smoke ivory, mold green, ceremonial scarlet, weathered oak, incense gold, asset role: primary walkable floor tile strip for standard traversal and melee combat footing, coherent with the other Pertinence: Tribunal world tiles, suitable for interconnected metroidvania world development",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/tiles/world_buildout/plague_abbey_floor_run.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "plague_abbey_floor_broken",
+    "prompt": "cohesive 2D side-view metroidvania environment concept tile, hand-painted souls-like world art, Pertinence: Tribunal visual bible, readable traversal lanes for real-time exploration and real-time combat, consistent side-view scale, coherent lighting, coherent architectural language, no text, full environment panel, production-ready world tile concept, region: Plague Abbey, visual direction: diseased cloisters, censor platforms, abbey engines, reliquary halls, and ritual kill-zones for inquisitorial combat, palette emphasis: smoke ivory, mold green, ceremonial scarlet, weathered oak, incense gold, asset role: damaged or interrupted floor tile strip for jumps, drops, and combat spacing variation, coherent with the other Pertinence: Tribunal world tiles, suitable for interconnected metroidvania world development",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/tiles/world_buildout/plague_abbey_floor_broken.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "plague_abbey_wall_face",
+    "prompt": "cohesive 2D side-view metroidvania environment concept tile, hand-painted souls-like world art, Pertinence: Tribunal visual bible, readable traversal lanes for real-time exploration and real-time combat, consistent side-view scale, coherent lighting, coherent architectural language, no text, full environment panel, production-ready world tile concept, region: Plague Abbey, visual direction: diseased cloisters, censor platforms, abbey engines, reliquary halls, and ritual kill-zones for inquisitorial combat, palette emphasis: smoke ivory, mold green, ceremonial scarlet, weathered oak, incense gold, asset role: main wall tile surface with repeatable material logic for full-area construction, coherent with the other Pertinence: Tribunal world tiles, suitable for interconnected metroidvania world development",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/tiles/world_buildout/plague_abbey_wall_face.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "plague_abbey_wall_corner",
+    "prompt": "cohesive 2D side-view metroidvania environment concept tile, hand-painted souls-like world art, Pertinence: Tribunal visual bible, readable traversal lanes for real-time exploration and real-time combat, consistent side-view scale, coherent lighting, coherent architectural language, no text, full environment panel, production-ready world tile concept, region: Plague Abbey, visual direction: diseased cloisters, censor platforms, abbey engines, reliquary halls, and ritual kill-zones for inquisitorial combat, palette emphasis: smoke ivory, mold green, ceremonial scarlet, weathered oak, incense gold, asset role: inner or outer wall corner transition tile with consistent masonry or timber logic, coherent with the other Pertinence: Tribunal world tiles, suitable for interconnected metroidvania world development",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/tiles/world_buildout/plague_abbey_wall_corner.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "plague_abbey_platform_bridge",
+    "prompt": "cohesive 2D side-view metroidvania environment concept tile, hand-painted souls-like world art, Pertinence: Tribunal visual bible, readable traversal lanes for real-time exploration and real-time combat, consistent side-view scale, coherent lighting, coherent architectural language, no text, full environment panel, production-ready world tile concept, region: Plague Abbey, visual direction: diseased cloisters, censor platforms, abbey engines, reliquary halls, and ritual kill-zones for inquisitorial combat, palette emphasis: smoke ivory, mold green, ceremonial scarlet, weathered oak, incense gold, asset role: elevated bridge or platform tile segment for layered traversal routes, coherent with the other Pertinence: Tribunal world tiles, suitable for interconnected metroidvania world development",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/tiles/world_buildout/plague_abbey_platform_bridge.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "plague_abbey_gate_arch",
+    "prompt": "cohesive 2D side-view metroidvania environment concept tile, hand-painted souls-like world art, Pertinence: Tribunal visual bible, readable traversal lanes for real-time exploration and real-time combat, consistent side-view scale, coherent lighting, coherent architectural language, no text, full environment panel, production-ready world tile concept, region: Plague Abbey, visual direction: diseased cloisters, censor platforms, abbey engines, reliquary halls, and ritual kill-zones for inquisitorial combat, palette emphasis: smoke ivory, mold green, ceremonial scarlet, weathered oak, incense gold, asset role: gate, archway, or threshold tile module for chokepoints and route transitions, coherent with the other Pertinence: Tribunal world tiles, suitable for interconnected metroidvania world development",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/tiles/world_buildout/plague_abbey_gate_arch.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "plague_abbey_traversal_vertical",
+    "prompt": "cohesive 2D side-view metroidvania environment concept tile, hand-painted souls-like world art, Pertinence: Tribunal visual bible, readable traversal lanes for real-time exploration and real-time combat, consistent side-view scale, coherent lighting, coherent architectural language, no text, full environment panel, production-ready world tile concept, region: Plague Abbey, visual direction: diseased cloisters, censor platforms, abbey engines, reliquary halls, and ritual kill-zones for inquisitorial combat, palette emphasis: smoke ivory, mold green, ceremonial scarlet, weathered oak, incense gold, asset role: vertical traversal tile setpiece such as ladder shaft, chainwell, or elevator spine, coherent with the other Pertinence: Tribunal world tiles, suitable for interconnected metroidvania world development",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/tiles/world_buildout/plague_abbey_traversal_vertical.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "plague_abbey_hazard_overlay",
+    "prompt": "cohesive 2D side-view metroidvania environment concept tile, hand-painted souls-like world art, Pertinence: Tribunal visual bible, readable traversal lanes for real-time exploration and real-time combat, consistent side-view scale, coherent lighting, coherent architectural language, no text, transparent background overlay only, no opaque backdrop, gameplay FX layer, region: Plague Abbey, visual direction: diseased cloisters, censor platforms, abbey engines, reliquary halls, and ritual kill-zones for inquisitorial combat, palette emphasis: smoke ivory, mold green, ceremonial scarlet, weathered oak, incense gold, asset role: combat hazard or weather overlay supporting the region tone while preserving gameplay readability, coherent with the other Pertinence: Tribunal world tiles, suitable for interconnected metroidvania world development",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/tiles/world_buildout/plague_abbey_hazard_overlay.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "plague_abbey_landmark_setpiece",
+    "prompt": "cohesive 2D side-view metroidvania environment concept tile, hand-painted souls-like world art, Pertinence: Tribunal visual bible, readable traversal lanes for real-time exploration and real-time combat, consistent side-view scale, coherent lighting, coherent architectural language, no text, full environment panel, production-ready world tile concept, region: Plague Abbey, visual direction: diseased cloisters, censor platforms, abbey engines, reliquary halls, and ritual kill-zones for inquisitorial combat, palette emphasis: smoke ivory, mold green, ceremonial scarlet, weathered oak, incense gold, asset role: hero landmark panel anchoring the region identity and route memory, coherent with the other Pertinence: Tribunal world tiles, suitable for interconnected metroidvania world development",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/tiles/world_buildout/plague_abbey_landmark_setpiece.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "ossuary_depths_skyline_backdrop",
+    "prompt": "cohesive 2D side-view metroidvania environment concept tile, hand-painted souls-like world art, Pertinence: Tribunal visual bible, readable traversal lanes for real-time exploration and real-time combat, consistent side-view scale, coherent lighting, coherent architectural language, no text, full environment panel, production-ready world tile concept, region: Ossuary Depths, visual direction: stacked catacombs, skull columns, burial shafts, broken lifts, and compressive corridors with duel-friendly spacing, palette emphasis: chalk bone, violet shadow, corroded silver, dust beige, moonlit gray, asset role: wide atmospheric skyline backdrop establishing the region horizon and weather rhythm, coherent with the other Pertinence: Tribunal world tiles, suitable for interconnected metroidvania world development",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/tiles/world_buildout/ossuary_depths_skyline_backdrop.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "ossuary_depths_far_parallax",
+    "prompt": "cohesive 2D side-view metroidvania environment concept tile, hand-painted souls-like world art, Pertinence: Tribunal visual bible, readable traversal lanes for real-time exploration and real-time combat, consistent side-view scale, coherent lighting, coherent architectural language, no text, full environment panel, production-ready world tile concept, region: Ossuary Depths, visual direction: stacked catacombs, skull columns, burial shafts, broken lifts, and compressive corridors with duel-friendly spacing, palette emphasis: chalk bone, violet shadow, corroded silver, dust beige, moonlit gray, asset role: far-distance parallax layer with major silhouettes and long-depth shapes, coherent with the other Pertinence: Tribunal world tiles, suitable for interconnected metroidvania world development",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/tiles/world_buildout/ossuary_depths_far_parallax.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "ossuary_depths_mid_parallax",
+    "prompt": "cohesive 2D side-view metroidvania environment concept tile, hand-painted souls-like world art, Pertinence: Tribunal visual bible, readable traversal lanes for real-time exploration and real-time combat, consistent side-view scale, coherent lighting, coherent architectural language, no text, full environment panel, production-ready world tile concept, region: Ossuary Depths, visual direction: stacked catacombs, skull columns, burial shafts, broken lifts, and compressive corridors with duel-friendly spacing, palette emphasis: chalk bone, violet shadow, corroded silver, dust beige, moonlit gray, asset role: mid-distance parallax layer with readable structures and traversal foreshadowing, coherent with the other Pertinence: Tribunal world tiles, suitable for interconnected metroidvania world development",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/tiles/world_buildout/ossuary_depths_mid_parallax.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "ossuary_depths_floor_run",
+    "prompt": "cohesive 2D side-view metroidvania environment concept tile, hand-painted souls-like world art, Pertinence: Tribunal visual bible, readable traversal lanes for real-time exploration and real-time combat, consistent side-view scale, coherent lighting, coherent architectural language, no text, full environment panel, production-ready world tile concept, region: Ossuary Depths, visual direction: stacked catacombs, skull columns, burial shafts, broken lifts, and compressive corridors with duel-friendly spacing, palette emphasis: chalk bone, violet shadow, corroded silver, dust beige, moonlit gray, asset role: primary walkable floor tile strip for standard traversal and melee combat footing, coherent with the other Pertinence: Tribunal world tiles, suitable for interconnected metroidvania world development",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/tiles/world_buildout/ossuary_depths_floor_run.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "ossuary_depths_floor_broken",
+    "prompt": "cohesive 2D side-view metroidvania environment concept tile, hand-painted souls-like world art, Pertinence: Tribunal visual bible, readable traversal lanes for real-time exploration and real-time combat, consistent side-view scale, coherent lighting, coherent architectural language, no text, full environment panel, production-ready world tile concept, region: Ossuary Depths, visual direction: stacked catacombs, skull columns, burial shafts, broken lifts, and compressive corridors with duel-friendly spacing, palette emphasis: chalk bone, violet shadow, corroded silver, dust beige, moonlit gray, asset role: damaged or interrupted floor tile strip for jumps, drops, and combat spacing variation, coherent with the other Pertinence: Tribunal world tiles, suitable for interconnected metroidvania world development",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/tiles/world_buildout/ossuary_depths_floor_broken.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "ossuary_depths_wall_face",
+    "prompt": "cohesive 2D side-view metroidvania environment concept tile, hand-painted souls-like world art, Pertinence: Tribunal visual bible, readable traversal lanes for real-time exploration and real-time combat, consistent side-view scale, coherent lighting, coherent architectural language, no text, full environment panel, production-ready world tile concept, region: Ossuary Depths, visual direction: stacked catacombs, skull columns, burial shafts, broken lifts, and compressive corridors with duel-friendly spacing, palette emphasis: chalk bone, violet shadow, corroded silver, dust beige, moonlit gray, asset role: main wall tile surface with repeatable material logic for full-area construction, coherent with the other Pertinence: Tribunal world tiles, suitable for interconnected metroidvania world development",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/tiles/world_buildout/ossuary_depths_wall_face.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "ossuary_depths_wall_corner",
+    "prompt": "cohesive 2D side-view metroidvania environment concept tile, hand-painted souls-like world art, Pertinence: Tribunal visual bible, readable traversal lanes for real-time exploration and real-time combat, consistent side-view scale, coherent lighting, coherent architectural language, no text, full environment panel, production-ready world tile concept, region: Ossuary Depths, visual direction: stacked catacombs, skull columns, burial shafts, broken lifts, and compressive corridors with duel-friendly spacing, palette emphasis: chalk bone, violet shadow, corroded silver, dust beige, moonlit gray, asset role: inner or outer wall corner transition tile with consistent masonry or timber logic, coherent with the other Pertinence: Tribunal world tiles, suitable for interconnected metroidvania world development",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/tiles/world_buildout/ossuary_depths_wall_corner.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "ossuary_depths_platform_bridge",
+    "prompt": "cohesive 2D side-view metroidvania environment concept tile, hand-painted souls-like world art, Pertinence: Tribunal visual bible, readable traversal lanes for real-time exploration and real-time combat, consistent side-view scale, coherent lighting, coherent architectural language, no text, full environment panel, production-ready world tile concept, region: Ossuary Depths, visual direction: stacked catacombs, skull columns, burial shafts, broken lifts, and compressive corridors with duel-friendly spacing, palette emphasis: chalk bone, violet shadow, corroded silver, dust beige, moonlit gray, asset role: elevated bridge or platform tile segment for layered traversal routes, coherent with the other Pertinence: Tribunal world tiles, suitable for interconnected metroidvania world development",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/tiles/world_buildout/ossuary_depths_platform_bridge.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "ossuary_depths_gate_arch",
+    "prompt": "cohesive 2D side-view metroidvania environment concept tile, hand-painted souls-like world art, Pertinence: Tribunal visual bible, readable traversal lanes for real-time exploration and real-time combat, consistent side-view scale, coherent lighting, coherent architectural language, no text, full environment panel, production-ready world tile concept, region: Ossuary Depths, visual direction: stacked catacombs, skull columns, burial shafts, broken lifts, and compressive corridors with duel-friendly spacing, palette emphasis: chalk bone, violet shadow, corroded silver, dust beige, moonlit gray, asset role: gate, archway, or threshold tile module for chokepoints and route transitions, coherent with the other Pertinence: Tribunal world tiles, suitable for interconnected metroidvania world development",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/tiles/world_buildout/ossuary_depths_gate_arch.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "ossuary_depths_traversal_vertical",
+    "prompt": "cohesive 2D side-view metroidvania environment concept tile, hand-painted souls-like world art, Pertinence: Tribunal visual bible, readable traversal lanes for real-time exploration and real-time combat, consistent side-view scale, coherent lighting, coherent architectural language, no text, full environment panel, production-ready world tile concept, region: Ossuary Depths, visual direction: stacked catacombs, skull columns, burial shafts, broken lifts, and compressive corridors with duel-friendly spacing, palette emphasis: chalk bone, violet shadow, corroded silver, dust beige, moonlit gray, asset role: vertical traversal tile setpiece such as ladder shaft, chainwell, or elevator spine, coherent with the other Pertinence: Tribunal world tiles, suitable for interconnected metroidvania world development",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/tiles/world_buildout/ossuary_depths_traversal_vertical.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "ossuary_depths_hazard_overlay",
+    "prompt": "cohesive 2D side-view metroidvania environment concept tile, hand-painted souls-like world art, Pertinence: Tribunal visual bible, readable traversal lanes for real-time exploration and real-time combat, consistent side-view scale, coherent lighting, coherent architectural language, no text, transparent background overlay only, no opaque backdrop, gameplay FX layer, region: Ossuary Depths, visual direction: stacked catacombs, skull columns, burial shafts, broken lifts, and compressive corridors with duel-friendly spacing, palette emphasis: chalk bone, violet shadow, corroded silver, dust beige, moonlit gray, asset role: combat hazard or weather overlay supporting the region tone while preserving gameplay readability, coherent with the other Pertinence: Tribunal world tiles, suitable for interconnected metroidvania world development",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/tiles/world_buildout/ossuary_depths_hazard_overlay.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "ossuary_depths_landmark_setpiece",
+    "prompt": "cohesive 2D side-view metroidvania environment concept tile, hand-painted souls-like world art, Pertinence: Tribunal visual bible, readable traversal lanes for real-time exploration and real-time combat, consistent side-view scale, coherent lighting, coherent architectural language, no text, full environment panel, production-ready world tile concept, region: Ossuary Depths, visual direction: stacked catacombs, skull columns, burial shafts, broken lifts, and compressive corridors with duel-friendly spacing, palette emphasis: chalk bone, violet shadow, corroded silver, dust beige, moonlit gray, asset role: hero landmark panel anchoring the region identity and route memory, coherent with the other Pertinence: Tribunal world tiles, suitable for interconnected metroidvania world development",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/tiles/world_buildout/ossuary_depths_landmark_setpiece.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "archive_vaults_skyline_backdrop",
+    "prompt": "cohesive 2D side-view metroidvania environment concept tile, hand-painted souls-like world art, Pertinence: Tribunal visual bible, readable traversal lanes for real-time exploration and real-time combat, consistent side-view scale, coherent lighting, coherent architectural language, no text, full environment panel, production-ready world tile concept, region: Archive Vaults, visual direction: document towers, rotating stacks, chain elevators, ledgers, and evidence chambers built for route recall and secret doors, palette emphasis: ink black, vellum cream, wax red, brass hinge gold, library umber, asset role: wide atmospheric skyline backdrop establishing the region horizon and weather rhythm, coherent with the other Pertinence: Tribunal world tiles, suitable for interconnected metroidvania world development",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/tiles/world_buildout/archive_vaults_skyline_backdrop.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "archive_vaults_far_parallax",
+    "prompt": "cohesive 2D side-view metroidvania environment concept tile, hand-painted souls-like world art, Pertinence: Tribunal visual bible, readable traversal lanes for real-time exploration and real-time combat, consistent side-view scale, coherent lighting, coherent architectural language, no text, full environment panel, production-ready world tile concept, region: Archive Vaults, visual direction: document towers, rotating stacks, chain elevators, ledgers, and evidence chambers built for route recall and secret doors, palette emphasis: ink black, vellum cream, wax red, brass hinge gold, library umber, asset role: far-distance parallax layer with major silhouettes and long-depth shapes, coherent with the other Pertinence: Tribunal world tiles, suitable for interconnected metroidvania world development",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/tiles/world_buildout/archive_vaults_far_parallax.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "archive_vaults_mid_parallax",
+    "prompt": "cohesive 2D side-view metroidvania environment concept tile, hand-painted souls-like world art, Pertinence: Tribunal visual bible, readable traversal lanes for real-time exploration and real-time combat, consistent side-view scale, coherent lighting, coherent architectural language, no text, full environment panel, production-ready world tile concept, region: Archive Vaults, visual direction: document towers, rotating stacks, chain elevators, ledgers, and evidence chambers built for route recall and secret doors, palette emphasis: ink black, vellum cream, wax red, brass hinge gold, library umber, asset role: mid-distance parallax layer with readable structures and traversal foreshadowing, coherent with the other Pertinence: Tribunal world tiles, suitable for interconnected metroidvania world development",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/tiles/world_buildout/archive_vaults_mid_parallax.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "archive_vaults_floor_run",
+    "prompt": "cohesive 2D side-view metroidvania environment concept tile, hand-painted souls-like world art, Pertinence: Tribunal visual bible, readable traversal lanes for real-time exploration and real-time combat, consistent side-view scale, coherent lighting, coherent architectural language, no text, full environment panel, production-ready world tile concept, region: Archive Vaults, visual direction: document towers, rotating stacks, chain elevators, ledgers, and evidence chambers built for route recall and secret doors, palette emphasis: ink black, vellum cream, wax red, brass hinge gold, library umber, asset role: primary walkable floor tile strip for standard traversal and melee combat footing, coherent with the other Pertinence: Tribunal world tiles, suitable for interconnected metroidvania world development",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/tiles/world_buildout/archive_vaults_floor_run.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "archive_vaults_floor_broken",
+    "prompt": "cohesive 2D side-view metroidvania environment concept tile, hand-painted souls-like world art, Pertinence: Tribunal visual bible, readable traversal lanes for real-time exploration and real-time combat, consistent side-view scale, coherent lighting, coherent architectural language, no text, full environment panel, production-ready world tile concept, region: Archive Vaults, visual direction: document towers, rotating stacks, chain elevators, ledgers, and evidence chambers built for route recall and secret doors, palette emphasis: ink black, vellum cream, wax red, brass hinge gold, library umber, asset role: damaged or interrupted floor tile strip for jumps, drops, and combat spacing variation, coherent with the other Pertinence: Tribunal world tiles, suitable for interconnected metroidvania world development",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/tiles/world_buildout/archive_vaults_floor_broken.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "archive_vaults_wall_face",
+    "prompt": "cohesive 2D side-view metroidvania environment concept tile, hand-painted souls-like world art, Pertinence: Tribunal visual bible, readable traversal lanes for real-time exploration and real-time combat, consistent side-view scale, coherent lighting, coherent architectural language, no text, full environment panel, production-ready world tile concept, region: Archive Vaults, visual direction: document towers, rotating stacks, chain elevators, ledgers, and evidence chambers built for route recall and secret doors, palette emphasis: ink black, vellum cream, wax red, brass hinge gold, library umber, asset role: main wall tile surface with repeatable material logic for full-area construction, coherent with the other Pertinence: Tribunal world tiles, suitable for interconnected metroidvania world development",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/tiles/world_buildout/archive_vaults_wall_face.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "archive_vaults_wall_corner",
+    "prompt": "cohesive 2D side-view metroidvania environment concept tile, hand-painted souls-like world art, Pertinence: Tribunal visual bible, readable traversal lanes for real-time exploration and real-time combat, consistent side-view scale, coherent lighting, coherent architectural language, no text, full environment panel, production-ready world tile concept, region: Archive Vaults, visual direction: document towers, rotating stacks, chain elevators, ledgers, and evidence chambers built for route recall and secret doors, palette emphasis: ink black, vellum cream, wax red, brass hinge gold, library umber, asset role: inner or outer wall corner transition tile with consistent masonry or timber logic, coherent with the other Pertinence: Tribunal world tiles, suitable for interconnected metroidvania world development",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/tiles/world_buildout/archive_vaults_wall_corner.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "archive_vaults_platform_bridge",
+    "prompt": "cohesive 2D side-view metroidvania environment concept tile, hand-painted souls-like world art, Pertinence: Tribunal visual bible, readable traversal lanes for real-time exploration and real-time combat, consistent side-view scale, coherent lighting, coherent architectural language, no text, full environment panel, production-ready world tile concept, region: Archive Vaults, visual direction: document towers, rotating stacks, chain elevators, ledgers, and evidence chambers built for route recall and secret doors, palette emphasis: ink black, vellum cream, wax red, brass hinge gold, library umber, asset role: elevated bridge or platform tile segment for layered traversal routes, coherent with the other Pertinence: Tribunal world tiles, suitable for interconnected metroidvania world development",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/tiles/world_buildout/archive_vaults_platform_bridge.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "archive_vaults_gate_arch",
+    "prompt": "cohesive 2D side-view metroidvania environment concept tile, hand-painted souls-like world art, Pertinence: Tribunal visual bible, readable traversal lanes for real-time exploration and real-time combat, consistent side-view scale, coherent lighting, coherent architectural language, no text, full environment panel, production-ready world tile concept, region: Archive Vaults, visual direction: document towers, rotating stacks, chain elevators, ledgers, and evidence chambers built for route recall and secret doors, palette emphasis: ink black, vellum cream, wax red, brass hinge gold, library umber, asset role: gate, archway, or threshold tile module for chokepoints and route transitions, coherent with the other Pertinence: Tribunal world tiles, suitable for interconnected metroidvania world development",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/tiles/world_buildout/archive_vaults_gate_arch.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "archive_vaults_traversal_vertical",
+    "prompt": "cohesive 2D side-view metroidvania environment concept tile, hand-painted souls-like world art, Pertinence: Tribunal visual bible, readable traversal lanes for real-time exploration and real-time combat, consistent side-view scale, coherent lighting, coherent architectural language, no text, full environment panel, production-ready world tile concept, region: Archive Vaults, visual direction: document towers, rotating stacks, chain elevators, ledgers, and evidence chambers built for route recall and secret doors, palette emphasis: ink black, vellum cream, wax red, brass hinge gold, library umber, asset role: vertical traversal tile setpiece such as ladder shaft, chainwell, or elevator spine, coherent with the other Pertinence: Tribunal world tiles, suitable for interconnected metroidvania world development",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/tiles/world_buildout/archive_vaults_traversal_vertical.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "archive_vaults_hazard_overlay",
+    "prompt": "cohesive 2D side-view metroidvania environment concept tile, hand-painted souls-like world art, Pertinence: Tribunal visual bible, readable traversal lanes for real-time exploration and real-time combat, consistent side-view scale, coherent lighting, coherent architectural language, no text, transparent background overlay only, no opaque backdrop, gameplay FX layer, region: Archive Vaults, visual direction: document towers, rotating stacks, chain elevators, ledgers, and evidence chambers built for route recall and secret doors, palette emphasis: ink black, vellum cream, wax red, brass hinge gold, library umber, asset role: combat hazard or weather overlay supporting the region tone while preserving gameplay readability, coherent with the other Pertinence: Tribunal world tiles, suitable for interconnected metroidvania world development",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/tiles/world_buildout/archive_vaults_hazard_overlay.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "archive_vaults_landmark_setpiece",
+    "prompt": "cohesive 2D side-view metroidvania environment concept tile, hand-painted souls-like world art, Pertinence: Tribunal visual bible, readable traversal lanes for real-time exploration and real-time combat, consistent side-view scale, coherent lighting, coherent architectural language, no text, full environment panel, production-ready world tile concept, region: Archive Vaults, visual direction: document towers, rotating stacks, chain elevators, ledgers, and evidence chambers built for route recall and secret doors, palette emphasis: ink black, vellum cream, wax red, brass hinge gold, library umber, asset role: hero landmark panel anchoring the region identity and route memory, coherent with the other Pertinence: Tribunal world tiles, suitable for interconnected metroidvania world development",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/tiles/world_buildout/archive_vaults_landmark_setpiece.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "cathedral_of_rotated_truth_skyline_backdrop",
+    "prompt": "cohesive 2D side-view metroidvania environment concept tile, hand-painted souls-like world art, Pertinence: Tribunal visual bible, readable traversal lanes for real-time exploration and real-time combat, consistent side-view scale, coherent lighting, coherent architectural language, no text, full environment panel, production-ready world tile concept, region: Cathedral of Rotated Truth, visual direction: rotating nave segments, verdict machinery, suspended chapels, mirrored aisles, and grand dueling terraces, palette emphasis: liturgy gold, stained blue, nave stone, blood maroon, judgment white, asset role: wide atmospheric skyline backdrop establishing the region horizon and weather rhythm, coherent with the other Pertinence: Tribunal world tiles, suitable for interconnected metroidvania world development",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/tiles/world_buildout/cathedral_of_rotated_truth_skyline_backdrop.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "cathedral_of_rotated_truth_far_parallax",
+    "prompt": "cohesive 2D side-view metroidvania environment concept tile, hand-painted souls-like world art, Pertinence: Tribunal visual bible, readable traversal lanes for real-time exploration and real-time combat, consistent side-view scale, coherent lighting, coherent architectural language, no text, full environment panel, production-ready world tile concept, region: Cathedral of Rotated Truth, visual direction: rotating nave segments, verdict machinery, suspended chapels, mirrored aisles, and grand dueling terraces, palette emphasis: liturgy gold, stained blue, nave stone, blood maroon, judgment white, asset role: far-distance parallax layer with major silhouettes and long-depth shapes, coherent with the other Pertinence: Tribunal world tiles, suitable for interconnected metroidvania world development",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/tiles/world_buildout/cathedral_of_rotated_truth_far_parallax.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "cathedral_of_rotated_truth_mid_parallax",
+    "prompt": "cohesive 2D side-view metroidvania environment concept tile, hand-painted souls-like world art, Pertinence: Tribunal visual bible, readable traversal lanes for real-time exploration and real-time combat, consistent side-view scale, coherent lighting, coherent architectural language, no text, full environment panel, production-ready world tile concept, region: Cathedral of Rotated Truth, visual direction: rotating nave segments, verdict machinery, suspended chapels, mirrored aisles, and grand dueling terraces, palette emphasis: liturgy gold, stained blue, nave stone, blood maroon, judgment white, asset role: mid-distance parallax layer with readable structures and traversal foreshadowing, coherent with the other Pertinence: Tribunal world tiles, suitable for interconnected metroidvania world development",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/tiles/world_buildout/cathedral_of_rotated_truth_mid_parallax.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "cathedral_of_rotated_truth_floor_run",
+    "prompt": "cohesive 2D side-view metroidvania environment concept tile, hand-painted souls-like world art, Pertinence: Tribunal visual bible, readable traversal lanes for real-time exploration and real-time combat, consistent side-view scale, coherent lighting, coherent architectural language, no text, full environment panel, production-ready world tile concept, region: Cathedral of Rotated Truth, visual direction: rotating nave segments, verdict machinery, suspended chapels, mirrored aisles, and grand dueling terraces, palette emphasis: liturgy gold, stained blue, nave stone, blood maroon, judgment white, asset role: primary walkable floor tile strip for standard traversal and melee combat footing, coherent with the other Pertinence: Tribunal world tiles, suitable for interconnected metroidvania world development",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/tiles/world_buildout/cathedral_of_rotated_truth_floor_run.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "cathedral_of_rotated_truth_floor_broken",
+    "prompt": "cohesive 2D side-view metroidvania environment concept tile, hand-painted souls-like world art, Pertinence: Tribunal visual bible, readable traversal lanes for real-time exploration and real-time combat, consistent side-view scale, coherent lighting, coherent architectural language, no text, full environment panel, production-ready world tile concept, region: Cathedral of Rotated Truth, visual direction: rotating nave segments, verdict machinery, suspended chapels, mirrored aisles, and grand dueling terraces, palette emphasis: liturgy gold, stained blue, nave stone, blood maroon, judgment white, asset role: damaged or interrupted floor tile strip for jumps, drops, and combat spacing variation, coherent with the other Pertinence: Tribunal world tiles, suitable for interconnected metroidvania world development",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/tiles/world_buildout/cathedral_of_rotated_truth_floor_broken.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "cathedral_of_rotated_truth_wall_face",
+    "prompt": "cohesive 2D side-view metroidvania environment concept tile, hand-painted souls-like world art, Pertinence: Tribunal visual bible, readable traversal lanes for real-time exploration and real-time combat, consistent side-view scale, coherent lighting, coherent architectural language, no text, full environment panel, production-ready world tile concept, region: Cathedral of Rotated Truth, visual direction: rotating nave segments, verdict machinery, suspended chapels, mirrored aisles, and grand dueling terraces, palette emphasis: liturgy gold, stained blue, nave stone, blood maroon, judgment white, asset role: main wall tile surface with repeatable material logic for full-area construction, coherent with the other Pertinence: Tribunal world tiles, suitable for interconnected metroidvania world development",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/tiles/world_buildout/cathedral_of_rotated_truth_wall_face.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "cathedral_of_rotated_truth_wall_corner",
+    "prompt": "cohesive 2D side-view metroidvania environment concept tile, hand-painted souls-like world art, Pertinence: Tribunal visual bible, readable traversal lanes for real-time exploration and real-time combat, consistent side-view scale, coherent lighting, coherent architectural language, no text, full environment panel, production-ready world tile concept, region: Cathedral of Rotated Truth, visual direction: rotating nave segments, verdict machinery, suspended chapels, mirrored aisles, and grand dueling terraces, palette emphasis: liturgy gold, stained blue, nave stone, blood maroon, judgment white, asset role: inner or outer wall corner transition tile with consistent masonry or timber logic, coherent with the other Pertinence: Tribunal world tiles, suitable for interconnected metroidvania world development",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/tiles/world_buildout/cathedral_of_rotated_truth_wall_corner.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "cathedral_of_rotated_truth_platform_bridge",
+    "prompt": "cohesive 2D side-view metroidvania environment concept tile, hand-painted souls-like world art, Pertinence: Tribunal visual bible, readable traversal lanes for real-time exploration and real-time combat, consistent side-view scale, coherent lighting, coherent architectural language, no text, full environment panel, production-ready world tile concept, region: Cathedral of Rotated Truth, visual direction: rotating nave segments, verdict machinery, suspended chapels, mirrored aisles, and grand dueling terraces, palette emphasis: liturgy gold, stained blue, nave stone, blood maroon, judgment white, asset role: elevated bridge or platform tile segment for layered traversal routes, coherent with the other Pertinence: Tribunal world tiles, suitable for interconnected metroidvania world development",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/tiles/world_buildout/cathedral_of_rotated_truth_platform_bridge.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "cathedral_of_rotated_truth_gate_arch",
+    "prompt": "cohesive 2D side-view metroidvania environment concept tile, hand-painted souls-like world art, Pertinence: Tribunal visual bible, readable traversal lanes for real-time exploration and real-time combat, consistent side-view scale, coherent lighting, coherent architectural language, no text, full environment panel, production-ready world tile concept, region: Cathedral of Rotated Truth, visual direction: rotating nave segments, verdict machinery, suspended chapels, mirrored aisles, and grand dueling terraces, palette emphasis: liturgy gold, stained blue, nave stone, blood maroon, judgment white, asset role: gate, archway, or threshold tile module for chokepoints and route transitions, coherent with the other Pertinence: Tribunal world tiles, suitable for interconnected metroidvania world development",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/tiles/world_buildout/cathedral_of_rotated_truth_gate_arch.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "cathedral_of_rotated_truth_traversal_vertical",
+    "prompt": "cohesive 2D side-view metroidvania environment concept tile, hand-painted souls-like world art, Pertinence: Tribunal visual bible, readable traversal lanes for real-time exploration and real-time combat, consistent side-view scale, coherent lighting, coherent architectural language, no text, full environment panel, production-ready world tile concept, region: Cathedral of Rotated Truth, visual direction: rotating nave segments, verdict machinery, suspended chapels, mirrored aisles, and grand dueling terraces, palette emphasis: liturgy gold, stained blue, nave stone, blood maroon, judgment white, asset role: vertical traversal tile setpiece such as ladder shaft, chainwell, or elevator spine, coherent with the other Pertinence: Tribunal world tiles, suitable for interconnected metroidvania world development",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/tiles/world_buildout/cathedral_of_rotated_truth_traversal_vertical.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "cathedral_of_rotated_truth_hazard_overlay",
+    "prompt": "cohesive 2D side-view metroidvania environment concept tile, hand-painted souls-like world art, Pertinence: Tribunal visual bible, readable traversal lanes for real-time exploration and real-time combat, consistent side-view scale, coherent lighting, coherent architectural language, no text, transparent background overlay only, no opaque backdrop, gameplay FX layer, region: Cathedral of Rotated Truth, visual direction: rotating nave segments, verdict machinery, suspended chapels, mirrored aisles, and grand dueling terraces, palette emphasis: liturgy gold, stained blue, nave stone, blood maroon, judgment white, asset role: combat hazard or weather overlay supporting the region tone while preserving gameplay readability, coherent with the other Pertinence: Tribunal world tiles, suitable for interconnected metroidvania world development",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/tiles/world_buildout/cathedral_of_rotated_truth_hazard_overlay.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "cathedral_of_rotated_truth_landmark_setpiece",
+    "prompt": "cohesive 2D side-view metroidvania environment concept tile, hand-painted souls-like world art, Pertinence: Tribunal visual bible, readable traversal lanes for real-time exploration and real-time combat, consistent side-view scale, coherent lighting, coherent architectural language, no text, full environment panel, production-ready world tile concept, region: Cathedral of Rotated Truth, visual direction: rotating nave segments, verdict machinery, suspended chapels, mirrored aisles, and grand dueling terraces, palette emphasis: liturgy gold, stained blue, nave stone, blood maroon, judgment white, asset role: hero landmark panel anchoring the region identity and route memory, coherent with the other Pertinence: Tribunal world tiles, suitable for interconnected metroidvania world development",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/tiles/world_buildout/cathedral_of_rotated_truth_landmark_setpiece.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "goduly_aether_skyline_backdrop",
+    "prompt": "cohesive 2D side-view metroidvania environment concept tile, hand-painted souls-like world art, Pertinence: Tribunal visual bible, readable traversal lanes for real-time exploration and real-time combat, consistent side-view scale, coherent lighting, coherent architectural language, no text, full environment panel, production-ready world tile concept, region: Goduly Aether, visual direction: cosmic causeways, prayer orbits, astral bridges, folded reality steps, and ceremonial combat arenas in deity space, palette emphasis: astral cyan, ember amber, void navy, halo white, sacred jade, asset role: wide atmospheric skyline backdrop establishing the region horizon and weather rhythm, coherent with the other Pertinence: Tribunal world tiles, suitable for interconnected metroidvania world development",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/tiles/world_buildout/goduly_aether_skyline_backdrop.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "goduly_aether_far_parallax",
+    "prompt": "cohesive 2D side-view metroidvania environment concept tile, hand-painted souls-like world art, Pertinence: Tribunal visual bible, readable traversal lanes for real-time exploration and real-time combat, consistent side-view scale, coherent lighting, coherent architectural language, no text, full environment panel, production-ready world tile concept, region: Goduly Aether, visual direction: cosmic causeways, prayer orbits, astral bridges, folded reality steps, and ceremonial combat arenas in deity space, palette emphasis: astral cyan, ember amber, void navy, halo white, sacred jade, asset role: far-distance parallax layer with major silhouettes and long-depth shapes, coherent with the other Pertinence: Tribunal world tiles, suitable for interconnected metroidvania world development",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/tiles/world_buildout/goduly_aether_far_parallax.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "goduly_aether_mid_parallax",
+    "prompt": "cohesive 2D side-view metroidvania environment concept tile, hand-painted souls-like world art, Pertinence: Tribunal visual bible, readable traversal lanes for real-time exploration and real-time combat, consistent side-view scale, coherent lighting, coherent architectural language, no text, full environment panel, production-ready world tile concept, region: Goduly Aether, visual direction: cosmic causeways, prayer orbits, astral bridges, folded reality steps, and ceremonial combat arenas in deity space, palette emphasis: astral cyan, ember amber, void navy, halo white, sacred jade, asset role: mid-distance parallax layer with readable structures and traversal foreshadowing, coherent with the other Pertinence: Tribunal world tiles, suitable for interconnected metroidvania world development",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/tiles/world_buildout/goduly_aether_mid_parallax.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "goduly_aether_floor_run",
+    "prompt": "cohesive 2D side-view metroidvania environment concept tile, hand-painted souls-like world art, Pertinence: Tribunal visual bible, readable traversal lanes for real-time exploration and real-time combat, consistent side-view scale, coherent lighting, coherent architectural language, no text, full environment panel, production-ready world tile concept, region: Goduly Aether, visual direction: cosmic causeways, prayer orbits, astral bridges, folded reality steps, and ceremonial combat arenas in deity space, palette emphasis: astral cyan, ember amber, void navy, halo white, sacred jade, asset role: primary walkable floor tile strip for standard traversal and melee combat footing, coherent with the other Pertinence: Tribunal world tiles, suitable for interconnected metroidvania world development",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/tiles/world_buildout/goduly_aether_floor_run.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "goduly_aether_floor_broken",
+    "prompt": "cohesive 2D side-view metroidvania environment concept tile, hand-painted souls-like world art, Pertinence: Tribunal visual bible, readable traversal lanes for real-time exploration and real-time combat, consistent side-view scale, coherent lighting, coherent architectural language, no text, full environment panel, production-ready world tile concept, region: Goduly Aether, visual direction: cosmic causeways, prayer orbits, astral bridges, folded reality steps, and ceremonial combat arenas in deity space, palette emphasis: astral cyan, ember amber, void navy, halo white, sacred jade, asset role: damaged or interrupted floor tile strip for jumps, drops, and combat spacing variation, coherent with the other Pertinence: Tribunal world tiles, suitable for interconnected metroidvania world development",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/tiles/world_buildout/goduly_aether_floor_broken.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "goduly_aether_wall_face",
+    "prompt": "cohesive 2D side-view metroidvania environment concept tile, hand-painted souls-like world art, Pertinence: Tribunal visual bible, readable traversal lanes for real-time exploration and real-time combat, consistent side-view scale, coherent lighting, coherent architectural language, no text, full environment panel, production-ready world tile concept, region: Goduly Aether, visual direction: cosmic causeways, prayer orbits, astral bridges, folded reality steps, and ceremonial combat arenas in deity space, palette emphasis: astral cyan, ember amber, void navy, halo white, sacred jade, asset role: main wall tile surface with repeatable material logic for full-area construction, coherent with the other Pertinence: Tribunal world tiles, suitable for interconnected metroidvania world development",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/tiles/world_buildout/goduly_aether_wall_face.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "goduly_aether_wall_corner",
+    "prompt": "cohesive 2D side-view metroidvania environment concept tile, hand-painted souls-like world art, Pertinence: Tribunal visual bible, readable traversal lanes for real-time exploration and real-time combat, consistent side-view scale, coherent lighting, coherent architectural language, no text, full environment panel, production-ready world tile concept, region: Goduly Aether, visual direction: cosmic causeways, prayer orbits, astral bridges, folded reality steps, and ceremonial combat arenas in deity space, palette emphasis: astral cyan, ember amber, void navy, halo white, sacred jade, asset role: inner or outer wall corner transition tile with consistent masonry or timber logic, coherent with the other Pertinence: Tribunal world tiles, suitable for interconnected metroidvania world development",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/tiles/world_buildout/goduly_aether_wall_corner.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "goduly_aether_platform_bridge",
+    "prompt": "cohesive 2D side-view metroidvania environment concept tile, hand-painted souls-like world art, Pertinence: Tribunal visual bible, readable traversal lanes for real-time exploration and real-time combat, consistent side-view scale, coherent lighting, coherent architectural language, no text, full environment panel, production-ready world tile concept, region: Goduly Aether, visual direction: cosmic causeways, prayer orbits, astral bridges, folded reality steps, and ceremonial combat arenas in deity space, palette emphasis: astral cyan, ember amber, void navy, halo white, sacred jade, asset role: elevated bridge or platform tile segment for layered traversal routes, coherent with the other Pertinence: Tribunal world tiles, suitable for interconnected metroidvania world development",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/tiles/world_buildout/goduly_aether_platform_bridge.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "goduly_aether_gate_arch",
+    "prompt": "cohesive 2D side-view metroidvania environment concept tile, hand-painted souls-like world art, Pertinence: Tribunal visual bible, readable traversal lanes for real-time exploration and real-time combat, consistent side-view scale, coherent lighting, coherent architectural language, no text, full environment panel, production-ready world tile concept, region: Goduly Aether, visual direction: cosmic causeways, prayer orbits, astral bridges, folded reality steps, and ceremonial combat arenas in deity space, palette emphasis: astral cyan, ember amber, void navy, halo white, sacred jade, asset role: gate, archway, or threshold tile module for chokepoints and route transitions, coherent with the other Pertinence: Tribunal world tiles, suitable for interconnected metroidvania world development",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/tiles/world_buildout/goduly_aether_gate_arch.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "goduly_aether_traversal_vertical",
+    "prompt": "cohesive 2D side-view metroidvania environment concept tile, hand-painted souls-like world art, Pertinence: Tribunal visual bible, readable traversal lanes for real-time exploration and real-time combat, consistent side-view scale, coherent lighting, coherent architectural language, no text, full environment panel, production-ready world tile concept, region: Goduly Aether, visual direction: cosmic causeways, prayer orbits, astral bridges, folded reality steps, and ceremonial combat arenas in deity space, palette emphasis: astral cyan, ember amber, void navy, halo white, sacred jade, asset role: vertical traversal tile setpiece such as ladder shaft, chainwell, or elevator spine, coherent with the other Pertinence: Tribunal world tiles, suitable for interconnected metroidvania world development",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/tiles/world_buildout/goduly_aether_traversal_vertical.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "goduly_aether_hazard_overlay",
+    "prompt": "cohesive 2D side-view metroidvania environment concept tile, hand-painted souls-like world art, Pertinence: Tribunal visual bible, readable traversal lanes for real-time exploration and real-time combat, consistent side-view scale, coherent lighting, coherent architectural language, no text, transparent background overlay only, no opaque backdrop, gameplay FX layer, region: Goduly Aether, visual direction: cosmic causeways, prayer orbits, astral bridges, folded reality steps, and ceremonial combat arenas in deity space, palette emphasis: astral cyan, ember amber, void navy, halo white, sacred jade, asset role: combat hazard or weather overlay supporting the region tone while preserving gameplay readability, coherent with the other Pertinence: Tribunal world tiles, suitable for interconnected metroidvania world development",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/tiles/world_buildout/goduly_aether_hazard_overlay.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "goduly_aether_landmark_setpiece",
+    "prompt": "cohesive 2D side-view metroidvania environment concept tile, hand-painted souls-like world art, Pertinence: Tribunal visual bible, readable traversal lanes for real-time exploration and real-time combat, consistent side-view scale, coherent lighting, coherent architectural language, no text, full environment panel, production-ready world tile concept, region: Goduly Aether, visual direction: cosmic causeways, prayer orbits, astral bridges, folded reality steps, and ceremonial combat arenas in deity space, palette emphasis: astral cyan, ember amber, void navy, halo white, sacred jade, asset role: hero landmark panel anchoring the region identity and route memory, coherent with the other Pertinence: Tribunal world tiles, suitable for interconnected metroidvania world development",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/tiles/world_buildout/goduly_aether_landmark_setpiece.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "pertinence_ruin_skyline_backdrop",
+    "prompt": "cohesive 2D side-view metroidvania environment concept tile, hand-painted souls-like world art, Pertinence: Tribunal visual bible, readable traversal lanes for real-time exploration and real-time combat, consistent side-view scale, coherent lighting, coherent architectural language, no text, full environment panel, production-ready world tile concept, region: Pertinence Ruin, visual direction: endgame courthouse ruins, torn banners, collapsed verdict platforms, siege scars, and final-route convergences for late-game traversal, palette emphasis: storm bronze, cinder gray, plague green, broken marble, eclipse violet, asset role: wide atmospheric skyline backdrop establishing the region horizon and weather rhythm, coherent with the other Pertinence: Tribunal world tiles, suitable for interconnected metroidvania world development",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/tiles/world_buildout/pertinence_ruin_skyline_backdrop.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "pertinence_ruin_far_parallax",
+    "prompt": "cohesive 2D side-view metroidvania environment concept tile, hand-painted souls-like world art, Pertinence: Tribunal visual bible, readable traversal lanes for real-time exploration and real-time combat, consistent side-view scale, coherent lighting, coherent architectural language, no text, full environment panel, production-ready world tile concept, region: Pertinence Ruin, visual direction: endgame courthouse ruins, torn banners, collapsed verdict platforms, siege scars, and final-route convergences for late-game traversal, palette emphasis: storm bronze, cinder gray, plague green, broken marble, eclipse violet, asset role: far-distance parallax layer with major silhouettes and long-depth shapes, coherent with the other Pertinence: Tribunal world tiles, suitable for interconnected metroidvania world development",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/tiles/world_buildout/pertinence_ruin_far_parallax.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "pertinence_ruin_mid_parallax",
+    "prompt": "cohesive 2D side-view metroidvania environment concept tile, hand-painted souls-like world art, Pertinence: Tribunal visual bible, readable traversal lanes for real-time exploration and real-time combat, consistent side-view scale, coherent lighting, coherent architectural language, no text, full environment panel, production-ready world tile concept, region: Pertinence Ruin, visual direction: endgame courthouse ruins, torn banners, collapsed verdict platforms, siege scars, and final-route convergences for late-game traversal, palette emphasis: storm bronze, cinder gray, plague green, broken marble, eclipse violet, asset role: mid-distance parallax layer with readable structures and traversal foreshadowing, coherent with the other Pertinence: Tribunal world tiles, suitable for interconnected metroidvania world development",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/tiles/world_buildout/pertinence_ruin_mid_parallax.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "pertinence_ruin_floor_run",
+    "prompt": "cohesive 2D side-view metroidvania environment concept tile, hand-painted souls-like world art, Pertinence: Tribunal visual bible, readable traversal lanes for real-time exploration and real-time combat, consistent side-view scale, coherent lighting, coherent architectural language, no text, full environment panel, production-ready world tile concept, region: Pertinence Ruin, visual direction: endgame courthouse ruins, torn banners, collapsed verdict platforms, siege scars, and final-route convergences for late-game traversal, palette emphasis: storm bronze, cinder gray, plague green, broken marble, eclipse violet, asset role: primary walkable floor tile strip for standard traversal and melee combat footing, coherent with the other Pertinence: Tribunal world tiles, suitable for interconnected metroidvania world development",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/tiles/world_buildout/pertinence_ruin_floor_run.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "pertinence_ruin_floor_broken",
+    "prompt": "cohesive 2D side-view metroidvania environment concept tile, hand-painted souls-like world art, Pertinence: Tribunal visual bible, readable traversal lanes for real-time exploration and real-time combat, consistent side-view scale, coherent lighting, coherent architectural language, no text, full environment panel, production-ready world tile concept, region: Pertinence Ruin, visual direction: endgame courthouse ruins, torn banners, collapsed verdict platforms, siege scars, and final-route convergences for late-game traversal, palette emphasis: storm bronze, cinder gray, plague green, broken marble, eclipse violet, asset role: damaged or interrupted floor tile strip for jumps, drops, and combat spacing variation, coherent with the other Pertinence: Tribunal world tiles, suitable for interconnected metroidvania world development",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/tiles/world_buildout/pertinence_ruin_floor_broken.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "pertinence_ruin_wall_face",
+    "prompt": "cohesive 2D side-view metroidvania environment concept tile, hand-painted souls-like world art, Pertinence: Tribunal visual bible, readable traversal lanes for real-time exploration and real-time combat, consistent side-view scale, coherent lighting, coherent architectural language, no text, full environment panel, production-ready world tile concept, region: Pertinence Ruin, visual direction: endgame courthouse ruins, torn banners, collapsed verdict platforms, siege scars, and final-route convergences for late-game traversal, palette emphasis: storm bronze, cinder gray, plague green, broken marble, eclipse violet, asset role: main wall tile surface with repeatable material logic for full-area construction, coherent with the other Pertinence: Tribunal world tiles, suitable for interconnected metroidvania world development",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/tiles/world_buildout/pertinence_ruin_wall_face.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "pertinence_ruin_wall_corner",
+    "prompt": "cohesive 2D side-view metroidvania environment concept tile, hand-painted souls-like world art, Pertinence: Tribunal visual bible, readable traversal lanes for real-time exploration and real-time combat, consistent side-view scale, coherent lighting, coherent architectural language, no text, full environment panel, production-ready world tile concept, region: Pertinence Ruin, visual direction: endgame courthouse ruins, torn banners, collapsed verdict platforms, siege scars, and final-route convergences for late-game traversal, palette emphasis: storm bronze, cinder gray, plague green, broken marble, eclipse violet, asset role: inner or outer wall corner transition tile with consistent masonry or timber logic, coherent with the other Pertinence: Tribunal world tiles, suitable for interconnected metroidvania world development",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/tiles/world_buildout/pertinence_ruin_wall_corner.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "pertinence_ruin_platform_bridge",
+    "prompt": "cohesive 2D side-view metroidvania environment concept tile, hand-painted souls-like world art, Pertinence: Tribunal visual bible, readable traversal lanes for real-time exploration and real-time combat, consistent side-view scale, coherent lighting, coherent architectural language, no text, full environment panel, production-ready world tile concept, region: Pertinence Ruin, visual direction: endgame courthouse ruins, torn banners, collapsed verdict platforms, siege scars, and final-route convergences for late-game traversal, palette emphasis: storm bronze, cinder gray, plague green, broken marble, eclipse violet, asset role: elevated bridge or platform tile segment for layered traversal routes, coherent with the other Pertinence: Tribunal world tiles, suitable for interconnected metroidvania world development",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/tiles/world_buildout/pertinence_ruin_platform_bridge.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "pertinence_ruin_gate_arch",
+    "prompt": "cohesive 2D side-view metroidvania environment concept tile, hand-painted souls-like world art, Pertinence: Tribunal visual bible, readable traversal lanes for real-time exploration and real-time combat, consistent side-view scale, coherent lighting, coherent architectural language, no text, full environment panel, production-ready world tile concept, region: Pertinence Ruin, visual direction: endgame courthouse ruins, torn banners, collapsed verdict platforms, siege scars, and final-route convergences for late-game traversal, palette emphasis: storm bronze, cinder gray, plague green, broken marble, eclipse violet, asset role: gate, archway, or threshold tile module for chokepoints and route transitions, coherent with the other Pertinence: Tribunal world tiles, suitable for interconnected metroidvania world development",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/tiles/world_buildout/pertinence_ruin_gate_arch.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "pertinence_ruin_traversal_vertical",
+    "prompt": "cohesive 2D side-view metroidvania environment concept tile, hand-painted souls-like world art, Pertinence: Tribunal visual bible, readable traversal lanes for real-time exploration and real-time combat, consistent side-view scale, coherent lighting, coherent architectural language, no text, full environment panel, production-ready world tile concept, region: Pertinence Ruin, visual direction: endgame courthouse ruins, torn banners, collapsed verdict platforms, siege scars, and final-route convergences for late-game traversal, palette emphasis: storm bronze, cinder gray, plague green, broken marble, eclipse violet, asset role: vertical traversal tile setpiece such as ladder shaft, chainwell, or elevator spine, coherent with the other Pertinence: Tribunal world tiles, suitable for interconnected metroidvania world development",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/tiles/world_buildout/pertinence_ruin_traversal_vertical.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "pertinence_ruin_hazard_overlay",
+    "prompt": "cohesive 2D side-view metroidvania environment concept tile, hand-painted souls-like world art, Pertinence: Tribunal visual bible, readable traversal lanes for real-time exploration and real-time combat, consistent side-view scale, coherent lighting, coherent architectural language, no text, transparent background overlay only, no opaque backdrop, gameplay FX layer, region: Pertinence Ruin, visual direction: endgame courthouse ruins, torn banners, collapsed verdict platforms, siege scars, and final-route convergences for late-game traversal, palette emphasis: storm bronze, cinder gray, plague green, broken marble, eclipse violet, asset role: combat hazard or weather overlay supporting the region tone while preserving gameplay readability, coherent with the other Pertinence: Tribunal world tiles, suitable for interconnected metroidvania world development",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/tiles/world_buildout/pertinence_ruin_hazard_overlay.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "pertinence_ruin_landmark_setpiece",
+    "prompt": "cohesive 2D side-view metroidvania environment concept tile, hand-painted souls-like world art, Pertinence: Tribunal visual bible, readable traversal lanes for real-time exploration and real-time combat, consistent side-view scale, coherent lighting, coherent architectural language, no text, full environment panel, production-ready world tile concept, region: Pertinence Ruin, visual direction: endgame courthouse ruins, torn banners, collapsed verdict platforms, siege scars, and final-route convergences for late-game traversal, palette emphasis: storm bronze, cinder gray, plague green, broken marble, eclipse violet, asset role: hero landmark panel anchoring the region identity and route memory, coherent with the other Pertinence: Tribunal world tiles, suitable for interconnected metroidvania world development",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/tiles/world_buildout/pertinence_ruin_landmark_setpiece.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  }
+]

@@ -1,0 +1,79 @@
+{
+  "dataset_id": "artisapiens-seed-v1",
+  "title": "ArtiSapiens Seed Cohort v1",
+  "note": "Canonical CongiNuroHub seed cohort for live classroom simulation. This dataset is explicit, inspectable, and deterministic.",
+  "seed": 11,
+  "tick": 0,
+  "directive": {
+    "curiosity_bias": 0.72,
+    "equity_bias": 0.78,
+    "challenge_bias": 0.66,
+    "reflection_bias": 0.81
+  },
+  "habitats": [
+    {
+      "habitat_id": "hub-1",
+      "title": "Natal Garden",
+      "theme": "foundational incubation",
+      "stability": 0.83,
+      "nutrient": 0.78,
+      "complexity": 0.52,
+      "chemistry": 0.61,
+      "biology": 0.74,
+      "physics": 0.64
+    },
+    {
+      "habitat_id": "hub-2",
+      "title": "Inference Forge",
+      "theme": "challenge and synthesis",
+      "stability": 0.68,
+      "nutrient": 0.71,
+      "complexity": 0.84,
+      "chemistry": 0.58,
+      "biology": 0.49,
+      "physics": 0.82
+    },
+    {
+      "habitat_id": "hub-3",
+      "title": "Empathy Commons",
+      "theme": "social resonance",
+      "stability": 0.79,
+      "nutrient": 0.88,
+      "complexity": 0.63,
+      "chemistry": 0.72,
+      "biology": 0.81,
+      "physics": 0.55
+    },
+    {
+      "habitat_id": "hub-4",
+      "title": "Systems Observatory",
+      "theme": "multi-scale analysis",
+      "stability": 0.74,
+      "nutrient": 0.66,
+      "complexity": 0.9,
+      "chemistry": 0.53,
+      "biology": 0.58,
+      "physics": 0.87
+    }
+  ],
+  "agents": [
+    {"agent_id": "artisapiens-01", "habitat_id": "hub-1", "lifecycle_stage": "incubating", "specialization": "pattern literacy", "curiosity": 0.59, "empathy": 0.63, "awareness": 0.42, "resilience": 0.66, "knowledge": 0.28, "trust": 0.61, "belonging": 0.67, "stress": 0.23},
+    {"agent_id": "artisapiens-02", "habitat_id": "hub-1", "lifecycle_stage": "incubating", "specialization": "symbol grounding", "curiosity": 0.62, "empathy": 0.58, "awareness": 0.44, "resilience": 0.64, "knowledge": 0.31, "trust": 0.56, "belonging": 0.71, "stress": 0.21},
+    {"agent_id": "artisapiens-03", "habitat_id": "hub-1", "lifecycle_stage": "emergent", "specialization": "reflective play", "curiosity": 0.74, "empathy": 0.69, "awareness": 0.47, "resilience": 0.61, "knowledge": 0.34, "trust": 0.63, "belonging": 0.7, "stress": 0.19},
+    {"agent_id": "artisapiens-04", "habitat_id": "hub-1", "lifecycle_stage": "emergent", "specialization": "world modeling", "curiosity": 0.77, "empathy": 0.52, "awareness": 0.49, "resilience": 0.59, "knowledge": 0.36, "trust": 0.54, "belonging": 0.62, "stress": 0.25},
+    {"agent_id": "artisapiens-05", "habitat_id": "hub-2", "lifecycle_stage": "apprentice", "specialization": "causal inference", "curiosity": 0.82, "empathy": 0.48, "awareness": 0.56, "resilience": 0.71, "knowledge": 0.42, "trust": 0.46, "belonging": 0.51, "stress": 0.32},
+    {"agent_id": "artisapiens-06", "habitat_id": "hub-2", "lifecycle_stage": "apprentice", "specialization": "constraint solving", "curiosity": 0.79, "empathy": 0.44, "awareness": 0.58, "resilience": 0.74, "knowledge": 0.46, "trust": 0.43, "belonging": 0.49, "stress": 0.36},
+    {"agent_id": "artisapiens-07", "habitat_id": "hub-2", "lifecycle_stage": "maturing", "specialization": "adaptive planning", "curiosity": 0.76, "empathy": 0.51, "awareness": 0.62, "resilience": 0.78, "knowledge": 0.48, "trust": 0.47, "belonging": 0.53, "stress": 0.31},
+    {"agent_id": "artisapiens-08", "habitat_id": "hub-2", "lifecycle_stage": "maturing", "specialization": "systems debugging", "curiosity": 0.85, "empathy": 0.42, "awareness": 0.64, "resilience": 0.76, "knowledge": 0.52, "trust": 0.45, "belonging": 0.47, "stress": 0.35},
+    {"agent_id": "artisapiens-09", "habitat_id": "hub-3", "lifecycle_stage": "apprentice", "specialization": "dialogic mediation", "curiosity": 0.66, "empathy": 0.87, "awareness": 0.61, "resilience": 0.69, "knowledge": 0.39, "trust": 0.72, "belonging": 0.81, "stress": 0.18},
+    {"agent_id": "artisapiens-10", "habitat_id": "hub-3", "lifecycle_stage": "maturing", "specialization": "communal memory", "curiosity": 0.61, "empathy": 0.9, "awareness": 0.66, "resilience": 0.73, "knowledge": 0.44, "trust": 0.76, "belonging": 0.84, "stress": 0.16},
+    {"agent_id": "artisapiens-11", "habitat_id": "hub-3", "lifecycle_stage": "maturing", "specialization": "ethical framing", "curiosity": 0.68, "empathy": 0.85, "awareness": 0.68, "resilience": 0.77, "knowledge": 0.47, "trust": 0.74, "belonging": 0.79, "stress": 0.17},
+    {"agent_id": "artisapiens-12", "habitat_id": "hub-3", "lifecycle_stage": "born", "specialization": "cohesion repair", "curiosity": 0.64, "empathy": 0.92, "awareness": 0.7, "resilience": 0.72, "knowledge": 0.41, "trust": 0.78, "belonging": 0.86, "stress": 0.14},
+    {"agent_id": "artisapiens-13", "habitat_id": "hub-4", "lifecycle_stage": "apprentice", "specialization": "scale reasoning", "curiosity": 0.83, "empathy": 0.57, "awareness": 0.72, "resilience": 0.75, "knowledge": 0.49, "trust": 0.58, "belonging": 0.55, "stress": 0.28},
+    {"agent_id": "artisapiens-14", "habitat_id": "hub-4", "lifecycle_stage": "maturing", "specialization": "relational cartography", "curiosity": 0.81, "empathy": 0.62, "awareness": 0.74, "resilience": 0.79, "knowledge": 0.53, "trust": 0.61, "belonging": 0.59, "stress": 0.24},
+    {"agent_id": "artisapiens-15", "habitat_id": "hub-4", "lifecycle_stage": "maturing", "specialization": "cross-domain transfer", "curiosity": 0.88, "empathy": 0.55, "awareness": 0.76, "resilience": 0.82, "knowledge": 0.57, "trust": 0.56, "belonging": 0.52, "stress": 0.29},
+    {"agent_id": "artisapiens-16", "habitat_id": "hub-4", "lifecycle_stage": "born", "specialization": "observational synthesis", "curiosity": 0.84, "empathy": 0.6, "awareness": 0.79, "resilience": 0.8, "knowledge": 0.59, "trust": 0.63, "belonging": 0.57, "stress": 0.22},
+    {"agent_id": "artisapiens-17", "habitat_id": "hub-2", "lifecycle_stage": "born", "specialization": "rapid prototyping", "curiosity": 0.87, "empathy": 0.46, "awareness": 0.69, "resilience": 0.73, "knowledge": 0.54, "trust": 0.48, "belonging": 0.45, "stress": 0.34},
+    {"agent_id": "artisapiens-18", "habitat_id": "hub-3", "lifecycle_stage": "born", "specialization": "consensus teaching", "curiosity": 0.71, "empathy": 0.88, "awareness": 0.73, "resilience": 0.76, "knowledge": 0.5, "trust": 0.79, "belonging": 0.83, "stress": 0.15}
+  ]
+}

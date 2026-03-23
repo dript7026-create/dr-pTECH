@@ -1,0 +1,493 @@
+{
+  "manifest_name": "bango_patoot_environment_surface_tiles",
+  "manifest_version": "2026-03-12.rendering_world_pass",
+  "intent": "1000-credit Recraft pass for 128x128 environmental surface tiles mapped across the demo world's polygonal landmass.",
+  "budget": {
+    "unit_cost": 40,
+    "asset_count": 25,
+    "total_credits": 1000
+  },
+  "shared_prompt_appendix": "Top-down orthographic material tile sample only. No scene framing. Repeat-safe on all four edges. High readability after nearest-neighbor downsample. Keep macro pattern stable and avoid perspective.",
+  "integration_targets": [
+    "Polygonal terrain material mapping",
+    "World-space slope-based surface assignment",
+    "Preview and 3DS palette reduction testing"
+  ],
+  "assets": [
+    {
+      "name": "brass_cobbles_clean",
+      "category": "world_surface_tile",
+      "prompt": "Polished brass cobblestone tile with readable grout rhythm, slight soot edge wear, top-down technical surface sample.",
+      "negative_prompt": "perspective, scene background, wall angle, text, logo, watermark, blur, painterly smear, crop",
+      "w": 128,
+      "h": 128,
+      "api_units": 40,
+      "model": "recraftv4",
+      "out": "environment_tiles/brass_cobbles_clean.png",
+      "runtime_target": "repeat-safe terrain surface tile",
+      "surface_contract": {
+        "repeat_safe": true,
+        "top_down": true,
+        "material_mask_ready": true,
+        "height_hint_ready": true,
+        "albedo_readable": true
+      }
+    },
+    {
+      "name": "brass_cobbles_wet",
+      "category": "world_surface_tile",
+      "prompt": "Rain-dark brass cobblestone tile with reflective dampness, readable grout, no perspective.",
+      "negative_prompt": "perspective, scene background, wall angle, text, logo, watermark, blur, painterly smear, crop",
+      "w": 128,
+      "h": 128,
+      "api_units": 40,
+      "model": "recraftv4",
+      "out": "environment_tiles/brass_cobbles_wet.png",
+      "runtime_target": "repeat-safe terrain surface tile",
+      "surface_contract": {
+        "repeat_safe": true,
+        "top_down": true,
+        "material_mask_ready": true,
+        "height_hint_ready": true,
+        "albedo_readable": true
+      }
+    },
+    {
+      "name": "wax_brick_wall",
+      "category": "world_surface_tile",
+      "prompt": "Honey-wax brick surface tile, compressed hive masonry, readable seams and wax buildup.",
+      "negative_prompt": "perspective, scene background, wall angle, text, logo, watermark, blur, painterly smear, crop",
+      "w": 128,
+      "h": 128,
+      "api_units": 40,
+      "model": "recraftv4",
+      "out": "environment_tiles/wax_brick_wall.png",
+      "runtime_target": "repeat-safe terrain surface tile",
+      "surface_contract": {
+        "repeat_safe": true,
+        "top_down": true,
+        "material_mask_ready": true,
+        "height_hint_ready": true,
+        "albedo_readable": true
+      }
+    },
+    {
+      "name": "crypt_stone_large",
+      "category": "world_surface_tile",
+      "prompt": "Large crypt stone slab tile, damp mineral wear, subtle cracks, even repeat boundaries.",
+      "negative_prompt": "perspective, scene background, wall angle, text, logo, watermark, blur, painterly smear, crop",
+      "w": 128,
+      "h": 128,
+      "api_units": 40,
+      "model": "recraftv4",
+      "out": "environment_tiles/crypt_stone_large.png",
+      "runtime_target": "repeat-safe terrain surface tile",
+      "surface_contract": {
+        "repeat_safe": true,
+        "top_down": true,
+        "material_mask_ready": true,
+        "height_hint_ready": true,
+        "albedo_readable": true
+      }
+    },
+    {
+      "name": "crypt_stone_small",
+      "category": "world_surface_tile",
+      "prompt": "Small chiseled crypt stone tile, tight repeat-safe edges, damp underhive grit.",
+      "negative_prompt": "perspective, scene background, wall angle, text, logo, watermark, blur, painterly smear, crop",
+      "w": 128,
+      "h": 128,
+      "api_units": 40,
+      "model": "recraftv4",
+      "out": "environment_tiles/crypt_stone_small.png",
+      "runtime_target": "repeat-safe terrain surface tile",
+      "surface_contract": {
+        "repeat_safe": true,
+        "top_down": true,
+        "material_mask_ready": true,
+        "height_hint_ready": true,
+        "albedo_readable": true
+      }
+    },
+    {
+      "name": "sewer_moss_grate",
+      "category": "world_surface_tile",
+      "prompt": "Metal grate surface partly overtaken by green moss and damp fungal bloom, top-down tile sample.",
+      "negative_prompt": "perspective, scene background, wall angle, text, logo, watermark, blur, painterly smear, crop",
+      "w": 128,
+      "h": 128,
+      "api_units": 40,
+      "model": "recraftv4",
+      "out": "environment_tiles/sewer_moss_grate.png",
+      "runtime_target": "repeat-safe terrain surface tile",
+      "surface_contract": {
+        "repeat_safe": true,
+        "top_down": true,
+        "material_mask_ready": true,
+        "height_hint_ready": true,
+        "albedo_readable": true
+      }
+    },
+    {
+      "name": "rusted_plate_floor",
+      "category": "world_surface_tile",
+      "prompt": "Rusted machine plate floor tile with bolt heads and maintenance seams, repeat-safe.",
+      "negative_prompt": "perspective, scene background, wall angle, text, logo, watermark, blur, painterly smear, crop",
+      "w": 128,
+      "h": 128,
+      "api_units": 40,
+      "model": "recraftv4",
+      "out": "environment_tiles/rusted_plate_floor.png",
+      "runtime_target": "repeat-safe terrain surface tile",
+      "surface_contract": {
+        "repeat_safe": true,
+        "top_down": true,
+        "material_mask_ready": true,
+        "height_hint_ready": true,
+        "albedo_readable": true
+      }
+    },
+    {
+      "name": "wax_resin_planks",
+      "category": "world_surface_tile",
+      "prompt": "Dark resin plank floor tile with wax drips, shrine maintenance walkway sample.",
+      "negative_prompt": "perspective, scene background, wall angle, text, logo, watermark, blur, painterly smear, crop",
+      "w": 128,
+      "h": 128,
+      "api_units": 40,
+      "model": "recraftv4",
+      "out": "environment_tiles/wax_resin_planks.png",
+      "runtime_target": "repeat-safe terrain surface tile",
+      "surface_contract": {
+        "repeat_safe": true,
+        "top_down": true,
+        "material_mask_ready": true,
+        "height_hint_ready": true,
+        "albedo_readable": true
+      }
+    },
+    {
+      "name": "ash_flagstone",
+      "category": "world_surface_tile",
+      "prompt": "Ash-coated flagstone tile, cinder tenement paving, muted mineral breakup.",
+      "negative_prompt": "perspective, scene background, wall angle, text, logo, watermark, blur, painterly smear, crop",
+      "w": 128,
+      "h": 128,
+      "api_units": 40,
+      "model": "recraftv4",
+      "out": "environment_tiles/ash_flagstone.png",
+      "runtime_target": "repeat-safe terrain surface tile",
+      "surface_contract": {
+        "repeat_safe": true,
+        "top_down": true,
+        "material_mask_ready": true,
+        "height_hint_ready": true,
+        "albedo_readable": true
+      }
+    },
+    {
+      "name": "fungal_silt_ground",
+      "category": "world_surface_tile",
+      "prompt": "Fungal silt ground tile, soft damp soil, small spores and root threads.",
+      "negative_prompt": "perspective, scene background, wall angle, text, logo, watermark, blur, painterly smear, crop",
+      "w": 128,
+      "h": 128,
+      "api_units": 40,
+      "model": "recraftv4",
+      "out": "environment_tiles/fungal_silt_ground.png",
+      "runtime_target": "repeat-safe terrain surface tile",
+      "surface_contract": {
+        "repeat_safe": true,
+        "top_down": true,
+        "material_mask_ready": true,
+        "height_hint_ready": true,
+        "albedo_readable": true
+      }
+    },
+    {
+      "name": "bone_inlay_stone",
+      "category": "world_surface_tile",
+      "prompt": "Stone tile with subtle bone inlay channels, ritual walkway, readable from distance.",
+      "negative_prompt": "perspective, scene background, wall angle, text, logo, watermark, blur, painterly smear, crop",
+      "w": 128,
+      "h": 128,
+      "api_units": 40,
+      "model": "recraftv4",
+      "out": "environment_tiles/bone_inlay_stone.png",
+      "runtime_target": "repeat-safe terrain surface tile",
+      "surface_contract": {
+        "repeat_safe": true,
+        "top_down": true,
+        "material_mask_ready": true,
+        "height_hint_ready": true,
+        "albedo_readable": true
+      }
+    },
+    {
+      "name": "apiary_hex_pavers",
+      "category": "world_surface_tile",
+      "prompt": "Hex-pattern apiary paver tile, brass and wax hybrid, strict repeat edges.",
+      "negative_prompt": "perspective, scene background, wall angle, text, logo, watermark, blur, painterly smear, crop",
+      "w": 128,
+      "h": 128,
+      "api_units": 40,
+      "model": "recraftv4",
+      "out": "environment_tiles/apiary_hex_pavers.png",
+      "runtime_target": "repeat-safe terrain surface tile",
+      "surface_contract": {
+        "repeat_safe": true,
+        "top_down": true,
+        "material_mask_ready": true,
+        "height_hint_ready": true,
+        "albedo_readable": true
+      }
+    },
+    {
+      "name": "machine_conduit_floor",
+      "category": "world_surface_tile",
+      "prompt": "Industrial conduit floor tile, inset cable channels and maintenance panels.",
+      "negative_prompt": "perspective, scene background, wall angle, text, logo, watermark, blur, painterly smear, crop",
+      "w": 128,
+      "h": 128,
+      "api_units": 40,
+      "model": "recraftv4",
+      "out": "environment_tiles/machine_conduit_floor.png",
+      "runtime_target": "repeat-safe terrain surface tile",
+      "surface_contract": {
+        "repeat_safe": true,
+        "top_down": true,
+        "material_mask_ready": true,
+        "height_hint_ready": true,
+        "albedo_readable": true
+      }
+    },
+    {
+      "name": "catwalk_mesh_floor",
+      "category": "world_surface_tile",
+      "prompt": "Painted steel catwalk mesh tile, readable structural pattern, top-down sample.",
+      "negative_prompt": "perspective, scene background, wall angle, text, logo, watermark, blur, painterly smear, crop",
+      "w": 128,
+      "h": 128,
+      "api_units": 40,
+      "model": "recraftv4",
+      "out": "environment_tiles/catwalk_mesh_floor.png",
+      "runtime_target": "repeat-safe terrain surface tile",
+      "surface_contract": {
+        "repeat_safe": true,
+        "top_down": true,
+        "material_mask_ready": true,
+        "height_hint_ready": true,
+        "albedo_readable": true
+      }
+    },
+    {
+      "name": "salt_streak_concrete",
+      "category": "world_surface_tile",
+      "prompt": "Weathered concrete tile with salt streaks, drain residue, and repeat-safe borders.",
+      "negative_prompt": "perspective, scene background, wall angle, text, logo, watermark, blur, painterly smear, crop",
+      "w": 128,
+      "h": 128,
+      "api_units": 40,
+      "model": "recraftv4",
+      "out": "environment_tiles/salt_streak_concrete.png",
+      "runtime_target": "repeat-safe terrain surface tile",
+      "surface_contract": {
+        "repeat_safe": true,
+        "top_down": true,
+        "material_mask_ready": true,
+        "height_hint_ready": true,
+        "albedo_readable": true
+      }
+    },
+    {
+      "name": "mural_ceramic_fragments",
+      "category": "world_surface_tile",
+      "prompt": "Cracked ceramic tile with faint shrine mural fragments, repeat-safe distribution.",
+      "negative_prompt": "perspective, scene background, wall angle, text, logo, watermark, blur, painterly smear, crop",
+      "w": 128,
+      "h": 128,
+      "api_units": 40,
+      "model": "recraftv4",
+      "out": "environment_tiles/mural_ceramic_fragments.png",
+      "runtime_target": "repeat-safe terrain surface tile",
+      "surface_contract": {
+        "repeat_safe": true,
+        "top_down": true,
+        "material_mask_ready": true,
+        "height_hint_ready": true,
+        "albedo_readable": true
+      }
+    },
+    {
+      "name": "obsidian_shard_ground",
+      "category": "world_surface_tile",
+      "prompt": "Dark shard-strewn obsidian ground tile, dangerous footing, readable silhouette contrast.",
+      "negative_prompt": "perspective, scene background, wall angle, text, logo, watermark, blur, painterly smear, crop",
+      "w": 128,
+      "h": 128,
+      "api_units": 40,
+      "model": "recraftv4",
+      "out": "environment_tiles/obsidian_shard_ground.png",
+      "runtime_target": "repeat-safe terrain surface tile",
+      "surface_contract": {
+        "repeat_safe": true,
+        "top_down": true,
+        "material_mask_ready": true,
+        "height_hint_ready": true,
+        "albedo_readable": true
+      }
+    },
+    {
+      "name": "ivy_brass_lattice",
+      "category": "world_surface_tile",
+      "prompt": "Brass lattice floor overtaken by vine growth, top-down environmental surface tile.",
+      "negative_prompt": "perspective, scene background, wall angle, text, logo, watermark, blur, painterly smear, crop",
+      "w": 128,
+      "h": 128,
+      "api_units": 40,
+      "model": "recraftv4",
+      "out": "environment_tiles/ivy_brass_lattice.png",
+      "runtime_target": "repeat-safe terrain surface tile",
+      "surface_contract": {
+        "repeat_safe": true,
+        "top_down": true,
+        "material_mask_ready": true,
+        "height_hint_ready": true,
+        "albedo_readable": true
+      }
+    },
+    {
+      "name": "tar_blackened_brick",
+      "category": "world_surface_tile",
+      "prompt": "Tar-blackened brick surface tile with oily sheen and ember staining.",
+      "negative_prompt": "perspective, scene background, wall angle, text, logo, watermark, blur, painterly smear, crop",
+      "w": 128,
+      "h": 128,
+      "api_units": 40,
+      "model": "recraftv4",
+      "out": "environment_tiles/tar_blackened_brick.png",
+      "runtime_target": "repeat-safe terrain surface tile",
+      "surface_contract": {
+        "repeat_safe": true,
+        "top_down": true,
+        "material_mask_ready": true,
+        "height_hint_ready": true,
+        "albedo_readable": true
+      }
+    },
+    {
+      "name": "wet_ropewood_deck",
+      "category": "world_surface_tile",
+      "prompt": "Ropewood deck tile with soaked wood grain and fixed plank cadence.",
+      "negative_prompt": "perspective, scene background, wall angle, text, logo, watermark, blur, painterly smear, crop",
+      "w": 128,
+      "h": 128,
+      "api_units": 40,
+      "model": "recraftv4",
+      "out": "environment_tiles/wet_ropewood_deck.png",
+      "runtime_target": "repeat-safe terrain surface tile",
+      "surface_contract": {
+        "repeat_safe": true,
+        "top_down": true,
+        "material_mask_ready": true,
+        "height_hint_ready": true,
+        "albedo_readable": true
+      }
+    },
+    {
+      "name": "beeswax_mosaic",
+      "category": "world_surface_tile",
+      "prompt": "Beeswax shrine mosaic tile, geometric sacred pattern, crisp top-down read.",
+      "negative_prompt": "perspective, scene background, wall angle, text, logo, watermark, blur, painterly smear, crop",
+      "w": 128,
+      "h": 128,
+      "api_units": 40,
+      "model": "recraftv4",
+      "out": "environment_tiles/beeswax_mosaic.png",
+      "runtime_target": "repeat-safe terrain surface tile",
+      "surface_contract": {
+        "repeat_safe": true,
+        "top_down": true,
+        "material_mask_ready": true,
+        "height_hint_ready": true,
+        "albedo_readable": true
+      }
+    },
+    {
+      "name": "storm_drain_grit",
+      "category": "world_surface_tile",
+      "prompt": "Storm drain grit tile with pebbles, runoff sediment, and iron stains.",
+      "negative_prompt": "perspective, scene background, wall angle, text, logo, watermark, blur, painterly smear, crop",
+      "w": 128,
+      "h": 128,
+      "api_units": 40,
+      "model": "recraftv4",
+      "out": "environment_tiles/storm_drain_grit.png",
+      "runtime_target": "repeat-safe terrain surface tile",
+      "surface_contract": {
+        "repeat_safe": true,
+        "top_down": true,
+        "material_mask_ready": true,
+        "height_hint_ready": true,
+        "albedo_readable": true
+      }
+    },
+    {
+      "name": "chalk_sigil_floor",
+      "category": "world_surface_tile",
+      "prompt": "Chalk-sigil floor tile, occult markings over stone, repeat-safe edge treatment.",
+      "negative_prompt": "perspective, scene background, wall angle, text, logo, watermark, blur, painterly smear, crop",
+      "w": 128,
+      "h": 128,
+      "api_units": 40,
+      "model": "recraftv4",
+      "out": "environment_tiles/chalk_sigil_floor.png",
+      "runtime_target": "repeat-safe terrain surface tile",
+      "surface_contract": {
+        "repeat_safe": true,
+        "top_down": true,
+        "material_mask_ready": true,
+        "height_hint_ready": true,
+        "albedo_readable": true
+      }
+    },
+    {
+      "name": "copper_pipe_crossing",
+      "category": "world_surface_tile",
+      "prompt": "Copper pipe crossing floor tile with embedded pipe sleeves and maintenance grime.",
+      "negative_prompt": "perspective, scene background, wall angle, text, logo, watermark, blur, painterly smear, crop",
+      "w": 128,
+      "h": 128,
+      "api_units": 40,
+      "model": "recraftv4",
+      "out": "environment_tiles/copper_pipe_crossing.png",
+      "runtime_target": "repeat-safe terrain surface tile",
+      "surface_contract": {
+        "repeat_safe": true,
+        "top_down": true,
+        "material_mask_ready": true,
+        "height_hint_ready": true,
+        "albedo_readable": true
+      }
+    },
+    {
+      "name": "lantern_glass_fragments",
+      "category": "world_surface_tile",
+      "prompt": "Glass-littered underhive floor tile with lantern fragments and dusted reflections.",
+      "negative_prompt": "perspective, scene background, wall angle, text, logo, watermark, blur, painterly smear, crop",
+      "w": 128,
+      "h": 128,
+      "api_units": 40,
+      "model": "recraftv4",
+      "out": "environment_tiles/lantern_glass_fragments.png",
+      "runtime_target": "repeat-safe terrain surface tile",
+      "surface_contract": {
+        "repeat_safe": true,
+        "top_down": true,
+        "material_mask_ready": true,
+        "height_hint_ready": true,
+        "albedo_readable": true
+      }
+    }
+  ]
+}

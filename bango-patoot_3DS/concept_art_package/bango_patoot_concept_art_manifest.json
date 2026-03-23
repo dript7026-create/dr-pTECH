@@ -1,0 +1,861 @@
+[
+  {
+    "name": "cover_underhive_nocturne",
+    "prompt": "meticulously detailed game concept art for Bango-Patoot, original urban-underhive fantasy horror world, subject: Bango-Patoot key art centered on Bango and Patoot descending a shrine-lit undercity vista, setting: the vertical city-body of Brassroot, hive lanterns, rail ribs, chapel steel, fog wells, and Witchcoil silhouettes, visual focus: heroic cover illustration with clean title space, high legibility, and a premium concept artbook front cover composition, palette emphasis: honey amber, shrine ivory, oxidized brass, bruise violet, soot black, highly readable silhouette language, production-ready visual-development illustration, cinematic lighting, cohesive material logic, premium artbook quality, no text, no watermark, no logos",
+    "w": 1344,
+    "h": 768,
+    "out": "recraft_assets\\01_cover_underhive_nocturne.png",
+    "api_units": 40,
+    "model": "recraftv4",
+    "page_dialogue": [
+      {
+        "speaker": "Bango",
+        "text": "If the city still remembers her, we can still reach her."
+      },
+      {
+        "speaker": "Patoot",
+        "text": "Then keep moving. The rails are whispering the way down."
+      }
+    ],
+    "page_overlays": [
+      "Brassroot descent route",
+      "Shrine heat below"
+    ]
+  },
+  {
+    "name": "premise_duo_fantasy",
+    "prompt": "meticulously detailed game concept art for Bango-Patoot, original urban-underhive fantasy horror world, subject: Bango and Patoot as an inseparable traversal-and-combat pair, setting: Apiary Junction opening overlook with shrine rails, worker lifts, signal combs, and ritual smoke, visual focus: frontispiece illustration that explains the player fantasy through pose, scale, and movement intent, palette emphasis: warm apiary gold, fungal green, soot slate, ritual red, highly readable silhouette language, production-ready visual-development illustration, cinematic lighting, cohesive material logic, premium artbook quality, no text, no watermark, no logos",
+    "w": 1344,
+    "h": 768,
+    "out": "recraft_assets\\02_premise_duo_fantasy.png",
+    "api_units": 40,
+    "model": "recraftv4",
+    "page_dialogue": [
+      {
+        "speaker": "Tula Echo",
+        "text": "Follow the shrine heat, not the loudest hymn."
+      }
+    ],
+    "page_overlays": [
+      "Duo traversal covenant",
+      "Rescue motive"
+    ]
+  },
+  {
+    "name": "duo_silhouette_language",
+    "prompt": "meticulously detailed game concept art for Bango-Patoot, original urban-underhive fantasy horror world, subject: Bango and Patoot seen in multiple relationship poses and traversal stances, setting: a neutral shrine practice chamber lined with embossed comb-metal and chalk route diagrams, visual focus: silhouette language sheet showing idle, alert, mounted-assist, leap, and combat-read poses, palette emphasis: bone ivory, rail brass, hive orange, storm blue, highly readable silhouette language, production-ready visual-development illustration, cinematic lighting, cohesive material logic, premium artbook quality, no text, no watermark, no logos",
+    "w": 1344,
+    "h": 768,
+    "out": "recraft_assets\\03_duo_silhouette_language.png",
+    "api_units": 40,
+    "model": "recraftv4",
+    "page_dialogue": [
+      {
+        "speaker": "Bango",
+        "text": "You scout the ledges. I break the locks."
+      },
+      {
+        "speaker": "Patoot",
+        "text": "And when you miss a step, I keep you off the floor below."
+      }
+    ],
+    "page_overlays": [
+      "Idle / alert / leap / guard",
+      "Top-screen readability test"
+    ]
+  },
+  {
+    "name": "bango_anatomy_wardrobe",
+    "prompt": "meticulously detailed game concept art for Bango-Patoot, original urban-underhive fantasy horror world, subject: Bango as a horned tunnel-born ursine survivor with ritual field gear, setting: Apiary maintenance workshop table, hand-forged hooks, hive cloth, dented reliquary metal, visual focus: full character design sheet covering anatomy, costume layers, horn structure, gloves, boots, satchel, and ward harness, palette emphasis: earth umber, shrine linen, brass oxide, ember orange, highly readable silhouette language, production-ready visual-development illustration, cinematic lighting, cohesive material logic, premium artbook quality, no text, no watermark, no logos",
+    "w": 1344,
+    "h": 768,
+    "out": "recraft_assets\\04_bango_anatomy_wardrobe.png",
+    "api_units": 40,
+    "model": "recraftv4",
+    "page_dialogue": [
+      {
+        "speaker": "Bango",
+        "text": "Every strap earns its keep. Nothing rides on me for show."
+      }
+    ],
+    "page_overlays": [
+      "Field harness logic",
+      "Ward-ready silhouette"
+    ]
+  },
+  {
+    "name": "patoot_anatomy_motion",
+    "prompt": "meticulously detailed game concept art for Bango-Patoot, original urban-underhive fantasy horror world, subject: Patoot as a reptile-dodo-ostrid companion with ritual tack and scout gear, setting: aviary roost scaffolds, hanging charms, cable perches, wind streamers, visual focus: companion anatomy sheet emphasizing gait, perch logic, wing-assisted glide posture, beak utility, and saddle-adjacent mounting zones, palette emphasis: ash teal, feather charcoal, saddle tan, signal amber, highly readable silhouette language, production-ready visual-development illustration, cinematic lighting, cohesive material logic, premium artbook quality, no text, no watermark, no logos",
+    "w": 1344,
+    "h": 768,
+    "out": "recraft_assets\\05_patoot_anatomy_motion.png",
+    "api_units": 40,
+    "model": "recraftv4",
+    "page_dialogue": [
+      {
+        "speaker": "Patoot",
+        "text": "I do not fly away. I correct the fall."
+      }
+    ],
+    "page_overlays": [
+      "Perch balance",
+      "Glide correction anatomy"
+    ]
+  },
+  {
+    "name": "tula_memory_anchor",
+    "prompt": "meticulously detailed game concept art for Bango-Patoot, original urban-underhive fantasy horror world, subject: Tula as hive-keeper apprentice, chant archivist, and captured sister, setting: memory room reliquary lit by reflected wax, pollen jars, and hymn cylinders, visual focus: portrait and costume sheet showing Tula in free state, captivity echoes, and sabotage mode inside the Witchcoil lattice, palette emphasis: wax cream, copper red, ash blue, hive gold, highly readable silhouette language, production-ready visual-development illustration, cinematic lighting, cohesive material logic, premium artbook quality, no text, no watermark, no logos",
+    "w": 1344,
+    "h": 768,
+    "out": "recraft_assets\\06_tula_memory_anchor.png",
+    "api_units": 40,
+    "model": "recraftv4",
+    "page_dialogue": [
+      {
+        "speaker": "Tula",
+        "text": "They can cage my body. They still cannot catalog my will."
+      }
+    ],
+    "page_overlays": [
+      "Echo-state continuity",
+      "Captivity does not erase agency"
+    ]
+  },
+  {
+    "name": "matra_vey_cyberwitch",
+    "prompt": "meticulously detailed game concept art for Bango-Patoot, original urban-underhive fantasy horror world, subject: Matra Vey as ritual engineer, caretaker tyrant, and city-body theologian, setting: Witchcoil laboratory nave with choir drones, memory spears, and rotating shrine fragments, visual focus: villain design plate covering base form, broadcast harness, hymn-engine interface, and ascendant silhouette, palette emphasis: surgical silver, ritual violet, arterial red, cathedral black, highly readable silhouette language, production-ready visual-development illustration, cinematic lighting, cohesive material logic, premium artbook quality, no text, no watermark, no logos",
+    "w": 1344,
+    "h": 768,
+    "out": "recraft_assets\\07_matra_vey_cyberwitch.png",
+    "api_units": 40,
+    "model": "recraftv4",
+    "page_dialogue": [
+      {
+        "speaker": "Matra Vey",
+        "text": "Mercy is the final obedience. I will make the city gentle by force."
+      }
+    ],
+    "page_overlays": [
+      "Obedience-engine interface",
+      "Caretaker tyranny"
+    ]
+  },
+  {
+    "name": "mother_comb_edda",
+    "prompt": "meticulously detailed game concept art for Bango-Patoot, original urban-underhive fantasy horror world, subject: Mother Comb Edda as the first shrine-keeper and civic memory elder, setting: first apiary reliquary with honey lamps, civic offerings, and patched worker banners, visual focus: mentor portrait and ritual-service design showing shrine tools, posture language, and elder authority, palette emphasis: hive amber, smoke brown, linen white, brass green, highly readable silhouette language, production-ready visual-development illustration, cinematic lighting, cohesive material logic, premium artbook quality, no text, no watermark, no logos",
+    "w": 1344,
+    "h": 768,
+    "out": "recraft_assets\\08_mother_comb_edda.png",
+    "api_units": 40,
+    "model": "recraftv4",
+    "page_dialogue": [
+      {
+        "speaker": "Edda",
+        "text": "A shrine is not a throne. It is a promise somebody keeps every day."
+      }
+    ],
+    "page_overlays": [
+      "Allies",
+      "hive amber, smoke brown, linen white, brass green"
+    ]
+  },
+  {
+    "name": "vilm_siltcoat",
+    "prompt": "meticulously detailed game concept art for Bango-Patoot, original urban-underhive fantasy horror world, subject: Vilm Siltcoat as salvage broker, tunnel fixer, and map-for-hire pragmatist, setting: back-alley salvage stall stacked with wires, comb-metal, elevator teeth, and relic scrap, visual focus: merchant character design with portable stall kit, rope rigging, chalk maps, and route-marking tools, palette emphasis: oil blue, rust orange, lamp yellow, tar black, highly readable silhouette language, production-ready visual-development illustration, cinematic lighting, cohesive material logic, premium artbook quality, no text, no watermark, no logos",
+    "w": 1344,
+    "h": 768,
+    "out": "recraft_assets\\09_vilm_siltcoat.png",
+    "api_units": 40,
+    "model": "recraftv4",
+    "page_dialogue": [
+      {
+        "speaker": "Vilm",
+        "text": "Maps cost extra when the walls start lying."
+      }
+    ],
+    "page_overlays": [
+      "Allies",
+      "oil blue, rust orange, lamp yellow, tar black"
+    ]
+  },
+  {
+    "name": "sister_halceon",
+    "prompt": "meticulously detailed game concept art for Bango-Patoot, original urban-underhive fantasy horror world, subject: Sister Halceon as ex-enforcer penitent carrying chapel doctrine scars, setting: defector prayer cell with stripped icon frames, confession vents, and copied hymn tapes, visual focus: character portrait contrasting former chapel enforcement gear with present-day penitential modifications, palette emphasis: chalk white, bruise plum, iron grey, votive blue, highly readable silhouette language, production-ready visual-development illustration, cinematic lighting, cohesive material logic, premium artbook quality, no text, no watermark, no logos",
+    "w": 1344,
+    "h": 768,
+    "out": "recraft_assets\\10_sister_halceon.png",
+    "api_units": 40,
+    "model": "recraftv4",
+    "page_dialogue": [
+      {
+        "speaker": "Halceon",
+        "text": "I know the hymns they used to break us. I know where they skip a beat."
+      }
+    ],
+    "page_overlays": [
+      "Allies",
+      "chalk white, bruise plum, iron grey, votive blue"
+    ]
+  },
+  {
+    "name": "apiary_junction_hub",
+    "prompt": "meticulously detailed game concept art for Bango-Patoot, original urban-underhive fantasy horror world, subject: Apiary Junction as the layered shrine-and-merchant hub at the center of the city, setting: interlocked plaza of reliquary bridges, worker lifts, pollen boilers, and bulletin niches, visual focus: hub environment key art with strong route readability and clear service zones for shrine, vendors, and memory rooms, palette emphasis: honey gold, coal blue, shrine white, wet stone grey, highly readable silhouette language, production-ready visual-development illustration, cinematic lighting, cohesive material logic, premium artbook quality, no text, no watermark, no logos",
+    "w": 1344,
+    "h": 768,
+    "out": "recraft_assets\\11_apiary_junction_hub.png",
+    "api_units": 40,
+    "model": "recraftv4",
+    "page_dialogue": [
+      {
+        "speaker": "Patoot",
+        "text": "Warm lamps, clean ladders, three exits. This is where the city still breathes right."
+      }
+    ],
+    "page_overlays": [
+      "Service hub",
+      "Shrine / vendor / route legibility"
+    ]
+  },
+  {
+    "name": "brassroot_borough",
+    "prompt": "meticulously detailed game concept art for Bango-Patoot, original urban-underhive fantasy horror world, subject: Brassroot Borough as the opening worker district and site of the hushfall kidnapping, setting: tenements, rooftop laundries, steam pipes, shrines, and public feast lanes built over old service tunnels, visual focus: district establishing shot focused on social warmth under threat, showing the place before and after ritual corruption, palette emphasis: warm hive gold, brick umber, steam grey, blackout violet, highly readable silhouette language, production-ready visual-development illustration, cinematic lighting, cohesive material logic, premium artbook quality, no text, no watermark, no logos",
+    "w": 1344,
+    "h": 768,
+    "out": "recraft_assets\\12_brassroot_borough.png",
+    "api_units": 40,
+    "model": "recraftv4",
+    "page_dialogue": [
+      {
+        "speaker": "Bango",
+        "text": "This was home before it became evidence."
+      }
+    ],
+    "page_overlays": [
+      "Opening district",
+      "Warmth under pressure"
+    ]
+  },
+  {
+    "name": "saint_voltage_arcade",
+    "prompt": "meticulously detailed game concept art for Bango-Patoot, original urban-underhive fantasy horror world, subject: Saint Voltage Arcade as neon chapel-market hybrid, indulgence district, and gang-lit miracle mall, setting: arcade cabinets, votive kiosks, chapel wiring, market bridges, and prayer-fee machines, visual focus: district environment painting emphasizing sensory overload, commerce, and corrupted worship infrastructure, palette emphasis: neon cyan, sodium magenta, brass gold, confession black, highly readable silhouette language, production-ready visual-development illustration, cinematic lighting, cohesive material logic, premium artbook quality, no text, no watermark, no logos",
+    "w": 1344,
+    "h": 768,
+    "out": "recraft_assets\\13_saint_voltage_arcade.png",
+    "api_units": 40,
+    "model": "recraftv4",
+    "page_dialogue": [
+      {
+        "speaker": "Patoot",
+        "text": "Everything here wants a prayer, a coin, or your nerves."
+      }
+    ],
+    "page_overlays": [
+      "Coin-fed worship grid"
+    ]
+  },
+  {
+    "name": "ossuary_transit",
+    "prompt": "meticulously detailed game concept art for Bango-Patoot, original urban-underhive fantasy horror world, subject: Ossuary Transit as rail backbone, memorial vault, and hidden dead-route archive, setting: bone furnaces, switchyards, memorial arches, and derelict rail platforms descending into burial infrastructure, visual focus: district key art showing rail geometry, memorial massing, and traversal across dead civic machinery, palette emphasis: bone ivory, furnace amber, soot black, oxidized iron, highly readable silhouette language, production-ready visual-development illustration, cinematic lighting, cohesive material logic, premium artbook quality, no text, no watermark, no logos",
+    "w": 1344,
+    "h": 768,
+    "out": "recraft_assets\\14_ossuary_transit.png",
+    "api_units": 40,
+    "model": "recraftv4",
+    "page_dialogue": [
+      {
+        "speaker": "Bango",
+        "text": "They buried memory under the tracks and wondered why the rails howl."
+      }
+    ],
+    "page_overlays": [
+      "Memorial rail geometry"
+    ]
+  },
+  {
+    "name": "gutterwake_sewers",
+    "prompt": "meticulously detailed game concept art for Bango-Patoot, original urban-underhive fantasy horror world, subject: Gutterwake as fungal runoff maze, floodgate machine, and chemical honey sump, setting: sluice wheels, drowned workshops, rope catwalks, fungus combs, and cryptid nests, visual focus: humid underworld environment painting built around water logic, visibility rhythm, and ambush layering, palette emphasis: mold green, chemical amber, wet steel, midnight blue, highly readable silhouette language, production-ready visual-development illustration, cinematic lighting, cohesive material logic, premium artbook quality, no text, no watermark, no logos",
+    "w": 1344,
+    "h": 768,
+    "out": "recraft_assets\\15_gutterwake_sewers.png",
+    "api_units": 40,
+    "model": "recraftv4",
+    "page_dialogue": [
+      {
+        "speaker": "Patoot",
+        "text": "Do not trust the bright water. It glows because it is hungry."
+      }
+    ],
+    "page_overlays": [
+      "Runoff logic",
+      "Ambush fog rhythm"
+    ]
+  },
+  {
+    "name": "cinder_tenements",
+    "prompt": "meticulously detailed game concept art for Bango-Patoot, original urban-underhive fantasy horror world, subject: Cinder Tenements as the apartment-chapel district where domestic horror becomes explicit, setting: stairwells, burnt kitchens, nursery shrines, confession vents, and soot-heavy living blocks, visual focus: district hero shot focused on homes converted into cult architecture and the cost borne by ordinary households, palette emphasis: ash white, nursery red, soot black, lamp gold, highly readable silhouette language, production-ready visual-development illustration, cinematic lighting, cohesive material logic, premium artbook quality, no text, no watermark, no logos",
+    "w": 1344,
+    "h": 768,
+    "out": "recraft_assets\\16_cinder_tenements.png",
+    "api_units": 40,
+    "model": "recraftv4",
+    "page_dialogue": [
+      {
+        "speaker": "Bango",
+        "text": "A house should hold a family. Not a sermon with teeth."
+      }
+    ],
+    "page_overlays": [
+      "Domestic horror threshold"
+    ]
+  },
+  {
+    "name": "aviary_last_broadcast",
+    "prompt": "meticulously detailed game concept art for Bango-Patoot, original urban-underhive fantasy horror world, subject: Aviary district built from masts, cages, signal decks, cable bridges, and public address chambers, setting: wind ladders, speaker arrays, aerial cages, and sheer drop shafts, visual focus: vertical traversal showcase environment with strong sense of altitude, wind exposure, and broadcast reach, palette emphasis: storm white, signal blue, cable black, rust brass, highly readable silhouette language, production-ready visual-development illustration, cinematic lighting, cohesive material logic, premium artbook quality, no text, no watermark, no logos",
+    "w": 1344,
+    "h": 768,
+    "out": "recraft_assets\\17_aviary_last_broadcast.png",
+    "api_units": 40,
+    "model": "recraftv4",
+    "page_dialogue": [
+      {
+        "speaker": "Patoot",
+        "text": "Wind is honest. The speakers are what twist it."
+      }
+    ],
+    "page_overlays": [
+      "Wind-ladder route test"
+    ]
+  },
+  {
+    "name": "witchcoil_spire",
+    "prompt": "meticulously detailed game concept art for Bango-Patoot, original urban-underhive fantasy horror world, subject: Witchcoil Spire as final ritual factory combining chapel steel, hive geometry, organ pipes, and obedience machinery, setting: sacrifice lifts, choir cores, memory lattices, and comb-like vertical chambers, visual focus: final district concept with cathedral dread, machine precision, and cumulative motif payoff from the whole game, palette emphasis: ritual violet, furnace orange, ivory ash, arterial red, highly readable silhouette language, production-ready visual-development illustration, cinematic lighting, cohesive material logic, premium artbook quality, no text, no watermark, no logos",
+    "w": 1344,
+    "h": 768,
+    "out": "recraft_assets\\18_witchcoil_spire.png",
+    "api_units": 40,
+    "model": "recraftv4",
+    "page_dialogue": [
+      {
+        "speaker": "Matra Vey",
+        "text": "One city, one will, one perfect hush."
+      }
+    ],
+    "page_overlays": [
+      "Final ascent landmark chain"
+    ]
+  },
+  {
+    "name": "district_material_bible",
+    "prompt": "meticulously detailed game concept art for Bango-Patoot, original urban-underhive fantasy horror world, subject: materials, trims, masonry, cloth, wax, comb-metal, cable, glass, and fungal intrusion states, setting: a curated board of swatches, fragment studies, and architectural cutaways from all seven districts, visual focus: material study sheet that standardizes how surfaces age, corrode, sanctify, and become contaminated, palette emphasis: wax cream, green brass, tar black, damp brick, fungal teal, highly readable silhouette language, production-ready visual-development illustration, cinematic lighting, cohesive material logic, premium artbook quality, no text, no watermark, no logos",
+    "w": 1344,
+    "h": 768,
+    "out": "recraft_assets\\19_district_material_bible.png",
+    "api_units": 40,
+    "model": "recraftv4",
+    "page_dialogue": [],
+    "page_overlays": [
+      "Comb-metal / wax / brick / fungus"
+    ]
+  },
+  {
+    "name": "lighting_color_script",
+    "prompt": "meticulously detailed game concept art for Bango-Patoot, original urban-underhive fantasy horror world, subject: the full Bango-Patoot lighting progression from borough warmth to spire coercion, setting: a cinematic strip of district key lights, practical sources, fog values, and shrine-state transitions, visual focus: color script board mapping emotional cadence, purification shifts, and faction-controlled lighting behavior, palette emphasis: apiary gold, neon chapel cyan, ossuary ember, sewer acid, spire violet, highly readable silhouette language, production-ready visual-development illustration, cinematic lighting, cohesive material logic, premium artbook quality, no text, no watermark, no logos",
+    "w": 1344,
+    "h": 768,
+    "out": "recraft_assets\\20_lighting_color_script.png",
+    "api_units": 40,
+    "model": "recraftv4",
+    "page_dialogue": [],
+    "page_overlays": [
+      "Purification state drift",
+      "Faction-owned light"
+    ]
+  },
+  {
+    "name": "shrine_reliquaries",
+    "prompt": "meticulously detailed game concept art for Bango-Patoot, original urban-underhive fantasy horror world, subject: apiary shrines as civic service nodes, rest points, and refinement chambers, setting: wax altars, honey boilers, catalyst trays, faction offerings, and route boards, visual focus: hero prop-and-space study covering shrine silhouettes, states of repair, and interaction affordances, palette emphasis: shrine gold, ceramic white, soot bronze, herbal green, highly readable silhouette language, production-ready visual-development illustration, cinematic lighting, cohesive material logic, premium artbook quality, no text, no watermark, no logos",
+    "w": 1344,
+    "h": 768,
+    "out": "recraft_assets\\21_shrine_reliquaries.png",
+    "api_units": 40,
+    "model": "recraftv4",
+    "page_dialogue": [
+      {
+        "speaker": "Edda",
+        "text": "Repair first. Blessing comes after the bolts hold."
+      }
+    ],
+    "page_overlays": [
+      "Rest / refine / recover"
+    ]
+  },
+  {
+    "name": "hive_sigils_pollen",
+    "prompt": "meticulously detailed game concept art for Bango-Patoot, original urban-underhive fantasy horror world, subject: macro progression collectibles, catalyst matter, and ritual repair tokens, setting: cabinet drawers, comb cases, wax tablets, and pollen sieves used by shrine keepers, visual focus: collectible sheet illustrating scale, state rarity, and storage logic for core progression resources, palette emphasis: amber honey, parchment cream, pollen yellow, brass brown, highly readable silhouette language, production-ready visual-development illustration, cinematic lighting, cohesive material logic, premium artbook quality, no text, no watermark, no logos",
+    "w": 1344,
+    "h": 768,
+    "out": "recraft_assets\\22_hive_sigils_pollen.png",
+    "api_units": 40,
+    "model": "recraftv4",
+    "page_dialogue": [
+      {
+        "speaker": "Vilm",
+        "text": "Tiny things move districts. That is why everyone kills over them."
+      }
+    ],
+    "page_overlays": [
+      "Macro progression tokens"
+    ]
+  },
+  {
+    "name": "lantern_kin_rescues",
+    "prompt": "meticulously detailed game concept art for Bango-Patoot, original urban-underhive fantasy horror world, subject: rescued hive-children and their small ritual equipment, setting: temporary safe rooms, lantern caches, chalk nests, and route-hide niches inside districts, visual focus: rescue-focused concept page showing child silhouettes, lantern types, and the visual language of safety in a dangerous city, palette emphasis: warm wax gold, blanket blue, soot plum, lantern orange, highly readable silhouette language, production-ready visual-development illustration, cinematic lighting, cohesive material logic, premium artbook quality, no text, no watermark, no logos",
+    "w": 1344,
+    "h": 768,
+    "out": "recraft_assets\\23_lantern_kin_rescues.png",
+    "api_units": 40,
+    "model": "recraftv4",
+    "page_dialogue": [
+      {
+        "speaker": "Lantern Kin",
+        "text": "We kept the light small so the dark would think we were gone."
+      }
+    ],
+    "page_overlays": [
+      "Safety language"
+    ]
+  },
+  {
+    "name": "notes_scraps_codex",
+    "prompt": "meticulously detailed game concept art for Bango-Patoot, original urban-underhive fantasy horror world, subject: currency notes, doctrine scraps, hymn cartridges, and codex evidence items, setting: archive drawers, market bundles, and confession booth caches, visual focus: document-and-currency sheet that defines the collectible paper trail of the city, palette emphasis: ink black, vellum cream, wax red, cartridge brass, highly readable silhouette language, production-ready visual-development illustration, cinematic lighting, cohesive material logic, premium artbook quality, no text, no watermark, no logos",
+    "w": 1344,
+    "h": 768,
+    "out": "recraft_assets\\24_notes_scraps_codex.png",
+    "api_units": 40,
+    "model": "recraftv4",
+    "page_dialogue": [],
+    "page_overlays": [
+      "Paper trail worldbuilding"
+    ]
+  },
+  {
+    "name": "traversal_kit",
+    "prompt": "meticulously detailed game concept art for Bango-Patoot, original urban-underhive fantasy horror world, subject: Bango and Patoot traversal actions as a unified movement language, setting: practice routes across apiary chains, ladders, rails, glides, shrine grapples, and drop-hover wells, visual focus: move-development board showing jump arcs, ledge grabs, perch assists, rail grinds, and route-solving posture beats, palette emphasis: brass gold, sky teal, stone grey, signal red, highly readable silhouette language, production-ready visual-development illustration, cinematic lighting, cohesive material logic, premium artbook quality, no text, no watermark, no logos",
+    "w": 1344,
+    "h": 768,
+    "out": "recraft_assets\\25_traversal_kit.png",
+    "api_units": 40,
+    "model": "recraftv4",
+    "page_dialogue": [
+      {
+        "speaker": "Patoot",
+        "text": "Grab the rail late. Jump early. Trust me in the middle."
+      }
+    ],
+    "page_overlays": [
+      "Route memory verbs"
+    ]
+  },
+  {
+    "name": "combat_stance_language",
+    "prompt": "meticulously detailed game concept art for Bango-Patoot, original urban-underhive fantasy horror world, subject: Bango and Patoot stance families, guard silhouettes, dodge shapes, and ward casts, setting: combat pit reliquary marked with training sigils and contact lines, visual focus: combat posture sheet expressing close-quarters positional play rather than musou spectacle, palette emphasis: blood orange, iron grey, shrine gold, shadow blue, highly readable silhouette language, production-ready visual-development illustration, cinematic lighting, cohesive material logic, premium artbook quality, no text, no watermark, no logos",
+    "w": 1344,
+    "h": 768,
+    "out": "recraft_assets\\26_combat_stance_language.png",
+    "api_units": 40,
+    "model": "recraftv4",
+    "page_dialogue": [
+      {
+        "speaker": "Bango",
+        "text": "Commit to the hit. Survive the answer."
+      }
+    ],
+    "page_overlays": [
+      "Heavy / cut / interrupt"
+    ]
+  },
+  {
+    "name": "move_catalog_taxonomy",
+    "prompt": "meticulously detailed game concept art for Bango-Patoot, original urban-underhive fantasy horror world, subject: the procedural 1000-slot move catalog represented as design clusters and tag families, setting: chalk board, filing drawers, shrine matrix diagrams, and move cards pinned into stance networks, visual focus: systems visualization sheet translating a huge move set into a readable taxonomy for designers and artists, palette emphasis: chalk white, patent black, ember orange, muted jade, highly readable silhouette language, production-ready visual-development illustration, cinematic lighting, cohesive material logic, premium artbook quality, no text, no watermark, no logos",
+    "w": 1344,
+    "h": 768,
+    "out": "recraft_assets\\27_move_catalog_taxonomy.png",
+    "api_units": 40,
+    "model": "recraftv4",
+    "page_dialogue": [],
+    "page_overlays": [
+      "1000-slot move grammar"
+    ]
+  },
+  {
+    "name": "egosphere_relationship_web",
+    "prompt": "meticulously detailed game concept art for Bango-Patoot, original urban-underhive fantasy horror world, subject: relationship network of trust, debt, fear, respect, mimicry, and rivalry across key non-player entities, setting: a shrine notice wall layered with cords, icons, debt tabs, and memory tokens, visual focus: social-systems visualization that makes Bango-Patoot's NPE logic legible through analog civic artifacts, palette emphasis: wax red, string ivory, brass gold, soot black, highly readable silhouette language, production-ready visual-development illustration, cinematic lighting, cohesive material logic, premium artbook quality, no text, no watermark, no logos",
+    "w": 1344,
+    "h": 768,
+    "out": "recraft_assets\\28_egosphere_relationship_web.png",
+    "api_units": 40,
+    "model": "recraftv4",
+    "page_dialogue": [
+      {
+        "speaker": "Tula Echo",
+        "text": "People leave marks in each other long before the city writes them down."
+      }
+    ],
+    "page_overlays": [
+      "Trust / debt / fear web"
+    ]
+  },
+  {
+    "name": "shrine_keepers_faction",
+    "prompt": "meticulously detailed game concept art for Bango-Patoot, original urban-underhive fantasy horror world, subject: the network of apiary wardens, honey stewards, and memory caretakers who preserve civic ritual, setting: shrine service halls, offering carts, repair benches, and community kitchens, visual focus: faction style sheet covering garments, tools, insignia, and service architecture, palette emphasis: wax gold, linen white, ash blue, brass patina, highly readable silhouette language, production-ready visual-development illustration, cinematic lighting, cohesive material logic, premium artbook quality, no text, no watermark, no logos",
+    "w": 1344,
+    "h": 768,
+    "out": "recraft_assets\\29_shrine_keepers_faction.png",
+    "api_units": 40,
+    "model": "recraftv4",
+    "page_dialogue": [],
+    "page_overlays": [
+      "Factions",
+      "wax gold, linen white, ash blue, brass patina"
+    ]
+  },
+  {
+    "name": "salvage_brokers_faction",
+    "prompt": "meticulously detailed game concept art for Bango-Patoot, original urban-underhive fantasy horror world, subject: salvage crews, route fixers, gear traders, and tunnel opportunists, setting: market rigging, hoist carts, cable nests, and scrapped machine altars, visual focus: faction board focusing on silhouettes, barter tools, and mobile stall architecture, palette emphasis: oil blue, rust orange, steel grey, headlamp yellow, highly readable silhouette language, production-ready visual-development illustration, cinematic lighting, cohesive material logic, premium artbook quality, no text, no watermark, no logos",
+    "w": 1344,
+    "h": 768,
+    "out": "recraft_assets\\30_salvage_brokers_faction.png",
+    "api_units": 40,
+    "model": "recraftv4",
+    "page_dialogue": [],
+    "page_overlays": [
+      "Factions",
+      "oil blue, rust orange, steel grey, headlamp yellow"
+    ]
+  },
+  {
+    "name": "chapel_defectors_faction",
+    "prompt": "meticulously detailed game concept art for Bango-Patoot, original urban-underhive fantasy horror world, subject: ex-preachers, choir techs, and wardens who broke from the obedience engine, setting: hidden confession rooms, stripped lecterns, patched doctrine archives, and improvised shelters, visual focus: faction look sheet emphasizing subtraction, contraband scripture, and half-erased insignia, palette emphasis: plaster white, faded plum, brass smoke, ink black, highly readable silhouette language, production-ready visual-development illustration, cinematic lighting, cohesive material logic, premium artbook quality, no text, no watermark, no logos",
+    "w": 1344,
+    "h": 768,
+    "out": "recraft_assets\\31_chapel_defectors_faction.png",
+    "api_units": 40,
+    "model": "recraftv4",
+    "page_dialogue": [],
+    "page_overlays": [
+      "Factions",
+      "plaster white, faded plum, brass smoke, ink black"
+    ]
+  },
+  {
+    "name": "borough_gangs_faction",
+    "prompt": "meticulously detailed game concept art for Bango-Patoot, original urban-underhive fantasy horror world, subject: street debt crews, extortionists, shrine scrappers, and feast-line predators, setting: narrow alleys, patched armor, improvised banners, tally ledgers, and stolen shrine parts, visual focus: faction sheet defining gang silhouettes, debt brands, tools, and neighborhood-specific swagger, palette emphasis: tar black, hazard yellow, sickly red, alley sodium, highly readable silhouette language, production-ready visual-development illustration, cinematic lighting, cohesive material logic, premium artbook quality, no text, no watermark, no logos",
+    "w": 1344,
+    "h": 768,
+    "out": "recraft_assets\\32_borough_gangs_faction.png",
+    "api_units": 40,
+    "model": "recraftv4",
+    "page_dialogue": [],
+    "page_overlays": [
+      "Factions",
+      "tar black, hazard yellow, sickly red, alley sodium"
+    ]
+  },
+  {
+    "name": "honey_debt_collector",
+    "prompt": "meticulously detailed game concept art for Bango-Patoot, original urban-underhive fantasy horror world, subject: opening district boss built from shrine scrap, tally chains, and extortion ceremony, setting: Brassroot debt hall, melted reliquary parts, chained ledger hooks, and feast debris, visual focus: boss key art emphasizing heavy silhouette, collection rituals, and worker-neighborhood menace, palette emphasis: rust gold, debt red, soot black, hive amber, highly readable silhouette language, production-ready visual-development illustration, cinematic lighting, cohesive material logic, premium artbook quality, no text, no watermark, no logos",
+    "w": 1344,
+    "h": 768,
+    "out": "recraft_assets\\33_honey_debt_collector.png",
+    "api_units": 40,
+    "model": "recraftv4",
+    "page_dialogue": [
+      {
+        "speaker": "Debt Collector",
+        "text": "If the borough cannot pay in coin, it will pay in shrine metal."
+      }
+    ],
+    "page_overlays": [
+      "Bosses",
+      "rust gold, debt red, soot black, hive amber"
+    ]
+  },
+  {
+    "name": "bishop_static",
+    "prompt": "meticulously detailed game concept art for Bango-Patoot, original urban-underhive fantasy horror world, subject: slot-machine choir pulpit bishop fused to neon chapel hardware, setting: Saint Voltage pulpit stage with miracle screens, cable organs, and paid indulgence kiosks, visual focus: boss illustration focused on broadcast glare, coin-fed ritual machinery, and predatory spectacle, palette emphasis: neon cyan, chapel magenta, chrome brass, sermon black, highly readable silhouette language, production-ready visual-development illustration, cinematic lighting, cohesive material logic, premium artbook quality, no text, no watermark, no logos",
+    "w": 1344,
+    "h": 768,
+    "out": "recraft_assets\\34_bishop_static.png",
+    "api_units": 40,
+    "model": "recraftv4",
+    "page_dialogue": [
+      {
+        "speaker": "Bishop Static",
+        "text": "A louder miracle is still a miracle to those who cannot leave."
+      }
+    ],
+    "page_overlays": [
+      "Bosses",
+      "neon cyan, chapel magenta, chrome brass, sermon black"
+    ]
+  },
+  {
+    "name": "railmouth_ossivar",
+    "prompt": "meticulously detailed game concept art for Bango-Patoot, original urban-underhive fantasy horror world, subject: ossified signal-engine beast made from memorial bones and transit hardware, setting: Ossuary switchyard vaulted beneath memorial bells and furnace smoke, visual focus: boss key art showing rail jaws, signal horns, and bell-like bone structure, palette emphasis: furnace amber, bone ivory, signal red, ash grey, highly readable silhouette language, production-ready visual-development illustration, cinematic lighting, cohesive material logic, premium artbook quality, no text, no watermark, no logos",
+    "w": 1344,
+    "h": 768,
+    "out": "recraft_assets\\35_railmouth_ossivar.png",
+    "api_units": 40,
+    "model": "recraftv4",
+    "page_dialogue": [
+      {
+        "speaker": "Patoot",
+        "text": "Listen. The station beast announces every charge like a train that hates us."
+      }
+    ],
+    "page_overlays": [
+      "Bosses",
+      "furnace amber, bone ivory, signal red, ash grey"
+    ]
+  },
+  {
+    "name": "maw_of_silt",
+    "prompt": "meticulously detailed game concept art for Bango-Patoot, original urban-underhive fantasy horror world, subject: blind sewer cryptid swollen by chemical honey and runoff sacrament, setting: Gutterwake sump cathedral of floodgates, fungus rafts, and drowned pipes, visual focus: boss art built around smellable sludge weight, blind hunting behavior, and sluice-wheel scale, palette emphasis: acid amber, mold green, tar black, wet steel, highly readable silhouette language, production-ready visual-development illustration, cinematic lighting, cohesive material logic, premium artbook quality, no text, no watermark, no logos",
+    "w": 1344,
+    "h": 768,
+    "out": "recraft_assets\\36_maw_of_silt.png",
+    "api_units": 40,
+    "model": "recraftv4",
+    "page_dialogue": [
+      {
+        "speaker": "Bango",
+        "text": "No eyes. No mercy. Just appetite and runoff."
+      }
+    ],
+    "page_overlays": [
+      "Bosses",
+      "acid amber, mold green, tar black, wet steel"
+    ]
+  },
+  {
+    "name": "caretaker_red_mother",
+    "prompt": "meticulously detailed game concept art for Bango-Patoot, original urban-underhive fantasy horror world, subject: cult matron who turns nursery machinery and soot dolls into an obedience ritual, setting: Cinder Tenements nursery-chapel packed with cradles, soot dolls, and hymn cranks, visual focus: boss key art emphasizing maternal coercion, domestic machinery, and ritualized care turned violent, palette emphasis: nursery red, ash white, soot black, candle gold, highly readable silhouette language, production-ready visual-development illustration, cinematic lighting, cohesive material logic, premium artbook quality, no text, no watermark, no logos",
+    "w": 1344,
+    "h": 768,
+    "out": "recraft_assets\\37_caretaker_red_mother.png",
+    "api_units": 40,
+    "model": "recraftv4",
+    "page_dialogue": [
+      {
+        "speaker": "Red Mother",
+        "text": "Be still, little lights. I can love you into silence."
+      }
+    ],
+    "page_overlays": [
+      "Bosses",
+      "nursery red, ash white, soot black, candle gold"
+    ]
+  },
+  {
+    "name": "broadcast_harrower",
+    "prompt": "meticulously detailed game concept art for Bango-Patoot, original urban-underhive fantasy horror world, subject: stitched flock-machine that weaponizes signal patterns and public-address frenzy, setting: Aviary signal deck with cages, speaker horns, storm cables, and wind sheer, visual focus: boss painting focused on aerial menace, sonic geometry, and stitched avian machinery, palette emphasis: storm white, cobalt blue, rust brass, scream black, highly readable silhouette language, production-ready visual-development illustration, cinematic lighting, cohesive material logic, premium artbook quality, no text, no watermark, no logos",
+    "w": 1344,
+    "h": 768,
+    "out": "recraft_assets\\38_broadcast_harrower.png",
+    "api_units": 40,
+    "model": "recraftv4",
+    "page_dialogue": [
+      {
+        "speaker": "Patoot",
+        "text": "Cut the pattern. Do not fight the scream head-on."
+      }
+    ],
+    "page_overlays": [
+      "Bosses",
+      "storm white, cobalt blue, rust brass, scream black"
+    ]
+  },
+  {
+    "name": "matra_vey_ascendant",
+    "prompt": "meticulously detailed game concept art for Bango-Patoot, original urban-underhive fantasy horror world, subject: final fused state of Matra Vey with the obedience lattice and exposed harmony anchors, setting: Witchcoil apex chamber where shrine fragments, organ pipes, and city arteries converge, visual focus: final boss apocalypse concept showing anchor targets, ritual body scale, and city-body integration, palette emphasis: violet lightning, blood ember, shrine ivory, abyss black, highly readable silhouette language, production-ready visual-development illustration, cinematic lighting, cohesive material logic, premium artbook quality, no text, no watermark, no logos",
+    "w": 1344,
+    "h": 768,
+    "out": "recraft_assets\\39_matra_vey_ascendant.png",
+    "api_units": 40,
+    "model": "recraftv4",
+    "page_dialogue": [
+      {
+        "speaker": "Matra Vey",
+        "text": "I gave the city one throat so it would never disagree again."
+      }
+    ],
+    "page_overlays": [
+      "Bosses",
+      "violet lightning, blood ember, shrine ivory, abyss black"
+    ]
+  },
+  {
+    "name": "lantern_apiary_fauna",
+    "prompt": "meticulously detailed game concept art for Bango-Patoot, original urban-underhive fantasy horror world, subject: supportive and ambient creatures tied to shrine ecologies, hives, and lantern networks, setting: apiary rafters, pollen gardens, honey vents, and worker rooftops, visual focus: fauna board illustrating helper beetles, comb moths, ember bees, and route-marking lantern swifts, palette emphasis: amber gold, moss green, soot brown, soft cream, highly readable silhouette language, production-ready visual-development illustration, cinematic lighting, cohesive material logic, premium artbook quality, no text, no watermark, no logos",
+    "w": 1344,
+    "h": 768,
+    "out": "recraft_assets\\40_lantern_apiary_fauna.png",
+    "api_units": 40,
+    "model": "recraftv4",
+    "page_dialogue": [],
+    "page_overlays": [
+      "Bestiary",
+      "amber gold, moss green, soot brown, soft cream"
+    ]
+  },
+  {
+    "name": "sewer_cryptids_utility_vermin",
+    "prompt": "meticulously detailed game concept art for Bango-Patoot, original urban-underhive fantasy horror world, subject: hostile and ambient underworks creatures shaped by runoff, neglect, and folklore, setting: Gutterwake culverts, sump vents, abandoned service nests, and flood cavities, visual focus: bestiary page defining rat-otter scavengers, pipe eels, fungus hounds, and drainage saints gone feral, palette emphasis: mold green, wet steel, bruise blue, rust orange, highly readable silhouette language, production-ready visual-development illustration, cinematic lighting, cohesive material logic, premium artbook quality, no text, no watermark, no logos",
+    "w": 1344,
+    "h": 768,
+    "out": "recraft_assets\\41_sewer_cryptids_utility_vermin.png",
+    "api_units": 40,
+    "model": "recraftv4",
+    "page_dialogue": [],
+    "page_overlays": [
+      "Bestiary",
+      "mold green, wet steel, bruise blue, rust orange"
+    ]
+  },
+  {
+    "name": "underhive_vehicles_liftways",
+    "prompt": "meticulously detailed game concept art for Bango-Patoot, original urban-underhive fantasy horror world, subject: cage lifts, maintenance sleds, honey tram wagons, sermon wagons, and rail shunts, setting: transit depots, lift shafts, service gantries, and shrine cargo docks, visual focus: vehicle concept board that links mobility, labor, and district identity across the city, palette emphasis: steel grey, brass gold, tar black, lamp amber, highly readable silhouette language, production-ready visual-development illustration, cinematic lighting, cohesive material logic, premium artbook quality, no text, no watermark, no logos",
+    "w": 1344,
+    "h": 768,
+    "out": "recraft_assets\\42_underhive_vehicles_liftways.png",
+    "api_units": 40,
+    "model": "recraftv4",
+    "page_dialogue": [],
+    "page_overlays": [
+      "Props",
+      "steel grey, brass gold, tar black, lamp amber"
+    ]
+  },
+  {
+    "name": "ritual_tools_reliquary_kit",
+    "prompt": "meticulously detailed game concept art for Bango-Patoot, original urban-underhive fantasy horror world, subject: field kit of shrine maintenance tools, counter-ritual supplies, and domestic ward objects, setting: Edda's workbench covered in wax tabs, honey knives, ash brushes, and ward chalk, visual focus: hero prop spread for close-up item design and inventory silhouette clarity, palette emphasis: wax cream, brass gold, char black, herb green, highly readable silhouette language, production-ready visual-development illustration, cinematic lighting, cohesive material logic, premium artbook quality, no text, no watermark, no logos",
+    "w": 1344,
+    "h": 768,
+    "out": "recraft_assets\\43_ritual_tools_reliquary_kit.png",
+    "api_units": 40,
+    "model": "recraftv4",
+    "page_dialogue": [],
+    "page_overlays": [
+      "Props",
+      "wax cream, brass gold, char black, herb green"
+    ]
+  },
+  {
+    "name": "street_furnishings_kiosks",
+    "prompt": "meticulously detailed game concept art for Bango-Patoot, original urban-underhive fantasy horror world, subject: district furniture kit including benches, fee boxes, route boards, vending shrines, and broker kiosks, setting: Apiary Junction, Voltage markets, borough corners, and tenement service landings, visual focus: prop bible for world dressing, memory landmarks, and vendor readability, palette emphasis: brick brown, brass green, soot black, poster cream, highly readable silhouette language, production-ready visual-development illustration, cinematic lighting, cohesive material logic, premium artbook quality, no text, no watermark, no logos",
+    "w": 1344,
+    "h": 768,
+    "out": "recraft_assets\\44_street_furnishings_kiosks.png",
+    "api_units": 40,
+    "model": "recraftv4",
+    "page_dialogue": [],
+    "page_overlays": [
+      "Props",
+      "brick brown, brass green, soot black, poster cream"
+    ]
+  },
+  {
+    "name": "signage_glyphs_wayfinding",
+    "prompt": "meticulously detailed game concept art for Bango-Patoot, original urban-underhive fantasy horror world, subject: district signs, shrine glyphs, debt marks, route arrows, hymn seals, and faction tags, setting: notice walls, lift thresholds, market archways, and chapel corridors, visual focus: wayfinding sheet defining icon grammar for the undercity's physical information systems, palette emphasis: chalk white, warning red, brass gold, tar black, highly readable silhouette language, production-ready visual-development illustration, cinematic lighting, cohesive material logic, premium artbook quality, no text, no watermark, no logos",
+    "w": 1344,
+    "h": 768,
+    "out": "recraft_assets\\45_signage_glyphs_wayfinding.png",
+    "api_units": 40,
+    "model": "recraftv4",
+    "page_dialogue": [],
+    "page_overlays": [
+      "Props",
+      "chalk white, warning red, brass gold, tar black"
+    ]
+  },
+  {
+    "name": "three_ds_exploration_mockup",
+    "prompt": "meticulously detailed game concept art for Bango-Patoot, original urban-underhive fantasy horror world, subject: representative exploration scene rendered as if viewed on the 3DS top screen, setting: Apiary Junction to Brassroot route with Bango, Patoot, HUD-safe focal silhouettes, and layered parallax depth, visual focus: presentation key art translating the visual bible into actual handheld framing and readability constraints, palette emphasis: hive gold, soot blue, brass white, fungus green, highly readable silhouette language, production-ready visual-development illustration, cinematic lighting, cohesive material logic, premium artbook quality, no text, no watermark, no logos",
+    "w": 1344,
+    "h": 768,
+    "out": "recraft_assets\\46_three_ds_exploration_mockup.png",
+    "api_units": 40,
+    "model": "recraftv4",
+    "page_dialogue": [
+      {
+        "speaker": "Patoot",
+        "text": "Landmark ahead. Shrine left. Trouble above."
+      }
+    ],
+    "page_overlays": [
+      "HUD-safe focal path"
+    ]
+  },
+  {
+    "name": "three_ds_ui_mockup",
+    "prompt": "meticulously detailed game concept art for Bango-Patoot, original urban-underhive fantasy horror world, subject: bottom-screen interface showing shrine stats, relationship telemetry, map hints, and Patoot support prompts, setting: a stylized mock handheld composite with tactile buttons, codex tabs, and route widgets, visual focus: UI concept sheet for menus, telemetry panels, and collectible tracking on the lower screen, palette emphasis: wax cream, brass gold, ink black, signal teal, highly readable silhouette language, production-ready visual-development illustration, cinematic lighting, cohesive material logic, premium artbook quality, no text, no watermark, no logos",
+    "w": 1344,
+    "h": 768,
+    "out": "recraft_assets\\47_three_ds_ui_mockup.png",
+    "api_units": 40,
+    "model": "recraftv4",
+    "page_dialogue": [
+      {
+        "speaker": "Bango",
+        "text": "Good. Put the warnings where my hands can find them."
+      }
+    ],
+    "page_overlays": [
+      "Bottom-screen systems stack"
+    ]
+  },
+  {
+    "name": "appendix_glossary_archive",
+    "prompt": "meticulously detailed game concept art for Bango-Patoot, original urban-underhive fantasy horror world, subject: an archival layout of maps, callouts, heraldry, and reference drawers for the whole project, setting: sealed library drawers, route folios, memory cards, and shrine catalog binders, visual focus: supplementary appendix-art background supporting reference pages and glossary content, palette emphasis: vellum cream, brass gold, ledger red, archive umber, highly readable silhouette language, production-ready visual-development illustration, cinematic lighting, cohesive material logic, premium artbook quality, no text, no watermark, no logos",
+    "w": 1344,
+    "h": 768,
+    "out": "recraft_assets\\48_appendix_glossary_archive.png",
+    "api_units": 40,
+    "model": "recraftv4",
+    "page_dialogue": [],
+    "page_overlays": [
+      "Reference archive"
+    ]
+  },
+  {
+    "name": "legal_publication_plate",
+    "prompt": "meticulously detailed game concept art for Bango-Patoot, original urban-underhive fantasy horror world, subject: publication-endpaper style page with shrine seal, copyright framing, and civic archive ornament, setting: clean publication desk scene with wax seal, printed plates, and a final stamped ownership mark, visual focus: formal art background for legal, copyright, publication, and closing summary matter, palette emphasis: ivory parchment, wax red, iron black, subdued gold, highly readable silhouette language, production-ready visual-development illustration, cinematic lighting, cohesive material logic, premium artbook quality, no text, no watermark, no logos",
+    "w": 1344,
+    "h": 768,
+    "out": "recraft_assets\\49_legal_publication_plate.png",
+    "api_units": 40,
+    "model": "recraftv4",
+    "page_dialogue": [],
+    "page_overlays": [
+      "Internal publication plate"
+    ]
+  },
+  {
+    "name": "closure_rear_cover",
+    "prompt": "meticulously detailed game concept art for Bango-Patoot, original urban-underhive fantasy horror world, subject: a quiet post-ritual city vista showing recovery, ambiguity, and the possibility of civic tending, setting: dawn over Apiary Junction and distant districts, with repaired lights, smoke drift, and the Witchcoil scar still visible, visual focus: final closure illustration and rear-cover key art pair that summarize hope without pretending the city is fully healed, palette emphasis: dawn amber, cold slate, shrine white, bruise violet, highly readable silhouette language, production-ready visual-development illustration, cinematic lighting, cohesive material logic, premium artbook quality, no text, no watermark, no logos",
+    "w": 1344,
+    "h": 768,
+    "out": "recraft_assets\\50_closure_rear_cover.png",
+    "api_units": 40,
+    "model": "recraftv4",
+    "page_dialogue": [
+      {
+        "speaker": "Tula",
+        "text": "It is still wounded. That means it is still alive enough to heal."
+      }
+    ],
+    "page_overlays": [
+      "Bittersweet recovery state"
+    ]
+  }
+]

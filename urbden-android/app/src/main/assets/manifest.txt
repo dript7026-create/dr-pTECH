@@ -1,0 +1,6 @@
+# Asset manifest - map semantic names to tile keys
+# Example format: semantic=tile_name
+
+pizzeria=tile_pizzeria_01
+bank=tile_bank_01
+bicycle_shop=tile_bike_01

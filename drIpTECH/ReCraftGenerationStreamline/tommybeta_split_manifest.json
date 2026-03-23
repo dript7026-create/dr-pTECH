@@ -1,0 +1,121 @@
+[
+  {
+    "name": "tommy_core_motion_sheet",
+    "prompt": "top-down character animation sheet concept for TommyBeta protagonist, overhead action-RPG monster hero, separate top-down poses for idle and walk in multiple directions, dodge, heal, land, charge stance, saturday morning cartoon plus classic newspaper funny-pages feel, original parody fantasy tone, transparent-background presentation",
+    "w": 512,
+    "h": 384,
+    "out": "../../tommybeta/assets/recraft/characters/tommy_core_motion_sheet.png"
+  },
+  {
+    "name": "tommy_bite_combo_sheet",
+    "prompt": "top-down combat animation sheet concept for TommyBeta protagonist, focused only on overhead primary bite attack combo with chained variants and hit follow-through, cartoon-comic readability, transparent-background sprite-sheet concept",
+    "w": 512,
+    "h": 384,
+    "out": "../../tommybeta/assets/recraft/characters/tommy_bite_combo_sheet.png"
+  },
+  {
+    "name": "tommy_specials_sheet_a",
+    "prompt": "top-down special move animation sheet concept for TommyBeta protagonist, only Charge Dash, Sky Chomp, Tail Cyclone, Ember Spit, overhead action-RPG readable key frames, saturday morning cartoon and funny-pages energy, transparent-background presentation",
+    "w": 512,
+    "h": 512,
+    "out": "../../tommybeta/assets/recraft/characters/tommy_specials_sheet_a.png"
+  },
+  {
+    "name": "tommy_specials_sheet_b",
+    "prompt": "top-down special move animation sheet concept for TommyBeta protagonist, only Iron Gut Slam, Phantom Pounce, Hunger Howl, Crownbreaker Frenzy, overhead action-RPG readable key frames, cartoon-comic energy, transparent-background presentation",
+    "w": 512,
+    "h": 512,
+    "out": "../../tommybeta/assets/recraft/characters/tommy_specials_sheet_b.png"
+  },
+  {
+    "name": "mareaou_core_motion_sheet",
+    "prompt": "top-down character animation sheet concept for Mareaou rival fighter in TommyBeta, overhead poses for idle, patrol, strafe, dodge, taunt, taking damage, healing, defeat, readable enemy silhouette, saturday morning cartoon plus funny-pages style, transparent-background sprite-sheet concept",
+    "w": 512,
+    "h": 512,
+    "out": "../../tommybeta/assets/recraft/characters/mareaou_core_motion_sheet.png"
+  },
+  {
+    "name": "mareaou_attack_sheet_a",
+    "prompt": "top-down attack animation sheet concept for Mareaou rival fighter in TommyBeta, only attacks 1 through 4, distinct overhead melee action-RPG strikes, cartoon-comic readability, transparent-background sprite-sheet concept",
+    "w": 512,
+    "h": 512,
+    "out": "../../tommybeta/assets/recraft/characters/mareaou_attack_sheet_a.png"
+  },
+  {
+    "name": "mareaou_attack_sheet_b",
+    "prompt": "top-down attack animation sheet concept for Mareaou rival fighter in TommyBeta, only attacks 5 through 7, distinct overhead melee action-RPG strikes, cartoon-comic readability, transparent-background sprite-sheet concept",
+    "w": 512,
+    "h": 384,
+    "out": "../../tommybeta/assets/recraft/characters/mareaou_attack_sheet_b.png"
+  },
+  {
+    "name": "tommy_hud_sheet",
+    "prompt": "HUD concept sheet for TommyBeta top-down Game Boy Advance action RPG, Tommy health bar, Tommy stamina bar, current special loadout panel, compact selector framing, saturday morning cartoon and newspaper funny-pages readability, clean original rainforest parody UI",
+    "w": 512,
+    "h": 256,
+    "out": "../../tommybeta/assets/recraft/ui/tommy_hud_sheet.png"
+  },
+  {
+    "name": "special_icon_sheet",
+    "prompt": "icon sheet for TommyBeta top-down special abilities, eight distinct overhead action icons for Charge Dash, Sky Chomp, Tail Cyclone, Ember Spit, Iron Gut Slam, Phantom Pounce, Hunger Howl, Crownbreaker Frenzy, plus active selector variants, cartoon-comic gba readability",
+    "w": 512,
+    "h": 256,
+    "out": "../../tommybeta/assets/recraft/ui/special_icon_sheet.png"
+  },
+  {
+    "name": "title_menu_sheet",
+    "prompt": "title menu concept sheet for TommyBeta top-down Game Boy Advance action RPG, start button states, decorative frame, logo placement, top-down adventure map framing, saturday morning cartoon and funny-pages atmosphere, gba-friendly title art and menu widgets",
+    "w": 512,
+    "h": 256,
+    "out": "../../tommybeta/assets/recraft/ui/title_menu_sheet.png"
+  },
+  {
+    "name": "ingame_menu_and_endscreens_sheet",
+    "prompt": "pause menu and end-screen concept sheet for TommyBeta top-down action RPG, in-game menu parts, tutorial panel fragments, game over panel, victory panel, press A to return widgets, chunky cartoon-comic UI readability",
+    "w": 512,
+    "h": 256,
+    "out": "../../tommybeta/assets/recraft/ui/ingame_menu_and_endscreens_sheet.png"
+  },
+  {
+    "name": "tommy_fall_intro_sheet",
+    "prompt": "intro cinematic sprite sheet concept for TommyBeta, Tommy dropping into a top-down rainforest clearing and slamming into the map, key frames and impact poses, cartoon-comic gba storyboard sprite presentation",
+    "w": 512,
+    "h": 256,
+    "out": "../../tommybeta/assets/recraft/cinematics/tommy_fall_intro_sheet.png"
+  },
+  {
+    "name": "environmental_objects_sheet",
+    "prompt": "top-down environmental object animation sheet for TommyBeta rainforest, overhead trees in breeze, bushes, mushroom fronds, hanging vines, logs, rocks, signposts, simple loopable scenic props to fill a top-down landscape, gba-friendly concept sheet",
+    "w": 512,
+    "h": 384,
+    "out": "../../tommybeta/assets/recraft/environment/environmental_objects_sheet.png"
+  },
+  {
+    "name": "roaming_creatures_sheet",
+    "prompt": "top-down small roaming creature animation sheet for TommyBeta rainforest, overhead frogs, beetles, lizards, mushroom critters, loopable idle and scamper motions, cute funny-pages silhouettes with gba readability",
+    "w": 512,
+    "h": 256,
+    "out": "../../tommybeta/assets/recraft/environment/roaming_creatures_sheet.png"
+  },
+  {
+    "name": "ambience_fx_sheet",
+    "prompt": "top-down environment ambience fx sheet for TommyBeta, drifting spores, floating dust, mist curls, subtle jungle magic glows viewed from overhead, transparent-background effect sheet, cartoon-comic gba readability",
+    "w": 512,
+    "h": 256,
+    "out": "../../tommybeta/assets/recraft/fx/ambience_fx_sheet.png"
+  },
+  {
+    "name": "combat_fx_sheet_basic",
+    "prompt": "top-down combat fx sheet for TommyBeta, overhead bite hit sparks, dash trail, block flash, parry flash, stun stars, heal pulse, finisher-state cue, transparent-background sheet, cartoon-comic gba readability",
+    "w": 512,
+    "h": 384,
+    "out": "../../tommybeta/assets/recraft/fx/combat_fx_sheet_basic.png"
+  },
+  {
+    "name": "combat_fx_sheet_specials",
+    "prompt": "top-down special combat fx sheet for TommyBeta, visual effects only for Charge Dash, Sky Chomp, Tail Cyclone, Ember Spit, Iron Gut Slam, Phantom Pounce, Hunger Howl, Crownbreaker Frenzy, overhead action readability, transparent-background sheet, cartoon-comic gba effect readability",
+    "w": 512,
+    "h": 512,
+    "out": "../../tommybeta/assets/recraft/fx/combat_fx_sheet_specials.png"
+  }
+]

@@ -1,0 +1,21 @@
+{
+    "generated_at":  "2026-03-11T22:08:25",
+    "master_manifest":  "C:\\Users\\rrcar\\Documents\\drIpTECH\\drIpTECH\\ReCraftGenerationStreamline\\innsmouth_island_complete_game_manifest.json",
+    "total_items":  67,
+    "categories":  {
+                       "interactive":  2,
+                       "ui":  3,
+                       "equipment":  5,
+                       "boss":  3,
+                       "player":  6,
+                       "fx":  3,
+                       "environment_single":  24,
+                       "enemy":  9,
+                       "atmosphere":  12
+                   },
+    "phases":  {
+                   "phase_02_systems_manifest.json":  10,
+                   "phase_03_world_manifest.json":  39,
+                   "phase_01_characters_manifest.json":  18
+               }
+}

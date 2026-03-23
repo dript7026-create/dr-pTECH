@@ -1,0 +1,59 @@
+{
+  "wrapperId": "driptech.kaijugaiden.ndsx",
+  "title": "Kaiju Gaiden NDSX",
+  "version": "0.1.0",
+  "adaptiveStereo3D": {
+    "mode": "adaptive-focus-aide",
+    "startupPreset": "studio-balanced",
+    "comfortDefault": true,
+    "forceFlatDefault": false,
+    "smoothingDefault": "soft",
+    "overlayToggle": "L",
+    "uses3DSlider": true,
+    "usesQTMWhenAvailable": true,
+    "wrapperIntent": "Keep the active 3DSX build and its live stereo profile together in one distribution artifact.",
+    "calibrationPresets": [
+      {
+        "name": "studio-balanced",
+        "comfort": true,
+        "forceFlat": false,
+        "smoothing": "soft",
+        "intendedUse": "General indoor lighting and neutral viewing distance"
+      },
+      {
+        "name": "bright-floor-demo",
+        "comfort": true,
+        "forceFlat": false,
+        "smoothing": "balanced",
+        "intendedUse": "Trade show or brighter rooms where focus shifts faster"
+      },
+      {
+        "name": "low-strain-mono",
+        "comfort": true,
+        "forceFlat": true,
+        "smoothing": "soft",
+        "intendedUse": "Fallback when the user wants reduced stereo demand"
+      }
+    ]
+  },
+  "runtimeHandshake": {
+    "sidecarFile": "ndsx_profile.json",
+    "statusFile": "ndsx_runtime_status.json",
+    "telemetryEnabled": true,
+    "telemetryIntervalFrames": 45
+  },
+  "sensorTuning": {
+    "microphoneEnabled": true,
+    "audioBiasStrength": 0.65,
+    "gReferenceWeight": 0.35,
+    "sinusPressureBias": 0.8,
+    "focusStrainWeight": 1.15,
+    "cameraAuthority": "QTM",
+    "bandPriority": ["A", "A#", "F", "B", "G-reference"]
+  },
+  "releaseBundle": {
+    "primaryRunnable": "kaijugaiden.3dsx",
+    "metadata": "kaijugaiden.smdh",
+    "wrapper": "kaijugaiden.ndsx"
+  }
+}

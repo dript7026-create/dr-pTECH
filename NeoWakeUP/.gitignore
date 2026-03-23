@@ -1,0 +1,6 @@
+state/
+__pycache__/
+neowakeup/__pycache__/
+neowakeup/*/__pycache__/
+assets/recraft/generated/
+*.pyc

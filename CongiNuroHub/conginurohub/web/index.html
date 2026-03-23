@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CongiNuroHub</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <div class="backdrop"></div>
+  <main class="shell">
+    <section class="hero hero-grid">
+      <div>
+        <p class="eyebrow">CongiNuroHub</p>
+        <h1>Live cognitive-development hubs for classroom simulation.</h1>
+        <p class="lede">This version now uses a canonical ArtiSapiens cohort dataset, integrates NeoWakeUP-generated visual assets, and is packaged for container deployment behind a stable educator-facing URL.</p>
+        <div id="dataset-card" class="dataset-card card">
+          <span>Canonical Dataset</span>
+          <strong id="dataset-title">Loading dataset...</strong>
+          <p id="dataset-note"></p>
+        </div>
+      </div>
+      <div class="hero-visual card">
+        <img id="planet-core" alt="CongiNuroHub planetary core asset">
+        <div class="glyph-stack">
+          <img id="glyph-upper" alt="Uppercase glyph reference">
+          <img id="glyph-symbols" alt="Symbol glyph reference">
+        </div>
+      </div>
+    </section>
+
+    <section class="controls card">
+      <div>
+        <label for="steps">Step count</label>
+        <input id="steps" type="number" min="1" max="120" value="6">
+      </div>
+      <div>
+        <label for="curiosity">Curiosity</label>
+        <input id="curiosity" type="range" min="0" max="1" step="0.01" value="0.72">
+      </div>
+      <div>
+        <label for="equity">Equity</label>
+        <input id="equity" type="range" min="0" max="1" step="0.01" value="0.78">
+      </div>
+      <div>
+        <label for="challenge">Challenge</label>
+        <input id="challenge" type="range" min="0" max="1" step="0.01" value="0.66">
+      </div>
+      <div>
+        <label for="reflection">Reflection</label>
+        <input id="reflection" type="range" min="0" max="1" step="0.01" value="0.81">
+      </div>
+      <div class="button-row">
+        <button id="step-once">Step</button>
+        <button id="toggle-auto">Auto run</button>
+        <button id="reset">Reset</button>
+      </div>
+    </section>
+
+    <section class="dashboard">
+      <article class="card stat-grid">
+        <div>
+          <span>Tick</span>
+          <strong id="tick">0</strong>
+        </div>
+        <div>
+          <span>Consensus</span>
+          <strong id="consensus">0.000</strong>
+        </div>
+        <div>
+          <span>Knowledge</span>
+          <strong id="knowledge">0.000</strong>
+        </div>
+        <div>
+          <span>Reflection</span>
+          <strong id="reflection-metric">0.000</strong>
+        </div>
+        <div>
+          <span>Coherence</span>
+          <strong id="coherence">0.000</strong>
+        </div>
+        <div>
+          <span>Friction</span>
+          <strong id="friction">0.000</strong>
+        </div>
+      </article>
+
+      <article class="card feed-card">
+        <div class="panel-title">Live simulation feed</div>
+        <div class="feed-stage">
+          <img id="stream-map" class="feed-layer feed-layer-stream" alt="Network stream asset">
+          <img id="node-sheet" class="feed-layer feed-layer-nodes" alt="Node sprite sheet">
+          <canvas id="feed" width="960" height="420"></canvas>
+        </div>
+      </article>
+
+      <article class="card two-column">
+        <div>
+          <div class="panel-title">Habitats</div>
+          <div id="habitats" class="stack"></div>
+        </div>
+        <div>
+          <div class="panel-title">ArtiSapiens Cohort</div>
+          <div id="cohort" class="stack small"></div>
+        </div>
+      </article>
+
+      <article class="card two-column two-column-bottom">
+        <div>
+          <div class="panel-title">Equation registry</div>
+          <div id="registry" class="stack small"></div>
+        </div>
+        <div>
+          <div class="panel-title">Integrated asset bank</div>
+          <div class="asset-strip">
+            <img id="avatar-sheet" alt="Avatar sheet">
+            <img id="signal-sheet" alt="Signal sheet">
+            <img id="glyph-lower" alt="Lowercase glyph reference">
+          </div>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <script src="/app.js"></script>
+</body>
+</html>

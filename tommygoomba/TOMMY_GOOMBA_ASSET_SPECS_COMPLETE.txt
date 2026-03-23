@@ -1,0 +1,283 @@
+TOMMY GOOMBA — Complete Asset Specifications
+
+Purpose
+-------
+This document lists *individual* graphical assets required for the Tommy Goomba project. Each entry contains exact export size(s), frame counts, animation timing, palette and shade usage (Game Boy 4-shade indexed), naming conventions, collision/hitbox metadata, anchor/pivot rules, usage context, and artist notes for faithful implementation in the GBDK build pipeline.
+
+General conventions
+-------------------
+- Color depth: 2 bpp (4 shades) compatible with original Game Boy palette.
+- File format: lossless indexed PNG at export. Master source may be layered PSD/PNG.
+- Tile grid: 8x8 tiles. Sprite widths/heights must be multiples of 8 (8, 16, 24, 32).
+- Naming: category_assetname_variant[_framecount]_[w]x[h].png (e.g., player_idle_4_16x16.png)
+- Export units: pixels (WxH), frames, animation frame duration in game ticks (default 1 tick = 1/60s or engine tick rate — specify per entry).
+- Hitbox JSON: for each multi-tile sprite, provide a parallel .json with keys: boundingBox {x,y,w,h}, attackBoxes[], hurtBoxes[], pivot {x,y}, anchorTile {col,row}, collisionMask (tile-level booleans).
+- Palette indices: 0=white (lightest), 1=light gray, 2=dark gray, 3=black (darkest). Avoid using alpha for visible pixels; use transparency only for padding.
+
+Categories & Individual Asset Descriptions
+-----------------------------------------
+1) Player — Tommy (core player set)
+- player_idle
+  - Size: 16x16 px
+  - Frames: 2 (breathing subtle loop)
+  - Timing: 30 ticks per frame (calm idle), loop
+  - Palette usage: full 4 shades; silhouette must read clearly on all BGs
+  - Hitbox: boundingBox {x:2,y:0,w:12,h:15}, hurtBox same
+  - File: player_idle_2_16x16.png
+  - Notes: Mirror-able; feet at base row so vertical offset consistent across animations.
+
+- player_walk
+  - Size: 16x16 px
+  - Frames: 4 (walk cycle: left foot, neutral, right foot, neutral)
+  - Timing: 6 ticks per frame (snappy walk), loop
+  - Hitbox: boundingBox {x:2,y:0,w:12,h:15}
+  - Collision: walk frames must keep same boundingBox horizontally aligned
+  - File: player_walk_4_16x16.png
+  - Notes: Keyframes should show clear stepping motion; feet contact frames aligned on same baseline.
+
+- player_run
+  - Size: 16x16 px
+  - Frames: 4
+  - Timing: 4 ticks per frame
+  - Notes: Slight lean forward; stamina drain visual handled by HUD only.
+
+- player_jump_up / player_jump_peak / player_jump_down
+  - Size: 16x16 px
+  - Frames: 1 each (3 total) or single 2-frame set for up/down blended by engine
+  - Timing: momentary; engine controls vertical interpolation
+  - Hitbox: slightly reduced height at peak to allow platform clearance
+  - Files: player_jump_up_16x16.png, player_jump_peak_16x16.png, player_jump_down_16x16.png
+
+- player_attack_slam (primary attack)
+  - Size: 16x16 or 24x16 (if extended hit reach)
+  - Frames: 3 (windup, strike, recover)
+  - Timing: 3/2/4 ticks
+  - AttackBoxes: define local-coordinates array for strike frame (x,y,w,h) relative to sprite origin
+  - File: player_attack_slam_3_24x16.png
+  - Notes: Visual telegraph (windup) frame must exist for player input feedback.
+
+- player_dodge (QTE dodge animation)
+  - Size: 16x16
+  - Frames: 2 (invincible roll/flash)
+  - Timing: 6 ticks total, becomes invincible for engine-defined window
+  - Visual cue: small afterimage frame recommended (same palette but shifted brightness)
+  - File: player_dodge_2_16x16.png
+
+- player_parry (successful parry)
+  - Size: 16x16
+  - Frames: 2 (parry pose, recovery)
+  - Timing: 4/6 ticks
+  - Notes: On success, brief flash on player (swap to palette index 0/3 rapid) — art should support this.
+
+- player_hit / player_knockback
+  - Size: 16x16
+  - Frames: 2-3 (react, briefly stunned)
+  - Timing: 6 ticks per frame
+  - Hitbox: shrink if pushed back; provide multiple frames for engine displacement
+
+- player_death
+  - Size: 16x16
+  - Frames: 4 (collapse, fade, vanish)
+  - Timing: 6 ticks per frame
+  - Notes: Provide a final black silhouette frame for dramatic effect.
+
+- player_heal_combo (A+B heal animation)
+  - Size: 16x16 (overlay effect)
+  - Frames: 6 (charging glows)
+  - Timing: 4 ticks per frame
+  - Export: player_heal_6_16x16.png plus separate small particle sprites (see particles)
+
+2) Player Equipment / UI Icons
+- icon_life_segment (single health segment)
+  - Size: 8x8 px
+  - Frames: 1
+  - Usage: Replicated 12 times horizontally in HUD; must tile seamlessly
+  - File: ui_life_seg_8x8.png
+  - Palette: use darkest outlines and mid-shade fill; transparent background
+
+- icon_stamina_bar (bar background + fill tile)
+  - Size: fill tile 8x8, cap tiles 8x8
+  - Frames: 1 each
+  - File: ui_stamina_fill_8x8.png, ui_stamina_bg_8x8.png
+  - Notes: Engine will repeat fill tile; provide separate cap tiles if desired.
+
+- icon_item_X (for limited items)
+  - Size: 8x8 or 16x16 depending on complexity
+  - File: ui_item_heart_8x8.png, ui_item_bomb_8x8.png
+  - Metadata: include `itemId` tag in JSON mapping file for UI binding.
+
+3) Enemies — Basic types (each enemy family needs variations and death animations)
+- goomba_basic_idle / walk / stomp / death
+  - Size: 16x16
+  - Frames: idle 2, walk 2-4, stomp 3, death 3
+  - Collision: simple square bounding box 12x12 centered
+  - Files: enemy_goomba_idle_2_16x16.png, enemy_goomba_walk_4_16x16.png, enemy_goomba_death_3_16x16.png
+  - Notes: Provide palette-distinct variants for palette swapping (e.g., red variant) by recolor layers, not separate art where possible.
+
+- beetle_shield (parryable enemy)
+  - Size: 16x16 or 24x16
+  - Frames: shielded idle 1, shielded walk 2, shield_break 3, death 4
+  - HurtBoxes: shield active frames have no hurtbox; shield_break frame provides vulnerability window
+  - Files: enemy_beetle_shielded_2_16x16.png, enemy_beetle_shield_break_3_16x16.png
+
+- ranged_enemy (projectile spawner)
+  - Size: 16x16
+  - Frames: idle 2, attack 3 (spawn projectile)
+  - Files: enemy_ranged_idle_2_16x16.png
+  - Notes: Provide separate projectile sprites (see projectiles)
+
+- boss_1 (multi-part boss)
+  - Size: box dimensions may be 32x32 or 48x48 depending on phase
+  - Frames: per-phase animations (list each phase separately)
+  - Files: boss_one_phase1_6_32x32.png, boss_one_phase2_8_48x48.png
+  - Notes: For large sprites, provide tilemaps and a JSON tilemap description for engine composition.
+
+4) Projectiles & Attack FX
+- projectile_small (enemy bullet)
+  - Size: 8x8
+  - Frames: 1 (or 2 for flicker)
+  - File: fx_projectile_small_8x8.png
+  - Collision: dedicated attackBox metadata
+
+- projectile_player_shard (player attack object)
+  - Size: 8x8
+  - Frames: 3 (spin animation)
+  - Timing: 4 ticks/frame
+  - File: fx_proj_player_shard_3_8x8.png
+
+5) Tilesets — ground / platforms / hazards (Modular tiles)
+- tiles_ground_basic (8x8 tile set)
+  - Tile sizes: 8x8 tiles, supply at least 16 unique tiles (edges, center, corner, slope steps)
+  - Export: tiles_ground_basic_8x8.png as a single tilesheet (NxM tiles) and a companion JSON describing indices
+  - Collision metadata: per-tile collision flag (solid, slope-left, slope-right, one-way platform, hazard)
+
+- tiles_decor (background decorative tiles)
+  - Tiles that don't affect collision. Provide parallax layers (bg_layer1, bg_layer2)
+  - File: tiles_bg_layer1_8x8.png
+
+- tiles_hazard_spikes
+  - Size: 8x8 tile(s) that combine to form spike strips
+  - Frames: 1 static, optional 2-frame animated spike that pulses
+  - File: tiles_spike_8x8.png
+  - Collision: tile flagged as 'hazard', damageBox specified
+
+6) Background & Parallax Layers
+- bg_sky (single wide tile strip)
+  - Size: multiple widths; provide repeatable 16x16 or 8x8 tiles for engine tiling
+  - Layers: far mountains (layer3), mid hills (layer2), clouds (layer1)
+  - File: bg_mountains_layer3_64x32.png, bg_hills_layer2_64x32.png, bg_clouds_layer1_32x16.png
+  - Notes: Keep silhouettes readable in 4-shade palette; reduce detail to readable shapes.
+
+7) HUD & Menus
+- menu_title_logo
+  - Size: 96x24 px (or multiples of 8 that fit screen width)
+  - Frames: 1 (optional animated sparkle 4 frames)
+  - File: ui_title_logo_96x24.png
+  - Notes: Provide asset both centered and left-aligned variants if needed.
+
+- menu_button (highlight/unhighlight)
+  - Size: 48x8 or 56x8 per button
+  - Frames: 2 (normal, highlighted)
+  - File: ui_button_2_56x8.png
+
+- pause_menu_window (window background tiles)
+  - Tileset: 8x8 window border tiles + 8x8 fill tile
+  - File: ui_window_tiles_8x8.png
+
+- font_gb (bitmap font)
+  - Size: tile-based at 8x8 per glyph. Include glyphs for A–Z, 0–9, punctuation, UI icons.
+  - File: font_gb_8x8.png and mapping JSON char->tileIndex
+
+8) Particles & VFX
+- vfx_hit_spark
+  - Size: 8x8
+  - Frames: 4 (expand + fade)
+  - Timing: 3 ticks per frame
+  - File: fx_hit_spark_4_8x8.png
+
+- vfx_heal_glow
+  - Size: 16x16 overlay
+  - Frames: 6 (pulsing)
+  - File: fx_heal_glow_6_16x16.png
+
+- vfx_smoke_puff
+  - Size: 8x8
+  - Frames: 4
+  - Notes: Use additive palette mapping in engine if supported; otherwise simulate with palette contrast.
+
+9) Cutscene Portraits & UI Sprites
+- portrait_tommy (static close-up)
+  - Size: 32x32 or 48x48 (choose multiple-of-8)
+  - Frames: 1 (plus optional blink 2-frame)
+  - File: portrait_tommy_32x32.png
+  - Notes: Provide layered PSD for mouth/eyes to enable simple lip-sync or blink replacement.
+
+- portrait_npc_X
+  - Size: 32x32
+  - Frames: 1–3 (expressions: neutral, surprised, angry)
+  - File: portrait_shopkeeper_neutral_32x32.png, portrait_shopkeeper_angry_32x32.png
+
+10) Misc / System
+- cursor_hand (menu pointer)
+  - Size: 8x8
+  - Frames: 2 (flicker)
+  - File: ui_cursor_hand_2_8x8.png
+
+- checkpoint_flag
+  - Size: 8x16 (two tiles stacked)
+  - Frames: 3 (wave)
+  - File: world_checkpoint_flag_3_8x16.png
+
+- tiles_map_marker (world-map marker)
+  - Size: 8x8
+  - Frames: 1
+  - File: ui_map_marker_8x8.png
+
+11) Large Composite Assets & Level-Specific Art
+- stage_boss_arena_tileset
+  - Size: collection of 8x8 tiles exported as tilesheet (specify NxM)
+  - Include unique background props (pillars, columns) exported as 16x32 as needed
+  - Provide JSON describing tile indices to place in level editor
+
+12) Export Recommendations & Pipeline Notes
+- Master sources: keep PSD/ layered PNG with separate color/outline/alpha layers; also provide flattened indexed PNGs for engine import.
+- Tile packing: supply both individual tile PNGs and a packed tilesheet PNG plus a JSON index map (tileIndex -> x,y in sheet).
+- Frame ordering: left-to-right in the PNG file; also provide separate folder per animation with single-frame PNGs if that fits artist workflow.
+- Metadata files: for every multi-frame sprite deliver a .meta.json with:
+  - name: string
+  - frames: int
+  - frameDurations: [ints]
+  - pivot: {x,y}
+  - boundingBox: {x,y,w,h}
+  - attackBoxes: [{x,y,w,h}] (if applicable)
+  - tags: ["enemy","boss","ui"]
+  - paletteHint: "use shade 3 for outlines, shade 2 for body"
+
+13) Naming Examples (consistent)
+- player_walk_4_16x16.png
+- enemy_goomba_death_3_16x16.png
+- tiles_ground_basic_8x8.png
+- ui_life_seg_8x8.png
+- fx_hit_spark_4_8x8.png
+- portrait_tommy_32x32.png
+- font_gb_8x8.png
+- tilesheet_stage1_16x16_8x8grid.png + tilesheet_stage1.json
+
+14) Prioritization / Minimum Viable Set (for initial build)
+- Player base set: idle, walk, jump, attack, dodge, hit — (16x16, ~12 files)
+- Basic enemy set: goomba family idle/walk/death (16x16, ~6 files)
+- Core tileset: ground basic (8x8 tilesheet), spike hazard tile
+- HUD: life segment, stamina fill, font_gb (8x8)
+- Particles: hit spark (4 frames)
+- Projectiles: one player and one small enemy projectile
+
+15) QA & Validation Checklist for each exported asset
+- Is width and height a multiple of 8? (Yes/No)
+- Are transparent borders trimmed to nearest 8px boundary? (Yes/No)
+- Is the palette reduced to 4 shades, indexed PNG? (Yes/No)
+- Is there a companion metadata .json with pivot/boxes? (Yes/No)
+- Naming matches conventions? (Yes/No)
+- File present in the `assets/` folder and referenced by `tiles.c` conversion tooling? (Yes/No)
+
+---
+End of asset specification file. For any asset you want richer direction (pose sketches, exact tile indices, or example reference art), tell me which asset(s) and I will generate prompt-ready descriptions or placeholder PNGs to match the spec.

@@ -1,0 +1,73 @@
+{
+  "manifest_name": "neowakeup_gui_pass_300",
+  "manifest_version": "2026-03-12.neowakeup_gui_pass_300",
+  "intent": "300-credit Recraft pass for NeoWakeUP GUI finalization assets.",
+  "budget": {
+    "unit_cost": 50,
+    "asset_count": 6,
+    "total_credits": 300
+  },
+  "shared_prompt_appendix": "NeoWakeUP UI finalization asset pass. Clean desktop readability, coherent with the planetary mind visuals, avoid generic SaaS styling, prefer signal cartography, layered fields, measured glow, transparent background when possible.",
+  "assets": [
+    {
+      "name": "control_panel_background",
+      "prompt": "Main control panel background for NeoWakeUP, wide desktop dashboard panel with layered atmospheric gradients, subtle linework, no text, usable as a backdrop for controls. NeoWakeUP UI finalization asset pass. Clean desktop readability, coherent with the planetary mind visuals, avoid generic SaaS styling, prefer signal cartography, layered fields, measured glow, transparent background when possible.",
+      "negative_prompt": "text labels, clutter, busy illustration, logo, watermark",
+      "w": 1024,
+      "h": 1024,
+      "api_units": 50,
+      "model": "recraftv4",
+      "out": "gui_pass_300/panels/control_panel_background.png"
+    },
+    {
+      "name": "dial_knob_set",
+      "prompt": "Transparent background set of distinct UI dial and knob assets for NeoWakeUP, reflective but restrained, include neutral, hover, and active variants laid out cleanly on one sheet. NeoWakeUP UI finalization asset pass. Clean desktop readability, coherent with the planetary mind visuals, avoid generic SaaS styling, prefer signal cartography, layered fields, measured glow, transparent background when possible.",
+      "negative_prompt": "text labels, background scene, blurry controls",
+      "w": 1024,
+      "h": 1024,
+      "api_units": 50,
+      "model": "recraftv4",
+      "out": "gui_pass_300/controls/dial_knob_set.png"
+    },
+    {
+      "name": "slider_track_set",
+      "prompt": "Transparent background set of slider tracks, thumbs, and active fill variations for NeoWakeUP, precise technical styling, arranged cleanly for slicing. NeoWakeUP UI finalization asset pass. Clean desktop readability, coherent with the planetary mind visuals, avoid generic SaaS styling, prefer signal cartography, layered fields, measured glow, transparent background when possible.",
+      "negative_prompt": "text labels, background scene, clutter",
+      "w": 1024,
+      "h": 1024,
+      "api_units": 50,
+      "model": "recraftv4",
+      "out": "gui_pass_300/controls/slider_track_set.png"
+    },
+    {
+      "name": "button_cluster_set",
+      "prompt": "Transparent background set of action buttons for NeoWakeUP, start, pause, commit, simulate, export, arranged as a coherent cluster with visual state variations and no text. NeoWakeUP UI finalization asset pass. Clean desktop readability, coherent with the planetary mind visuals, avoid generic SaaS styling, prefer signal cartography, layered fields, measured glow, transparent background when possible.",
+      "negative_prompt": "word labels, background scene, generic web buttons",
+      "w": 1024,
+      "h": 1024,
+      "api_units": 50,
+      "model": "recraftv4",
+      "out": "gui_pass_300/controls/button_cluster_set.png"
+    },
+    {
+      "name": "node_map_overlay",
+      "prompt": "Transparent background node map overlay for NeoWakeUP, elegant graph scaffolding, branching thought chains, circular and orbital anchor points for a canvas-based neural node map. NeoWakeUP UI finalization asset pass. Clean desktop readability, coherent with the planetary mind visuals, avoid generic SaaS styling, prefer signal cartography, layered fields, measured glow, transparent background when possible.",
+      "negative_prompt": "text, poster, background scene, human faces",
+      "w": 1024,
+      "h": 1024,
+      "api_units": 50,
+      "model": "recraftv4",
+      "out": "gui_pass_300/network/node_map_overlay.png"
+    },
+    {
+      "name": "brand_mark_set",
+      "prompt": "Transparent background NeoWakeUP brand mark set, central sigil, app badge, and compact emblem variants, coherent with a living planetary intelligence dashboard, no text. NeoWakeUP UI finalization asset pass. Clean desktop readability, coherent with the planetary mind visuals, avoid generic SaaS styling, prefer signal cartography, layered fields, measured glow, transparent background when possible.",
+      "negative_prompt": "full poster, paragraph text, watermark",
+      "w": 1024,
+      "h": 1024,
+      "api_units": 50,
+      "model": "recraftv4",
+      "out": "gui_pass_300/branding/brand_mark_set.png"
+    }
+  ]
+}

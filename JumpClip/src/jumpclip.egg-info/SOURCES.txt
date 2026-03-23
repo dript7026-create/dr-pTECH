@@ -1,0 +1,16 @@
+README.md
+pyproject.toml
+src/jumpclip/__init__.py
+src/jumpclip/__main__.py
+src/jumpclip/analysis.py
+src/jumpclip/cli.py
+src/jumpclip/models.py
+src/jumpclip/reference_sources.py
+src/jumpclip/render.py
+src/jumpclip.egg-info/PKG-INFO
+src/jumpclip.egg-info/SOURCES.txt
+src/jumpclip.egg-info/dependency_links.txt
+src/jumpclip.egg-info/entry_points.txt
+src/jumpclip.egg-info/requires.txt
+src/jumpclip.egg-info/top_level.txt
+tests/test_jumpclip.py

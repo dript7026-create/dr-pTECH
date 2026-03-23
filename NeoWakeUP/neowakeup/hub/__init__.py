@@ -1,0 +1,1 @@
+"""NeoWakeUP control hub UI."""

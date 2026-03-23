@@ -1,0 +1,104 @@
+[
+    {
+        "name":  "innsmouth_player_core_master_sheet_v3",
+        "category":  "player",
+        "prompt_revision":  "transparent_orb32_v1",
+        "protocol_profile":  "innsmouth_island_dimensional_protocol_v1",
+        "pass_kind":  "complete_game",
+        "guide_ref":  "innsmouth_island_complete_game_prompt_guide_v1",
+        "prompt":  "ORBSystems 32-dimensional coherency asset request for InnsmouthIsland; transparent background only, isolated render on alpha, no opaque backdrop, full depth-precision mapping cues for ORBDimensionView ORBKinetics and ORBGlue, expressionistic angular silhouette language, angular posing, pseudo-3D-ready layer discipline; fish-man drifter protagonist master sheet with crawl intro, idle breathing, walk, run, moisture heal, jump start, airborne, focus-lock stance, block, parry, hurt, stagger, shrine kneel, victory ascend, defeat sink, wet shell and rope materials, clean socket anchors, premium gameplay readability, no text",
+        "negative_prompt":  "opaque background, solid background, painted matte, filled sky, scenic poster frame, text, watermark, logo, border, UI mockup, cropped subject",
+        "controls":  {
+                         "transparent_background":  true
+                     },
+        "transparent_background":  true,
+        "w":  1216,
+        "h":  896,
+        "out":  "../../../ORBEngine/assets/innsmouth_island/complete_game/player/innsmouth_player_core_master_sheet_v3.png"
+    },
+    {
+        "name":  "innsmouth_player_light_combo_keyframes_v3",
+        "category":  "player",
+        "prompt_revision":  "transparent_orb32_v1",
+        "protocol_profile":  "innsmouth_island_dimensional_protocol_v1",
+        "pass_kind":  "complete_game",
+        "guide_ref":  "innsmouth_island_complete_game_prompt_guide_v1",
+        "prompt":  "ORBSystems 32-dimensional coherency combat keyframe request for InnsmouthIsland; transparent background only on alpha, no opaque backdrop, full depth-precision mapping and attachment-ready hand silhouettes, expressionistic angular posing; isolated player light combo chain keyframes with hard line-of-action, readable anticipation contact recoil and recovery beats, fish-man drifter using Barnacle Shiv class stance language, premium melee timing readability, no text",
+        "negative_prompt":  "opaque background, solid background, scenic poster frame, text, watermark, logo, cropped figure, blurry silhouette",
+        "controls":  {
+                         "transparent_background":  true
+                     },
+        "transparent_background":  true,
+        "w":  1024,
+        "h":  1024,
+        "out":  "../../../ORBEngine/assets/innsmouth_island/complete_game/player/innsmouth_player_light_combo_keyframes_v3.png"
+    },
+    {
+        "name":  "innsmouth_player_heavy_combo_keyframes_v3",
+        "category":  "player",
+        "prompt_revision":  "transparent_orb32_v1",
+        "protocol_profile":  "innsmouth_island_dimensional_protocol_v1",
+        "pass_kind":  "complete_game",
+        "guide_ref":  "innsmouth_island_complete_game_prompt_guide_v1",
+        "prompt":  "ORBSystems 32-dimensional coherency combat keyframe request for InnsmouthIsland; transparent background only, isolated alpha render, no opaque backdrop, full depth-precision mapping, expressionistic angular silhouette breaks; isolated player heavy combo keyframes with over-committed swings, planted feet, torque-rich torso rotation, staggering impact follow-through, pseudo-3D top-cap readability, no text",
+        "negative_prompt":  "opaque background, solid background, painted matte, text, watermark, logo, cropped figure",
+        "controls":  {
+                         "transparent_background":  true
+                     },
+        "transparent_background":  true,
+        "w":  1024,
+        "h":  1024,
+        "out":  "../../../ORBEngine/assets/innsmouth_island/complete_game/player/innsmouth_player_heavy_combo_keyframes_v3.png"
+    },
+    {
+        "name":  "innsmouth_player_air_and_dodge_keyframes_v3",
+        "category":  "player",
+        "prompt_revision":  "transparent_orb32_v1",
+        "protocol_profile":  "innsmouth_island_dimensional_protocol_v1",
+        "pass_kind":  "complete_game",
+        "guide_ref":  "innsmouth_island_complete_game_prompt_guide_v1",
+        "prompt":  "ORBSystems 32-dimensional coherency traversal keyframe request for InnsmouthIsland; transparent background only, isolated render on alpha, no opaque backdrop, full depth-precision mapping cues, expressionistic angular poses; player jump start, aerial drift, plunge, ground dodge, air dodge, crouch slide, hard directional momentum silhouettes, socket-aware limbs and readable landing geometry, no text",
+        "negative_prompt":  "opaque background, solid background, painted matte, text, watermark, logo, cropped figure",
+        "controls":  {
+                         "transparent_background":  true
+                     },
+        "transparent_background":  true,
+        "w":  1024,
+        "h":  1024,
+        "out":  "../../../ORBEngine/assets/innsmouth_island/complete_game/player/innsmouth_player_air_and_dodge_keyframes_v3.png"
+    },
+    {
+        "name":  "innsmouth_player_throw_and_shrine_keyframes_v3",
+        "category":  "player",
+        "prompt_revision":  "transparent_orb32_v1",
+        "protocol_profile":  "innsmouth_island_dimensional_protocol_v1",
+        "pass_kind":  "complete_game",
+        "guide_ref":  "innsmouth_island_complete_game_prompt_guide_v1",
+        "prompt":  "ORBSystems 32-dimensional coherency interaction keyframe request for InnsmouthIsland; transparent background only, alpha-isolated asset, no opaque backdrop, full depth-precision mapping cues, angular expressionistic posing; player throwable windup release and follow-through, projectile throw variation, shrine kneel, shrine resonance uplift, consumable use beats, premium silhouette readability, no text",
+        "negative_prompt":  "opaque background, solid background, painted matte, text, watermark, logo, cropped figure",
+        "controls":  {
+                         "transparent_background":  true
+                     },
+        "transparent_background":  true,
+        "w":  1024,
+        "h":  1024,
+        "out":  "../../../ORBEngine/assets/innsmouth_island/complete_game/player/innsmouth_player_throw_and_shrine_keyframes_v3.png"
+    },
+    {
+        "name":  "innsmouth_player_turnaround_single_frames_v3",
+        "category":  "player",
+        "prompt_revision":  "transparent_orb32_v1",
+        "protocol_profile":  "innsmouth_island_dimensional_protocol_v1",
+        "pass_kind":  "complete_game",
+        "guide_ref":  "innsmouth_island_complete_game_prompt_guide_v1",
+        "prompt":  "ORBSystems 32-dimensional coherency single-frame character study request for InnsmouthIsland; transparent background only, isolated alpha asset, no opaque backdrop, full socket and silhouette precision cues, expressionistic angular silhouette emphasis; front side three-quarter back turnaround stills of the fish-man drifter protagonist with neutral combat-ready posture and premium material detail, no text",
+        "negative_prompt":  "opaque background, solid background, painted matte, text, watermark, logo, cropped figure",
+        "controls":  {
+                         "transparent_background":  true
+                     },
+        "transparent_background":  true,
+        "w":  1024,
+        "h":  1024,
+        "out":  "../../../ORBEngine/assets/innsmouth_island/complete_game/player/innsmouth_player_turnaround_single_frames_v3.png"
+    }
+]

@@ -1,0 +1,54 @@
+{
+  "guide_name": "innsmouth_island_complete_game_prompt_guide_v1",
+  "date": "2026-03-11",
+  "purpose": "Full-game InnsmouthIsland graphical asset requirements guide for Recraft-compatible manifest generation with mandatory transparent backgrounds, 32-dimensional coherency, and full depth-precision mapping discipline.",
+  "protocol_profile": "innsmouth_island_dimensional_protocol_v1",
+  "attachment_map": "innsmouth_island_attachment_map_v1.json",
+  "hard_constraints": {
+    "transparent_background": true,
+    "controls": {
+      "transparent_background": true
+    },
+    "background_policy": [
+      "Every asset must render on alpha with no opaque matte, no filled sky, no solid backdrop, and no scenic framing card.",
+      "Landscape, skyline, skybox, weather, horizon, and architecture assets must be authored as isolated compositing layers rather than baked final paintings.",
+      "All foreground, midground, background, and atmospheric layers must remain independently stackable in ORBSystems runtime composition."
+    ],
+    "negative_prompt": "opaque background, solid background, painted matte, baked backdrop, filled sky rectangle, scenic poster frame, text, watermark, logo, border, UI mockup, cropped subject"
+  },
+  "orb32_requirements": {
+    "coherency": "All asset prompts must reference 32-dimensional coherency and treat each still or keyframe as a stable slice in a larger ORBSystems asset field.",
+    "dimension_view": [
+      "curvature-consistent depth translation",
+      "top-cap projection",
+      "adjacent plane stitching",
+      "foreground occlusion readiness"
+    ],
+    "kinetics": [
+      "precision silhouette readability",
+      "tight gameplay collision intent",
+      "foot-body-cap volume separation",
+      "anchor-linked traversal cues"
+    ],
+    "glue": [
+      "socket readability",
+      "equipment overlay clarity",
+      "animation frame attachment consistency",
+      "runtime metadata alignment"
+    ]
+  },
+  "art_direction": {
+    "silhouette": "expressionistic, angular, aggressive break-up, no mushy rounded massing unless a monster concept specifically needs contrast",
+    "posing": "angular, staged, readable attack lines, hard directional intent, strong combat and traversal line-of-action",
+    "materials": "wet shell, brine metal, coral, eelbone, basalt, ritual pearl, soaked rope, fungal residue, black-tide ooze",
+    "lighting": "single coherent light family with stable highlight logic, readable shadow planes, no contradictory rims"
+  },
+  "asset_strategy": {
+    "prefer_single_frame_assets": true,
+    "single_frame_policy": "Prefer one isolated hero asset or one tightly related keyframe cluster per output whenever possible.",
+    "sheet_policy": "Use sprite sheets only when multiple related frames materially improve runtime completeness.",
+    "landscape_policy": "Split world scenery into transparent layer families: sky strata, horizon silhouettes, canopy bands, ruins, fog, rain, spores, light shafts, and water overlays."
+  },
+  "output_root": "../../ORBEngine/assets/innsmouth_island/complete_game",
+  "manifest": "innsmouth_island_complete_game_manifest.json"
+}

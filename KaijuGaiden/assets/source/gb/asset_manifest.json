@@ -1,0 +1,101 @@
+{
+  "preferredSourceRoot": "assets/source/gb",
+  "generatedRoot": "assets/gb",
+  "assets": [
+    {
+      "source": "tile_ground.png",
+      "output": "bg_tiles_generated.h",
+      "symbols": ["tile_ground_lr"]
+    },
+    {
+      "source": "tile_water.png",
+      "output": "bg_tiles_generated.h",
+      "symbols": ["tile_water_ab"]
+    },
+    {
+      "source": "tile_cliff.png",
+      "output": "bg_tiles_generated.h",
+      "symbols": ["tile_cliff_ab"]
+    },
+    {
+      "source": "tile_sky.png",
+      "output": "bg_tiles_generated.h",
+      "symbols": ["tile_sky_ab"]
+    },
+    {
+      "source": "bg_splash_driptech.png",
+      "output": "bg_tiles_generated.h",
+      "symbols": ["tile_splash"]
+    },
+    {
+      "source": "bg_title_logo.png",
+      "output": "bg_tiles_generated.h",
+      "symbols": ["tile_title"]
+    },
+    {
+      "source": "spr_rei_idle.png",
+      "output": "spr_rei_generated.h",
+      "symbols": ["spr_rei_idle_data"]
+    },
+    {
+      "source": "spr_rei_run.png",
+      "output": "spr_rei_generated.h",
+      "symbols": ["spr_rei_run_data"]
+    },
+    {
+      "source": "spr_rei_attack.png",
+      "output": "spr_rei_generated.h",
+      "symbols": ["spr_rei_attack_data"]
+    },
+    {
+      "source": "spr_boss_leviathan_p1.png",
+      "output": "spr_boss_generated.h",
+      "symbols": ["spr_boss_p1_data"]
+    },
+    {
+      "source": "spr_boss_leviathan_p2.png",
+      "output": "spr_boss_generated.h",
+      "symbols": ["spr_boss_p2_data"]
+    },
+    {
+      "source": "spr_boss_leviathan_p3.png",
+      "output": "spr_boss_generated.h",
+      "symbols": ["spr_boss_p3_data"]
+    },
+    {
+      "source": "spr_minion_crablet.png",
+      "output": "spr_minion_generated.h",
+      "symbols": ["spr_minion_data"]
+    },
+    {
+      "source": "spr_fx_hit_spark.png",
+      "output": "spr_fx_generated.h",
+      "symbols": ["spr_fx_hit_data"]
+    },
+    {
+      "source": "spr_fx_nanocell_orb.png",
+      "output": "spr_fx_generated.h",
+      "symbols": ["spr_fx_nano_data"]
+    },
+    {
+      "source": "spr_cinematic_rei_large.png",
+      "output": "spr_cinematic_generated.h",
+      "symbols": ["spr_cinematic_a"]
+    },
+    {
+      "source": "spr_cinematic_storm_kaiju.png",
+      "output": "spr_cinematic_generated.h",
+      "symbols": ["spr_cinematic_b"]
+    },
+    {
+      "source": "hud_hp_segment.png",
+      "output": "hud_tiles_generated.h",
+      "symbols": ["tile_hp_seg"]
+    },
+    {
+      "source": "hud_boss_hp_bar.png",
+      "output": "hud_tiles_generated.h",
+      "symbols": ["tile_boss_hp_bar"]
+    }
+  ]
+}

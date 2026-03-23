@@ -1,0 +1,497 @@
+{
+  "manifest_name": "knave_advanced_asset_pass_2000_credit",
+  "manifest_version": "2026-03-15.knave.recraft.v1",
+  "intent": "Advanced original knave asset pass for Asset Generator ingestion and pipeline compilation.",
+  "output_root": ".",
+  "budget": {
+    "requested_budget": 2000,
+    "allocated_credits": 2000
+  },
+  "shared_prompt_appendix": "Design intent: original premium dark-fantasy action asset for a knave prototype, not derivative of any specific existing title, favor authored silhouettes, premium production finish, gameplay readability, restrained ornament, and worldbuilding continuity.",
+  "godai": {
+    "mode": "asset_direction_conductor",
+    "pressure_policy": "increase novelty only if silhouette readability remains stable",
+    "mercy_policy": "reduce ornamental density when component clarity drops"
+  },
+  "assets": [
+    {
+      "name": "knave_player_turnaround",
+      "category": "character",
+      "prompt": "original dark-fantasy knave hero turnaround board with front, side, rear, and three-quarter pose coverage for premium production art, component tags: hero, turnaround, armor, cloth, baseline profile: single-weight medieval action silhouettes with limited faction distinction; flat armor and cloth treatment with sparse surface storytelling, advancement profile: hero, rival, elite, and boss silhouettes that read immediately at gameplay scale with asymmetry and role-specific profile breaks; layered materials that signal rank, weathering, ritual use, and combat history without collapsing readability; premium interface systems with authored hierarchy, diegetic ornament restraint, and clean command-state separation, Design intent: original premium dark-fantasy action asset for a knave prototype, not derivative of any specific existing title, favor authored silhouettes, premium production finish, gameplay readability, restrained ornament, and worldbuilding continuity.",
+      "negative_prompt": "direct imitation, muddy shapes, unreadable silhouettes, cluttered staging, watermark, text blocks, noisy anatomy",
+      "w": 1024,
+      "h": 1024,
+      "model": "recraftv4",
+      "planned_credits": 100,
+      "api_units": 100,
+      "out": "authoring/clipstudio/sprites/knave_player_turnaround.png",
+      "transparent_background": true,
+      "auto_polish": true,
+      "component_tags": [
+        "hero",
+        "turnaround",
+        "armor",
+        "cloth"
+      ],
+      "mutation_axes": [
+        "shape_language",
+        "surface_memory",
+        "ux_cadence"
+      ]
+    },
+    {
+      "name": "knave_player_motion_suite",
+      "category": "character",
+      "prompt": "original premium action spritesheet panel for a knave protagonist covering idle, walk, sprint, dodge, leap, and recovery beats, component tags: hero, movement, combat, animation, baseline profile: limited idle, move, attack, and hit coverage, advancement profile: expanded anticipation, follow-through, guard states, finishers, and combat recovery frames with clean timing bands; hero, rival, elite, and boss silhouettes that read immediately at gameplay scale with asymmetry and role-specific profile breaks, Design intent: original premium dark-fantasy action asset for a knave prototype, not derivative of any specific existing title, favor authored silhouettes, premium production finish, gameplay readability, restrained ornament, and worldbuilding continuity.",
+      "negative_prompt": "direct imitation, muddy shapes, unreadable silhouettes, cluttered staging, watermark, text blocks, noisy anatomy",
+      "w": 1024,
+      "h": 512,
+      "model": "recraftv4",
+      "planned_credits": 100,
+      "api_units": 100,
+      "out": "authoring/clipstudio/sprites/knave_player_motion_suite.png",
+      "transparent_background": true,
+      "auto_polish": true,
+      "component_tags": [
+        "hero",
+        "movement",
+        "combat",
+        "animation"
+      ],
+      "mutation_axes": [
+        "motion_clarity",
+        "shape_language"
+      ]
+    },
+    {
+      "name": "knave_player_guard_suite",
+      "category": "character",
+      "prompt": "original combat guard and parry suite for a knave action hero with premium stance readability and authored impact anticipation, component tags: hero, guard, parry, stance, baseline profile: limited idle, move, attack, and hit coverage; generic flashes and trails with little combat taxonomy, advancement profile: expanded anticipation, follow-through, guard states, finishers, and combat recovery frames with clean timing bands; distinct weapon, spell, guard-break, and finisher FX families that communicate outcome before impact resolves; layered materials that signal rank, weathering, ritual use, and combat history without collapsing readability, Design intent: original premium dark-fantasy action asset for a knave prototype, not derivative of any specific existing title, favor authored silhouettes, premium production finish, gameplay readability, restrained ornament, and worldbuilding continuity.",
+      "negative_prompt": "direct imitation, muddy shapes, unreadable silhouettes, cluttered staging, watermark, text blocks, noisy anatomy",
+      "w": 1024,
+      "h": 512,
+      "model": "recraftv4",
+      "planned_credits": 100,
+      "api_units": 100,
+      "out": "authoring/clipstudio/sprites/knave_player_guard_suite.png",
+      "transparent_background": true,
+      "auto_polish": true,
+      "component_tags": [
+        "hero",
+        "guard",
+        "parry",
+        "stance"
+      ],
+      "mutation_axes": [
+        "motion_clarity",
+        "signal_intensity",
+        "surface_memory"
+      ]
+    },
+    {
+      "name": "knave_player_finisher_suite",
+      "category": "character",
+      "prompt": "original premium finisher sequence panel for a knave action hero with dramatic but gameplay-readable combat staging, component tags: hero, finisher, cinematic, combat, baseline profile: limited idle, move, attack, and hit coverage; generic flashes and trails with little combat taxonomy, advancement profile: expanded anticipation, follow-through, guard states, finishers, and combat recovery frames with clean timing bands; distinct weapon, spell, guard-break, and finisher FX families that communicate outcome before impact resolves; foreground-midground-backdrop separation with traversal cues, light wells, and combat readability lanes, Design intent: original premium dark-fantasy action asset for a knave prototype, not derivative of any specific existing title, favor authored silhouettes, premium production finish, gameplay readability, restrained ornament, and worldbuilding continuity.",
+      "negative_prompt": "direct imitation, muddy shapes, unreadable silhouettes, cluttered staging, watermark, text blocks, noisy anatomy",
+      "w": 1024,
+      "h": 512,
+      "model": "recraftv4",
+      "planned_credits": 100,
+      "api_units": 100,
+      "out": "authoring/clipstudio/sprites/knave_player_finisher_suite.png",
+      "transparent_background": true,
+      "auto_polish": true,
+      "component_tags": [
+        "hero",
+        "finisher",
+        "cinematic",
+        "combat"
+      ],
+      "mutation_axes": [
+        "motion_clarity",
+        "signal_intensity",
+        "spatial_stack"
+      ]
+    },
+    {
+      "name": "knave_enemy_duelist_sheet",
+      "category": "character",
+      "prompt": "original elite duelist enemy sheet for a premium knave prototype with stance-driven attack language and authored faction silhouette, component tags: enemy, duelist, elite, baseline profile: single-weight medieval action silhouettes with limited faction distinction, advancement profile: hero, rival, elite, and boss silhouettes that read immediately at gameplay scale with asymmetry and role-specific profile breaks; expanded anticipation, follow-through, guard states, finishers, and combat recovery frames with clean timing bands, Design intent: original premium dark-fantasy action asset for a knave prototype, not derivative of any specific existing title, favor authored silhouettes, premium production finish, gameplay readability, restrained ornament, and worldbuilding continuity.",
+      "negative_prompt": "direct imitation, muddy shapes, unreadable silhouettes, cluttered staging, watermark, text blocks, noisy anatomy",
+      "w": 1024,
+      "h": 512,
+      "model": "recraftv4",
+      "planned_credits": 100,
+      "api_units": 100,
+      "out": "authoring/clipstudio/sprites/knave_enemy_duelist_sheet.png",
+      "transparent_background": true,
+      "auto_polish": true,
+      "component_tags": [
+        "enemy",
+        "duelist",
+        "elite"
+      ],
+      "mutation_axes": [
+        "shape_language",
+        "motion_clarity"
+      ]
+    },
+    {
+      "name": "knave_enemy_lancer_sheet",
+      "category": "character",
+      "prompt": "original long-reach lancer enemy sheet for a knave prototype, tuned for distance pressure and clear attack telegraphing, component tags: enemy, lancer, reach, baseline profile: single-weight medieval action silhouettes with limited faction distinction; limited idle, move, attack, and hit coverage, advancement profile: hero, rival, elite, and boss silhouettes that read immediately at gameplay scale with asymmetry and role-specific profile breaks; expanded anticipation, follow-through, guard states, finishers, and combat recovery frames with clean timing bands; layered materials that signal rank, weathering, ritual use, and combat history without collapsing readability, Design intent: original premium dark-fantasy action asset for a knave prototype, not derivative of any specific existing title, favor authored silhouettes, premium production finish, gameplay readability, restrained ornament, and worldbuilding continuity.",
+      "negative_prompt": "direct imitation, muddy shapes, unreadable silhouettes, cluttered staging, watermark, text blocks, noisy anatomy",
+      "w": 1024,
+      "h": 512,
+      "model": "recraftv4",
+      "planned_credits": 100,
+      "api_units": 100,
+      "out": "authoring/clipstudio/sprites/knave_enemy_lancer_sheet.png",
+      "transparent_background": true,
+      "auto_polish": true,
+      "component_tags": [
+        "enemy",
+        "lancer",
+        "reach"
+      ],
+      "mutation_axes": [
+        "shape_language",
+        "motion_clarity",
+        "surface_memory"
+      ]
+    },
+    {
+      "name": "knave_enemy_hexcaster_sheet",
+      "category": "character",
+      "prompt": "original ritual hexcaster enemy sheet for a premium knave build with readable spell silhouettes and authored casting posture, component tags: enemy, caster, ritual, baseline profile: generic flashes and trails with little combat taxonomy, advancement profile: distinct weapon, spell, guard-break, and finisher FX families that communicate outcome before impact resolves; hero, rival, elite, and boss silhouettes that read immediately at gameplay scale with asymmetry and role-specific profile breaks; layered materials that signal rank, weathering, ritual use, and combat history without collapsing readability, Design intent: original premium dark-fantasy action asset for a knave prototype, not derivative of any specific existing title, favor authored silhouettes, premium production finish, gameplay readability, restrained ornament, and worldbuilding continuity.",
+      "negative_prompt": "direct imitation, muddy shapes, unreadable silhouettes, cluttered staging, watermark, text blocks, noisy anatomy",
+      "w": 1024,
+      "h": 512,
+      "model": "recraftv4",
+      "planned_credits": 100,
+      "api_units": 100,
+      "out": "authoring/clipstudio/sprites/knave_enemy_hexcaster_sheet.png",
+      "transparent_background": true,
+      "auto_polish": true,
+      "component_tags": [
+        "enemy",
+        "caster",
+        "ritual"
+      ],
+      "mutation_axes": [
+        "signal_intensity",
+        "shape_language",
+        "surface_memory"
+      ]
+    },
+    {
+      "name": "knave_enemy_bulwark_sheet",
+      "category": "character",
+      "prompt": "original heavy bulwark enemy sheet for a knave prototype with weighty armor storytelling and readable shield mechanics, component tags: enemy, bulwark, heavy, baseline profile: flat armor and cloth treatment with sparse surface storytelling, advancement profile: layered materials that signal rank, weathering, ritual use, and combat history without collapsing readability; hero, rival, elite, and boss silhouettes that read immediately at gameplay scale with asymmetry and role-specific profile breaks; expanded anticipation, follow-through, guard states, finishers, and combat recovery frames with clean timing bands, Design intent: original premium dark-fantasy action asset for a knave prototype, not derivative of any specific existing title, favor authored silhouettes, premium production finish, gameplay readability, restrained ornament, and worldbuilding continuity.",
+      "negative_prompt": "direct imitation, muddy shapes, unreadable silhouettes, cluttered staging, watermark, text blocks, noisy anatomy",
+      "w": 1024,
+      "h": 512,
+      "model": "recraftv4",
+      "planned_credits": 100,
+      "api_units": 100,
+      "out": "authoring/clipstudio/sprites/knave_enemy_bulwark_sheet.png",
+      "transparent_background": true,
+      "auto_polish": true,
+      "component_tags": [
+        "enemy",
+        "bulwark",
+        "heavy"
+      ],
+      "mutation_axes": [
+        "surface_memory",
+        "shape_language",
+        "motion_clarity"
+      ]
+    },
+    {
+      "name": "knave_boss_regent_sheet",
+      "category": "character",
+      "prompt": "original premium boss key sheet for a knave regent antagonist with multi-phase posture changes and prestige encounter authorship, component tags: boss, regent, phase, baseline profile: single-weight medieval action silhouettes with limited faction distinction; flat armor and cloth treatment with sparse surface storytelling, advancement profile: hero, rival, elite, and boss silhouettes that read immediately at gameplay scale with asymmetry and role-specific profile breaks; layered materials that signal rank, weathering, ritual use, and combat history without collapsing readability; expanded anticipation, follow-through, guard states, finishers, and combat recovery frames with clean timing bands; distinct weapon, spell, guard-break, and finisher FX families that communicate outcome before impact resolves, Design intent: original premium dark-fantasy action asset for a knave prototype, not derivative of any specific existing title, favor authored silhouettes, premium production finish, gameplay readability, restrained ornament, and worldbuilding continuity.",
+      "negative_prompt": "direct imitation, muddy shapes, unreadable silhouettes, cluttered staging, watermark, text blocks, noisy anatomy",
+      "w": 1536,
+      "h": 768,
+      "model": "recraftv4",
+      "planned_credits": 100,
+      "api_units": 100,
+      "out": "authoring/clipstudio/sprites/knave_boss_regent_sheet.png",
+      "transparent_background": true,
+      "auto_polish": true,
+      "component_tags": [
+        "boss",
+        "regent",
+        "phase"
+      ],
+      "mutation_axes": [
+        "shape_language",
+        "surface_memory",
+        "motion_clarity",
+        "signal_intensity"
+      ]
+    },
+    {
+      "name": "knave_companion_sheet",
+      "category": "character",
+      "prompt": "original ally companion sheet for a knave prototype, with premium support-readability and ranged traversal personality, component tags: ally, companion, ranger, baseline profile: single-weight medieval action silhouettes with limited faction distinction, advancement profile: hero, rival, elite, and boss silhouettes that read immediately at gameplay scale with asymmetry and role-specific profile breaks; layered materials that signal rank, weathering, ritual use, and combat history without collapsing readability; expanded anticipation, follow-through, guard states, finishers, and combat recovery frames with clean timing bands, Design intent: original premium dark-fantasy action asset for a knave prototype, not derivative of any specific existing title, favor authored silhouettes, premium production finish, gameplay readability, restrained ornament, and worldbuilding continuity.",
+      "negative_prompt": "direct imitation, muddy shapes, unreadable silhouettes, cluttered staging, watermark, text blocks, noisy anatomy",
+      "w": 1024,
+      "h": 512,
+      "model": "recraftv4",
+      "planned_credits": 100,
+      "api_units": 100,
+      "out": "authoring/clipstudio/sprites/knave_companion_sheet.png",
+      "transparent_background": true,
+      "auto_polish": true,
+      "component_tags": [
+        "ally",
+        "companion",
+        "ranger"
+      ],
+      "mutation_axes": [
+        "shape_language",
+        "surface_memory",
+        "motion_clarity"
+      ]
+    },
+    {
+      "name": "knave_rival_huntress_sheet",
+      "category": "character",
+      "prompt": "original rival huntress sheet for a knave prototype with a distinctive pursuit identity, pursuit stance, and authored duel language, component tags: rival, hunter, pursuer, baseline profile: single-weight medieval action silhouettes with limited faction distinction; limited idle, move, attack, and hit coverage, advancement profile: hero, rival, elite, and boss silhouettes that read immediately at gameplay scale with asymmetry and role-specific profile breaks; expanded anticipation, follow-through, guard states, finishers, and combat recovery frames with clean timing bands; layered materials that signal rank, weathering, ritual use, and combat history without collapsing readability, Design intent: original premium dark-fantasy action asset for a knave prototype, not derivative of any specific existing title, favor authored silhouettes, premium production finish, gameplay readability, restrained ornament, and worldbuilding continuity.",
+      "negative_prompt": "direct imitation, muddy shapes, unreadable silhouettes, cluttered staging, watermark, text blocks, noisy anatomy",
+      "w": 1024,
+      "h": 512,
+      "model": "recraftv4",
+      "planned_credits": 100,
+      "api_units": 100,
+      "out": "authoring/clipstudio/sprites/knave_rival_huntress_sheet.png",
+      "transparent_background": true,
+      "auto_polish": true,
+      "component_tags": [
+        "rival",
+        "hunter",
+        "pursuer"
+      ],
+      "mutation_axes": [
+        "shape_language",
+        "motion_clarity",
+        "surface_memory"
+      ]
+    },
+    {
+      "name": "knave_ui_hud_suite",
+      "category": "ui",
+      "prompt": "original premium HUD suite for a dark-fantasy knave action game with crystal-clear status hierarchy and restrained ornament, component tags: ui, hud, status, baseline profile: functional dark-fantasy interface motifs, advancement profile: premium interface systems with authored hierarchy, diegetic ornament restraint, and clean command-state separation; distinct weapon, spell, guard-break, and finisher FX families that communicate outcome before impact resolves, Design intent: original premium dark-fantasy action asset for a knave prototype, not derivative of any specific existing title, favor authored silhouettes, premium production finish, gameplay readability, restrained ornament, and worldbuilding continuity.",
+      "negative_prompt": "direct imitation, muddy shapes, unreadable silhouettes, cluttered staging, watermark, text blocks, noisy anatomy",
+      "w": 1024,
+      "h": 512,
+      "model": "recraftv4",
+      "planned_credits": 100,
+      "api_units": 100,
+      "out": "authoring/clipstudio/sprites/knave_ui_hud_suite.png",
+      "transparent_background": true,
+      "auto_polish": true,
+      "component_tags": [
+        "ui",
+        "hud",
+        "status"
+      ],
+      "mutation_axes": [
+        "ux_cadence",
+        "signal_intensity"
+      ]
+    },
+    {
+      "name": "knave_fx_weapon_suite",
+      "category": "fx",
+      "prompt": "original premium weapon FX suite for a knave prototype covering slashes, guard sparks, break impacts, and finisher bursts, component tags: fx, weapon, impact, baseline profile: generic flashes and trails with little combat taxonomy, advancement profile: distinct weapon, spell, guard-break, and finisher FX families that communicate outcome before impact resolves; expanded anticipation, follow-through, guard states, finishers, and combat recovery frames with clean timing bands, Design intent: original premium dark-fantasy action asset for a knave prototype, not derivative of any specific existing title, favor authored silhouettes, premium production finish, gameplay readability, restrained ornament, and worldbuilding continuity.",
+      "negative_prompt": "direct imitation, muddy shapes, unreadable silhouettes, cluttered staging, watermark, text blocks, noisy anatomy",
+      "w": 1024,
+      "h": 512,
+      "model": "recraftv4",
+      "planned_credits": 100,
+      "api_units": 100,
+      "out": "authoring/clipstudio/sprites/knave_fx_weapon_suite.png",
+      "transparent_background": true,
+      "auto_polish": true,
+      "component_tags": [
+        "fx",
+        "weapon",
+        "impact"
+      ],
+      "mutation_axes": [
+        "signal_intensity",
+        "motion_clarity"
+      ]
+    },
+    {
+      "name": "knave_fx_magic_suite",
+      "category": "fx",
+      "prompt": "original premium ritual and spell FX suite for a knave prototype with authored shapes for curse, ward, and burst effects, component tags: fx, magic, ritual, baseline profile: generic flashes and trails with little combat taxonomy, advancement profile: distinct weapon, spell, guard-break, and finisher FX families that communicate outcome before impact resolves; foreground-midground-backdrop separation with traversal cues, light wells, and combat readability lanes, Design intent: original premium dark-fantasy action asset for a knave prototype, not derivative of any specific existing title, favor authored silhouettes, premium production finish, gameplay readability, restrained ornament, and worldbuilding continuity.",
+      "negative_prompt": "direct imitation, muddy shapes, unreadable silhouettes, cluttered staging, watermark, text blocks, noisy anatomy",
+      "w": 1024,
+      "h": 512,
+      "model": "recraftv4",
+      "planned_credits": 100,
+      "api_units": 100,
+      "out": "authoring/clipstudio/sprites/knave_fx_magic_suite.png",
+      "transparent_background": true,
+      "auto_polish": true,
+      "component_tags": [
+        "fx",
+        "magic",
+        "ritual"
+      ],
+      "mutation_axes": [
+        "signal_intensity",
+        "spatial_stack"
+      ]
+    },
+    {
+      "name": "knave_keep_tiles_sheet",
+      "category": "environment",
+      "prompt": "original premium keep tileset sheet for a knave prototype with authored traversal reads, combat lanes, and stonewear storytelling, component tags: environment, keep, stone, baseline profile: single-plane combat spaces and low parallax contrast, advancement profile: foreground-midground-backdrop separation with traversal cues, light wells, and combat readability lanes; layered materials that signal rank, weathering, ritual use, and combat history without collapsing readability, Design intent: original premium dark-fantasy action asset for a knave prototype, not derivative of any specific existing title, favor authored silhouettes, premium production finish, gameplay readability, restrained ornament, and worldbuilding continuity.",
+      "negative_prompt": "direct imitation, muddy shapes, unreadable silhouettes, cluttered staging, watermark, text blocks, noisy anatomy",
+      "w": 1024,
+      "h": 1024,
+      "model": "recraftv4",
+      "planned_credits": 100,
+      "api_units": 100,
+      "out": "authoring/clipstudio/tiles/knave_keep_tiles_sheet.png",
+      "transparent_background": false,
+      "auto_polish": true,
+      "component_tags": [
+        "environment",
+        "keep",
+        "stone"
+      ],
+      "mutation_axes": [
+        "spatial_stack",
+        "surface_memory"
+      ]
+    },
+    {
+      "name": "knave_crypt_tiles_sheet",
+      "category": "environment",
+      "prompt": "original premium crypt tileset sheet for a knave prototype with layered gloom, readable pathing, and burial-rite environmental storytelling, component tags: environment, crypt, burial, baseline profile: single-plane combat spaces and low parallax contrast; flat armor and cloth treatment with sparse surface storytelling, advancement profile: foreground-midground-backdrop separation with traversal cues, light wells, and combat readability lanes; layered materials that signal rank, weathering, ritual use, and combat history without collapsing readability; distinct weapon, spell, guard-break, and finisher FX families that communicate outcome before impact resolves, Design intent: original premium dark-fantasy action asset for a knave prototype, not derivative of any specific existing title, favor authored silhouettes, premium production finish, gameplay readability, restrained ornament, and worldbuilding continuity.",
+      "negative_prompt": "direct imitation, muddy shapes, unreadable silhouettes, cluttered staging, watermark, text blocks, noisy anatomy",
+      "w": 1024,
+      "h": 1024,
+      "model": "recraftv4",
+      "planned_credits": 100,
+      "api_units": 100,
+      "out": "authoring/clipstudio/tiles/knave_crypt_tiles_sheet.png",
+      "transparent_background": false,
+      "auto_polish": true,
+      "component_tags": [
+        "environment",
+        "crypt",
+        "burial"
+      ],
+      "mutation_axes": [
+        "spatial_stack",
+        "surface_memory",
+        "signal_intensity"
+      ]
+    },
+    {
+      "name": "knave_forest_tiles_sheet",
+      "category": "environment",
+      "prompt": "original premium ruined forest tileset sheet for a knave prototype with traversal wayfinding, light wells, and combat silhouette support, component tags: environment, forest, ruin, baseline profile: single-plane combat spaces and low parallax contrast, advancement profile: foreground-midground-backdrop separation with traversal cues, light wells, and combat readability lanes; hero, rival, elite, and boss silhouettes that read immediately at gameplay scale with asymmetry and role-specific profile breaks; layered materials that signal rank, weathering, ritual use, and combat history without collapsing readability, Design intent: original premium dark-fantasy action asset for a knave prototype, not derivative of any specific existing title, favor authored silhouettes, premium production finish, gameplay readability, restrained ornament, and worldbuilding continuity.",
+      "negative_prompt": "direct imitation, muddy shapes, unreadable silhouettes, cluttered staging, watermark, text blocks, noisy anatomy",
+      "w": 1024,
+      "h": 1024,
+      "model": "recraftv4",
+      "planned_credits": 100,
+      "api_units": 100,
+      "out": "authoring/clipstudio/tiles/knave_forest_tiles_sheet.png",
+      "transparent_background": false,
+      "auto_polish": true,
+      "component_tags": [
+        "environment",
+        "forest",
+        "ruin"
+      ],
+      "mutation_axes": [
+        "spatial_stack",
+        "shape_language",
+        "surface_memory"
+      ]
+    },
+    {
+      "name": "knave_companion_portrait",
+      "category": "portrait",
+      "prompt": "original premium dialogue portrait of the knave companion with expressive but production-safe dark-fantasy authorship, component tags: portrait, ally, dialogue, baseline profile: flat armor and cloth treatment with sparse surface storytelling, advancement profile: layered materials that signal rank, weathering, ritual use, and combat history without collapsing readability; hero, rival, elite, and boss silhouettes that read immediately at gameplay scale with asymmetry and role-specific profile breaks, Design intent: original premium dark-fantasy action asset for a knave prototype, not derivative of any specific existing title, favor authored silhouettes, premium production finish, gameplay readability, restrained ornament, and worldbuilding continuity.",
+      "negative_prompt": "direct imitation, muddy shapes, unreadable silhouettes, cluttered staging, watermark, text blocks, noisy anatomy",
+      "w": 1024,
+      "h": 1024,
+      "model": "recraftv4",
+      "planned_credits": 100,
+      "api_units": 100,
+      "out": "authoring/clipstudio/portraits/knave_companion_portrait.png",
+      "transparent_background": true,
+      "auto_polish": true,
+      "component_tags": [
+        "portrait",
+        "ally",
+        "dialogue"
+      ],
+      "mutation_axes": [
+        "surface_memory",
+        "shape_language"
+      ]
+    },
+    {
+      "name": "knave_rival_portrait",
+      "category": "portrait",
+      "prompt": "original premium dialogue portrait of the knave rival huntress with authored tension and prestige production finish, component tags: portrait, rival, dialogue, baseline profile: flat armor and cloth treatment with sparse surface storytelling; single-weight medieval action silhouettes with limited faction distinction, advancement profile: layered materials that signal rank, weathering, ritual use, and combat history without collapsing readability; hero, rival, elite, and boss silhouettes that read immediately at gameplay scale with asymmetry and role-specific profile breaks; premium interface systems with authored hierarchy, diegetic ornament restraint, and clean command-state separation, Design intent: original premium dark-fantasy action asset for a knave prototype, not derivative of any specific existing title, favor authored silhouettes, premium production finish, gameplay readability, restrained ornament, and worldbuilding continuity.",
+      "negative_prompt": "direct imitation, muddy shapes, unreadable silhouettes, cluttered staging, watermark, text blocks, noisy anatomy",
+      "w": 1024,
+      "h": 1024,
+      "model": "recraftv4",
+      "planned_credits": 100,
+      "api_units": 100,
+      "out": "authoring/clipstudio/portraits/knave_rival_portrait.png",
+      "transparent_background": true,
+      "auto_polish": true,
+      "component_tags": [
+        "portrait",
+        "rival",
+        "dialogue"
+      ],
+      "mutation_axes": [
+        "surface_memory",
+        "shape_language",
+        "ux_cadence"
+      ]
+    },
+    {
+      "name": "knave_keyart_panel",
+      "category": "cinematic",
+      "prompt": "original premium key art panel for a knave prototype showing hero, rival, and boss pressure in a traversal-aware dark-fantasy composition, component tags: keyart, cinematic, marketing, baseline profile: single-plane combat spaces and low parallax contrast; flat armor and cloth treatment with sparse surface storytelling, advancement profile: foreground-midground-backdrop separation with traversal cues, light wells, and combat readability lanes; layered materials that signal rank, weathering, ritual use, and combat history without collapsing readability; hero, rival, elite, and boss silhouettes that read immediately at gameplay scale with asymmetry and role-specific profile breaks; premium interface systems with authored hierarchy, diegetic ornament restraint, and clean command-state separation, Design intent: original premium dark-fantasy action asset for a knave prototype, not derivative of any specific existing title, favor authored silhouettes, premium production finish, gameplay readability, restrained ornament, and worldbuilding continuity.",
+      "negative_prompt": "direct imitation, muddy shapes, unreadable silhouettes, cluttered staging, watermark, text blocks, noisy anatomy",
+      "w": 1536,
+      "h": 1024,
+      "model": "recraftv4",
+      "planned_credits": 100,
+      "api_units": 100,
+      "out": "authoring/clipstudio/sprites/knave_keyart_panel.png",
+      "transparent_background": true,
+      "auto_polish": true,
+      "component_tags": [
+        "keyart",
+        "cinematic",
+        "marketing"
+      ],
+      "mutation_axes": [
+        "spatial_stack",
+        "surface_memory",
+        "shape_language",
+        "ux_cadence"
+      ]
+    }
+  ]
+}

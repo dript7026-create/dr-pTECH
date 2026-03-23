@@ -1,0 +1,621 @@
+{
+  "entities": {
+    "region-1-mind-1": {
+      "activation": 0.7525391006819915,
+      "entity_id": "region-1-mind-1",
+      "genome": {
+        "agency": 0.900736879615424,
+        "cohesion": 0.5526725455648527,
+        "curiosity": 0.6214277321058912,
+        "empathy": 0.6358634316482976,
+        "memory_bias": 0.5405386216374227,
+        "plasticity": 0.5800968274904763
+      },
+      "knowledge": 0.5071451834250833,
+      "region_id": "region-1",
+      "resources": 0.7654349671379692,
+      "stress": 0.20156318912018217,
+      "trust": 0.564941360108401
+    },
+    "region-1-mind-2": {
+      "activation": 0.4338733340663865,
+      "entity_id": "region-1-mind-2",
+      "genome": {
+        "agency": 0.3589358493696956,
+        "cohesion": 0.7762689473386655,
+        "curiosity": 0.4064740737375311,
+        "empathy": 0.4820407575747153,
+        "memory_bias": 0.1314102522773845,
+        "plasticity": 0.7007350136518053
+      },
+      "knowledge": 0.7788546686753401,
+      "region_id": "region-1",
+      "resources": 0.650115757976071,
+      "stress": 0.6402063814393281,
+      "trust": 0.5769612667669202
+    },
+    "region-1-mind-3": {
+      "activation": 0.5679760095066096,
+      "entity_id": "region-1-mind-3",
+      "genome": {
+        "agency": 0.6434478230108112,
+        "cohesion": 0.28870821835975574,
+        "curiosity": 0.44449645708409746,
+        "empathy": 0.3090004421697629,
+        "memory_bias": 0.28145726024891105,
+        "plasticity": 0.37363537081865394
+      },
+      "knowledge": 0.47836067673397076,
+      "region_id": "region-1",
+      "resources": 0.7975776335370458,
+      "stress": 0.11654542407363372,
+      "trust": 0.4702655583283284
+    },
+    "region-1-mind-4": {
+      "activation": 0.5883132087494036,
+      "entity_id": "region-1-mind-4",
+      "genome": {
+        "agency": 0.6248525489344146,
+        "cohesion": 0.6805921957287393,
+        "curiosity": 0.661474468858446,
+        "empathy": 0.6841750247515064,
+        "memory_bias": 0.3086221747479144,
+        "plasticity": 0.5472644230397126
+      },
+      "knowledge": 0.7974149849937195,
+      "region_id": "region-1",
+      "resources": 0.7100762539736671,
+      "stress": 0.6487109102546964,
+      "trust": 0.6701077747464309
+    },
+    "region-1-mind-5": {
+      "activation": 0.5426556417412494,
+      "entity_id": "region-1-mind-5",
+      "genome": {
+        "agency": 0.4878759657542313,
+        "cohesion": 0.29564527471395186,
+        "curiosity": 0.5391663302093299,
+        "empathy": 0.4377995409647434,
+        "memory_bias": 0.4002998536888682,
+        "plasticity": 0.7480871261667645
+      },
+      "knowledge": 0.43190811902356074,
+      "region_id": "region-1",
+      "resources": 0.800751352646823,
+      "stress": 0.5656209920346483,
+      "trust": 0.7290211916599068
+    },
+    "region-1-mind-6": {
+      "activation": 0.7354772512221455,
+      "entity_id": "region-1-mind-6",
+      "genome": {
+        "agency": 0.8916767532677179,
+        "cohesion": 0.5554917294088833,
+        "curiosity": 0.35032696223334225,
+        "empathy": 0.42583044883776666,
+        "memory_bias": 0.39806829105946084,
+        "plasticity": 0.8872333117632899
+      },
+      "knowledge": 0.5776729473404145,
+      "region_id": "region-1",
+      "resources": 0.42535413145259277,
+      "stress": 0.14017108910853385,
+      "trust": 0.6392554293383255
+    },
+    "region-1-mind-7": {
+      "activation": 0.6619690025542069,
+      "entity_id": "region-1-mind-7",
+      "genome": {
+        "agency": 0.9266495407859465,
+        "cohesion": 0.7427263360459433,
+        "curiosity": 0.4022865190113021,
+        "empathy": 0.49955137527800875,
+        "memory_bias": 0.2847909616698475,
+        "plasticity": 0.32669459162270803
+      },
+      "knowledge": 0.23593604176464605,
+      "region_id": "region-1",
+      "resources": 0.36549078332893803,
+      "stress": 0.15557546992618781,
+      "trust": 0.648510755921987
+    },
+    "region-1-mind-8": {
+      "activation": 0.5306520507754402,
+      "entity_id": "region-1-mind-8",
+      "genome": {
+        "agency": 0.4239448699387379,
+        "cohesion": 0.7257312402143277,
+        "curiosity": 0.6855770849662368,
+        "empathy": 0.5684549265006129,
+        "memory_bias": 0.5827863427833754,
+        "plasticity": 0.33512860441580283
+      },
+      "knowledge": 0.4524533703478526,
+      "region_id": "region-1",
+      "resources": 0.4253667351738889,
+      "stress": 0.1640793932018381,
+      "trust": 0.3564328365045447
+    },
+    "region-2-mind-1": {
+      "activation": 0.5914119277550685,
+      "entity_id": "region-2-mind-1",
+      "genome": {
+        "agency": 0.49769434741614316,
+        "cohesion": 0.825162323286831,
+        "curiosity": 0.9325574337312149,
+        "empathy": 0.7820469018492429,
+        "memory_bias": 0.3957059778040407,
+        "plasticity": 0.38696164393238563
+      },
+      "knowledge": 0.5851013939542764,
+      "region_id": "region-2",
+      "resources": 0.893046103381612,
+      "stress": 0.5699072959356768,
+      "trust": 0.30016637609194147
+    },
+    "region-2-mind-2": {
+      "activation": 0.6524914350375938,
+      "entity_id": "region-2-mind-2",
+      "genome": {
+        "agency": 0.8022482983523349,
+        "cohesion": 0.4638210266060245,
+        "curiosity": 0.4779460211465135,
+        "empathy": 0.45496653471697224,
+        "memory_bias": 0.15504891504131812,
+        "plasticity": 0.4426110956893151
+      },
+      "knowledge": 0.5496408789005313,
+      "region_id": "region-2",
+      "resources": 0.6408344983282602,
+      "stress": 0.14956444512906164,
+      "trust": 0.3715064600687812
+    },
+    "region-2-mind-3": {
+      "activation": 0.7564482518906093,
+      "entity_id": "region-2-mind-3",
+      "genome": {
+        "agency": 0.9234375371167534,
+        "cohesion": 0.5644209466206542,
+        "curiosity": 0.5730224279559368,
+        "empathy": 0.5719248628343094,
+        "memory_bias": 0.7498942508516667,
+        "plasticity": 0.623471309529466
+      },
+      "knowledge": 0.2924811913556365,
+      "region_id": "region-2",
+      "resources": 0.7815712671487713,
+      "stress": 0.20055524367827687,
+      "trust": 0.7042118654712415
+    },
+    "region-2-mind-4": {
+      "activation": 0.585555099860626,
+      "entity_id": "region-2-mind-4",
+      "genome": {
+        "agency": 0.7806258533808232,
+        "cohesion": 0.8612631824616735,
+        "curiosity": 0.49969913985754977,
+        "empathy": 0.413880399577956,
+        "memory_bias": 0.8126018892314839,
+        "plasticity": 0.3777833670119427
+      },
+      "knowledge": 0.5621205288700661,
+      "region_id": "region-2",
+      "resources": 0.31749579288721624,
+      "stress": 0.5852043648465269,
+      "trust": 0.4607286119736789
+    },
+    "region-2-mind-5": {
+      "activation": 0.4392862182175995,
+      "entity_id": "region-2-mind-5",
+      "genome": {
+        "agency": 0.45496467523938877,
+        "cohesion": 0.707976649362945,
+        "curiosity": 0.37321788301626957,
+        "empathy": 0.8776089068733692,
+        "memory_bias": 0.7177883850680146,
+        "plasticity": 0.4170379089082028
+      },
+      "knowledge": 0.3760612078908423,
+      "region_id": "region-2",
+      "resources": 0.7182296628889877,
+      "stress": 0.4280564685914645,
+      "trust": 0.3377166983829296
+    },
+    "region-2-mind-6": {
+      "activation": 0.5525890815103845,
+      "entity_id": "region-2-mind-6",
+      "genome": {
+        "agency": 0.6635881228356058,
+        "cohesion": 0.804059918972223,
+        "curiosity": 0.3912656745004661,
+        "empathy": 0.43703780239507517,
+        "memory_bias": 0.3101645444281413,
+        "plasticity": 0.6492969602211642
+      },
+      "knowledge": 0.32238732762181066,
+      "region_id": "region-2",
+      "resources": 0.42497605321874665,
+      "stress": 0.6045480981709164,
+      "trust": 0.25828739653957755
+    },
+    "region-2-mind-7": {
+      "activation": 0.5430380501712264,
+      "entity_id": "region-2-mind-7",
+      "genome": {
+        "agency": 0.4145649539923311,
+        "cohesion": 0.4897104907419707,
+        "curiosity": 0.6174233119892956,
+        "empathy": 0.3362733455595291,
+        "memory_bias": 0.1986838904704458,
+        "plasticity": 0.6219101248867238
+      },
+      "knowledge": 0.7345641379818877,
+      "region_id": "region-2",
+      "resources": 0.6770058302312219,
+      "stress": 0.2991798361847145,
+      "trust": 0.7402467106691186
+    },
+    "region-2-mind-8": {
+      "activation": 0.4872696092403937,
+      "entity_id": "region-2-mind-8",
+      "genome": {
+        "agency": 0.39122567164465155,
+        "cohesion": 0.27280234880992615,
+        "curiosity": 0.7647329547491921,
+        "empathy": 0.6506641609081074,
+        "memory_bias": 0.7826593392946126,
+        "plasticity": 0.2616312280939175
+      },
+      "knowledge": 0.7776626081774021,
+      "region_id": "region-2",
+      "resources": 0.6635199390250583,
+      "stress": 0.48553351030865755,
+      "trust": 0.2606295891045507
+    },
+    "region-3-mind-1": {
+      "activation": 0.5052399239217622,
+      "entity_id": "region-3-mind-1",
+      "genome": {
+        "agency": 0.5072879186927808,
+        "cohesion": 0.899582457148141,
+        "curiosity": 0.6393414336469943,
+        "empathy": 0.7382987885671692,
+        "memory_bias": 0.5095715193139905,
+        "plasticity": 0.29892088506004955
+      },
+      "knowledge": 0.7401175287496276,
+      "region_id": "region-3",
+      "resources": 0.7073989025071552,
+      "stress": 0.5053530221764424,
+      "trust": 0.61854406720828
+    },
+    "region-3-mind-2": {
+      "activation": 0.6841852074995656,
+      "entity_id": "region-3-mind-2",
+      "genome": {
+        "agency": 0.5286921628207149,
+        "cohesion": 0.6953448709669037,
+        "curiosity": 0.8259600056560903,
+        "empathy": 0.849001547731224,
+        "memory_bias": 0.7533259443415081,
+        "plasticity": 0.8355433605647463
+      },
+      "knowledge": 0.6743192003530398,
+      "region_id": "region-3",
+      "resources": 0.6223248739499312,
+      "stress": 0.3294342280874523,
+      "trust": 0.6817363370207163
+    },
+    "region-3-mind-3": {
+      "activation": 0.5848890822625837,
+      "entity_id": "region-3-mind-3",
+      "genome": {
+        "agency": 0.678741279677232,
+        "cohesion": 0.6457634854835415,
+        "curiosity": 0.7249763279956516,
+        "empathy": 0.5294001164101501,
+        "memory_bias": 0.5795532344779764,
+        "plasticity": 0.3021313187399617
+      },
+      "knowledge": 0.7278750974666162,
+      "region_id": "region-3",
+      "resources": 0.5024836157058437,
+      "stress": 0.6463272034485772,
+      "trust": 0.614103538282774
+    },
+    "region-3-mind-4": {
+      "activation": 0.6285854419181213,
+      "entity_id": "region-3-mind-4",
+      "genome": {
+        "agency": 0.5863396219961676,
+        "cohesion": 0.7949405189738697,
+        "curiosity": 0.7910228909290871,
+        "empathy": 0.6485717272360136,
+        "memory_bias": 0.6626576329462116,
+        "plasticity": 0.30445844446981796
+      },
+      "knowledge": 0.5607711587297868,
+      "region_id": "region-3",
+      "resources": 0.39964406842222244,
+      "stress": 0.11638440654150575,
+      "trust": 0.49047840767462053
+    },
+    "region-3-mind-5": {
+      "activation": 0.672143598151274,
+      "entity_id": "region-3-mind-5",
+      "genome": {
+        "agency": 0.699427120231729,
+        "cohesion": 0.8483017777360472,
+        "curiosity": 0.769000807909153,
+        "empathy": 0.5983503465948081,
+        "memory_bias": 0.10848040376576418,
+        "plasticity": 0.41628964306914806
+      },
+      "knowledge": 0.606882187478653,
+      "region_id": "region-3",
+      "resources": 0.360244649573798,
+      "stress": 0.26556795260884763,
+      "trust": 0.3512872067034044
+    },
+    "region-3-mind-6": {
+      "activation": 0.6749618070355367,
+      "entity_id": "region-3-mind-6",
+      "genome": {
+        "agency": 0.5872561125002962,
+        "cohesion": 0.8296224982065291,
+        "curiosity": 0.893432959955294,
+        "empathy": 0.6959940028055076,
+        "memory_bias": 0.5994242969002536,
+        "plasticity": 0.4625244022391152
+      },
+      "knowledge": 0.458537169413479,
+      "region_id": "region-3",
+      "resources": 0.8442437792583534,
+      "stress": 0.20917817837592378,
+      "trust": 0.6529941996731969
+    },
+    "region-3-mind-7": {
+      "activation": 0.6447577599286489,
+      "entity_id": "region-3-mind-7",
+      "genome": {
+        "agency": 0.6790196720400616,
+        "cohesion": 0.45571644892118984,
+        "curiosity": 0.8781613508501169,
+        "empathy": 0.5306512097399418,
+        "memory_bias": 0.4723502812017414,
+        "plasticity": 0.3385146121491438
+      },
+      "knowledge": 0.7092321829821429,
+      "region_id": "region-3",
+      "resources": 0.8675000986995847,
+      "stress": 0.5604025896087967,
+      "trust": 0.6056088807588034
+    },
+    "region-3-mind-8": {
+      "activation": 0.5302780169520345,
+      "entity_id": "region-3-mind-8",
+      "genome": {
+        "agency": 0.5929221433131291,
+        "cohesion": 0.42885583491419044,
+        "curiosity": 0.5160775981330467,
+        "empathy": 0.40147734632862825,
+        "memory_bias": 0.41048860055887004,
+        "plasticity": 0.389152245149631
+      },
+      "knowledge": 0.4963252201921372,
+      "region_id": "region-3",
+      "resources": 0.795426968091997,
+      "stress": 0.44415345703055276,
+      "trust": 0.40768582268162284
+    },
+    "region-4-mind-1": {
+      "activation": 0.617720917252736,
+      "entity_id": "region-4-mind-1",
+      "genome": {
+        "agency": 0.34854149102175813,
+        "cohesion": 0.2704657542018623,
+        "curiosity": 0.9392219034944906,
+        "empathy": 0.5714864029899815,
+        "memory_bias": 0.13111629939594144,
+        "plasticity": 0.8173388853289966
+      },
+      "knowledge": 0.5423491762021843,
+      "region_id": "region-4",
+      "resources": 0.7644837891059022,
+      "stress": 0.48974701095065987,
+      "trust": 0.40451517570497975
+    },
+    "region-4-mind-2": {
+      "activation": 0.5921538915567968,
+      "entity_id": "region-4-mind-2",
+      "genome": {
+        "agency": 0.595641068916373,
+        "cohesion": 0.26607223041347067,
+        "curiosity": 0.3614684088870236,
+        "empathy": 0.38152869524891253,
+        "memory_bias": 0.2780567566636257,
+        "plasticity": 0.7892844823983917
+      },
+      "knowledge": 0.2281655415177909,
+      "region_id": "region-4",
+      "resources": 0.5402124983881647,
+      "stress": 0.17748098923464137,
+      "trust": 0.5645901527825923
+    },
+    "region-4-mind-3": {
+      "activation": 0.7519763317545455,
+      "entity_id": "region-4-mind-3",
+      "genome": {
+        "agency": 0.8248001921150385,
+        "cohesion": 0.8729994237473566,
+        "curiosity": 0.7279785418602447,
+        "empathy": 0.6930258243080192,
+        "memory_bias": 0.24950606687276328,
+        "plasticity": 0.694920284887647
+      },
+      "knowledge": 0.3072116570810508,
+      "region_id": "region-4",
+      "resources": 0.5569296773348118,
+      "stress": 0.36132826612013,
+      "trust": 0.25538333414141445
+    },
+    "region-4-mind-4": {
+      "activation": 0.6123655260176898,
+      "entity_id": "region-4-mind-4",
+      "genome": {
+        "agency": 0.47703070868610964,
+        "cohesion": 0.474730696162566,
+        "curiosity": 0.7785025732346251,
+        "empathy": 0.4074592853775171,
+        "memory_bias": 0.49031720999860773,
+        "plasticity": 0.7032525220173017
+      },
+      "knowledge": 0.6537241138183729,
+      "region_id": "region-4",
+      "resources": 0.76475595462966,
+      "stress": 0.43794621749404683,
+      "trust": 0.44675810578749264
+    },
+    "region-4-mind-5": {
+      "activation": 0.7577619397301788,
+      "entity_id": "region-4-mind-5",
+      "genome": {
+        "agency": 0.9061924880759555,
+        "cohesion": 0.7195451647205795,
+        "curiosity": 0.8937421913024312,
+        "empathy": 0.3523257959357599,
+        "memory_bias": 0.4401521157298799,
+        "plasticity": 0.334441448694668
+      },
+      "knowledge": 0.7459792152347859,
+      "region_id": "region-4",
+      "resources": 0.6197291286605444,
+      "stress": 0.4440514965953619,
+      "trust": 0.4384013844654451
+    },
+    "region-4-mind-6": {
+      "activation": 0.811065321966093,
+      "entity_id": "region-4-mind-6",
+      "genome": {
+        "agency": 0.9137677045391008,
+        "cohesion": 0.551410026194183,
+        "curiosity": 0.8775924958407151,
+        "empathy": 0.7780603445445744,
+        "memory_bias": 0.25367077346312605,
+        "plasticity": 0.6733596677967681
+      },
+      "knowledge": 0.6910073226614579,
+      "region_id": "region-4",
+      "resources": 0.7164802709986615,
+      "stress": 0.4970646081595652,
+      "trust": 0.5708081533172371
+    },
+    "region-4-mind-7": {
+      "activation": 0.7221863259276844,
+      "entity_id": "region-4-mind-7",
+      "genome": {
+        "agency": 0.9373205483488554,
+        "cohesion": 0.8852830395207363,
+        "curiosity": 0.4779779474837715,
+        "empathy": 0.8399902420798953,
+        "memory_bias": 0.693090347567218,
+        "plasticity": 0.5990217904365552
+      },
+      "knowledge": 0.7459938319844077,
+      "region_id": "region-4",
+      "resources": 0.47652957795610656,
+      "stress": 0.27621709960725704,
+      "trust": 0.6778917313205006
+    },
+    "region-4-mind-8": {
+      "activation": 0.5447663262012524,
+      "entity_id": "region-4-mind-8",
+      "genome": {
+        "agency": 0.6576962528669914,
+        "cohesion": 0.7493517717638382,
+        "curiosity": 0.3996635498276421,
+        "empathy": 0.5645407155545984,
+        "memory_bias": 0.12130777138263649,
+        "plasticity": 0.566840869917294
+      },
+      "knowledge": 0.23843411696970893,
+      "region_id": "region-4",
+      "resources": 0.3623825996855592,
+      "stress": 0.545027087831139,
+      "trust": 0.649929933380724
+    }
+  },
+  "exchange": 0.5495840621216338,
+  "regions": {
+    "region-1": {
+      "coherence": 0.6647067746089964,
+      "entity_ids": [
+        "region-1-mind-1",
+        "region-1-mind-2",
+        "region-1-mind-3",
+        "region-1-mind-4",
+        "region-1-mind-5",
+        "region-1-mind-6",
+        "region-1-mind-7",
+        "region-1-mind-8"
+      ],
+      "knowledge": 0.5324682490380734,
+      "region_id": "region-1",
+      "resource_balance": 0.840912198561324,
+      "volatility": 0.34504686856020644
+    },
+    "region-2": {
+      "coherence": 0.6500787187457565,
+      "entity_ids": [
+        "region-2-mind-1",
+        "region-2-mind-2",
+        "region-2-mind-3",
+        "region-2-mind-4",
+        "region-2-mind-5",
+        "region-2-mind-6",
+        "region-2-mind-7",
+        "region-2-mind-8"
+      ],
+      "knowledge": 0.5250024093440566,
+      "region_id": "region-2",
+      "resource_balance": 0.8658255148321236,
+      "volatility": 0.17368230551990876
+    },
+    "region-3": {
+      "coherence": 0.7028893450262416,
+      "entity_ids": [
+        "region-3-mind-1",
+        "region-3-mind-2",
+        "region-3-mind-3",
+        "region-3-mind-4",
+        "region-3-mind-5",
+        "region-3-mind-6",
+        "region-3-mind-7",
+        "region-3-mind-8"
+      ],
+      "knowledge": 0.6217574681706853,
+      "region_id": "region-3",
+      "resource_balance": 0.8337659323868382,
+      "volatility": 0.24641777983409696
+    },
+    "region-4": {
+      "coherence": 0.6676553768720457,
+      "entity_ids": [
+        "region-4-mind-1",
+        "region-4-mind-2",
+        "region-4-mind-3",
+        "region-4-mind-4",
+        "region-4-mind-5",
+        "region-4-mind-6",
+        "region-4-mind-7",
+        "region-4-mind-8"
+      ],
+      "knowledge": 0.5191081219337199,
+      "region_id": "region-4",
+      "resource_balance": 0.8838256512462342,
+      "volatility": 0.27270691595924357
+    }
+  },
+  "tick_count": 0,
+  "volatility": 0.2594634674683639
+}

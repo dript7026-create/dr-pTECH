@@ -1,0 +1,30 @@
+{
+  "package_name": "dirkodds_client_review_2026-03-20",
+  "project": "DirkOdds",
+  "generated_on": "2026-03-20",
+  "top_level_files": [
+    "HANDOFF_NOTE.md",
+    "CLIENT_EXEC_SUMMARY.md",
+    "README.md",
+    "VALIDATION_SUMMARY.json",
+    "PACKAGE_MANIFEST.json",
+    "launch_dirkodds_gui.ps1"
+  ],
+  "artifact_files": [
+    "artifacts/dirkodds_client_bundle.joblib",
+    "artifacts/dirkodds_demo_prediction.json",
+    "artifacts/sample_data.csv"
+  ],
+  "repo_contents": [
+    "repo/football_predictor/",
+    "repo/tests/test_model.py",
+    "repo/requirements.txt",
+    "repo/THIRD_PARTY_CREDITS.md",
+    "repo/football_live_data_sources.json"
+  ],
+  "review_notes": [
+    "This package is for client review and technical handoff.",
+    "The included bundle is a fresh football demo model trained on the packaged sample dataset.",
+    "The launcher creates a package-local virtual environment if needed."
+  ]
+}

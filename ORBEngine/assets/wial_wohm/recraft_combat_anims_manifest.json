@@ -1,0 +1,335 @@
+[
+  {
+    "name": "wial_ember_combat_sheet_attack",
+    "prompt": "transparent background dark fantasy creature animation spritesheet, over-the-shoulder third-person view of an ember-type Wial creature in combat, showing key combat poses: light slash, heavy overhead strike, combat idle, wind-up telegraph. Glowing ember veins, molten cracks, dark organic silhouette. Painted fantasy style, high detail, no text",
+    "w": 1024,
+    "h": 1024,
+    "out": "combat_anims/wial_ember_attack.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "wial_ember_combat_sheet_defense",
+    "prompt": "transparent background dark fantasy creature animation spritesheet, over-the-shoulder third-person view of an ember-type Wial creature performing defensive maneuvers: block stance, parry riposte, dodge roll sideways, shield brace. Glowing ember veins, dark organic silhouette. Painted fantasy style, high detail, no text",
+    "w": 1024,
+    "h": 1024,
+    "out": "combat_anims/wial_ember_defense.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "wial_ember_combat_sheet_special",
+    "prompt": "transparent background dark fantasy creature animation spritesheet, over-the-shoulder third-person view of an ember-type Wial creature performing special attacks: fire breath channeling, magma eruption, ember nova burst, elemental charge. Molten glow effects, dark organic silhouette. Painted fantasy style, high detail, no text",
+    "w": 1024,
+    "h": 1024,
+    "out": "combat_anims/wial_ember_special.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "wial_marsh_combat_sheet_attack",
+    "prompt": "transparent background dark fantasy creature animation spritesheet, over-the-shoulder third-person view of a marsh-type Wial creature in combat, showing key poses: vine whip light attack, heavy tentacle slam, combat stance, wind-up telegraph. Mossy green bioluminescent, swamp organic silhouette. Painted fantasy style, high detail, no text",
+    "w": 1024,
+    "h": 1024,
+    "out": "combat_anims/wial_marsh_attack.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "wial_marsh_combat_sheet_defense",
+    "prompt": "transparent background dark fantasy creature animation spritesheet, over-the-shoulder third-person view of a marsh-type Wial creature performing defensive maneuvers: root barrier block, vine parry counter, slither dodge, regenerative brace. Swamp organic silhouette, bioluminescent accents. Painted fantasy style, high detail, no text",
+    "w": 1024,
+    "h": 1024,
+    "out": "combat_anims/wial_marsh_defense.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "wial_marsh_combat_sheet_special",
+    "prompt": "transparent background dark fantasy creature animation spritesheet, over-the-shoulder third-person view of a marsh-type Wial creature performing specials: poison spore cloud, entangling roots eruption, swamp miasma wave, fungal bloom burst. Bioluminescent green glow. Painted fantasy style, high detail, no text",
+    "w": 1024,
+    "h": 1024,
+    "out": "combat_anims/wial_marsh_special.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "wial_shade_combat_sheet_attack",
+    "prompt": "transparent background dark fantasy creature animation spritesheet, over-the-shoulder third-person view of a shade-type Wial creature in combat, showing key poses: shadow claw light attack, heavy phantom strike, combat crouch, menacing telegraph. Dark purple ethereal wisps, ghostly translucent silhouette. Painted fantasy style, high detail, no text",
+    "w": 1024,
+    "h": 1024,
+    "out": "combat_anims/wial_shade_attack.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "wial_shade_combat_sheet_defense",
+    "prompt": "transparent background dark fantasy creature animation spritesheet, over-the-shoulder third-person view of a shade-type Wial creature performing defensive maneuvers: shadow phase dodge, spectral parry, void shield block, mist fade evasion. Ghostly purple translucent silhouette. Painted fantasy style, high detail, no text",
+    "w": 1024,
+    "h": 1024,
+    "out": "combat_anims/wial_shade_defense.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "wial_shade_combat_sheet_special",
+    "prompt": "transparent background dark fantasy creature animation spritesheet, over-the-shoulder third-person view of a shade-type Wial creature performing specials: soul drain beam, nightmare pulse, shadow tendril eruption, void collapse implosion. Dark purple energy swirls. Painted fantasy style, high detail, no text",
+    "w": 1024,
+    "h": 1024,
+    "out": "combat_anims/wial_shade_special.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "wial_tide_combat_sheet_attack",
+    "prompt": "transparent background dark fantasy creature animation spritesheet, over-the-shoulder third-person view of a tide-type Wial creature in combat, showing key poses: water jet light attack, heavy tidal crash, combat ready stance, wave telegraph. Deep blue aquatic bioluminescent, fluid organic silhouette. Painted fantasy style, high detail, no text",
+    "w": 1024,
+    "h": 1024,
+    "out": "combat_anims/wial_tide_attack.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "wial_tide_combat_sheet_defense",
+    "prompt": "transparent background dark fantasy creature animation spritesheet, over-the-shoulder third-person view of a tide-type Wial creature performing defensive maneuvers: water wall block, current deflect parry, whirlpool dodge spin, pressure brace. Deep blue aquatic silhouette, water spray effects. Painted fantasy style, high detail, no text",
+    "w": 1024,
+    "h": 1024,
+    "out": "combat_anims/wial_tide_defense.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "wial_tide_combat_sheet_special",
+    "prompt": "transparent background dark fantasy creature animation spritesheet, over-the-shoulder third-person view of a tide-type Wial creature performing specials: tsunami wave blast, ice crystal barrage, whirlpool vortex trap, depth pressure crush. Deep blue energy effects and water particles. Painted fantasy style, high detail, no text",
+    "w": 1024,
+    "h": 1024,
+    "out": "combat_anims/wial_tide_special.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "enemy_brute_combat_sheet",
+    "prompt": "transparent background dark fantasy enemy creature animation spritesheet, over-the-shoulder combat view of a massive brute-type Wohm enemy performing: heavy overhead smash, charge tackle, ground pound stagger, roar telegraph, light swipe, defensive hunch. Bulky muscular dark organic silhouette, glowing red eyes. Painted fantasy style, high detail, no text",
+    "w": 1024,
+    "h": 1024,
+    "out": "combat_anims/enemy_brute_combat.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "enemy_nimble_combat_sheet",
+    "prompt": "transparent background dark fantasy enemy creature animation spritesheet, over-the-shoulder combat view of a lithe nimble-type Wohm enemy performing: quick stab, backflip evasion, feint dash, spinning dodge, lunging precision strike, defensive weave. Thin agile dark silhouette, glowing green highlights. Painted fantasy style, high detail, no text",
+    "w": 1024,
+    "h": 1024,
+    "out": "combat_anims/enemy_nimble_combat.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "enemy_tank_combat_sheet",
+    "prompt": "transparent background dark fantasy enemy creature animation spritesheet, over-the-shoulder combat view of an armored tank-type Wohm enemy performing: shield bash, fortress stance block, heavy counter-strike, taunt telegraph, slow crushing grip, iron wall parry. Heavily plated dark organic silhouette, stone-like growths. Painted fantasy style, high detail, no text",
+    "w": 1024,
+    "h": 1024,
+    "out": "combat_anims/enemy_tank_combat.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "enemy_mystic_combat_sheet",
+    "prompt": "transparent background dark fantasy enemy creature animation spritesheet, over-the-shoulder combat view of a mystical sorcerer-type Wohm enemy performing: arcane bolt cast, ritual channeling, teleport blink dodge, dark barrier shield, eldritch beam special, sigil ward. Ethereal robed silhouette with floating runes, glowing purple arcane energy. Painted fantasy style, high detail, no text",
+    "w": 1024,
+    "h": 1024,
+    "out": "combat_anims/enemy_mystic_combat.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "enemy_chaos_combat_sheet",
+    "prompt": "transparent background dark fantasy enemy creature animation spritesheet, over-the-shoulder combat view of a chaotic mutation-type Wohm enemy performing: unpredictable wild swing, flailing multi-limb attack, erratic dodge jitter, screaming telegraph, reality-warping special, unstable defense morph. Asymmetric twisted silhouette, multicolored chaotic energy sparks. Painted fantasy style, high detail, no text",
+    "w": 1024,
+    "h": 1024,
+    "out": "combat_anims/enemy_chaos_combat.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "combat_ots_scene_cave",
+    "prompt": "dark fantasy over-the-shoulder combat scene background, gloom cavern environment, player creature silhouette in foreground facing an enemy creature, dramatic lighting from crystals and bioluminescence, combat arena framing, painted fantasy game style, atmospheric depth, no text",
+    "w": 1024,
+    "h": 1024,
+    "out": "combat_anims/ots_scene_cave.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "combat_ots_scene_temple",
+    "prompt": "dark fantasy over-the-shoulder combat scene background, sunken underwater temple environment, player creature silhouette in foreground facing an enemy, dramatic god-ray lighting from above, ancient pillars and coral, painted fantasy game style, atmospheric depth, no text",
+    "w": 1024,
+    "h": 1024,
+    "out": "combat_anims/ots_scene_temple.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "combat_ots_scene_mausoleum",
+    "prompt": "dark fantasy over-the-shoulder combat scene background, ancient mausoleum crypt environment, player creature silhouette in foreground facing an undead enemy, eerie green torchlight, crumbling tombstones, painted fantasy game style, atmospheric fog, no text",
+    "w": 1024,
+    "h": 1024,
+    "out": "combat_anims/ots_scene_mausoleum.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "combat_ots_scene_sewer",
+    "prompt": "dark fantasy over-the-shoulder combat scene background, dank sewer tunnels environment, player creature silhouette in foreground facing a sewer creature enemy, harsh fluorescent flicker and dripping water, rusty pipes, painted fantasy game style, atmospheric grime, no text",
+    "w": 1024,
+    "h": 1024,
+    "out": "combat_anims/ots_scene_sewer.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "combat_ots_scene_frost",
+    "prompt": "dark fantasy over-the-shoulder combat scene background, frost cavern ice environment, player creature silhouette in foreground facing a frozen enemy, blue-white ice crystal reflections, frozen stalactites, painted fantasy game style, atmospheric cold breath, no text",
+    "w": 1024,
+    "h": 1024,
+    "out": "combat_anims/ots_scene_frost.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "combat_ots_scene_cyber",
+    "prompt": "dark fantasy over-the-shoulder combat scene background, cyber tunnels neon-lit environment, player creature silhouette in foreground facing a techno-organic enemy, holographic grid lines and neon glow, wire bundles, painted fantasy game style, atmospheric digital distortion, no text",
+    "w": 1024,
+    "h": 1024,
+    "out": "combat_anims/ots_scene_cyber.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "combat_fx_hit_location_head",
+    "prompt": "transparent background fantasy combat visual effect, critical headshot hit location indicator, glowing impact burst on upper body target area, red-gold energy splash, damage number aesthetic, painted fantasy game style, dramatic, no text",
+    "w": 1024,
+    "h": 1024,
+    "out": "combat_anims/fx_hit_head.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "combat_fx_hit_location_torso",
+    "prompt": "transparent background fantasy combat visual effect, solid torso hit location indicator, glowing impact on center mass, orange energy ripple, medium damage aesthetic, painted fantasy game style, no text",
+    "w": 1024,
+    "h": 1024,
+    "out": "combat_anims/fx_hit_torso.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "combat_fx_hit_location_limb",
+    "prompt": "transparent background fantasy combat visual effect, glancing limb hit location indicator, small impact spark on extremity, yellow energy scatter, light damage aesthetic, painted fantasy game style, no text",
+    "w": 1024,
+    "h": 1024,
+    "out": "combat_anims/fx_hit_limb.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "combat_fx_parry_counter",
+    "prompt": "transparent background fantasy combat visual effect, parry counter-attack flash, metallic clash spark burst, blue-white energy shockwave ring, defensive riposte aesthetic, painted fantasy game style, dramatic, no text",
+    "w": 1024,
+    "h": 1024,
+    "out": "combat_anims/fx_parry_counter.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "combat_fx_dodge_afterimage",
+    "prompt": "transparent background fantasy combat visual effect, dodge evasion afterimage trail, ghostly translucent motion blur streaks, cyan-white speed lines, evasive maneuver aesthetic, painted fantasy game style, no text",
+    "w": 1024,
+    "h": 1024,
+    "out": "combat_anims/fx_dodge_trail.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "combat_fx_special_charge",
+    "prompt": "transparent background fantasy combat visual effect, special attack charging energy buildup, swirling multicolored energy vortex around creature center, growing power aura, channeling aesthetic with arcane runes, painted fantasy game style, no text",
+    "w": 1024,
+    "h": 1024,
+    "out": "combat_anims/fx_special_charge.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "combat_fx_heavy_impact",
+    "prompt": "transparent background fantasy combat visual effect, heavy attack devastating impact, ground-cracking shockwave, red-orange explosive force burst, screen-shake aesthetic with debris particles, painted fantasy game style, no text",
+    "w": 1024,
+    "h": 1024,
+    "out": "combat_anims/fx_heavy_impact.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "combat_fx_defend_shield",
+    "prompt": "transparent background fantasy combat visual effect, defensive shield barrier activation, translucent golden hexagonal energy shield dome, blocking stance energy aura, protective ward aesthetic, painted fantasy game style, no text",
+    "w": 1024,
+    "h": 1024,
+    "out": "combat_anims/fx_defend_shield.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "combat_telegraph_warning_brute",
+    "prompt": "transparent background dark fantasy UI indicator, telegraph warning visual for brute-type enemy attack incoming, pulsing red danger exclamation with cracking ground preview, heavy strike warning aesthetic, painted fantasy game style, no text",
+    "w": 1024,
+    "h": 1024,
+    "out": "combat_anims/telegraph_brute.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "combat_telegraph_warning_nimble",
+    "prompt": "transparent background dark fantasy UI indicator, telegraph warning visual for nimble-type enemy attack incoming, flickering green speed lines with feint trail preview, quick strike warning aesthetic, painted fantasy game style, no text",
+    "w": 1024,
+    "h": 1024,
+    "out": "combat_anims/telegraph_nimble.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "combat_telegraph_warning_mystic",
+    "prompt": "transparent background dark fantasy UI indicator, telegraph warning visual for mystic-type enemy spell incoming, swirling purple arcane sigils with magic circle preview, spell casting warning aesthetic, painted fantasy game style, no text",
+    "w": 1024,
+    "h": 1024,
+    "out": "combat_anims/telegraph_mystic.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "combat_telegraph_warning_chaos",
+    "prompt": "transparent background dark fantasy UI indicator, telegraph warning visual for chaos-type enemy unpredictable attack, glitching multicolored distortion with reality-bending preview, erratic warning aesthetic, painted fantasy game style, no text",
+    "w": 1024,
+    "h": 1024,
+    "out": "combat_anims/telegraph_chaos.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "combat_telegraph_warning_tank",
+    "prompt": "transparent background dark fantasy UI indicator, telegraph warning visual for tank-type enemy attack incoming, slow heavy golden glow with armored charge preview, fortress assault warning aesthetic, painted fantasy game style, no text",
+    "w": 1024,
+    "h": 1024,
+    "out": "combat_anims/telegraph_tank.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "combat_slowmo_time_dilation_overlay",
+    "prompt": "transparent background dark fantasy visual effect overlay, time dilation slowdown combat effect, radial blur streaks from center, desaturated edges with golden time-freeze shimmer, clock-like arcane circles fading outward, bullet-time aesthetic, painted fantasy game style, no text",
+    "w": 1024,
+    "h": 1024,
+    "out": "combat_anims/fx_time_dilation.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  }
+]

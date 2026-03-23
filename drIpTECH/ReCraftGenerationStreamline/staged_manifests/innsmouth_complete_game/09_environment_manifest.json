@@ -1,0 +1,434 @@
+[
+    {
+        "name":  "innsmouth_shoreline_gate_single_v3",
+        "category":  "environment_single",
+        "prompt_revision":  "transparent_orb32_v1",
+        "protocol_profile":  "innsmouth_island_dimensional_protocol_v1",
+        "pass_kind":  "complete_game",
+        "guide_ref":  "innsmouth_island_complete_game_prompt_guide_v1",
+        "placement_key":  "shoreline_gate",
+        "prompt":  "ORBSystems 32-dimensional coherency environment single request for InnsmouthIsland placement shoreline_gate; transparent background only, isolated alpha render, no opaque backdrop, full depth-precision mapping, foot body cap layering, adjacency anchors, occlusion silhouette, expressionistic angular silhouette; storm-battered arrival gate landmark as a single premium compositing asset, no text",
+        "negative_prompt":  "opaque background, solid background, painted matte, scenic frame, text, watermark, logo",
+        "controls":  {
+                         "transparent_background":  true
+                     },
+        "transparent_background":  true,
+        "w":  1024,
+        "h":  1024,
+        "out":  "../../../ORBEngine/assets/innsmouth_island/complete_game/environment/shoreline_gate_single_v3.png"
+    },
+    {
+        "name":  "innsmouth_dock_shrine_single_v3",
+        "category":  "environment_single",
+        "prompt_revision":  "transparent_orb32_v1",
+        "protocol_profile":  "innsmouth_island_dimensional_protocol_v1",
+        "pass_kind":  "complete_game",
+        "guide_ref":  "innsmouth_island_complete_game_prompt_guide_v1",
+        "placement_key":  "dock_shrine",
+        "prompt":  "ORBSystems 32-dimensional coherency environment single request for InnsmouthIsland placement dock_shrine; transparent background only, isolated alpha render, no opaque backdrop, full depth-precision mapping, foot body cap layering, adjacency anchors, occlusion silhouette, expressionistic angular silhouette; dockside shrine node with pearl network ritual detail as one premium compositing asset, no text",
+        "negative_prompt":  "opaque background, solid background, painted matte, scenic frame, text, watermark, logo",
+        "controls":  {
+                         "transparent_background":  true
+                     },
+        "transparent_background":  true,
+        "w":  1024,
+        "h":  1024,
+        "out":  "../../../ORBEngine/assets/innsmouth_island/complete_game/environment/dock_shrine_single_v3.png"
+    },
+    {
+        "name":  "innsmouth_brine_pillar_west_single_v3",
+        "category":  "environment_single",
+        "prompt_revision":  "transparent_orb32_v1",
+        "protocol_profile":  "innsmouth_island_dimensional_protocol_v1",
+        "pass_kind":  "complete_game",
+        "guide_ref":  "innsmouth_island_complete_game_prompt_guide_v1",
+        "placement_key":  "brine_pillar_west",
+        "prompt":  "ORBSystems 32-dimensional coherency environment single request for InnsmouthIsland placement brine_pillar_west; transparent background only, isolated alpha render, no opaque backdrop, full depth-precision mapping, angular silhouette; brine pillar with ritual erosion and salt-carved top plane as a single compositing asset, no text",
+        "negative_prompt":  "opaque background, solid background, painted matte, scenic frame, text, watermark, logo",
+        "controls":  {
+                         "transparent_background":  true
+                     },
+        "transparent_background":  true,
+        "w":  1024,
+        "h":  1024,
+        "out":  "../../../ORBEngine/assets/innsmouth_island/complete_game/environment/brine_pillar_west_single_v3.png"
+    },
+    {
+        "name":  "innsmouth_salt_jetty_arch_single_v3",
+        "category":  "environment_single",
+        "prompt_revision":  "transparent_orb32_v1",
+        "protocol_profile":  "innsmouth_island_dimensional_protocol_v1",
+        "pass_kind":  "complete_game",
+        "guide_ref":  "innsmouth_island_complete_game_prompt_guide_v1",
+        "placement_key":  "salt_jetty_arch",
+        "prompt":  "ORBSystems 32-dimensional coherency environment single request for InnsmouthIsland placement salt_jetty_arch; transparent background only, isolated alpha render, no opaque backdrop, full depth-precision mapping, angular silhouette; salt-caked jetty arch with occlusion-ready ribs and hard geometry as one compositing asset, no text",
+        "negative_prompt":  "opaque background, solid background, painted matte, scenic frame, text, watermark, logo",
+        "controls":  {
+                         "transparent_background":  true
+                     },
+        "transparent_background":  true,
+        "w":  1024,
+        "h":  1024,
+        "out":  "../../../ORBEngine/assets/innsmouth_island/complete_game/environment/salt_jetty_arch_single_v3.png"
+    },
+    {
+        "name":  "innsmouth_kelp_shed_outer_single_v3",
+        "category":  "environment_single",
+        "prompt_revision":  "transparent_orb32_v1",
+        "protocol_profile":  "innsmouth_island_dimensional_protocol_v1",
+        "pass_kind":  "complete_game",
+        "guide_ref":  "innsmouth_island_complete_game_prompt_guide_v1",
+        "placement_key":  "kelp_shed_outer",
+        "prompt":  "ORBSystems 32-dimensional coherency environment single request for InnsmouthIsland placement kelp_shed_outer; transparent background only, isolated alpha render, no opaque backdrop, full depth-precision mapping, angular silhouette; kelp-draped shack exterior with wet timber struts and readable top cap projection as a single asset, no text",
+        "negative_prompt":  "opaque background, solid background, painted matte, scenic frame, text, watermark, logo",
+        "controls":  {
+                         "transparent_background":  true
+                     },
+        "transparent_background":  true,
+        "w":  1024,
+        "h":  1024,
+        "out":  "../../../ORBEngine/assets/innsmouth_island/complete_game/environment/kelp_shed_outer_single_v3.png"
+    },
+    {
+        "name":  "innsmouth_mud_altar_approach_single_v3",
+        "category":  "environment_single",
+        "prompt_revision":  "transparent_orb32_v1",
+        "protocol_profile":  "innsmouth_island_dimensional_protocol_v1",
+        "pass_kind":  "complete_game",
+        "guide_ref":  "innsmouth_island_complete_game_prompt_guide_v1",
+        "placement_key":  "mud_altar_approach",
+        "prompt":  "ORBSystems 32-dimensional coherency environment single request for InnsmouthIsland placement mud_altar_approach; transparent background only, isolated alpha render, no opaque backdrop, full depth-precision mapping, angular silhouette; altar approach marker with mud-sunk ritual stones and traversal-readable break-up as a single asset, no text",
+        "negative_prompt":  "opaque background, solid background, painted matte, scenic frame, text, watermark, logo",
+        "controls":  {
+                         "transparent_background":  true
+                     },
+        "transparent_background":  true,
+        "w":  1024,
+        "h":  1024,
+        "out":  "../../../ORBEngine/assets/innsmouth_island/complete_game/environment/mud_altar_approach_single_v3.png"
+    },
+    {
+        "name":  "innsmouth_flooded_watchpost_single_v3",
+        "category":  "environment_single",
+        "prompt_revision":  "transparent_orb32_v1",
+        "protocol_profile":  "innsmouth_island_dimensional_protocol_v1",
+        "pass_kind":  "complete_game",
+        "guide_ref":  "innsmouth_island_complete_game_prompt_guide_v1",
+        "placement_key":  "flooded_watchpost",
+        "prompt":  "ORBSystems 32-dimensional coherency environment single request for InnsmouthIsland placement flooded_watchpost; transparent background only, isolated alpha render, no opaque backdrop, full depth-precision mapping, angular silhouette; flooded watchpost tower fragment with readable foot body cap separation as a single asset, no text",
+        "negative_prompt":  "opaque background, solid background, painted matte, scenic frame, text, watermark, logo",
+        "controls":  {
+                         "transparent_background":  true
+                     },
+        "transparent_background":  true,
+        "w":  1024,
+        "h":  1024,
+        "out":  "../../../ORBEngine/assets/innsmouth_island/complete_game/environment/flooded_watchpost_single_v3.png"
+    },
+    {
+        "name":  "innsmouth_coral_bridge_low_single_v3",
+        "category":  "environment_single",
+        "prompt_revision":  "transparent_orb32_v1",
+        "protocol_profile":  "innsmouth_island_dimensional_protocol_v1",
+        "pass_kind":  "complete_game",
+        "guide_ref":  "innsmouth_island_complete_game_prompt_guide_v1",
+        "placement_key":  "coral_bridge_low",
+        "prompt":  "ORBSystems 32-dimensional coherency environment single request for InnsmouthIsland placement coral_bridge_low; transparent background only, isolated alpha render, no opaque backdrop, full depth-precision mapping, angular silhouette; low coral bridge section with traversable top plane and hard side faces as a single asset, no text",
+        "negative_prompt":  "opaque background, solid background, painted matte, scenic frame, text, watermark, logo",
+        "controls":  {
+                         "transparent_background":  true
+                     },
+        "transparent_background":  true,
+        "w":  1024,
+        "h":  1024,
+        "out":  "../../../ORBEngine/assets/innsmouth_island/complete_game/environment/coral_bridge_low_single_v3.png"
+    },
+    {
+        "name":  "innsmouth_grave_mire_marker_single_v3",
+        "category":  "environment_single",
+        "prompt_revision":  "transparent_orb32_v1",
+        "protocol_profile":  "innsmouth_island_dimensional_protocol_v1",
+        "pass_kind":  "complete_game",
+        "guide_ref":  "innsmouth_island_complete_game_prompt_guide_v1",
+        "placement_key":  "grave_mire_marker",
+        "prompt":  "ORBSystems 32-dimensional coherency environment single request for InnsmouthIsland placement grave_mire_marker; transparent background only, isolated alpha render, no opaque backdrop, full depth-precision mapping, angular silhouette; mire grave marker with ritual leaning stone, root snare, and sharp occlusion read as a single asset, no text",
+        "negative_prompt":  "opaque background, solid background, painted matte, scenic frame, text, watermark, logo",
+        "controls":  {
+                         "transparent_background":  true
+                     },
+        "transparent_background":  true,
+        "w":  1024,
+        "h":  1024,
+        "out":  "../../../ORBEngine/assets/innsmouth_island/complete_game/environment/grave_mire_marker_single_v3.png"
+    },
+    {
+        "name":  "innsmouth_tidal_courtyard_edge_single_v3",
+        "category":  "environment_single",
+        "prompt_revision":  "transparent_orb32_v1",
+        "protocol_profile":  "innsmouth_island_dimensional_protocol_v1",
+        "pass_kind":  "complete_game",
+        "guide_ref":  "innsmouth_island_complete_game_prompt_guide_v1",
+        "placement_key":  "tidal_courtyard_edge",
+        "prompt":  "ORBSystems 32-dimensional coherency environment single request for InnsmouthIsland placement tidal_courtyard_edge; transparent background only, isolated alpha render, no opaque backdrop, full depth-precision mapping, angular silhouette; tidal courtyard edge ruin with basalt lip and ritual drainage detail as a single asset, no text",
+        "negative_prompt":  "opaque background, solid background, painted matte, scenic frame, text, watermark, logo",
+        "controls":  {
+                         "transparent_background":  true
+                     },
+        "transparent_background":  true,
+        "w":  1024,
+        "h":  1024,
+        "out":  "../../../ORBEngine/assets/innsmouth_island/complete_game/environment/tidal_courtyard_edge_single_v3.png"
+    },
+    {
+        "name":  "innsmouth_eel_hatchery_bank_single_v3",
+        "category":  "environment_single",
+        "prompt_revision":  "transparent_orb32_v1",
+        "protocol_profile":  "innsmouth_island_dimensional_protocol_v1",
+        "pass_kind":  "complete_game",
+        "guide_ref":  "innsmouth_island_complete_game_prompt_guide_v1",
+        "placement_key":  "eel_hatchery_bank",
+        "prompt":  "ORBSystems 32-dimensional coherency environment single request for InnsmouthIsland placement eel_hatchery_bank; transparent background only, isolated alpha render, no opaque backdrop, full depth-precision mapping, angular silhouette; eel hatchery bank structure with baskets troughs and wet support poles as a single asset, no text",
+        "negative_prompt":  "opaque background, solid background, painted matte, scenic frame, text, watermark, logo",
+        "controls":  {
+                         "transparent_background":  true
+                     },
+        "transparent_background":  true,
+        "w":  1024,
+        "h":  1024,
+        "out":  "../../../ORBEngine/assets/innsmouth_island/complete_game/environment/eel_hatchery_bank_single_v3.png"
+    },
+    {
+        "name":  "innsmouth_basalt_stair_entry_single_v3",
+        "category":  "environment_single",
+        "prompt_revision":  "transparent_orb32_v1",
+        "protocol_profile":  "innsmouth_island_dimensional_protocol_v1",
+        "pass_kind":  "complete_game",
+        "guide_ref":  "innsmouth_island_complete_game_prompt_guide_v1",
+        "placement_key":  "basalt_stair_entry",
+        "prompt":  "ORBSystems 32-dimensional coherency environment single request for InnsmouthIsland placement basalt_stair_entry; transparent background only, isolated alpha render, no opaque backdrop, full depth-precision mapping, angular silhouette; basalt stair entry with severe stepped top planes and shrine-worn edges as a single asset, no text",
+        "negative_prompt":  "opaque background, solid background, painted matte, scenic frame, text, watermark, logo",
+        "controls":  {
+                         "transparent_background":  true
+                     },
+        "transparent_background":  true,
+        "w":  1024,
+        "h":  1024,
+        "out":  "../../../ORBEngine/assets/innsmouth_island/complete_game/environment/basalt_stair_entry_single_v3.png"
+    },
+    {
+        "name":  "innsmouth_obsidian_pool_north_single_v3",
+        "category":  "environment_single",
+        "prompt_revision":  "transparent_orb32_v1",
+        "protocol_profile":  "innsmouth_island_dimensional_protocol_v1",
+        "pass_kind":  "complete_game",
+        "guide_ref":  "innsmouth_island_complete_game_prompt_guide_v1",
+        "placement_key":  "obsidian_pool_north",
+        "prompt":  "ORBSystems 32-dimensional coherency environment single request for InnsmouthIsland placement obsidian_pool_north; transparent background only, isolated alpha render, no opaque backdrop, full depth-precision mapping, angular silhouette; obsidian pool rim with ritual spillway and hard reflective geometry as a single asset, no text",
+        "negative_prompt":  "opaque background, solid background, painted matte, scenic frame, text, watermark, logo",
+        "controls":  {
+                         "transparent_background":  true
+                     },
+        "transparent_background":  true,
+        "w":  1024,
+        "h":  1024,
+        "out":  "../../../ORBEngine/assets/innsmouth_island/complete_game/environment/obsidian_pool_north_single_v3.png"
+    },
+    {
+        "name":  "innsmouth_sunken_causeway_mid_single_v3",
+        "category":  "environment_single",
+        "prompt_revision":  "transparent_orb32_v1",
+        "protocol_profile":  "innsmouth_island_dimensional_protocol_v1",
+        "pass_kind":  "complete_game",
+        "guide_ref":  "innsmouth_island_complete_game_prompt_guide_v1",
+        "placement_key":  "sunken_causeway_mid",
+        "prompt":  "ORBSystems 32-dimensional coherency environment single request for InnsmouthIsland placement sunken_causeway_mid; transparent background only, isolated alpha render, no opaque backdrop, full depth-precision mapping, angular silhouette; sunken causeway middle segment with breakable planar rhythm and traversal-readable water cuts as a single asset, no text",
+        "negative_prompt":  "opaque background, solid background, painted matte, scenic frame, text, watermark, logo",
+        "controls":  {
+                         "transparent_background":  true
+                     },
+        "transparent_background":  true,
+        "w":  1024,
+        "h":  1024,
+        "out":  "../../../ORBEngine/assets/innsmouth_island/complete_game/environment/sunken_causeway_mid_single_v3.png"
+    },
+    {
+        "name":  "innsmouth_bone_canopy_west_single_v3",
+        "category":  "environment_single",
+        "prompt_revision":  "transparent_orb32_v1",
+        "protocol_profile":  "innsmouth_island_dimensional_protocol_v1",
+        "pass_kind":  "complete_game",
+        "guide_ref":  "innsmouth_island_complete_game_prompt_guide_v1",
+        "placement_key":  "bone_canopy_west",
+        "prompt":  "ORBSystems 32-dimensional coherency environment single request for InnsmouthIsland placement bone_canopy_west; transparent background only, isolated alpha render, no opaque backdrop, full depth-precision mapping, angular silhouette; bone canopy cluster with hanging ribs and harsh shadow wedges as a single asset, no text",
+        "negative_prompt":  "opaque background, solid background, painted matte, scenic frame, text, watermark, logo",
+        "controls":  {
+                         "transparent_background":  true
+                     },
+        "transparent_background":  true,
+        "w":  1024,
+        "h":  1024,
+        "out":  "../../../ORBEngine/assets/innsmouth_island/complete_game/environment/bone_canopy_west_single_v3.png"
+    },
+    {
+        "name":  "innsmouth_reef_gate_inner_single_v3",
+        "category":  "environment_single",
+        "prompt_revision":  "transparent_orb32_v1",
+        "protocol_profile":  "innsmouth_island_dimensional_protocol_v1",
+        "pass_kind":  "complete_game",
+        "guide_ref":  "innsmouth_island_complete_game_prompt_guide_v1",
+        "placement_key":  "reef_gate_inner",
+        "prompt":  "ORBSystems 32-dimensional coherency environment single request for InnsmouthIsland placement reef_gate_inner; transparent background only, isolated alpha render, no opaque backdrop, full depth-precision mapping, angular silhouette; inner reef gate with coral-to-basalt geometry and severe occlusion read as a single asset, no text",
+        "negative_prompt":  "opaque background, solid background, painted matte, scenic frame, text, watermark, logo",
+        "controls":  {
+                         "transparent_background":  true
+                     },
+        "transparent_background":  true,
+        "w":  1024,
+        "h":  1024,
+        "out":  "../../../ORBEngine/assets/innsmouth_island/complete_game/environment/reef_gate_inner_single_v3.png"
+    },
+    {
+        "name":  "innsmouth_temple_runoff_low_single_v3",
+        "category":  "environment_single",
+        "prompt_revision":  "transparent_orb32_v1",
+        "protocol_profile":  "innsmouth_island_dimensional_protocol_v1",
+        "pass_kind":  "complete_game",
+        "guide_ref":  "innsmouth_island_complete_game_prompt_guide_v1",
+        "placement_key":  "temple_runoff_low",
+        "prompt":  "ORBSystems 32-dimensional coherency environment single request for InnsmouthIsland placement temple_runoff_low; transparent background only, isolated alpha render, no opaque backdrop, full depth-precision mapping, angular silhouette; low temple runoff structure with carved spill channel and slick stone planes as a single asset, no text",
+        "negative_prompt":  "opaque background, solid background, painted matte, scenic frame, text, watermark, logo",
+        "controls":  {
+                         "transparent_background":  true
+                     },
+        "transparent_background":  true,
+        "w":  1024,
+        "h":  1024,
+        "out":  "../../../ORBEngine/assets/innsmouth_island/complete_game/environment/temple_runoff_low_single_v3.png"
+    },
+    {
+        "name":  "innsmouth_mangrove_spine_mid_single_v3",
+        "category":  "environment_single",
+        "prompt_revision":  "transparent_orb32_v1",
+        "protocol_profile":  "innsmouth_island_dimensional_protocol_v1",
+        "pass_kind":  "complete_game",
+        "guide_ref":  "innsmouth_island_complete_game_prompt_guide_v1",
+        "placement_key":  "mangrove_spine_mid",
+        "prompt":  "ORBSystems 32-dimensional coherency environment single request for InnsmouthIsland placement mangrove_spine_mid; transparent background only, isolated alpha render, no opaque backdrop, full depth-precision mapping, angular silhouette; mangrove spine cluster with hard branching rhythm and strong top cap breaks as a single asset, no text",
+        "negative_prompt":  "opaque background, solid background, painted matte, scenic frame, text, watermark, logo",
+        "controls":  {
+                         "transparent_background":  true
+                     },
+        "transparent_background":  true,
+        "w":  1024,
+        "h":  1024,
+        "out":  "../../../ORBEngine/assets/innsmouth_island/complete_game/environment/mangrove_spine_mid_single_v3.png"
+    },
+    {
+        "name":  "innsmouth_shrine_basin_outer_single_v3",
+        "category":  "environment_single",
+        "prompt_revision":  "transparent_orb32_v1",
+        "protocol_profile":  "innsmouth_island_dimensional_protocol_v1",
+        "pass_kind":  "complete_game",
+        "guide_ref":  "innsmouth_island_complete_game_prompt_guide_v1",
+        "placement_key":  "shrine_basin_outer",
+        "prompt":  "ORBSystems 32-dimensional coherency environment single request for InnsmouthIsland placement shrine_basin_outer; transparent background only, isolated alpha render, no opaque backdrop, full depth-precision mapping, angular silhouette; shrine basin outer rim with pearl-lit runnels and ritual bowls as a single asset, no text",
+        "negative_prompt":  "opaque background, solid background, painted matte, scenic frame, text, watermark, logo",
+        "controls":  {
+                         "transparent_background":  true
+                     },
+        "transparent_background":  true,
+        "w":  1024,
+        "h":  1024,
+        "out":  "../../../ORBEngine/assets/innsmouth_island/complete_game/environment/shrine_basin_outer_single_v3.png"
+    },
+    {
+        "name":  "innsmouth_black_reef_ascent_single_v3",
+        "category":  "environment_single",
+        "prompt_revision":  "transparent_orb32_v1",
+        "protocol_profile":  "innsmouth_island_dimensional_protocol_v1",
+        "pass_kind":  "complete_game",
+        "guide_ref":  "innsmouth_island_complete_game_prompt_guide_v1",
+        "placement_key":  "black_reef_ascent",
+        "prompt":  "ORBSystems 32-dimensional coherency environment single request for InnsmouthIsland placement black_reef_ascent; transparent background only, isolated alpha render, no opaque backdrop, full depth-precision mapping, angular silhouette; black reef ascent landmark with razor geology and brutal climb-readable top planes as a single asset, no text",
+        "negative_prompt":  "opaque background, solid background, painted matte, scenic frame, text, watermark, logo",
+        "controls":  {
+                         "transparent_background":  true
+                     },
+        "transparent_background":  true,
+        "w":  1024,
+        "h":  1024,
+        "out":  "../../../ORBEngine/assets/innsmouth_island/complete_game/environment/black_reef_ascent_single_v3.png"
+    },
+    {
+        "name":  "innsmouth_jaguar_temple_threshold_single_v3",
+        "category":  "environment_single",
+        "prompt_revision":  "transparent_orb32_v1",
+        "protocol_profile":  "innsmouth_island_dimensional_protocol_v1",
+        "pass_kind":  "complete_game",
+        "guide_ref":  "innsmouth_island_complete_game_prompt_guide_v1",
+        "placement_key":  "jaguar_temple_threshold",
+        "prompt":  "ORBSystems 32-dimensional coherency environment single request for InnsmouthIsland placement jaguar_temple_threshold; transparent background only, isolated alpha render, no opaque backdrop, full depth-precision mapping, angular silhouette; jaguar temple threshold with fang-arch geometry and eclipse ritual carvings as a single asset, no text",
+        "negative_prompt":  "opaque background, solid background, painted matte, scenic frame, text, watermark, logo",
+        "controls":  {
+                         "transparent_background":  true
+                     },
+        "transparent_background":  true,
+        "w":  1024,
+        "h":  1024,
+        "out":  "../../../ORBEngine/assets/innsmouth_island/complete_game/environment/jaguar_temple_threshold_single_v3.png"
+    },
+    {
+        "name":  "innsmouth_reptile_dais_west_single_v3",
+        "category":  "environment_single",
+        "prompt_revision":  "transparent_orb32_v1",
+        "protocol_profile":  "innsmouth_island_dimensional_protocol_v1",
+        "pass_kind":  "complete_game",
+        "guide_ref":  "innsmouth_island_complete_game_prompt_guide_v1",
+        "placement_key":  "reptile_dais_west",
+        "prompt":  "ORBSystems 32-dimensional coherency environment single request for InnsmouthIsland placement reptile_dais_west; transparent background only, isolated alpha render, no opaque backdrop, full depth-precision mapping, angular silhouette; reptile dais western throne element with spear-rest geometry and severe cap projection as a single asset, no text",
+        "negative_prompt":  "opaque background, solid background, painted matte, scenic frame, text, watermark, logo",
+        "controls":  {
+                         "transparent_background":  true
+                     },
+        "transparent_background":  true,
+        "w":  1024,
+        "h":  1024,
+        "out":  "../../../ORBEngine/assets/innsmouth_island/complete_game/environment/reptile_dais_west_single_v3.png"
+    },
+    {
+        "name":  "innsmouth_eclipse_court_center_single_v3",
+        "category":  "environment_single",
+        "prompt_revision":  "transparent_orb32_v1",
+        "protocol_profile":  "innsmouth_island_dimensional_protocol_v1",
+        "pass_kind":  "complete_game",
+        "guide_ref":  "innsmouth_island_complete_game_prompt_guide_v1",
+        "placement_key":  "eclipse_court_center",
+        "prompt":  "ORBSystems 32-dimensional coherency environment single request for InnsmouthIsland placement eclipse_court_center; transparent background only, isolated alpha render, no opaque backdrop, full depth-precision mapping, angular silhouette; eclipse court centerpiece with ritual seal geometry and premium occlusion read as a single asset, no text",
+        "negative_prompt":  "opaque background, solid background, painted matte, scenic frame, text, watermark, logo",
+        "controls":  {
+                         "transparent_background":  true
+                     },
+        "transparent_background":  true,
+        "w":  1024,
+        "h":  1024,
+        "out":  "../../../ORBEngine/assets/innsmouth_island/complete_game/environment/eclipse_court_center_single_v3.png"
+    },
+    {
+        "name":  "innsmouth_boss_sanctum_backwall_single_v3",
+        "category":  "environment_single",
+        "prompt_revision":  "transparent_orb32_v1",
+        "protocol_profile":  "innsmouth_island_dimensional_protocol_v1",
+        "pass_kind":  "complete_game",
+        "guide_ref":  "innsmouth_island_complete_game_prompt_guide_v1",
+        "placement_key":  "boss_sanctum_backwall",
+        "prompt":  "ORBSystems 32-dimensional coherency environment single request for InnsmouthIsland placement boss_sanctum_backwall; transparent background only, isolated alpha render, no opaque backdrop, full depth-precision mapping, angular silhouette; boss sanctum backwall with throne scars, eclipse recesses, and stackable back-plane readability as a single asset, no text",
+        "negative_prompt":  "opaque background, solid background, painted matte, scenic frame, text, watermark, logo",
+        "controls":  {
+                         "transparent_background":  true
+                     },
+        "transparent_background":  true,
+        "w":  1024,
+        "h":  1024,
+        "out":  "../../../ORBEngine/assets/innsmouth_island/complete_game/environment/boss_sanctum_backwall_single_v3.png"
+    }
+]

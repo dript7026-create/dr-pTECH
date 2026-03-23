@@ -1,0 +1,206 @@
+[
+    {
+        "name":  "innsmouth_storm_sky_strata_layers_v3",
+        "category":  "atmosphere",
+        "prompt_revision":  "transparent_orb32_v1",
+        "protocol_profile":  "innsmouth_island_dimensional_protocol_v1",
+        "pass_kind":  "complete_game",
+        "guide_ref":  "innsmouth_island_complete_game_prompt_guide_v1",
+        "prompt":  "ORBSystems 32-dimensional coherency atmosphere layer request for InnsmouthIsland; transparent background only, isolated alpha layer, no filled sky, no opaque backdrop; storm cloud strata bands, torn thunderhead silhouettes, negative-space lightning gaps, built as compositing-ready sky slices for layered runtime assembly, no text",
+        "negative_prompt":  "opaque background, solid background, painted sky matte, scenic poster frame, text, watermark, logo",
+        "controls":  {
+                         "transparent_background":  true
+                     },
+        "transparent_background":  true,
+        "w":  1536,
+        "h":  768,
+        "out":  "../../../ORBEngine/assets/innsmouth_island/complete_game/atmosphere/innsmouth_storm_sky_strata_layers_v3.png"
+    },
+    {
+        "name":  "innsmouth_eclipse_moon_and_celestial_layers_v3",
+        "category":  "atmosphere",
+        "prompt_revision":  "transparent_orb32_v1",
+        "protocol_profile":  "innsmouth_island_dimensional_protocol_v1",
+        "pass_kind":  "complete_game",
+        "guide_ref":  "innsmouth_island_complete_game_prompt_guide_v1",
+        "prompt":  "ORBSystems 32-dimensional coherency celestial layer request for InnsmouthIsland; transparent background only, isolated alpha layer, no opaque backdrop; eclipse moon phases, halo rings, occult stars, abyssal celestial scars, all separated as stackable skybox slices for runtime compositing, no text",
+        "negative_prompt":  "opaque background, solid background, painted sky matte, scenic poster frame, text, watermark, logo",
+        "controls":  {
+                         "transparent_background":  true
+                     },
+        "transparent_background":  true,
+        "w":  1216,
+        "h":  896,
+        "out":  "../../../ORBEngine/assets/innsmouth_island/complete_game/atmosphere/innsmouth_eclipse_moon_and_celestial_layers_v3.png"
+    },
+    {
+        "name":  "innsmouth_far_horizon_coast_layers_v3",
+        "category":  "atmosphere",
+        "prompt_revision":  "transparent_orb32_v1",
+        "protocol_profile":  "innsmouth_island_dimensional_protocol_v1",
+        "pass_kind":  "complete_game",
+        "guide_ref":  "innsmouth_island_complete_game_prompt_guide_v1",
+        "prompt":  "ORBSystems 32-dimensional coherency horizon layer request for InnsmouthIsland; transparent background only, isolated alpha layer, no opaque backdrop; far coast ruins, drowned wharf silhouettes, reef spines, distant cliffs, all authored as separate horizon bands for runtime parallax assembly, no text",
+        "negative_prompt":  "opaque background, solid background, painted sky matte, scenic poster frame, text, watermark, logo",
+        "controls":  {
+                         "transparent_background":  true
+                     },
+        "transparent_background":  true,
+        "w":  1536,
+        "h":  768,
+        "out":  "../../../ORBEngine/assets/innsmouth_island/complete_game/atmosphere/innsmouth_far_horizon_coast_layers_v3.png"
+    },
+    {
+        "name":  "innsmouth_canopy_and_mangrove_bands_v3",
+        "category":  "atmosphere",
+        "prompt_revision":  "transparent_orb32_v1",
+        "protocol_profile":  "innsmouth_island_dimensional_protocol_v1",
+        "pass_kind":  "complete_game",
+        "guide_ref":  "innsmouth_island_complete_game_prompt_guide_v1",
+        "prompt":  "ORBSystems 32-dimensional coherency canopy layer request for InnsmouthIsland; transparent background only, isolated alpha layer, no opaque backdrop; expressionistic angular canopy bands, mangrove roots, hanging vines, black-reef foliage silhouettes, separated into stackable parallax strips for runtime composition, no text",
+        "negative_prompt":  "opaque background, solid background, painted matte, scenic poster frame, text, watermark, logo",
+        "controls":  {
+                         "transparent_background":  true
+                     },
+        "transparent_background":  true,
+        "w":  1536,
+        "h":  768,
+        "out":  "../../../ORBEngine/assets/innsmouth_island/complete_game/atmosphere/innsmouth_canopy_and_mangrove_bands_v3.png"
+    },
+    {
+        "name":  "innsmouth_marsh_fog_and_water_overlay_layers_v3",
+        "category":  "atmosphere",
+        "prompt_revision":  "transparent_orb32_v1",
+        "protocol_profile":  "innsmouth_island_dimensional_protocol_v1",
+        "pass_kind":  "complete_game",
+        "guide_ref":  "innsmouth_island_complete_game_prompt_guide_v1",
+        "prompt":  "ORBSystems 32-dimensional coherency fog and water overlay request for InnsmouthIsland; transparent background only, isolated alpha layer, no opaque backdrop; marsh fog banks, tidal haze, shallow water sheen, caustic edge overlays, all authored as stackable layer plates for environment composition, no text",
+        "negative_prompt":  "opaque background, solid background, painted matte, scenic poster frame, text, watermark, logo",
+        "controls":  {
+                         "transparent_background":  true
+                     },
+        "transparent_background":  true,
+        "w":  1536,
+        "h":  768,
+        "out":  "../../../ORBEngine/assets/innsmouth_island/complete_game/atmosphere/innsmouth_marsh_fog_and_water_overlay_layers_v3.png"
+    },
+    {
+        "name":  "innsmouth_temple_architecture_back_layers_v3",
+        "category":  "atmosphere",
+        "prompt_revision":  "transparent_orb32_v1",
+        "protocol_profile":  "innsmouth_island_dimensional_protocol_v1",
+        "pass_kind":  "complete_game",
+        "guide_ref":  "innsmouth_island_complete_game_prompt_guide_v1",
+        "prompt":  "ORBSystems 32-dimensional coherency architecture layer request for InnsmouthIsland; transparent background only, isolated alpha layer, no opaque backdrop; cyclopean temple backwall segments, obelisk crowns, collapsed stair silhouettes, eclipse court geometry separated into compositing bands for runtime depth stacking, no text",
+        "negative_prompt":  "opaque background, solid background, painted matte, scenic poster frame, text, watermark, logo",
+        "controls":  {
+                         "transparent_background":  true
+                     },
+        "transparent_background":  true,
+        "w":  1536,
+        "h":  768,
+        "out":  "../../../ORBEngine/assets/innsmouth_island/complete_game/atmosphere/innsmouth_temple_architecture_back_layers_v3.png"
+    },
+    {
+        "name":  "innsmouth_rain_spore_and_lightshaft_layers_v3",
+        "category":  "atmosphere",
+        "prompt_revision":  "transparent_orb32_v1",
+        "protocol_profile":  "innsmouth_island_dimensional_protocol_v1",
+        "pass_kind":  "complete_game",
+        "guide_ref":  "innsmouth_island_complete_game_prompt_guide_v1",
+        "prompt":  "ORBSystems 32-dimensional coherency atmosphere layer request for InnsmouthIsland; transparent background only, isolated alpha layer, no opaque backdrop; rainfall streak sets, drifting spores, pearl motes, light shafts, ritual dust overlays as stackable ambient plates, no text",
+        "negative_prompt":  "opaque background, solid background, painted matte, scenic poster frame, text, watermark, logo",
+        "controls":  {
+                         "transparent_background":  true
+                     },
+        "transparent_background":  true,
+        "w":  1536,
+        "h":  768,
+        "out":  "../../../ORBEngine/assets/innsmouth_island/complete_game/atmosphere/innsmouth_rain_spore_and_lightshaft_layers_v3.png"
+    },
+    {
+        "name":  "innsmouth_foreground_reed_root_occluder_bands_v3",
+        "category":  "atmosphere",
+        "prompt_revision":  "transparent_orb32_v1",
+        "protocol_profile":  "innsmouth_island_dimensional_protocol_v1",
+        "pass_kind":  "complete_game",
+        "guide_ref":  "innsmouth_island_complete_game_prompt_guide_v1",
+        "prompt":  "ORBSystems 32-dimensional coherency foreground occluder layer request for InnsmouthIsland; transparent background only, isolated alpha layer, no opaque backdrop; sharp reed clusters, mangrove root curtains, broken fence slats, wet branch occluders, all authored as angular foreground silhouette bands for runtime parallax masking and depth interruption, no text",
+        "negative_prompt":  "opaque background, solid background, painted matte, scenic poster frame, text, watermark, logo",
+        "controls":  {
+                         "transparent_background":  true
+                     },
+        "transparent_background":  true,
+        "w":  1536,
+        "h":  768,
+        "out":  "../../../ORBEngine/assets/innsmouth_island/complete_game/atmosphere/innsmouth_foreground_reed_root_occluder_bands_v3.png"
+    },
+    {
+        "name":  "innsmouth_distant_lightning_fork_layers_v3",
+        "category":  "atmosphere",
+        "prompt_revision":  "transparent_orb32_v1",
+        "protocol_profile":  "innsmouth_island_dimensional_protocol_v1",
+        "pass_kind":  "complete_game",
+        "guide_ref":  "innsmouth_island_complete_game_prompt_guide_v1",
+        "prompt":  "ORBSystems 32-dimensional coherency lightning layer request for InnsmouthIsland; transparent background only, isolated alpha layer, no opaque backdrop; distant forked lightning branches, cloud-edge flash shapes, reflected vertical strike accents, all split into compositing-ready storm slices for skybox assembly and weather timing, no text",
+        "negative_prompt":  "opaque background, solid background, painted sky matte, scenic poster frame, text, watermark, logo",
+        "controls":  {
+                         "transparent_background":  true
+                     },
+        "transparent_background":  true,
+        "w":  1536,
+        "h":  768,
+        "out":  "../../../ORBEngine/assets/innsmouth_island/complete_game/atmosphere/innsmouth_distant_lightning_fork_layers_v3.png"
+    },
+    {
+        "name":  "innsmouth_tide_foam_and_backwash_strips_v3",
+        "category":  "atmosphere",
+        "prompt_revision":  "transparent_orb32_v1",
+        "protocol_profile":  "innsmouth_island_dimensional_protocol_v1",
+        "pass_kind":  "complete_game",
+        "guide_ref":  "innsmouth_island_complete_game_prompt_guide_v1",
+        "prompt":  "ORBSystems 32-dimensional coherency shoreline overlay request for InnsmouthIsland; transparent background only, isolated alpha layer, no opaque backdrop; tide foam crescents, black-water backwash strips, brine splash lips, shoreline scum edges, all authored as stackable transparent shoreline overlays for wet-ground composition, no text",
+        "negative_prompt":  "opaque background, solid background, painted matte, scenic poster frame, text, watermark, logo",
+        "controls":  {
+                         "transparent_background":  true
+                     },
+        "transparent_background":  true,
+        "w":  1536,
+        "h":  768,
+        "out":  "../../../ORBEngine/assets/innsmouth_island/complete_game/atmosphere/innsmouth_tide_foam_and_backwash_strips_v3.png"
+    },
+    {
+        "name":  "innsmouth_occult_halo_and_eclipse_glow_layers_v3",
+        "category":  "atmosphere",
+        "prompt_revision":  "transparent_orb32_v1",
+        "protocol_profile":  "innsmouth_island_dimensional_protocol_v1",
+        "pass_kind":  "complete_game",
+        "guide_ref":  "innsmouth_island_complete_game_prompt_guide_v1",
+        "prompt":  "ORBSystems 32-dimensional coherency occult glow layer request for InnsmouthIsland; transparent background only, isolated alpha layer, no opaque backdrop; eclipse halo bleed, shrine aura veils, pearl-lit glow rings, abyssal backlight scars, all separated into transparent luminance slices for ritual ambience compositing, no text",
+        "negative_prompt":  "opaque background, solid background, painted sky matte, scenic poster frame, text, watermark, logo",
+        "controls":  {
+                         "transparent_background":  true
+                     },
+        "transparent_background":  true,
+        "w":  1536,
+        "h":  768,
+        "out":  "../../../ORBEngine/assets/innsmouth_island/complete_game/atmosphere/innsmouth_occult_halo_and_eclipse_glow_layers_v3.png"
+    },
+    {
+        "name":  "innsmouth_beacon_and_distant_vessel_silhouette_layers_v3",
+        "category":  "atmosphere",
+        "prompt_revision":  "transparent_orb32_v1",
+        "protocol_profile":  "innsmouth_island_dimensional_protocol_v1",
+        "pass_kind":  "complete_game",
+        "guide_ref":  "innsmouth_island_complete_game_prompt_guide_v1",
+        "prompt":  "ORBSystems 32-dimensional coherency distant silhouette layer request for InnsmouthIsland; transparent background only, isolated alpha layer, no opaque backdrop; lighthouse beacons, rotten mast profiles, dead trawler silhouettes, offshore signal cages, all authored as sparse horizon micro-layers for long-distance storytelling and parallax skyline dressing, no text",
+        "negative_prompt":  "opaque background, solid background, painted sky matte, scenic poster frame, text, watermark, logo",
+        "controls":  {
+                         "transparent_background":  true
+                     },
+        "transparent_background":  true,
+        "w":  1536,
+        "h":  768,
+        "out":  "../../../ORBEngine/assets/innsmouth_island/complete_game/atmosphere/innsmouth_beacon_and_distant_vessel_silhouette_layers_v3.png"
+    }
+]

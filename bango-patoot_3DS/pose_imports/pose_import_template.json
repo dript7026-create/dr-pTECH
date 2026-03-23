@@ -1,0 +1,26 @@
+{
+  "format": "bango_patoot_pose_import_v1",
+  "entity": "Bango",
+  "rig": "bango_base_rig",
+  "move_name": "Horn Rush Prototype",
+  "source_image": "pose_imports/bango_horn_rush_keyframe_001.png",
+  "frame_index": 0,
+  "duration_ms": 120,
+  "tags": ["combat", "ground", "starter"],
+  "bone_offsets": {
+    "pelvis": {"x": 0.0, "y": 0.0, "rotation": 0.0},
+    "spine": {"x": 0.0, "y": 3.0, "rotation": 8.0},
+    "head": {"x": 1.0, "y": 2.0, "rotation": 6.0},
+    "arm_l": {"x": -4.0, "y": -2.0, "rotation": -25.0},
+    "arm_r": {"x": 7.0, "y": 4.0, "rotation": 38.0},
+    "leg_l": {"x": -2.0, "y": -4.0, "rotation": 15.0},
+    "leg_r": {"x": 3.0, "y": 1.0, "rotation": -20.0}
+  },
+  "inbetween": {
+    "method": "physics_hint",
+    "stiffness": 0.62,
+    "damping": 0.27,
+    "overshoot": 0.11,
+    "gravity_bias": 0.34
+  }
+}

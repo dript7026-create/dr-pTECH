@@ -1,0 +1,152 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <time.h>
+
+#define MAX_USERS 1000
+#define MAX_INTERACTIONS 10000
+#define MAX_TEXT_LENGTH 500
+#define PERSONALITY_TRAITS 5
+
+typedef enum {
+    OPENNESS,
+    CONSCIENTIOUSNESS,
+    EXTRAVERSION,
+    AGREEABLENESS,
+    NEUROTICISM
+} PersonalityTrait;
+
+typedef struct {
+    char trait_name[50];
+    float score;
+    int samples;
+} TraitScore;
+
+typedef struct {
+    time_t timestamp;
+    char interaction[MAX_TEXT_LENGTH];
+    int response_time_ms;
+    float sentiment_score;
+} UserInteraction;
+
+typedef struct {
+    char user_id[100];
+    TraitScore traits[PERSONALITY_TRAITS];
+    UserInteraction *interactions;
+    int interaction_count;
+    float risk_score;
+    float satisfaction_score;
+} UserProfile;
+
+typedef struct {
+    UserProfile *profiles;
+    int profile_count;
+} ProfileSystem;
+
+ProfileSystem* init_profile_system(void) {
+    ProfileSystem *system = (ProfileSystem*)malloc(sizeof(ProfileSystem));
+    if (!system) return NULL;
+    
+    system->profiles = (UserProfile*)calloc(MAX_USERS, sizeof(UserProfile));
+    system->profile_count = 0;
+    return system;
+}
+
+UserProfile* create_user_profile(const char *user_id) {
+    UserProfile *profile = (UserProfile*)calloc(1, sizeof(UserProfile));
+    if (!profile) return NULL;
+    
+    strncpy(profile->user_id, user_id, 99);
+    profile->interactions = (UserInteraction*)calloc(MAX_INTERACTIONS, sizeof(UserInteraction));
+    profile->interaction_count = 0;
+    profile->risk_score = 0.0f;
+    profile->satisfaction_score = 1.0f;
+    
+    const char *trait_names[] = {"Openness", "Conscientiousness", "Extraversion", "Agreeableness", "Neuroticism"};
+    for (int i = 0; i < PERSONALITY_TRAITS; i++) {
+        strncpy(profile->traits[i].trait_name, trait_names[i], 49);
+        profile->traits[i].score = 0.5f;
+        profile->traits[i].samples = 0;
+    }
+    
+    return profile;
+}
+
+void log_interaction(UserProfile *profile, const char *interaction, int response_time, float sentiment) {
+    if (profile->interaction_count >= MAX_INTERACTIONS) return;
+    
+    UserInteraction *inter = &profile->interactions[profile->interaction_count];
+    inter->timestamp = time(NULL);
+    strncpy(inter->interaction, interaction, MAX_TEXT_LENGTH - 1);
+    inter->response_time_ms = response_time;
+    inter->sentiment_score = sentiment;
+    
+    profile->interaction_count++;
+}
+
+void update_trait_score(UserProfile *profile, PersonalityTrait trait, float adjustment) {
+    profile->traits[trait].score += adjustment * 0.01f;
+    if (profile->traits[trait].score > 1.0f) profile->traits[trait].score = 1.0f;
+    if (profile->traits[trait].score < 0.0f) profile->traits[trait].score = 0.0f;
+    profile->traits[trait].samples++;
+}
+
+float predict_future_activity(UserProfile *profile) {
+    if (profile->interaction_count == 0) return 0.5f;
+    
+    float avg_sentiment = 0.0f;
+    for (int i = 0; i < profile->interaction_count; i++) {
+        avg_sentiment += profile->interactions[i].sentiment_score;
+    }
+    avg_sentiment /= profile->interaction_count;
+    
+    float prediction = (profile->traits[OPENNESS].score * 0.2f +
+                       profile->traits[CONSCIENTIOUSNESS].score * 0.2f +
+                       avg_sentiment * 0.6f);
+    
+    return prediction;
+}
+
+void calculate_risk_score(UserProfile *profile) {
+    profile->risk_score = 0.0f;
+    
+    if (profile->traits[NEUROTICISM].score > 0.7f) profile->risk_score += 0.3f;
+    if (profile->traits[AGREEABLENESS].score < 0.3f) profile->risk_score += 0.2f;
+    
+    if (profile->interaction_count > 0) {
+        float avg_sentiment = 0.0f;
+        for (int i = 0; i < profile->interaction_count; i++) {
+            avg_sentiment += profile->interactions[i].sentiment_score;
+        }
+        avg_sentiment /= profile->interaction_count;
+        
+        if (avg_sentiment < 0.3f) profile->risk_score += 0.3f;
+        if (avg_sentiment > 0.7f) profile->risk_score -= 0.2f;
+    }
+    
+    if (profile->risk_score > 1.0f) profile->risk_score = 1.0f;
+    if (profile->risk_score < 0.0f) profile->risk_score = 0.0f;
+}
+
+void print_profile_summary(UserProfile *profile) {
+    printf("\n=== User Profile: %s ===\n", profile->user_id);
+    printf("Interactions: %d\n", profile->interaction_count);
+    
+    for (int i = 0; i < PERSONALITY_TRAITS; i++) {
+        printf("%s: %.2f\n", profile->traits[i].trait_name, profile->traits[i].score);
+    }
+    
+    printf("Risk Score: %.2f\n", profile->risk_score);
+    printf("Satisfaction Score: %.2f\n", profile->satisfaction_score);
+    printf("Activity Prediction: %.2f\n", predict_future_activity(profile));
+}
+
+void cleanup_profile_system(ProfileSystem *system) {
+    if (!system) return;
+    
+    for (int i = 0; i < system->profile_count; i++) {
+        free(system->profiles[i].interactions);
+    }
+    free(system->profiles);
+    free(system);
+}

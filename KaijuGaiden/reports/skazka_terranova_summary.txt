@@ -1,0 +1,36 @@
+Skazka: Terranova — Summary Report
+Date: 2026-03-11
+
+Overview:
+Skazka: Terranova is a new design thread to explore a narrative-driven, exploration-focused stage for KaijuGaiden. The intent is to produce a short playable vertical slice with a distinct atmosphere, tile-based art inspired by the existing KaijuGaiden placeholder assets, and a compact boss encounter.
+
+High-level Goals:
+- Deliver a 1-2 minute playable slice with a small overworld area and 1 boss encounter.
+- Target outputs: Windows prototype (SDL2/idtech2_port demo) and a GBA-friendly asset pipeline (devkitPro headers).
+- Maintain asset naming conventions compatible with existing KaijuGaiden placeholders for easy reuse.
+
+Key Assets & Tech:
+- Placeholder sprites and backgrounds already present in KaijuGaiden/assets/placeholderassets (converted to GBA headers in build/gba).
+- idtech2_port created in KaijuGaiden/idtech2_port with a small SDL2-based sprite renderer (sprite sheets single-row frames assumed).
+- GBA conversion tool: KaijuGaiden/tools/convert_to_gba.py — outputs headers in build/gba.
+
+Progress to Date:
+- idtech2_port scaffold, demo, and CMakeLists added.
+- GBA conversion run; headers generated under KaijuGaiden/build/gba and an aggregate `kaijugaiden_assets.h` created.
+- Visual Studio Build Tools located; `cl.exe` available at MSVC tools path. CMake on the system exposes Unix/Ninja generators; Visual Studio generator not available without Ninja or a Windows-capable CMake generator.
+
+Immediate Next Steps:
+1) Build idtech2_port prototype on Windows:
+   - Install Ninja and SDL2 development libraries (or ensure Visual Studio CMake generator is available). Then run `cmake -G Ninja` and `cmake --build`.
+2) Integrate sprite renderer into idtech2 client or iterate demo to include player/minion/boss states and input handling.
+3) Finalize asset pipeline for GBA: run `make gba-convert` when devkitPro and toolchain are installed; include generated headers into the libgba project.
+4) Story & level design: draft a short map and boss telegraph patterns for Terranova.
+
+Risks / Notes:
+- Building the GBA ROM requires devkitPro/devkitARM installed and MSYS2 available; the Makefile has a `gba-convert` helper but actual .gba linking needs the toolchain.
+- SDL2/SDL2_image must be installed for the Windows prototype build; CMake/Ninja setup recommended.
+
+Immediate ask for you:
+- Confirm whether you want me to install Ninja + SDL2 now and attempt the idtech2_port build, or instead prefer a direct MSVC `cl.exe` compile with explicit SDL2 paths.
+
+Prepared by assistant (saved to KaijuGaiden/reports/skazka_terranova_summary.txt)

@@ -1,0 +1,39 @@
+SKAZKA — Slavic Folklore Narrative
+
+Long before the first road cut through the birch forests and before the rivers learned the sounds of mills, the world hung together by names and promises. In the borderlands between village and wilderness, a woven fringe of old laws kept people and spirits from spilling over one another. When the laws frayed, the border leaked; hungry Leshy pried at fenceposts, Domovoi grew restless in hearths, and Rusalka sung the names of those who drowned. The land remembered slights and bargains alike.
+
+You are Misha, a wanderer from a town of riverfolk who remembers the taste of salt and fool's rye. Your sister, Katya, vanished on the night of the lantern festival; the river took her boat, or perhaps something on the far bank took her in a cloak of moss. The elder's sigils offer no easy justice—the old bargains have shifted, and the spirits ask for names and tokens in exchange for clues. To rescue Katya you must travel three realms: the Tarnished Orchard where fruit grows heavy with lost promises, the Reeded Marsh where old songs twist men into will-less reeds, and the Smoldering Mire below the hill where the Zmey nests and counts its teeth.
+
+Mechanics and Motifs:
+- Names and Promises: Speaking a creature's true name weakens it; binding your word can strengthen tools or doom allies. The player collects tokens—ribbons, carved spoons, worn letters—that carry promises. Use them in rituals to bargain with spirits.
+- Hearth and Threshold: The Domovoi can help mend broken gear if you restore its hearth; leaving blood, bread, or songs alters the spirit's mood. Thresholds (doorways, bridges) are safe or cursed depending on rites performed.
+- Seasonal Memory: Weather and time shift which spirits are awake and where bargains hold sway. Offerings that helped in summer fail in deep winter.
+- Three Trials: Each major region houses a spirit bound by an old wrong; free or bargain with them to gain a name, a rune, and a token that together reveal Katya's trail.
+
+Key Characters:
+- Misha: Quick-witted, pragmatic, but bound by a vow to family. Specialization options: path of the Skomorokh (trickster performer) or the Warrior who respects blades as oaths.
+- Katya: The missing sister; traces of her remain in songs and in the pattern of reeds. Occasionally visible as a memory-wraith to those who hold certain tokens.
+- Leshy: The guardian of the forest—capricious, bored, and easily flattered. Can be an ally if appeased with names sung properly.
+- Rusalka: A sorrowful water spirit who tempts with voices of lost lovers. She cannot be fought cleanly; she needs understanding.
+- Zmey: A cunning wyrm that hoards promises it never intended to keep. Face it in the Smoldering Mire; bargains made poorly twist outcomes.
+
+Tone and Progression:
+- The game walks a line between eerie fairytale and grim folk practice. Not every spirit is an enemy; many are ancient neighbors with their own rules. The player learns the old songs and the etiquette of bargains: cut in well, do not laugh at a Domovoi's pride, and always leave an honest name.
+- Mid-game twist: Some promises you bind for power begin to unmake your social ties—villagers react to your bargains, children forget your face, and Katya's trail becomes less bright the more you use forbidden tokens.
+
+Ending Variants:
+- Reclaimed Name: If you gather the three runes and restore names to the bound spirits without breaking your word, Katya returns; you mend the border and accept a modest life.
+- Braided Promises: If you bargain for power and keep bargains by sacrificing ties, you rescue Katya but the world grows colder—your hearth dims, and your name becomes a ledger.
+- The Unnamed River: Fail to honor promises and the region slips into the old chaos—Katya becomes a bridge-ghost and the world forgets your name. The epilogue is the river remembering new songs.
+
+Imagery and Art Direction:
+- Palette: Muted ochres, birch-white, swampy teal, and the sharp iron of blade edges. Textures feel hand-stitched; iconography borrows from carved spoons, woven ribbons, and ceremonial masks.
+- Sound: Sparse balalaika, throat-song murmurs, and wood-smoke percussion. The soundscape favors human textures: boots in snow, the creak of a swing-bridge, breath, and whispered names.
+
+Notes for Adaptation:
+- Ritual mechanics should be playable with clear UI: tokens slot into a ritual grid with simple combinatorics (name + token + rite => effect).
+- Avoid overt horror; focus on melancholic wonder and moral choices with visible consequences.
+
+---
+
+End of Slavic Folklore Narrative

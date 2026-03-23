@@ -1,0 +1,92 @@
+[
+  {
+    "name": "artbook_cover",
+    "prompt": "concept art book cover illustration, dark Soviet apartment stairwell at night, small child silhouette at bottom of impossibly tall staircase looking up, mold-like bioluminescent growths creeping down walls, sodium orange light from a single bare bulb high above, stairwell green paint peeling, title composition space at top, atmospheric horror, painterly digital concept art style, cinematic lighting, high detail, no text",
+    "w": 1344,
+    "h": 768,
+    "out": "artbook/page01_cover.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "artbook_enfant_designsheet",
+    "prompt": "professional game character design sheet, child protagonist Enfant from multiple angles, front view three-quarter and side, worn winter coat with oversized sleeves, pale determined face with large observant eyes, scuffed boots, small frame against Soviet apartment scale, color callouts showing nicotine yellow coat lining and stairwell green stitching, bruised violet shadows, painterly concept art style, high detail, character turnaround reference, no text",
+    "w": 1344,
+    "h": 768,
+    "out": "artbook/page02_enfant_design.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "artbook_block_nine_exterior",
+    "prompt": "atmospheric concept art painting, Soviet apartment block district exterior at twilight, massive concrete housing blocks arranged in oppressive grid, Block Nine identification painted on crumbling facade, dead trees in courtyard, broken playground equipment, sodium orange streetlamps casting pools of light on wet asphalt, bruised violet sky with industrial haze, child-scale perspective from ground level looking up at monolithic buildings, stairwell green window glow, painted digital illustration style, cinematic composition, high detail, no text",
+    "w": 1344,
+    "h": 768,
+    "out": "artbook/page03_block_nine.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "artbook_detn_dimension",
+    "prompt": "surreal horror concept art, the DetnDimension mirror-layer reality, familiar Soviet apartment rooms twisted and folded impossibly, walls becoming floors becoming ceilings, furniture floating at wrong angles, bioluminescent mold growths pulsing dead teal light through cracks, a child figure walking on a wall as if it were the floor, gravity distorted domestic space, nicotine yellow wallpaper peeling in spirals, sodium orange light sources in impossible locations, painted digital concept art style, high detail, dreamlike horror atmosphere, no text",
+    "w": 1344,
+    "h": 768,
+    "out": "artbook/page04_detn_dimension.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "artbook_crepulin_lifecycle",
+    "prompt": "dark biological concept art study, Crepulin organism lifecycle stages, fear-reactive urban mold substance shown in four progression states, stage one thin film on damp plaster, stage two spreading tendrils along pipe joints, stage three thick bioluminescent bloom with dead teal glow corrupting room geometry, stage four full infestation warping walls and attracting predatory shadows, Soviet apartment wall cross-section background, scientific illustration meets horror concept art, painterly digital style, high detail, no text",
+    "w": 1344,
+    "h": 768,
+    "out": "artbook/page05_crepulin_lifecycle.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "artbook_domov_kikimora",
+    "prompt": "horror game creature concept art dual portrait, left side the Domov Keeper house-spirit emerging from plaster wall cracks with warm protective orange eyes and domestic implements woven into its form, right side the Keyhole Kikimora nightmare stalker with elongated limbs folding through a keyhole shape with dead teal bioluminescence and sharp angles, contrasting guardian versus predator, Soviet apartment interior setting, bruised violet and nicotine yellow palette, painterly digital concept art style, high detail, no text",
+    "w": 1344,
+    "h": 768,
+    "out": "artbook/page06_domov_kikimora.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "artbook_babka_hut",
+    "prompt": "dark fantasy concept art scene, Babka Kuroles the threshold-guide witch-figure standing before her mobile service hut in a Soviet apartment courtyard, Baba Yaga inspired elder with knowing eyes offering advice at a price, small vendor hut on mechanical legs between concrete buildings, warm interior light spilling through beaded curtain doorway, ritual symbols chalked on courtyard ground, sodium orange and warm amber lighting against cold bruised violet night, a child approaching cautiously, painterly digital concept art style, high detail, no text",
+    "w": 1344,
+    "h": 768,
+    "out": "artbook/page07_babka_hut.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "artbook_black_volga",
+    "prompt": "horror atmosphere concept art, the Chauffeur of the Black Road pursuing through underground parking vault, sleek black government vehicle with pale curtains in rear windows, headlights cutting through steam and darkness, uniformed driver figure barely visible behind wheel, child running in foreground casting long shadow, wet concrete reflecting headlights, sodium orange emergency lights on distant walls, oppressive pursuit dread, Soviet urban legend Black Volga atmosphere, painterly digital concept art style, cinematic wide composition, high detail, no text",
+    "w": 1344,
+    "h": 768,
+    "out": "artbook/page08_black_volga.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "artbook_bird_reactor",
+    "prompt": "ominous concept art painting, the Bird Over Reactor Nine perched on a Soviet industrial cooling tower at sunset, massive omen creature with dark iridescent feathers and too-many eyes, wings spread against a bruised violet and radioactive amber sky, industrial landscape below with apartment blocks and smokestacks, Chernobyl-inspired disaster folklore atmosphere, the bird appears just before collapse events, small human figures far below unaware, painted digital concept art style, dramatic scale contrast, high detail, no text",
+    "w": 1344,
+    "h": 768,
+    "out": "artbook/page09_bird_reactor.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "artbook_ritual_tools",
+    "prompt": "game item concept art spread, nine ritual tools laid out on old Soviet apartment table surface, brass key ring with mismatched keys, melted candle stub with wax drips, iron spoon with carved handle, cracked mirror shard reflecting wrong angle, chalk bundle wrapped in cloth, salt pouch with drawstring, bread offering wrapped in napkin, thread spool with red string, worn photograph with faces scratched out, each item lit by warm amber candlelight, nicotine yellow tablecloth, arranged like museum display or evidence table, painterly digital concept art style, high detail, no text",
+    "w": 1344,
+    "h": 768,
+    "out": "artbook/page10_ritual_tools.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  }
+]

@@ -1,0 +1,259 @@
+{
+  "won": true,
+  "fights": 22,
+  "level": 5,
+  "mask": 255,
+  "xp": 194,
+  "unlocked_specials": 8,
+  "history": [
+    0,
+    21,
+    0
+  ],
+  "fight_log": [
+    {
+      "won": true,
+      "target_special": 0,
+      "target_special_name": "CHARGE DASH",
+      "combat_frames": 41,
+      "tommy_health": 90,
+      "level": 1,
+      "mask": 1,
+      "fight": 1,
+      "history_pick": "CUNNING"
+    },
+    {
+      "won": true,
+      "target_special": 0,
+      "target_special_name": "CHARGE DASH",
+      "combat_frames": 51,
+      "tommy_health": 90,
+      "level": 1,
+      "mask": 1,
+      "fight": 2,
+      "history_pick": "CUNNING"
+    },
+    {
+      "won": true,
+      "target_special": 0,
+      "target_special_name": "CHARGE DASH",
+      "combat_frames": 132,
+      "tommy_health": 90,
+      "level": 2,
+      "mask": 1,
+      "fight": 3,
+      "history_pick": "CUNNING"
+    },
+    {
+      "won": true,
+      "target_special": 1,
+      "target_special_name": "SKY CHOMP",
+      "combat_frames": 144,
+      "tommy_health": 96,
+      "level": 2,
+      "mask": 3,
+      "fight": 4,
+      "history_pick": "CUNNING"
+    },
+    {
+      "won": true,
+      "target_special": 1,
+      "target_special_name": "SKY CHOMP",
+      "combat_frames": 144,
+      "tommy_health": 96,
+      "level": 2,
+      "mask": 3,
+      "fight": 5,
+      "history_pick": "CUNNING"
+    },
+    {
+      "won": true,
+      "target_special": 1,
+      "target_special_name": "SKY CHOMP",
+      "combat_frames": 208,
+      "tommy_health": 79,
+      "level": 2,
+      "mask": 3,
+      "fight": 6,
+      "history_pick": "CUNNING"
+    },
+    {
+      "won": true,
+      "target_special": 2,
+      "target_special_name": "TAIL CYCLONE",
+      "combat_frames": 288,
+      "tommy_health": 86,
+      "level": 2,
+      "mask": 7,
+      "fight": 7,
+      "history_pick": "CUNNING"
+    },
+    {
+      "won": true,
+      "target_special": 2,
+      "target_special_name": "TAIL CYCLONE",
+      "combat_frames": 288,
+      "tommy_health": 55,
+      "level": 3,
+      "mask": 7,
+      "fight": 8,
+      "history_pick": "CUNNING"
+    },
+    {
+      "won": true,
+      "target_special": 2,
+      "target_special_name": "TAIL CYCLONE",
+      "combat_frames": 264,
+      "tommy_health": 78,
+      "level": 3,
+      "mask": 7,
+      "fight": 9,
+      "history_pick": "CUNNING"
+    },
+    {
+      "won": true,
+      "target_special": 3,
+      "target_special_name": "EMBER SPIT",
+      "combat_frames": 424,
+      "tommy_health": 47,
+      "level": 3,
+      "mask": 15,
+      "fight": 10,
+      "history_pick": "CUNNING"
+    },
+    {
+      "won": true,
+      "target_special": 3,
+      "target_special_name": "EMBER SPIT",
+      "combat_frames": 424,
+      "tommy_health": 52,
+      "level": 3,
+      "mask": 15,
+      "fight": 11,
+      "history_pick": "CUNNING"
+    },
+    {
+      "won": true,
+      "target_special": 3,
+      "target_special_name": "EMBER SPIT",
+      "combat_frames": 488,
+      "tommy_health": 42,
+      "level": 3,
+      "mask": 15,
+      "fight": 12,
+      "history_pick": "CUNNING"
+    },
+    {
+      "won": true,
+      "target_special": 4,
+      "target_special_name": "IRON GUT SLAM",
+      "combat_frames": 472,
+      "tommy_health": 45,
+      "level": 4,
+      "mask": 31,
+      "fight": 13,
+      "history_pick": "CUNNING"
+    },
+    {
+      "won": true,
+      "target_special": 4,
+      "target_special_name": "IRON GUT SLAM",
+      "combat_frames": 448,
+      "tommy_health": 47,
+      "level": 4,
+      "mask": 31,
+      "fight": 14,
+      "history_pick": "CUNNING"
+    },
+    {
+      "won": true,
+      "target_special": 4,
+      "target_special_name": "IRON GUT SLAM",
+      "combat_frames": 512,
+      "tommy_health": 54,
+      "level": 4,
+      "mask": 31,
+      "fight": 15,
+      "history_pick": "CUNNING"
+    },
+    {
+      "won": true,
+      "target_special": 5,
+      "target_special_name": "PHANTOM POUNCE",
+      "combat_frames": 560,
+      "tommy_health": 34,
+      "level": 4,
+      "mask": 63,
+      "fight": 16,
+      "history_pick": "CUNNING"
+    },
+    {
+      "won": true,
+      "target_special": 5,
+      "target_special_name": "PHANTOM POUNCE",
+      "combat_frames": 624,
+      "tommy_health": 6,
+      "level": 4,
+      "mask": 63,
+      "fight": 17,
+      "history_pick": "CUNNING"
+    },
+    {
+      "won": true,
+      "target_special": 5,
+      "target_special_name": "PHANTOM POUNCE",
+      "combat_frames": 624,
+      "tommy_health": 38,
+      "level": 4,
+      "mask": 63,
+      "fight": 18,
+      "history_pick": "CUNNING"
+    },
+    {
+      "won": true,
+      "target_special": 6,
+      "target_special_name": "HUNGER HOWL",
+      "combat_frames": 752,
+      "tommy_health": 18,
+      "level": 4,
+      "mask": 127,
+      "fight": 19,
+      "history_pick": "CUNNING"
+    },
+    {
+      "won": true,
+      "target_special": 6,
+      "target_special_name": "HUNGER HOWL",
+      "combat_frames": 816,
+      "tommy_health": 8,
+      "level": 5,
+      "mask": 127,
+      "fight": 20,
+      "history_pick": "CUNNING"
+    },
+    {
+      "won": true,
+      "target_special": 6,
+      "target_special_name": "HUNGER HOWL",
+      "combat_frames": 792,
+      "tommy_health": 10,
+      "level": 5,
+      "mask": 127,
+      "fight": 21,
+      "history_pick": "CUNNING"
+    },
+    {
+      "won": true,
+      "target_special": 7,
+      "target_special_name": "CROWNBREAKER",
+      "combat_frames": 776,
+      "tommy_health": 36,
+      "level": 5,
+      "mask": 255,
+      "fight": 22,
+      "history_pick": null
+    }
+  ],
+  "combat_frames": 9272,
+  "estimated_runtime_seconds": 227.69
+}

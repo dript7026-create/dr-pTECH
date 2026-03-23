@@ -1,0 +1,178 @@
+// Simple Win32 GUI that lets the user pick a file or folder, runs the existing
+// readAIpolish.exe pipeline, shows success/failure, and prompts for next scan.
+//
+// Build: see Makefile (links comdlg32, shell32)
+
+#define WIN32_LEAN_AND_MEAN
+#include <windows.h>
+#include <commdlg.h>
+#include <shlobj.h>
+#include <stdio.h>
+#include <string.h>
+
+#define IDC_BROWSE_FILE  101
+#define IDC_BROWSE_FOLDER 102
+#define IDC_START        103
+#define IDC_PATH_EDIT    104
+#define IDC_STATUS       105
+
+static HWND hPathEdit, hStatus;
+
+static void SetStatus(HWND hwnd, const char *msg) {
+    SetWindowTextA(hStatus, msg);
+}
+
+static BOOL BrowseForFolder(HWND hwnd, char *outPath, DWORD outLen) {
+    BROWSEINFOA bi = {0};
+    bi.hwndOwner = hwnd;
+    bi.lpszTitle = "Select folder to scan";
+    bi.ulFlags = BIF_RETURNONLYFSDIRS | BIF_USENEWUI;
+    LPITEMIDLIST pidl = SHBrowseForFolderA(&bi);
+    if (!pidl) return FALSE;
+    if (!SHGetPathFromIDListA(pidl, outPath)) { CoTaskMemFree(pidl); return FALSE; }
+    CoTaskMemFree(pidl);
+    return TRUE;
+}
+
+static BOOL OpenFileDialog(HWND hwnd, char *outPath, DWORD outLen) {
+    OPENFILENAMEA ofn = {0};
+    char szFile[MAX_PATH] = {0};
+    ofn.lStructSize = sizeof(ofn);
+    ofn.hwndOwner = hwnd;
+    ofn.lpstrFile = szFile;
+    ofn.nMaxFile = sizeof(szFile);
+    ofn.lpstrFilter = "Images and Videos\0*.png;*.jpg;*.jpeg;*.bmp;*.tiff;*.mp4;*.avi;*.mov;*.mkv;*.wmv;*.flv\0All Files\0*.*\0";
+    ofn.nFilterIndex = 1;
+    ofn.Flags = OFN_PATHMUSTEXIST | OFN_FILEMUSTEXIST;
+    if (!GetOpenFileNameA(&ofn)) return FALSE;
+    strncpy(outPath, szFile, outLen-1);
+    return TRUE;
+}
+
+struct WorkerArg { char target[MAX_PATH]; char outdir[MAX_PATH]; HWND hwnd; };
+
+static DWORD WINAPI WorkerThread(LPVOID lpParam) {
+    struct WorkerArg *arg = (struct WorkerArg*)lpParam;
+    // locate readAIpolish.exe in same folder as GUI exe
+    char exePath[MAX_PATH] = {0};
+    GetModuleFileNameA(NULL, exePath, MAX_PATH);
+    char *last = strrchr(exePath, '\\');
+    if (last) *(last+1) = 0; // keep trailing slash
+    char pipelineExe[MAX_PATH];
+    snprintf(pipelineExe, sizeof(pipelineExe), "%sreadAIpolish.exe", exePath);
+
+    // if readAIpolish.exe doesn't exist, try in current working dir
+    if (GetFileAttributesA(pipelineExe) == INVALID_FILE_ATTRIBUTES) {
+        snprintf(pipelineExe, sizeof(pipelineExe), "readAIpolish.exe");
+    }
+
+    // build command line
+    char cmdline[4096];
+    // ensure outdir exists (use Powershell/mkdir) — but simpler: pass outdir and let pipeline create
+    snprintf(cmdline, sizeof(cmdline), "\"%s\" \"%s\" \"%s\"", pipelineExe, arg->target, arg->outdir);
+
+    // run process
+    STARTUPINFOA si = {0}; si.cb = sizeof(si);
+    PROCESS_INFORMATION pi = {0};
+    BOOL ok = CreateProcessA(NULL, cmdline, NULL, NULL, FALSE, 0, NULL, NULL, &si, &pi);
+    if (!ok) {
+        PostMessageA(arg->hwnd, WM_USER + 1, (WPARAM)1, (LPARAM)0); // fail
+        free(arg);
+        return 1;
+    }
+    // wait and get exit code
+    WaitForSingleObject(pi.hProcess, INFINITE);
+    DWORD exitCode = 1;
+    GetExitCodeProcess(pi.hProcess, &exitCode);
+    CloseHandle(pi.hProcess); CloseHandle(pi.hThread);
+
+    if (exitCode == 0) PostMessageA(arg->hwnd, WM_USER + 1, (WPARAM)0, (LPARAM)0);
+    else PostMessageA(arg->hwnd, WM_USER + 1, (WPARAM)1, (LPARAM)0);
+
+    free(arg);
+    return 0;
+}
+
+LRESULT CALLBACK WndProc(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam) {
+    switch (msg) {
+    case WM_CREATE: {
+        CreateWindowA("STATIC", "Selected path:", WS_VISIBLE|WS_CHILD, 10, 10, 80, 20, hwnd, NULL, NULL, NULL);
+        hPathEdit = CreateWindowA("EDIT", "", WS_CHILD | WS_VISIBLE | WS_BORDER | ES_AUTOHSCROLL, 100, 10, 400, 24, hwnd, (HMENU)IDC_PATH_EDIT, NULL, NULL);
+        CreateWindowA("BUTTON", "Browse File...", WS_CHILD|WS_VISIBLE, 520, 10, 110, 24, hwnd, (HMENU)IDC_BROWSE_FILE, NULL, NULL);
+        CreateWindowA("BUTTON", "Browse Folder...", WS_CHILD|WS_VISIBLE, 640, 10, 120, 24, hwnd, (HMENU)IDC_BROWSE_FOLDER, NULL, NULL);
+        CreateWindowA("BUTTON", "Start Scan", WS_CHILD|WS_VISIBLE, 10, 50, 120, 28, hwnd, (HMENU)IDC_START, NULL, NULL);
+        hStatus = CreateWindowA("STATIC", "Idle", WS_CHILD|WS_VISIBLE|SS_LEFT, 150, 54, 610, 24, hwnd, (HMENU)IDC_STATUS, NULL, NULL);
+        break;
+    }
+    case WM_COMMAND: {
+        int id = LOWORD(wParam);
+        if (id == IDC_BROWSE_FILE) {
+            char path[MAX_PATH] = {0};
+            if (OpenFileDialog(hwnd, path, MAX_PATH)) {
+                SetWindowTextA(hPathEdit, path);
+            }
+        } else if (id == IDC_BROWSE_FOLDER) {
+            char path[MAX_PATH] = {0};
+            if (BrowseForFolder(hwnd, path, MAX_PATH)) {
+                SetWindowTextA(hPathEdit, path);
+            }
+        } else if (id == IDC_START) {
+            char path[MAX_PATH] = {0};
+            GetWindowTextA(hPathEdit, path, MAX_PATH);
+            if (path[0] == 0) { MessageBoxA(hwnd, "Please choose a file or folder first.", "No target", MB_OK|MB_ICONEXCLAMATION); break; }
+            // build outdir: <chosen path parent>\blender_outputs  OR if folder chosen, same folder\blender_outputs
+            char outdir[MAX_PATH] = {0};
+            DWORD fa = GetFileAttributesA(path);
+            if (fa != INVALID_FILE_ATTRIBUTES && (fa & FILE_ATTRIBUTE_DIRECTORY)) {
+                snprintf(outdir, MAX_PATH, "%s\\blender_outputs", path);
+            } else {
+                // file: extract parent
+                strncpy(outdir, path, MAX_PATH-1);
+                char *p = strrchr(outdir, '\\'); if (!p) p = strrchr(outdir, '/'); if (p) *(p+1)=0; else strcpy(outdir, ".\\");
+                strncat(outdir, "blender_outputs", MAX_PATH - strlen(outdir) - 1);
+            }
+            // create arg and launch worker thread
+            struct WorkerArg *arg = (struct WorkerArg*)malloc(sizeof(struct WorkerArg));
+            if (!arg) { MessageBoxA(hwnd, "Out of memory", "Error", MB_OK|MB_ICONERROR); break; }
+            strncpy(arg->target, path, MAX_PATH-1);
+            strncpy(arg->outdir, outdir, MAX_PATH-1);
+            arg->hwnd = hwnd;
+            SetStatus(hwnd, "Running pipeline...");
+            HANDLE ht = CreateThread(NULL, 0, WorkerThread, arg, 0, NULL);
+            if (ht) CloseHandle(ht);
+            else { SetStatus(hwnd, "Failed to start worker thread"); free(arg); }
+        }
+        break;
+    }
+    case WM_USER + 1: {
+        // worker posted result: wParam 0=success 1=failure
+        if (wParam == 0) SetStatus(hwnd, "Success! Output saved. Choose new scan.");
+        else SetStatus(hwnd, "Failed. Check logs in output folder. Choose new scan.");
+        break;
+    }
+    case WM_DESTROY:
+        PostQuitMessage(0);
+        break;
+    default:
+        return DefWindowProcA(hwnd, msg, wParam, lParam);
+    }
+    return 0;
+}
+
+int WINAPI WinMain(HINSTANCE hInst, HINSTANCE hPrev, LPSTR lpCmd, int nShow) {
+    WNDCLASSA wc = {0};
+    wc.lpfnWndProc = WndProc;
+    wc.hInstance = hInst;
+    wc.lpszClassName = "ReadAIpolishGUI";
+    wc.hCursor = LoadCursor(NULL, IDC_ARROW);
+    RegisterClassA(&wc);
+    HWND hwnd = CreateWindowA("ReadAIpolishGUI", "readAIpolish GUI", WS_OVERLAPPEDWINDOW & ~WS_THICKFRAME, CW_USEDEFAULT, CW_USEDEFAULT, 800, 140, NULL, NULL, hInst, NULL);
+    ShowWindow(hwnd, nShow);
+    UpdateWindow(hwnd);
+    MSG msg;
+    while (GetMessageA(&msg, NULL, 0, 0)) {
+        TranslateMessage(&msg);
+        DispatchMessageA(&msg);
+    }
+    return 0;
+}

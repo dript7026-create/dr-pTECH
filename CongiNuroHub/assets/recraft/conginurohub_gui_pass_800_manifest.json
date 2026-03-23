@@ -1,0 +1,113 @@
+{
+  "manifest_name": "conginurohub_gui_pass_800",
+  "manifest_version": "2026-03-13.conginurohub_gui_pass_800",
+  "intent": "800-credit Recraft pass for the CongiNuroHub educator-facing live simulation dashboard, extending NeoWakeUP visual language into a classroom cognition aesthetic.",
+  "budget": {
+    "unit_cost": 80,
+    "asset_count": 10,
+    "total_credits": 800
+  },
+  "shared_prompt_appendix": "CongiNuroHub live cognition lab visual system. Transparent background unless asset is a complete panel. High readability for classroom projection, real-time simulation dashboard use, and browser compositing. Aesthetic direction: humane scientific mysticism, lucid systems cartography, educational seriousness, disciplined ornament, no generic enterprise UI. Design for crisp layering and animation slicing.",
+  "assets": [
+    {
+      "name": "conginurohub_control_hub_background",
+      "prompt": "Full panel background for a browser-based cognitive development hub dashboard, educational but awe-struck, layered information architecture, calm luminous field, precise panel zoning, no text.",
+      "negative_prompt": "people, watermark, logo, blurry geometry, mobile app screenshot",
+      "w": 1536,
+      "h": 1024,
+      "api_units": 80,
+      "model": "recraftv4",
+      "out": "gui_pass_800/panels/conginurohub_control_hub_background.png"
+    },
+    {
+      "name": "cognitive_habitat_orbits",
+      "prompt": "Transparent sheet of orbital habitat ring graphics for cognitive-development hubs, concentric educational ecology, clean segmentation, projection-friendly contrast.",
+      "negative_prompt": "background scene, text, clutter",
+      "w": 1024,
+      "h": 1024,
+      "api_units": 80,
+      "model": "recraftv4",
+      "out": "gui_pass_800/network/cognitive_habitat_orbits.png"
+    },
+    {
+      "name": "artisapiens_avatar_sheet",
+      "prompt": "Transparent sheet of six distinct ArtiSapiens avatar silhouettes for educational simulation dashboards, symbolic but humane, each separated and readable at small sizes.",
+      "negative_prompt": "background, duplicated poses, labels",
+      "w": 1024,
+      "h": 1024,
+      "api_units": 80,
+      "model": "recraftv4",
+      "out": "gui_pass_800/icons/artisapiens_avatar_sheet.png"
+    },
+    {
+      "name": "consensus_wave_spritesheet",
+      "prompt": "Transparent single-row eight-frame sprite sheet showing a live consensus wave pulse for cognition dashboards, elegant looping energy band.",
+      "negative_prompt": "multiple rows, text, scene background",
+      "w": 1024,
+      "h": 256,
+      "api_units": 80,
+      "model": "recraftv4",
+      "out": "gui_pass_800/network/consensus_wave_spritesheet.png"
+    },
+    {
+      "name": "learning_flux_spritesheet",
+      "prompt": "Transparent single-row eight-frame sprite sheet of learning flux particles clustering and dispersing, clear loop, classroom science aesthetic.",
+      "negative_prompt": "text, messy noise, multiple rows",
+      "w": 1024,
+      "h": 256,
+      "api_units": 80,
+      "model": "recraftv4",
+      "out": "gui_pass_800/network/learning_flux_spritesheet.png"
+    },
+    {
+      "name": "directive_dials_set",
+      "prompt": "Transparent set of four specialized directive dials for curiosity, equity, challenge, and reflection, ceremonial-scientific, browser UI compositing ready.",
+      "negative_prompt": "text labels, noisy controls, realistic photo UI",
+      "w": 1024,
+      "h": 1024,
+      "api_units": 80,
+      "model": "recraftv4",
+      "out": "gui_pass_800/controls/directive_dials_set.png"
+    },
+    {
+      "name": "metric_bar_set",
+      "prompt": "Transparent set of metrics bars and gauge ornaments for consensus, knowledge, reflection, coherence, and friction, sharp and projection-safe.",
+      "negative_prompt": "text, corporate dashboard screenshot, blur",
+      "w": 1024,
+      "h": 1024,
+      "api_units": 80,
+      "model": "recraftv4",
+      "out": "gui_pass_800/controls/metric_bar_set.png"
+    },
+    {
+      "name": "font_uppercase_math_logic",
+      "prompt": "Custom uppercase alphanumeric reference sheet plus major mathematical and logical symbols for CongiNuroHub, strict educational legibility, technical elegance, transparent background.",
+      "negative_prompt": "paragraph text, poster, watermark",
+      "w": 1024,
+      "h": 1024,
+      "api_units": 80,
+      "model": "recraftv4",
+      "out": "gui_pass_800/font/font_uppercase_math_logic.png"
+    },
+    {
+      "name": "font_lowercase_extended_symbols",
+      "prompt": "Custom lowercase and extended symbolic reference sheet for CongiNuroHub including arrows, set notation, calculus marks, and logic operators, transparent background.",
+      "negative_prompt": "paragraph text, poster, watermark",
+      "w": 1024,
+      "h": 1024,
+      "api_units": 80,
+      "model": "recraftv4",
+      "out": "gui_pass_800/font/font_lowercase_extended_symbols.png"
+    },
+    {
+      "name": "live_feed_frame_overlay",
+      "prompt": "Transparent widescreen overlay frame for live rendered simulation feeds, elegant laboratory viewport, subtle decorative intelligence motifs, no text.",
+      "negative_prompt": "solid background, labels, watermark",
+      "w": 1536,
+      "h": 768,
+      "api_units": 80,
+      "model": "recraftv4",
+      "out": "gui_pass_800/panels/live_feed_frame_overlay.png"
+    }
+  ]
+}

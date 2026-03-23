@@ -1,0 +1,20 @@
+{
+  "pg1": {
+    "name": "cover_gravo",
+    "description": "Gravo cover page, hero pose, surreal neighborhood dusk, production-ready key art",
+    "visual_tags": ["transparent background", "beamshot eye glow", "beamsword silhouette", "pseudo3d readable shading"],
+    "w": 1536,
+    "h": 1024,
+    "out": "cover_gravo.png",
+    "style": "digital_illustration"
+  },
+  "pg2": {
+    "name": "enemy_basic_sheet_a",
+    "description": "Basic enemy family sheet for Porch Howlers with turnaround and attack-callout poses",
+    "visual_tags": ["transparent background", "turnaround sheet", "contact-readable silhouettes"],
+    "w": 1536,
+    "h": 1536,
+    "out": "enemy_basic_sheet_a.png",
+    "negative_prompt": "solid background, cropped limbs, unreadable silhouette"
+  }
+}

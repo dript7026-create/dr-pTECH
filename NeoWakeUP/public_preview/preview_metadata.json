@@ -1,0 +1,54 @@
+{
+  "preview": "C:\\Users\\rrcar\\Documents\\drIpTECH\\NeoWakeUP\\public_preview\\neowakeup_control_hub_preview.png",
+  "report": {
+    "tick": 0,
+    "planetary_coherence": 0.641945,
+    "exchange": 0.537929,
+    "volatility": 0.275775,
+    "solution_score": 0.659035,
+    "directive": {
+      "novelty": 0.7,
+      "equity": 0.7,
+      "resilience": 0.7,
+      "speed": 0.6
+    },
+    "regions": {
+      "region-1": {
+        "coherence": 0.6967,
+        "knowledge": 0.640504,
+        "resource_balance": 0.913957,
+        "volatility": 0.295297
+      },
+      "region-2": {
+        "coherence": 0.618884,
+        "knowledge": 0.422589,
+        "resource_balance": 0.819072,
+        "volatility": 0.337266
+      },
+      "region-3": {
+        "coherence": 0.673314,
+        "knowledge": 0.581519,
+        "resource_balance": 0.811979,
+        "volatility": 0.278444
+      },
+      "region-4": {
+        "coherence": 0.650618,
+        "knowledge": 0.511898,
+        "resource_balance": 0.853981,
+        "volatility": 0.276551
+      },
+      "region-5": {
+        "coherence": 0.655796,
+        "knowledge": 0.541113,
+        "resource_balance": 0.865078,
+        "volatility": 0.283273
+      },
+      "region-6": {
+        "coherence": 0.660514,
+        "knowledge": 0.529948,
+        "resource_balance": 0.836694,
+        "volatility": 0.183818
+      }
+    }
+  }
+}

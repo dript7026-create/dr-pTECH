@@ -1,0 +1,41 @@
+{
+  "project": "KaijuGaiden",
+  "path": "KaijuGaiden",
+  "provider": "python",
+  "requirements_file": "KaijuGaiden/requirements-graphical.txt",
+  "upstream_projects": [
+    {
+      "name": "SDL2",
+      "homepage": "https://www.libsdl.org/",
+      "credit_required": true,
+      "purpose": "Desktop host runtime path for rendering, audio, and input."
+    },
+    {
+      "name": "GBDK-2020",
+      "homepage": "https://github.com/gbdk-2020/gbdk-2020",
+      "credit_required": true,
+      "purpose": "Game Boy toolchain and API surface used by the GB target."
+    },
+    {
+      "name": "devkitARM / libgba",
+      "homepage": "https://devkitpro.org/",
+      "credit_required": true,
+      "purpose": "Game Boy Advance toolchain and API surface used by the GBA target."
+    }
+  ],
+  "module_groups": [
+    {
+      "name": "graphical_host_optional",
+      "modules": [
+        "pygame",
+        "PIL"
+      ],
+      "purpose": "Optional graphical host and joystick fallback support."
+    }
+  ],
+  "notes": [
+    "Tkinter remains the baseline host path.",
+    "pygame is only used when the graphical host enables joystick fallback helpers.",
+    "Track broader open-source attribution in THIRD_PARTY_CREDITS.md and tools/dependency_manifests/open_source_3d_stack.json."
+  ]
+}

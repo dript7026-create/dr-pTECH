@@ -1,0 +1,22 @@
+{
+  "manifest_name": "neowakeup_dial_knob_corrective_v2",
+  "manifest_version": "2026-03-13.neowakeup_dial_knob_corrective_v2",
+  "intent": "40-credit targeted rerun for the NeoWakeUP dial/knob sheet with stricter transparency requirements.",
+  "budget": {
+    "unit_cost": 40,
+    "asset_count": 1,
+    "total_credits": 40
+  },
+  "shared_prompt_appendix": "NeoWakeUP dial corrective rerun. Deliver only isolated dial and knob objects on true transparent alpha. No backing card, no poster field, no panel silhouette, no scene, no decorative frame. Arrange as a neat three-column control sheet with generous empty space between controls.",
+  "assets": [
+    {
+      "name": "dial_knob_set_v2",
+      "prompt": "Transparent background sticker-sheet style set of NeoWakeUP circular dials and knobs only, three primary controls with neutral, hover, and active appearance cues, floating isolated objects, no backing plate, no panel, no typography. NeoWakeUP dial corrective rerun. Deliver only isolated dial and knob objects on true transparent alpha. No backing card, no poster field, no panel silhouette, no scene, no decorative frame. Arrange as a neat three-column control sheet with generous empty space between controls.",
+      "w": 1024,
+      "h": 1024,
+      "api_units": 40,
+      "model": "recraftv4",
+      "out": "gui_pass_300_corrective_v2/controls/dial_knob_set.png"
+    }
+  ]
+}

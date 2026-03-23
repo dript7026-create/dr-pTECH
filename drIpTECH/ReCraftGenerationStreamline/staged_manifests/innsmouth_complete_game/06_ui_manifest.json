@@ -1,0 +1,53 @@
+[
+    {
+        "name":  "innsmouth_ui_hud_core_v3",
+        "category":  "ui",
+        "prompt_revision":  "transparent_orb32_v1",
+        "protocol_profile":  "innsmouth_island_dimensional_protocol_v1",
+        "pass_kind":  "complete_game",
+        "guide_ref":  "innsmouth_island_complete_game_prompt_guide_v1",
+        "prompt":  "ORBSystems 32-dimensional coherency UI request for InnsmouthIsland; transparent background only, isolated alpha render, no opaque backdrop; HUD core with moisture bar, breathing sync meter, vitality, stamina, boss health shell, focus target widgets, angular black-wet-metal framing with eldritch brass trim, no text in main art zones",
+        "negative_prompt":  "opaque background, solid background, painted matte, scenic mockup, watermark, logo",
+        "controls":  {
+                         "transparent_background":  true
+                     },
+        "transparent_background":  true,
+        "w":  1536,
+        "h":  768,
+        "out":  "../../../ORBEngine/assets/innsmouth_island/complete_game/ui/innsmouth_ui_hud_core_v3.png"
+    },
+    {
+        "name":  "innsmouth_ui_inventory_equipment_v3",
+        "category":  "ui",
+        "prompt_revision":  "transparent_orb32_v1",
+        "protocol_profile":  "innsmouth_island_dimensional_protocol_v1",
+        "pass_kind":  "complete_game",
+        "guide_ref":  "innsmouth_island_complete_game_prompt_guide_v1",
+        "prompt":  "ORBSystems 32-dimensional coherency UI request for InnsmouthIsland; transparent background only on alpha, no opaque backdrop; inventory equipment menu frames, armor slot plates, weapon slot crests, shrine upgrade cards, codex frame language, expressionistic angular ornament and readable gamepad-era structure, no text in main art zones",
+        "negative_prompt":  "opaque background, solid background, painted matte, scenic mockup, watermark, logo",
+        "controls":  {
+                         "transparent_background":  true
+                     },
+        "transparent_background":  true,
+        "w":  1536,
+        "h":  768,
+        "out":  "../../../ORBEngine/assets/innsmouth_island/complete_game/ui/innsmouth_ui_inventory_equipment_v3.png"
+    },
+    {
+        "name":  "innsmouth_ui_icons_and_codex_v3",
+        "category":  "ui",
+        "prompt_revision":  "transparent_orb32_v1",
+        "protocol_profile":  "innsmouth_island_dimensional_protocol_v1",
+        "pass_kind":  "complete_game",
+        "guide_ref":  "innsmouth_island_complete_game_prompt_guide_v1",
+        "prompt":  "ORBSystems 32-dimensional coherency icon request for InnsmouthIsland; transparent background only, isolated alpha render, no opaque backdrop; weapon family icons, armor crests, pickup icons, shrine node icons, quest markers, codex portrait frames, map glyphs, expressionistic angular icon silhouettes with premium readability, no text",
+        "negative_prompt":  "opaque background, solid background, painted matte, scenic mockup, watermark, logo",
+        "controls":  {
+                         "transparent_background":  true
+                     },
+        "transparent_background":  true,
+        "w":  1536,
+        "h":  768,
+        "out":  "../../../ORBEngine/assets/innsmouth_island/complete_game/ui/innsmouth_ui_icons_and_codex_v3.png"
+    }
+]

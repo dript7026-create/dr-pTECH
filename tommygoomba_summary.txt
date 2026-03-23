@@ -1,0 +1,57 @@
+Tommy Goomba — Consolidated Summary
+
+Date: 2026-03-08
+Workspace: C:\Users\rrcar\Documents\drIpTECH
+
+Files included:
+- tommygoomba.c — Canonical Windows console C source (uses <conio.h>).
+- tommygoomba/tommygoomba.gb — Game Boy–target C source (GBDK-style skeleton).
+- tommygoomba/README.md — Per-target README (short).
+
+Purpose:
+This project contains two related implementations: a small Windows console simulation and an early Game Boy (GBDK) skeleton for Tommy Goomba.
+
+Recent actions performed:
+- Applied RNG seed fix in tommygoomba.c so srand() is called before any rand() usage.
+- Removed duplicate tommygoombaGB.gb (which contained desktop C source but used a .gb extension).
+- Added tommygoomba/README.md with build notes and recommendations.
+
+Summary of each file:
+- tommygoomba.c
+  - Windows console program.
+  - Circular map of 66 stages; keyboard controls: A=search, J/L movement, I/K jump ±5, Q quit.
+  - Uses _kbhit() and _getch() from <conio.h> (MSVC/MinGW specific).
+  - RNG seed ordering fixed: srand((unsigned)time(NULL)); now called before rand().
+
+- tommygoomba/tommygoomba.gb
+  - GBDK-style C source with game state, player struct, input handling.
+  - Rendering, sprite/tile data, and encounter/combat logic are stubs and need assets and implementation.
+
+Build & run (suggested):
+- Windows (MinGW):
+  gcc -o tommygoomba.exe tommygoomba.c
+  .\tommygoomba.exe
+
+- Microsoft Visual C: Create a new console project, add tommygoomba.c and build.
+
+- Game Boy (GBDK):
+  lcc -o tommygoomba.gb tommygoomba.gb
+
+Notes & recommendations:
+- Keep tommygoomba.c as the canonical desktop source. Avoid saving C source with a .gb extension (reserve .gb for ROM images).
+- To make the desktop program portable, replace conio.h usage for POSIX, or document that it targets Windows/MSVC/MinGW.
+- For Game Boy target, add tile/sprite data, map assets, and a simple rendering loop; configure GBDK include paths.
+
+Packaging advice:
+- Gmail often blocks archives containing script files. Preferred secure delivery options:
+  - Upload to internal OneDrive/SharePoint and share a scoped link.
+  - Upload to Google Drive and set link access (org-only).
+  - Create an AES-encrypted 7z and share the password separately.
+
+Example PowerShell to create an encrypted 7z locally (update password as needed):
+& 'C:\Program Files\7-Zip\7z.exe' a -t7z driptech_package_2026-03-04_23-26-59.7z driptech_package_2026-03-04_23-26-59.zip -p<password> -mhe=on
+
+Next steps I can take:
+- Implement rendering stubs or sprite scaffolding for the GBDK source.
+- Add a build script (PowerShell / Makefile) for desktop and GBDK builds.
+- Create encrypted archive and provide password securely (per your protocol).

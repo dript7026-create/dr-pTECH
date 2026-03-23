@@ -1,0 +1,30 @@
+{
+  "guide_name": "innsmouth_island_tiles_skybox_pair_pipeline_guide_v1",
+  "date": "2026-03-11",
+  "purpose": "Paired final-render and depth-hit-detection-precision tile expansion guide for InnsmouthIsland environment and skybox tile coverage.",
+  "budget_target": {
+    "max_api_units": 1500,
+    "estimated_api_units": 1440
+  },
+  "pairing_rules": {
+    "required_pair": "Every tile is generated twice: one full-detail final render tile and one congruent depth-hit-detection-precision tile.",
+    "congruency": [
+      "The precision tile must preserve the same major silhouette masses, edge breaks, top-plane boundaries, and walkable contour as the final-render tile.",
+      "Skybox precision tiles must preserve skyline and cloud break shapes so stitched assembly matches the final render tile set.",
+      "Tile pairs must align edge-to-edge inside the same square footprint without border drift."
+    ],
+    "tile_boundary_policy": [
+      "Tile art should fill the intended tile square rather than drift into scenic poster framing.",
+      "Traversal and occlusion boundaries must be explicit in the precision variant.",
+      "Skybox tiles must stitch cleanly when repeated or assembled into horizon bands."
+    ]
+  },
+  "render_rules": {
+    "transparent_background": false,
+    "tile_fill": "full square tile coverage with no external scene framing",
+    "lighting": "single coherent in-game light family across tile pairs",
+    "surface_logic": "clear top-plane, wall-plane, and hazard-plane separation where applicable"
+  },
+  "base_asset_policy": "Use the already generated complete_game environment singles and atmosphere layers as the canonical art-direction source.",
+  "output_root": "../../ORBEngine/assets/innsmouth_island/tiles_skybox_pair_expansion"
+}

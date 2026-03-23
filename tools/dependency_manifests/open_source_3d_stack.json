@@ -1,0 +1,66 @@
+{
+  "project": "Open-source 3D and engine stack",
+  "path": ".",
+  "provider": "mixed",
+  "requirements_file": null,
+  "dependencies": [
+    {
+      "name": "Blender",
+      "provider": "blender",
+      "homepage": "https://www.blender.org/",
+      "used_in": [
+        "egosphere/pipeline",
+        "drIpTECHBlenderPlug-Ins",
+        "bango-patoot_3DS/tools"
+      ],
+      "purpose": "3D lift, rigging, material setup, scene ingest, and pseudo-3D conversion workflows.",
+      "credit_required": true
+    },
+    {
+      "name": "id Tech 2 / Quake II source release",
+      "provider": "id-software-lineage",
+      "homepage": "https://github.com/id-Software/Quake-2",
+      "used_in": [
+        "egosphere/pipeline",
+        "bango-patoot_3DS",
+        "KaijuGaiden/idtech2_port"
+      ],
+      "purpose": "Engine-target integration, generated runtime glue, and mod/bootstrap experiments.",
+      "credit_required": true
+    },
+    {
+      "name": "SDL2",
+      "provider": "libsdl",
+      "homepage": "https://www.libsdl.org/",
+      "used_in": [
+        "KaijuGaiden"
+      ],
+      "purpose": "Desktop host rendering, audio, and input support.",
+      "credit_required": true
+    },
+    {
+      "name": "GBDK-2020",
+      "provider": "gbdk-2020",
+      "homepage": "https://github.com/gbdk-2020/gbdk-2020",
+      "used_in": [
+        "KaijuGaiden"
+      ],
+      "purpose": "Game Boy build target and runtime API surface.",
+      "credit_required": true
+    },
+    {
+      "name": "devkitARM / libgba",
+      "provider": "devkitpro",
+      "homepage": "https://devkitpro.org/",
+      "used_in": [
+        "KaijuGaiden"
+      ],
+      "purpose": "Game Boy Advance build target and runtime API surface.",
+      "credit_required": true
+    }
+  ],
+  "notes": [
+    "Update this manifest whenever a project adds a new open-source 3D, engine, or runtime dependency.",
+    "Keep the human-readable summary in THIRD_PARTY_CREDITS.md aligned with this file."
+  ]
+}

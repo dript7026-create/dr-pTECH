@@ -1,0 +1,33 @@
+{
+  "project": "Blender tooling",
+  "path": "drIpTECHBlenderPlug-Ins",
+  "provider": "blender",
+  "requirements_file": null,
+  "upstream_projects": [
+    {
+      "name": "Blender",
+      "homepage": "https://www.blender.org/",
+      "credit_required": true,
+      "purpose": "Embedded Python runtime and authoring environment for addon and pipeline tooling."
+    }
+  ],
+  "module_groups": [
+    {
+      "name": "blender_embedded_python",
+      "modules": [
+        "bpy",
+        "bmesh",
+        "mathutils",
+        "gpu",
+        "gpu_extras",
+        "bpy_extras"
+      ],
+      "purpose": "Blender addon runtime and viewport tooling."
+    }
+  ],
+  "notes": [
+    "These modules are provided by Blender's embedded Python and are not expected in the workspace venv.",
+    "Validate this stack by running the relevant scripts inside Blender or Blender's bundled Python.",
+    "Track human-readable attribution in THIRD_PARTY_CREDITS.md."
+  ]
+}

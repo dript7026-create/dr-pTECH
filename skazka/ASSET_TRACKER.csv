@@ -1,0 +1,11 @@
+AssetID,Category,AssetName,QuantityRequired,Priority,Owner,Status,TargetMilestone
+SKZ-BRAND-001,Branding,drIpTech Splash,1,P0,Art,TODO,M1
+SKZ-BRAND-002,Branding,Do9Graphics Splash,1,P0,Art,TODO,M1
+SKZ-BRAND-003,Branding,DripSkullTechnologies Splash,1,P0,Art,TODO,M1
+SKZ-UI-001,UI,Main Menu Kit,1,P0,UI,TODO,M1
+SKZ-PLY-001,Player,Warrior Set,1,P0,CharacterArt,TODO,M2
+SKZ-ENM-001,Enemies,Minion Sets T1-T3,18,P0,CharacterArt,TODO,M2
+SKZ-BOSS-OW-001,Bosses,Overworld Boss Sets,14,P0,CharacterArt,TODO,M3
+SKZ-BOSS-PL-001,Bosses,Plot Boss Sets,8,P0,CharacterArt,TODO,M4
+SKZ-COMP-001,Companion,Demon-Cherub Fairy Set,1,P0,CharacterArt,TODO,M3
+SKZ-AUD-001,Audio,Core Music+SFX Pack,1,P0,Audio,TODO,M2

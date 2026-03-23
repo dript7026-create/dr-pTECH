@@ -1,0 +1,24 @@
+{
+  "package_name": "dirkodds_android_client_review_2026-03-20",
+  "project": "DirkOdds Mobile",
+  "top_level_files": [
+    "HANDOFF_NOTE.md",
+    "CLIENT_EXEC_SUMMARY.md",
+    "README.md",
+    "VALIDATION_SUMMARY.json",
+    "PACKAGE_MANIFEST.json",
+    "install_to_android.ps1"
+  ],
+  "artifacts": [
+    "artifacts/dirkodds_mobile_release.apk"
+  ],
+  "repo_contents": [
+    "repo/android_app/",
+    "repo/dirkodds_reference/"
+  ],
+  "review_intent": [
+    "interactive Android client review",
+    "synthetic real-time sports prediction testing",
+    "non-identifying 3D playback evaluation"
+  ]
+}

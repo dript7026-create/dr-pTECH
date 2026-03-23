@@ -1,0 +1,288 @@
+{
+  "manifest_name": "illusioncanvas_gui_1000_credit_pass",
+  "manifest_version": "2026-03-13.ui_shells",
+  "intent": "1000-credit GUI shell pass for IllusionCanvasInteractive themed around gothic sculpture and architecture in a 32-bit horror-survival pixel-art language.",
+  "output_root": "../generated/recraft_ui",
+  "budget": {
+    "allocated_credits": 1000,
+    "asset_count": 25,
+    "units_per_asset": 40
+  },
+  "assets": [
+    {
+      "name": "ic_shell_runtime_frame",
+      "prompt": "transparent background custom game UI asset for IllusionCanvasInteractive, pixel-art 32-bit style, gothic sculpture and cathedral architecture, horror-movie Victorian meets late medieval survival game tone, weathered stone, brass reliquary trim, candle ember accents, readable silhouette language, no text labels unless required as decorative glyph lanes, runtime shell frame with vaulted gothic tracery, playable viewport aperture, lower command altar, and reliquary corners",
+      "w": 1024,
+      "h": 1024,
+      "out": "shells/ic_shell_runtime_frame.png",
+      "model": "recraftv4",
+      "planned_credits": 40,
+      "api_units": 40,
+      "transparent_background": true
+    },
+    {
+      "name": "ic_shell_studio_frame",
+      "prompt": "transparent background custom game UI asset for IllusionCanvasInteractive, pixel-art 32-bit style, gothic sculpture and cathedral architecture, horror-movie Victorian meets late medieval survival game tone, weathered stone, brass reliquary trim, candle ember accents, readable silhouette language, no text labels unless required as decorative glyph lanes, editor studio shell frame with docking wells, archivist tooling rails, rose-window header band, and stained-metal corners",
+      "w": 1024,
+      "h": 1024,
+      "out": "shells/ic_shell_studio_frame.png",
+      "model": "recraftv4",
+      "planned_credits": 40,
+      "api_units": 40,
+      "transparent_background": true
+    },
+    {
+      "name": "ic_hud_command_frame",
+      "prompt": "transparent background custom game UI asset for IllusionCanvasInteractive, pixel-art 32-bit style, gothic sculpture and cathedral architecture, horror-movie Victorian meets late medieval survival game tone, weathered stone, brass reliquary trim, candle ember accents, readable silhouette language, no text labels unless required as decorative glyph lanes, combat HUD command frame with cathedral niche panels for health, bond tension, and bond weave",
+      "w": 1024,
+      "h": 1024,
+      "out": "shells/ic_hud_command_frame.png",
+      "model": "recraftv4",
+      "planned_credits": 40,
+      "api_units": 40,
+      "transparent_background": true
+    },
+    {
+      "name": "ic_panel_status_sidebar",
+      "prompt": "transparent background custom game UI asset for IllusionCanvasInteractive, pixel-art 32-bit style, gothic sculpture and cathedral architecture, horror-movie Victorian meets late medieval survival game tone, weathered stone, brass reliquary trim, candle ember accents, readable silhouette language, no text labels unless required as decorative glyph lanes, status sidebar shell with sculpted saints, inventory grooves, and vertical stat cartouches",
+      "w": 1024,
+      "h": 1024,
+      "out": "shells/ic_panel_status_sidebar.png",
+      "model": "recraftv4",
+      "planned_credits": 40,
+      "api_units": 40,
+      "transparent_background": true
+    },
+    {
+      "name": "ic_shell_asset_browser_frame",
+      "prompt": "transparent background custom game UI asset for IllusionCanvasInteractive, pixel-art 32-bit style, gothic sculpture and cathedral architecture, horror-movie Victorian meets late medieval survival game tone, weathered stone, brass reliquary trim, candle ember accents, readable silhouette language, no text labels unless required as decorative glyph lanes, asset browser and codex frame with ossuary drawers, breadcrumb rail, and gothic archive tabs",
+      "w": 1024,
+      "h": 1024,
+      "out": "shells/ic_shell_asset_browser_frame.png",
+      "model": "recraftv4",
+      "planned_credits": 40,
+      "api_units": 40,
+      "transparent_background": true
+    },
+    {
+      "name": "ic_popup_tutorial_tip_shell",
+      "prompt": "transparent background custom game UI asset for IllusionCanvasInteractive, pixel-art 32-bit style, gothic sculpture and cathedral architecture, horror-movie Victorian meets late medieval survival game tone, weathered stone, brass reliquary trim, candle ember accents, readable silhouette language, no text labels unless required as decorative glyph lanes, tutorial pop-up shell template with candlelit lintel and framed instructional plaque",
+      "w": 1024,
+      "h": 1024,
+      "out": "popups/ic_popup_tutorial_tip_shell.png",
+      "model": "recraftv4",
+      "planned_credits": 40,
+      "api_units": 40,
+      "transparent_background": true
+    },
+    {
+      "name": "ic_popup_dialogue_shell",
+      "prompt": "transparent background custom game UI asset for IllusionCanvasInteractive, pixel-art 32-bit style, gothic sculpture and cathedral architecture, horror-movie Victorian meets late medieval survival game tone, weathered stone, brass reliquary trim, candle ember accents, readable silhouette language, no text labels unless required as decorative glyph lanes, dialogue pop-up shell template with speaking portrait socket and lower response shelf",
+      "w": 1024,
+      "h": 1024,
+      "out": "popups/ic_popup_dialogue_shell.png",
+      "model": "recraftv4",
+      "planned_credits": 40,
+      "api_units": 40,
+      "transparent_background": true
+    },
+    {
+      "name": "ic_popup_quest_shell",
+      "prompt": "transparent background custom game UI asset for IllusionCanvasInteractive, pixel-art 32-bit style, gothic sculpture and cathedral architecture, horror-movie Victorian meets late medieval survival game tone, weathered stone, brass reliquary trim, candle ember accents, readable silhouette language, no text labels unless required as decorative glyph lanes, quest notification shell template with heraldic plate, reward lane, and parchment recess",
+      "w": 1024,
+      "h": 1024,
+      "out": "popups/ic_popup_quest_shell.png",
+      "model": "recraftv4",
+      "planned_credits": 40,
+      "api_units": 40,
+      "transparent_background": true
+    },
+    {
+      "name": "ic_popup_choice_shell",
+      "prompt": "transparent background custom game UI asset for IllusionCanvasInteractive, pixel-art 32-bit style, gothic sculpture and cathedral architecture, horror-movie Victorian meets late medieval survival game tone, weathered stone, brass reliquary trim, candle ember accents, readable silhouette language, no text labels unless required as decorative glyph lanes, multi-choice pop-up shell template with three decision bays and consecrated button wells",
+      "w": 1024,
+      "h": 1024,
+      "out": "popups/ic_popup_choice_shell.png",
+      "model": "recraftv4",
+      "planned_credits": 40,
+      "api_units": 40,
+      "transparent_background": true
+    },
+    {
+      "name": "ic_popup_codex_shell",
+      "prompt": "transparent background custom game UI asset for IllusionCanvasInteractive, pixel-art 32-bit style, gothic sculpture and cathedral architecture, horror-movie Victorian meets late medieval survival game tone, weathered stone, brass reliquary trim, candle ember accents, readable silhouette language, no text labels unless required as decorative glyph lanes, codex and bestiary pop-up shell template with tabbed chapter ribs and carved frame",
+      "w": 1024,
+      "h": 1024,
+      "out": "popups/ic_popup_codex_shell.png",
+      "model": "recraftv4",
+      "planned_credits": 40,
+      "api_units": 40,
+      "transparent_background": true
+    },
+    {
+      "name": "ic_popup_inventory_shell",
+      "prompt": "transparent background custom game UI asset for IllusionCanvasInteractive, pixel-art 32-bit style, gothic sculpture and cathedral architecture, horror-movie Victorian meets late medieval survival game tone, weathered stone, brass reliquary trim, candle ember accents, readable silhouette language, no text labels unless required as decorative glyph lanes, inventory pop-up shell template with gridded vault shelves and equipment sockets",
+      "w": 1024,
+      "h": 1024,
+      "out": "popups/ic_popup_inventory_shell.png",
+      "model": "recraftv4",
+      "planned_credits": 40,
+      "api_units": 40,
+      "transparent_background": true
+    },
+    {
+      "name": "ic_popup_merchant_shell",
+      "prompt": "transparent background custom game UI asset for IllusionCanvasInteractive, pixel-art 32-bit style, gothic sculpture and cathedral architecture, horror-movie Victorian meets late medieval survival game tone, weathered stone, brass reliquary trim, candle ember accents, readable silhouette language, no text labels unless required as decorative glyph lanes, merchant or barter pop-up shell template with scale niche, price plaques, and item trays",
+      "w": 1024,
+      "h": 1024,
+      "out": "popups/ic_popup_merchant_shell.png",
+      "model": "recraftv4",
+      "planned_credits": 40,
+      "api_units": 40,
+      "transparent_background": true
+    },
+    {
+      "name": "ic_popup_save_shell",
+      "prompt": "transparent background custom game UI asset for IllusionCanvasInteractive, pixel-art 32-bit style, gothic sculpture and cathedral architecture, horror-movie Victorian meets late medieval survival game tone, weathered stone, brass reliquary trim, candle ember accents, readable silhouette language, no text labels unless required as decorative glyph lanes, save or load shell template with reliquary slot plaques and pilgrimage seals",
+      "w": 1024,
+      "h": 1024,
+      "out": "popups/ic_popup_save_shell.png",
+      "model": "recraftv4",
+      "planned_credits": 40,
+      "api_units": 40,
+      "transparent_background": true
+    },
+    {
+      "name": "ic_popup_settings_shell",
+      "prompt": "transparent background custom game UI asset for IllusionCanvasInteractive, pixel-art 32-bit style, gothic sculpture and cathedral architecture, horror-movie Victorian meets late medieval survival game tone, weathered stone, brass reliquary trim, candle ember accents, readable silhouette language, no text labels unless required as decorative glyph lanes, settings pop-up shell template with slider alcoves, toggle medallions, and nested borders",
+      "w": 1024,
+      "h": 1024,
+      "out": "popups/ic_popup_settings_shell.png",
+      "model": "recraftv4",
+      "planned_credits": 40,
+      "api_units": 40,
+      "transparent_background": true
+    },
+    {
+      "name": "ic_popup_death_shell",
+      "prompt": "transparent background custom game UI asset for IllusionCanvasInteractive, pixel-art 32-bit style, gothic sculpture and cathedral architecture, horror-movie Victorian meets late medieval survival game tone, weathered stone, brass reliquary trim, candle ember accents, readable silhouette language, no text labels unless required as decorative glyph lanes, death or collapse shell template with shattered angel statuary, warning glow, and retry altar",
+      "w": 1024,
+      "h": 1024,
+      "out": "popups/ic_popup_death_shell.png",
+      "model": "recraftv4",
+      "planned_credits": 40,
+      "api_units": 40,
+      "transparent_background": true
+    },
+    {
+      "name": "ic_popup_tooltip_shell",
+      "prompt": "transparent background custom game UI asset for IllusionCanvasInteractive, pixel-art 32-bit style, gothic sculpture and cathedral architecture, horror-movie Victorian meets late medieval survival game tone, weathered stone, brass reliquary trim, candle ember accents, readable silhouette language, no text labels unless required as decorative glyph lanes, small tooltip shell template with gargoyle pointer notch and compact gilded inset",
+      "w": 1024,
+      "h": 1024,
+      "out": "popups/ic_popup_tooltip_shell.png",
+      "model": "recraftv4",
+      "planned_credits": 40,
+      "api_units": 40,
+      "transparent_background": true
+    },
+    {
+      "name": "ic_popup_toast_shell",
+      "prompt": "transparent background custom game UI asset for IllusionCanvasInteractive, pixel-art 32-bit style, gothic sculpture and cathedral architecture, horror-movie Victorian meets late medieval survival game tone, weathered stone, brass reliquary trim, candle ember accents, readable silhouette language, no text labels unless required as decorative glyph lanes, notification toast shell template with small heraldic flare and dismiss socket",
+      "w": 1024,
+      "h": 1024,
+      "out": "popups/ic_popup_toast_shell.png",
+      "model": "recraftv4",
+      "planned_credits": 40,
+      "api_units": 40,
+      "transparent_background": true
+    },
+    {
+      "name": "ic_popup_map_shell",
+      "prompt": "transparent background custom game UI asset for IllusionCanvasInteractive, pixel-art 32-bit style, gothic sculpture and cathedral architecture, horror-movie Victorian meets late medieval survival game tone, weathered stone, brass reliquary trim, candle ember accents, readable silhouette language, no text labels unless required as decorative glyph lanes, world map shell template with cardinal plaques and route-key legend bays",
+      "w": 1024,
+      "h": 1024,
+      "out": "popups/ic_popup_map_shell.png",
+      "model": "recraftv4",
+      "planned_credits": 40,
+      "api_units": 40,
+      "transparent_background": true
+    },
+    {
+      "name": "ic_popup_journal_shell",
+      "prompt": "transparent background custom game UI asset for IllusionCanvasInteractive, pixel-art 32-bit style, gothic sculpture and cathedral architecture, horror-movie Victorian meets late medieval survival game tone, weathered stone, brass reliquary trim, candle ember accents, readable silhouette language, no text labels unless required as decorative glyph lanes, journal shell template with timeline bands, clipped notes, and scripture dividers",
+      "w": 1024,
+      "h": 1024,
+      "out": "popups/ic_popup_journal_shell.png",
+      "model": "recraftv4",
+      "planned_credits": 40,
+      "api_units": 40,
+      "transparent_background": true
+    },
+    {
+      "name": "ic_popup_sanctuary_shell",
+      "prompt": "transparent background custom game UI asset for IllusionCanvasInteractive, pixel-art 32-bit style, gothic sculpture and cathedral architecture, horror-movie Victorian meets late medieval survival game tone, weathered stone, brass reliquary trim, candle ember accents, readable silhouette language, no text labels unless required as decorative glyph lanes, sanctuary and rest shell template with prayer circle recess and roster blessing slots",
+      "w": 1024,
+      "h": 1024,
+      "out": "popups/ic_popup_sanctuary_shell.png",
+      "model": "recraftv4",
+      "planned_credits": 40,
+      "api_units": 40,
+      "transparent_background": true
+    },
+    {
+      "name": "ic_font_cathedral_caps_alphanumeric",
+      "prompt": "transparent background custom game UI asset for IllusionCanvasInteractive, pixel-art 32-bit style, gothic sculpture and cathedral architecture, horror-movie Victorian meets late medieval survival game tone, weathered stone, brass reliquary trim, candle ember accents, readable silhouette language, no text labels unless required as decorative glyph lanes, custom bitmap-like alphanumeric font atlas, uppercase and numerals, blackletter-cathedral hybrid, grid aligned for UI extraction",
+      "w": 1024,
+      "h": 1024,
+      "out": "fonts/ic_font_cathedral_caps_alphanumeric.png",
+      "model": "recraftv4",
+      "planned_credits": 40,
+      "api_units": 40,
+      "transparent_background": true
+    },
+    {
+      "name": "ic_font_cryptic_runes_alphanumeric",
+      "prompt": "transparent background custom game UI asset for IllusionCanvasInteractive, pixel-art 32-bit style, gothic sculpture and cathedral architecture, horror-movie Victorian meets late medieval survival game tone, weathered stone, brass reliquary trim, candle ember accents, readable silhouette language, no text labels unless required as decorative glyph lanes, custom bitmap-like alphanumeric font atlas, mixed-case and numerals, runic reliquary style, grid aligned for UI extraction",
+      "w": 1024,
+      "h": 1024,
+      "out": "fonts/ic_font_cryptic_runes_alphanumeric.png",
+      "model": "recraftv4",
+      "planned_credits": 40,
+      "api_units": 40,
+      "transparent_background": true
+    },
+    {
+      "name": "ic_icon_button_state_atlas",
+      "prompt": "transparent background custom game UI asset for IllusionCanvasInteractive, pixel-art 32-bit style, gothic sculpture and cathedral architecture, horror-movie Victorian meets late medieval survival game tone, weathered stone, brass reliquary trim, candle ember accents, readable silhouette language, no text labels unless required as decorative glyph lanes, button state atlas for idle hover active disabled pressed, gothic sculpted medallion style",
+      "w": 1024,
+      "h": 1024,
+      "out": "atlases/ic_icon_button_state_atlas.png",
+      "model": "recraftv4",
+      "planned_credits": 40,
+      "api_units": 40,
+      "transparent_background": true
+    },
+    {
+      "name": "ic_icon_cursor_prompt_atlas",
+      "prompt": "transparent background custom game UI asset for IllusionCanvasInteractive, pixel-art 32-bit style, gothic sculpture and cathedral architecture, horror-movie Victorian meets late medieval survival game tone, weathered stone, brass reliquary trim, candle ember accents, readable silhouette language, no text labels unless required as decorative glyph lanes, cursor and control prompt atlas for arrow hand crosshair pickup rescue and confirm, cathedral metalwork style",
+      "w": 1024,
+      "h": 1024,
+      "out": "atlases/ic_icon_cursor_prompt_atlas.png",
+      "model": "recraftv4",
+      "planned_credits": 40,
+      "api_units": 40,
+      "transparent_background": true
+    },
+    {
+      "name": "ic_nav_tab_and_breadcrumb_atlas",
+      "prompt": "transparent background custom game UI asset for IllusionCanvasInteractive, pixel-art 32-bit style, gothic sculpture and cathedral architecture, horror-movie Victorian meets late medieval survival game tone, weathered stone, brass reliquary trim, candle ember accents, readable silhouette language, no text labels unless required as decorative glyph lanes, navigation atlas for tabs breadcrumbs and route markers in worn brass and stone",
+      "w": 1024,
+      "h": 1024,
+      "out": "atlases/ic_nav_tab_and_breadcrumb_atlas.png",
+      "model": "recraftv4",
+      "planned_credits": 40,
+      "api_units": 40,
+      "transparent_background": true
+    }
+  ]
+}

@@ -1,0 +1,314 @@
+# TOMMY GOOMBA — Complete Asset Specification
+Version: 1.0  
+Target: Nintendo Game Boy / Game Boy Color-compatible ROM (`.gb`)
+
+---
+
+## 1) Technical Asset Pipeline (Authoring → Build)
+
+## 1.1 Art Source Formats (Editable)
+- **Aseprite source:** `.aseprite`
+- **Layered backup:** `.psd` (optional)
+- **Reference sheets:** `.png` (indexed palette, no alpha gradients)
+
+## 1.2 Runtime Art Formats (Build Outputs)
+- **Tile/sprite data:** generated C arrays (`.c/.h`) via converter
+- **Recommended converter:** `png2asset` (GBDK pipeline)
+- **Sprite size mode:** 8x16 (preferred for characters), 8x8 for UI/effects
+- **Palette:** 4-shade DMG-safe values (required baseline), optional CGB palette extension
+
+## 1.3 Map/Level Formats
+- **Authoring:** Tiled `.tmx` or LDtk `.ldtk`
+- **Export:** CSV/JSON → compile-time C arrays (`stage_##.c`, `world_map.c`)
+- **Tilemap dimensions:**
+  - Stage room: 20x18 visible tiles (160x144)
+  - Scrollable areas: multiples of 32x32 tiles recommended
+
+## 1.4 Animation Data Format
+- **Manifest:** `animations.json` per actor family
+- Required fields:
+  - `name`
+  - `frame_indices[]`
+  - `fps`
+  - `loop` (bool)
+  - `interruptible` (bool)
+  - `cancel_windows[]` (for combat)
+- Build step compiles JSON → `anim_table.c/.h`
+
+Example manifest entry:
+```json
+{
+  "name": "tommy_dash",
+  "frame_indices": [40,41,42,43],
+  "fps": 18,
+  "loop": false,
+  "interruptible": false,
+  "cancel_windows": [2]
+}
+```
+
+---
+
+## 2) Sprite + Animation Requirements (Complete Lists)
+
+## 2.1 Player: Tommy (Required)
+Sprite sheet: `tommy_sheet.png` (indexed 4-color)
+
+### Core movement
+- `idle_up/down/left/right` (4 anims, 2-3 frames each)
+- `walk_up/down/left/right` (4 anims, 4 frames each)
+- `run_up/down/left/right` (4 anims, 4 frames each)
+- `turn_in_place` (4 anims, 2 frames each)
+
+### Combat
+- `bite_1`, `bite_2`, `bite_3` combo chain (3 anims, 3-5 frames each)
+- `bite_charge_hold` (1 anim, 2 frames loop)
+- `dash_start`, `dash_travel`, `dash_hit`, `dash_recover` (4 anims)
+
+### State/utility
+- `hurt_light`, `hurt_heavy`, `knockdown`, `getup`
+- `interact`, `push`, `pull`, `carry_idle`, `carry_walk`
+- `victory`, `defeat`, `sleep`, `shock_awaken` (intro use)
+
+### Minimum frame count target
+- **~140–180 total frames** (after directional reuse optimization)
+
+---
+
+## 2.2 Wife NPC
+- `idle_4dir`, `walk_4dir`, `fear_react`, `relief_react`, `captured_pose`
+- reunion cinematics: `reunion_start`, `reunion_embrace`, `reunion_end`
+
+---
+
+## 2.3 Brothers (2 unique bosses/minibosses)
+Each brother requires:
+- movement set: idle/walk/run/turn (4-dir where needed)
+- attacks:
+  - `light_strike`
+  - `heavy_strike`
+  - `grab_attempt`
+  - `leap_slam`
+- reactions: hurt/guard/stagger/defeat
+- intro and outro taunt clips
+
+Per brother: **90–130 frames** target.
+
+---
+
+## 2.4 Recurring Cousin Faction (persistent encounter enemies)
+- 2 body types minimum with palette swaps
+- shared animation bank:
+  - idle, walk, lunge, swipe, taunt, hurt, recover
+- “cannot permanently remove” marker icon animation (UI-linked)
+
+---
+
+## 2.5 Overworld Bosses (major parody encounters)
+Required bosses:
+1. Fortress Tyrant  
+2. Jungle Giant  
+3. Mirage Duelist  
+4. Vault Brute  
+5. Trickster Duelist  
+6. Hex Mage  
+7. Phantom Lord  
+
+Each boss requires:
+- `intro_pose`
+- locomotion set
+- **3 signature attacks**
+- phase transition animation
+- stagger animation
+- defeat animation
+- unlock grant pose (ability awarded)
+
+Per boss: **120–220 frames** depending on size/phases.
+
+---
+
+## 2.6 Neutral/World NPCs
+- civilians (3 archetypes)
+- merchants (2 archetypes)
+- scouts/messengers (2 archetypes)
+- ambient critters (3 mini spritesheets)
+
+Each archetype:
+- idle/walk/react (min 3 anim states)
+
+---
+
+## 2.7 UI Sprites
+- cursors (title/menu/combat)
+- HP and Spark meter pips
+- status icons (stun, shield, shock, bleed, reveal)
+- ability icons (Charged Dash + boss unlocks)
+- map markers (player, wife sighting, danger, boss presence)
+
+---
+
+## 3) Background, Tiles, and FX Requirements
+
+## 3.1 Tilesets (Required)
+### Overworld biome sets
+- Home Ruins
+- Pipeworks
+- Forest Lattice
+- Castle Belt
+- Sky Fragments
+- Echo District (haunted)
+
+Each tileset must include:
+- ground variants
+- wall/edge transitions
+- hazard tiles
+- interactable tiles
+- decoration layer tiles
+
+## 3.2 Background layers
+- Static BG tilemaps (DMG baseline)
+- Optional parallax simulation (tile-swap strips on CGB/emulator)
+- Weather overlays:
+  - rain
+  - ash
+  - fog shimmer
+  - heat haze (tile animation pattern)
+
+## 3.3 Environmental FX (tile/sprite effects)
+- spark arcs
+- splash/ripple
+- dust burst
+- impact ring
+- shield pulse
+- ghost drift trails
+- break debris (small/medium sets)
+
+FX delivery:
+- short looping sprite strips (2–6 frames)
+- tile animation tables for background hazards
+
+---
+
+## 4) Audio Asset Requirements (Complete)
+
+## 4.1 Music Authoring + Runtime Format
+- **Authoring:** `.uge` (hUGEDriver), optional `.mod` source reference
+- **Runtime:** compiled song data in `.c/.h`
+- Channel budget:
+  - Pulse 1 (lead)
+  - Pulse 2 (counter)
+  - Wave (bass/pad)
+  - Noise (drums/sfx-compatible scheduling)
+
+## 4.2 Required Music Cues
+- Title theme
+- Intro tragedy cue
+- Overworld biome loops (min 6)
+- Normal encounter combat
+- Elite combat
+- Boss themes (min 3 variants reused by boss class)
+- Victory stinger
+- Reunion ending A/B/C
+- Defeat/game over cue
+
+## 4.3 SFX Format + Specs
+- **Authoring:** `.wav` refs + tracker/sfx macro definitions
+- **Runtime:** engine-native SFX command tables
+- Required SFX list:
+  - bite hit / bite whiff
+  - charged dash start/travel/impact
+  - hurt light/heavy
+  - guard/clank
+  - stagger break
+  - menu move/select/cancel
+  - puzzle switch on/off
+  - lock open
+  - door/pipe transition
+  - ambient one-shots (wind gust, drip, ghost tone)
+
+## 4.4 Voice/Text Blip Assets
+- Per-faction text blip profiles:
+  - civilian
+  - brother
+  - cousin
+  - boss
+- punctuation timing table (period/comma/question/emphasis)
+
+---
+
+## 5) Naming Conventions (Mandatory)
+
+## 5.1 Files
+- Sprites: `spr_<group>_<name>_v##.png`
+- Tiles: `tile_<biome>_<set>_v##.png`
+- Maps: `map_<region>_<stageId>.tmx`
+- Audio BGM: `bgm_<context>_<id>.uge`
+- Audio SFX: `sfx_<category>_<name>.json` (or engine equivalent)
+
+## 5.2 Animation states
+Use snake_case:
+- `idle_down`
+- `walk_left`
+- `bite_2`
+- `dash_hit`
+- `phase2_transition`
+
+---
+
+## 6) Memory and Performance Budgets (GB-Oriented)
+
+- Per-bank sprite data capped by bank plan (`BANK 1..n`)
+- Favor tile reuse and palette swaps over unique large sheets
+- Keep active OAM usage under hardware limits per scanline
+- Limit simultaneous FX sprites in combat bursts
+- Provide LOD-style animation fallback:
+  - full (boss scenes)
+  - reduced (overworld crowds)
+
+---
+
+## 7) Deliverables Checklist (Definition of Done)
+
+For each asset family, include:
+1. Source file (`.aseprite`/`.uge`/`.tmx`)
+2. Export file (`.png`/`.json`)
+3. Build output (`.c/.h`)
+4. Preview sheet (`docs/previews/*.png`)
+5. Validation entry in `asset_manifest.csv` with:
+   - dimensions
+   - frame count
+   - palette compliance
+   - bank assignment
+   - owner/status
+
+---
+
+## 8) Required Manifest Files
+
+- `assets/manifest/asset_manifest.csv`
+- `assets/manifest/animations.json`
+- `assets/manifest/audio_manifest.csv`
+- `assets/manifest/map_manifest.csv`
+
+---
+
+## 9) Legal + Content Constraints
+
+- All graphics/audio must be original or properly licensed.
+- No copyrighted ripped sprites/audio.
+- Parody inspiration is allowed; direct asset copying is not.
+
+---
+
+## 10) Minimum “Ship-Ready” Totals (Production Baseline)
+
+- Player frames: 140+
+- Boss frames (all): 900+ combined
+- Enemy/NPC frames: 500+ combined
+- Tile sets: 6 biome packs + 3 interior packs
+- FX strips: 25+
+- Music tracks: 14+
+- SFX cues: 40+
+- Cinematic cards: 20+
+
+This baseline supports a complete 66-stage parody puzzle-RPG flow with combat, bosses, migration encounters, and ending variants.

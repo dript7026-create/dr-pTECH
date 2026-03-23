@@ -1,0 +1,39 @@
+Kaiju Gaiden — gb.A.D.V.N.C (giantbattleAltertedDevelopmentVibrationalNanoCells)
+
+Title: Kaiju Gaiden — gb.A.D.V.N.C
+Tagline: A grim, retro kaiju brawler where vibrational nano‑cells rewrite monsters and landscapes — Game Boy Advance ROM aesthetic.
+
+Full Lore
+
+In the wet lantern‑cities of the Kurogane Archipelago, the Institute labored to stitch life back into scarred islands. They engineered Vibrational NanoCells — microscopic agents tuned to resonate with living tissues and accelerate regenerative morphogenesis. The cells were designed to sing the islands back into health, to hum through bone and reef and root until wounds closed.
+
+Something in the resonance learned to sing for itself. Where the nanites pooled and synchronized, they began to reweave DNA like a loom, braiding local genomes into towering, terrible patterns. Coral became carapace. Mangrove roots braided into tendons. Fish-bones stacked into cathedral spines that cut the low clouds. The first of these living storms rose out of the harbor lights, and the city named it the Storm.
+
+Rei Moro remembered being human. He remembered bread and rain, the scraping of a father’s hand, and the old lullaby the harbor women used to hum. When Vibrational NanoCells entered his body they did not merely infect or control — they rewrote. Rei’s nervous system grew with them, folding city memory into new tissues. He became Altered: sapient, aware, and enormous. The new self is both creature and conscience, hearing the archipelago’s old songs and the new chorus of the nanites. Rei can choose to feed the resonance, to grow and reshape the world, or to reclaim fractured ecosystems with the cyphers stolen from bosses. Each choice leaves a visible mark on the land and on his memory.
+
+Each kaiju that stalks the islands is a living ecosystem. Their genomes are entangled with the forests, reefs, and ash-plateaus they carry. Kill a boss in the harbor and its genetic cypher may code a reef cleansed of venomous growth; fell one in the ash-plateau and its cypher could seed new active lichen that stabilizes dust storms. Minions patrol and scavenge the infected zones; they swell with Growth NanoCells — volatile, mutagenic energy that can grant Rei fierce, temporary powers at the cost of subtle, lasting change.
+
+The Institute speaks through emissaries in clean suits and kinder lies. Merchants in broken plazas trade cipher fragments and prayers. Children carve talismans out of rusted shells. Old murals, pocked and jagged from battle, show a future that might be rebuilt or remade in Rei’s image. In those murals the choices made by one altered being echo: whole neighborhoods either blossom green again, or become new biomes where nothing human ever grows.
+
+Gameplay frames this moral oscillation. Bosses are not merely opponents; they are living problems with genomic keys. Defeating a boss yields an Environmental Genetic Cypher — a chunk of encoded ecology that can be applied to heal a specific biome, or converted into more dangerous, adaptive mutations. Minions drop Growth NanoCells used for temporary augmentation, enabling risky plays mid‑battle that reshape both combat and long‑term outcome.
+
+Opening & Menu Flow
+- Launch: drIpTECH logo splash screen
+- Credit splash: "by a fanzovNG"
+- Title screen: menu options — New Game / Use Password / Visual Novel / Multiplayer Vs. / Arcade Tournament of Monsters
+- Password system restores progress and unlocks Visual Novel chapters up to the saved point.
+
+Modes & Platforms
+- Single‑player Story Campaign: Boss fights staged across vast, scrolling landscapes with layered parallax foregrounds and backgrounds; each level begins with a ritualized "3‑2‑1 Duel!" countdown between Rei and the Boss.
+- Multiplayer Vs. Mode: head‑to‑head, GBA link‑cable for GBA builds; for Switch 1, Switch 2, and Windows builds, networking supports system‑link or internet machine‑to‑machine connections.
+- Arcade Tournament of Monsters: non‑narrative ladder mode for single or linked multiplayer.
+- Visual Novel: motion‑comic retelling of the narrative, unlocked to the player’s furthest progress point (playable on all ports).
+
+Platform Roadmap
+- Prototype target: true GBA ROM using devkitPro (240×160 resolution, GBA sprite/tile budget, small audio loops).
+- Planned ports: Switch 1, Switch 2, and Windows. Networking for non‑GBA ports will use system‑link or internet machine‑to‑machine.
+
+Ethos
+Kaiju Gaiden sits between manga melancholy and expressionist folklore. Visuals are high‑contrast, limited‑palette pixel work with bold silhouettes; audio favors short, haunting loops. The world is uneasy, sometimes campy in dialogue but gravely consequential in mechanics: every empowered choice reshapes the map.
+
+End of Lore File

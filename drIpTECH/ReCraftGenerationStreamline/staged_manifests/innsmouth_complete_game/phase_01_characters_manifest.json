@@ -1,0 +1,308 @@
+[
+    {
+        "name":  "innsmouth_player_core_master_sheet_v3",
+        "category":  "player",
+        "prompt_revision":  "transparent_orb32_v1",
+        "protocol_profile":  "innsmouth_island_dimensional_protocol_v1",
+        "pass_kind":  "complete_game",
+        "guide_ref":  "innsmouth_island_complete_game_prompt_guide_v1",
+        "prompt":  "ORBSystems 32-dimensional coherency asset request for InnsmouthIsland; transparent background only, isolated render on alpha, no opaque backdrop, full depth-precision mapping cues for ORBDimensionView ORBKinetics and ORBGlue, expressionistic angular silhouette language, angular posing, pseudo-3D-ready layer discipline; fish-man drifter protagonist master sheet with crawl intro, idle breathing, walk, run, moisture heal, jump start, airborne, focus-lock stance, block, parry, hurt, stagger, shrine kneel, victory ascend, defeat sink, wet shell and rope materials, clean socket anchors, premium gameplay readability, no text",
+        "negative_prompt":  "opaque background, solid background, painted matte, filled sky, scenic poster frame, text, watermark, logo, border, UI mockup, cropped subject",
+        "controls":  {
+                         "transparent_background":  true
+                     },
+        "transparent_background":  true,
+        "w":  1216,
+        "h":  896,
+        "out":  "../../../ORBEngine/assets/innsmouth_island/complete_game/player/innsmouth_player_core_master_sheet_v3.png"
+    },
+    {
+        "name":  "innsmouth_player_light_combo_keyframes_v3",
+        "category":  "player",
+        "prompt_revision":  "transparent_orb32_v1",
+        "protocol_profile":  "innsmouth_island_dimensional_protocol_v1",
+        "pass_kind":  "complete_game",
+        "guide_ref":  "innsmouth_island_complete_game_prompt_guide_v1",
+        "prompt":  "ORBSystems 32-dimensional coherency combat keyframe request for InnsmouthIsland; transparent background only on alpha, no opaque backdrop, full depth-precision mapping and attachment-ready hand silhouettes, expressionistic angular posing; isolated player light combo chain keyframes with hard line-of-action, readable anticipation contact recoil and recovery beats, fish-man drifter using Barnacle Shiv class stance language, premium melee timing readability, no text",
+        "negative_prompt":  "opaque background, solid background, scenic poster frame, text, watermark, logo, cropped figure, blurry silhouette",
+        "controls":  {
+                         "transparent_background":  true
+                     },
+        "transparent_background":  true,
+        "w":  1024,
+        "h":  1024,
+        "out":  "../../../ORBEngine/assets/innsmouth_island/complete_game/player/innsmouth_player_light_combo_keyframes_v3.png"
+    },
+    {
+        "name":  "innsmouth_player_heavy_combo_keyframes_v3",
+        "category":  "player",
+        "prompt_revision":  "transparent_orb32_v1",
+        "protocol_profile":  "innsmouth_island_dimensional_protocol_v1",
+        "pass_kind":  "complete_game",
+        "guide_ref":  "innsmouth_island_complete_game_prompt_guide_v1",
+        "prompt":  "ORBSystems 32-dimensional coherency combat keyframe request for InnsmouthIsland; transparent background only, isolated alpha render, no opaque backdrop, full depth-precision mapping, expressionistic angular silhouette breaks; isolated player heavy combo keyframes with over-committed swings, planted feet, torque-rich torso rotation, staggering impact follow-through, pseudo-3D top-cap readability, no text",
+        "negative_prompt":  "opaque background, solid background, painted matte, text, watermark, logo, cropped figure",
+        "controls":  {
+                         "transparent_background":  true
+                     },
+        "transparent_background":  true,
+        "w":  1024,
+        "h":  1024,
+        "out":  "../../../ORBEngine/assets/innsmouth_island/complete_game/player/innsmouth_player_heavy_combo_keyframes_v3.png"
+    },
+    {
+        "name":  "innsmouth_player_air_and_dodge_keyframes_v3",
+        "category":  "player",
+        "prompt_revision":  "transparent_orb32_v1",
+        "protocol_profile":  "innsmouth_island_dimensional_protocol_v1",
+        "pass_kind":  "complete_game",
+        "guide_ref":  "innsmouth_island_complete_game_prompt_guide_v1",
+        "prompt":  "ORBSystems 32-dimensional coherency traversal keyframe request for InnsmouthIsland; transparent background only, isolated render on alpha, no opaque backdrop, full depth-precision mapping cues, expressionistic angular poses; player jump start, aerial drift, plunge, ground dodge, air dodge, crouch slide, hard directional momentum silhouettes, socket-aware limbs and readable landing geometry, no text",
+        "negative_prompt":  "opaque background, solid background, painted matte, text, watermark, logo, cropped figure",
+        "controls":  {
+                         "transparent_background":  true
+                     },
+        "transparent_background":  true,
+        "w":  1024,
+        "h":  1024,
+        "out":  "../../../ORBEngine/assets/innsmouth_island/complete_game/player/innsmouth_player_air_and_dodge_keyframes_v3.png"
+    },
+    {
+        "name":  "innsmouth_player_throw_and_shrine_keyframes_v3",
+        "category":  "player",
+        "prompt_revision":  "transparent_orb32_v1",
+        "protocol_profile":  "innsmouth_island_dimensional_protocol_v1",
+        "pass_kind":  "complete_game",
+        "guide_ref":  "innsmouth_island_complete_game_prompt_guide_v1",
+        "prompt":  "ORBSystems 32-dimensional coherency interaction keyframe request for InnsmouthIsland; transparent background only, alpha-isolated asset, no opaque backdrop, full depth-precision mapping cues, angular expressionistic posing; player throwable windup release and follow-through, projectile throw variation, shrine kneel, shrine resonance uplift, consumable use beats, premium silhouette readability, no text",
+        "negative_prompt":  "opaque background, solid background, painted matte, text, watermark, logo, cropped figure",
+        "controls":  {
+                         "transparent_background":  true
+                     },
+        "transparent_background":  true,
+        "w":  1024,
+        "h":  1024,
+        "out":  "../../../ORBEngine/assets/innsmouth_island/complete_game/player/innsmouth_player_throw_and_shrine_keyframes_v3.png"
+    },
+    {
+        "name":  "innsmouth_player_turnaround_single_frames_v3",
+        "category":  "player",
+        "prompt_revision":  "transparent_orb32_v1",
+        "protocol_profile":  "innsmouth_island_dimensional_protocol_v1",
+        "pass_kind":  "complete_game",
+        "guide_ref":  "innsmouth_island_complete_game_prompt_guide_v1",
+        "prompt":  "ORBSystems 32-dimensional coherency single-frame character study request for InnsmouthIsland; transparent background only, isolated alpha asset, no opaque backdrop, full socket and silhouette precision cues, expressionistic angular silhouette emphasis; front side three-quarter back turnaround stills of the fish-man drifter protagonist with neutral combat-ready posture and premium material detail, no text",
+        "negative_prompt":  "opaque background, solid background, painted matte, text, watermark, logo, cropped figure",
+        "controls":  {
+                         "transparent_background":  true
+                     },
+        "transparent_background":  true,
+        "w":  1024,
+        "h":  1024,
+        "out":  "../../../ORBEngine/assets/innsmouth_island/complete_game/player/innsmouth_player_turnaround_single_frames_v3.png"
+    },
+    {
+        "name":  "innsmouth_enemy_roster_portraits_v3",
+        "category":  "enemy",
+        "prompt_revision":  "transparent_orb32_v1",
+        "protocol_profile":  "innsmouth_island_dimensional_protocol_v1",
+        "pass_kind":  "complete_game",
+        "guide_ref":  "innsmouth_island_complete_game_prompt_guide_v1",
+        "prompt":  "ORBSystems 32-dimensional coherency enemy roster request for InnsmouthIsland; transparent background only, isolated alpha render, no opaque backdrop, full depth-precision mapping cues, expressionistic angular silhouettes; Deep One Raider, Shoggoth Spawn, Nightgaunt Stalker, Mi-Go Scavenger, Ghoul Woodsman, Cultist Harpooner, Star-Spawn Wretch, Drowned Pilgrim, Reptilian Abyss Prince, Jaguar Eclipse Tyrant as isolated portrait-grade combat-readable sheets, no text",
+        "negative_prompt":  "opaque background, solid background, painted matte, text, watermark, logo, cropped figure",
+        "controls":  {
+                         "transparent_background":  true
+                     },
+        "transparent_background":  true,
+        "w":  1216,
+        "h":  896,
+        "out":  "../../../ORBEngine/assets/innsmouth_island/complete_game/enemies/innsmouth_enemy_roster_portraits_v3.png"
+    },
+    {
+        "name":  "innsmouth_deep_one_raider_action_sheet_v3",
+        "category":  "enemy",
+        "prompt_revision":  "transparent_orb32_v1",
+        "protocol_profile":  "innsmouth_island_dimensional_protocol_v1",
+        "pass_kind":  "complete_game",
+        "guide_ref":  "innsmouth_island_complete_game_prompt_guide_v1",
+        "prompt":  "ORBSystems 32-dimensional coherency enemy action request for InnsmouthIsland; transparent background only on alpha, no opaque backdrop, angular silhouette language, full depth-precision mapping; Deep One Raider isolated keyframes for idle stalk, rush, harpoon feint, lunge, recoil, stagger, death, premium combat timing readability, no text",
+        "negative_prompt":  "opaque background, solid background, painted matte, text, watermark, logo, cropped figure",
+        "controls":  {
+                         "transparent_background":  true
+                     },
+        "transparent_background":  true,
+        "w":  1024,
+        "h":  1024,
+        "out":  "../../../ORBEngine/assets/innsmouth_island/complete_game/enemies/innsmouth_deep_one_raider_action_sheet_v3.png"
+    },
+    {
+        "name":  "innsmouth_shoggoth_spawn_action_sheet_v3",
+        "category":  "enemy",
+        "prompt_revision":  "transparent_orb32_v1",
+        "protocol_profile":  "innsmouth_island_dimensional_protocol_v1",
+        "pass_kind":  "complete_game",
+        "guide_ref":  "innsmouth_island_complete_game_prompt_guide_v1",
+        "prompt":  "ORBSystems 32-dimensional coherency enemy action request for InnsmouthIsland; transparent background only, alpha isolated, no opaque backdrop, full depth-precision mapping; Shoggoth Spawn isolated keyframes for compress, spring, pseudopod slam, ooze burst, recoil, stagger, dissolution death, expressionistic angular mass breaks, no text",
+        "negative_prompt":  "opaque background, solid background, scenic poster frame, text, watermark, logo, cropped figure",
+        "controls":  {
+                         "transparent_background":  true
+                     },
+        "transparent_background":  true,
+        "w":  1024,
+        "h":  1024,
+        "out":  "../../../ORBEngine/assets/innsmouth_island/complete_game/enemies/innsmouth_shoggoth_spawn_action_sheet_v3.png"
+    },
+    {
+        "name":  "innsmouth_nightgaunt_stalker_action_sheet_v3",
+        "category":  "enemy",
+        "prompt_revision":  "transparent_orb32_v1",
+        "protocol_profile":  "innsmouth_island_dimensional_protocol_v1",
+        "pass_kind":  "complete_game",
+        "guide_ref":  "innsmouth_island_complete_game_prompt_guide_v1",
+        "prompt":  "ORBSystems 32-dimensional coherency enemy action request for InnsmouthIsland; transparent background only, isolated alpha render, no opaque backdrop, full depth-precision mapping; Nightgaunt Stalker keyframes for hover, perch, glide dive, claw rake, recoil, vanish, death, angular wing language and hard negative space readability, no text",
+        "negative_prompt":  "opaque background, solid background, painted matte, text, watermark, logo, cropped figure",
+        "controls":  {
+                         "transparent_background":  true
+                     },
+        "transparent_background":  true,
+        "w":  1024,
+        "h":  1024,
+        "out":  "../../../ORBEngine/assets/innsmouth_island/complete_game/enemies/innsmouth_nightgaunt_stalker_action_sheet_v3.png"
+    },
+    {
+        "name":  "innsmouth_migo_scavenger_action_sheet_v3",
+        "category":  "enemy",
+        "prompt_revision":  "transparent_orb32_v1",
+        "protocol_profile":  "innsmouth_island_dimensional_protocol_v1",
+        "pass_kind":  "complete_game",
+        "guide_ref":  "innsmouth_island_complete_game_prompt_guide_v1",
+        "prompt":  "ORBSystems 32-dimensional coherency enemy action request for InnsmouthIsland; transparent background only, alpha isolated, no opaque backdrop, full depth-precision mapping; Mi-Go Scavenger keyframes for stalking stride, tool raise, pressure burst, wing-assisted hop, recoil, stagger, death, expressionistic angular insectoid silhouette, no text",
+        "negative_prompt":  "opaque background, solid background, painted matte, text, watermark, logo, cropped figure",
+        "controls":  {
+                         "transparent_background":  true
+                     },
+        "transparent_background":  true,
+        "w":  1024,
+        "h":  1024,
+        "out":  "../../../ORBEngine/assets/innsmouth_island/complete_game/enemies/innsmouth_migo_scavenger_action_sheet_v3.png"
+    },
+    {
+        "name":  "innsmouth_ghoul_woodsman_action_sheet_v3",
+        "category":  "enemy",
+        "prompt_revision":  "transparent_orb32_v1",
+        "protocol_profile":  "innsmouth_island_dimensional_protocol_v1",
+        "pass_kind":  "complete_game",
+        "guide_ref":  "innsmouth_island_complete_game_prompt_guide_v1",
+        "prompt":  "ORBSystems 32-dimensional coherency enemy action request for InnsmouthIsland; transparent background only, isolated alpha asset, no opaque backdrop, full depth-precision mapping; Ghoul Woodsman keyframes for lurch, hatchet lift, chop, shoulder crash, recoil, stagger, collapse, angular lumbering silhouette and readable dead weight posing, no text",
+        "negative_prompt":  "opaque background, solid background, painted matte, text, watermark, logo, cropped figure",
+        "controls":  {
+                         "transparent_background":  true
+                     },
+        "transparent_background":  true,
+        "w":  1024,
+        "h":  1024,
+        "out":  "../../../ORBEngine/assets/innsmouth_island/complete_game/enemies/innsmouth_ghoul_woodsman_action_sheet_v3.png"
+    },
+    {
+        "name":  "innsmouth_cultist_harpooner_action_sheet_v3",
+        "category":  "enemy",
+        "prompt_revision":  "transparent_orb32_v1",
+        "protocol_profile":  "innsmouth_island_dimensional_protocol_v1",
+        "pass_kind":  "complete_game",
+        "guide_ref":  "innsmouth_island_complete_game_prompt_guide_v1",
+        "prompt":  "ORBSystems 32-dimensional coherency enemy action request for InnsmouthIsland; transparent background only, isolated alpha render, no opaque backdrop, full depth-precision mapping; Cultist Harpooner keyframes for chant stance, harpoon aim, throw release, knife backup, recoil, stagger, death, angular robe silhouette with ritual fishing gear language, no text",
+        "negative_prompt":  "opaque background, solid background, painted matte, text, watermark, logo, cropped figure",
+        "controls":  {
+                         "transparent_background":  true
+                     },
+        "transparent_background":  true,
+        "w":  1024,
+        "h":  1024,
+        "out":  "../../../ORBEngine/assets/innsmouth_island/complete_game/enemies/innsmouth_cultist_harpooner_action_sheet_v3.png"
+    },
+    {
+        "name":  "innsmouth_star_spawn_wretch_action_sheet_v3",
+        "category":  "enemy",
+        "prompt_revision":  "transparent_orb32_v1",
+        "protocol_profile":  "innsmouth_island_dimensional_protocol_v1",
+        "pass_kind":  "complete_game",
+        "guide_ref":  "innsmouth_island_complete_game_prompt_guide_v1",
+        "prompt":  "ORBSystems 32-dimensional coherency enemy action request for InnsmouthIsland; transparent background only, isolated alpha render, no opaque backdrop, full depth-precision mapping; Star-Spawn Wretch keyframes for warped idle, tendril lash, pressure crush, recoil, stagger, implosion death, angular cosmic-horror silhouette, no text",
+        "negative_prompt":  "opaque background, solid background, painted matte, text, watermark, logo, cropped figure",
+        "controls":  {
+                         "transparent_background":  true
+                     },
+        "transparent_background":  true,
+        "w":  1024,
+        "h":  1024,
+        "out":  "../../../ORBEngine/assets/innsmouth_island/complete_game/enemies/innsmouth_star_spawn_wretch_action_sheet_v3.png"
+    },
+    {
+        "name":  "innsmouth_drowned_pilgrim_action_sheet_v3",
+        "category":  "enemy",
+        "prompt_revision":  "transparent_orb32_v1",
+        "protocol_profile":  "innsmouth_island_dimensional_protocol_v1",
+        "pass_kind":  "complete_game",
+        "guide_ref":  "innsmouth_island_complete_game_prompt_guide_v1",
+        "prompt":  "ORBSystems 32-dimensional coherency enemy action request for InnsmouthIsland; transparent background only, isolated alpha asset, no opaque backdrop, full depth-precision mapping; Drowned Pilgrim keyframes for drag walk, prayer swell, heal pulse, brine blast, recoil, stagger, collapse, angular soaked-cloth and staff silhouette, no text",
+        "negative_prompt":  "opaque background, solid background, painted matte, text, watermark, logo, cropped figure",
+        "controls":  {
+                         "transparent_background":  true
+                     },
+        "transparent_background":  true,
+        "w":  1024,
+        "h":  1024,
+        "out":  "../../../ORBEngine/assets/innsmouth_island/complete_game/enemies/innsmouth_drowned_pilgrim_action_sheet_v3.png"
+    },
+    {
+        "name":  "innsmouth_reptilian_abyss_prince_action_sheet_v3",
+        "category":  "boss",
+        "prompt_revision":  "transparent_orb32_v1",
+        "protocol_profile":  "innsmouth_island_dimensional_protocol_v1",
+        "pass_kind":  "complete_game",
+        "guide_ref":  "innsmouth_island_complete_game_prompt_guide_v1",
+        "prompt":  "ORBSystems 32-dimensional coherency boss action request for InnsmouthIsland; transparent background only, isolated alpha render, no opaque backdrop, full depth-precision mapping; Reptilian Abyss Prince keyframes for throne rise, spear cast, tail sweep, venom spray, leap slam, recoil, stagger, phase death, expressionistic angular regal-monster silhouette, no text",
+        "negative_prompt":  "opaque background, solid background, painted matte, text, watermark, logo, cropped figure",
+        "controls":  {
+                         "transparent_background":  true
+                     },
+        "transparent_background":  true,
+        "w":  1216,
+        "h":  896,
+        "out":  "../../../ORBEngine/assets/innsmouth_island/complete_game/bosses/innsmouth_reptilian_abyss_prince_action_sheet_v3.png"
+    },
+    {
+        "name":  "innsmouth_jaguar_eclipse_tyrant_action_sheet_v3",
+        "category":  "boss",
+        "prompt_revision":  "transparent_orb32_v1",
+        "protocol_profile":  "innsmouth_island_dimensional_protocol_v1",
+        "pass_kind":  "complete_game",
+        "guide_ref":  "innsmouth_island_complete_game_prompt_guide_v1",
+        "prompt":  "ORBSystems 32-dimensional coherency boss action request for InnsmouthIsland; transparent background only, isolated alpha render, no opaque backdrop, full depth-precision mapping; Jaguar Eclipse Tyrant keyframes for stalk crouch, eclipse dash, claw fan, chain pounce, blood-moon slam, recoil, stagger, phase death, angular predator silhouette and brutal line-of-action, no text",
+        "negative_prompt":  "opaque background, solid background, painted matte, text, watermark, logo, cropped figure",
+        "controls":  {
+                         "transparent_background":  true
+                     },
+        "transparent_background":  true,
+        "w":  1216,
+        "h":  896,
+        "out":  "../../../ORBEngine/assets/innsmouth_island/complete_game/bosses/innsmouth_jaguar_eclipse_tyrant_action_sheet_v3.png"
+    },
+    {
+        "name":  "innsmouth_boss_duo_ritual_transition_sheet_v3",
+        "category":  "boss",
+        "prompt_revision":  "transparent_orb32_v1",
+        "protocol_profile":  "innsmouth_island_dimensional_protocol_v1",
+        "pass_kind":  "complete_game",
+        "guide_ref":  "innsmouth_island_complete_game_prompt_guide_v1",
+        "prompt":  "ORBSystems 32-dimensional coherency boss ritual request for InnsmouthIsland; transparent background only, isolated alpha render, no opaque backdrop, full depth-precision mapping; boss duo ritual transition frames for eclipse court summoning, seal fracture, throne resonance, synchronized rage escalation, angular ceremonial posing and hard compositional rhythm, no text",
+        "negative_prompt":  "opaque background, solid background, painted matte, text, watermark, logo, cropped figure",
+        "controls":  {
+                         "transparent_background":  true
+                     },
+        "transparent_background":  true,
+        "w":  1216,
+        "h":  896,
+        "out":  "../../../ORBEngine/assets/innsmouth_island/complete_game/bosses/innsmouth_boss_duo_ritual_transition_sheet_v3.png"
+    }
+]

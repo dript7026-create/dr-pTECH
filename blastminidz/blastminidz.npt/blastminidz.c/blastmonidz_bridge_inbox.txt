@@ -1,0 +1,1 @@
+workflow: bridge smoke validation

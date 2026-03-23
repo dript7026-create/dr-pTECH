@@ -1,0 +1,8 @@
+demo
+smoke_test
+*.exe
+*.dll
+*.dat
+__pycache__/
+tools/__pycache__/
+pipeline/out/

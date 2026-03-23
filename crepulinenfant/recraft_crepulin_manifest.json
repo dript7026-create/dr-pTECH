@@ -1,0 +1,326 @@
+[
+  {
+    "name": "room_courtyard",
+    "prompt": "atmospheric horror game background, cracked Soviet apartment courtyard at dusk, broken lamp post casting sodium orange light, dead windows above, crumbling plaster walls with nicotine yellow stains, child-scale perspective looking up, damp pavement, mold stains, stairwell green shadows, ominous empty playground, painted digital illustration style, high detail, no text",
+    "w": 1344,
+    "h": 768,
+    "out": "assets/rooms/courtyard.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "room_stairwell",
+    "prompt": "atmospheric horror game background, impossibly long Soviet apartment stairwell stretching downward, stairwell green paint peeling from walls, single dim sodium orange bulb, child-scale perspective, iron railing with rust, corridor hum atmosphere, damp plaster, bruised violet shadows in corners, oppressive vertical space, painted digital illustration style, high detail, no text",
+    "w": 1344,
+    "h": 768,
+    "out": "assets/rooms/stairwell.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "room_curtain_flat",
+    "prompt": "atmospheric horror game background, Soviet apartment child's room with yellowed drapes and black lining curtains, window that seems to watch, nicotine yellow wallpaper peeling, child bed with old blankets, dim sodium light filtering through fabric, mold stains on ceiling, dead teal accents, eerie domestic space, painted digital illustration style, high detail, no text",
+    "w": 1344,
+    "h": 768,
+    "out": "assets/rooms/curtain_flat.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "room_stove_niche",
+    "prompt": "atmospheric horror game background, hidden domestic chamber behind old plaster wall in Soviet apartment, warm stove with glowing embers, bread and salt offering on a shelf, iron spoon hanging, intimate protective space, warm orange firelight against cold stairwell green walls, ritual candles, chalk marks on floor, painted digital illustration style, high detail, no text",
+    "w": 1344,
+    "h": 768,
+    "out": "assets/rooms/stove_niche.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "room_service_shaft",
+    "prompt": "atmospheric horror game background, steam-warm maintenance shaft under Soviet apartment block, exposed pipes dripping condensation, warm steam clouds, distant engine purr atmosphere, tire tracks on wet concrete floor, sodium orange emergency light, bruised violet shadows, industrial decay, child-scale crawl passage, painted digital illustration style, high detail, no text",
+    "w": 1344,
+    "h": 768,
+    "out": "assets/rooms/service_shaft.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "room_black_road_vault",
+    "prompt": "atmospheric horror game background, underground parking vault beneath Soviet apartment district, black lacquer vehicle shine on wet concrete, pale curtains hanging from ceiling, headlights piercing bruised violet darkness, funeral atmosphere, sodium orange exit sign, service markings on walls, oppressive dread, child standing small against vast space, painted digital illustration style, high detail, no text",
+    "w": 1344,
+    "h": 768,
+    "out": "assets/rooms/black_road_vault.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "enfant_idle",
+    "prompt": "horror game character portrait, child protagonist facing forward in frontal view, small vulnerable figure in worn coat, pale face with observant eyes, standing still in dim sodium light, Soviet apartment corridor background, nicotine yellow and stairwell green tones, atmospheric dread, child-scale horror protagonist, painted digital illustration style, high detail, no text",
+    "w": 1024,
+    "h": 1024,
+    "out": "assets/enfant/enfant_idle.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "enfant_walk",
+    "prompt": "horror game character portrait, child protagonist walking forward toward viewer, cautious step forward, worn coat, pale determined face, dim corridor behind, sodium orange light on one side bruised violet shadow on other, motion in small careful steps, Soviet apartment setting, painted digital illustration style, high detail, no text",
+    "w": 1024,
+    "h": 1024,
+    "out": "assets/enfant/enfant_walk.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "enfant_fear",
+    "prompt": "horror game character portrait, child protagonist facing forward with wide terrified eyes, hands clutching coat, frozen in dread, harsh sodium light from above casting deep shadows, sweat on forehead, Soviet apartment wall behind with mold stains, bruised violet and nicotine yellow tones, painted digital illustration style, high detail, no text",
+    "w": 1024,
+    "h": 1024,
+    "out": "assets/enfant/enfant_fear.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "enfant_hide",
+    "prompt": "horror game character portrait, child protagonist crouching and hiding under furniture, peeking out with one eye visible, partial darkness covering face, holding breath, Soviet apartment floor level perspective, dust and shadow, stairwell green and bruised violet tones, tense atmosphere, painted digital illustration style, high detail, no text",
+    "w": 1024,
+    "h": 1024,
+    "out": "assets/enfant/enfant_hide.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "enfant_ritual",
+    "prompt": "horror game character portrait, child protagonist kneeling and performing a domestic ritual, placing bread and salt offering, candle light illuminating face from below, chalk marks on floor around them, reverent posture, warm orange glow against cold room, Soviet apartment stove niche setting, painted digital illustration style, high detail, no text",
+    "w": 1024,
+    "h": 1024,
+    "out": "assets/enfant/enfant_ritual.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "threat_domov_keeper",
+    "prompt": "horror game creature portrait, ambiguous house spirit entity, partly visible in plaster wall cracks and shadows, face suggested in wall texture and pipe arrangements, domestic guardian turned territorial, glowing warm eyes in dark corner, cobwebs and old kitchen implements around it, nicotine yellow and warm orange tones, menacing protector, painted digital illustration style, high detail, no text",
+    "w": 1024,
+    "h": 1024,
+    "out": "assets/threats/domov_keeper.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "threat_keyhole_kikimora",
+    "prompt": "horror game creature portrait, nightmare stalker entity peering through a keyhole, elongated fingers reaching through crack in door, wild tangled hair, one gleaming eye visible through narrow opening, domestic nightmare creature, child furniture and curtain folds in background, dead teal and bruised violet tones, unsettling domestic horror, painted digital illustration style, high detail, no text",
+    "w": 1024,
+    "h": 1024,
+    "out": "assets/threats/keyhole_kikimora.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "threat_chauffeur",
+    "prompt": "horror game antagonist portrait, sinister chauffeur figure in black uniform standing beside a black government vehicle, featureless pale face, polite posture but deeply wrong, horn-like side mirrors on black lacquer car, pale curtains in car windows, sodium orange street light behind, bruised violet shadows, false authority horror, painted digital illustration style, high detail, no text",
+    "w": 1024,
+    "h": 1024,
+    "out": "assets/threats/chauffeur.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "threat_crepulin_bloom",
+    "prompt": "horror game environmental hazard, Crepulin bloom growth on Soviet apartment wall, dark organic stain spreading like fear-reactive mold, pulsing veins in the residue, distorting the wall geometry around it, child-height scrawls emerging from the growth, nicotine yellow wall turning sick violet where bloom touches, breathing texture, painted digital illustration style, high detail, no text",
+    "w": 1024,
+    "h": 1024,
+    "out": "assets/threats/crepulin_bloom.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "npc_babka_kuroles",
+    "prompt": "horror game NPC portrait, elderly wise woman threshold-guide figure, weathered face with knowing dangerous eyes, sitting in a ramshackle mobile service hut on collapsed utility stilts, steam and courtyard fog around her, offering a bargain with one raised finger, warm orange lantern light, Soviet maintenance lot setting, painted digital illustration style, high detail, no text",
+    "w": 1024,
+    "h": 1024,
+    "out": "assets/npcs/babka_kuroles.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "npc_bird_reactor_nine",
+    "prompt": "horror game omen creature, large dark bird perched on a Soviet rooftop antenna, disaster herald silhouette against bruised violet sky, glowing eyes, feathers like soot and ash, industrial chimney smoke behind, ominous presence before catastrophe, sodium orange horizon glow, painted digital illustration style, high detail, no text",
+    "w": 1024,
+    "h": 1024,
+    "out": "assets/npcs/bird_reactor_nine.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "tool_candle_stub",
+    "prompt": "game item icon, small candle stub with flickering warm flame, melted wax dripping, child's hand-sized, against dark background, domestic tool, warm orange glow, painted digital illustration icon style, high detail, no text",
+    "w": 1024,
+    "h": 1024,
+    "out": "assets/tools/candle_stub.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "tool_box_cutter",
+    "prompt": "game item icon, worn utility box cutter knife with retractable blade, scratched plastic handle, child's improvised tool, against dark background, domestic implement, painted digital illustration icon style, high detail, no text",
+    "w": 1024,
+    "h": 1024,
+    "out": "assets/tools/box_cutter.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "tool_key_ring",
+    "prompt": "game item icon, old brass key ring with several mismatched keys, worn metal, jingling cluster, Soviet apartment keys, against dark background, domestic implement, painted digital illustration icon style, high detail, no text",
+    "w": 1024,
+    "h": 1024,
+    "out": "assets/tools/key_ring.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "tool_iron_spoon",
+    "prompt": "game item icon, heavy iron spoon with dark patina, old kitchen implement, sturdy domestic utensil, against dark background, warm light reflection, painted digital illustration icon style, high detail, no text",
+    "w": 1024,
+    "h": 1024,
+    "out": "assets/tools/iron_spoon.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "tool_thread_spool",
+    "prompt": "game item icon, wooden thread spool with dark thread partially unwound, old sewing supply, against dark background, domestic craft tool, painted digital illustration icon style, high detail, no text",
+    "w": 1024,
+    "h": 1024,
+    "out": "assets/tools/thread_spool.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "tool_chalk",
+    "prompt": "game item icon, piece of white chalk partially used, chalk dust on it, for drawing protective marks on floors and walls, against dark background, child's tool, painted digital illustration icon style, high detail, no text",
+    "w": 1024,
+    "h": 1024,
+    "out": "assets/tools/chalk.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "tool_bread_salt",
+    "prompt": "game item icon, small cloth packet containing bread and salt offering, traditional Slavic hospitality gift, rough fabric wrapping tied with string, against dark background, ritual domestic item, painted digital illustration icon style, high detail, no text",
+    "w": 1024,
+    "h": 1024,
+    "out": "assets/tools/bread_salt.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "tool_hand_bell",
+    "prompt": "game item icon, small brass hand bell with wooden handle, tarnished surface, for summoning or warning, against dark background, domestic ritual item, painted digital illustration icon style, high detail, no text",
+    "w": 1024,
+    "h": 1024,
+    "out": "assets/tools/hand_bell.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "tool_glass_marble",
+    "prompt": "game item icon, clear glass marble with swirled colors inside, child's toy and distraction tool, catching light, against dark background, small precious object, painted digital illustration icon style, high detail, no text",
+    "w": 1024,
+    "h": 1024,
+    "out": "assets/tools/glass_marble.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "fx_dread_overlay",
+    "prompt": "horror game screen overlay effect, dark vignette with pulsing bruised violet edges, visual distortion, static noise creeping from corners, dread and fear effect, nicotine yellow stains bleeding through, semi-transparent overlay texture, painted digital illustration style, high detail, no text",
+    "w": 1344,
+    "h": 768,
+    "out": "assets/fx/dread_overlay.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "fx_warmth_glow",
+    "prompt": "horror game screen overlay effect, warm orange candlelight glow radiating from center, soft protective warmth, gentle light pushing back cold shadows, warm steam wisps, comforting domestic light effect, semi-transparent overlay texture, painted digital illustration style, high detail, no text",
+    "w": 1344,
+    "h": 768,
+    "out": "assets/fx/warmth_glow.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "fx_crepulin_stain",
+    "prompt": "horror game screen overlay effect, dark organic stain creeping across surface, fear-reactive residue spreading like mold across glass, sick violet and nicotine yellow tendrils, Crepulin corruption visual, semi-transparent overlay texture, painted digital illustration style, high detail, no text",
+    "w": 1344,
+    "h": 768,
+    "out": "assets/fx/crepulin_stain.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "fx_black_road_headlights",
+    "prompt": "horror game screen overlay effect, twin headlight beams piercing through darkness, black lacquer vehicle approaching, pale curtain reflections, sodium orange light scattering in fog, chase sequence lighting effect, semi-transparent overlay texture, painted digital illustration style, high detail, no text",
+    "w": 1344,
+    "h": 768,
+    "out": "assets/fx/black_road_headlights.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "ui_dread_gauge",
+    "prompt": "horror game UI element, vertical gauge meter showing dread level, dark glass tube filled with bruised violet liquid, skull-like markings at top, chalk-drawn frame, Soviet maintenance label aesthetic, utility diagram style, dark background, painted digital illustration style, high detail, no text",
+    "w": 1024,
+    "h": 1024,
+    "out": "assets/ui/dread_gauge.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "ui_warmth_gauge",
+    "prompt": "horror game UI element, vertical gauge meter showing warmth level, warm orange liquid in glass tube, candle flame marking at top, chalk-drawn frame, Soviet maintenance label aesthetic, utility diagram style, dark background, painted digital illustration style, high detail, no text",
+    "w": 1024,
+    "h": 1024,
+    "out": "assets/ui/warmth_gauge.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "ui_health_gauge",
+    "prompt": "horror game UI element, vertical gauge meter showing health level, red liquid in glass tube, heart marking at top, chalk-drawn frame on dark wall, Soviet maintenance label aesthetic, utility diagram style, dark background, painted digital illustration style, high detail, no text",
+    "w": 1024,
+    "h": 1024,
+    "out": "assets/ui/health_gauge.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "title_screen",
+    "prompt": "horror game title screen, dark Soviet apartment district at dusk, looming building facades with dead windows, single child silhouette standing in courtyard, Crepulin mold growth spreading on walls, sodium orange lamp glow, bruised violet sky, ominous atmosphere, cinematic wide composition, painted digital illustration style, high detail, no text",
+    "w": 1344,
+    "h": 768,
+    "out": "assets/screens/title_screen.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "ending_screen",
+    "prompt": "horror game ending screen, Soviet apartment courtyard at dawn, soft morning light breaking through clouds, child holding another child's hand walking toward light, Crepulin mold receding from walls, first warmth in a long time, bittersweet hope atmosphere, sodium orange giving way to pale morning, painted digital illustration style, high detail, no text",
+    "w": 1344,
+    "h": 768,
+    "out": "assets/screens/ending_screen.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "game_over_screen",
+    "prompt": "horror game failure screen, Soviet apartment corridor consumed by Crepulin darkness, bruised violet and black consuming the frame, child silhouette being swallowed by shadow, last sodium orange light dying, oppressive dread overwhelming everything, painted digital illustration style, high detail, no text",
+    "w": 1344,
+    "h": 768,
+    "out": "assets/screens/game_over.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  }
+]

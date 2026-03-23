@@ -1,0 +1,201 @@
+Crepulin: Enfant; .xxDetnDimension
+
+Document Basis
+This GDD is built from the currently available sources:
+- the empty source target `Crepulin_Enfant_DetnDimension.c`
+- the two Clip Studio Paint sprite files `detn_idletoward_sprite.clip` and `detn_walktoward_sprite.clip`
+- public web-visible creator-handle traces tied to Ryan Richard Carell, rrcarell, GXREMEVK, and rxndvll
+- Russian and Soviet folklore and urban legend motifs including Domovoy, Kikimora, Black Volga, haunted curtains, infernal drilling myths, and disaster-bird omen stories
+
+This is the first full design consolidation for the project.
+
+High Concept
+Crepulin: Enfant; .xxDetnDimension is a 2.5D horror action-adventure about a child navigating a parasitic mirror-layer hidden inside an aging apartment district. The player character, Enfant, slips into the DetnDimension, a folded city-space made from household superstition, abandoned civic infrastructure, and predatory memory residue called Crepulin.
+
+Core Pillars
+1. Child-scale horror through familiar spaces made wrong.
+2. Folklore-infused systems and ritual rules.
+3. Stealth, pursuit, and intimate survival.
+4. Environmental storytelling through civic interiors and utility spaces.
+5. Strong forward-facing sprite identity and occult-industrial sound.
+
+Product Definition
+- Genre: 2.5D horror action-adventure with light metroidvania structure.
+- Camera: side-on exploration with frontal confrontation frames.
+- Target playtime: 8 to 12 hours main path.
+
+Why the Project Looks This Way
+The two existing sprite files strongly imply an early forward-facing presentation for the protagonist. The public handle traces suggest an adjacent aesthetic shaped by underground beat culture, lo-fi intensity, abstract naming, and industrial mood.
+
+World Premise
+Crepulin is the dusk-film that gathers in neglected living spaces where fear, silence, and old rituals overlap. When enough Crepulin accumulates, the DetnDimension appears: a child-scaled mirror-city built from corridors, kitchens, elevators, pipes, yards, stations, and burial cavities that have absorbed generations of warnings told to keep children alive.
+
+Main Characters
+Enfant:
+The playable child protagonist. Observant, quiet, brave in bursts, and able to learn ritual rules faster than adults.
+
+Crepulin:
+A memory-reactive residue and distributed antagonist that stores fear, distorts architecture, and enforces legend logic.
+
+The Domov Keeper:
+A household spirit derived from Domovoy belief. Helpful when respected, punishing when angered.
+
+The Keyhole Kikimora:
+A recurring nightmare stalker entering through cracks, keyholes, curtains, and vents.
+
+Babka Kuroles:
+An original threshold guide inspired by Baba Yaga, living in a mobile utility hut.
+
+The Chauffeur of the Black Road:
+Recurring pursuer inspired by Black Volga legends. Travels through service roads, walls, and underground routes.
+
+The Bird Over Reactor Nine:
+An omen creature appearing before major collapse events.
+
+Story Summary
+Enfant lives in Block Nine, a decaying apartment district. After a blackout and an elevator failure, a child disappears. Enfant follows the traces into maintenance corridors and slips into the DetnDimension, where legends are physically real and every room has rules.
+
+Narrative Structure
+Prologue: The Courtyard Warning
+Children swap rumors about the Black Car, the curtain room, the keyhole woman, and the hole that speaks. A blackout begins the first disappearance.
+
+Act I: Stairwell Mouth
+Explore stairwells, fuse closets, pipe shafts, and utility corridors. Learn the House Rule system and encounter the first Black Road sighting.
+
+Act II: Curtain Flats
+Apartment interiors warped by haunted curtain myths. The Keyhole Kikimora becomes an active stalker.
+
+Act III: Bathhouse Veins
+Communal bathhouses and steam passages. Babka Kuroles introduces barter-based myth logic and Warmth.
+
+Act IV: Railbone Yards
+Dead tracks and signal sheds reveal that the Black Road is a transit principle, not only a vehicle route.
+
+Act V: Well Chamber
+Descending into drilling rooms and echo wells reveals buried civic catastrophe and accumulated denial.
+
+Act VI: The Black Road Procession
+The final run uses everything learned from domestic rites, spirit bargains, and refusal rules to confront the Chauffeur.
+
+Ending
+Some missing children return. Adults finally speak openly about what they ignored. Some rooms become safe again. Crepulin recedes but does not vanish.
+
+Setting Breakdown
+Surface Layer:
+- courtyards
+- apartment halls
+- broken elevators
+- utility sheds
+- bus stops
+
+DetnDimension Layer:
+- stretched stairwells
+- corridor loops
+- curtain rooms
+- stove niches
+- bathhouse steam ribs
+- railbone yards
+- black road vaults
+- the well chamber
+
+Core Mechanics
+Exploration:
+Climb, crouch, crawl, ledge traverse, and use child-sized shortcuts.
+
+Hiding:
+Use beds, tables, curtains, carts, and alcoves. Not all threats can be avoided by hiding in the same way.
+
+Listening:
+Listen to walls, doors, floors, and vents to learn routes, hidden spaces, and legend-state conditions.
+
+House Rule System:
+Rooms have embedded rules such as not leaving bread on the floor, not facing mirrors while sleeping, and not answering corridor voices at the wrong hour.
+
+Dread and Warmth:
+Dread rises from pursuit, corrupted spaces, and forbidden sound. Warmth comes from steam, stoves, candles, and spirit blessing. High Dread distorts perception and control.
+
+Tools:
+- candle stub
+- box cutter
+- key ring
+- iron spoon
+- thread spool
+- chalk
+- bread and salt packet
+- hand bell
+- glass marble
+
+Spirit Bargains:
+The Domov Keeper and Babka Kuroles trade tasks, truth, offerings, and memory fragments instead of money.
+
+Progression Unlocks
+- House Listening
+- Warmth Carry
+- Curtain Cut Rite
+- Stove Blessing
+- Bath Steam Passage
+- Black Road Refusal
+- Name Ward
+
+Threat Design
+- Keyhole Kikimora
+- Curtain Hands
+- Boiler Men
+- Chalk Children
+- The Chauffeur
+- Crepulin Blooms
+
+Visual Direction
+Forward-facing child sprite identity, damp concrete, old plaster, sodium light, steam white, black lacquer vehicle shine, chalk marks, and bruised shadow color.
+
+Audio Direction
+Apartment ambience, industrial drone, lo-fi beat textures, tape hiss, low choir, rail resonance, and distorted child counting. The sound should feel touched by underground beatmaking culture rather than generic orchestral horror.
+
+Interface Direction
+Menus and overlays should feel like maintenance diagrams, prayer cards, utility labels, elevator notes, and child chalk marks.
+
+Folklore Integration
+Domovoy:
+Becomes the room-state and household ally logic.
+
+Kikimora:
+Becomes the keyhole stalker and sleep-room hazard logic.
+
+Baba Yaga:
+Becomes Babka Kuroles, the threshold mentor.
+
+Black Volga:
+Becomes the Black Road system and the Chauffeur antagonist.
+
+Yellow and Black Curtains:
+Become the logic basis for Curtain Flats and fabric trap states.
+
+Well to Hell:
+Becomes the truth-pit and borehole dread zone.
+
+Black Bird of Chernobyl:
+Becomes a collapse omen in late-game sequences.
+
+Asset Direction from Existing Clip Files
+- `detn_idletoward_sprite.clip` implies a frontal idle presentation.
+- `detn_walktoward_sprite.clip` implies a forward-approach walk cycle.
+- Both files are substantial binary Clip Studio project files rather than placeholders.
+
+Prototype Recommendation
+Build a vertical slice with:
+1. courtyard tutorial
+2. stairwell transition
+3. one curtain-room puzzle
+4. one Domov Keeper bargain
+5. one short Black Road chase
+
+Implementation Roadmap
+1. Build movement, hiding, listening, and Dread/Warmth systems in C.
+2. Add a room-state system for House Rules.
+3. Hook the first Enfant sprite references into a renderer.
+4. Build Stairwell Mouth and Curtain Flats intro.
+5. Add the Domov Keeper and Kikimora.
+6. Add the first Black Road chase.
+
+Handoff Summary
+Crepulin currently has no prior design text in the workspace. This document establishes the first complete direction based on the only verified local references and the collected folklore research.

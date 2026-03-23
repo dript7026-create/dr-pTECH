@@ -1,0 +1,36 @@
+[
+    {
+        "name":  "innsmouth_pickups_and_resources_v3",
+        "category":  "interactive",
+        "prompt_revision":  "transparent_orb32_v1",
+        "protocol_profile":  "innsmouth_island_dimensional_protocol_v1",
+        "pass_kind":  "complete_game",
+        "guide_ref":  "innsmouth_island_complete_game_prompt_guide_v1",
+        "prompt":  "ORBSystems 32-dimensional coherency pickup request for InnsmouthIsland; transparent background only, isolated alpha render, no opaque backdrop, full depth-precision mapping; brine salt, black kelp, salt sigils, throwing knife piles, fire bomb caches, seed pods, consumable bundles, angular silhouette clusters designed for instant gameplay readability, no text",
+        "negative_prompt":  "opaque background, solid background, painted matte, text, watermark, logo",
+        "controls":  {
+                         "transparent_background":  true
+                     },
+        "transparent_background":  true,
+        "w":  1216,
+        "h":  896,
+        "out":  "../../../ORBEngine/assets/innsmouth_island/complete_game/interactive/innsmouth_pickups_and_resources_v3.png"
+    },
+    {
+        "name":  "innsmouth_murkshelter_dormant_and_activated_v3",
+        "category":  "interactive",
+        "prompt_revision":  "transparent_orb32_v1",
+        "protocol_profile":  "innsmouth_island_dimensional_protocol_v1",
+        "pass_kind":  "complete_game",
+        "guide_ref":  "innsmouth_island_complete_game_prompt_guide_v1",
+        "prompt":  "ORBSystems 32-dimensional coherency shelter request for InnsmouthIsland; transparent background only, isolated alpha render, no opaque backdrop, full depth-precision mapping and interaction anchor discipline; MurkShelter dormant and activated states, pearl network ring, upgrade resonance bloom, fast-travel activation geometry, expressionistic angular shrine engineering, no text",
+        "negative_prompt":  "opaque background, solid background, painted matte, text, watermark, logo",
+        "controls":  {
+                         "transparent_background":  true
+                     },
+        "transparent_background":  true,
+        "w":  1216,
+        "h":  896,
+        "out":  "../../../ORBEngine/assets/innsmouth_island/complete_game/interactive/innsmouth_murkshelter_dormant_and_activated_v3.png"
+    }
+]

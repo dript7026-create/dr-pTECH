@@ -1,0 +1,35 @@
+TommyBeta 100% Autoplay Run Log
+
+won: True
+fights: 22
+level: 5
+xp: 194
+finisher_mask: 0xFF
+unlocked_specials: 8
+history: hunt=0, cunning=21, endure=0
+combat_frames: 9272
+estimated_runtime_seconds: 227.69
+
+Fight log:
+fight 1: target_special=CHARGE DASH won=True level=1 finisher_mask=0x01 combat_frames=41 history_pick=CUNNING
+fight 2: target_special=CHARGE DASH won=True level=1 finisher_mask=0x01 combat_frames=51 history_pick=CUNNING
+fight 3: target_special=CHARGE DASH won=True level=2 finisher_mask=0x01 combat_frames=132 history_pick=CUNNING
+fight 4: target_special=SKY CHOMP won=True level=2 finisher_mask=0x03 combat_frames=144 history_pick=CUNNING
+fight 5: target_special=SKY CHOMP won=True level=2 finisher_mask=0x03 combat_frames=144 history_pick=CUNNING
+fight 6: target_special=SKY CHOMP won=True level=2 finisher_mask=0x03 combat_frames=208 history_pick=CUNNING
+fight 7: target_special=TAIL CYCLONE won=True level=2 finisher_mask=0x07 combat_frames=288 history_pick=CUNNING
+fight 8: target_special=TAIL CYCLONE won=True level=3 finisher_mask=0x07 combat_frames=288 history_pick=CUNNING
+fight 9: target_special=TAIL CYCLONE won=True level=3 finisher_mask=0x07 combat_frames=264 history_pick=CUNNING
+fight 10: target_special=EMBER SPIT won=True level=3 finisher_mask=0x0F combat_frames=424 history_pick=CUNNING
+fight 11: target_special=EMBER SPIT won=True level=3 finisher_mask=0x0F combat_frames=424 history_pick=CUNNING
+fight 12: target_special=EMBER SPIT won=True level=3 finisher_mask=0x0F combat_frames=488 history_pick=CUNNING
+fight 13: target_special=IRON GUT SLAM won=True level=4 finisher_mask=0x1F combat_frames=472 history_pick=CUNNING
+fight 14: target_special=IRON GUT SLAM won=True level=4 finisher_mask=0x1F combat_frames=448 history_pick=CUNNING
+fight 15: target_special=IRON GUT SLAM won=True level=4 finisher_mask=0x1F combat_frames=512 history_pick=CUNNING
+fight 16: target_special=PHANTOM POUNCE won=True level=4 finisher_mask=0x3F combat_frames=560 history_pick=CUNNING
+fight 17: target_special=PHANTOM POUNCE won=True level=4 finisher_mask=0x3F combat_frames=624 history_pick=CUNNING
+fight 18: target_special=PHANTOM POUNCE won=True level=4 finisher_mask=0x3F combat_frames=624 history_pick=CUNNING
+fight 19: target_special=HUNGER HOWL won=True level=4 finisher_mask=0x7F combat_frames=752 history_pick=CUNNING
+fight 20: target_special=HUNGER HOWL won=True level=5 finisher_mask=0x7F combat_frames=816 history_pick=CUNNING
+fight 21: target_special=HUNGER HOWL won=True level=5 finisher_mask=0x7F combat_frames=792 history_pick=CUNNING
+fight 22: target_special=CROWNBREAKER won=True level=5 finisher_mask=0xFF combat_frames=776 history_pick=-

@@ -1,0 +1,6456 @@
+{
+  "manifest_name": "bango_patoot_qa_demo_manifest",
+  "manifest_version": "2026-03-12.integration_metadata_complete",
+  "intent": "Integration-first Recraft generation manifest for the minimum playable Bango-Patoot QA demo vertical slice.",
+  "platform_targets": {
+    "windows": "Nearest-neighbor preview and QA build using the same sliced logical asset set as the 3DS build.",
+    "nintendo_3ds_top": "400x240 per eye",
+    "nintendo_3ds_bottom": "320x240"
+  },
+  "integration_truth": [
+    "Recraft outputs are image masters, not native meshes, rigs, UVs, or authored animation clips.",
+    "This manifest therefore guarantees source-asset compliance for slicing, billboard rendering, impostor use, rig-reference tracing, and later mesh blockout reference, not literal automatic 3D mesh generation.",
+    "An asset is only considered 100 percent integration-accurate after it passes post-generation validation in the runtime pipeline."
+  ],
+  "shared_prompt_appendix": "Orthographic or pseudo-orthographic technical game-asset presentation. Transparent background only. Center the subject inside the assigned cell. Keep a fixed grounded baseline across all frames. Preserve full silhouette with clean 2 percent safety margin on all sides. No perspective distortion, no lens effects, no depth of field, no motion blur, no bloom, no film grain, no painterly smudging. Use simple readable lighting with one clear key and soft fill. Keep material regions separable for later slicing, rig tracing, and mesh blockout. Make the asset readable after nearest-neighbor downsampling to the declared runtime target.",
+  "shared_negative_prompt_appendix": "perspective camera, dramatic foreshortening, cinematic framing, background scene, environment backdrop, text, watermark, logo, crop, cutoff limbs, blur, motion blur, bloom, depth of field, grain, painterly smear, soft alpha fringe, muddy silhouette, inconsistent scale, inconsistent baseline, merged frames",
+  "integration_contract": {
+    "projection": "True orthographic or effectively orthographic.",
+    "baseline": "Stable grounded baseline for every turnaround and every frame sequence.",
+    "alpha": "Fully transparent background with no matte fringe.",
+    "scale": "Subject should occupy roughly 70 to 82 percent of usable cell height unless intentionally oversized.",
+    "silhouette": "No crop. Full form must remain legible at runtime export size.",
+    "materials": "Fur, wax, brass, bone, cloth, leather, machine parts, and magical elements must remain separable at small scale.",
+    "rig_readiness": "Major joints and layered costume masses must be readable for later skeletal tracing.",
+    "mesh_readiness": "Turnarounds and modular kits must be suitable as blockout and UV-reference material for later modelling.",
+    "modularity": "Environment kits must preserve seam-friendly edges and repeat-safe boundaries.",
+    "pivot_readiness": "Every asset must allow a stable pivot assignment without guesswork.",
+    "collision_readiness": "Silhouette must imply a coherent gameplay collision mass.",
+    "validation_required": true
+  },
+  "post_generation_validation_gates": [
+    "Cell alignment gate",
+    "Scale and downsample gate",
+    "Alpha cleanliness gate",
+    "Slice extraction gate",
+    "Pivot assignment gate",
+    "Collision silhouette gate",
+    "Rig tracing gate",
+    "Animation readability gate",
+    "UI readability gate"
+  ],
+  "runtime_export_contract": {
+    "standard_character": "24x36",
+    "standard_npc": "24x36",
+    "standard_enemy": "24x36",
+    "elite_or_boss": "32x48",
+    "small_pickup": "16x16",
+    "icon_medium": "24x24",
+    "portrait": "96x96",
+    "top_hud_strip": "400x32",
+    "bottom_panel": "320x240 assembled slices"
+  },
+  "budget": {
+    "unit_cost": 40,
+    "asset_count": 50,
+    "total_credits": 2000
+  },
+  "assets": [
+    {
+      "name": "bango_turnaround_master",
+      "category": "player",
+      "prompt": "Transparent background four-angle turnaround sheet for Bango, horned underhive survivor, field harness, shrine-worn gear, readable silhouette, clean baseline, pseudo-3D shading for later nearest-neighbor reduction.",
+      "negative_prompt": "text, logo, watermark, background scene, blur, missing limbs, off-center pose",
+      "w": 1536,
+      "h": 576,
+      "out": "qa_demo/player/bango_turnaround_master.png",
+      "api_units": 40,
+      "model": "recraftv4",
+      "runtime_target": "4 angles, each exported to 24x36",
+      "integration_role": [
+        "runtime sprite source",
+        "billboard source",
+        "animation keypose source",
+        "rig reference",
+        "mesh blockout reference"
+      ],
+      "cell_layout": "4x1, 384x576 per cell",
+      "baseline_anchor": "feet",
+      "review_focus": [
+        "turnaround consistency",
+        "baseline lock",
+        "silhouette readability",
+        "joint clarity",
+        "material separation"
+      ],
+      "translation_metadata": {
+        "analysis_profile": "rigged_actor_blockout",
+        "symbol_object_policy": "meaningful contiguous image regions become self-contained symbol objects",
+        "neighbor_stencil": "32-neighbor comparison",
+        "depth_inference_method": "region stack, local shading, occlusion order, and cross-view consistency",
+        "engine_mapping": {
+          "mesh_target": "rigged_actor_blockout",
+          "bind_to_rig": true,
+          "runtime_export": "24x36",
+          "deformation_priority": [
+            "spine",
+            "arms",
+            "legs",
+            "head",
+            "secondary accessories"
+          ]
+        },
+        "pivot_policy": {
+          "primary_anchor": "feet",
+          "stable_pivot_required": true
+        },
+        "collision_policy": {
+          "required": true,
+          "proxy_source": "silhouette-derived region hull"
+        },
+        "surface_contract": {
+          "height_texture_ready": true,
+          "material_mask_ready": true,
+          "normal_hint_ready": true
+        },
+        "keypose_intake": {
+          "required": true,
+          "runtime_inbetween_candidate": true
+        },
+        "rig_reference": "bango_base_rig"
+      },
+      "reconstruction_outputs": [
+        "pixel_matrix.json",
+        "region_map.json",
+        "symbol_objects.json",
+        "depth_map.png",
+        "spatial_metrics.json",
+        "mesh_contract.json",
+        "surface_contract.json",
+        "rig_mapping.json",
+        "keypose_intake.json",
+        "runtime_inbetween_constraints.json"
+      ],
+      "slice_plan": {
+        "mode": "uniform-grid",
+        "grid": {
+          "cols": 4,
+          "rows": 1,
+          "cell_width": 384,
+          "cell_height": 576
+        },
+        "cells": [
+          {
+            "name": "front",
+            "row": 0,
+            "col": 0,
+            "exports": [
+              {
+                "name": "front",
+                "mode": "fit",
+                "size": [
+                  24,
+                  36
+                ]
+              }
+            ]
+          },
+          {
+            "name": "left",
+            "row": 0,
+            "col": 1,
+            "exports": [
+              {
+                "name": "left",
+                "mode": "fit",
+                "size": [
+                  24,
+                  36
+                ]
+              }
+            ]
+          },
+          {
+            "name": "right",
+            "row": 0,
+            "col": 2,
+            "exports": [
+              {
+                "name": "right",
+                "mode": "fit",
+                "size": [
+                  24,
+                  36
+                ]
+              }
+            ]
+          },
+          {
+            "name": "rear",
+            "row": 0,
+            "col": 3,
+            "exports": [
+              {
+                "name": "rear",
+                "mode": "fit",
+                "size": [
+                  24,
+                  36
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "bango_locomotion_sheet",
+      "category": "player",
+      "prompt": "Transparent background six-frame locomotion sheet for Bango, idle to walk to run transition, same costume and body proportions as turnaround, strong footfall clarity, no smear frames.",
+      "negative_prompt": "text, logo, watermark, blur, merged frames, inconsistent anatomy",
+      "w": 2304,
+      "h": 576,
+      "out": "qa_demo/player/bango_locomotion_sheet.png",
+      "api_units": 40,
+      "model": "recraftv4",
+      "runtime_target": "6 frames exported to 24x36",
+      "integration_role": [
+        "runtime sprite source",
+        "animation keypose source",
+        "rig reference",
+        "mesh blockout reference"
+      ],
+      "cell_layout": "6x1, 384x576 per cell",
+      "baseline_anchor": "feet",
+      "review_focus": [
+        "baseline lock",
+        "silhouette readability",
+        "joint clarity",
+        "material separation"
+      ],
+      "translation_metadata": {
+        "analysis_profile": "rigged_actor_blockout",
+        "symbol_object_policy": "meaningful contiguous image regions become self-contained symbol objects",
+        "neighbor_stencil": "32-neighbor comparison",
+        "depth_inference_method": "region stack, local shading, occlusion order, and cross-view consistency",
+        "engine_mapping": {
+          "mesh_target": "rigged_actor_blockout",
+          "bind_to_rig": true,
+          "runtime_export": "24x36",
+          "deformation_priority": [
+            "spine",
+            "arms",
+            "legs",
+            "head",
+            "secondary accessories"
+          ]
+        },
+        "pivot_policy": {
+          "primary_anchor": "feet",
+          "stable_pivot_required": true
+        },
+        "collision_policy": {
+          "required": true,
+          "proxy_source": "silhouette-derived region hull"
+        },
+        "surface_contract": {
+          "height_texture_ready": true,
+          "material_mask_ready": true,
+          "normal_hint_ready": true
+        },
+        "keypose_intake": {
+          "required": true,
+          "runtime_inbetween_candidate": true
+        },
+        "rig_reference": "bango_base_rig"
+      },
+      "reconstruction_outputs": [
+        "pixel_matrix.json",
+        "region_map.json",
+        "symbol_objects.json",
+        "depth_map.png",
+        "spatial_metrics.json",
+        "mesh_contract.json",
+        "surface_contract.json",
+        "rig_mapping.json",
+        "keypose_intake.json",
+        "runtime_inbetween_constraints.json"
+      ],
+      "slice_plan": {
+        "mode": "uniform-grid",
+        "grid": {
+          "cols": 6,
+          "rows": 1,
+          "cell_width": 384,
+          "cell_height": 576
+        },
+        "cells": [
+          {
+            "name": "bango_locomotion_sheet_00",
+            "row": 0,
+            "col": 0,
+            "exports": [
+              {
+                "name": "bango_locomotion_sheet_00",
+                "mode": "fit",
+                "size": [
+                  24,
+                  36
+                ]
+              }
+            ]
+          },
+          {
+            "name": "bango_locomotion_sheet_01",
+            "row": 0,
+            "col": 1,
+            "exports": [
+              {
+                "name": "bango_locomotion_sheet_01",
+                "mode": "fit",
+                "size": [
+                  24,
+                  36
+                ]
+              }
+            ]
+          },
+          {
+            "name": "bango_locomotion_sheet_02",
+            "row": 0,
+            "col": 2,
+            "exports": [
+              {
+                "name": "bango_locomotion_sheet_02",
+                "mode": "fit",
+                "size": [
+                  24,
+                  36
+                ]
+              }
+            ]
+          },
+          {
+            "name": "bango_locomotion_sheet_03",
+            "row": 0,
+            "col": 3,
+            "exports": [
+              {
+                "name": "bango_locomotion_sheet_03",
+                "mode": "fit",
+                "size": [
+                  24,
+                  36
+                ]
+              }
+            ]
+          },
+          {
+            "name": "bango_locomotion_sheet_04",
+            "row": 0,
+            "col": 4,
+            "exports": [
+              {
+                "name": "bango_locomotion_sheet_04",
+                "mode": "fit",
+                "size": [
+                  24,
+                  36
+                ]
+              }
+            ]
+          },
+          {
+            "name": "bango_locomotion_sheet_05",
+            "row": 0,
+            "col": 5,
+            "exports": [
+              {
+                "name": "bango_locomotion_sheet_05",
+                "mode": "fit",
+                "size": [
+                  24,
+                  36
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "bango_melee_sheet",
+      "category": "player",
+      "prompt": "Transparent background six-frame melee action sheet for Bango, heavy horn-led strike language, readable anticipation, contact, follow-through, and recovery poses for close-range combat.",
+      "negative_prompt": "text, logo, watermark, blur, extra weapons, unreadable hands",
+      "w": 2304,
+      "h": 576,
+      "out": "qa_demo/player/bango_melee_sheet.png",
+      "api_units": 40,
+      "model": "recraftv4",
+      "runtime_target": "6 frames exported to 24x36",
+      "integration_role": [
+        "runtime sprite source",
+        "animation keypose source",
+        "rig reference",
+        "mesh blockout reference"
+      ],
+      "cell_layout": "6x1, 384x576 per cell",
+      "baseline_anchor": "feet",
+      "review_focus": [
+        "baseline lock",
+        "silhouette readability",
+        "joint clarity",
+        "material separation",
+        "anticipation",
+        "contact pose clarity"
+      ],
+      "translation_metadata": {
+        "analysis_profile": "rigged_actor_blockout",
+        "symbol_object_policy": "meaningful contiguous image regions become self-contained symbol objects",
+        "neighbor_stencil": "32-neighbor comparison",
+        "depth_inference_method": "region stack, local shading, occlusion order, and cross-view consistency",
+        "engine_mapping": {
+          "mesh_target": "rigged_actor_blockout",
+          "bind_to_rig": true,
+          "runtime_export": "24x36",
+          "deformation_priority": [
+            "spine",
+            "arms",
+            "legs",
+            "head",
+            "secondary accessories"
+          ]
+        },
+        "pivot_policy": {
+          "primary_anchor": "feet",
+          "stable_pivot_required": true
+        },
+        "collision_policy": {
+          "required": true,
+          "proxy_source": "silhouette-derived region hull"
+        },
+        "surface_contract": {
+          "height_texture_ready": true,
+          "material_mask_ready": true,
+          "normal_hint_ready": true
+        },
+        "keypose_intake": {
+          "required": true,
+          "runtime_inbetween_candidate": true
+        },
+        "rig_reference": "bango_base_rig"
+      },
+      "reconstruction_outputs": [
+        "pixel_matrix.json",
+        "region_map.json",
+        "symbol_objects.json",
+        "depth_map.png",
+        "spatial_metrics.json",
+        "mesh_contract.json",
+        "surface_contract.json",
+        "rig_mapping.json",
+        "keypose_intake.json",
+        "runtime_inbetween_constraints.json"
+      ],
+      "slice_plan": {
+        "mode": "uniform-grid",
+        "grid": {
+          "cols": 6,
+          "rows": 1,
+          "cell_width": 384,
+          "cell_height": 576
+        },
+        "cells": [
+          {
+            "name": "bango_melee_sheet_00",
+            "row": 0,
+            "col": 0,
+            "exports": [
+              {
+                "name": "bango_melee_sheet_00",
+                "mode": "fit",
+                "size": [
+                  24,
+                  36
+                ]
+              }
+            ]
+          },
+          {
+            "name": "bango_melee_sheet_01",
+            "row": 0,
+            "col": 1,
+            "exports": [
+              {
+                "name": "bango_melee_sheet_01",
+                "mode": "fit",
+                "size": [
+                  24,
+                  36
+                ]
+              }
+            ]
+          },
+          {
+            "name": "bango_melee_sheet_02",
+            "row": 0,
+            "col": 2,
+            "exports": [
+              {
+                "name": "bango_melee_sheet_02",
+                "mode": "fit",
+                "size": [
+                  24,
+                  36
+                ]
+              }
+            ]
+          },
+          {
+            "name": "bango_melee_sheet_03",
+            "row": 0,
+            "col": 3,
+            "exports": [
+              {
+                "name": "bango_melee_sheet_03",
+                "mode": "fit",
+                "size": [
+                  24,
+                  36
+                ]
+              }
+            ]
+          },
+          {
+            "name": "bango_melee_sheet_04",
+            "row": 0,
+            "col": 4,
+            "exports": [
+              {
+                "name": "bango_melee_sheet_04",
+                "mode": "fit",
+                "size": [
+                  24,
+                  36
+                ]
+              }
+            ]
+          },
+          {
+            "name": "bango_melee_sheet_05",
+            "row": 0,
+            "col": 5,
+            "exports": [
+              {
+                "name": "bango_melee_sheet_05",
+                "mode": "fit",
+                "size": [
+                  24,
+                  36
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "bango_dodge_interact_sheet",
+      "category": "player",
+      "prompt": "Transparent background six-frame action sheet for Bango covering dodge, quick sidestep, shrine interaction, switch pull, and pickup posture, all in one consistent gear set.",
+      "negative_prompt": "text, logo, watermark, blur, impossible poses, missing feet",
+      "w": 2304,
+      "h": 576,
+      "out": "qa_demo/player/bango_dodge_interact_sheet.png",
+      "api_units": 40,
+      "model": "recraftv4",
+      "runtime_target": "6 frames exported to 24x36",
+      "integration_role": [
+        "runtime sprite source",
+        "animation keypose source",
+        "rig reference",
+        "mesh blockout reference"
+      ],
+      "cell_layout": "6x1, 384x576 per cell",
+      "baseline_anchor": "feet",
+      "review_focus": [
+        "baseline lock",
+        "silhouette readability",
+        "joint clarity",
+        "material separation"
+      ],
+      "translation_metadata": {
+        "analysis_profile": "rigged_actor_blockout",
+        "symbol_object_policy": "meaningful contiguous image regions become self-contained symbol objects",
+        "neighbor_stencil": "32-neighbor comparison",
+        "depth_inference_method": "region stack, local shading, occlusion order, and cross-view consistency",
+        "engine_mapping": {
+          "mesh_target": "rigged_actor_blockout",
+          "bind_to_rig": true,
+          "runtime_export": "24x36",
+          "deformation_priority": [
+            "spine",
+            "arms",
+            "legs",
+            "head",
+            "secondary accessories"
+          ]
+        },
+        "pivot_policy": {
+          "primary_anchor": "feet",
+          "stable_pivot_required": true
+        },
+        "collision_policy": {
+          "required": true,
+          "proxy_source": "silhouette-derived region hull"
+        },
+        "surface_contract": {
+          "height_texture_ready": true,
+          "material_mask_ready": true,
+          "normal_hint_ready": true
+        },
+        "keypose_intake": {
+          "required": true,
+          "runtime_inbetween_candidate": true
+        },
+        "rig_reference": "bango_base_rig"
+      },
+      "reconstruction_outputs": [
+        "pixel_matrix.json",
+        "region_map.json",
+        "symbol_objects.json",
+        "depth_map.png",
+        "spatial_metrics.json",
+        "mesh_contract.json",
+        "surface_contract.json",
+        "rig_mapping.json",
+        "keypose_intake.json",
+        "runtime_inbetween_constraints.json"
+      ],
+      "slice_plan": {
+        "mode": "uniform-grid",
+        "grid": {
+          "cols": 6,
+          "rows": 1,
+          "cell_width": 384,
+          "cell_height": 576
+        },
+        "cells": [
+          {
+            "name": "bango_dodge_interact_sheet_00",
+            "row": 0,
+            "col": 0,
+            "exports": [
+              {
+                "name": "bango_dodge_interact_sheet_00",
+                "mode": "fit",
+                "size": [
+                  24,
+                  36
+                ]
+              }
+            ]
+          },
+          {
+            "name": "bango_dodge_interact_sheet_01",
+            "row": 0,
+            "col": 1,
+            "exports": [
+              {
+                "name": "bango_dodge_interact_sheet_01",
+                "mode": "fit",
+                "size": [
+                  24,
+                  36
+                ]
+              }
+            ]
+          },
+          {
+            "name": "bango_dodge_interact_sheet_02",
+            "row": 0,
+            "col": 2,
+            "exports": [
+              {
+                "name": "bango_dodge_interact_sheet_02",
+                "mode": "fit",
+                "size": [
+                  24,
+                  36
+                ]
+              }
+            ]
+          },
+          {
+            "name": "bango_dodge_interact_sheet_03",
+            "row": 0,
+            "col": 3,
+            "exports": [
+              {
+                "name": "bango_dodge_interact_sheet_03",
+                "mode": "fit",
+                "size": [
+                  24,
+                  36
+                ]
+              }
+            ]
+          },
+          {
+            "name": "bango_dodge_interact_sheet_04",
+            "row": 0,
+            "col": 4,
+            "exports": [
+              {
+                "name": "bango_dodge_interact_sheet_04",
+                "mode": "fit",
+                "size": [
+                  24,
+                  36
+                ]
+              }
+            ]
+          },
+          {
+            "name": "bango_dodge_interact_sheet_05",
+            "row": 0,
+            "col": 5,
+            "exports": [
+              {
+                "name": "bango_dodge_interact_sheet_05",
+                "mode": "fit",
+                "size": [
+                  24,
+                  36
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "bango_hurt_fall_sheet",
+      "category": "player",
+      "prompt": "Transparent background six-frame reaction sheet for Bango covering hurt, knockback, airborne hit, grounded fall, get-up, and exhausted stance, readable at tiny sprite scale.",
+      "negative_prompt": "text, logo, watermark, gore, blur, frame overlap",
+      "w": 2304,
+      "h": 576,
+      "out": "qa_demo/player/bango_hurt_fall_sheet.png",
+      "api_units": 40,
+      "model": "recraftv4",
+      "runtime_target": "6 frames exported to 24x36",
+      "integration_role": [
+        "runtime sprite source",
+        "animation keypose source",
+        "rig reference",
+        "mesh blockout reference"
+      ],
+      "cell_layout": "6x1, 384x576 per cell",
+      "baseline_anchor": "feet or body center when airborne",
+      "review_focus": [
+        "baseline lock",
+        "silhouette readability",
+        "joint clarity",
+        "material separation"
+      ],
+      "translation_metadata": {
+        "analysis_profile": "rigged_actor_blockout",
+        "symbol_object_policy": "meaningful contiguous image regions become self-contained symbol objects",
+        "neighbor_stencil": "32-neighbor comparison",
+        "depth_inference_method": "region stack, local shading, occlusion order, and cross-view consistency",
+        "engine_mapping": {
+          "mesh_target": "rigged_actor_blockout",
+          "bind_to_rig": true,
+          "runtime_export": "24x36",
+          "deformation_priority": [
+            "spine",
+            "arms",
+            "legs",
+            "head",
+            "secondary accessories"
+          ]
+        },
+        "pivot_policy": {
+          "primary_anchor": "feet or body center when airborne",
+          "stable_pivot_required": true
+        },
+        "collision_policy": {
+          "required": true,
+          "proxy_source": "silhouette-derived region hull"
+        },
+        "surface_contract": {
+          "height_texture_ready": true,
+          "material_mask_ready": true,
+          "normal_hint_ready": true
+        },
+        "keypose_intake": {
+          "required": true,
+          "runtime_inbetween_candidate": true
+        },
+        "rig_reference": "bango_base_rig"
+      },
+      "reconstruction_outputs": [
+        "pixel_matrix.json",
+        "region_map.json",
+        "symbol_objects.json",
+        "depth_map.png",
+        "spatial_metrics.json",
+        "mesh_contract.json",
+        "surface_contract.json",
+        "rig_mapping.json",
+        "keypose_intake.json",
+        "runtime_inbetween_constraints.json"
+      ],
+      "slice_plan": {
+        "mode": "uniform-grid",
+        "grid": {
+          "cols": 6,
+          "rows": 1,
+          "cell_width": 384,
+          "cell_height": 576
+        },
+        "cells": [
+          {
+            "name": "bango_hurt_fall_sheet_00",
+            "row": 0,
+            "col": 0,
+            "exports": [
+              {
+                "name": "bango_hurt_fall_sheet_00",
+                "mode": "fit",
+                "size": [
+                  24,
+                  36
+                ]
+              }
+            ]
+          },
+          {
+            "name": "bango_hurt_fall_sheet_01",
+            "row": 0,
+            "col": 1,
+            "exports": [
+              {
+                "name": "bango_hurt_fall_sheet_01",
+                "mode": "fit",
+                "size": [
+                  24,
+                  36
+                ]
+              }
+            ]
+          },
+          {
+            "name": "bango_hurt_fall_sheet_02",
+            "row": 0,
+            "col": 2,
+            "exports": [
+              {
+                "name": "bango_hurt_fall_sheet_02",
+                "mode": "fit",
+                "size": [
+                  24,
+                  36
+                ]
+              }
+            ]
+          },
+          {
+            "name": "bango_hurt_fall_sheet_03",
+            "row": 0,
+            "col": 3,
+            "exports": [
+              {
+                "name": "bango_hurt_fall_sheet_03",
+                "mode": "fit",
+                "size": [
+                  24,
+                  36
+                ]
+              }
+            ]
+          },
+          {
+            "name": "bango_hurt_fall_sheet_04",
+            "row": 0,
+            "col": 4,
+            "exports": [
+              {
+                "name": "bango_hurt_fall_sheet_04",
+                "mode": "fit",
+                "size": [
+                  24,
+                  36
+                ]
+              }
+            ]
+          },
+          {
+            "name": "bango_hurt_fall_sheet_05",
+            "row": 0,
+            "col": 5,
+            "exports": [
+              {
+                "name": "bango_hurt_fall_sheet_05",
+                "mode": "fit",
+                "size": [
+                  24,
+                  36
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "patoot_turnaround_master",
+      "category": "companion",
+      "prompt": "Transparent background four-angle turnaround sheet for Patoot, reptile-dodo-ostrid companion, scout tack, readable beak, perch-ready legs, compact wings, clear silhouette for 24x36 export.",
+      "negative_prompt": "text, logo, watermark, background scene, blur, merged anatomy",
+      "w": 1536,
+      "h": 576,
+      "out": "qa_demo/companion/patoot_turnaround_master.png",
+      "api_units": 40,
+      "model": "recraftv4",
+      "runtime_target": "4 angles, each exported to 24x36",
+      "integration_role": [
+        "runtime sprite source",
+        "billboard source",
+        "animation keypose source",
+        "rig reference",
+        "mesh blockout reference"
+      ],
+      "cell_layout": "4x1, 384x576 per cell",
+      "baseline_anchor": "feet",
+      "review_focus": [
+        "turnaround consistency",
+        "baseline lock",
+        "silhouette readability",
+        "joint clarity",
+        "material separation"
+      ],
+      "translation_metadata": {
+        "analysis_profile": "rigged_actor_blockout",
+        "symbol_object_policy": "meaningful contiguous image regions become self-contained symbol objects",
+        "neighbor_stencil": "32-neighbor comparison",
+        "depth_inference_method": "region stack, local shading, occlusion order, and cross-view consistency",
+        "engine_mapping": {
+          "mesh_target": "rigged_actor_blockout",
+          "bind_to_rig": true,
+          "runtime_export": "24x36",
+          "deformation_priority": [
+            "neck",
+            "head",
+            "wings",
+            "legs",
+            "tail"
+          ]
+        },
+        "pivot_policy": {
+          "primary_anchor": "feet",
+          "stable_pivot_required": true
+        },
+        "collision_policy": {
+          "required": true,
+          "proxy_source": "silhouette-derived region hull"
+        },
+        "surface_contract": {
+          "height_texture_ready": true,
+          "material_mask_ready": true,
+          "normal_hint_ready": true
+        },
+        "keypose_intake": {
+          "required": true,
+          "runtime_inbetween_candidate": true
+        },
+        "rig_reference": "patoot_base_rig"
+      },
+      "reconstruction_outputs": [
+        "pixel_matrix.json",
+        "region_map.json",
+        "symbol_objects.json",
+        "depth_map.png",
+        "spatial_metrics.json",
+        "mesh_contract.json",
+        "surface_contract.json",
+        "rig_mapping.json",
+        "keypose_intake.json",
+        "runtime_inbetween_constraints.json"
+      ],
+      "slice_plan": {
+        "mode": "uniform-grid",
+        "grid": {
+          "cols": 4,
+          "rows": 1,
+          "cell_width": 384,
+          "cell_height": 576
+        },
+        "cells": [
+          {
+            "name": "front",
+            "row": 0,
+            "col": 0,
+            "exports": [
+              {
+                "name": "front",
+                "mode": "fit",
+                "size": [
+                  24,
+                  36
+                ]
+              }
+            ]
+          },
+          {
+            "name": "left",
+            "row": 0,
+            "col": 1,
+            "exports": [
+              {
+                "name": "left",
+                "mode": "fit",
+                "size": [
+                  24,
+                  36
+                ]
+              }
+            ]
+          },
+          {
+            "name": "right",
+            "row": 0,
+            "col": 2,
+            "exports": [
+              {
+                "name": "right",
+                "mode": "fit",
+                "size": [
+                  24,
+                  36
+                ]
+              }
+            ]
+          },
+          {
+            "name": "rear",
+            "row": 0,
+            "col": 3,
+            "exports": [
+              {
+                "name": "rear",
+                "mode": "fit",
+                "size": [
+                  24,
+                  36
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "patoot_locomotion_sheet",
+      "category": "companion",
+      "prompt": "Transparent background six-frame locomotion sheet for Patoot, strut, hover-hop, idle alert, and companion follow behavior, consistent proportions and readable foot placement.",
+      "negative_prompt": "text, logo, watermark, blur, mismatched anatomy, merged frames",
+      "w": 2304,
+      "h": 576,
+      "out": "qa_demo/companion/patoot_locomotion_sheet.png",
+      "api_units": 40,
+      "model": "recraftv4",
+      "runtime_target": "6 frames exported to 24x36",
+      "integration_role": [
+        "runtime sprite source",
+        "animation keypose source",
+        "rig reference",
+        "mesh blockout reference"
+      ],
+      "cell_layout": "6x1, 384x576 per cell",
+      "baseline_anchor": "feet",
+      "review_focus": [
+        "baseline lock",
+        "silhouette readability",
+        "joint clarity",
+        "material separation"
+      ],
+      "translation_metadata": {
+        "analysis_profile": "rigged_actor_blockout",
+        "symbol_object_policy": "meaningful contiguous image regions become self-contained symbol objects",
+        "neighbor_stencil": "32-neighbor comparison",
+        "depth_inference_method": "region stack, local shading, occlusion order, and cross-view consistency",
+        "engine_mapping": {
+          "mesh_target": "rigged_actor_blockout",
+          "bind_to_rig": true,
+          "runtime_export": "24x36",
+          "deformation_priority": [
+            "neck",
+            "head",
+            "wings",
+            "legs",
+            "tail"
+          ]
+        },
+        "pivot_policy": {
+          "primary_anchor": "feet",
+          "stable_pivot_required": true
+        },
+        "collision_policy": {
+          "required": true,
+          "proxy_source": "silhouette-derived region hull"
+        },
+        "surface_contract": {
+          "height_texture_ready": true,
+          "material_mask_ready": true,
+          "normal_hint_ready": true
+        },
+        "keypose_intake": {
+          "required": true,
+          "runtime_inbetween_candidate": true
+        },
+        "rig_reference": "patoot_base_rig"
+      },
+      "reconstruction_outputs": [
+        "pixel_matrix.json",
+        "region_map.json",
+        "symbol_objects.json",
+        "depth_map.png",
+        "spatial_metrics.json",
+        "mesh_contract.json",
+        "surface_contract.json",
+        "rig_mapping.json",
+        "keypose_intake.json",
+        "runtime_inbetween_constraints.json"
+      ],
+      "slice_plan": {
+        "mode": "uniform-grid",
+        "grid": {
+          "cols": 6,
+          "rows": 1,
+          "cell_width": 384,
+          "cell_height": 576
+        },
+        "cells": [
+          {
+            "name": "patoot_locomotion_sheet_00",
+            "row": 0,
+            "col": 0,
+            "exports": [
+              {
+                "name": "patoot_locomotion_sheet_00",
+                "mode": "fit",
+                "size": [
+                  24,
+                  36
+                ]
+              }
+            ]
+          },
+          {
+            "name": "patoot_locomotion_sheet_01",
+            "row": 0,
+            "col": 1,
+            "exports": [
+              {
+                "name": "patoot_locomotion_sheet_01",
+                "mode": "fit",
+                "size": [
+                  24,
+                  36
+                ]
+              }
+            ]
+          },
+          {
+            "name": "patoot_locomotion_sheet_02",
+            "row": 0,
+            "col": 2,
+            "exports": [
+              {
+                "name": "patoot_locomotion_sheet_02",
+                "mode": "fit",
+                "size": [
+                  24,
+                  36
+                ]
+              }
+            ]
+          },
+          {
+            "name": "patoot_locomotion_sheet_03",
+            "row": 0,
+            "col": 3,
+            "exports": [
+              {
+                "name": "patoot_locomotion_sheet_03",
+                "mode": "fit",
+                "size": [
+                  24,
+                  36
+                ]
+              }
+            ]
+          },
+          {
+            "name": "patoot_locomotion_sheet_04",
+            "row": 0,
+            "col": 4,
+            "exports": [
+              {
+                "name": "patoot_locomotion_sheet_04",
+                "mode": "fit",
+                "size": [
+                  24,
+                  36
+                ]
+              }
+            ]
+          },
+          {
+            "name": "patoot_locomotion_sheet_05",
+            "row": 0,
+            "col": 5,
+            "exports": [
+              {
+                "name": "patoot_locomotion_sheet_05",
+                "mode": "fit",
+                "size": [
+                  24,
+                  36
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "patoot_support_attack_sheet",
+      "category": "companion",
+      "prompt": "Transparent background six-frame support attack sheet for Patoot, peck strike, ward flare, scout call, and companion assist poses with strong beak and wing readability.",
+      "negative_prompt": "text, logo, watermark, blur, extra limbs, unreadable wings",
+      "w": 2304,
+      "h": 576,
+      "out": "qa_demo/companion/patoot_support_attack_sheet.png",
+      "api_units": 40,
+      "model": "recraftv4",
+      "runtime_target": "6 frames exported to 24x36",
+      "integration_role": [
+        "runtime sprite source",
+        "animation keypose source",
+        "rig reference",
+        "mesh blockout reference"
+      ],
+      "cell_layout": "6x1, 384x576 per cell",
+      "baseline_anchor": "feet",
+      "review_focus": [
+        "baseline lock",
+        "silhouette readability",
+        "joint clarity",
+        "material separation",
+        "anticipation",
+        "contact pose clarity"
+      ],
+      "translation_metadata": {
+        "analysis_profile": "rigged_actor_blockout",
+        "symbol_object_policy": "meaningful contiguous image regions become self-contained symbol objects",
+        "neighbor_stencil": "32-neighbor comparison",
+        "depth_inference_method": "region stack, local shading, occlusion order, and cross-view consistency",
+        "engine_mapping": {
+          "mesh_target": "rigged_actor_blockout",
+          "bind_to_rig": true,
+          "runtime_export": "24x36",
+          "deformation_priority": [
+            "neck",
+            "head",
+            "wings",
+            "legs",
+            "tail"
+          ]
+        },
+        "pivot_policy": {
+          "primary_anchor": "feet",
+          "stable_pivot_required": true
+        },
+        "collision_policy": {
+          "required": true,
+          "proxy_source": "silhouette-derived region hull"
+        },
+        "surface_contract": {
+          "height_texture_ready": true,
+          "material_mask_ready": true,
+          "normal_hint_ready": true
+        },
+        "keypose_intake": {
+          "required": true,
+          "runtime_inbetween_candidate": true
+        },
+        "rig_reference": "patoot_base_rig"
+      },
+      "reconstruction_outputs": [
+        "pixel_matrix.json",
+        "region_map.json",
+        "symbol_objects.json",
+        "depth_map.png",
+        "spatial_metrics.json",
+        "mesh_contract.json",
+        "surface_contract.json",
+        "rig_mapping.json",
+        "keypose_intake.json",
+        "runtime_inbetween_constraints.json"
+      ],
+      "slice_plan": {
+        "mode": "uniform-grid",
+        "grid": {
+          "cols": 6,
+          "rows": 1,
+          "cell_width": 384,
+          "cell_height": 576
+        },
+        "cells": [
+          {
+            "name": "patoot_support_attack_sheet_00",
+            "row": 0,
+            "col": 0,
+            "exports": [
+              {
+                "name": "patoot_support_attack_sheet_00",
+                "mode": "fit",
+                "size": [
+                  24,
+                  36
+                ]
+              }
+            ]
+          },
+          {
+            "name": "patoot_support_attack_sheet_01",
+            "row": 0,
+            "col": 1,
+            "exports": [
+              {
+                "name": "patoot_support_attack_sheet_01",
+                "mode": "fit",
+                "size": [
+                  24,
+                  36
+                ]
+              }
+            ]
+          },
+          {
+            "name": "patoot_support_attack_sheet_02",
+            "row": 0,
+            "col": 2,
+            "exports": [
+              {
+                "name": "patoot_support_attack_sheet_02",
+                "mode": "fit",
+                "size": [
+                  24,
+                  36
+                ]
+              }
+            ]
+          },
+          {
+            "name": "patoot_support_attack_sheet_03",
+            "row": 0,
+            "col": 3,
+            "exports": [
+              {
+                "name": "patoot_support_attack_sheet_03",
+                "mode": "fit",
+                "size": [
+                  24,
+                  36
+                ]
+              }
+            ]
+          },
+          {
+            "name": "patoot_support_attack_sheet_04",
+            "row": 0,
+            "col": 4,
+            "exports": [
+              {
+                "name": "patoot_support_attack_sheet_04",
+                "mode": "fit",
+                "size": [
+                  24,
+                  36
+                ]
+              }
+            ]
+          },
+          {
+            "name": "patoot_support_attack_sheet_05",
+            "row": 0,
+            "col": 5,
+            "exports": [
+              {
+                "name": "patoot_support_attack_sheet_05",
+                "mode": "fit",
+                "size": [
+                  24,
+                  36
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "patoot_glide_perch_sheet",
+      "category": "companion",
+      "prompt": "Transparent background six-frame traversal sheet for Patoot, glide assist, perch, landing, lift correction, and watchful scout poses, readable without motion blur.",
+      "negative_prompt": "text, logo, watermark, blur, cropped wings, inconsistent scale",
+      "w": 2304,
+      "h": 576,
+      "out": "qa_demo/companion/patoot_glide_perch_sheet.png",
+      "api_units": 40,
+      "model": "recraftv4",
+      "runtime_target": "6 frames exported to 24x36",
+      "integration_role": [
+        "runtime sprite source",
+        "animation keypose source",
+        "rig reference",
+        "mesh blockout reference"
+      ],
+      "cell_layout": "6x1, 384x576 per cell",
+      "baseline_anchor": "feet",
+      "review_focus": [
+        "baseline lock",
+        "silhouette readability",
+        "joint clarity",
+        "material separation",
+        "wing or lift readability"
+      ],
+      "translation_metadata": {
+        "analysis_profile": "rigged_actor_blockout",
+        "symbol_object_policy": "meaningful contiguous image regions become self-contained symbol objects",
+        "neighbor_stencil": "32-neighbor comparison",
+        "depth_inference_method": "region stack, local shading, occlusion order, and cross-view consistency",
+        "engine_mapping": {
+          "mesh_target": "rigged_actor_blockout",
+          "bind_to_rig": true,
+          "runtime_export": "24x36",
+          "deformation_priority": [
+            "neck",
+            "head",
+            "wings",
+            "legs",
+            "tail"
+          ]
+        },
+        "pivot_policy": {
+          "primary_anchor": "feet",
+          "stable_pivot_required": true
+        },
+        "collision_policy": {
+          "required": true,
+          "proxy_source": "silhouette-derived region hull"
+        },
+        "surface_contract": {
+          "height_texture_ready": true,
+          "material_mask_ready": true,
+          "normal_hint_ready": true
+        },
+        "keypose_intake": {
+          "required": true,
+          "runtime_inbetween_candidate": true
+        },
+        "rig_reference": "patoot_base_rig"
+      },
+      "reconstruction_outputs": [
+        "pixel_matrix.json",
+        "region_map.json",
+        "symbol_objects.json",
+        "depth_map.png",
+        "spatial_metrics.json",
+        "mesh_contract.json",
+        "surface_contract.json",
+        "rig_mapping.json",
+        "keypose_intake.json",
+        "runtime_inbetween_constraints.json"
+      ],
+      "slice_plan": {
+        "mode": "uniform-grid",
+        "grid": {
+          "cols": 6,
+          "rows": 1,
+          "cell_width": 384,
+          "cell_height": 576
+        },
+        "cells": [
+          {
+            "name": "patoot_glide_perch_sheet_00",
+            "row": 0,
+            "col": 0,
+            "exports": [
+              {
+                "name": "patoot_glide_perch_sheet_00",
+                "mode": "fit",
+                "size": [
+                  24,
+                  36
+                ]
+              }
+            ]
+          },
+          {
+            "name": "patoot_glide_perch_sheet_01",
+            "row": 0,
+            "col": 1,
+            "exports": [
+              {
+                "name": "patoot_glide_perch_sheet_01",
+                "mode": "fit",
+                "size": [
+                  24,
+                  36
+                ]
+              }
+            ]
+          },
+          {
+            "name": "patoot_glide_perch_sheet_02",
+            "row": 0,
+            "col": 2,
+            "exports": [
+              {
+                "name": "patoot_glide_perch_sheet_02",
+                "mode": "fit",
+                "size": [
+                  24,
+                  36
+                ]
+              }
+            ]
+          },
+          {
+            "name": "patoot_glide_perch_sheet_03",
+            "row": 0,
+            "col": 3,
+            "exports": [
+              {
+                "name": "patoot_glide_perch_sheet_03",
+                "mode": "fit",
+                "size": [
+                  24,
+                  36
+                ]
+              }
+            ]
+          },
+          {
+            "name": "patoot_glide_perch_sheet_04",
+            "row": 0,
+            "col": 4,
+            "exports": [
+              {
+                "name": "patoot_glide_perch_sheet_04",
+                "mode": "fit",
+                "size": [
+                  24,
+                  36
+                ]
+              }
+            ]
+          },
+          {
+            "name": "patoot_glide_perch_sheet_05",
+            "row": 0,
+            "col": 5,
+            "exports": [
+              {
+                "name": "patoot_glide_perch_sheet_05",
+                "mode": "fit",
+                "size": [
+                  24,
+                  36
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "patoot_hurt_recall_sheet",
+      "category": "companion",
+      "prompt": "Transparent background six-frame reaction sheet for Patoot, flinch, recoil, panic flap, low posture, and return-to-Bango poses, same gear and silhouette as turnaround.",
+      "negative_prompt": "text, logo, watermark, gore, blur, merged frames",
+      "w": 2304,
+      "h": 576,
+      "out": "qa_demo/companion/patoot_hurt_recall_sheet.png",
+      "api_units": 40,
+      "model": "recraftv4",
+      "runtime_target": "6 frames exported to 24x36",
+      "integration_role": [
+        "runtime sprite source",
+        "animation keypose source",
+        "rig reference",
+        "mesh blockout reference"
+      ],
+      "cell_layout": "6x1, 384x576 per cell",
+      "baseline_anchor": "feet or body center when airborne",
+      "review_focus": [
+        "baseline lock",
+        "silhouette readability",
+        "joint clarity",
+        "material separation"
+      ],
+      "translation_metadata": {
+        "analysis_profile": "rigged_actor_blockout",
+        "symbol_object_policy": "meaningful contiguous image regions become self-contained symbol objects",
+        "neighbor_stencil": "32-neighbor comparison",
+        "depth_inference_method": "region stack, local shading, occlusion order, and cross-view consistency",
+        "engine_mapping": {
+          "mesh_target": "rigged_actor_blockout",
+          "bind_to_rig": true,
+          "runtime_export": "24x36",
+          "deformation_priority": [
+            "neck",
+            "head",
+            "wings",
+            "legs",
+            "tail"
+          ]
+        },
+        "pivot_policy": {
+          "primary_anchor": "feet or body center when airborne",
+          "stable_pivot_required": true
+        },
+        "collision_policy": {
+          "required": true,
+          "proxy_source": "silhouette-derived region hull"
+        },
+        "surface_contract": {
+          "height_texture_ready": true,
+          "material_mask_ready": true,
+          "normal_hint_ready": true
+        },
+        "keypose_intake": {
+          "required": true,
+          "runtime_inbetween_candidate": true
+        },
+        "rig_reference": "patoot_base_rig"
+      },
+      "reconstruction_outputs": [
+        "pixel_matrix.json",
+        "region_map.json",
+        "symbol_objects.json",
+        "depth_map.png",
+        "spatial_metrics.json",
+        "mesh_contract.json",
+        "surface_contract.json",
+        "rig_mapping.json",
+        "keypose_intake.json",
+        "runtime_inbetween_constraints.json"
+      ],
+      "slice_plan": {
+        "mode": "uniform-grid",
+        "grid": {
+          "cols": 6,
+          "rows": 1,
+          "cell_width": 384,
+          "cell_height": 576
+        },
+        "cells": [
+          {
+            "name": "patoot_hurt_recall_sheet_00",
+            "row": 0,
+            "col": 0,
+            "exports": [
+              {
+                "name": "patoot_hurt_recall_sheet_00",
+                "mode": "fit",
+                "size": [
+                  24,
+                  36
+                ]
+              }
+            ]
+          },
+          {
+            "name": "patoot_hurt_recall_sheet_01",
+            "row": 0,
+            "col": 1,
+            "exports": [
+              {
+                "name": "patoot_hurt_recall_sheet_01",
+                "mode": "fit",
+                "size": [
+                  24,
+                  36
+                ]
+              }
+            ]
+          },
+          {
+            "name": "patoot_hurt_recall_sheet_02",
+            "row": 0,
+            "col": 2,
+            "exports": [
+              {
+                "name": "patoot_hurt_recall_sheet_02",
+                "mode": "fit",
+                "size": [
+                  24,
+                  36
+                ]
+              }
+            ]
+          },
+          {
+            "name": "patoot_hurt_recall_sheet_03",
+            "row": 0,
+            "col": 3,
+            "exports": [
+              {
+                "name": "patoot_hurt_recall_sheet_03",
+                "mode": "fit",
+                "size": [
+                  24,
+                  36
+                ]
+              }
+            ]
+          },
+          {
+            "name": "patoot_hurt_recall_sheet_04",
+            "row": 0,
+            "col": 4,
+            "exports": [
+              {
+                "name": "patoot_hurt_recall_sheet_04",
+                "mode": "fit",
+                "size": [
+                  24,
+                  36
+                ]
+              }
+            ]
+          },
+          {
+            "name": "patoot_hurt_recall_sheet_05",
+            "row": 0,
+            "col": 5,
+            "exports": [
+              {
+                "name": "patoot_hurt_recall_sheet_05",
+                "mode": "fit",
+                "size": [
+                  24,
+                  36
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "tula_story_sheet",
+      "category": "npc",
+      "prompt": "Transparent background three-pose story sheet for Tula, hive-keeper apprentice, one calm pose, one captive-echo pose, one active sabotage pose, portrait-friendly composition.",
+      "negative_prompt": "text, logo, watermark, blur, background scene, weak silhouette",
+      "w": 1152,
+      "h": 576,
+      "out": "qa_demo/npc/tula_story_sheet.png",
+      "api_units": 40,
+      "model": "recraftv4",
+      "runtime_target": "24x36 standee plus 96x96 portrait crop",
+      "integration_role": [
+        "runtime sprite source",
+        "portrait source",
+        "rig reference",
+        "mesh blockout reference"
+      ],
+      "cell_layout": "3x1, 384x576 per cell",
+      "baseline_anchor": "feet",
+      "review_focus": [
+        "portrait crop readability",
+        "stance readability",
+        "costume layering",
+        "face clarity"
+      ],
+      "translation_metadata": {
+        "analysis_profile": "rigged_or_statue_actor_blockout",
+        "symbol_object_policy": "meaningful contiguous image regions become self-contained symbol objects",
+        "neighbor_stencil": "32-neighbor comparison",
+        "depth_inference_method": "region stack, local shading, occlusion order, and cross-view consistency",
+        "engine_mapping": {
+          "mesh_target": "rigged_or_statue_actor_blockout",
+          "bind_to_rig": true,
+          "runtime_export": "24x36",
+          "portrait_crop": "96x96"
+        },
+        "pivot_policy": {
+          "primary_anchor": "feet",
+          "stable_pivot_required": true
+        },
+        "collision_policy": {
+          "required": true,
+          "proxy_source": "silhouette-derived region hull"
+        },
+        "surface_contract": {
+          "height_texture_ready": true,
+          "material_mask_ready": true,
+          "normal_hint_ready": true
+        },
+        "keypose_intake": {
+          "required": true,
+          "runtime_inbetween_candidate": true
+        }
+      },
+      "reconstruction_outputs": [
+        "pixel_matrix.json",
+        "region_map.json",
+        "symbol_objects.json",
+        "depth_map.png",
+        "spatial_metrics.json",
+        "mesh_contract.json",
+        "surface_contract.json",
+        "rig_mapping.json",
+        "keypose_intake.json",
+        "runtime_inbetween_constraints.json"
+      ],
+      "slice_plan": {
+        "mode": "uniform-grid",
+        "grid": {
+          "cols": 3,
+          "rows": 1,
+          "cell_width": 384,
+          "cell_height": 576
+        },
+        "cells": [
+          {
+            "name": "pose_00",
+            "row": 0,
+            "col": 0,
+            "exports": [
+              {
+                "name": "pose_00_standee",
+                "mode": "fit",
+                "size": [
+                  24,
+                  36
+                ]
+              },
+              {
+                "name": "pose_00_portrait",
+                "mode": "alpha_square_portrait",
+                "size": [
+                  96,
+                  96
+                ]
+              }
+            ]
+          },
+          {
+            "name": "pose_01",
+            "row": 0,
+            "col": 1,
+            "exports": [
+              {
+                "name": "pose_01_standee",
+                "mode": "fit",
+                "size": [
+                  24,
+                  36
+                ]
+              },
+              {
+                "name": "pose_01_portrait",
+                "mode": "alpha_square_portrait",
+                "size": [
+                  96,
+                  96
+                ]
+              }
+            ]
+          },
+          {
+            "name": "pose_02",
+            "row": 0,
+            "col": 2,
+            "exports": [
+              {
+                "name": "pose_02_standee",
+                "mode": "fit",
+                "size": [
+                  24,
+                  36
+                ]
+              },
+              {
+                "name": "pose_02_portrait",
+                "mode": "alpha_square_portrait",
+                "size": [
+                  96,
+                  96
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "mother_comb_edda_sheet",
+      "category": "npc",
+      "prompt": "Transparent background three-pose sheet for Mother Comb Edda, elder shrine keeper, one neutral pose, one instructive pose, one ritual-service pose, portrait crop readability required.",
+      "negative_prompt": "text, logo, watermark, blur, background scene, tiny face",
+      "w": 1152,
+      "h": 576,
+      "out": "qa_demo/npc/mother_comb_edda_sheet.png",
+      "api_units": 40,
+      "model": "recraftv4",
+      "runtime_target": "24x36 standee plus 96x96 portrait crop",
+      "integration_role": [
+        "runtime sprite source",
+        "portrait source",
+        "rig reference",
+        "mesh blockout reference"
+      ],
+      "cell_layout": "3x1, 384x576 per cell",
+      "baseline_anchor": "feet",
+      "review_focus": [
+        "portrait crop readability",
+        "stance readability",
+        "costume layering",
+        "face clarity"
+      ],
+      "translation_metadata": {
+        "analysis_profile": "rigged_or_statue_actor_blockout",
+        "symbol_object_policy": "meaningful contiguous image regions become self-contained symbol objects",
+        "neighbor_stencil": "32-neighbor comparison",
+        "depth_inference_method": "region stack, local shading, occlusion order, and cross-view consistency",
+        "engine_mapping": {
+          "mesh_target": "rigged_or_statue_actor_blockout",
+          "bind_to_rig": true,
+          "runtime_export": "24x36",
+          "portrait_crop": "96x96"
+        },
+        "pivot_policy": {
+          "primary_anchor": "feet",
+          "stable_pivot_required": true
+        },
+        "collision_policy": {
+          "required": true,
+          "proxy_source": "silhouette-derived region hull"
+        },
+        "surface_contract": {
+          "height_texture_ready": true,
+          "material_mask_ready": true,
+          "normal_hint_ready": true
+        },
+        "keypose_intake": {
+          "required": true,
+          "runtime_inbetween_candidate": true
+        }
+      },
+      "reconstruction_outputs": [
+        "pixel_matrix.json",
+        "region_map.json",
+        "symbol_objects.json",
+        "depth_map.png",
+        "spatial_metrics.json",
+        "mesh_contract.json",
+        "surface_contract.json",
+        "rig_mapping.json",
+        "keypose_intake.json",
+        "runtime_inbetween_constraints.json"
+      ],
+      "slice_plan": {
+        "mode": "uniform-grid",
+        "grid": {
+          "cols": 3,
+          "rows": 1,
+          "cell_width": 384,
+          "cell_height": 576
+        },
+        "cells": [
+          {
+            "name": "pose_00",
+            "row": 0,
+            "col": 0,
+            "exports": [
+              {
+                "name": "pose_00_standee",
+                "mode": "fit",
+                "size": [
+                  24,
+                  36
+                ]
+              },
+              {
+                "name": "pose_00_portrait",
+                "mode": "alpha_square_portrait",
+                "size": [
+                  96,
+                  96
+                ]
+              }
+            ]
+          },
+          {
+            "name": "pose_01",
+            "row": 0,
+            "col": 1,
+            "exports": [
+              {
+                "name": "pose_01_standee",
+                "mode": "fit",
+                "size": [
+                  24,
+                  36
+                ]
+              },
+              {
+                "name": "pose_01_portrait",
+                "mode": "alpha_square_portrait",
+                "size": [
+                  96,
+                  96
+                ]
+              }
+            ]
+          },
+          {
+            "name": "pose_02",
+            "row": 0,
+            "col": 2,
+            "exports": [
+              {
+                "name": "pose_02_standee",
+                "mode": "fit",
+                "size": [
+                  24,
+                  36
+                ]
+              },
+              {
+                "name": "pose_02_portrait",
+                "mode": "alpha_square_portrait",
+                "size": [
+                  96,
+                  96
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "vilm_siltcoat_sheet",
+      "category": "npc",
+      "prompt": "Transparent background three-pose sheet for Vilm Siltcoat, salvage broker and route fixer, chalk map gear, portable stall tools, skeptical silhouette, portrait crop readability required.",
+      "negative_prompt": "text, logo, watermark, blur, background scene, unreadable props",
+      "w": 1152,
+      "h": 576,
+      "out": "qa_demo/npc/vilm_siltcoat_sheet.png",
+      "api_units": 40,
+      "model": "recraftv4",
+      "runtime_target": "24x36 standee plus 96x96 portrait crop",
+      "integration_role": [
+        "runtime sprite source",
+        "portrait source",
+        "rig reference",
+        "mesh blockout reference"
+      ],
+      "cell_layout": "3x1, 384x576 per cell",
+      "baseline_anchor": "feet",
+      "review_focus": [
+        "portrait crop readability",
+        "stance readability",
+        "costume layering",
+        "face clarity"
+      ],
+      "translation_metadata": {
+        "analysis_profile": "rigged_or_statue_actor_blockout",
+        "symbol_object_policy": "meaningful contiguous image regions become self-contained symbol objects",
+        "neighbor_stencil": "32-neighbor comparison",
+        "depth_inference_method": "region stack, local shading, occlusion order, and cross-view consistency",
+        "engine_mapping": {
+          "mesh_target": "rigged_or_statue_actor_blockout",
+          "bind_to_rig": true,
+          "runtime_export": "24x36",
+          "portrait_crop": "96x96"
+        },
+        "pivot_policy": {
+          "primary_anchor": "feet",
+          "stable_pivot_required": true
+        },
+        "collision_policy": {
+          "required": true,
+          "proxy_source": "silhouette-derived region hull"
+        },
+        "surface_contract": {
+          "height_texture_ready": true,
+          "material_mask_ready": true,
+          "normal_hint_ready": true
+        },
+        "keypose_intake": {
+          "required": true,
+          "runtime_inbetween_candidate": true
+        }
+      },
+      "reconstruction_outputs": [
+        "pixel_matrix.json",
+        "region_map.json",
+        "symbol_objects.json",
+        "depth_map.png",
+        "spatial_metrics.json",
+        "mesh_contract.json",
+        "surface_contract.json",
+        "rig_mapping.json",
+        "keypose_intake.json",
+        "runtime_inbetween_constraints.json"
+      ],
+      "slice_plan": {
+        "mode": "uniform-grid",
+        "grid": {
+          "cols": 3,
+          "rows": 1,
+          "cell_width": 384,
+          "cell_height": 576
+        },
+        "cells": [
+          {
+            "name": "pose_00",
+            "row": 0,
+            "col": 0,
+            "exports": [
+              {
+                "name": "pose_00_standee",
+                "mode": "fit",
+                "size": [
+                  24,
+                  36
+                ]
+              },
+              {
+                "name": "pose_00_portrait",
+                "mode": "alpha_square_portrait",
+                "size": [
+                  96,
+                  96
+                ]
+              }
+            ]
+          },
+          {
+            "name": "pose_01",
+            "row": 0,
+            "col": 1,
+            "exports": [
+              {
+                "name": "pose_01_standee",
+                "mode": "fit",
+                "size": [
+                  24,
+                  36
+                ]
+              },
+              {
+                "name": "pose_01_portrait",
+                "mode": "alpha_square_portrait",
+                "size": [
+                  96,
+                  96
+                ]
+              }
+            ]
+          },
+          {
+            "name": "pose_02",
+            "row": 0,
+            "col": 2,
+            "exports": [
+              {
+                "name": "pose_02_standee",
+                "mode": "fit",
+                "size": [
+                  24,
+                  36
+                ]
+              },
+              {
+                "name": "pose_02_portrait",
+                "mode": "alpha_square_portrait",
+                "size": [
+                  96,
+                  96
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "sister_halceon_sheet",
+      "category": "npc",
+      "prompt": "Transparent background three-pose sheet for Sister Halceon, ex-enforcer penitent, one guarded pose, one briefing pose, one combat-worn pose, portrait crop readability required.",
+      "negative_prompt": "text, logo, watermark, blur, background scene, weak silhouette",
+      "w": 1152,
+      "h": 576,
+      "out": "qa_demo/npc/sister_halceon_sheet.png",
+      "api_units": 40,
+      "model": "recraftv4",
+      "runtime_target": "24x36 standee plus 96x96 portrait crop",
+      "integration_role": [
+        "runtime sprite source",
+        "portrait source",
+        "rig reference",
+        "mesh blockout reference"
+      ],
+      "cell_layout": "3x1, 384x576 per cell",
+      "baseline_anchor": "feet",
+      "review_focus": [
+        "portrait crop readability",
+        "stance readability",
+        "costume layering",
+        "face clarity"
+      ],
+      "translation_metadata": {
+        "analysis_profile": "rigged_or_statue_actor_blockout",
+        "symbol_object_policy": "meaningful contiguous image regions become self-contained symbol objects",
+        "neighbor_stencil": "32-neighbor comparison",
+        "depth_inference_method": "region stack, local shading, occlusion order, and cross-view consistency",
+        "engine_mapping": {
+          "mesh_target": "rigged_or_statue_actor_blockout",
+          "bind_to_rig": true,
+          "runtime_export": "24x36",
+          "portrait_crop": "96x96"
+        },
+        "pivot_policy": {
+          "primary_anchor": "feet",
+          "stable_pivot_required": true
+        },
+        "collision_policy": {
+          "required": true,
+          "proxy_source": "silhouette-derived region hull"
+        },
+        "surface_contract": {
+          "height_texture_ready": true,
+          "material_mask_ready": true,
+          "normal_hint_ready": true
+        },
+        "keypose_intake": {
+          "required": true,
+          "runtime_inbetween_candidate": true
+        }
+      },
+      "reconstruction_outputs": [
+        "pixel_matrix.json",
+        "region_map.json",
+        "symbol_objects.json",
+        "depth_map.png",
+        "spatial_metrics.json",
+        "mesh_contract.json",
+        "surface_contract.json",
+        "rig_mapping.json",
+        "keypose_intake.json",
+        "runtime_inbetween_constraints.json"
+      ],
+      "slice_plan": {
+        "mode": "uniform-grid",
+        "grid": {
+          "cols": 3,
+          "rows": 1,
+          "cell_width": 384,
+          "cell_height": 576
+        },
+        "cells": [
+          {
+            "name": "pose_00",
+            "row": 0,
+            "col": 0,
+            "exports": [
+              {
+                "name": "pose_00_standee",
+                "mode": "fit",
+                "size": [
+                  24,
+                  36
+                ]
+              },
+              {
+                "name": "pose_00_portrait",
+                "mode": "alpha_square_portrait",
+                "size": [
+                  96,
+                  96
+                ]
+              }
+            ]
+          },
+          {
+            "name": "pose_01",
+            "row": 0,
+            "col": 1,
+            "exports": [
+              {
+                "name": "pose_01_standee",
+                "mode": "fit",
+                "size": [
+                  24,
+                  36
+                ]
+              },
+              {
+                "name": "pose_01_portrait",
+                "mode": "alpha_square_portrait",
+                "size": [
+                  96,
+                  96
+                ]
+              }
+            ]
+          },
+          {
+            "name": "pose_02",
+            "row": 0,
+            "col": 2,
+            "exports": [
+              {
+                "name": "pose_02_standee",
+                "mode": "fit",
+                "size": [
+                  24,
+                  36
+                ]
+              },
+              {
+                "name": "pose_02_portrait",
+                "mode": "alpha_square_portrait",
+                "size": [
+                  96,
+                  96
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "waxbound_cultist_turnaround",
+      "category": "enemy",
+      "prompt": "Transparent background four-angle turnaround sheet for Waxbound Cultist, hive-wax armor, ritual mask, melee grunt silhouette, readable shoulders and weapon hand.",
+      "negative_prompt": "text, logo, watermark, blur, background scene, merged limbs",
+      "w": 1536,
+      "h": 576,
+      "out": "qa_demo/enemies/waxbound_cultist_turnaround.png",
+      "api_units": 40,
+      "model": "recraftv4",
+      "runtime_target": "4 angles exported to 24x36",
+      "integration_role": [
+        "runtime sprite source",
+        "billboard source",
+        "combat keypose source",
+        "rig reference",
+        "mesh blockout reference"
+      ],
+      "cell_layout": "4x1, 384x576 per cell",
+      "baseline_anchor": "feet",
+      "review_focus": [
+        "hostile silhouette readability",
+        "attack-source clarity",
+        "hitbox planning",
+        "weak-point readability"
+      ],
+      "translation_metadata": {
+        "analysis_profile": "rigged_enemy_blockout",
+        "symbol_object_policy": "meaningful contiguous image regions become self-contained symbol objects",
+        "neighbor_stencil": "32-neighbor comparison",
+        "depth_inference_method": "region stack, local shading, occlusion order, and cross-view consistency",
+        "engine_mapping": {
+          "mesh_target": "rigged_enemy_blockout",
+          "bind_to_rig": true,
+          "runtime_export": "24x36"
+        },
+        "pivot_policy": {
+          "primary_anchor": "feet",
+          "stable_pivot_required": true
+        },
+        "collision_policy": {
+          "required": true,
+          "proxy_source": "silhouette-derived region hull"
+        },
+        "surface_contract": {
+          "height_texture_ready": true,
+          "material_mask_ready": true,
+          "normal_hint_ready": true
+        },
+        "keypose_intake": {
+          "required": true,
+          "runtime_inbetween_candidate": true
+        }
+      },
+      "reconstruction_outputs": [
+        "pixel_matrix.json",
+        "region_map.json",
+        "symbol_objects.json",
+        "depth_map.png",
+        "spatial_metrics.json",
+        "mesh_contract.json",
+        "surface_contract.json",
+        "rig_mapping.json",
+        "keypose_intake.json",
+        "runtime_inbetween_constraints.json"
+      ],
+      "slice_plan": {
+        "mode": "uniform-grid",
+        "grid": {
+          "cols": 4,
+          "rows": 1,
+          "cell_width": 384,
+          "cell_height": 576
+        },
+        "cells": [
+          {
+            "name": "front",
+            "row": 0,
+            "col": 0,
+            "exports": [
+              {
+                "name": "front",
+                "mode": "fit",
+                "size": [
+                  24,
+                  36
+                ]
+              }
+            ]
+          },
+          {
+            "name": "left",
+            "row": 0,
+            "col": 1,
+            "exports": [
+              {
+                "name": "left",
+                "mode": "fit",
+                "size": [
+                  24,
+                  36
+                ]
+              }
+            ]
+          },
+          {
+            "name": "right",
+            "row": 0,
+            "col": 2,
+            "exports": [
+              {
+                "name": "right",
+                "mode": "fit",
+                "size": [
+                  24,
+                  36
+                ]
+              }
+            ]
+          },
+          {
+            "name": "rear",
+            "row": 0,
+            "col": 3,
+            "exports": [
+              {
+                "name": "rear",
+                "mode": "fit",
+                "size": [
+                  24,
+                  36
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "waxbound_cultist_action",
+      "category": "enemy",
+      "prompt": "Transparent background six-frame action sheet for Waxbound Cultist, patrol, attack, hit react, stagger, and recover poses for standard melee enemy behavior.",
+      "negative_prompt": "text, logo, watermark, blur, frame overlap, unreadable attack",
+      "w": 2304,
+      "h": 576,
+      "out": "qa_demo/enemies/waxbound_cultist_action.png",
+      "api_units": 40,
+      "model": "recraftv4",
+      "runtime_target": "6 frames exported to 24x36",
+      "integration_role": [
+        "runtime sprite source",
+        "combat keypose source",
+        "rig reference",
+        "mesh blockout reference"
+      ],
+      "cell_layout": "6x1, 384x576 per cell",
+      "baseline_anchor": "feet",
+      "review_focus": [
+        "hostile silhouette readability",
+        "attack-source clarity",
+        "hitbox planning",
+        "weak-point readability"
+      ],
+      "translation_metadata": {
+        "analysis_profile": "rigged_enemy_blockout",
+        "symbol_object_policy": "meaningful contiguous image regions become self-contained symbol objects",
+        "neighbor_stencil": "32-neighbor comparison",
+        "depth_inference_method": "region stack, local shading, occlusion order, and cross-view consistency",
+        "engine_mapping": {
+          "mesh_target": "rigged_enemy_blockout",
+          "bind_to_rig": true,
+          "runtime_export": "24x36"
+        },
+        "pivot_policy": {
+          "primary_anchor": "feet",
+          "stable_pivot_required": true
+        },
+        "collision_policy": {
+          "required": true,
+          "proxy_source": "silhouette-derived region hull"
+        },
+        "surface_contract": {
+          "height_texture_ready": true,
+          "material_mask_ready": true,
+          "normal_hint_ready": true
+        },
+        "keypose_intake": {
+          "required": true,
+          "runtime_inbetween_candidate": true
+        }
+      },
+      "reconstruction_outputs": [
+        "pixel_matrix.json",
+        "region_map.json",
+        "symbol_objects.json",
+        "depth_map.png",
+        "spatial_metrics.json",
+        "mesh_contract.json",
+        "surface_contract.json",
+        "rig_mapping.json",
+        "keypose_intake.json",
+        "runtime_inbetween_constraints.json"
+      ],
+      "slice_plan": {
+        "mode": "uniform-grid",
+        "grid": {
+          "cols": 6,
+          "rows": 1,
+          "cell_width": 384,
+          "cell_height": 576
+        },
+        "cells": [
+          {
+            "name": "waxbound_cultist_action_00",
+            "row": 0,
+            "col": 0,
+            "exports": [
+              {
+                "name": "waxbound_cultist_action_00",
+                "mode": "fit",
+                "size": [
+                  24,
+                  36
+                ]
+              }
+            ]
+          },
+          {
+            "name": "waxbound_cultist_action_01",
+            "row": 0,
+            "col": 1,
+            "exports": [
+              {
+                "name": "waxbound_cultist_action_01",
+                "mode": "fit",
+                "size": [
+                  24,
+                  36
+                ]
+              }
+            ]
+          },
+          {
+            "name": "waxbound_cultist_action_02",
+            "row": 0,
+            "col": 2,
+            "exports": [
+              {
+                "name": "waxbound_cultist_action_02",
+                "mode": "fit",
+                "size": [
+                  24,
+                  36
+                ]
+              }
+            ]
+          },
+          {
+            "name": "waxbound_cultist_action_03",
+            "row": 0,
+            "col": 3,
+            "exports": [
+              {
+                "name": "waxbound_cultist_action_03",
+                "mode": "fit",
+                "size": [
+                  24,
+                  36
+                ]
+              }
+            ]
+          },
+          {
+            "name": "waxbound_cultist_action_04",
+            "row": 0,
+            "col": 4,
+            "exports": [
+              {
+                "name": "waxbound_cultist_action_04",
+                "mode": "fit",
+                "size": [
+                  24,
+                  36
+                ]
+              }
+            ]
+          },
+          {
+            "name": "waxbound_cultist_action_05",
+            "row": 0,
+            "col": 5,
+            "exports": [
+              {
+                "name": "waxbound_cultist_action_05",
+                "mode": "fit",
+                "size": [
+                  24,
+                  36
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "boiler_jackal_turnaround",
+      "category": "enemy",
+      "prompt": "Transparent background four-angle turnaround sheet for Boiler Jackal, scavenger brute with pipe-hook gear, rushed silhouette, readable snout and shoulder mass.",
+      "negative_prompt": "text, logo, watermark, blur, background scene, weak anatomy",
+      "w": 1536,
+      "h": 576,
+      "out": "qa_demo/enemies/boiler_jackal_turnaround.png",
+      "api_units": 40,
+      "model": "recraftv4",
+      "runtime_target": "4 angles exported to 24x36",
+      "integration_role": [
+        "runtime sprite source",
+        "billboard source",
+        "combat keypose source",
+        "rig reference",
+        "mesh blockout reference"
+      ],
+      "cell_layout": "4x1, 384x576 per cell",
+      "baseline_anchor": "feet",
+      "review_focus": [
+        "hostile silhouette readability",
+        "attack-source clarity",
+        "hitbox planning",
+        "weak-point readability"
+      ],
+      "translation_metadata": {
+        "analysis_profile": "rigged_enemy_blockout",
+        "symbol_object_policy": "meaningful contiguous image regions become self-contained symbol objects",
+        "neighbor_stencil": "32-neighbor comparison",
+        "depth_inference_method": "region stack, local shading, occlusion order, and cross-view consistency",
+        "engine_mapping": {
+          "mesh_target": "rigged_enemy_blockout",
+          "bind_to_rig": true,
+          "runtime_export": "24x36"
+        },
+        "pivot_policy": {
+          "primary_anchor": "feet",
+          "stable_pivot_required": true
+        },
+        "collision_policy": {
+          "required": true,
+          "proxy_source": "silhouette-derived region hull"
+        },
+        "surface_contract": {
+          "height_texture_ready": true,
+          "material_mask_ready": true,
+          "normal_hint_ready": true
+        },
+        "keypose_intake": {
+          "required": true,
+          "runtime_inbetween_candidate": true
+        }
+      },
+      "reconstruction_outputs": [
+        "pixel_matrix.json",
+        "region_map.json",
+        "symbol_objects.json",
+        "depth_map.png",
+        "spatial_metrics.json",
+        "mesh_contract.json",
+        "surface_contract.json",
+        "rig_mapping.json",
+        "keypose_intake.json",
+        "runtime_inbetween_constraints.json"
+      ],
+      "slice_plan": {
+        "mode": "uniform-grid",
+        "grid": {
+          "cols": 4,
+          "rows": 1,
+          "cell_width": 384,
+          "cell_height": 576
+        },
+        "cells": [
+          {
+            "name": "front",
+            "row": 0,
+            "col": 0,
+            "exports": [
+              {
+                "name": "front",
+                "mode": "fit",
+                "size": [
+                  24,
+                  36
+                ]
+              }
+            ]
+          },
+          {
+            "name": "left",
+            "row": 0,
+            "col": 1,
+            "exports": [
+              {
+                "name": "left",
+                "mode": "fit",
+                "size": [
+                  24,
+                  36
+                ]
+              }
+            ]
+          },
+          {
+            "name": "right",
+            "row": 0,
+            "col": 2,
+            "exports": [
+              {
+                "name": "right",
+                "mode": "fit",
+                "size": [
+                  24,
+                  36
+                ]
+              }
+            ]
+          },
+          {
+            "name": "rear",
+            "row": 0,
+            "col": 3,
+            "exports": [
+              {
+                "name": "rear",
+                "mode": "fit",
+                "size": [
+                  24,
+                  36
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "boiler_jackal_action",
+      "category": "enemy",
+      "prompt": "Transparent background six-frame action sheet for Boiler Jackal, rush, swing, recoil, lunge, and stagger poses, readable at small sprite size.",
+      "negative_prompt": "text, logo, watermark, blur, merged frames, unreadable weapon",
+      "w": 2304,
+      "h": 576,
+      "out": "qa_demo/enemies/boiler_jackal_action.png",
+      "api_units": 40,
+      "model": "recraftv4",
+      "runtime_target": "6 frames exported to 24x36",
+      "integration_role": [
+        "runtime sprite source",
+        "combat keypose source",
+        "rig reference",
+        "mesh blockout reference"
+      ],
+      "cell_layout": "6x1, 384x576 per cell",
+      "baseline_anchor": "feet",
+      "review_focus": [
+        "hostile silhouette readability",
+        "attack-source clarity",
+        "hitbox planning",
+        "weak-point readability"
+      ],
+      "translation_metadata": {
+        "analysis_profile": "rigged_enemy_blockout",
+        "symbol_object_policy": "meaningful contiguous image regions become self-contained symbol objects",
+        "neighbor_stencil": "32-neighbor comparison",
+        "depth_inference_method": "region stack, local shading, occlusion order, and cross-view consistency",
+        "engine_mapping": {
+          "mesh_target": "rigged_enemy_blockout",
+          "bind_to_rig": true,
+          "runtime_export": "24x36"
+        },
+        "pivot_policy": {
+          "primary_anchor": "feet",
+          "stable_pivot_required": true
+        },
+        "collision_policy": {
+          "required": true,
+          "proxy_source": "silhouette-derived region hull"
+        },
+        "surface_contract": {
+          "height_texture_ready": true,
+          "material_mask_ready": true,
+          "normal_hint_ready": true
+        },
+        "keypose_intake": {
+          "required": true,
+          "runtime_inbetween_candidate": true
+        }
+      },
+      "reconstruction_outputs": [
+        "pixel_matrix.json",
+        "region_map.json",
+        "symbol_objects.json",
+        "depth_map.png",
+        "spatial_metrics.json",
+        "mesh_contract.json",
+        "surface_contract.json",
+        "rig_mapping.json",
+        "keypose_intake.json",
+        "runtime_inbetween_constraints.json"
+      ],
+      "slice_plan": {
+        "mode": "uniform-grid",
+        "grid": {
+          "cols": 6,
+          "rows": 1,
+          "cell_width": 384,
+          "cell_height": 576
+        },
+        "cells": [
+          {
+            "name": "boiler_jackal_action_00",
+            "row": 0,
+            "col": 0,
+            "exports": [
+              {
+                "name": "boiler_jackal_action_00",
+                "mode": "fit",
+                "size": [
+                  24,
+                  36
+                ]
+              }
+            ]
+          },
+          {
+            "name": "boiler_jackal_action_01",
+            "row": 0,
+            "col": 1,
+            "exports": [
+              {
+                "name": "boiler_jackal_action_01",
+                "mode": "fit",
+                "size": [
+                  24,
+                  36
+                ]
+              }
+            ]
+          },
+          {
+            "name": "boiler_jackal_action_02",
+            "row": 0,
+            "col": 2,
+            "exports": [
+              {
+                "name": "boiler_jackal_action_02",
+                "mode": "fit",
+                "size": [
+                  24,
+                  36
+                ]
+              }
+            ]
+          },
+          {
+            "name": "boiler_jackal_action_03",
+            "row": 0,
+            "col": 3,
+            "exports": [
+              {
+                "name": "boiler_jackal_action_03",
+                "mode": "fit",
+                "size": [
+                  24,
+                  36
+                ]
+              }
+            ]
+          },
+          {
+            "name": "boiler_jackal_action_04",
+            "row": 0,
+            "col": 4,
+            "exports": [
+              {
+                "name": "boiler_jackal_action_04",
+                "mode": "fit",
+                "size": [
+                  24,
+                  36
+                ]
+              }
+            ]
+          },
+          {
+            "name": "boiler_jackal_action_05",
+            "row": 0,
+            "col": 5,
+            "exports": [
+              {
+                "name": "boiler_jackal_action_05",
+                "mode": "fit",
+                "size": [
+                  24,
+                  36
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "signal_heretic_turnaround",
+      "category": "enemy",
+      "prompt": "Transparent background four-angle turnaround sheet for Signal Heretic, broadcast cult caster, thin ritual silhouette, antenna relics, readable arm and head shapes.",
+      "negative_prompt": "text, logo, watermark, blur, background scene, weak pose",
+      "w": 1536,
+      "h": 576,
+      "out": "qa_demo/enemies/signal_heretic_turnaround.png",
+      "api_units": 40,
+      "model": "recraftv4",
+      "runtime_target": "4 angles exported to 24x36",
+      "integration_role": [
+        "runtime sprite source",
+        "billboard source",
+        "combat keypose source",
+        "rig reference",
+        "mesh blockout reference"
+      ],
+      "cell_layout": "4x1, 384x576 per cell",
+      "baseline_anchor": "feet",
+      "review_focus": [
+        "hostile silhouette readability",
+        "attack-source clarity",
+        "hitbox planning",
+        "weak-point readability"
+      ],
+      "translation_metadata": {
+        "analysis_profile": "rigged_enemy_blockout",
+        "symbol_object_policy": "meaningful contiguous image regions become self-contained symbol objects",
+        "neighbor_stencil": "32-neighbor comparison",
+        "depth_inference_method": "region stack, local shading, occlusion order, and cross-view consistency",
+        "engine_mapping": {
+          "mesh_target": "rigged_enemy_blockout",
+          "bind_to_rig": true,
+          "runtime_export": "24x36"
+        },
+        "pivot_policy": {
+          "primary_anchor": "feet",
+          "stable_pivot_required": true
+        },
+        "collision_policy": {
+          "required": true,
+          "proxy_source": "silhouette-derived region hull"
+        },
+        "surface_contract": {
+          "height_texture_ready": true,
+          "material_mask_ready": true,
+          "normal_hint_ready": true
+        },
+        "keypose_intake": {
+          "required": true,
+          "runtime_inbetween_candidate": true
+        }
+      },
+      "reconstruction_outputs": [
+        "pixel_matrix.json",
+        "region_map.json",
+        "symbol_objects.json",
+        "depth_map.png",
+        "spatial_metrics.json",
+        "mesh_contract.json",
+        "surface_contract.json",
+        "rig_mapping.json",
+        "keypose_intake.json",
+        "runtime_inbetween_constraints.json"
+      ],
+      "slice_plan": {
+        "mode": "uniform-grid",
+        "grid": {
+          "cols": 4,
+          "rows": 1,
+          "cell_width": 384,
+          "cell_height": 576
+        },
+        "cells": [
+          {
+            "name": "front",
+            "row": 0,
+            "col": 0,
+            "exports": [
+              {
+                "name": "front",
+                "mode": "fit",
+                "size": [
+                  24,
+                  36
+                ]
+              }
+            ]
+          },
+          {
+            "name": "left",
+            "row": 0,
+            "col": 1,
+            "exports": [
+              {
+                "name": "left",
+                "mode": "fit",
+                "size": [
+                  24,
+                  36
+                ]
+              }
+            ]
+          },
+          {
+            "name": "right",
+            "row": 0,
+            "col": 2,
+            "exports": [
+              {
+                "name": "right",
+                "mode": "fit",
+                "size": [
+                  24,
+                  36
+                ]
+              }
+            ]
+          },
+          {
+            "name": "rear",
+            "row": 0,
+            "col": 3,
+            "exports": [
+              {
+                "name": "rear",
+                "mode": "fit",
+                "size": [
+                  24,
+                  36
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "signal_heretic_action",
+      "category": "enemy",
+      "prompt": "Transparent background six-frame action sheet for Signal Heretic, chant cast, channel, recoil, and collapse poses for ranged or magical enemy behavior.",
+      "negative_prompt": "text, logo, watermark, blur, merged frames, unreadable hands",
+      "w": 2304,
+      "h": 576,
+      "out": "qa_demo/enemies/signal_heretic_action.png",
+      "api_units": 40,
+      "model": "recraftv4",
+      "runtime_target": "6 frames exported to 24x36",
+      "integration_role": [
+        "runtime sprite source",
+        "combat keypose source",
+        "rig reference",
+        "mesh blockout reference"
+      ],
+      "cell_layout": "6x1, 384x576 per cell",
+      "baseline_anchor": "feet",
+      "review_focus": [
+        "hostile silhouette readability",
+        "attack-source clarity",
+        "hitbox planning",
+        "weak-point readability"
+      ],
+      "translation_metadata": {
+        "analysis_profile": "rigged_enemy_blockout",
+        "symbol_object_policy": "meaningful contiguous image regions become self-contained symbol objects",
+        "neighbor_stencil": "32-neighbor comparison",
+        "depth_inference_method": "region stack, local shading, occlusion order, and cross-view consistency",
+        "engine_mapping": {
+          "mesh_target": "rigged_enemy_blockout",
+          "bind_to_rig": true,
+          "runtime_export": "24x36"
+        },
+        "pivot_policy": {
+          "primary_anchor": "feet",
+          "stable_pivot_required": true
+        },
+        "collision_policy": {
+          "required": true,
+          "proxy_source": "silhouette-derived region hull"
+        },
+        "surface_contract": {
+          "height_texture_ready": true,
+          "material_mask_ready": true,
+          "normal_hint_ready": true
+        },
+        "keypose_intake": {
+          "required": true,
+          "runtime_inbetween_candidate": true
+        }
+      },
+      "reconstruction_outputs": [
+        "pixel_matrix.json",
+        "region_map.json",
+        "symbol_objects.json",
+        "depth_map.png",
+        "spatial_metrics.json",
+        "mesh_contract.json",
+        "surface_contract.json",
+        "rig_mapping.json",
+        "keypose_intake.json",
+        "runtime_inbetween_constraints.json"
+      ],
+      "slice_plan": {
+        "mode": "uniform-grid",
+        "grid": {
+          "cols": 6,
+          "rows": 1,
+          "cell_width": 384,
+          "cell_height": 576
+        },
+        "cells": [
+          {
+            "name": "signal_heretic_action_00",
+            "row": 0,
+            "col": 0,
+            "exports": [
+              {
+                "name": "signal_heretic_action_00",
+                "mode": "fit",
+                "size": [
+                  24,
+                  36
+                ]
+              }
+            ]
+          },
+          {
+            "name": "signal_heretic_action_01",
+            "row": 0,
+            "col": 1,
+            "exports": [
+              {
+                "name": "signal_heretic_action_01",
+                "mode": "fit",
+                "size": [
+                  24,
+                  36
+                ]
+              }
+            ]
+          },
+          {
+            "name": "signal_heretic_action_02",
+            "row": 0,
+            "col": 2,
+            "exports": [
+              {
+                "name": "signal_heretic_action_02",
+                "mode": "fit",
+                "size": [
+                  24,
+                  36
+                ]
+              }
+            ]
+          },
+          {
+            "name": "signal_heretic_action_03",
+            "row": 0,
+            "col": 3,
+            "exports": [
+              {
+                "name": "signal_heretic_action_03",
+                "mode": "fit",
+                "size": [
+                  24,
+                  36
+                ]
+              }
+            ]
+          },
+          {
+            "name": "signal_heretic_action_04",
+            "row": 0,
+            "col": 4,
+            "exports": [
+              {
+                "name": "signal_heretic_action_04",
+                "mode": "fit",
+                "size": [
+                  24,
+                  36
+                ]
+              }
+            ]
+          },
+          {
+            "name": "signal_heretic_action_05",
+            "row": 0,
+            "col": 5,
+            "exports": [
+              {
+                "name": "signal_heretic_action_05",
+                "mode": "fit",
+                "size": [
+                  24,
+                  36
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "gutter_cryptid_turnaround",
+      "category": "enemy",
+      "prompt": "Transparent background four-angle turnaround sheet for Gutter Cryptid, sewer-grown beast, low stalking silhouette, readable jaw and back ridge at tiny scale.",
+      "negative_prompt": "text, logo, watermark, blur, background scene, messy anatomy",
+      "w": 1536,
+      "h": 576,
+      "out": "qa_demo/enemies/gutter_cryptid_turnaround.png",
+      "api_units": 40,
+      "model": "recraftv4",
+      "runtime_target": "4 angles exported to 24x36",
+      "integration_role": [
+        "runtime sprite source",
+        "billboard source",
+        "combat keypose source",
+        "rig reference",
+        "mesh blockout reference"
+      ],
+      "cell_layout": "4x1, 384x576 per cell",
+      "baseline_anchor": "feet",
+      "review_focus": [
+        "hostile silhouette readability",
+        "attack-source clarity",
+        "hitbox planning",
+        "weak-point readability"
+      ],
+      "translation_metadata": {
+        "analysis_profile": "rigged_enemy_blockout",
+        "symbol_object_policy": "meaningful contiguous image regions become self-contained symbol objects",
+        "neighbor_stencil": "32-neighbor comparison",
+        "depth_inference_method": "region stack, local shading, occlusion order, and cross-view consistency",
+        "engine_mapping": {
+          "mesh_target": "rigged_enemy_blockout",
+          "bind_to_rig": true,
+          "runtime_export": "24x36"
+        },
+        "pivot_policy": {
+          "primary_anchor": "feet",
+          "stable_pivot_required": true
+        },
+        "collision_policy": {
+          "required": true,
+          "proxy_source": "silhouette-derived region hull"
+        },
+        "surface_contract": {
+          "height_texture_ready": true,
+          "material_mask_ready": true,
+          "normal_hint_ready": true
+        },
+        "keypose_intake": {
+          "required": true,
+          "runtime_inbetween_candidate": true
+        }
+      },
+      "reconstruction_outputs": [
+        "pixel_matrix.json",
+        "region_map.json",
+        "symbol_objects.json",
+        "depth_map.png",
+        "spatial_metrics.json",
+        "mesh_contract.json",
+        "surface_contract.json",
+        "rig_mapping.json",
+        "keypose_intake.json",
+        "runtime_inbetween_constraints.json"
+      ],
+      "slice_plan": {
+        "mode": "uniform-grid",
+        "grid": {
+          "cols": 4,
+          "rows": 1,
+          "cell_width": 384,
+          "cell_height": 576
+        },
+        "cells": [
+          {
+            "name": "front",
+            "row": 0,
+            "col": 0,
+            "exports": [
+              {
+                "name": "front",
+                "mode": "fit",
+                "size": [
+                  24,
+                  36
+                ]
+              }
+            ]
+          },
+          {
+            "name": "left",
+            "row": 0,
+            "col": 1,
+            "exports": [
+              {
+                "name": "left",
+                "mode": "fit",
+                "size": [
+                  24,
+                  36
+                ]
+              }
+            ]
+          },
+          {
+            "name": "right",
+            "row": 0,
+            "col": 2,
+            "exports": [
+              {
+                "name": "right",
+                "mode": "fit",
+                "size": [
+                  24,
+                  36
+                ]
+              }
+            ]
+          },
+          {
+            "name": "rear",
+            "row": 0,
+            "col": 3,
+            "exports": [
+              {
+                "name": "rear",
+                "mode": "fit",
+                "size": [
+                  24,
+                  36
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "gutter_cryptid_action",
+      "category": "enemy",
+      "prompt": "Transparent background six-frame action sheet for Gutter Cryptid, crouch, leap, bite, recover, and wounded poses for fast beast enemy behavior.",
+      "negative_prompt": "text, logo, watermark, blur, merged frames, unreadable mouth",
+      "w": 2304,
+      "h": 576,
+      "out": "qa_demo/enemies/gutter_cryptid_action.png",
+      "api_units": 40,
+      "model": "recraftv4",
+      "runtime_target": "6 frames exported to 24x36",
+      "integration_role": [
+        "runtime sprite source",
+        "combat keypose source",
+        "rig reference",
+        "mesh blockout reference"
+      ],
+      "cell_layout": "6x1, 384x576 per cell",
+      "baseline_anchor": "feet",
+      "review_focus": [
+        "hostile silhouette readability",
+        "attack-source clarity",
+        "hitbox planning",
+        "weak-point readability"
+      ],
+      "translation_metadata": {
+        "analysis_profile": "rigged_enemy_blockout",
+        "symbol_object_policy": "meaningful contiguous image regions become self-contained symbol objects",
+        "neighbor_stencil": "32-neighbor comparison",
+        "depth_inference_method": "region stack, local shading, occlusion order, and cross-view consistency",
+        "engine_mapping": {
+          "mesh_target": "rigged_enemy_blockout",
+          "bind_to_rig": true,
+          "runtime_export": "24x36"
+        },
+        "pivot_policy": {
+          "primary_anchor": "feet",
+          "stable_pivot_required": true
+        },
+        "collision_policy": {
+          "required": true,
+          "proxy_source": "silhouette-derived region hull"
+        },
+        "surface_contract": {
+          "height_texture_ready": true,
+          "material_mask_ready": true,
+          "normal_hint_ready": true
+        },
+        "keypose_intake": {
+          "required": true,
+          "runtime_inbetween_candidate": true
+        }
+      },
+      "reconstruction_outputs": [
+        "pixel_matrix.json",
+        "region_map.json",
+        "symbol_objects.json",
+        "depth_map.png",
+        "spatial_metrics.json",
+        "mesh_contract.json",
+        "surface_contract.json",
+        "rig_mapping.json",
+        "keypose_intake.json",
+        "runtime_inbetween_constraints.json"
+      ],
+      "slice_plan": {
+        "mode": "uniform-grid",
+        "grid": {
+          "cols": 6,
+          "rows": 1,
+          "cell_width": 384,
+          "cell_height": 576
+        },
+        "cells": [
+          {
+            "name": "gutter_cryptid_action_00",
+            "row": 0,
+            "col": 0,
+            "exports": [
+              {
+                "name": "gutter_cryptid_action_00",
+                "mode": "fit",
+                "size": [
+                  24,
+                  36
+                ]
+              }
+            ]
+          },
+          {
+            "name": "gutter_cryptid_action_01",
+            "row": 0,
+            "col": 1,
+            "exports": [
+              {
+                "name": "gutter_cryptid_action_01",
+                "mode": "fit",
+                "size": [
+                  24,
+                  36
+                ]
+              }
+            ]
+          },
+          {
+            "name": "gutter_cryptid_action_02",
+            "row": 0,
+            "col": 2,
+            "exports": [
+              {
+                "name": "gutter_cryptid_action_02",
+                "mode": "fit",
+                "size": [
+                  24,
+                  36
+                ]
+              }
+            ]
+          },
+          {
+            "name": "gutter_cryptid_action_03",
+            "row": 0,
+            "col": 3,
+            "exports": [
+              {
+                "name": "gutter_cryptid_action_03",
+                "mode": "fit",
+                "size": [
+                  24,
+                  36
+                ]
+              }
+            ]
+          },
+          {
+            "name": "gutter_cryptid_action_04",
+            "row": 0,
+            "col": 4,
+            "exports": [
+              {
+                "name": "gutter_cryptid_action_04",
+                "mode": "fit",
+                "size": [
+                  24,
+                  36
+                ]
+              }
+            ]
+          },
+          {
+            "name": "gutter_cryptid_action_05",
+            "row": 0,
+            "col": 5,
+            "exports": [
+              {
+                "name": "gutter_cryptid_action_05",
+                "mode": "fit",
+                "size": [
+                  24,
+                  36
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "debt_collector_elite_turnaround",
+      "category": "enemy_elite",
+      "prompt": "Transparent background four-angle turnaround sheet for Honey Debt Collector elite, heavier armor, shrine-part weaponry, unmistakable miniboss silhouette, readable weak-point chest or mask detail.",
+      "negative_prompt": "text, logo, watermark, blur, background scene, weak silhouette",
+      "w": 2048,
+      "h": 768,
+      "out": "qa_demo/enemies/debt_collector_elite_turnaround.png",
+      "api_units": 40,
+      "model": "recraftv4",
+      "runtime_target": "4 angles exported to 32x48",
+      "integration_role": [
+        "runtime sprite source",
+        "billboard source",
+        "combat keypose source",
+        "rig reference",
+        "mesh blockout reference"
+      ],
+      "cell_layout": "4x1, 512x768 per cell",
+      "baseline_anchor": "feet",
+      "review_focus": [
+        "hostile silhouette readability",
+        "attack-source clarity",
+        "hitbox planning",
+        "weak-point readability"
+      ],
+      "translation_metadata": {
+        "analysis_profile": "rigged_enemy_blockout",
+        "symbol_object_policy": "meaningful contiguous image regions become self-contained symbol objects",
+        "neighbor_stencil": "32-neighbor comparison",
+        "depth_inference_method": "region stack, local shading, occlusion order, and cross-view consistency",
+        "engine_mapping": {
+          "mesh_target": "rigged_enemy_blockout",
+          "bind_to_rig": true,
+          "runtime_export": "32x48"
+        },
+        "pivot_policy": {
+          "primary_anchor": "feet",
+          "stable_pivot_required": true
+        },
+        "collision_policy": {
+          "required": true,
+          "proxy_source": "silhouette-derived region hull"
+        },
+        "surface_contract": {
+          "height_texture_ready": true,
+          "material_mask_ready": true,
+          "normal_hint_ready": true
+        },
+        "keypose_intake": {
+          "required": true,
+          "runtime_inbetween_candidate": true
+        }
+      },
+      "reconstruction_outputs": [
+        "pixel_matrix.json",
+        "region_map.json",
+        "symbol_objects.json",
+        "depth_map.png",
+        "spatial_metrics.json",
+        "mesh_contract.json",
+        "surface_contract.json",
+        "rig_mapping.json",
+        "keypose_intake.json",
+        "runtime_inbetween_constraints.json"
+      ],
+      "slice_plan": {
+        "mode": "uniform-grid",
+        "grid": {
+          "cols": 4,
+          "rows": 1,
+          "cell_width": 512,
+          "cell_height": 768
+        },
+        "cells": [
+          {
+            "name": "front",
+            "row": 0,
+            "col": 0,
+            "exports": [
+              {
+                "name": "front",
+                "mode": "fit",
+                "size": [
+                  32,
+                  48
+                ]
+              }
+            ]
+          },
+          {
+            "name": "left",
+            "row": 0,
+            "col": 1,
+            "exports": [
+              {
+                "name": "left",
+                "mode": "fit",
+                "size": [
+                  32,
+                  48
+                ]
+              }
+            ]
+          },
+          {
+            "name": "right",
+            "row": 0,
+            "col": 2,
+            "exports": [
+              {
+                "name": "right",
+                "mode": "fit",
+                "size": [
+                  32,
+                  48
+                ]
+              }
+            ]
+          },
+          {
+            "name": "rear",
+            "row": 0,
+            "col": 3,
+            "exports": [
+              {
+                "name": "rear",
+                "mode": "fit",
+                "size": [
+                  32,
+                  48
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "debt_collector_elite_action",
+      "category": "enemy_elite",
+      "prompt": "Transparent background six-frame action sheet for Honey Debt Collector elite, advance, heavy swing, guard, stagger, and recover poses, fit for a gatekeeping encounter.",
+      "negative_prompt": "text, logo, watermark, blur, frame overlap, unreadable weapon",
+      "w": 3072,
+      "h": 768,
+      "out": "qa_demo/enemies/debt_collector_elite_action.png",
+      "api_units": 40,
+      "model": "recraftv4",
+      "runtime_target": "6 frames exported to 32x48",
+      "integration_role": [
+        "runtime sprite source",
+        "combat keypose source",
+        "rig reference",
+        "mesh blockout reference"
+      ],
+      "cell_layout": "6x1, 512x768 per cell",
+      "baseline_anchor": "feet",
+      "review_focus": [
+        "hostile silhouette readability",
+        "attack-source clarity",
+        "hitbox planning",
+        "weak-point readability"
+      ],
+      "translation_metadata": {
+        "analysis_profile": "rigged_enemy_blockout",
+        "symbol_object_policy": "meaningful contiguous image regions become self-contained symbol objects",
+        "neighbor_stencil": "32-neighbor comparison",
+        "depth_inference_method": "region stack, local shading, occlusion order, and cross-view consistency",
+        "engine_mapping": {
+          "mesh_target": "rigged_enemy_blockout",
+          "bind_to_rig": true,
+          "runtime_export": "32x48"
+        },
+        "pivot_policy": {
+          "primary_anchor": "feet",
+          "stable_pivot_required": true
+        },
+        "collision_policy": {
+          "required": true,
+          "proxy_source": "silhouette-derived region hull"
+        },
+        "surface_contract": {
+          "height_texture_ready": true,
+          "material_mask_ready": true,
+          "normal_hint_ready": true
+        },
+        "keypose_intake": {
+          "required": true,
+          "runtime_inbetween_candidate": true
+        }
+      },
+      "reconstruction_outputs": [
+        "pixel_matrix.json",
+        "region_map.json",
+        "symbol_objects.json",
+        "depth_map.png",
+        "spatial_metrics.json",
+        "mesh_contract.json",
+        "surface_contract.json",
+        "rig_mapping.json",
+        "keypose_intake.json",
+        "runtime_inbetween_constraints.json"
+      ],
+      "slice_plan": {
+        "mode": "uniform-grid",
+        "grid": {
+          "cols": 6,
+          "rows": 1,
+          "cell_width": 512,
+          "cell_height": 768
+        },
+        "cells": [
+          {
+            "name": "debt_collector_elite_action_00",
+            "row": 0,
+            "col": 0,
+            "exports": [
+              {
+                "name": "debt_collector_elite_action_00",
+                "mode": "fit",
+                "size": [
+                  32,
+                  48
+                ]
+              }
+            ]
+          },
+          {
+            "name": "debt_collector_elite_action_01",
+            "row": 0,
+            "col": 1,
+            "exports": [
+              {
+                "name": "debt_collector_elite_action_01",
+                "mode": "fit",
+                "size": [
+                  32,
+                  48
+                ]
+              }
+            ]
+          },
+          {
+            "name": "debt_collector_elite_action_02",
+            "row": 0,
+            "col": 2,
+            "exports": [
+              {
+                "name": "debt_collector_elite_action_02",
+                "mode": "fit",
+                "size": [
+                  32,
+                  48
+                ]
+              }
+            ]
+          },
+          {
+            "name": "debt_collector_elite_action_03",
+            "row": 0,
+            "col": 3,
+            "exports": [
+              {
+                "name": "debt_collector_elite_action_03",
+                "mode": "fit",
+                "size": [
+                  32,
+                  48
+                ]
+              }
+            ]
+          },
+          {
+            "name": "debt_collector_elite_action_04",
+            "row": 0,
+            "col": 4,
+            "exports": [
+              {
+                "name": "debt_collector_elite_action_04",
+                "mode": "fit",
+                "size": [
+                  32,
+                  48
+                ]
+              }
+            ]
+          },
+          {
+            "name": "debt_collector_elite_action_05",
+            "row": 0,
+            "col": 5,
+            "exports": [
+              {
+                "name": "debt_collector_elite_action_05",
+                "mode": "fit",
+                "size": [
+                  32,
+                  48
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "bishop_static_boss_turnaround",
+      "category": "boss",
+      "prompt": "Transparent background four-angle turnaround sheet for Bishop Static boss, fused preacher-slot-machine choir pulpit, tall ritual machine silhouette, readable focal head and attack source.",
+      "negative_prompt": "text, logo, watermark, blur, background scene, unreadable mass",
+      "w": 2048,
+      "h": 768,
+      "out": "qa_demo/boss/bishop_static_boss_turnaround.png",
+      "api_units": 40,
+      "model": "recraftv4",
+      "runtime_target": "4 angles exported to 32x48",
+      "integration_role": [
+        "runtime sprite source",
+        "billboard source",
+        "boss keypose source",
+        "rig reference",
+        "mesh blockout reference"
+      ],
+      "cell_layout": "4x1, 512x768 per cell",
+      "baseline_anchor": "feet",
+      "review_focus": [
+        "hostile silhouette readability",
+        "attack-source clarity",
+        "hitbox planning",
+        "weak-point readability"
+      ],
+      "translation_metadata": {
+        "analysis_profile": "rigged_boss_blockout",
+        "symbol_object_policy": "meaningful contiguous image regions become self-contained symbol objects",
+        "neighbor_stencil": "32-neighbor comparison",
+        "depth_inference_method": "region stack, local shading, occlusion order, and cross-view consistency",
+        "engine_mapping": {
+          "mesh_target": "rigged_boss_blockout",
+          "bind_to_rig": true,
+          "runtime_export": "32x48"
+        },
+        "pivot_policy": {
+          "primary_anchor": "feet",
+          "stable_pivot_required": true
+        },
+        "collision_policy": {
+          "required": true,
+          "proxy_source": "silhouette-derived region hull"
+        },
+        "surface_contract": {
+          "height_texture_ready": true,
+          "material_mask_ready": true,
+          "normal_hint_ready": true
+        },
+        "keypose_intake": {
+          "required": true,
+          "runtime_inbetween_candidate": true
+        }
+      },
+      "reconstruction_outputs": [
+        "pixel_matrix.json",
+        "region_map.json",
+        "symbol_objects.json",
+        "depth_map.png",
+        "spatial_metrics.json",
+        "mesh_contract.json",
+        "surface_contract.json",
+        "rig_mapping.json",
+        "keypose_intake.json",
+        "runtime_inbetween_constraints.json"
+      ],
+      "slice_plan": {
+        "mode": "uniform-grid",
+        "grid": {
+          "cols": 4,
+          "rows": 1,
+          "cell_width": 512,
+          "cell_height": 768
+        },
+        "cells": [
+          {
+            "name": "front",
+            "row": 0,
+            "col": 0,
+            "exports": [
+              {
+                "name": "front",
+                "mode": "fit",
+                "size": [
+                  32,
+                  48
+                ]
+              }
+            ]
+          },
+          {
+            "name": "left",
+            "row": 0,
+            "col": 1,
+            "exports": [
+              {
+                "name": "left",
+                "mode": "fit",
+                "size": [
+                  32,
+                  48
+                ]
+              }
+            ]
+          },
+          {
+            "name": "right",
+            "row": 0,
+            "col": 2,
+            "exports": [
+              {
+                "name": "right",
+                "mode": "fit",
+                "size": [
+                  32,
+                  48
+                ]
+              }
+            ]
+          },
+          {
+            "name": "rear",
+            "row": 0,
+            "col": 3,
+            "exports": [
+              {
+                "name": "rear",
+                "mode": "fit",
+                "size": [
+                  32,
+                  48
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "bishop_static_boss_action",
+      "category": "boss",
+      "prompt": "Transparent background six-frame boss action sheet for Bishop Static, charge-up, broadcast burst, slam, stagger, and death-start poses, readable at small boss sprite scale.",
+      "negative_prompt": "text, logo, watermark, blur, frame overlap, unreadable attack source",
+      "w": 3072,
+      "h": 768,
+      "out": "qa_demo/boss/bishop_static_boss_action.png",
+      "api_units": 40,
+      "model": "recraftv4",
+      "runtime_target": "6 frames exported to 32x48",
+      "integration_role": [
+        "runtime sprite source",
+        "boss keypose source",
+        "rig reference",
+        "mesh blockout reference"
+      ],
+      "cell_layout": "6x1, 512x768 per cell",
+      "baseline_anchor": "feet",
+      "review_focus": [
+        "hostile silhouette readability",
+        "attack-source clarity",
+        "hitbox planning",
+        "weak-point readability"
+      ],
+      "translation_metadata": {
+        "analysis_profile": "rigged_boss_blockout",
+        "symbol_object_policy": "meaningful contiguous image regions become self-contained symbol objects",
+        "neighbor_stencil": "32-neighbor comparison",
+        "depth_inference_method": "region stack, local shading, occlusion order, and cross-view consistency",
+        "engine_mapping": {
+          "mesh_target": "rigged_boss_blockout",
+          "bind_to_rig": true,
+          "runtime_export": "32x48"
+        },
+        "pivot_policy": {
+          "primary_anchor": "feet",
+          "stable_pivot_required": true
+        },
+        "collision_policy": {
+          "required": true,
+          "proxy_source": "silhouette-derived region hull"
+        },
+        "surface_contract": {
+          "height_texture_ready": true,
+          "material_mask_ready": true,
+          "normal_hint_ready": true
+        },
+        "keypose_intake": {
+          "required": true,
+          "runtime_inbetween_candidate": true
+        }
+      },
+      "reconstruction_outputs": [
+        "pixel_matrix.json",
+        "region_map.json",
+        "symbol_objects.json",
+        "depth_map.png",
+        "spatial_metrics.json",
+        "mesh_contract.json",
+        "surface_contract.json",
+        "rig_mapping.json",
+        "keypose_intake.json",
+        "runtime_inbetween_constraints.json"
+      ],
+      "slice_plan": {
+        "mode": "uniform-grid",
+        "grid": {
+          "cols": 6,
+          "rows": 1,
+          "cell_width": 512,
+          "cell_height": 768
+        },
+        "cells": [
+          {
+            "name": "bishop_static_boss_action_00",
+            "row": 0,
+            "col": 0,
+            "exports": [
+              {
+                "name": "bishop_static_boss_action_00",
+                "mode": "fit",
+                "size": [
+                  32,
+                  48
+                ]
+              }
+            ]
+          },
+          {
+            "name": "bishop_static_boss_action_01",
+            "row": 0,
+            "col": 1,
+            "exports": [
+              {
+                "name": "bishop_static_boss_action_01",
+                "mode": "fit",
+                "size": [
+                  32,
+                  48
+                ]
+              }
+            ]
+          },
+          {
+            "name": "bishop_static_boss_action_02",
+            "row": 0,
+            "col": 2,
+            "exports": [
+              {
+                "name": "bishop_static_boss_action_02",
+                "mode": "fit",
+                "size": [
+                  32,
+                  48
+                ]
+              }
+            ]
+          },
+          {
+            "name": "bishop_static_boss_action_03",
+            "row": 0,
+            "col": 3,
+            "exports": [
+              {
+                "name": "bishop_static_boss_action_03",
+                "mode": "fit",
+                "size": [
+                  32,
+                  48
+                ]
+              }
+            ]
+          },
+          {
+            "name": "bishop_static_boss_action_04",
+            "row": 0,
+            "col": 4,
+            "exports": [
+              {
+                "name": "bishop_static_boss_action_04",
+                "mode": "fit",
+                "size": [
+                  32,
+                  48
+                ]
+              }
+            ]
+          },
+          {
+            "name": "bishop_static_boss_action_05",
+            "row": 0,
+            "col": 5,
+            "exports": [
+              {
+                "name": "bishop_static_boss_action_05",
+                "mode": "fit",
+                "size": [
+                  32,
+                  48
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "apiary_hub_tileset_kit",
+      "category": "world",
+      "prompt": "Transparent background environment kit for Apiary Junction hub, hive-lantern floors, shrine rails, comb-metal trims, worker masonry, clean tile readability, 6x6 modular prop and tile atlas.",
+      "negative_prompt": "text, logo, watermark, background scene, muddy detail, perspective mismatch",
+      "w": 1536,
+      "h": 1536,
+      "out": "qa_demo/world/apiary_hub_tileset_kit.png",
+      "api_units": 40,
+      "model": "recraftv4",
+      "runtime_target": "mixed exports to 24x24 and 48x48",
+      "integration_role": [
+        "modular kit source",
+        "environment mesh blockout reference",
+        "surface-material source"
+      ],
+      "cell_layout": "6x6, 256x256 per cell",
+      "baseline_anchor": "feet",
+      "review_focus": [
+        "modular seam safety",
+        "collision readability",
+        "material separation",
+        "repeat-safe boundaries"
+      ],
+      "translation_metadata": {
+        "analysis_profile": "modular_environment_blockout",
+        "symbol_object_policy": "meaningful contiguous image regions become self-contained symbol objects",
+        "neighbor_stencil": "32-neighbor comparison",
+        "depth_inference_method": "region stack, local shading, occlusion order, and cross-view consistency",
+        "engine_mapping": {
+          "mesh_target": "modular_environment_blockout",
+          "bind_to_rig": false,
+          "repeat_safe": true
+        },
+        "pivot_policy": {
+          "primary_anchor": "feet",
+          "stable_pivot_required": true
+        },
+        "collision_policy": {
+          "required": true,
+          "proxy_source": "silhouette-derived region hull"
+        },
+        "surface_contract": {
+          "height_texture_ready": true,
+          "material_mask_ready": true,
+          "normal_hint_ready": true
+        },
+        "keypose_intake": {
+          "required": false,
+          "runtime_inbetween_candidate": false
+        }
+      },
+      "reconstruction_outputs": [
+        "pixel_matrix.json",
+        "region_map.json",
+        "symbol_objects.json",
+        "depth_map.png",
+        "spatial_metrics.json",
+        "mesh_contract.json",
+        "surface_contract.json"
+      ],
+      "slice_plan": {
+        "mode": "uniform-grid-auto",
+        "grid": {
+          "cols": 6,
+          "rows": 6,
+          "cell_width": 256,
+          "cell_height": 256
+        },
+        "auto_exports": [
+          {
+            "name": "raw",
+            "mode": "raw"
+          },
+          {
+            "name": "tile_24x24",
+            "mode": "fit",
+            "size": [
+              24,
+              24
+            ]
+          },
+          {
+            "name": "prop_24x36",
+            "mode": "fit",
+            "size": [
+              24,
+              36
+            ]
+          },
+          {
+            "name": "large_48x48",
+            "mode": "fit",
+            "size": [
+              48,
+              48
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "apiary_hub_prop_kit",
+      "category": "world",
+      "prompt": "Transparent background prop kit for Apiary Junction hub, market counters, reliquary stands, wax boilers, rope lifts, worker crates, and ritual benches, modular 6x6 atlas.",
+      "negative_prompt": "text, logo, watermark, background scene, blurry props, soft edges",
+      "w": 1536,
+      "h": 1536,
+      "out": "qa_demo/world/apiary_hub_prop_kit.png",
+      "api_units": 40,
+      "model": "recraftv4",
+      "runtime_target": "mixed exports to 24x36 and 48x48",
+      "integration_role": [
+        "modular kit source",
+        "environment mesh blockout reference",
+        "surface-material source"
+      ],
+      "cell_layout": "6x6, 256x256 per cell",
+      "baseline_anchor": "feet",
+      "review_focus": [
+        "modular seam safety",
+        "collision readability",
+        "material separation",
+        "repeat-safe boundaries"
+      ],
+      "translation_metadata": {
+        "analysis_profile": "modular_environment_blockout",
+        "symbol_object_policy": "meaningful contiguous image regions become self-contained symbol objects",
+        "neighbor_stencil": "32-neighbor comparison",
+        "depth_inference_method": "region stack, local shading, occlusion order, and cross-view consistency",
+        "engine_mapping": {
+          "mesh_target": "modular_environment_blockout",
+          "bind_to_rig": false,
+          "repeat_safe": true
+        },
+        "pivot_policy": {
+          "primary_anchor": "feet",
+          "stable_pivot_required": true
+        },
+        "collision_policy": {
+          "required": true,
+          "proxy_source": "silhouette-derived region hull"
+        },
+        "surface_contract": {
+          "height_texture_ready": true,
+          "material_mask_ready": true,
+          "normal_hint_ready": true
+        },
+        "keypose_intake": {
+          "required": false,
+          "runtime_inbetween_candidate": false
+        }
+      },
+      "reconstruction_outputs": [
+        "pixel_matrix.json",
+        "region_map.json",
+        "symbol_objects.json",
+        "depth_map.png",
+        "spatial_metrics.json",
+        "mesh_contract.json",
+        "surface_contract.json"
+      ],
+      "slice_plan": {
+        "mode": "uniform-grid-auto",
+        "grid": {
+          "cols": 6,
+          "rows": 6,
+          "cell_width": 256,
+          "cell_height": 256
+        },
+        "auto_exports": [
+          {
+            "name": "raw",
+            "mode": "raw"
+          },
+          {
+            "name": "tile_24x24",
+            "mode": "fit",
+            "size": [
+              24,
+              24
+            ]
+          },
+          {
+            "name": "prop_24x36",
+            "mode": "fit",
+            "size": [
+              24,
+              36
+            ]
+          },
+          {
+            "name": "large_48x48",
+            "mode": "fit",
+            "size": [
+              48,
+              48
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "apiary_shrine_kit",
+      "category": "world",
+      "prompt": "Transparent background shrine kit for Bango-Patoot demo, save shrine, refine shrine, honey vessels, candles, memory bells, and interaction props, modular 6x6 atlas.",
+      "negative_prompt": "text, logo, watermark, background scene, weak focal shapes",
+      "w": 1536,
+      "h": 1536,
+      "out": "qa_demo/world/apiary_shrine_kit.png",
+      "api_units": 40,
+      "model": "recraftv4",
+      "runtime_target": "mixed exports to 24x36 and 48x48",
+      "integration_role": [
+        "modular kit source",
+        "environment mesh blockout reference",
+        "surface-material source"
+      ],
+      "cell_layout": "6x6, 256x256 per cell",
+      "baseline_anchor": "feet",
+      "review_focus": [
+        "modular seam safety",
+        "collision readability",
+        "material separation",
+        "repeat-safe boundaries"
+      ],
+      "translation_metadata": {
+        "analysis_profile": "modular_environment_blockout",
+        "symbol_object_policy": "meaningful contiguous image regions become self-contained symbol objects",
+        "neighbor_stencil": "32-neighbor comparison",
+        "depth_inference_method": "region stack, local shading, occlusion order, and cross-view consistency",
+        "engine_mapping": {
+          "mesh_target": "modular_environment_blockout",
+          "bind_to_rig": false,
+          "repeat_safe": true
+        },
+        "pivot_policy": {
+          "primary_anchor": "feet",
+          "stable_pivot_required": true
+        },
+        "collision_policy": {
+          "required": true,
+          "proxy_source": "silhouette-derived region hull"
+        },
+        "surface_contract": {
+          "height_texture_ready": true,
+          "material_mask_ready": true,
+          "normal_hint_ready": true
+        },
+        "keypose_intake": {
+          "required": false,
+          "runtime_inbetween_candidate": false
+        }
+      },
+      "reconstruction_outputs": [
+        "pixel_matrix.json",
+        "region_map.json",
+        "symbol_objects.json",
+        "depth_map.png",
+        "spatial_metrics.json",
+        "mesh_contract.json",
+        "surface_contract.json"
+      ],
+      "slice_plan": {
+        "mode": "uniform-grid-auto",
+        "grid": {
+          "cols": 6,
+          "rows": 6,
+          "cell_width": 256,
+          "cell_height": 256
+        },
+        "auto_exports": [
+          {
+            "name": "raw",
+            "mode": "raw"
+          },
+          {
+            "name": "tile_24x24",
+            "mode": "fit",
+            "size": [
+              24,
+              24
+            ]
+          },
+          {
+            "name": "prop_24x36",
+            "mode": "fit",
+            "size": [
+              24,
+              36
+            ]
+          },
+          {
+            "name": "large_48x48",
+            "mode": "fit",
+            "size": [
+              48,
+              48
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "brassroot_street_tileset_kit",
+      "category": "world",
+      "prompt": "Transparent background tileset kit for Brassroot Borough street route, worker brick, damp stone, tram line, iron trim, gutter panels, and route floor modules, modular 6x6 atlas.",
+      "negative_prompt": "text, logo, watermark, background scene, muddy detail, photographic noise",
+      "w": 1536,
+      "h": 1536,
+      "out": "qa_demo/world/brassroot_street_tileset_kit.png",
+      "api_units": 40,
+      "model": "recraftv4",
+      "runtime_target": "mixed exports to 24x24 and 48x48",
+      "integration_role": [
+        "modular kit source",
+        "environment mesh blockout reference",
+        "surface-material source"
+      ],
+      "cell_layout": "6x6, 256x256 per cell",
+      "baseline_anchor": "feet",
+      "review_focus": [
+        "modular seam safety",
+        "collision readability",
+        "material separation",
+        "repeat-safe boundaries"
+      ],
+      "translation_metadata": {
+        "analysis_profile": "modular_environment_blockout",
+        "symbol_object_policy": "meaningful contiguous image regions become self-contained symbol objects",
+        "neighbor_stencil": "32-neighbor comparison",
+        "depth_inference_method": "region stack, local shading, occlusion order, and cross-view consistency",
+        "engine_mapping": {
+          "mesh_target": "modular_environment_blockout",
+          "bind_to_rig": false,
+          "repeat_safe": true
+        },
+        "pivot_policy": {
+          "primary_anchor": "feet",
+          "stable_pivot_required": true
+        },
+        "collision_policy": {
+          "required": true,
+          "proxy_source": "silhouette-derived region hull"
+        },
+        "surface_contract": {
+          "height_texture_ready": true,
+          "material_mask_ready": true,
+          "normal_hint_ready": true
+        },
+        "keypose_intake": {
+          "required": false,
+          "runtime_inbetween_candidate": false
+        }
+      },
+      "reconstruction_outputs": [
+        "pixel_matrix.json",
+        "region_map.json",
+        "symbol_objects.json",
+        "depth_map.png",
+        "spatial_metrics.json",
+        "mesh_contract.json",
+        "surface_contract.json"
+      ],
+      "slice_plan": {
+        "mode": "uniform-grid-auto",
+        "grid": {
+          "cols": 6,
+          "rows": 6,
+          "cell_width": 256,
+          "cell_height": 256
+        },
+        "auto_exports": [
+          {
+            "name": "raw",
+            "mode": "raw"
+          },
+          {
+            "name": "tile_24x24",
+            "mode": "fit",
+            "size": [
+              24,
+              24
+            ]
+          },
+          {
+            "name": "prop_24x36",
+            "mode": "fit",
+            "size": [
+              24,
+              36
+            ]
+          },
+          {
+            "name": "large_48x48",
+            "mode": "fit",
+            "size": [
+              48,
+              48
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "brassroot_verticality_kit",
+      "category": "world",
+      "prompt": "Transparent background vertical traversal kit for Brassroot Borough, ladders, catwalks, lift cages, balcony rails, hanging chains, and pipe crossings, modular 6x6 atlas.",
+      "negative_prompt": "text, logo, watermark, background scene, perspective mismatch, blurry edges",
+      "w": 1536,
+      "h": 1536,
+      "out": "qa_demo/world/brassroot_verticality_kit.png",
+      "api_units": 40,
+      "model": "recraftv4",
+      "runtime_target": "mixed exports to 24x36 and 48x48",
+      "integration_role": [
+        "modular kit source",
+        "environment mesh blockout reference",
+        "surface-material source"
+      ],
+      "cell_layout": "6x6, 256x256 per cell",
+      "baseline_anchor": "feet",
+      "review_focus": [
+        "modular seam safety",
+        "collision readability",
+        "material separation",
+        "repeat-safe boundaries"
+      ],
+      "translation_metadata": {
+        "analysis_profile": "modular_environment_blockout",
+        "symbol_object_policy": "meaningful contiguous image regions become self-contained symbol objects",
+        "neighbor_stencil": "32-neighbor comparison",
+        "depth_inference_method": "region stack, local shading, occlusion order, and cross-view consistency",
+        "engine_mapping": {
+          "mesh_target": "modular_environment_blockout",
+          "bind_to_rig": false,
+          "repeat_safe": true
+        },
+        "pivot_policy": {
+          "primary_anchor": "feet",
+          "stable_pivot_required": true
+        },
+        "collision_policy": {
+          "required": true,
+          "proxy_source": "silhouette-derived region hull"
+        },
+        "surface_contract": {
+          "height_texture_ready": true,
+          "material_mask_ready": true,
+          "normal_hint_ready": true
+        },
+        "keypose_intake": {
+          "required": false,
+          "runtime_inbetween_candidate": false
+        }
+      },
+      "reconstruction_outputs": [
+        "pixel_matrix.json",
+        "region_map.json",
+        "symbol_objects.json",
+        "depth_map.png",
+        "spatial_metrics.json",
+        "mesh_contract.json",
+        "surface_contract.json"
+      ],
+      "slice_plan": {
+        "mode": "uniform-grid-auto",
+        "grid": {
+          "cols": 6,
+          "rows": 6,
+          "cell_width": 256,
+          "cell_height": 256
+        },
+        "auto_exports": [
+          {
+            "name": "raw",
+            "mode": "raw"
+          },
+          {
+            "name": "tile_24x24",
+            "mode": "fit",
+            "size": [
+              24,
+              24
+            ]
+          },
+          {
+            "name": "prop_24x36",
+            "mode": "fit",
+            "size": [
+              24,
+              36
+            ]
+          },
+          {
+            "name": "large_48x48",
+            "mode": "fit",
+            "size": [
+              48,
+              48
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "brassroot_prop_kit",
+      "category": "world",
+      "prompt": "Transparent background prop kit for Brassroot Borough, street altars, wash-lines, vent stacks, work carts, utility lockers, and alley clutter, modular 6x6 atlas.",
+      "negative_prompt": "text, logo, watermark, background scene, soft clutter, low contrast",
+      "w": 1536,
+      "h": 1536,
+      "out": "qa_demo/world/brassroot_prop_kit.png",
+      "api_units": 40,
+      "model": "recraftv4",
+      "runtime_target": "mixed exports to 24x36 and 48x48",
+      "integration_role": [
+        "modular kit source",
+        "environment mesh blockout reference",
+        "surface-material source"
+      ],
+      "cell_layout": "6x6, 256x256 per cell",
+      "baseline_anchor": "feet",
+      "review_focus": [
+        "modular seam safety",
+        "collision readability",
+        "material separation",
+        "repeat-safe boundaries"
+      ],
+      "translation_metadata": {
+        "analysis_profile": "modular_environment_blockout",
+        "symbol_object_policy": "meaningful contiguous image regions become self-contained symbol objects",
+        "neighbor_stencil": "32-neighbor comparison",
+        "depth_inference_method": "region stack, local shading, occlusion order, and cross-view consistency",
+        "engine_mapping": {
+          "mesh_target": "modular_environment_blockout",
+          "bind_to_rig": false,
+          "repeat_safe": true
+        },
+        "pivot_policy": {
+          "primary_anchor": "feet",
+          "stable_pivot_required": true
+        },
+        "collision_policy": {
+          "required": true,
+          "proxy_source": "silhouette-derived region hull"
+        },
+        "surface_contract": {
+          "height_texture_ready": true,
+          "material_mask_ready": true,
+          "normal_hint_ready": true
+        },
+        "keypose_intake": {
+          "required": false,
+          "runtime_inbetween_candidate": false
+        }
+      },
+      "reconstruction_outputs": [
+        "pixel_matrix.json",
+        "region_map.json",
+        "symbol_objects.json",
+        "depth_map.png",
+        "spatial_metrics.json",
+        "mesh_contract.json",
+        "surface_contract.json"
+      ],
+      "slice_plan": {
+        "mode": "uniform-grid-auto",
+        "grid": {
+          "cols": 6,
+          "rows": 6,
+          "cell_width": 256,
+          "cell_height": 256
+        },
+        "auto_exports": [
+          {
+            "name": "raw",
+            "mode": "raw"
+          },
+          {
+            "name": "tile_24x24",
+            "mode": "fit",
+            "size": [
+              24,
+              24
+            ]
+          },
+          {
+            "name": "prop_24x36",
+            "mode": "fit",
+            "size": [
+              24,
+              36
+            ]
+          },
+          {
+            "name": "large_48x48",
+            "mode": "fit",
+            "size": [
+              48,
+              48
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "breakable_crate_barrel_kit",
+      "category": "interactable",
+      "prompt": "Transparent background breakable prop kit for underhive combat spaces, wax crates, rail barrels, salvage bins, cracked boxes, and lootable containers, modular 6x6 atlas.",
+      "negative_prompt": "text, logo, watermark, background scene, blurry material edges",
+      "w": 1536,
+      "h": 1536,
+      "out": "qa_demo/interactables/breakable_crate_barrel_kit.png",
+      "api_units": 40,
+      "model": "recraftv4",
+      "runtime_target": "mixed exports to 24x36",
+      "integration_role": [
+        "prop sprite source",
+        "collision proxy reference",
+        "mesh blockout reference"
+      ],
+      "cell_layout": "6x6, 256x256 per cell",
+      "baseline_anchor": "feet",
+      "review_focus": [
+        "modular seam safety",
+        "collision readability",
+        "material separation",
+        "repeat-safe boundaries"
+      ],
+      "translation_metadata": {
+        "analysis_profile": "rigid_or_hinged_prop_blockout",
+        "symbol_object_policy": "meaningful contiguous image regions become self-contained symbol objects",
+        "neighbor_stencil": "32-neighbor comparison",
+        "depth_inference_method": "region stack, local shading, occlusion order, and cross-view consistency",
+        "engine_mapping": {
+          "mesh_target": "rigid_or_hinged_prop_blockout",
+          "bind_to_rig": false,
+          "collision_required": true
+        },
+        "pivot_policy": {
+          "primary_anchor": "feet",
+          "stable_pivot_required": true
+        },
+        "collision_policy": {
+          "required": true,
+          "proxy_source": "silhouette-derived region hull"
+        },
+        "surface_contract": {
+          "height_texture_ready": true,
+          "material_mask_ready": true,
+          "normal_hint_ready": true
+        },
+        "keypose_intake": {
+          "required": false,
+          "runtime_inbetween_candidate": false
+        }
+      },
+      "reconstruction_outputs": [
+        "pixel_matrix.json",
+        "region_map.json",
+        "symbol_objects.json",
+        "depth_map.png",
+        "spatial_metrics.json",
+        "mesh_contract.json",
+        "surface_contract.json"
+      ],
+      "slice_plan": {
+        "mode": "uniform-grid-auto",
+        "grid": {
+          "cols": 6,
+          "rows": 6,
+          "cell_width": 256,
+          "cell_height": 256
+        },
+        "auto_exports": [
+          {
+            "name": "raw",
+            "mode": "raw"
+          },
+          {
+            "name": "tile_24x24",
+            "mode": "fit",
+            "size": [
+              24,
+              24
+            ]
+          },
+          {
+            "name": "prop_24x36",
+            "mode": "fit",
+            "size": [
+              24,
+              36
+            ]
+          },
+          {
+            "name": "large_48x48",
+            "mode": "fit",
+            "size": [
+              48,
+              48
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "door_gate_switch_kit",
+      "category": "interactable",
+      "prompt": "Transparent background door, gate, lock, lever, and switch kit for route gating, shrine locks, and boss access, modular 6x6 atlas with clear interact silhouettes.",
+      "negative_prompt": "text, logo, watermark, background scene, weak silhouette, impossible perspective",
+      "w": 1536,
+      "h": 1536,
+      "out": "qa_demo/interactables/door_gate_switch_kit.png",
+      "api_units": 40,
+      "model": "recraftv4",
+      "runtime_target": "mixed exports to 24x36 and 48x48",
+      "integration_role": [
+        "prop sprite source",
+        "collision proxy reference",
+        "mesh blockout reference"
+      ],
+      "cell_layout": "6x6, 256x256 per cell",
+      "baseline_anchor": "feet",
+      "review_focus": [
+        "modular seam safety",
+        "collision readability",
+        "material separation",
+        "repeat-safe boundaries"
+      ],
+      "translation_metadata": {
+        "analysis_profile": "rigid_or_hinged_prop_blockout",
+        "symbol_object_policy": "meaningful contiguous image regions become self-contained symbol objects",
+        "neighbor_stencil": "32-neighbor comparison",
+        "depth_inference_method": "region stack, local shading, occlusion order, and cross-view consistency",
+        "engine_mapping": {
+          "mesh_target": "rigid_or_hinged_prop_blockout",
+          "bind_to_rig": false,
+          "collision_required": true
+        },
+        "pivot_policy": {
+          "primary_anchor": "feet",
+          "stable_pivot_required": true
+        },
+        "collision_policy": {
+          "required": true,
+          "proxy_source": "silhouette-derived region hull"
+        },
+        "surface_contract": {
+          "height_texture_ready": true,
+          "material_mask_ready": true,
+          "normal_hint_ready": true
+        },
+        "keypose_intake": {
+          "required": false,
+          "runtime_inbetween_candidate": false
+        }
+      },
+      "reconstruction_outputs": [
+        "pixel_matrix.json",
+        "region_map.json",
+        "symbol_objects.json",
+        "depth_map.png",
+        "spatial_metrics.json",
+        "mesh_contract.json",
+        "surface_contract.json"
+      ],
+      "slice_plan": {
+        "mode": "uniform-grid-auto",
+        "grid": {
+          "cols": 6,
+          "rows": 6,
+          "cell_width": 256,
+          "cell_height": 256
+        },
+        "auto_exports": [
+          {
+            "name": "raw",
+            "mode": "raw"
+          },
+          {
+            "name": "tile_24x24",
+            "mode": "fit",
+            "size": [
+              24,
+              24
+            ]
+          },
+          {
+            "name": "prop_24x36",
+            "mode": "fit",
+            "size": [
+              24,
+              36
+            ]
+          },
+          {
+            "name": "large_48x48",
+            "mode": "fit",
+            "size": [
+              48,
+              48
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "collectible_pickup_kit",
+      "category": "interactable",
+      "prompt": "Transparent background pickup kit for Nocturne Notes, Hive Sigils, honey shards, shrine tokens, and loot drops, small modular 4x4 atlas with distinct silhouettes.",
+      "negative_prompt": "text, logo, watermark, background scene, muddy highlights, similar shapes",
+      "w": 1024,
+      "h": 1024,
+      "out": "qa_demo/interactables/collectible_pickup_kit.png",
+      "api_units": 40,
+      "model": "recraftv4",
+      "runtime_target": "mixed exports to 16x16 and 24x24",
+      "integration_role": [
+        "prop sprite source",
+        "collision proxy reference",
+        "mesh blockout reference"
+      ],
+      "cell_layout": "manual free-layout master",
+      "baseline_anchor": "feet",
+      "review_focus": [
+        "modular seam safety",
+        "collision readability",
+        "material separation",
+        "repeat-safe boundaries"
+      ],
+      "translation_metadata": {
+        "analysis_profile": "rigid_or_hinged_prop_blockout",
+        "symbol_object_policy": "meaningful contiguous image regions become self-contained symbol objects",
+        "neighbor_stencil": "32-neighbor comparison",
+        "depth_inference_method": "region stack, local shading, occlusion order, and cross-view consistency",
+        "engine_mapping": {
+          "mesh_target": "rigid_or_hinged_prop_blockout",
+          "bind_to_rig": false,
+          "collision_required": true
+        },
+        "pivot_policy": {
+          "primary_anchor": "feet",
+          "stable_pivot_required": true
+        },
+        "collision_policy": {
+          "required": true,
+          "proxy_source": "silhouette-derived region hull"
+        },
+        "surface_contract": {
+          "height_texture_ready": true,
+          "material_mask_ready": true,
+          "normal_hint_ready": true
+        },
+        "keypose_intake": {
+          "required": false,
+          "runtime_inbetween_candidate": false
+        }
+      },
+      "reconstruction_outputs": [
+        "pixel_matrix.json",
+        "region_map.json",
+        "symbol_objects.json",
+        "depth_map.png",
+        "spatial_metrics.json",
+        "mesh_contract.json",
+        "surface_contract.json"
+      ],
+      "slice_plan": {
+        "mode": "uniform-grid-auto",
+        "grid": {
+          "cols": 4,
+          "rows": 4,
+          "cell_width": 256,
+          "cell_height": 256
+        },
+        "auto_exports": [
+          {
+            "name": "raw",
+            "mode": "raw"
+          },
+          {
+            "name": "small_16x16",
+            "mode": "fit",
+            "size": [
+              16,
+              16
+            ]
+          },
+          {
+            "name": "medium_24x24",
+            "mode": "fit",
+            "size": [
+              24,
+              24
+            ]
+          },
+          {
+            "name": "actor_24x36",
+            "mode": "fit",
+            "size": [
+              24,
+              36
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "lantern_kin_rescue_kit",
+      "category": "interactable",
+      "prompt": "Transparent background Lantern Kin rescue kit, small captive forms, rescue cage prop, freed-state tokens, and guidance markers, modular 4x4 atlas with readable silhouettes.",
+      "negative_prompt": "text, logo, watermark, background scene, blur, confusing shapes",
+      "w": 1024,
+      "h": 1024,
+      "out": "qa_demo/interactables/lantern_kin_rescue_kit.png",
+      "api_units": 40,
+      "model": "recraftv4",
+      "runtime_target": "mixed exports to 16x16, 24x24, and 24x36",
+      "integration_role": [
+        "prop sprite source",
+        "collision proxy reference",
+        "mesh blockout reference"
+      ],
+      "cell_layout": "manual free-layout master",
+      "baseline_anchor": "feet",
+      "review_focus": [
+        "modular seam safety",
+        "collision readability",
+        "material separation",
+        "repeat-safe boundaries"
+      ],
+      "translation_metadata": {
+        "analysis_profile": "rigid_or_hinged_prop_blockout",
+        "symbol_object_policy": "meaningful contiguous image regions become self-contained symbol objects",
+        "neighbor_stencil": "32-neighbor comparison",
+        "depth_inference_method": "region stack, local shading, occlusion order, and cross-view consistency",
+        "engine_mapping": {
+          "mesh_target": "rigid_or_hinged_prop_blockout",
+          "bind_to_rig": false,
+          "collision_required": true
+        },
+        "pivot_policy": {
+          "primary_anchor": "feet",
+          "stable_pivot_required": true
+        },
+        "collision_policy": {
+          "required": true,
+          "proxy_source": "silhouette-derived region hull"
+        },
+        "surface_contract": {
+          "height_texture_ready": true,
+          "material_mask_ready": true,
+          "normal_hint_ready": true
+        },
+        "keypose_intake": {
+          "required": false,
+          "runtime_inbetween_candidate": false
+        }
+      },
+      "reconstruction_outputs": [
+        "pixel_matrix.json",
+        "region_map.json",
+        "symbol_objects.json",
+        "depth_map.png",
+        "spatial_metrics.json",
+        "mesh_contract.json",
+        "surface_contract.json"
+      ],
+      "slice_plan": {
+        "mode": "uniform-grid-auto",
+        "grid": {
+          "cols": 4,
+          "rows": 4,
+          "cell_width": 256,
+          "cell_height": 256
+        },
+        "auto_exports": [
+          {
+            "name": "raw",
+            "mode": "raw"
+          },
+          {
+            "name": "small_16x16",
+            "mode": "fit",
+            "size": [
+              16,
+              16
+            ]
+          },
+          {
+            "name": "medium_24x24",
+            "mode": "fit",
+            "size": [
+              24,
+              24
+            ]
+          },
+          {
+            "name": "actor_24x36",
+            "mode": "fit",
+            "size": [
+              24,
+              36
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "shrine_vendor_save_kit",
+      "category": "interactable",
+      "prompt": "Transparent background combined shrine vendor and save-point kit, counters, bells, lamps, menu markers, and service props, modular 6x6 atlas.",
+      "negative_prompt": "text, logo, watermark, background scene, muddy details",
+      "w": 1536,
+      "h": 1536,
+      "out": "qa_demo/interactables/shrine_vendor_save_kit.png",
+      "api_units": 40,
+      "model": "recraftv4",
+      "runtime_target": "mixed exports to 24x36 and 48x48",
+      "integration_role": [
+        "prop sprite source",
+        "collision proxy reference",
+        "mesh blockout reference"
+      ],
+      "cell_layout": "6x6, 256x256 per cell",
+      "baseline_anchor": "feet",
+      "review_focus": [
+        "modular seam safety",
+        "collision readability",
+        "material separation",
+        "repeat-safe boundaries"
+      ],
+      "translation_metadata": {
+        "analysis_profile": "rigid_or_hinged_prop_blockout",
+        "symbol_object_policy": "meaningful contiguous image regions become self-contained symbol objects",
+        "neighbor_stencil": "32-neighbor comparison",
+        "depth_inference_method": "region stack, local shading, occlusion order, and cross-view consistency",
+        "engine_mapping": {
+          "mesh_target": "rigid_or_hinged_prop_blockout",
+          "bind_to_rig": false,
+          "collision_required": true
+        },
+        "pivot_policy": {
+          "primary_anchor": "feet",
+          "stable_pivot_required": true
+        },
+        "collision_policy": {
+          "required": true,
+          "proxy_source": "silhouette-derived region hull"
+        },
+        "surface_contract": {
+          "height_texture_ready": true,
+          "material_mask_ready": true,
+          "normal_hint_ready": true
+        },
+        "keypose_intake": {
+          "required": false,
+          "runtime_inbetween_candidate": false
+        }
+      },
+      "reconstruction_outputs": [
+        "pixel_matrix.json",
+        "region_map.json",
+        "symbol_objects.json",
+        "depth_map.png",
+        "spatial_metrics.json",
+        "mesh_contract.json",
+        "surface_contract.json"
+      ],
+      "slice_plan": {
+        "mode": "uniform-grid-auto",
+        "grid": {
+          "cols": 6,
+          "rows": 6,
+          "cell_width": 256,
+          "cell_height": 256
+        },
+        "auto_exports": [
+          {
+            "name": "raw",
+            "mode": "raw"
+          },
+          {
+            "name": "tile_24x24",
+            "mode": "fit",
+            "size": [
+              24,
+              24
+            ]
+          },
+          {
+            "name": "prop_24x36",
+            "mode": "fit",
+            "size": [
+              24,
+              36
+            ]
+          },
+          {
+            "name": "large_48x48",
+            "mode": "fit",
+            "size": [
+              48,
+              48
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "hazard_effect_prop_kit",
+      "category": "interactable",
+      "prompt": "Transparent background hazard prop kit for steam vents, sparking wires, acid runoff mouths, unstable hymn speakers, and warning hardware, modular 6x6 atlas.",
+      "negative_prompt": "text, logo, watermark, background scene, blurry effects, unreadable hazard source",
+      "w": 1536,
+      "h": 1536,
+      "out": "qa_demo/interactables/hazard_effect_prop_kit.png",
+      "api_units": 40,
+      "model": "recraftv4",
+      "runtime_target": "mixed exports to 24x24 and 48x48",
+      "integration_role": [
+        "prop sprite source",
+        "collision proxy reference",
+        "mesh blockout reference"
+      ],
+      "cell_layout": "6x6, 256x256 per cell",
+      "baseline_anchor": "feet",
+      "review_focus": [
+        "modular seam safety",
+        "collision readability",
+        "material separation",
+        "repeat-safe boundaries"
+      ],
+      "translation_metadata": {
+        "analysis_profile": "rigid_or_hinged_prop_blockout",
+        "symbol_object_policy": "meaningful contiguous image regions become self-contained symbol objects",
+        "neighbor_stencil": "32-neighbor comparison",
+        "depth_inference_method": "region stack, local shading, occlusion order, and cross-view consistency",
+        "engine_mapping": {
+          "mesh_target": "rigid_or_hinged_prop_blockout",
+          "bind_to_rig": false,
+          "collision_required": true
+        },
+        "pivot_policy": {
+          "primary_anchor": "feet",
+          "stable_pivot_required": true
+        },
+        "collision_policy": {
+          "required": true,
+          "proxy_source": "silhouette-derived region hull"
+        },
+        "surface_contract": {
+          "height_texture_ready": true,
+          "material_mask_ready": true,
+          "normal_hint_ready": true
+        },
+        "keypose_intake": {
+          "required": false,
+          "runtime_inbetween_candidate": false
+        }
+      },
+      "reconstruction_outputs": [
+        "pixel_matrix.json",
+        "region_map.json",
+        "symbol_objects.json",
+        "depth_map.png",
+        "spatial_metrics.json",
+        "mesh_contract.json",
+        "surface_contract.json"
+      ],
+      "slice_plan": {
+        "mode": "uniform-grid-auto",
+        "grid": {
+          "cols": 6,
+          "rows": 6,
+          "cell_width": 256,
+          "cell_height": 256
+        },
+        "auto_exports": [
+          {
+            "name": "raw",
+            "mode": "raw"
+          },
+          {
+            "name": "tile_24x24",
+            "mode": "fit",
+            "size": [
+              24,
+              24
+            ]
+          },
+          {
+            "name": "prop_24x36",
+            "mode": "fit",
+            "size": [
+              24,
+              36
+            ]
+          },
+          {
+            "name": "large_48x48",
+            "mode": "fit",
+            "size": [
+              48,
+              48
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "signage_wayfinding_kit",
+      "category": "interactable",
+      "prompt": "Transparent background signage and wayfinding kit for underhive streets and hub routes, arrows, plaques, hanging signs, district markers, and warning plates, modular 6x6 atlas.",
+      "negative_prompt": "text paragraphs, logos, watermark, background scene, unreadable iconography",
+      "w": 1536,
+      "h": 1536,
+      "out": "qa_demo/interactables/signage_wayfinding_kit.png",
+      "api_units": 40,
+      "model": "recraftv4",
+      "runtime_target": "mixed exports to 24x24 and 24x36",
+      "integration_role": [
+        "prop sprite source",
+        "collision proxy reference",
+        "mesh blockout reference"
+      ],
+      "cell_layout": "6x6, 256x256 per cell",
+      "baseline_anchor": "feet",
+      "review_focus": [
+        "modular seam safety",
+        "collision readability",
+        "material separation",
+        "repeat-safe boundaries"
+      ],
+      "translation_metadata": {
+        "analysis_profile": "rigid_or_hinged_prop_blockout",
+        "symbol_object_policy": "meaningful contiguous image regions become self-contained symbol objects",
+        "neighbor_stencil": "32-neighbor comparison",
+        "depth_inference_method": "region stack, local shading, occlusion order, and cross-view consistency",
+        "engine_mapping": {
+          "mesh_target": "rigid_or_hinged_prop_blockout",
+          "bind_to_rig": false,
+          "collision_required": true
+        },
+        "pivot_policy": {
+          "primary_anchor": "feet",
+          "stable_pivot_required": true
+        },
+        "collision_policy": {
+          "required": true,
+          "proxy_source": "silhouette-derived region hull"
+        },
+        "surface_contract": {
+          "height_texture_ready": true,
+          "material_mask_ready": true,
+          "normal_hint_ready": true
+        },
+        "keypose_intake": {
+          "required": false,
+          "runtime_inbetween_candidate": false
+        }
+      },
+      "reconstruction_outputs": [
+        "pixel_matrix.json",
+        "region_map.json",
+        "symbol_objects.json",
+        "depth_map.png",
+        "spatial_metrics.json",
+        "mesh_contract.json",
+        "surface_contract.json"
+      ],
+      "slice_plan": {
+        "mode": "uniform-grid-auto",
+        "grid": {
+          "cols": 6,
+          "rows": 6,
+          "cell_width": 256,
+          "cell_height": 256
+        },
+        "auto_exports": [
+          {
+            "name": "raw",
+            "mode": "raw"
+          },
+          {
+            "name": "tile_24x24",
+            "mode": "fit",
+            "size": [
+              24,
+              24
+            ]
+          },
+          {
+            "name": "prop_24x36",
+            "mode": "fit",
+            "size": [
+              24,
+              36
+            ]
+          },
+          {
+            "name": "large_48x48",
+            "mode": "fit",
+            "size": [
+              48,
+              48
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "world_map_marker_kit",
+      "category": "interactable",
+      "prompt": "Transparent background marker kit for objective arrows, save markers, boss gate icons, shrine icons, collectibles, and route indicators, modular 4x4 atlas.",
+      "negative_prompt": "text, logo, watermark, background scene, low contrast, similar icons",
+      "w": 1024,
+      "h": 1024,
+      "out": "qa_demo/interactables/world_map_marker_kit.png",
+      "api_units": 40,
+      "model": "recraftv4",
+      "runtime_target": "mixed exports to 16x16 and 24x24",
+      "integration_role": [
+        "prop sprite source",
+        "collision proxy reference",
+        "mesh blockout reference"
+      ],
+      "cell_layout": "manual free-layout master",
+      "baseline_anchor": "feet",
+      "review_focus": [
+        "modular seam safety",
+        "collision readability",
+        "material separation",
+        "repeat-safe boundaries"
+      ],
+      "translation_metadata": {
+        "analysis_profile": "rigid_or_hinged_prop_blockout",
+        "symbol_object_policy": "meaningful contiguous image regions become self-contained symbol objects",
+        "neighbor_stencil": "32-neighbor comparison",
+        "depth_inference_method": "region stack, local shading, occlusion order, and cross-view consistency",
+        "engine_mapping": {
+          "mesh_target": "rigid_or_hinged_prop_blockout",
+          "bind_to_rig": false,
+          "collision_required": true
+        },
+        "pivot_policy": {
+          "primary_anchor": "feet",
+          "stable_pivot_required": true
+        },
+        "collision_policy": {
+          "required": true,
+          "proxy_source": "silhouette-derived region hull"
+        },
+        "surface_contract": {
+          "height_texture_ready": true,
+          "material_mask_ready": true,
+          "normal_hint_ready": true
+        },
+        "keypose_intake": {
+          "required": false,
+          "runtime_inbetween_candidate": false
+        }
+      },
+      "reconstruction_outputs": [
+        "pixel_matrix.json",
+        "region_map.json",
+        "symbol_objects.json",
+        "depth_map.png",
+        "spatial_metrics.json",
+        "mesh_contract.json",
+        "surface_contract.json"
+      ],
+      "slice_plan": {
+        "mode": "uniform-grid-auto",
+        "grid": {
+          "cols": 4,
+          "rows": 4,
+          "cell_width": 256,
+          "cell_height": 256
+        },
+        "auto_exports": [
+          {
+            "name": "raw",
+            "mode": "raw"
+          },
+          {
+            "name": "small_16x16",
+            "mode": "fit",
+            "size": [
+              16,
+              16
+            ]
+          },
+          {
+            "name": "medium_24x24",
+            "mode": "fit",
+            "size": [
+              24,
+              24
+            ]
+          },
+          {
+            "name": "actor_24x36",
+            "mode": "fit",
+            "size": [
+              24,
+              36
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "flora_forage_kit",
+      "category": "wildlife",
+      "prompt": "Transparent background flora kit for Hive Moss, Spore Cap, Wax Vine, and other harvestable underhive growth, modular 4x4 atlas with clear forage silhouettes.",
+      "negative_prompt": "text, logo, watermark, background scene, muddy greens, unreadable plant shapes",
+      "w": 1024,
+      "h": 1024,
+      "out": "qa_demo/wildlife/flora_forage_kit.png",
+      "api_units": 40,
+      "model": "recraftv4",
+      "runtime_target": "mixed exports to 16x16 and 24x24",
+      "integration_role": [
+        "runtime sprite source",
+        "ambient actor reference",
+        "mesh blockout reference"
+      ],
+      "cell_layout": "4x4, 256x256 per cell",
+      "baseline_anchor": "feet",
+      "review_focus": [
+        "non-hostile versus hostile readability",
+        "small-scale silhouette clarity",
+        "downsample stability"
+      ],
+      "translation_metadata": {
+        "analysis_profile": "simple_actor_or_billboard_blockout",
+        "symbol_object_policy": "meaningful contiguous image regions become self-contained symbol objects",
+        "neighbor_stencil": "32-neighbor comparison",
+        "depth_inference_method": "region stack, local shading, occlusion order, and cross-view consistency",
+        "engine_mapping": {
+          "mesh_target": "simple_actor_or_billboard_blockout",
+          "bind_to_rig": true
+        },
+        "pivot_policy": {
+          "primary_anchor": "feet",
+          "stable_pivot_required": true
+        },
+        "collision_policy": {
+          "required": true,
+          "proxy_source": "silhouette-derived region hull"
+        },
+        "surface_contract": {
+          "height_texture_ready": true,
+          "material_mask_ready": true,
+          "normal_hint_ready": true
+        },
+        "keypose_intake": {
+          "required": true,
+          "runtime_inbetween_candidate": true
+        }
+      },
+      "reconstruction_outputs": [
+        "pixel_matrix.json",
+        "region_map.json",
+        "symbol_objects.json",
+        "depth_map.png",
+        "spatial_metrics.json",
+        "mesh_contract.json",
+        "surface_contract.json",
+        "rig_mapping.json",
+        "keypose_intake.json",
+        "runtime_inbetween_constraints.json"
+      ],
+      "slice_plan": {
+        "mode": "uniform-grid-auto",
+        "grid": {
+          "cols": 4,
+          "rows": 4,
+          "cell_width": 256,
+          "cell_height": 256
+        },
+        "auto_exports": [
+          {
+            "name": "raw",
+            "mode": "raw"
+          },
+          {
+            "name": "small_16x16",
+            "mode": "fit",
+            "size": [
+              16,
+              16
+            ]
+          },
+          {
+            "name": "medium_24x24",
+            "mode": "fit",
+            "size": [
+              24,
+              24
+            ]
+          },
+          {
+            "name": "actor_24x36",
+            "mode": "fit",
+            "size": [
+              24,
+              36
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "fauna_ambient_kit",
+      "category": "wildlife",
+      "prompt": "Transparent background ambient fauna kit for Gutter Rat, Lantern Moth, Soot Crow, and other small non-hostile or neutral wildlife, modular 4x4 atlas.",
+      "negative_prompt": "text, logo, watermark, background scene, blur, hostile monster anatomy",
+      "w": 1024,
+      "h": 1024,
+      "out": "qa_demo/wildlife/fauna_ambient_kit.png",
+      "api_units": 40,
+      "model": "recraftv4",
+      "runtime_target": "mixed exports to 24x24 and 24x36",
+      "integration_role": [
+        "runtime sprite source",
+        "ambient actor reference",
+        "mesh blockout reference"
+      ],
+      "cell_layout": "4x4, 256x256 per cell",
+      "baseline_anchor": "feet",
+      "review_focus": [
+        "non-hostile versus hostile readability",
+        "small-scale silhouette clarity",
+        "downsample stability"
+      ],
+      "translation_metadata": {
+        "analysis_profile": "simple_actor_or_billboard_blockout",
+        "symbol_object_policy": "meaningful contiguous image regions become self-contained symbol objects",
+        "neighbor_stencil": "32-neighbor comparison",
+        "depth_inference_method": "region stack, local shading, occlusion order, and cross-view consistency",
+        "engine_mapping": {
+          "mesh_target": "simple_actor_or_billboard_blockout",
+          "bind_to_rig": true
+        },
+        "pivot_policy": {
+          "primary_anchor": "feet",
+          "stable_pivot_required": true
+        },
+        "collision_policy": {
+          "required": true,
+          "proxy_source": "silhouette-derived region hull"
+        },
+        "surface_contract": {
+          "height_texture_ready": true,
+          "material_mask_ready": true,
+          "normal_hint_ready": true
+        },
+        "keypose_intake": {
+          "required": true,
+          "runtime_inbetween_candidate": true
+        }
+      },
+      "reconstruction_outputs": [
+        "pixel_matrix.json",
+        "region_map.json",
+        "symbol_objects.json",
+        "depth_map.png",
+        "spatial_metrics.json",
+        "mesh_contract.json",
+        "surface_contract.json",
+        "rig_mapping.json",
+        "keypose_intake.json",
+        "runtime_inbetween_constraints.json"
+      ],
+      "slice_plan": {
+        "mode": "uniform-grid-auto",
+        "grid": {
+          "cols": 4,
+          "rows": 4,
+          "cell_width": 256,
+          "cell_height": 256
+        },
+        "auto_exports": [
+          {
+            "name": "raw",
+            "mode": "raw"
+          },
+          {
+            "name": "small_16x16",
+            "mode": "fit",
+            "size": [
+              16,
+              16
+            ]
+          },
+          {
+            "name": "medium_24x24",
+            "mode": "fit",
+            "size": [
+              24,
+              24
+            ]
+          },
+          {
+            "name": "actor_24x36",
+            "mode": "fit",
+            "size": [
+              24,
+              36
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "combat_fx_kit",
+      "category": "fx",
+      "prompt": "Transparent background combat VFX kit for melee impact sparks, slash arcs, hit flashes, stagger bursts, and enemy strike cues, modular 6x3 atlas.",
+      "negative_prompt": "text, logo, watermark, background scene, blurry glow, smoke-only effects",
+      "w": 1536,
+      "h": 768,
+      "out": "qa_demo/fx/combat_fx_kit.png",
+      "api_units": 40,
+      "model": "recraftv4",
+      "runtime_target": "mixed exports to 24x24 and 48x48",
+      "integration_role": [
+        "runtime effect source",
+        "billboard source",
+        "emissive mask source"
+      ],
+      "cell_layout": "6x3, 256x256 per cell",
+      "baseline_anchor": "effect origin",
+      "review_focus": [
+        "emissive readability",
+        "effect origin clarity",
+        "downsample readability"
+      ],
+      "translation_metadata": {
+        "analysis_profile": "billboard_or_volume_card",
+        "symbol_object_policy": "meaningful contiguous image regions become self-contained symbol objects",
+        "neighbor_stencil": "32-neighbor comparison",
+        "depth_inference_method": "region stack, local shading, occlusion order, and cross-view consistency",
+        "engine_mapping": {
+          "mesh_target": "billboard_or_volume_card",
+          "bind_to_rig": false
+        },
+        "pivot_policy": {
+          "primary_anchor": "effect origin",
+          "stable_pivot_required": true
+        },
+        "collision_policy": {
+          "required": false,
+          "proxy_source": "silhouette-derived region hull"
+        },
+        "surface_contract": {
+          "height_texture_ready": true,
+          "material_mask_ready": true,
+          "normal_hint_ready": true
+        },
+        "keypose_intake": {
+          "required": false,
+          "runtime_inbetween_candidate": false
+        }
+      },
+      "reconstruction_outputs": [
+        "pixel_matrix.json",
+        "region_map.json",
+        "symbol_objects.json",
+        "depth_map.png",
+        "spatial_metrics.json",
+        "mesh_contract.json",
+        "surface_contract.json"
+      ],
+      "slice_plan": {
+        "mode": "uniform-grid-auto",
+        "grid": {
+          "cols": 6,
+          "rows": 3,
+          "cell_width": 256,
+          "cell_height": 256
+        },
+        "auto_exports": [
+          {
+            "name": "raw",
+            "mode": "raw"
+          },
+          {
+            "name": "fx_24x24",
+            "mode": "fit",
+            "size": [
+              24,
+              24
+            ]
+          },
+          {
+            "name": "fx_48x48",
+            "mode": "fit",
+            "size": [
+              48,
+              48
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "magic_fx_kit",
+      "category": "fx",
+      "prompt": "Transparent background magic and shrine VFX kit for ward flares, hymn bursts, shrine refine glow, cast circles, and arcana feedback, modular 6x3 atlas.",
+      "negative_prompt": "text, logo, watermark, background scene, blurry haze, unreadable source shapes",
+      "w": 1536,
+      "h": 768,
+      "out": "qa_demo/fx/magic_fx_kit.png",
+      "api_units": 40,
+      "model": "recraftv4",
+      "runtime_target": "mixed exports to 24x24 and 48x48",
+      "integration_role": [
+        "runtime effect source",
+        "billboard source",
+        "emissive mask source"
+      ],
+      "cell_layout": "6x3, 256x256 per cell",
+      "baseline_anchor": "effect origin",
+      "review_focus": [
+        "emissive readability",
+        "effect origin clarity",
+        "downsample readability"
+      ],
+      "translation_metadata": {
+        "analysis_profile": "billboard_or_volume_card",
+        "symbol_object_policy": "meaningful contiguous image regions become self-contained symbol objects",
+        "neighbor_stencil": "32-neighbor comparison",
+        "depth_inference_method": "region stack, local shading, occlusion order, and cross-view consistency",
+        "engine_mapping": {
+          "mesh_target": "billboard_or_volume_card",
+          "bind_to_rig": false
+        },
+        "pivot_policy": {
+          "primary_anchor": "effect origin",
+          "stable_pivot_required": true
+        },
+        "collision_policy": {
+          "required": false,
+          "proxy_source": "silhouette-derived region hull"
+        },
+        "surface_contract": {
+          "height_texture_ready": true,
+          "material_mask_ready": true,
+          "normal_hint_ready": true
+        },
+        "keypose_intake": {
+          "required": false,
+          "runtime_inbetween_candidate": false
+        }
+      },
+      "reconstruction_outputs": [
+        "pixel_matrix.json",
+        "region_map.json",
+        "symbol_objects.json",
+        "depth_map.png",
+        "spatial_metrics.json",
+        "mesh_contract.json",
+        "surface_contract.json"
+      ],
+      "slice_plan": {
+        "mode": "uniform-grid-auto",
+        "grid": {
+          "cols": 6,
+          "rows": 3,
+          "cell_width": 256,
+          "cell_height": 256
+        },
+        "auto_exports": [
+          {
+            "name": "raw",
+            "mode": "raw"
+          },
+          {
+            "name": "fx_24x24",
+            "mode": "fit",
+            "size": [
+              24,
+              24
+            ]
+          },
+          {
+            "name": "fx_48x48",
+            "mode": "fit",
+            "size": [
+              48,
+              48
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "traversal_fx_kit",
+      "category": "fx",
+      "prompt": "Transparent background traversal VFX kit for dodge dust, foot puffs, glide trail, landing burst, pickup trail, and sprint streak, modular 6x3 atlas.",
+      "negative_prompt": "text, logo, watermark, background scene, blurry motion smear, unreadable silhouettes",
+      "w": 1536,
+      "h": 768,
+      "out": "qa_demo/fx/traversal_fx_kit.png",
+      "api_units": 40,
+      "model": "recraftv4",
+      "runtime_target": "mixed exports to 24x24 and 48x48",
+      "integration_role": [
+        "runtime effect source",
+        "billboard source",
+        "emissive mask source"
+      ],
+      "cell_layout": "6x3, 256x256 per cell",
+      "baseline_anchor": "effect origin",
+      "review_focus": [
+        "emissive readability",
+        "effect origin clarity",
+        "downsample readability"
+      ],
+      "translation_metadata": {
+        "analysis_profile": "billboard_or_volume_card",
+        "symbol_object_policy": "meaningful contiguous image regions become self-contained symbol objects",
+        "neighbor_stencil": "32-neighbor comparison",
+        "depth_inference_method": "region stack, local shading, occlusion order, and cross-view consistency",
+        "engine_mapping": {
+          "mesh_target": "billboard_or_volume_card",
+          "bind_to_rig": false
+        },
+        "pivot_policy": {
+          "primary_anchor": "effect origin",
+          "stable_pivot_required": true
+        },
+        "collision_policy": {
+          "required": false,
+          "proxy_source": "silhouette-derived region hull"
+        },
+        "surface_contract": {
+          "height_texture_ready": true,
+          "material_mask_ready": true,
+          "normal_hint_ready": true
+        },
+        "keypose_intake": {
+          "required": false,
+          "runtime_inbetween_candidate": false
+        }
+      },
+      "reconstruction_outputs": [
+        "pixel_matrix.json",
+        "region_map.json",
+        "symbol_objects.json",
+        "depth_map.png",
+        "spatial_metrics.json",
+        "mesh_contract.json",
+        "surface_contract.json"
+      ],
+      "slice_plan": {
+        "mode": "uniform-grid-auto",
+        "grid": {
+          "cols": 6,
+          "rows": 3,
+          "cell_width": 256,
+          "cell_height": 256
+        },
+        "auto_exports": [
+          {
+            "name": "raw",
+            "mode": "raw"
+          },
+          {
+            "name": "fx_24x24",
+            "mode": "fit",
+            "size": [
+              24,
+              24
+            ]
+          },
+          {
+            "name": "fx_48x48",
+            "mode": "fit",
+            "size": [
+              48,
+              48
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "atmosphere_overlay_kit",
+      "category": "fx",
+      "prompt": "Transparent background atmosphere kit for pollen drift, shrine ash, ember flecks, fog curls, and floating particulate overlays that survive nearest-neighbor reduction, modular 6x3 atlas.",
+      "negative_prompt": "text, logo, watermark, background scene, mushy noise, low contrast fog",
+      "w": 1536,
+      "h": 768,
+      "out": "qa_demo/fx/atmosphere_overlay_kit.png",
+      "api_units": 40,
+      "model": "recraftv4",
+      "runtime_target": "mixed exports to 48x48 and screen-slice overlays",
+      "integration_role": [
+        "runtime effect source",
+        "billboard source",
+        "emissive mask source"
+      ],
+      "cell_layout": "6x3, 256x256 per cell",
+      "baseline_anchor": "effect origin",
+      "review_focus": [
+        "emissive readability",
+        "effect origin clarity",
+        "downsample readability"
+      ],
+      "translation_metadata": {
+        "analysis_profile": "billboard_or_volume_card",
+        "symbol_object_policy": "meaningful contiguous image regions become self-contained symbol objects",
+        "neighbor_stencil": "32-neighbor comparison",
+        "depth_inference_method": "region stack, local shading, occlusion order, and cross-view consistency",
+        "engine_mapping": {
+          "mesh_target": "billboard_or_volume_card",
+          "bind_to_rig": false
+        },
+        "pivot_policy": {
+          "primary_anchor": "effect origin",
+          "stable_pivot_required": true
+        },
+        "collision_policy": {
+          "required": false,
+          "proxy_source": "silhouette-derived region hull"
+        },
+        "surface_contract": {
+          "height_texture_ready": true,
+          "material_mask_ready": true,
+          "normal_hint_ready": true
+        },
+        "keypose_intake": {
+          "required": false,
+          "runtime_inbetween_candidate": false
+        }
+      },
+      "reconstruction_outputs": [
+        "pixel_matrix.json",
+        "region_map.json",
+        "symbol_objects.json",
+        "depth_map.png",
+        "spatial_metrics.json",
+        "mesh_contract.json",
+        "surface_contract.json"
+      ],
+      "slice_plan": {
+        "mode": "uniform-grid-auto",
+        "grid": {
+          "cols": 6,
+          "rows": 3,
+          "cell_width": 256,
+          "cell_height": 256
+        },
+        "auto_exports": [
+          {
+            "name": "raw",
+            "mode": "raw"
+          },
+          {
+            "name": "fx_24x24",
+            "mode": "fit",
+            "size": [
+              24,
+              24
+            ]
+          },
+          {
+            "name": "fx_48x48",
+            "mode": "fit",
+            "size": [
+              48,
+              48
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "hud_core_kit",
+      "category": "ui",
+      "prompt": "Transparent background HUD kit for Bango-Patoot demo, health bar, stamina bar, magic bar, button prompts, item slots, status pips, and top-screen interface slices with underhive fantasy styling.",
+      "negative_prompt": "text paragraphs, logos, watermark, background scene, glossy modern UI, unreadable shapes",
+      "w": 2048,
+      "h": 1024,
+      "out": "qa_demo/ui/hud_core_kit.png",
+      "api_units": 40,
+      "model": "recraftv4",
+      "runtime_target": "icons plus 400x32 HUD strip slices",
+      "integration_role": [
+        "screen-space source",
+        "slice source",
+        "QA reference source"
+      ],
+      "cell_layout": "manual free-layout master",
+      "baseline_anchor": "screen space",
+      "review_focus": [
+        "screen readability",
+        "slice readability",
+        "contrast safety"
+      ],
+      "translation_metadata": {
+        "analysis_profile": "screen_space_only",
+        "symbol_object_policy": "meaningful contiguous image regions become self-contained symbol objects",
+        "neighbor_stencil": "32-neighbor comparison",
+        "depth_inference_method": "region stack, local shading, occlusion order, and cross-view consistency",
+        "engine_mapping": {
+          "mesh_target": "screen_space_only",
+          "bind_to_rig": false
+        },
+        "pivot_policy": {
+          "primary_anchor": "screen space",
+          "stable_pivot_required": true
+        },
+        "collision_policy": {
+          "required": false,
+          "proxy_source": "silhouette-derived region hull"
+        },
+        "surface_contract": {
+          "height_texture_ready": false,
+          "material_mask_ready": true,
+          "normal_hint_ready": false
+        },
+        "keypose_intake": {
+          "required": false,
+          "runtime_inbetween_candidate": false
+        }
+      },
+      "reconstruction_outputs": [
+        "pixel_matrix.json",
+        "region_map.json",
+        "symbol_objects.json",
+        "depth_map.png",
+        "spatial_metrics.json",
+        "mesh_contract.json",
+        "surface_contract.json"
+      ],
+      "slice_plan": {
+        "mode": "manual-regions",
+        "canvas": {
+          "width": 2048,
+          "height": 1024
+        },
+        "template_outputs": [
+          "top_screen_slice",
+          "bottom_screen_slice",
+          "icon_exports",
+          "portrait_exports"
+        ]
+      }
+    },
+    {
+      "name": "menu_inventory_kit",
+      "category": "ui",
+      "prompt": "Transparent background menu kit for bottom-screen inventory, skill, shrine, and save panels, decorative frame corners, tabs, slots, and selectors in the Bango-Patoot visual language.",
+      "negative_prompt": "text paragraphs, logos, watermark, background scene, generic sci-fi UI, unreadable panel framing",
+      "w": 2048,
+      "h": 1024,
+      "out": "qa_demo/ui/menu_inventory_kit.png",
+      "api_units": 40,
+      "model": "recraftv4",
+      "runtime_target": "panel slices and 24x24 icons",
+      "integration_role": [
+        "screen-space source",
+        "slice source",
+        "QA reference source"
+      ],
+      "cell_layout": "manual free-layout master",
+      "baseline_anchor": "screen space",
+      "review_focus": [
+        "screen readability",
+        "slice readability",
+        "contrast safety"
+      ],
+      "translation_metadata": {
+        "analysis_profile": "screen_space_only",
+        "symbol_object_policy": "meaningful contiguous image regions become self-contained symbol objects",
+        "neighbor_stencil": "32-neighbor comparison",
+        "depth_inference_method": "region stack, local shading, occlusion order, and cross-view consistency",
+        "engine_mapping": {
+          "mesh_target": "screen_space_only",
+          "bind_to_rig": false
+        },
+        "pivot_policy": {
+          "primary_anchor": "screen space",
+          "stable_pivot_required": true
+        },
+        "collision_policy": {
+          "required": false,
+          "proxy_source": "silhouette-derived region hull"
+        },
+        "surface_contract": {
+          "height_texture_ready": false,
+          "material_mask_ready": true,
+          "normal_hint_ready": false
+        },
+        "keypose_intake": {
+          "required": false,
+          "runtime_inbetween_candidate": false
+        }
+      },
+      "reconstruction_outputs": [
+        "pixel_matrix.json",
+        "region_map.json",
+        "symbol_objects.json",
+        "depth_map.png",
+        "spatial_metrics.json",
+        "mesh_contract.json",
+        "surface_contract.json"
+      ],
+      "slice_plan": {
+        "mode": "manual-regions",
+        "canvas": {
+          "width": 2048,
+          "height": 1024
+        },
+        "template_outputs": [
+          "top_screen_slice",
+          "bottom_screen_slice",
+          "icon_exports",
+          "portrait_exports"
+        ]
+      }
+    },
+    {
+      "name": "dialogue_portrait_kit",
+      "category": "ui",
+      "prompt": "Transparent background dialogue portrait kit for Bango, Patoot, Tula, Edda, Vilm, Halceon, and one enemy speaker silhouette, portrait-first composition for 96x96 exports.",
+      "negative_prompt": "text, logos, watermark, background scene, tiny faces, expressionless portraits",
+      "w": 2048,
+      "h": 1024,
+      "out": "qa_demo/ui/dialogue_portrait_kit.png",
+      "api_units": 40,
+      "model": "recraftv4",
+      "runtime_target": "96x96 portraits",
+      "integration_role": [
+        "screen-space source",
+        "slice source",
+        "QA reference source"
+      ],
+      "cell_layout": "manual free-layout master",
+      "baseline_anchor": "screen space",
+      "review_focus": [
+        "screen readability",
+        "slice readability",
+        "contrast safety"
+      ],
+      "translation_metadata": {
+        "analysis_profile": "screen_space_only",
+        "symbol_object_policy": "meaningful contiguous image regions become self-contained symbol objects",
+        "neighbor_stencil": "32-neighbor comparison",
+        "depth_inference_method": "region stack, local shading, occlusion order, and cross-view consistency",
+        "engine_mapping": {
+          "mesh_target": "screen_space_only",
+          "bind_to_rig": false
+        },
+        "pivot_policy": {
+          "primary_anchor": "screen space",
+          "stable_pivot_required": true
+        },
+        "collision_policy": {
+          "required": false,
+          "proxy_source": "silhouette-derived region hull"
+        },
+        "surface_contract": {
+          "height_texture_ready": false,
+          "material_mask_ready": true,
+          "normal_hint_ready": false
+        },
+        "keypose_intake": {
+          "required": false,
+          "runtime_inbetween_candidate": false
+        }
+      },
+      "reconstruction_outputs": [
+        "pixel_matrix.json",
+        "region_map.json",
+        "symbol_objects.json",
+        "depth_map.png",
+        "spatial_metrics.json",
+        "mesh_contract.json",
+        "surface_contract.json"
+      ],
+      "slice_plan": {
+        "mode": "manual-regions",
+        "canvas": {
+          "width": 2048,
+          "height": 1024
+        },
+        "template_outputs": [
+          "top_screen_slice",
+          "bottom_screen_slice",
+          "icon_exports",
+          "portrait_exports"
+        ]
+      }
+    },
+    {
+      "name": "title_boot_kit",
+      "category": "ui",
+      "prompt": "Transparent background title and boot presentation kit for Bango-Patoot, title crest, start prompt frame, loading card motifs, and vertical-slice attract composition sized for 3DS top-screen use.",
+      "negative_prompt": "watermark, logos unrelated to the game, photo backgrounds, unreadable lettering, glossy modern UI",
+      "w": 2048,
+      "h": 1024,
+      "out": "qa_demo/ui/title_boot_kit.png",
+      "api_units": 40,
+      "model": "recraftv4",
+      "runtime_target": "400x240 title screen slices and boot widgets",
+      "integration_role": [
+        "screen-space source",
+        "slice source",
+        "QA reference source"
+      ],
+      "cell_layout": "manual free-layout master",
+      "baseline_anchor": "screen space",
+      "review_focus": [
+        "screen readability",
+        "slice readability",
+        "contrast safety"
+      ],
+      "translation_metadata": {
+        "analysis_profile": "screen_space_only",
+        "symbol_object_policy": "meaningful contiguous image regions become self-contained symbol objects",
+        "neighbor_stencil": "32-neighbor comparison",
+        "depth_inference_method": "region stack, local shading, occlusion order, and cross-view consistency",
+        "engine_mapping": {
+          "mesh_target": "screen_space_only",
+          "bind_to_rig": false
+        },
+        "pivot_policy": {
+          "primary_anchor": "screen space",
+          "stable_pivot_required": true
+        },
+        "collision_policy": {
+          "required": false,
+          "proxy_source": "silhouette-derived region hull"
+        },
+        "surface_contract": {
+          "height_texture_ready": false,
+          "material_mask_ready": true,
+          "normal_hint_ready": false
+        },
+        "keypose_intake": {
+          "required": false,
+          "runtime_inbetween_candidate": false
+        }
+      },
+      "reconstruction_outputs": [
+        "pixel_matrix.json",
+        "region_map.json",
+        "symbol_objects.json",
+        "depth_map.png",
+        "spatial_metrics.json",
+        "mesh_contract.json",
+        "surface_contract.json"
+      ],
+      "slice_plan": {
+        "mode": "manual-regions",
+        "canvas": {
+          "width": 2048,
+          "height": 1024
+        },
+        "template_outputs": [
+          "top_screen_slice",
+          "bottom_screen_slice",
+          "icon_exports",
+          "portrait_exports"
+        ]
+      }
+    }
+  ],
+  "tooling": {
+    "manifest_enricher": "tools/enrich_qa_demo_manifest.py",
+    "manifest_validator": "tools/validate_qa_demo_manifest.py",
+    "asset_slicer": "tools/slice_qa_demo_assets.py"
+  }
+}

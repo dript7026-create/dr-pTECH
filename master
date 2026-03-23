@@ -1,0 +1,163 @@
+#!/usr/bin/env python3
+"""
+Master dependency orchestrator for the workspace.
+
+Usage:
+  - Dry-run (default): prints commands to run
+  - Use `--apply` to actually execute installs
+
+Scans the `drIpTECH` directory recursively for common dependency manifests
+and generates platform-appropriate install commands for Python, Node, Go,
+Rust, PHP (Composer), and generic Makefile projects.
+"""
+import argparse
+import os
+import subprocess
+import sys
+from pathlib import Path
+
+
+MANIFESTS = {
+	'python_requirements': 'requirements.txt',
+	'pyproject': 'pyproject.toml',
+	'setup_py': 'setup.py',
+	'pipfile': 'Pipfile',
+	'package_json': 'package.json',
+	'yarn_lock': 'yarn.lock',
+	'package_lock': 'package-lock.json',
+	'go_mod': 'go.mod',
+	'cargo_toml': 'Cargo.toml',
+	'composer': 'composer.json',
+	'makefile': 'Makefile',
+}
+
+
+def find_manifests(root: Path):
+	results = []
+	for dirpath, dirs, files in os.walk(root):
+		fset = set(files)
+		rel = Path(dirpath)
+		entries = {}
+		for k, name in MANIFESTS.items():
+			if name in fset:
+				entries[k] = rel / name
+		if entries:
+			results.append((rel, entries))
+	return results
+
+
+def build_commands_for(dirpath: Path, manifests: dict, venv_pip: str = None):
+	cmds = []
+	cwd = str(dirpath)
+
+	# Python requirements
+	if 'python_requirements' in manifests:
+		pip_exec = venv_pip or sys.executable.replace('python.exe', 'pip.exe')
+		pip_exec = pip_exec if os.path.exists(pip_exec) else sys.executable.replace('python.exe', 'python.exe -m pip')
+		req_path = manifests['python_requirements']
+		cmds.append((cwd, f"{sys.executable} -m pip install -r \"{req_path}\""))
+
+	# pyproject / poetry / pip editable
+	if 'pyproject' in manifests or 'setup_py' in manifests:
+		if 'pyproject' in manifests:
+			pyproj = manifests['pyproject']
+			try:
+				with open(pyproj, 'r', encoding='utf-8') as f:
+					txt = f.read()
+				if '[tool.poetry]' in txt:
+					cmds.append((cwd, 'poetry install'))
+				else:
+					cmds.append((cwd, f"{sys.executable} -m pip install ."))
+			except Exception:
+				cmds.append((cwd, f"{sys.executable} -m pip install ."))
+		else:
+			cmds.append((cwd, f"{sys.executable} -m pip install ."))
+
+	# Node
+	if 'package_json' in manifests:
+		if 'yarn_lock' in manifests:
+			cmds.append((cwd, 'yarn install'))
+		else:
+			# prefer npm ci if lockfile present
+			if 'package_lock' in manifests:
+				cmds.append((cwd, 'npm ci'))
+			else:
+				cmds.append((cwd, 'npm install'))
+
+	# Go
+	if 'go_mod' in manifests:
+		cmds.append((cwd, 'go mod download'))
+
+	# Rust
+	if 'cargo_toml' in manifests:
+		cmds.append((cwd, 'cargo fetch'))
+
+	# Composer (PHP)
+	if 'composer' in manifests:
+		cmds.append((cwd, 'composer install'))
+
+	# Generic Makefile
+	if 'makefile' in manifests:
+		cmds.append((cwd, 'make'))
+
+	return cmds
+
+
+def run_command(cwd, cmd, apply: bool):
+	print(f"[{cwd}] $ {cmd}")
+	if apply:
+		try:
+			completed = subprocess.run(cmd, cwd=cwd, shell=True, check=True)
+			return completed.returncode == 0
+		except subprocess.CalledProcessError as e:
+			print(f"Command failed: {e}")
+			return False
+	return True
+
+
+def main():
+	p = argparse.ArgumentParser(description='Master dependency orchestrator')
+	p.add_argument('--root', default='drIpTECH', help='Root directory to scan')
+	p.add_argument('--apply', action='store_true', help='Actually run install commands')
+	p.add_argument('--venv-pip', help='Explicit pip executable to use (optional)')
+	p.add_argument('--quiet', action='store_true', help='Reduce output')
+	args = p.parse_args()
+
+	root = Path(args.root)
+	if not root.exists():
+		print(f"Root not found: {root}")
+		raise SystemExit(1)
+
+	found = find_manifests(root)
+	if not args.quiet:
+		print(f"Found {len(found)} projects under {root}")
+
+	all_cmds = []
+	for dirpath, manifests in found:
+		cmds = build_commands_for(dirpath, manifests, args.venv_pip)
+		if cmds:
+			all_cmds.extend(cmds)
+
+	if not all_cmds:
+		print('No dependency manifests found.')
+		return
+
+	failed = []
+	for cwd, cmd in all_cmds:
+		ok = run_command(cwd, cmd, args.apply)
+		if not ok:
+			failed.append((cwd, cmd))
+
+	print('\nSummary:')
+	print(f'  Projects scanned: {len(found)}')
+	print(f'  Commands executed: {len(all_cmds) if args.apply else 0} (dry-run: {not args.apply})')
+	if failed:
+		print('  Failures:')
+		for cwd, cmd in failed:
+			print(f'    - {cwd}: {cmd}')
+		raise SystemExit(2)
+
+
+if __name__ == '__main__':
+	main()
+

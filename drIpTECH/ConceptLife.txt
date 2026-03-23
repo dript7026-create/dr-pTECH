@@ -1,0 +1,6 @@
+ConceptLife
+
+Automated Concept Art into Video Game Asset Conversion and Generation
+
+
+ConceptLife is a Windows and Android application that takes into 2D .png file concept art sheets and converts the designs into sprite animation .png sprite sheets, full background .png images, layered environment/background .png images, and environment/gameplay-active object .png images/sprite sheets. It reads .zip packages of .png concept art sheets, or individual .png file concept art sheets. It has a graphical user interface that opens in an isolated window from a launchable windows executable or through standard android protocol. the gui offers the ability to select and scan the files for conversion, after doing so asks the user for prompts to guide the specific format for the generated assets, and then once assets are generate saves them to the same directory it scanned the files from, and then opens that directory.

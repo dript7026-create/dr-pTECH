@@ -1,0 +1,1320 @@
+[
+  {
+    "page": 1,
+    "type": "cover",
+    "spread": 1,
+    "dialogue": [
+      {
+        "speaker": "Bango",
+        "text": "If the city still remembers her, we can still reach her."
+      },
+      {
+        "speaker": "Patoot",
+        "text": "Then keep moving. The rails are whispering the way down."
+      }
+    ],
+    "overlays": [
+      "Brassroot descent route",
+      "Shrine heat below"
+    ]
+  },
+  {
+    "page": 2,
+    "type": "toc",
+    "spread": 1,
+    "dialogue": [
+      {
+        "speaker": "Bango",
+        "text": "If the city still remembers her, we can still reach her."
+      },
+      {
+        "speaker": "Patoot",
+        "text": "Then keep moving. The rails are whispering the way down."
+      }
+    ],
+    "overlays": [
+      "Brassroot descent route",
+      "Shrine heat below"
+    ]
+  },
+  {
+    "page": 3,
+    "type": "intro",
+    "spread": 2,
+    "dialogue": [
+      {
+        "speaker": "Tula Echo",
+        "text": "Follow the shrine heat, not the loudest hymn."
+      }
+    ],
+    "overlays": [
+      "Duo traversal covenant",
+      "Rescue motive"
+    ]
+  },
+  {
+    "page": 4,
+    "type": "art",
+    "spread": 2,
+    "dialogue": [
+      {
+        "speaker": "Tula Echo",
+        "text": "Follow the shrine heat, not the loudest hymn."
+      }
+    ],
+    "overlays": [
+      "Duo traversal covenant",
+      "Rescue motive"
+    ]
+  },
+  {
+    "page": 5,
+    "type": "text",
+    "spread": 3,
+    "dialogue": [
+      {
+        "speaker": "Bango",
+        "text": "You scout the ledges. I break the locks."
+      },
+      {
+        "speaker": "Patoot",
+        "text": "And when you miss a step, I keep you off the floor below."
+      }
+    ],
+    "overlays": [
+      "Idle / alert / leap / guard",
+      "Top-screen readability test"
+    ]
+  },
+  {
+    "page": 6,
+    "type": "art",
+    "spread": 3,
+    "dialogue": [
+      {
+        "speaker": "Bango",
+        "text": "You scout the ledges. I break the locks."
+      },
+      {
+        "speaker": "Patoot",
+        "text": "And when you miss a step, I keep you off the floor below."
+      }
+    ],
+    "overlays": [
+      "Idle / alert / leap / guard",
+      "Top-screen readability test"
+    ]
+  },
+  {
+    "page": 7,
+    "type": "text",
+    "spread": 4,
+    "dialogue": [
+      {
+        "speaker": "Bango",
+        "text": "Every strap earns its keep. Nothing rides on me for show."
+      }
+    ],
+    "overlays": [
+      "Field harness logic",
+      "Ward-ready silhouette"
+    ]
+  },
+  {
+    "page": 8,
+    "type": "art",
+    "spread": 4,
+    "dialogue": [
+      {
+        "speaker": "Bango",
+        "text": "Every strap earns its keep. Nothing rides on me for show."
+      }
+    ],
+    "overlays": [
+      "Field harness logic",
+      "Ward-ready silhouette"
+    ]
+  },
+  {
+    "page": 9,
+    "type": "text",
+    "spread": 5,
+    "dialogue": [
+      {
+        "speaker": "Patoot",
+        "text": "I do not fly away. I correct the fall."
+      }
+    ],
+    "overlays": [
+      "Perch balance",
+      "Glide correction anatomy"
+    ]
+  },
+  {
+    "page": 10,
+    "type": "art",
+    "spread": 5,
+    "dialogue": [
+      {
+        "speaker": "Patoot",
+        "text": "I do not fly away. I correct the fall."
+      }
+    ],
+    "overlays": [
+      "Perch balance",
+      "Glide correction anatomy"
+    ]
+  },
+  {
+    "page": 11,
+    "type": "text",
+    "spread": 6,
+    "dialogue": [
+      {
+        "speaker": "Tula",
+        "text": "They can cage my body. They still cannot catalog my will."
+      }
+    ],
+    "overlays": [
+      "Echo-state continuity",
+      "Captivity does not erase agency"
+    ]
+  },
+  {
+    "page": 12,
+    "type": "art",
+    "spread": 6,
+    "dialogue": [
+      {
+        "speaker": "Tula",
+        "text": "They can cage my body. They still cannot catalog my will."
+      }
+    ],
+    "overlays": [
+      "Echo-state continuity",
+      "Captivity does not erase agency"
+    ]
+  },
+  {
+    "page": 13,
+    "type": "text",
+    "spread": 7,
+    "dialogue": [
+      {
+        "speaker": "Matra Vey",
+        "text": "Mercy is the final obedience. I will make the city gentle by force."
+      }
+    ],
+    "overlays": [
+      "Obedience-engine interface",
+      "Caretaker tyranny"
+    ]
+  },
+  {
+    "page": 14,
+    "type": "art",
+    "spread": 7,
+    "dialogue": [
+      {
+        "speaker": "Matra Vey",
+        "text": "Mercy is the final obedience. I will make the city gentle by force."
+      }
+    ],
+    "overlays": [
+      "Obedience-engine interface",
+      "Caretaker tyranny"
+    ]
+  },
+  {
+    "page": 15,
+    "type": "text",
+    "spread": 8,
+    "dialogue": [
+      {
+        "speaker": "Edda",
+        "text": "A shrine is not a throne. It is a promise somebody keeps every day."
+      }
+    ],
+    "overlays": [
+      "Allies",
+      "hive amber, smoke brown, linen white, brass green"
+    ]
+  },
+  {
+    "page": 16,
+    "type": "art",
+    "spread": 8,
+    "dialogue": [
+      {
+        "speaker": "Edda",
+        "text": "A shrine is not a throne. It is a promise somebody keeps every day."
+      }
+    ],
+    "overlays": [
+      "Allies",
+      "hive amber, smoke brown, linen white, brass green"
+    ]
+  },
+  {
+    "page": 17,
+    "type": "text",
+    "spread": 9,
+    "dialogue": [
+      {
+        "speaker": "Vilm",
+        "text": "Maps cost extra when the walls start lying."
+      }
+    ],
+    "overlays": [
+      "Allies",
+      "oil blue, rust orange, lamp yellow, tar black"
+    ]
+  },
+  {
+    "page": 18,
+    "type": "art",
+    "spread": 9,
+    "dialogue": [
+      {
+        "speaker": "Vilm",
+        "text": "Maps cost extra when the walls start lying."
+      }
+    ],
+    "overlays": [
+      "Allies",
+      "oil blue, rust orange, lamp yellow, tar black"
+    ]
+  },
+  {
+    "page": 19,
+    "type": "text",
+    "spread": 10,
+    "dialogue": [
+      {
+        "speaker": "Halceon",
+        "text": "I know the hymns they used to break us. I know where they skip a beat."
+      }
+    ],
+    "overlays": [
+      "Allies",
+      "chalk white, bruise plum, iron grey, votive blue"
+    ]
+  },
+  {
+    "page": 20,
+    "type": "art",
+    "spread": 10,
+    "dialogue": [
+      {
+        "speaker": "Halceon",
+        "text": "I know the hymns they used to break us. I know where they skip a beat."
+      }
+    ],
+    "overlays": [
+      "Allies",
+      "chalk white, bruise plum, iron grey, votive blue"
+    ]
+  },
+  {
+    "page": 21,
+    "type": "text",
+    "spread": 11,
+    "dialogue": [
+      {
+        "speaker": "Patoot",
+        "text": "Warm lamps, clean ladders, three exits. This is where the city still breathes right."
+      }
+    ],
+    "overlays": [
+      "Service hub",
+      "Shrine / vendor / route legibility"
+    ]
+  },
+  {
+    "page": 22,
+    "type": "art",
+    "spread": 11,
+    "dialogue": [
+      {
+        "speaker": "Patoot",
+        "text": "Warm lamps, clean ladders, three exits. This is where the city still breathes right."
+      }
+    ],
+    "overlays": [
+      "Service hub",
+      "Shrine / vendor / route legibility"
+    ]
+  },
+  {
+    "page": 23,
+    "type": "text",
+    "spread": 12,
+    "dialogue": [
+      {
+        "speaker": "Bango",
+        "text": "This was home before it became evidence."
+      }
+    ],
+    "overlays": [
+      "Opening district",
+      "Warmth under pressure"
+    ]
+  },
+  {
+    "page": 24,
+    "type": "art",
+    "spread": 12,
+    "dialogue": [
+      {
+        "speaker": "Bango",
+        "text": "This was home before it became evidence."
+      }
+    ],
+    "overlays": [
+      "Opening district",
+      "Warmth under pressure"
+    ]
+  },
+  {
+    "page": 25,
+    "type": "text",
+    "spread": 13,
+    "dialogue": [
+      {
+        "speaker": "Patoot",
+        "text": "Everything here wants a prayer, a coin, or your nerves."
+      }
+    ],
+    "overlays": [
+      "Coin-fed worship grid"
+    ]
+  },
+  {
+    "page": 26,
+    "type": "art",
+    "spread": 13,
+    "dialogue": [
+      {
+        "speaker": "Patoot",
+        "text": "Everything here wants a prayer, a coin, or your nerves."
+      }
+    ],
+    "overlays": [
+      "Coin-fed worship grid"
+    ]
+  },
+  {
+    "page": 27,
+    "type": "text",
+    "spread": 14,
+    "dialogue": [
+      {
+        "speaker": "Bango",
+        "text": "They buried memory under the tracks and wondered why the rails howl."
+      }
+    ],
+    "overlays": [
+      "Memorial rail geometry"
+    ]
+  },
+  {
+    "page": 28,
+    "type": "art",
+    "spread": 14,
+    "dialogue": [
+      {
+        "speaker": "Bango",
+        "text": "They buried memory under the tracks and wondered why the rails howl."
+      }
+    ],
+    "overlays": [
+      "Memorial rail geometry"
+    ]
+  },
+  {
+    "page": 29,
+    "type": "text",
+    "spread": 15,
+    "dialogue": [
+      {
+        "speaker": "Patoot",
+        "text": "Do not trust the bright water. It glows because it is hungry."
+      }
+    ],
+    "overlays": [
+      "Runoff logic",
+      "Ambush fog rhythm"
+    ]
+  },
+  {
+    "page": 30,
+    "type": "art",
+    "spread": 15,
+    "dialogue": [
+      {
+        "speaker": "Patoot",
+        "text": "Do not trust the bright water. It glows because it is hungry."
+      }
+    ],
+    "overlays": [
+      "Runoff logic",
+      "Ambush fog rhythm"
+    ]
+  },
+  {
+    "page": 31,
+    "type": "text",
+    "spread": 16,
+    "dialogue": [
+      {
+        "speaker": "Bango",
+        "text": "A house should hold a family. Not a sermon with teeth."
+      }
+    ],
+    "overlays": [
+      "Domestic horror threshold"
+    ]
+  },
+  {
+    "page": 32,
+    "type": "art",
+    "spread": 16,
+    "dialogue": [
+      {
+        "speaker": "Bango",
+        "text": "A house should hold a family. Not a sermon with teeth."
+      }
+    ],
+    "overlays": [
+      "Domestic horror threshold"
+    ]
+  },
+  {
+    "page": 33,
+    "type": "text",
+    "spread": 17,
+    "dialogue": [
+      {
+        "speaker": "Patoot",
+        "text": "Wind is honest. The speakers are what twist it."
+      }
+    ],
+    "overlays": [
+      "Wind-ladder route test"
+    ]
+  },
+  {
+    "page": 34,
+    "type": "art",
+    "spread": 17,
+    "dialogue": [
+      {
+        "speaker": "Patoot",
+        "text": "Wind is honest. The speakers are what twist it."
+      }
+    ],
+    "overlays": [
+      "Wind-ladder route test"
+    ]
+  },
+  {
+    "page": 35,
+    "type": "text",
+    "spread": 18,
+    "dialogue": [
+      {
+        "speaker": "Matra Vey",
+        "text": "One city, one will, one perfect hush."
+      }
+    ],
+    "overlays": [
+      "Final ascent landmark chain"
+    ]
+  },
+  {
+    "page": 36,
+    "type": "art",
+    "spread": 18,
+    "dialogue": [
+      {
+        "speaker": "Matra Vey",
+        "text": "One city, one will, one perfect hush."
+      }
+    ],
+    "overlays": [
+      "Final ascent landmark chain"
+    ]
+  },
+  {
+    "page": 37,
+    "type": "text",
+    "spread": 19,
+    "dialogue": [],
+    "overlays": [
+      "Comb-metal / wax / brick / fungus"
+    ]
+  },
+  {
+    "page": 38,
+    "type": "art",
+    "spread": 19,
+    "dialogue": [],
+    "overlays": [
+      "Comb-metal / wax / brick / fungus"
+    ]
+  },
+  {
+    "page": 39,
+    "type": "text",
+    "spread": 20,
+    "dialogue": [],
+    "overlays": [
+      "Purification state drift",
+      "Faction-owned light"
+    ]
+  },
+  {
+    "page": 40,
+    "type": "art",
+    "spread": 20,
+    "dialogue": [],
+    "overlays": [
+      "Purification state drift",
+      "Faction-owned light"
+    ]
+  },
+  {
+    "page": 41,
+    "type": "text",
+    "spread": 21,
+    "dialogue": [
+      {
+        "speaker": "Edda",
+        "text": "Repair first. Blessing comes after the bolts hold."
+      }
+    ],
+    "overlays": [
+      "Rest / refine / recover"
+    ]
+  },
+  {
+    "page": 42,
+    "type": "art",
+    "spread": 21,
+    "dialogue": [
+      {
+        "speaker": "Edda",
+        "text": "Repair first. Blessing comes after the bolts hold."
+      }
+    ],
+    "overlays": [
+      "Rest / refine / recover"
+    ]
+  },
+  {
+    "page": 43,
+    "type": "text",
+    "spread": 22,
+    "dialogue": [
+      {
+        "speaker": "Vilm",
+        "text": "Tiny things move districts. That is why everyone kills over them."
+      }
+    ],
+    "overlays": [
+      "Macro progression tokens"
+    ]
+  },
+  {
+    "page": 44,
+    "type": "art",
+    "spread": 22,
+    "dialogue": [
+      {
+        "speaker": "Vilm",
+        "text": "Tiny things move districts. That is why everyone kills over them."
+      }
+    ],
+    "overlays": [
+      "Macro progression tokens"
+    ]
+  },
+  {
+    "page": 45,
+    "type": "text",
+    "spread": 23,
+    "dialogue": [
+      {
+        "speaker": "Lantern Kin",
+        "text": "We kept the light small so the dark would think we were gone."
+      }
+    ],
+    "overlays": [
+      "Safety language"
+    ]
+  },
+  {
+    "page": 46,
+    "type": "art",
+    "spread": 23,
+    "dialogue": [
+      {
+        "speaker": "Lantern Kin",
+        "text": "We kept the light small so the dark would think we were gone."
+      }
+    ],
+    "overlays": [
+      "Safety language"
+    ]
+  },
+  {
+    "page": 47,
+    "type": "text",
+    "spread": 24,
+    "dialogue": [],
+    "overlays": [
+      "Paper trail worldbuilding"
+    ]
+  },
+  {
+    "page": 48,
+    "type": "art",
+    "spread": 24,
+    "dialogue": [],
+    "overlays": [
+      "Paper trail worldbuilding"
+    ]
+  },
+  {
+    "page": 49,
+    "type": "text",
+    "spread": 25,
+    "dialogue": [
+      {
+        "speaker": "Patoot",
+        "text": "Grab the rail late. Jump early. Trust me in the middle."
+      }
+    ],
+    "overlays": [
+      "Route memory verbs"
+    ]
+  },
+  {
+    "page": 50,
+    "type": "art",
+    "spread": 25,
+    "dialogue": [
+      {
+        "speaker": "Patoot",
+        "text": "Grab the rail late. Jump early. Trust me in the middle."
+      }
+    ],
+    "overlays": [
+      "Route memory verbs"
+    ]
+  },
+  {
+    "page": 51,
+    "type": "text",
+    "spread": 26,
+    "dialogue": [
+      {
+        "speaker": "Bango",
+        "text": "Commit to the hit. Survive the answer."
+      }
+    ],
+    "overlays": [
+      "Heavy / cut / interrupt"
+    ]
+  },
+  {
+    "page": 52,
+    "type": "art",
+    "spread": 26,
+    "dialogue": [
+      {
+        "speaker": "Bango",
+        "text": "Commit to the hit. Survive the answer."
+      }
+    ],
+    "overlays": [
+      "Heavy / cut / interrupt"
+    ]
+  },
+  {
+    "page": 53,
+    "type": "text",
+    "spread": 27,
+    "dialogue": [],
+    "overlays": [
+      "1000-slot move grammar"
+    ]
+  },
+  {
+    "page": 54,
+    "type": "art",
+    "spread": 27,
+    "dialogue": [],
+    "overlays": [
+      "1000-slot move grammar"
+    ]
+  },
+  {
+    "page": 55,
+    "type": "text",
+    "spread": 28,
+    "dialogue": [
+      {
+        "speaker": "Tula Echo",
+        "text": "People leave marks in each other long before the city writes them down."
+      }
+    ],
+    "overlays": [
+      "Trust / debt / fear web"
+    ]
+  },
+  {
+    "page": 56,
+    "type": "art",
+    "spread": 28,
+    "dialogue": [
+      {
+        "speaker": "Tula Echo",
+        "text": "People leave marks in each other long before the city writes them down."
+      }
+    ],
+    "overlays": [
+      "Trust / debt / fear web"
+    ]
+  },
+  {
+    "page": 57,
+    "type": "text",
+    "spread": 29,
+    "dialogue": [],
+    "overlays": [
+      "Factions",
+      "wax gold, linen white, ash blue, brass patina"
+    ]
+  },
+  {
+    "page": 58,
+    "type": "art",
+    "spread": 29,
+    "dialogue": [],
+    "overlays": [
+      "Factions",
+      "wax gold, linen white, ash blue, brass patina"
+    ]
+  },
+  {
+    "page": 59,
+    "type": "text",
+    "spread": 30,
+    "dialogue": [],
+    "overlays": [
+      "Factions",
+      "oil blue, rust orange, steel grey, headlamp yellow"
+    ]
+  },
+  {
+    "page": 60,
+    "type": "art",
+    "spread": 30,
+    "dialogue": [],
+    "overlays": [
+      "Factions",
+      "oil blue, rust orange, steel grey, headlamp yellow"
+    ]
+  },
+  {
+    "page": 61,
+    "type": "text",
+    "spread": 31,
+    "dialogue": [],
+    "overlays": [
+      "Factions",
+      "plaster white, faded plum, brass smoke, ink black"
+    ]
+  },
+  {
+    "page": 62,
+    "type": "art",
+    "spread": 31,
+    "dialogue": [],
+    "overlays": [
+      "Factions",
+      "plaster white, faded plum, brass smoke, ink black"
+    ]
+  },
+  {
+    "page": 63,
+    "type": "text",
+    "spread": 32,
+    "dialogue": [],
+    "overlays": [
+      "Factions",
+      "tar black, hazard yellow, sickly red, alley sodium"
+    ]
+  },
+  {
+    "page": 64,
+    "type": "art",
+    "spread": 32,
+    "dialogue": [],
+    "overlays": [
+      "Factions",
+      "tar black, hazard yellow, sickly red, alley sodium"
+    ]
+  },
+  {
+    "page": 65,
+    "type": "text",
+    "spread": 33,
+    "dialogue": [
+      {
+        "speaker": "Debt Collector",
+        "text": "If the borough cannot pay in coin, it will pay in shrine metal."
+      }
+    ],
+    "overlays": [
+      "Bosses",
+      "rust gold, debt red, soot black, hive amber"
+    ]
+  },
+  {
+    "page": 66,
+    "type": "art",
+    "spread": 33,
+    "dialogue": [
+      {
+        "speaker": "Debt Collector",
+        "text": "If the borough cannot pay in coin, it will pay in shrine metal."
+      }
+    ],
+    "overlays": [
+      "Bosses",
+      "rust gold, debt red, soot black, hive amber"
+    ]
+  },
+  {
+    "page": 67,
+    "type": "text",
+    "spread": 34,
+    "dialogue": [
+      {
+        "speaker": "Bishop Static",
+        "text": "A louder miracle is still a miracle to those who cannot leave."
+      }
+    ],
+    "overlays": [
+      "Bosses",
+      "neon cyan, chapel magenta, chrome brass, sermon black"
+    ]
+  },
+  {
+    "page": 68,
+    "type": "art",
+    "spread": 34,
+    "dialogue": [
+      {
+        "speaker": "Bishop Static",
+        "text": "A louder miracle is still a miracle to those who cannot leave."
+      }
+    ],
+    "overlays": [
+      "Bosses",
+      "neon cyan, chapel magenta, chrome brass, sermon black"
+    ]
+  },
+  {
+    "page": 69,
+    "type": "text",
+    "spread": 35,
+    "dialogue": [
+      {
+        "speaker": "Patoot",
+        "text": "Listen. The station beast announces every charge like a train that hates us."
+      }
+    ],
+    "overlays": [
+      "Bosses",
+      "furnace amber, bone ivory, signal red, ash grey"
+    ]
+  },
+  {
+    "page": 70,
+    "type": "art",
+    "spread": 35,
+    "dialogue": [
+      {
+        "speaker": "Patoot",
+        "text": "Listen. The station beast announces every charge like a train that hates us."
+      }
+    ],
+    "overlays": [
+      "Bosses",
+      "furnace amber, bone ivory, signal red, ash grey"
+    ]
+  },
+  {
+    "page": 71,
+    "type": "text",
+    "spread": 36,
+    "dialogue": [
+      {
+        "speaker": "Bango",
+        "text": "No eyes. No mercy. Just appetite and runoff."
+      }
+    ],
+    "overlays": [
+      "Bosses",
+      "acid amber, mold green, tar black, wet steel"
+    ]
+  },
+  {
+    "page": 72,
+    "type": "art",
+    "spread": 36,
+    "dialogue": [
+      {
+        "speaker": "Bango",
+        "text": "No eyes. No mercy. Just appetite and runoff."
+      }
+    ],
+    "overlays": [
+      "Bosses",
+      "acid amber, mold green, tar black, wet steel"
+    ]
+  },
+  {
+    "page": 73,
+    "type": "text",
+    "spread": 37,
+    "dialogue": [
+      {
+        "speaker": "Red Mother",
+        "text": "Be still, little lights. I can love you into silence."
+      }
+    ],
+    "overlays": [
+      "Bosses",
+      "nursery red, ash white, soot black, candle gold"
+    ]
+  },
+  {
+    "page": 74,
+    "type": "art",
+    "spread": 37,
+    "dialogue": [
+      {
+        "speaker": "Red Mother",
+        "text": "Be still, little lights. I can love you into silence."
+      }
+    ],
+    "overlays": [
+      "Bosses",
+      "nursery red, ash white, soot black, candle gold"
+    ]
+  },
+  {
+    "page": 75,
+    "type": "text",
+    "spread": 38,
+    "dialogue": [
+      {
+        "speaker": "Patoot",
+        "text": "Cut the pattern. Do not fight the scream head-on."
+      }
+    ],
+    "overlays": [
+      "Bosses",
+      "storm white, cobalt blue, rust brass, scream black"
+    ]
+  },
+  {
+    "page": 76,
+    "type": "art",
+    "spread": 38,
+    "dialogue": [
+      {
+        "speaker": "Patoot",
+        "text": "Cut the pattern. Do not fight the scream head-on."
+      }
+    ],
+    "overlays": [
+      "Bosses",
+      "storm white, cobalt blue, rust brass, scream black"
+    ]
+  },
+  {
+    "page": 77,
+    "type": "text",
+    "spread": 39,
+    "dialogue": [
+      {
+        "speaker": "Matra Vey",
+        "text": "I gave the city one throat so it would never disagree again."
+      }
+    ],
+    "overlays": [
+      "Bosses",
+      "violet lightning, blood ember, shrine ivory, abyss black"
+    ]
+  },
+  {
+    "page": 78,
+    "type": "art",
+    "spread": 39,
+    "dialogue": [
+      {
+        "speaker": "Matra Vey",
+        "text": "I gave the city one throat so it would never disagree again."
+      }
+    ],
+    "overlays": [
+      "Bosses",
+      "violet lightning, blood ember, shrine ivory, abyss black"
+    ]
+  },
+  {
+    "page": 79,
+    "type": "text",
+    "spread": 40,
+    "dialogue": [],
+    "overlays": [
+      "Bestiary",
+      "amber gold, moss green, soot brown, soft cream"
+    ]
+  },
+  {
+    "page": 80,
+    "type": "art",
+    "spread": 40,
+    "dialogue": [],
+    "overlays": [
+      "Bestiary",
+      "amber gold, moss green, soot brown, soft cream"
+    ]
+  },
+  {
+    "page": 81,
+    "type": "text",
+    "spread": 41,
+    "dialogue": [],
+    "overlays": [
+      "Bestiary",
+      "mold green, wet steel, bruise blue, rust orange"
+    ]
+  },
+  {
+    "page": 82,
+    "type": "art",
+    "spread": 41,
+    "dialogue": [],
+    "overlays": [
+      "Bestiary",
+      "mold green, wet steel, bruise blue, rust orange"
+    ]
+  },
+  {
+    "page": 83,
+    "type": "text",
+    "spread": 42,
+    "dialogue": [],
+    "overlays": [
+      "Props",
+      "steel grey, brass gold, tar black, lamp amber"
+    ]
+  },
+  {
+    "page": 84,
+    "type": "art",
+    "spread": 42,
+    "dialogue": [],
+    "overlays": [
+      "Props",
+      "steel grey, brass gold, tar black, lamp amber"
+    ]
+  },
+  {
+    "page": 85,
+    "type": "text",
+    "spread": 43,
+    "dialogue": [],
+    "overlays": [
+      "Props",
+      "wax cream, brass gold, char black, herb green"
+    ]
+  },
+  {
+    "page": 86,
+    "type": "art",
+    "spread": 43,
+    "dialogue": [],
+    "overlays": [
+      "Props",
+      "wax cream, brass gold, char black, herb green"
+    ]
+  },
+  {
+    "page": 87,
+    "type": "text",
+    "spread": 44,
+    "dialogue": [],
+    "overlays": [
+      "Props",
+      "brick brown, brass green, soot black, poster cream"
+    ]
+  },
+  {
+    "page": 88,
+    "type": "art",
+    "spread": 44,
+    "dialogue": [],
+    "overlays": [
+      "Props",
+      "brick brown, brass green, soot black, poster cream"
+    ]
+  },
+  {
+    "page": 89,
+    "type": "text",
+    "spread": 45,
+    "dialogue": [],
+    "overlays": [
+      "Props",
+      "chalk white, warning red, brass gold, tar black"
+    ]
+  },
+  {
+    "page": 90,
+    "type": "art",
+    "spread": 45,
+    "dialogue": [],
+    "overlays": [
+      "Props",
+      "chalk white, warning red, brass gold, tar black"
+    ]
+  },
+  {
+    "page": 91,
+    "type": "text",
+    "spread": 46,
+    "dialogue": [
+      {
+        "speaker": "Patoot",
+        "text": "Landmark ahead. Shrine left. Trouble above."
+      }
+    ],
+    "overlays": [
+      "HUD-safe focal path"
+    ]
+  },
+  {
+    "page": 92,
+    "type": "art",
+    "spread": 46,
+    "dialogue": [
+      {
+        "speaker": "Patoot",
+        "text": "Landmark ahead. Shrine left. Trouble above."
+      }
+    ],
+    "overlays": [
+      "HUD-safe focal path"
+    ]
+  },
+  {
+    "page": 93,
+    "type": "text",
+    "spread": 47,
+    "dialogue": [
+      {
+        "speaker": "Bango",
+        "text": "Good. Put the warnings where my hands can find them."
+      }
+    ],
+    "overlays": [
+      "Bottom-screen systems stack"
+    ]
+  },
+  {
+    "page": 94,
+    "type": "art",
+    "spread": 47,
+    "dialogue": [
+      {
+        "speaker": "Bango",
+        "text": "Good. Put the warnings where my hands can find them."
+      }
+    ],
+    "overlays": [
+      "Bottom-screen systems stack"
+    ]
+  },
+  {
+    "page": 95,
+    "type": "appendix",
+    "spread": 48,
+    "dialogue": [],
+    "overlays": [
+      "Reference archive"
+    ]
+  },
+  {
+    "page": 96,
+    "type": "glossary",
+    "spread": 48,
+    "dialogue": [],
+    "overlays": [
+      "Reference archive"
+    ]
+  },
+  {
+    "page": 97,
+    "type": "legal",
+    "spread": 49,
+    "dialogue": [],
+    "overlays": [
+      "Internal publication plate"
+    ]
+  },
+  {
+    "page": 98,
+    "type": "epilogue",
+    "spread": 49,
+    "dialogue": [],
+    "overlays": [
+      "Internal publication plate"
+    ]
+  },
+  {
+    "page": 99,
+    "type": "closure",
+    "spread": 50,
+    "dialogue": [
+      {
+        "speaker": "Tula",
+        "text": "It is still wounded. That means it is still alive enough to heal."
+      }
+    ],
+    "overlays": [
+      "Bittersweet recovery state"
+    ]
+  },
+  {
+    "page": 100,
+    "type": "rear",
+    "spread": 50,
+    "dialogue": [
+      {
+        "speaker": "Tula",
+        "text": "It is still wounded. That means it is still alive enough to heal."
+      }
+    ],
+    "overlays": [
+      "Bittersweet recovery state"
+    ]
+  }
+]

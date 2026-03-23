@@ -1,0 +1,49 @@
+{
+  "project_name": "KnavePrototype",
+  "profile_version": "2026-03-15.knave.advance.v1",
+  "baseline_profile_name": "knave_general_profile",
+  "advanced_profile_name": "knave_advanced_profile",
+  "axes": [
+    {
+      "name": "silhouette_readability",
+      "baseline": "single-weight medieval action silhouettes with limited faction distinction",
+      "advanced": "hero, rival, elite, and boss silhouettes that read immediately at gameplay scale with asymmetry and role-specific profile breaks",
+      "mutation_bias": "shape_language"
+    },
+    {
+      "name": "material_storytelling",
+      "baseline": "flat armor and cloth treatment with sparse surface storytelling",
+      "advanced": "layered materials that signal rank, weathering, ritual use, and combat history without collapsing readability",
+      "mutation_bias": "surface_memory"
+    },
+    {
+      "name": "animation_density",
+      "baseline": "limited idle, move, attack, and hit coverage",
+      "advanced": "expanded anticipation, follow-through, guard states, finishers, and combat recovery frames with clean timing bands",
+      "mutation_bias": "motion_clarity"
+    },
+    {
+      "name": "environment_depth",
+      "baseline": "single-plane combat spaces and low parallax contrast",
+      "advanced": "foreground-midground-backdrop separation with traversal cues, light wells, and combat readability lanes",
+      "mutation_bias": "spatial_stack"
+    },
+    {
+      "name": "fx_legibility",
+      "baseline": "generic flashes and trails with little combat taxonomy",
+      "advanced": "distinct weapon, spell, guard-break, and finisher FX families that communicate outcome before impact resolves",
+      "mutation_bias": "signal_intensity"
+    },
+    {
+      "name": "ui_authorship",
+      "baseline": "functional dark-fantasy interface motifs",
+      "advanced": "premium interface systems with authored hierarchy, diegetic ornament restraint, and clean command-state separation",
+      "mutation_bias": "ux_cadence"
+    }
+  ],
+  "non_copying_rule": "Use original authored combinations and generalized advancement deltas only. Do not directly imitate or reproduce any prior asset set.",
+  "advancement_summary": {
+    "from": "functional readable dark-fantasy asset language",
+    "to": "premium authored asset language with expanded motion, richer materials, clearer combat taxonomy, and stronger environmental depth"
+  }
+}

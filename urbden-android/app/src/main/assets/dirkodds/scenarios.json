@@ -1,0 +1,47 @@
+[
+  {
+    "id": "football_night_01",
+    "sport": "football",
+    "title": "Night Spiral Fixture",
+    "summary": "Anonymous football test fixture with a medium-tempo press and balanced draw pressure.",
+    "venue": "North Spiral Ground",
+    "home_team": "Glass Owls",
+    "away_team": "Rust Comets",
+    "home_probability": 0.39,
+    "draw_probability": 0.33,
+    "away_probability": 0.28,
+    "tempo": 0.58,
+    "home_color": "#F07167",
+    "away_color": "#4DA8DA"
+  },
+  {
+    "id": "basketball_arc_01",
+    "sport": "basketball",
+    "title": "Arc-Lane Test Run",
+    "summary": "Synthetic basketball flow with tighter momentum swings and faster reflex windows.",
+    "venue": "Mirror Court",
+    "home_team": "Neon Foxes",
+    "away_team": "Harbor Echoes",
+    "home_probability": 0.52,
+    "draw_probability": 0.0,
+    "away_probability": 0.48,
+    "tempo": 0.72,
+    "home_color": "#FF9F1C",
+    "away_color": "#2EC4B6"
+  },
+  {
+    "id": "baseball_dusk_01",
+    "sport": "baseball",
+    "title": "Dusk Diamond Rehearsal",
+    "summary": "Abstract baseball rehearsal with slower cue windows and shift-heavy rhythm changes.",
+    "venue": "Dustlight Diamond",
+    "home_team": "Dune Sparks",
+    "away_team": "Velvet Terns",
+    "home_probability": 0.47,
+    "draw_probability": 0.0,
+    "away_probability": 0.53,
+    "tempo": 0.46,
+    "home_color": "#C8553D",
+    "away_color": "#5C7AEA"
+  }
+]

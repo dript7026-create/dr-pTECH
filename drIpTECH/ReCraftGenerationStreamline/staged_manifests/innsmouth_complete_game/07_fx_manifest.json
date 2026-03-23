@@ -1,0 +1,53 @@
+[
+    {
+        "name":  "innsmouth_combat_fx_core_v3",
+        "category":  "fx",
+        "prompt_revision":  "transparent_orb32_v1",
+        "protocol_profile":  "innsmouth_island_dimensional_protocol_v1",
+        "pass_kind":  "complete_game",
+        "guide_ref":  "innsmouth_island_complete_game_prompt_guide_v1",
+        "prompt":  "ORBSystems 32-dimensional coherency combat effects request for InnsmouthIsland; transparent background only, isolated alpha renders, no opaque backdrop, volumetric-ready layering; melee slash arcs, parry flash, block ripple, stagger stars, heal pulse, wet hit bursts, angular expressionistic VFX silhouettes readable under occlusion, no text",
+        "negative_prompt":  "opaque background, solid background, painted matte, scenic mockup, watermark, logo",
+        "controls":  {
+                         "transparent_background":  true
+                     },
+        "transparent_background":  true,
+        "w":  1536,
+        "h":  768,
+        "out":  "../../../ORBEngine/assets/innsmouth_island/complete_game/fx/innsmouth_combat_fx_core_v3.png"
+    },
+    {
+        "name":  "innsmouth_ambient_weather_fx_v3",
+        "category":  "fx",
+        "prompt_revision":  "transparent_orb32_v1",
+        "protocol_profile":  "innsmouth_island_dimensional_protocol_v1",
+        "pass_kind":  "complete_game",
+        "guide_ref":  "innsmouth_island_complete_game_prompt_guide_v1",
+        "prompt":  "ORBSystems 32-dimensional coherency ambient effects request for InnsmouthIsland; transparent background only, isolated alpha render, no opaque backdrop, stackable atmosphere layers; rain streaks, ground fog ribbons, hanging spores, pearl motes, canopy mist curls, water sparkle caustics, expressionistic angular flow shapes for layered environment composition, no text",
+        "negative_prompt":  "opaque background, solid background, painted matte, scenic mockup, watermark, logo",
+        "controls":  {
+                         "transparent_background":  true
+                     },
+        "transparent_background":  true,
+        "w":  1536,
+        "h":  768,
+        "out":  "../../../ORBEngine/assets/innsmouth_island/complete_game/fx/innsmouth_ambient_weather_fx_v3.png"
+    },
+    {
+        "name":  "innsmouth_boss_ritual_fx_v3",
+        "category":  "fx",
+        "prompt_revision":  "transparent_orb32_v1",
+        "protocol_profile":  "innsmouth_island_dimensional_protocol_v1",
+        "pass_kind":  "complete_game",
+        "guide_ref":  "innsmouth_island_complete_game_prompt_guide_v1",
+        "prompt":  "ORBSystems 32-dimensional coherency ritual effects request for InnsmouthIsland; transparent background only, isolated alpha render, no opaque backdrop, stackable environment FX layers; eclipse sigils, seal fracture energy, abyss prince venom bloom, jaguar eclipse shockwave, shrine resonance shafts, angular expressionistic occult geometry for layered compositing, no text",
+        "negative_prompt":  "opaque background, solid background, painted matte, scenic mockup, watermark, logo",
+        "controls":  {
+                         "transparent_background":  true
+                     },
+        "transparent_background":  true,
+        "w":  1536,
+        "h":  768,
+        "out":  "../../../ORBEngine/assets/innsmouth_island/complete_game/fx/innsmouth_boss_ritual_fx_v3.png"
+    }
+]

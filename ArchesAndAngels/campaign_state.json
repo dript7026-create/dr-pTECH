@@ -1,0 +1,54 @@
+{
+  "campaign": {
+    "week": 10,
+    "treasury": 44,
+    "fervor": 42,
+    "intelligence": 73,
+    "stability": 663,
+    "activePolicy": "Unification Doctrine"
+  },
+  "factions": [
+    {"id": 0, "name": "Arch Relay Houses", "force": 68, "doctrine": 40, "vice": 29, "industry": 82, "legitimacy": 56},
+    {"id": 1, "name": "Proto-Homo Ember Courts", "force": 76, "doctrine": 66, "vice": 28, "industry": 32, "legitimacy": 53},
+    {"id": 2, "name": "Velvet Pharmacate", "force": 43, "doctrine": 37, "vice": 99, "industry": 61, "legitimacy": 50},
+    {"id": 3, "name": "Choirs of Oblivion", "force": 55, "doctrine": 85, "vice": 36, "industry": 28, "legitimacy": 47},
+    {"id": 4, "name": "Antler Principalities", "force": 98, "doctrine": 59, "vice": 33, "industry": 35, "legitimacy": 66},
+    {"id": 5, "name": "Brass Marianists", "force": 77, "doctrine": 69, "vice": 30, "industry": 74, "legitimacy": 78}
+  ],
+  "districts": [
+    {"id": 0, "name": "Relay Ward", "control": "Arch Relay Houses", "labor": 100, "unrest": 5, "worship": 26, "vice": 54, "supply": 100, "pressure": 0, "condition": "holding", "recommendedOperation": "Archive Census", "scenario": {"title": "Shock Cathedral Brownout", "phase": "active", "intensity": 39, "progress": 5, "generation": 0, "cycle": 0, "recommendationStreak": 1, "ignoredRecommendationStreak": 0, "focus": "Public Works"}},
+    {"id": 1, "name": "Ember Forest Margin", "control": "Antler Principalities", "labor": 90, "unrest": 31, "worship": 73, "vice": 35, "supply": 79, "pressure": 84, "condition": "strained", "recommendedOperation": "Muster Column", "scenario": {"title": "Ancestor Furnace Succession", "phase": "active", "intensity": 70, "progress": 18, "generation": 0, "cycle": 0, "recommendationStreak": 1, "ignoredRecommendationStreak": 0, "focus": "Archive Census"}},
+    {"id": 2, "name": "Velvet Arcade", "control": "Antler Principalities", "labor": 71, "unrest": 46, "worship": 34, "vice": 100, "supply": 100, "pressure": 129, "condition": "insurrection risk", "recommendedOperation": "Muster Column", "scenario": {"title": "Pharmacate Sovereignty", "phase": "terminal", "intensity": 100, "progress": 0, "generation": 2, "cycle": 2, "recommendationStreak": 0, "ignoredRecommendationStreak": 2, "focus": "Relay Crackdown"}},
+    {"id": 3, "name": "Ash Basilica", "control": "Brass Marianists", "labor": 57, "unrest": 50, "worship": 100, "vice": 43, "supply": 63, "pressure": 171, "condition": "collapse brink", "recommendedOperation": "Archive Census", "scenario": {"title": "Necropolitical Theocracy", "phase": "terminal", "intensity": 100, "progress": 0, "generation": 2, "cycle": 2, "recommendationStreak": 0, "ignoredRecommendationStreak": 2, "focus": "Archive Census"}},
+    {"id": 4, "name": "Antler Rail Frontier", "control": "Antler Principalities", "labor": 76, "unrest": 44, "worship": 32, "vice": 61, "supply": 66, "pressure": 115, "condition": "combustible", "recommendedOperation": "Muster Column", "scenario": {"title": "Rail Shrine Migration", "phase": "active", "intensity": 51, "progress": 44, "generation": 0, "cycle": 0, "recommendationStreak": 2, "ignoredRecommendationStreak": 0, "focus": "Muster Column"}}
+  ],
+  "agendas": [
+    {"faction": "Arch Relay Houses", "label": "Grid Absolutism", "targetDistrict": "Relay Ward", "desiredOperation": "Archive Census", "urgency": 75, "momentum": 13, "demand": "The relay houses demand census-anchored order in Relay Ward before private lineages rebuild their own sovereign grids."},
+    {"faction": "Proto-Homo Ember Courts", "label": "Ancestor Furnace", "targetDistrict": "Ember Forest Margin", "desiredOperation": "Public Works", "urgency": 87, "momentum": 0, "demand": "The ember courts want the forest margin mapped and provisioned before ancestral law is dissolved into imported property logic."},
+    {"faction": "Velvet Pharmacate", "label": "Mercy Powder Market", "targetDistrict": "Velvet Arcade", "desiredOperation": "Smuggle Compact", "urgency": 100, "momentum": 11, "demand": "The pharmacate insists that Velvet Arcade remain supplied through tolerated contraband rather than punitive morality."},
+    {"faction": "Choirs of Oblivion", "label": "Unburial Sermon", "targetDistrict": "Ash Basilica", "desiredOperation": "Consecrate Procession", "urgency": 77, "momentum": 15, "demand": "The choirs seek processional authority in Ash Basilica so forgetting becomes governance instead of panic."},
+    {"faction": "Antler Principalities", "label": "Shrine Perimeter", "targetDistrict": "Antler Rail Frontier", "desiredOperation": "Muster Column", "urgency": 70, "momentum": 16, "demand": "The frontier princes demand militia hardening along the rail frontier before migration routes become colonial choke points."},
+    {"faction": "Brass Marianists", "label": "Confession Index", "targetDistrict": "Ember Forest Margin", "desiredOperation": "Archive Census", "urgency": 63, "momentum": 15, "demand": "The brass missionaries want every district converted into legible inventory, beginning with the forest margin."}
+  ],
+  "protagonists": [
+    {"name": "Vael Ashborne", "title": "Relay Auditor", "homeDistrict": "Relay Ward", "districtAffinity": "Infrastructure and grid politics", "combatReadiness": 42, "intelAccess": 71},
+    {"name": "Kez Thornmantle", "title": "Frontier Warden", "homeDistrict": "Antler Rail Frontier", "districtAffinity": "Border patrol and shrine diplomacy", "combatReadiness": 78, "intelAccess": 38},
+    {"name": "Sister Pyreth", "title": "Choir Dissident", "homeDistrict": "Ash Basilica", "districtAffinity": "Ritual subversion and memory politics", "combatReadiness": 35, "intelAccess": 62}
+  ],
+  "missions": [
+    {"label": "Map the Inheritance Groves", "targetDistrict": "Ember Forest Margin", "requiredOperation": "Archive Census", "assignedProtagonist": "Kez Thornmantle", "difficulty": 12, "briefing": "Navigate the contested forest margin and document clan furnace-routes before the border war closes all access."},
+    {"label": "Negotiate Clinic Corridors", "targetDistrict": "Velvet Arcade", "requiredOperation": "Relay Crackdown", "assignedProtagonist": "Kez Thornmantle", "difficulty": 18, "briefing": "Broker safe passage through armed clinic-wardens and establish a licensed supply chain before the mercy market collapses."},
+    {"label": "Disrupt the Reliquary Audit", "targetDistrict": "Ash Basilica", "requiredOperation": "Archive Census", "assignedProtagonist": "Sister Pyreth", "difficulty": 23, "briefing": "Enter the basilica archives and prevent the dual inventory of the dead from becoming a permanent governance mechanism."},
+    {"label": "Secure Junction Three", "targetDistrict": "Antler Rail Frontier", "requiredOperation": "Muster Column", "assignedProtagonist": "Kez Thornmantle", "difficulty": 14, "briefing": "Rally frontier escorts and clear the third rail junction before shrine bands convert it into a permanent devotional blockade."}
+  ],
+  "incidents": [
+    {"label": "Census", "severity": 3, "aggressor": "Brass Marianists", "responder": "Arch Relay Houses", "summary": "Archivists, confessors, and quartermasters map the district population to turn rumor into policy leverage."},
+    {"label": "Agenda Crisis", "severity": 11, "aggressor": "Velvet Pharmacate", "responder": "Antler Principalities", "summary": "The pharmacate insists that Velvet Arcade remain supplied through tolerated contraband rather than punitive morality."},
+    {"label": "Scenario Flashpoint", "severity": 8, "aggressor": "Antler Principalities", "responder": "Antler Principalities", "summary": "The Velvet Arcade has declared itself an autonomous medical-pleasure state. Armed clinic-wardens enforce dosing schedules, and all commerce passes through narcotic patronage."},
+    {"label": "Scenario Flashpoint", "severity": 8, "aggressor": "Antler Principalities", "responder": "Antler Principalities", "summary": "The dead now outvote the living in district governance. Reliquary inventories have become census rolls, and mourning has become compulsory civic service."},
+    {"label": "Vice Surge", "severity": 9, "aggressor": "Velvet Pharmacate", "responder": "Antler Principalities", "summary": "A narcotic and pleasure-market wave destabilizes ordinary trade and inflames faction opportunism."},
+    {"label": "Doctrine March", "severity": 8, "aggressor": "Choirs of Oblivion", "responder": "Antler Principalities", "summary": "A worship bloc pushes public ritual authority into street-level governance."},
+    {"label": "Control Shift", "severity": 4, "aggressor": "Antler Principalities", "responder": "Proto-Homo Ember Courts", "summary": "A district's civic balance breaks and a new faction seizes the local order."},
+    {"label": "Control Shift", "severity": 6, "aggressor": "Brass Marianists", "responder": "Antler Principalities", "summary": "A district's civic balance breaks and a new faction seizes the local order."}
+  ]
+}

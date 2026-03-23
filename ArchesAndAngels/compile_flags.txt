@@ -1,0 +1,6 @@
+-x
+c
+-I./src
+-I.
+-IC:/ProgramData/mingw64/mingw64/x86_64-w64-mingw32/include
+-IC:/ProgramData/mingw64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include

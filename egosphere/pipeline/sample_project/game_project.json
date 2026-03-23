@@ -1,0 +1,204 @@
+{
+  "project_name": "EgosphereGame",
+  "seed": "URBDEN-ALPHA",
+  "authoring": {
+    "clipstudio": {
+      "canvas": {
+        "width": 2048,
+        "height": 2048,
+        "layers": 12
+      },
+      "timeline_fps": 12,
+      "export_profile": {
+        "color_mode": "rgba",
+        "naming": "asset_id",
+        "slice_method": "layer_group"
+      },
+      "layers": [
+        { "name": "bg_city", "blend_mode": "normal", "visible": true },
+        { "name": "characters", "blend_mode": "normal", "visible": true },
+        { "name": "collision_guides", "blend_mode": "multiply", "visible": false }
+      ],
+      "script_symbols": [
+        "PlayerStart",
+        "DeliveryMarker",
+        "DialoguePrompt",
+        "CourtroomCutscene"
+      ],
+      "symbol_bindings": [
+        { "symbol": "PlayerStart", "asset_id": "player_driver", "role": "player_spawn" },
+        { "symbol": "DeliveryMarker", "asset_id": "city_blocks", "role": "trigger_zone" },
+        { "symbol": "CourtroomCutscene", "asset_id": "judge_portrait", "role": "cutscene_anchor" }
+      ],
+      "frame_tags": [
+        { "tag": "mission_start", "frame": 0, "scene_id": "intro_delivery" },
+        { "tag": "courtroom_enter", "frame": 49, "scene_id": "courtroom_resolution" }
+      ],
+      "hitboxes": [
+        { "symbol": "PlayerStart", "frame": 0, "x": 12, "y": 8, "w": 20, "h": 30, "kind": "hurtbox" },
+        { "symbol": "DeliveryMarker", "frame": 8, "x": 0, "y": 0, "w": 32, "h": 32, "kind": "trigger" }
+      ],
+      "script_bindings": [
+        { "name": "queue_delivery_brief", "event": "mission_start", "target_symbol": "DialoguePrompt", "command": "open_dialogue:dispatch_terminal" },
+        { "name": "courtroom_transition", "event": "courtroom_enter", "target_symbol": "CourtroomCutscene", "command": "play_cutscene:courtroom_resolution" }
+      ]
+    },
+    "blender": {
+      "scale": 0.1,
+      "extrusion_depth": 0.08,
+      "rig_profile": "paperdoll_humanoid",
+      "material_profiles": [
+        { "name": "default_sprite_material", "shader": "toon_principled", "roughness": 0.8, "normal_strength": 0.15 },
+        { "name": "street_prop_material", "shader": "trim_sheet", "roughness": 0.65, "normal_strength": 0.3 }
+      ],
+      "rig_overrides": [
+        { "asset_id": "player_driver", "armature": "humanoid_light", "root_bone": "hips" },
+        { "asset_id": "npc_citizen", "armature": "humanoid_light", "root_bone": "hips" }
+      ],
+      "nodecraft_graphs": [
+        {
+          "name": "urbden_street_graph",
+          "nodes": [
+            { "id": "street_a", "position": [0.0, 0.0, 0.0], "scale": 1.0 },
+            { "id": "street_b", "position": [8.0, 0.0, 0.0], "scale": 1.0 }
+          ],
+          "links": [
+            { "from": "street_a", "to": "street_b", "type": "LINKAGE_CHAIN", "thickness": 0.35 }
+          ]
+        }
+      ],
+      "scene_build": [
+        { "scene_id": "intro_delivery", "collection": "mission_intro", "world_mesh": "urbden_block_01" },
+        { "scene_id": "courtroom_resolution", "collection": "courtroom", "world_mesh": "urbden_courthouse" }
+      ]
+    },
+    "idtech2": {
+      "module_name": "g_egospheregame",
+      "asset_root": "baseq2/egospheregame",
+      "autofactor_prefix": "egosphere",
+      "precache_groups": [
+        {
+          "group_name": "sound",
+          "entries": [
+            { "alias": "delivery_chime", "path": "sound/egosphere/delivery_chime.wav", "asset_type": "sound" },
+            { "alias": "courtroom_gavel", "path": "sound/egosphere/courtroom_gavel.wav", "asset_type": "sound" }
+          ]
+        }
+      ],
+      "system_dispatch": {
+        "delivery_mission_system": { "init_fn": "delivery_mission_init", "tick_fn": "delivery_mission_tick" },
+        "dialogue_system": { "init_fn": "dialogue_system_init", "tick_fn": "dialogue_system_tick" },
+        "economy_system": { "init_fn": "economy_system_init", "tick_fn": "economy_system_tick" },
+        "courtroom_system": { "init_fn": "courtroom_system_init", "tick_fn": "courtroom_system_tick" }
+      },
+      "bootstrap": {
+        "entry_scene": "intro_delivery",
+        "precache_phase": "game_init",
+        "spawn_phase": "level_load"
+      }
+    }
+  },
+  "assets": {
+    "tilesets": [
+      {
+        "id": "city_blocks",
+        "path": "authoring/clipstudio/tiles/city_blocks.png",
+        "tile_w": 32,
+        "tile_h": 32,
+        "semantic_tags": ["street", "sidewalk", "shopfront", "alley"],
+        "usage": "world_tileset",
+        "material_profile": "street_prop_material"
+      }
+    ],
+    "sprites": [
+      {
+        "id": "player_driver",
+        "path": "authoring/clipstudio/sprites/player_driver.png",
+        "frames": 8,
+        "usage": "player",
+        "material_profile": "default_sprite_material",
+        "collider": { "shape": "capsule", "radius": 0.3, "height": 1.7 }
+      },
+      {
+        "id": "npc_citizen",
+        "path": "authoring/clipstudio/sprites/npc_citizen.png",
+        "frames": 4,
+        "usage": "npc",
+        "material_profile": "default_sprite_material",
+        "collider": { "shape": "capsule", "radius": 0.28, "height": 1.65 }
+      }
+    ],
+    "portraits": [
+      {
+        "id": "judge_portrait",
+        "path": "authoring/clipstudio/portraits/judge.png",
+        "usage": "dialogue",
+        "precache": false
+      },
+      {
+        "id": "rival_portrait",
+        "path": "authoring/clipstudio/portraits/rival.png",
+        "usage": "dialogue",
+        "precache": false
+      }
+    ]
+  },
+  "gameplay": {
+    "scenes": [
+      {
+        "id": "intro_delivery",
+        "scene_type": "mission",
+        "location": "urbden_district_01",
+        "timeline_frames": [0, 48],
+        "triggers": [
+          { "id": "delivery_brief", "frame": 0, "event": "mission_start", "target": "player" },
+          { "id": "delivery_zone_ping", "frame": 12, "event": "highlight_zone", "target": "delivery_zone_a" }
+        ]
+      },
+      {
+        "id": "courtroom_resolution",
+        "scene_type": "cutscene",
+        "location": "urbden_courthouse",
+        "timeline_frames": [49, 120],
+        "triggers": [
+          { "id": "courtroom_open", "frame": 49, "event": "cutscene_start", "target": "npc_rival" },
+          { "id": "gavel_hit", "frame": 74, "event": "play_sound", "target": "courtroom_gavel" }
+        ]
+      }
+    ],
+    "entities": [
+      {
+        "id": "player",
+        "classname": "player_driver",
+        "asset_id": "player_driver",
+        "spawn": [128, 64, 0],
+        "logic_components": ["controllable", "inventory", "dialogue_actor"]
+      },
+      {
+        "id": "delivery_zone_a",
+        "classname": "trigger_delivery_zone",
+        "asset_id": "city_blocks",
+        "spawn": [512, 96, 0],
+        "logic_components": ["trigger", "objective_target"]
+      },
+      {
+        "id": "npc_rival",
+        "classname": "npc_rival",
+        "asset_id": "npc_citizen",
+        "spawn": [640, 96, 0],
+        "logic_components": ["dialogue_actor", "ai_patrol"]
+      }
+    ],
+    "systems": [
+      { "name": "delivery_mission_system", "priority": 10, "lifecycle": ["init", "tick", "shutdown"] },
+      { "name": "dialogue_system", "priority": 20, "lifecycle": ["init", "tick"] },
+      { "name": "economy_system", "priority": 30, "lifecycle": ["init", "tick"] },
+      { "name": "courtroom_system", "priority": 40, "lifecycle": ["init", "tick", "shutdown"] }
+    ]
+  },
+  "targets": {
+    "clipstudio_bundle": "clipstudio_bundle",
+    "blender_bundle": "blender_bundle",
+    "idtech2_bundle": "idtech2_bundle"
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "id": "tutorial_prototype",
+  "title": "Bango: Unchained - Bango&Patoot Prototype Tutorial",
+  "deliverable_role": "least_trouble_playable_prototype",
+  "engine_mode": "orbengine_dual_tutorial_prototype",
+  "environment": "minimal_void_calibration_pocket",
+  "runtime_contract": {
+    "focus": "teach movement, sprint, jump, slide, light-heavy combat, block, parry, focus, healing, and special release with the lowest integration risk",
+    "camera_model": "tickgnosis_anchor_scale_camera_coherency",
+    "enemy_family": "nightmaresludgebio_orbs"
+  },
+  "control_lessons": [
+    "move_and_camera",
+    "jump_and_sprint",
+    "dodge_and_slide",
+    "light_and_heavy_combo",
+    "block_and_parry",
+    "focus_hold",
+    "heal_and_special"
+  ],
+  "waves": [
+    {
+      "stage": 1,
+      "lesson": "orb_scout_intro",
+      "enemies": [
+        "scout"
+      ]
+    },
+    {
+      "stage": 2,
+      "lesson": "orb_mire_intro",
+      "enemies": [
+        "mire"
+      ]
+    },
+    {
+      "stage": 3,
+      "lesson": "orb_horror_intro",
+      "enemies": [
+        "horror"
+      ]
+    },
+    {
+      "stage": 4,
+      "lesson": "combined_wave_validation",
+      "enemies": [
+        "scout",
+        "mire",
+        "horror"
+      ]
+    }
+  ],
+  "success_state": {
+    "rule": "defeat_all_waves",
+    "expected_duration_minutes": 4,
+    "proof_points": [
+      "basic controls are all taught in-engine",
+      "three orb archetypes are readable",
+      "tickgnosis HUD proves camera moderation",
+      "hybrid DODOGame launch surface can hand off to ORBEngine"
+    ]
+  }
+}

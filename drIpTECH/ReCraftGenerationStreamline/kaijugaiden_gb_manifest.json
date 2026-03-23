@@ -1,0 +1,194 @@
+[
+  {
+    "name": "bg_beach_harbour",
+    "prompt": "Game Boy DMG pixel art scene: harbour beach at dawn, rocky cliffs left, dark ocean water right, stormy dramatic sky, 4-shade greyscale only (black / dark-grey / light-grey / white), chunky blocky 8x8 tile-aligned pixel art, no gradients, no anti-aliasing, classic 1989 Game Boy aesthetic",
+    "w": 1024,
+    "h": 1024,
+    "out": "../../../../KaijuGaiden/assets/gb/bg_beach_harbour.png",
+    "extra_body": { "style_id": "pixel_art", "controls": { "colors": [[0,0,0],[85,85,85],[170,170,170],[255,255,255]] } }
+  },
+  {
+    "name": "bg_splash_driptech",
+    "prompt": "drIpTECH logo pixel art on black background, blocky retro lettering spelling drIpTECH, bold chunky Game Boy style font, 4-shade greyscale palette only, clean sharp pixels, no anti-aliasing, centred on square canvas",
+    "w": 1024,
+    "h": 1024,
+    "out": "../../../../KaijuGaiden/assets/gb/bg_splash_driptech.png",
+    "extra_body": { "style_id": "pixel_art", "controls": { "colors": [[0,0,0],[85,85,85],[170,170,170],[255,255,255]] } }
+  },
+  {
+    "name": "bg_title_logo",
+    "prompt": "KAIJU GAIDEN title logo pixel art, bold jagged kanji-inspired lettering, Game Boy DMG 4-shade greyscale palette, chunky pixel font, lightning crack motif through letters, dramatic on black background, centred vertically on canvas",
+    "w": 1024,
+    "h": 1024,
+    "out": "../../../../KaijuGaiden/assets/gb/bg_title_logo.png",
+    "extra_body": { "style_id": "pixel_art", "controls": { "colors": [[0,0,0],[85,85,85],[170,170,170],[255,255,255]] } }
+  },
+  {
+    "name": "spr_rei_idle",
+    "prompt": "Game Boy pixel art character sprite: Rei Moro standing idle, altered human kaiju hybrid fighter, athletic female figure with bioluminescent stripe accents on dark suit, 4-shade greyscale, clear bold silhouette on white background, full-body front view, centred",
+    "w": 1024,
+    "h": 1024,
+    "out": "../../../../KaijuGaiden/assets/gb/spr_rei_idle.png",
+    "extra_body": { "style_id": "pixel_art", "controls": { "colors": [[0,0,0],[85,85,85],[170,170,170],[255,255,255]] } }
+  },
+  {
+    "name": "spr_rei_run",
+    "prompt": "Game Boy pixel art character sprite: Rei Moro mid-run pose, altered human kaiju fighter, dynamic forward lean motion blur lines, 4-shade greyscale, clean bold silhouette on white background, side-view facing right, full body, centred on canvas",
+    "w": 1024,
+    "h": 1024,
+    "out": "../../../../KaijuGaiden/assets/gb/spr_rei_run.png",
+    "extra_body": { "style_id": "pixel_art", "controls": { "colors": [[0,0,0],[85,85,85],[170,170,170],[255,255,255]] } }
+  },
+  {
+    "name": "spr_rei_attack",
+    "prompt": "Game Boy pixel art character sprite: Rei Moro in powerful attack pose, forward strike fist extended, energy shockwave lines, 4-shade greyscale, clean isolated on white background, dynamic side view, bold silhouette, centred on canvas",
+    "w": 1024,
+    "h": 1024,
+    "out": "../../../../KaijuGaiden/assets/gb/spr_rei_attack.png",
+    "extra_body": { "style_id": "pixel_art", "controls": { "colors": [[0,0,0],[85,85,85],[170,170,170],[255,255,255]] } }
+  },
+  {
+    "name": "spr_boss_leviathan_p1",
+    "prompt": "Game Boy pixel art boss sprite: Harbor Leviathan phase 1, massive armored sea serpent upper body, thick scales, glowing eyes, menacing toothy silhouette, 4-shade greyscale, isolated on white background, side view facing left, centred on canvas",
+    "w": 1024,
+    "h": 1024,
+    "out": "../../../../KaijuGaiden/assets/gb/spr_boss_leviathan_p1.png",
+    "extra_body": { "style_id": "pixel_art", "controls": { "colors": [[0,0,0],[85,85,85],[170,170,170],[255,255,255]] } }
+  },
+  {
+    "name": "spr_boss_leviathan_p2",
+    "prompt": "Game Boy pixel art boss sprite: Harbor Leviathan phase 2, cracked armor segments exposing glowing energy core, rage expression, damage cracks across scales, 4-shade greyscale, isolated on white background, side view, centred on canvas",
+    "w": 1024,
+    "h": 1024,
+    "out": "../../../../KaijuGaiden/assets/gb/spr_boss_leviathan_p2.png",
+    "extra_body": { "style_id": "pixel_art", "controls": { "colors": [[0,0,0],[85,85,85],[170,170,170],[255,255,255]] } }
+  },
+  {
+    "name": "spr_boss_leviathan_p3",
+    "prompt": "Game Boy pixel art boss sprite: Harbor Leviathan phase 3 near-defeat, shattered armor spikes jutting out, erratic energy burst patterns on body surface, frailing silhouette falling apart, 4-shade greyscale, isolated on white, dramatic side view, centred",
+    "w": 1024,
+    "h": 1024,
+    "out": "../../../../KaijuGaiden/assets/gb/spr_boss_leviathan_p3.png",
+    "extra_body": { "style_id": "pixel_art", "controls": { "colors": [[0,0,0],[85,85,85],[170,170,170],[255,255,255]] } }
+  },
+  {
+    "name": "spr_minion_crablet",
+    "prompt": "Game Boy pixel art enemy sprite: small crab-like kaiju minion, squat wide body, oversized raised claws, beady menacing eyes on stalks, 4-shade greyscale, clean bold silhouette on white background, side front-facing, centred on canvas",
+    "w": 1024,
+    "h": 1024,
+    "out": "../../../../KaijuGaiden/assets/gb/spr_minion_crablet.png",
+    "extra_body": { "style_id": "pixel_art", "controls": { "colors": [[0,0,0],[85,85,85],[170,170,170],[255,255,255]] } }
+  },
+  {
+    "name": "spr_fx_hit_spark",
+    "prompt": "Game Boy pixel art hit effect: impact spark explosion burst, bold starburst shape with 8 diagonal energy lines radiating outward, 4-shade greyscale, transparent white background implied, clean and punchy visual impact",
+    "w": 1024,
+    "h": 1024,
+    "out": "../../../../KaijuGaiden/assets/gb/spr_fx_hit_spark.png",
+    "extra_body": { "style_id": "pixel_art", "controls": { "colors": [[0,0,0],[85,85,85],[170,170,170],[255,255,255]] } }
+  },
+  {
+    "name": "spr_fx_nanocell_orb",
+    "prompt": "Game Boy pixel art collectible effect: glowing NanoCell energy orb, small round sphere with concentric inner glow rings, pulsing bio-energy aesthetic, 4-shade greyscale, isolated on white, clean minimal collectible icon, centred on canvas",
+    "w": 1024,
+    "h": 1024,
+    "out": "../../../../KaijuGaiden/assets/gb/spr_fx_nanocell_orb.png",
+    "extra_body": { "style_id": "pixel_art", "controls": { "colors": [[0,0,0],[85,85,85],[170,170,170],[255,255,255]] } }
+  },
+  {
+    "name": "spr_cinematic_rei_large",
+    "prompt": "Game Boy pixel art cinematic sprite: Rei Moro in giant kaiju humanoid battle form on stormy beach, massive towering figure, dramatic arms-raised stance, silhouette against turbulent sky, 4-shade greyscale, side profile view, bold and imposing, centred on canvas",
+    "w": 1024,
+    "h": 1024,
+    "out": "../../../../KaijuGaiden/assets/gb/spr_cinematic_rei_large.png",
+    "extra_body": { "style_id": "pixel_art", "controls": { "colors": [[0,0,0],[85,85,85],[170,170,170],[255,255,255]] } }
+  },
+  {
+    "name": "spr_cinematic_storm_kaiju",
+    "prompt": "Game Boy pixel art cinematic sprite: Storm Kaiju on beach, spiked crown head, heavily armored reptilian body, aggressive combat striking pose, facing left, 4-shade greyscale dramatic silhouette, dark oppressive presence, centred on canvas",
+    "w": 1024,
+    "h": 1024,
+    "out": "../../../../KaijuGaiden/assets/gb/spr_cinematic_storm_kaiju.png",
+    "extra_body": { "style_id": "pixel_art", "controls": { "colors": [[0,0,0],[85,85,85],[170,170,170],[255,255,255]] } }
+  },
+  {
+    "name": "tile_ground_strip",
+    "prompt": "Game Boy pixel art seamless tile: rocky pebble beach ground, textured wet sand and stones, 4-shade greyscale, strong dark shadow at top edge and lighter band at bottom, 8x8 pixel-grid aligned, seamlessly tileable",
+    "w": 1024,
+    "h": 1024,
+    "out": "../../../../KaijuGaiden/assets/gb/tile_ground.png",
+    "extra_body": { "style_id": "pixel_art", "controls": { "colors": [[0,0,0],[85,85,85],[170,170,170],[255,255,255]] } }
+  },
+  {
+    "name": "tile_water_wave",
+    "prompt": "Game Boy pixel art seamless tile: dark stormy ocean water with white foam crest wave line, horizontal repeating wave pattern, 4-shade greyscale, choppy angry sea, seamlessly tileable horizontally, 8x8 pixel-grid",
+    "w": 1024,
+    "h": 1024,
+    "out": "../../../../KaijuGaiden/assets/gb/tile_water.png",
+    "extra_body": { "style_id": "pixel_art", "controls": { "colors": [[0,0,0],[85,85,85],[170,170,170],[255,255,255]] } }
+  },
+  {
+    "name": "tile_cliff_face",
+    "prompt": "Game Boy pixel art seamless tile: vertical rocky cliff face, angular jagged stone layers, dark shadow crevices between rocks, 4-shade greyscale, tileable vertically and horizontally, 8x8 pixel-grid aligned",
+    "w": 1024,
+    "h": 1024,
+    "out": "../../../../KaijuGaiden/assets/gb/tile_cliff.png",
+    "extra_body": { "style_id": "pixel_art", "controls": { "colors": [[0,0,0],[85,85,85],[170,170,170],[255,255,255]] } }
+  },
+  {
+    "name": "tile_sky_storm",
+    "prompt": "Game Boy pixel art seamless tile: stormy overcast sky fill, light grey with faint horizontal cloud streak suggestion, 4-shade greyscale, seamlessly tileable, minimal very subtle detail, mostly open sky feel",
+    "w": 1024,
+    "h": 1024,
+    "out": "../../../../KaijuGaiden/assets/gb/tile_sky.png",
+    "extra_body": { "style_id": "pixel_art", "controls": { "colors": [[0,0,0],[85,85,85],[170,170,170],[255,255,255]] } }
+  },
+  {
+    "name": "hud_hp_segment",
+    "prompt": "Game Boy pixel art HUD element: filled life-point health segment block, rectangular with inner bright highlight on top-left, dark shadow on bottom-right, 4-shade greyscale, bold and readable at 8x8 pixels, clean game UI icon",
+    "w": 1024,
+    "h": 1024,
+    "out": "../../../../KaijuGaiden/assets/gb/hud_hp_segment.png",
+    "extra_body": { "style_id": "pixel_art", "controls": { "colors": [[0,0,0],[85,85,85],[170,170,170],[255,255,255]] } }
+  },
+  {
+    "name": "hud_boss_hp_bar",
+    "prompt": "Game Boy pixel art boss health bar UI element: horizontal 6-segment energy gauge with thick outer border, filled segments alternating shades of grey, 4-shade greyscale, arcade style boss health indicator, wide horizontal layout, clear and bold",
+    "w": 1365,
+    "h": 1024,
+    "out": "../../../../KaijuGaiden/assets/gb/hud_boss_hp_bar.png",
+    "extra_body": { "style_id": "pixel_art", "controls": { "colors": [[0,0,0],[85,85,85],[170,170,170],[255,255,255]] } }
+  },
+  {
+    "name": "bg_cypher_screen",
+    "prompt": "Game Boy DMG pixel art full-screen: HARBOR CYPHER obtained victory screen, large geometric DNA-fragment crystal symbol centred, radiating diagonal light beams spreading to corners, ceremonial framing, 4-shade greyscale, bold and dramatic composition",
+    "w": 1024,
+    "h": 1024,
+    "out": "../../../../KaijuGaiden/assets/gb/bg_cypher_screen.png",
+    "extra_body": { "style_id": "pixel_art", "controls": { "colors": [[0,0,0],[85,85,85],[170,170,170],[255,255,255]] } }
+  },
+  {
+    "name": "bg_game_over_screen",
+    "prompt": "Game Boy DMG pixel art full-screen: GAME OVER screen, large bold pixel font GAME OVER text centred, shattered crack pattern radiating in background, dark oppressive heavy atmosphere, 4-shade greyscale, intense dramatic composition",
+    "w": 1024,
+    "h": 1024,
+    "out": "../../../../KaijuGaiden/assets/gb/bg_game_over.png",
+    "extra_body": { "style_id": "pixel_art", "controls": { "colors": [[0,0,0],[85,85,85],[170,170,170],[255,255,255]] } }
+  },
+  {
+    "name": "bg_intro_cut_dawn",
+    "prompt": "Game Boy DMG pixel art full-screen cinematic establishing shot: dawn horizon over a stormy ocean, dark sea water dominates lower half, bright horizon line at center, stormy sky with sparse pixel stars fading, 4-shade greyscale, atmospheric and foreboding",
+    "w": 1024,
+    "h": 1024,
+    "out": "../../../../KaijuGaiden/assets/gb/bg_intro_cut_dawn.png",
+    "extra_body": { "style_id": "pixel_art", "controls": { "colors": [[0,0,0],[85,85,85],[170,170,170],[255,255,255]] } }
+  },
+  {
+    "name": "bg_intro_cut_kaiju_clash",
+    "prompt": "Game Boy DMG pixel art full-screen cinematic: two massive kaiju silhouettes clashing violently on a stormy beach at dusk, explosive shockwave burst between them at center, water spray erupting, dramatic extreme angle low shot, 4-shade greyscale, epic impact composition",
+    "w": 1024,
+    "h": 1024,
+    "out": "../../../../KaijuGaiden/assets/gb/bg_intro_cut_clash.png",
+    "extra_body": { "style_id": "pixel_art", "controls": { "colors": [[0,0,0],[85,85,85],[170,170,170],[255,255,255]] } }
+  }
+]

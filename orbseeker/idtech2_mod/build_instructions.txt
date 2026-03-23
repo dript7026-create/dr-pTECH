@@ -1,0 +1,23 @@
+IdTech2 (Quake II) Build & Packaging Notes for OrbSeeker
+
+Prerequisites
+- Quake II SDK sources (original or community SDK like Yamagi Quake II SDK).
+- A Quake II engine build (Yamagi Quake2 recommended for modern Windows/Linux compatibility).
+- Compiler toolchain: Visual Studio (MSVC) on Windows or gcc/clang + make on Linux.
+- Map editor: TrenchBroom (export .map) and q2map2 to compile .bsp.
+
+High-level steps
+1. Copy `OrbSeeker/idtech2_mod` to your Quake II `baseq2` or `mods/OrbSeeker` folder.
+2. Put source files from `OrbSeeker/idtech2_mod/game/` into a Quake II SDK `game` folder or add as a new project.
+3. Build the SDK game module (DLL/so) per SDK instructions.
+   - Windows: create a Visual Studio project using the SDK's include paths and link settings. Produce `game.dll` and drop it into `baseq2` or the mod folder.
+   - Linux: compile into `game.so` and place it into `baseq2`.
+4. Create maps (.map) in TrenchBroom, use q2map2 to generate BSPs, and place them into the mod's `maps/` folder or `baseq2/maps`.
+5. Start the engine and test `map orb_island` (or whatever map name you built).
+
+Packaging as a PK3 (optional)
+- PK3s are simply zip files with a `.pk3` extension and the same folder layout (`maps/`, `progs.dat` or game DLLs, `models/`, `textures/`).
+- For distributing the mod as a PK3, include the compiled assets and scripts.
+
+Limitations
+- This skeleton includes only C stubs; it is not a full, compilable Quake II game. Use it as a starting point to implement gameplay using the Quake II game API.

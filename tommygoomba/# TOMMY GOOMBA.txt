@@ -1,0 +1,89 @@
+# TOMMY GOOMBA
+An original parody puzzle-RPG marriage rescue adventure by the Carell brothers.  
+Target platform: Nintendo Game Boy family of systems (`.gb` via GBDK).
+
+## Overview
+Tommy Goomba is a stage-based action-adventure with puzzle and RPG encounter elements.  
+The player navigates 66 prebuilt stages while searching for Tommy’s wife in a dynamic world where hostile and neutral entities migrate over time.
+
+## Story Context
+Tommy’s home life is shattered by a sudden attack from two mysterious brothers.  
+His wife is abducted, and a damaged phone short-circuit unlocks Tommy’s first special ability: **Charged Dash**. Tommy is launched into a fractured overworld and must pursue across moving encounter routes until reunion.
+
+## Core Gameplay
+1. Move to a stage  
+2. Search / explore  
+3. Resolve encounter (dialogue, puzzle, combat, boss)  
+4. Advance world simulation tick  
+5. Continue pursuit  
+
+**Win condition:** reunite with Tommy’s wife (ending variant depends on encounter history).
+
+## Controls + Combat
+- **A:** Bite (basic attack)  
+- **B:** Selected special attack  
+- **D-Pad:** Move  
+- **Start:** Pause/menu  
+- **Xbox View button** (emulator mapping): cycle special attacks  
+
+Starting special:
+- **Charged Dash**
+
+## Overworld Boss Encounters (Parody)
+- Fortress Tyrant (Bowser-inspired) → **Shell Guard**  
+- Jungle Giant (DK-inspired) → **Primal Toss**  
+- Mirage Duelist (Birdo-inspired) → **Egg Arc**  
+- Vault Brute (Wario-inspired) → **Greed Rush**  
+- Trickster Duelist (Waluigi-inspired) → **Chaos Spin**  
+- Hex Mage (Kamek-inspired) → **Counter Sigil**  
+- Phantom Lord (King Boo-inspired) → **Phase Step**
+
+## NPC Migration + AI
+All non-player entities run lightweight world-tick behavior:
+- intent-weighted routing
+- faction relationship logic
+- region affinity and danger avoidance
+- dynamic encounter composition by co-location
+
+Persistence rules:
+- major brothers can be permanently removed on defeat
+- recurring rivals can reappear in later ticks
+
+## EgoSphere Integration Plan
+Use EgoSphere systems for:
+- entity world-state tracking
+- migration/path weighting
+- event queue and encounter resolution
+- persistent narrative flags and save outcomes
+
+## Asset Requirements Summary
+
+### Graphics
+- overworld/interior/puzzle tilesets
+- character sprites (Tommy, wife, rivals, bosses, civilians)
+- HUD/menu/cinematic cards
+- combat and traversal VFX
+
+### Audio
+- title/overworld/combat/boss/ending music
+- bite/dash/hit/menu/puzzle/ambient SFX
+- optional dialogue text blips by faction
+
+## Build
+The `.gb` ROM is generated from source. Do not edit ROM binary directly.
+
+Build commands:
+- `make clean`
+- `make`
+
+## Xbox Series Controller Compatibility
+Via emulator mapping:
+- Xbox **A** → GB **A**
+- Xbox **B** → GB **B**
+- Xbox **D-Pad** → GB **D-Pad**
+- Xbox **View** → Cycle Special
+- Xbox **Menu/Start** → GB **Start**
+
+## Credits
+Developed by the Carell brothers.  
+Built with GBDK and original parody assets.

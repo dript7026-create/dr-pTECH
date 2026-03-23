@@ -1,0 +1,138 @@
+OrbSeeker Game Design Document
+
+Version: 1.0
+Date: 2026-03-10
+
+Overview
+
+OrbSeeker is an exploratory action-adventure built around island-hub progression, survival pressure, tournament gating, map traversal, orb recovery, and ritualized boss encounters. The project currently exists as both a playable Pygame prototype and an idtech2 port skeleton. The next intended target is the standalone ORBEngine, which will become the long-term runtime for OrbSeeker.
+
+This document consolidates the latest repository state, the latest progress memory, the existing Pygame prototype loop, the idtech2 port skeleton, and the new ORBEngine-directed technical vision.
+
+Current Project State
+
+Latest progress note date: 2026-03-08.
+Current status: ready for immediate continuation.
+
+Existing artifacts:
+- orbseeker.py: playable Pygame prototype.
+- requirements.txt: Pygame dependency.
+- idtech2_mod/: Quake II mod skeleton with game stub, map placeholder, and build notes.
+
+Implemented Prototype Features
+
+- Island hub.
+- Survival stats: hunger, thirst, health.
+- Farming loop with planting and harvesting.
+- Mandatory winged-monkey rock-paper-scissors tournament to unlock travel.
+- Map selection and map exploration.
+- Seven orb nodes scattered across unlocked maps.
+- OrbGuardian boss encounter implemented as a timed QTE sequence.
+- Island return loop after success or failure.
+
+Existing idtech2 Work
+
+The idtech2 material is a port skeleton only. It includes orb pickup hooks, orb guardian spawn stubs, island initialization stubs, placeholder entity setup, and build notes for Quake II SDK integration.
+
+Vision
+
+OrbSeeker should feel like a mythic expedition threaded through layered, recursive spaces. The player moves between lived-in hub spaces, ritual combat sites, traversal maps, and orb chambers that challenge perception, timing, and spatial reasoning. The world should feel hand-drawn and dreamlike, but systemically exact.
+
+Pillars
+
+1. Exploration With Purpose.
+2. Survival With Momentum.
+3. Ritual Combat.
+4. Recursive Spatial Wonder.
+5. Precision From Art.
+
+Core Loop
+
+1. Recover at the island hub.
+2. Manage survival state and supplies.
+3. Farm or prepare for expedition.
+4. Use the monkey companion and tournament path to unlock travel access.
+5. Select or discover maps.
+6. Explore traversal spaces for orb nodes and route knowledge.
+7. Trigger OrbGuardian encounter.
+8. Win orb challenge and return with progression unlocked.
+9. Expand access to more spaces and systems.
+
+Systems
+
+Player State:
+- Health.
+- Hunger.
+- Thirst.
+- Gold.
+- Inventory.
+- Maps unlocked.
+- Orbs collected.
+
+Hub Systems:
+- Farming.
+- Resource replenishment.
+- Companion interactions.
+- Route and map preparation.
+
+Tournament System:
+Currently represented by best-of-three rock-paper-scissors. Final form can grow into a more expressive ritual competition system.
+
+Expedition Maps:
+- Multiple maps with orb sites.
+- Back-and-forth movement between island and field locations.
+- Unlock-gated access.
+- Potential hazards, enemies, secrets, and recursive-space anomalies.
+
+Orb Encounters:
+Currently timed QTE. Final design should expand into timing chains, movement-reactive phases, recursive-space shifts, and readable counterplay.
+
+World Structure
+
+The island hub is the narrative and logistical center. Outer maps contain orb locations, traversal challenges, and the first serious use of ORBEngine layered pseudo-3D recursion. Orb chambers should visually imply that the world folds into itself.
+
+Visual Direction
+
+OrbSeeker should use 2D-authored assets but present them as volumetric, rotating, layered, and space-reactive through ORBEngine.
+
+Technical Transition Plan
+
+Phase 1: Preserve prototype knowledge.
+Phase 2: Build ORBEngine.
+Phase 3: Rebuild OrbSeeker on ORBEngine.
+
+ORBEngine Requirements for OrbSeeker
+
+- Mode-7-inspired ground and world warping.
+- Parallax stacks and rotation-simulated depth.
+- Recursive render-vector spaces.
+- Hierarchical space nodes with parent-child scale relationships.
+- Deterministic simulation across recursive layers.
+- Pixel-precise collision and combat masks.
+- Asset ingestion for .swf, .piskel, and .clip derived content.
+- Non-alpha render culling and logic culling.
+- Boundary extraction from bright-green marker outlines on the top art layer.
+- Coherent hit logic across every recursion level.
+
+Collision and Combat Design Standard
+
+The engineering target is deterministic update order, frame-coherent mask tests, stable collision transforms through recursive spaces, low-latency control response, and consistent player-visible outcomes. That is the practical standard for making combat feel live and exact.
+
+Development Priorities
+
+1. Finalize OrbSeeker high-level design and scope lock.
+2. Establish ORBEngine architecture and asset pipeline.
+3. Define recursive-space math model and transform rules.
+4. Define collision-mask extraction and green-outline boundary standard.
+5. Build a minimal ORBEngine sandbox scene.
+6. Port OrbSeeker hub traversal into ORBEngine.
+7. Port orb encounter loop.
+8. Add save/load, controller input, and polished combat feedback.
+
+Immediate Next Work
+
+1. Stand up ORBEngine repository structure and architecture docs.
+2. Build the first ORBEngine render sandbox with layered 2D assets.
+3. Specify asset import contracts for .swf, .piskel, and .clip.
+4. Define collision-mask extraction from the bright-green authored outline.
+5. Recreate the island hub in ORBEngine as the first vertical slice.

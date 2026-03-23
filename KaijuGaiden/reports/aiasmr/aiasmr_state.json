@@ -1,0 +1,96 @@
+{
+  "profile": {
+    "scene": 5,
+    "genre": 0,
+    "tension": 12,
+    "pulse": 2,
+    "voice": 4,
+    "noise": 2
+  },
+  "decision": {
+    "scene_label": "combat",
+    "voice_label": "system",
+    "mode": "phrygian",
+    "root": "C",
+    "drone_gain": 0.276,
+    "pulse_gain": 0.21,
+    "lead_gain": 0.496,
+    "noise_gain": 0.097,
+    "mic_blend": 0.153,
+    "speech_rate": 1.23,
+    "speech_pitch": 1.15,
+    "event_label": "banner",
+    "event_value": 6,
+    "last_tts": "CLASH BREAK",
+    "realtime_synth_ready": true,
+    "tts_bus_ready": true,
+    "mic_bus_ready": true,
+    "instrument_emulation_ready": true,
+    "updated_at": 1773783748.2123935,
+    "layers": [
+      {
+        "role": "drone",
+        "instrument": "distorted_organ",
+        "waveform": "organ",
+        "register": "low",
+        "gain": 0.276,
+        "pan": -0.15,
+        "articulation": "pressure",
+        "root": "C",
+        "mode": "phrygian"
+      },
+      {
+        "role": "pulse",
+        "instrument": "taiko_gate",
+        "waveform": "saw",
+        "register": "mid",
+        "gain": 0.21,
+        "pan": 0.1,
+        "articulation": "chop",
+        "root": "C",
+        "mode": "phrygian"
+      },
+      {
+        "role": "lead",
+        "instrument": "pulse_synth",
+        "waveform": "pulse",
+        "register": "high",
+        "gain": 0.496,
+        "pan": 0.22,
+        "articulation": "accent",
+        "root": "C",
+        "mode": "phrygian"
+      },
+      {
+        "role": "texture",
+        "instrument": "air_noise",
+        "waveform": "noise",
+        "register": "full",
+        "gain": 0.097,
+        "pan": 0.0,
+        "articulation": "bed",
+        "root": "C",
+        "mode": "phrygian"
+      },
+      {
+        "role": "mic_bus",
+        "instrument": "room_capture",
+        "waveform": "input",
+        "register": "full",
+        "gain": 0.197,
+        "pan": 0.0,
+        "articulation": "reactive",
+        "root": "C",
+        "mode": "phrygian"
+      }
+    ]
+  },
+  "capabilities": {
+    "realtime_synth": true,
+    "multi_layer": true,
+    "instrument_emulation": true,
+    "tts": true,
+    "mic_input": true
+  },
+  "source": "[AIASMR] sc=5 gn=0 tn=12 pu=2 vc=4 nz=2"
+}

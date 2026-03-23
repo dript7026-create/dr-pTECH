@@ -1,0 +1,1367 @@
+[
+  {
+    "name": "wial_egg",
+    "prompt": "A mysterious bioluminescent egg nestled in dark organic matter, pulsing with inner teal and amber light, translucent shell showing a curled creature silhouette within, multiple angles and glow states in a sprite sheet grid layout. dark fantasy creature concept art sheet, painterly style, muted earth tones with bioluminescent teal and amber accents, wet organic textures, Lovecraftian ooze-punk aesthetic, multiple sprite poses on transparent background, game asset sheet",
+    "w": 1024,
+    "h": 1024,
+    "out": "../../ORBEngine/assets/wial_wohm/wials/wial_egg_state.png"
+  },
+  {
+    "name": "wial_t1_marsh",
+    "prompt": "Wial evolution tier 1 (sprout), marsh branch: amphibian marsh creature, webbed limbs, mossy shell plates, swamp bioluminescence, small juvenile form, curious expression, compact body. Full character sprite sheet with idle, walk, attack, hurt, and special poses. dark fantasy creature concept art sheet, painterly style, muted earth tones with bioluminescent teal and amber accents, wet organic textures, Lovecraftian ooze-punk aesthetic, multiple sprite poses on transparent background, game asset sheet",
+    "w": 1024,
+    "h": 1024,
+    "out": "../../ORBEngine/assets/wial_wohm/wials/wial_tier1_marsh.png"
+  },
+  {
+    "name": "wial_t1_tide",
+    "prompt": "Wial evolution tier 1 (sprout), tide branch: aquatic tide creature, sleek fins, coral-encrusted armor, deep-sea glow, small juvenile form, curious expression, compact body. Full character sprite sheet with idle, walk, attack, hurt, and special poses. dark fantasy creature concept art sheet, painterly style, muted earth tones with bioluminescent teal and amber accents, wet organic textures, Lovecraftian ooze-punk aesthetic, multiple sprite poses on transparent background, game asset sheet",
+    "w": 1024,
+    "h": 1024,
+    "out": "../../ORBEngine/assets/wial_wohm/wials/wial_tier1_tide.png"
+  },
+  {
+    "name": "wial_t1_ember",
+    "prompt": "Wial evolution tier 1 (sprout), ember branch: volcanic ember creature, cracked magma skin, smoldering vents, fire-glow eyes, small juvenile form, curious expression, compact body. Full character sprite sheet with idle, walk, attack, hurt, and special poses. dark fantasy creature concept art sheet, painterly style, muted earth tones with bioluminescent teal and amber accents, wet organic textures, Lovecraftian ooze-punk aesthetic, multiple sprite poses on transparent background, game asset sheet",
+    "w": 1024,
+    "h": 1024,
+    "out": "../../ORBEngine/assets/wial_wohm/wials/wial_tier1_ember.png"
+  },
+  {
+    "name": "wial_t1_shade",
+    "prompt": "Wial evolution tier 1 (sprout), shade branch: shadowy void creature, wispy tendrils, dark mist exoskeleton, spectral purple glow, small juvenile form, curious expression, compact body. Full character sprite sheet with idle, walk, attack, hurt, and special poses. dark fantasy creature concept art sheet, painterly style, muted earth tones with bioluminescent teal and amber accents, wet organic textures, Lovecraftian ooze-punk aesthetic, multiple sprite poses on transparent background, game asset sheet",
+    "w": 1024,
+    "h": 1024,
+    "out": "../../ORBEngine/assets/wial_wohm/wials/wial_tier1_shade.png"
+  },
+  {
+    "name": "wial_t2_marsh",
+    "prompt": "Wial evolution tier 2 (surge), marsh branch: amphibian marsh creature, webbed limbs, mossy shell plates, swamp bioluminescence, muscular adolescent form, aggressive stance, evolved appendages and armor plates. Full character sprite sheet with idle, walk, attack, hurt, and special poses. dark fantasy creature concept art sheet, painterly style, muted earth tones with bioluminescent teal and amber accents, wet organic textures, Lovecraftian ooze-punk aesthetic, multiple sprite poses on transparent background, game asset sheet",
+    "w": 1024,
+    "h": 1024,
+    "out": "../../ORBEngine/assets/wial_wohm/wials/wial_tier2_marsh.png"
+  },
+  {
+    "name": "wial_t2_tide",
+    "prompt": "Wial evolution tier 2 (surge), tide branch: aquatic tide creature, sleek fins, coral-encrusted armor, deep-sea glow, muscular adolescent form, aggressive stance, evolved appendages and armor plates. Full character sprite sheet with idle, walk, attack, hurt, and special poses. dark fantasy creature concept art sheet, painterly style, muted earth tones with bioluminescent teal and amber accents, wet organic textures, Lovecraftian ooze-punk aesthetic, multiple sprite poses on transparent background, game asset sheet",
+    "w": 1024,
+    "h": 1024,
+    "out": "../../ORBEngine/assets/wial_wohm/wials/wial_tier2_tide.png"
+  },
+  {
+    "name": "wial_t2_ember",
+    "prompt": "Wial evolution tier 2 (surge), ember branch: volcanic ember creature, cracked magma skin, smoldering vents, fire-glow eyes, muscular adolescent form, aggressive stance, evolved appendages and armor plates. Full character sprite sheet with idle, walk, attack, hurt, and special poses. dark fantasy creature concept art sheet, painterly style, muted earth tones with bioluminescent teal and amber accents, wet organic textures, Lovecraftian ooze-punk aesthetic, multiple sprite poses on transparent background, game asset sheet",
+    "w": 1024,
+    "h": 1024,
+    "out": "../../ORBEngine/assets/wial_wohm/wials/wial_tier2_ember.png"
+  },
+  {
+    "name": "wial_t2_shade",
+    "prompt": "Wial evolution tier 2 (surge), shade branch: shadowy void creature, wispy tendrils, dark mist exoskeleton, spectral purple glow, muscular adolescent form, aggressive stance, evolved appendages and armor plates. Full character sprite sheet with idle, walk, attack, hurt, and special poses. dark fantasy creature concept art sheet, painterly style, muted earth tones with bioluminescent teal and amber accents, wet organic textures, Lovecraftian ooze-punk aesthetic, multiple sprite poses on transparent background, game asset sheet",
+    "w": 1024,
+    "h": 1024,
+    "out": "../../ORBEngine/assets/wial_wohm/wials/wial_tier2_shade.png"
+  },
+  {
+    "name": "wial_t3_marsh",
+    "prompt": "Wial evolution tier 3 (apex), marsh branch: amphibian marsh creature, webbed limbs, mossy shell plates, swamp bioluminescence, towering final evolution, majestic and terrifying, full armor and weapons, alpha predator. Full character sprite sheet with idle, walk, attack, hurt, and special poses. dark fantasy creature concept art sheet, painterly style, muted earth tones with bioluminescent teal and amber accents, wet organic textures, Lovecraftian ooze-punk aesthetic, multiple sprite poses on transparent background, game asset sheet",
+    "w": 1024,
+    "h": 1024,
+    "out": "../../ORBEngine/assets/wial_wohm/wials/wial_tier3_marsh.png"
+  },
+  {
+    "name": "wial_t3_tide",
+    "prompt": "Wial evolution tier 3 (apex), tide branch: aquatic tide creature, sleek fins, coral-encrusted armor, deep-sea glow, towering final evolution, majestic and terrifying, full armor and weapons, alpha predator. Full character sprite sheet with idle, walk, attack, hurt, and special poses. dark fantasy creature concept art sheet, painterly style, muted earth tones with bioluminescent teal and amber accents, wet organic textures, Lovecraftian ooze-punk aesthetic, multiple sprite poses on transparent background, game asset sheet",
+    "w": 1024,
+    "h": 1024,
+    "out": "../../ORBEngine/assets/wial_wohm/wials/wial_tier3_tide.png"
+  },
+  {
+    "name": "wial_t3_ember",
+    "prompt": "Wial evolution tier 3 (apex), ember branch: volcanic ember creature, cracked magma skin, smoldering vents, fire-glow eyes, towering final evolution, majestic and terrifying, full armor and weapons, alpha predator. Full character sprite sheet with idle, walk, attack, hurt, and special poses. dark fantasy creature concept art sheet, painterly style, muted earth tones with bioluminescent teal and amber accents, wet organic textures, Lovecraftian ooze-punk aesthetic, multiple sprite poses on transparent background, game asset sheet",
+    "w": 1024,
+    "h": 1024,
+    "out": "../../ORBEngine/assets/wial_wohm/wials/wial_tier3_ember.png"
+  },
+  {
+    "name": "wial_t3_shade",
+    "prompt": "Wial evolution tier 3 (apex), shade branch: shadowy void creature, wispy tendrils, dark mist exoskeleton, spectral purple glow, towering final evolution, majestic and terrifying, full armor and weapons, alpha predator. Full character sprite sheet with idle, walk, attack, hurt, and special poses. dark fantasy creature concept art sheet, painterly style, muted earth tones with bioluminescent teal and amber accents, wet organic textures, Lovecraftian ooze-punk aesthetic, multiple sprite poses on transparent background, game asset sheet",
+    "w": 1024,
+    "h": 1024,
+    "out": "../../ORBEngine/assets/wial_wohm/wials/wial_tier3_shade.png"
+  },
+  {
+    "name": "combat_fx_01",
+    "prompt": "Combat animation effect: melee slash arc, teal energy blade trail. 6-frame animation grid arranged in rows on square canvas. game visual effect sprite sheet, dark fantasy, glowing particle effects, transparent background, pixel-painterly hybrid style, animation frames arranged in a grid",
+    "w": 1024,
+    "h": 1024,
+    "out": "../../ORBEngine/assets/wial_wohm/combat_fx/combat_fx_01.png"
+  },
+  {
+    "name": "combat_fx_02",
+    "prompt": "Combat animation effect: heavy slam shockwave, ground crack radial burst. 6-frame animation grid arranged in rows on square canvas. game visual effect sprite sheet, dark fantasy, glowing particle effects, transparent background, pixel-painterly hybrid style, animation frames arranged in a grid",
+    "w": 1024,
+    "h": 1024,
+    "out": "../../ORBEngine/assets/wial_wohm/combat_fx/combat_fx_02.png"
+  },
+  {
+    "name": "combat_fx_03",
+    "prompt": "Combat animation effect: claw swipe triple strike, amber claw marks. 6-frame animation grid arranged in rows on square canvas. game visual effect sprite sheet, dark fantasy, glowing particle effects, transparent background, pixel-painterly hybrid style, animation frames arranged in a grid",
+    "w": 1024,
+    "h": 1024,
+    "out": "../../ORBEngine/assets/wial_wohm/combat_fx/combat_fx_03.png"
+  },
+  {
+    "name": "combat_fx_04",
+    "prompt": "Combat animation effect: bite attack with dripping ooze particles. 6-frame animation grid arranged in rows on square canvas. game visual effect sprite sheet, dark fantasy, glowing particle effects, transparent background, pixel-painterly hybrid style, animation frames arranged in a grid",
+    "w": 1024,
+    "h": 1024,
+    "out": "../../ORBEngine/assets/wial_wohm/combat_fx/combat_fx_04.png"
+  },
+  {
+    "name": "combat_fx_05",
+    "prompt": "Combat animation effect: tail whip sweep, circular motion blur. 6-frame animation grid arranged in rows on square canvas. game visual effect sprite sheet, dark fantasy, glowing particle effects, transparent background, pixel-painterly hybrid style, animation frames arranged in a grid",
+    "w": 1024,
+    "h": 1024,
+    "out": "../../ORBEngine/assets/wial_wohm/combat_fx/combat_fx_05.png"
+  },
+  {
+    "name": "combat_fx_06",
+    "prompt": "Combat animation effect: projectile launch, bioluminescent orb forming and firing. 6-frame animation grid arranged in rows on square canvas. game visual effect sprite sheet, dark fantasy, glowing particle effects, transparent background, pixel-painterly hybrid style, animation frames arranged in a grid",
+    "w": 1024,
+    "h": 1024,
+    "out": "../../ORBEngine/assets/wial_wohm/combat_fx/combat_fx_06.png"
+  },
+  {
+    "name": "combat_fx_07",
+    "prompt": "Combat animation effect: projectile impact explosion, teal and amber sparks. 6-frame animation grid arranged in rows on square canvas. game visual effect sprite sheet, dark fantasy, glowing particle effects, transparent background, pixel-painterly hybrid style, animation frames arranged in a grid",
+    "w": 1024,
+    "h": 1024,
+    "out": "../../ORBEngine/assets/wial_wohm/combat_fx/combat_fx_07.png"
+  },
+  {
+    "name": "combat_fx_08",
+    "prompt": "Combat animation effect: shield block ripple, hexagonal energy barrier flash. 6-frame animation grid arranged in rows on square canvas. game visual effect sprite sheet, dark fantasy, glowing particle effects, transparent background, pixel-painterly hybrid style, animation frames arranged in a grid",
+    "w": 1024,
+    "h": 1024,
+    "out": "../../ORBEngine/assets/wial_wohm/combat_fx/combat_fx_08.png"
+  },
+  {
+    "name": "combat_fx_09",
+    "prompt": "Combat animation effect: parry spark burst, metallic clang energy ring. 6-frame animation grid arranged in rows on square canvas. game visual effect sprite sheet, dark fantasy, glowing particle effects, transparent background, pixel-painterly hybrid style, animation frames arranged in a grid",
+    "w": 1024,
+    "h": 1024,
+    "out": "../../ORBEngine/assets/wial_wohm/combat_fx/combat_fx_09.png"
+  },
+  {
+    "name": "combat_fx_10",
+    "prompt": "Combat animation effect: dodge afterimage trail, translucent ghost copies. 6-frame animation grid arranged in rows on square canvas. game visual effect sprite sheet, dark fantasy, glowing particle effects, transparent background, pixel-painterly hybrid style, animation frames arranged in a grid",
+    "w": 1024,
+    "h": 1024,
+    "out": "../../ORBEngine/assets/wial_wohm/combat_fx/combat_fx_10.png"
+  },
+  {
+    "name": "combat_fx_11",
+    "prompt": "Combat animation effect: critical hit starburst, screen-flash radial lines. 6-frame animation grid arranged in rows on square canvas. game visual effect sprite sheet, dark fantasy, glowing particle effects, transparent background, pixel-painterly hybrid style, animation frames arranged in a grid",
+    "w": 1024,
+    "h": 1024,
+    "out": "../../ORBEngine/assets/wial_wohm/combat_fx/combat_fx_11.png"
+  },
+  {
+    "name": "combat_fx_12",
+    "prompt": "Combat animation effect: poison cloud expanding, green miasma particles. 6-frame animation grid arranged in rows on square canvas. game visual effect sprite sheet, dark fantasy, glowing particle effects, transparent background, pixel-painterly hybrid style, animation frames arranged in a grid",
+    "w": 1024,
+    "h": 1024,
+    "out": "../../ORBEngine/assets/wial_wohm/combat_fx/combat_fx_12.png"
+  },
+  {
+    "name": "combat_fx_13",
+    "prompt": "Combat animation effect: fire breath cone, ember and smoke plume. 6-frame animation grid arranged in rows on square canvas. game visual effect sprite sheet, dark fantasy, glowing particle effects, transparent background, pixel-painterly hybrid style, animation frames arranged in a grid",
+    "w": 1024,
+    "h": 1024,
+    "out": "../../ORBEngine/assets/wial_wohm/combat_fx/combat_fx_13.png"
+  },
+  {
+    "name": "combat_fx_14",
+    "prompt": "Combat animation effect: ice crystal formation, frost spike eruption. 6-frame animation grid arranged in rows on square canvas. game visual effect sprite sheet, dark fantasy, glowing particle effects, transparent background, pixel-painterly hybrid style, animation frames arranged in a grid",
+    "w": 1024,
+    "h": 1024,
+    "out": "../../ORBEngine/assets/wial_wohm/combat_fx/combat_fx_14.png"
+  },
+  {
+    "name": "combat_fx_15",
+    "prompt": "Combat animation effect: lightning chain arc, branching electric bolts. 6-frame animation grid arranged in rows on square canvas. game visual effect sprite sheet, dark fantasy, glowing particle effects, transparent background, pixel-painterly hybrid style, animation frames arranged in a grid",
+    "w": 1024,
+    "h": 1024,
+    "out": "../../ORBEngine/assets/wial_wohm/combat_fx/combat_fx_15.png"
+  },
+  {
+    "name": "combat_fx_16",
+    "prompt": "Combat animation effect: heal pulse ring, warm amber glow expanding outward. 6-frame animation grid arranged in rows on square canvas. game visual effect sprite sheet, dark fantasy, glowing particle effects, transparent background, pixel-painterly hybrid style, animation frames arranged in a grid",
+    "w": 1024,
+    "h": 1024,
+    "out": "../../ORBEngine/assets/wial_wohm/combat_fx/combat_fx_16.png"
+  },
+  {
+    "name": "combat_fx_17",
+    "prompt": "Combat animation effect: buff aura shimmer, rising golden particles. 6-frame animation grid arranged in rows on square canvas. game visual effect sprite sheet, dark fantasy, glowing particle effects, transparent background, pixel-painterly hybrid style, animation frames arranged in a grid",
+    "w": 1024,
+    "h": 1024,
+    "out": "../../ORBEngine/assets/wial_wohm/combat_fx/combat_fx_17.png"
+  },
+  {
+    "name": "combat_fx_18",
+    "prompt": "Combat animation effect: debuff curse spiral, descending purple vortex. 6-frame animation grid arranged in rows on square canvas. game visual effect sprite sheet, dark fantasy, glowing particle effects, transparent background, pixel-painterly hybrid style, animation frames arranged in a grid",
+    "w": 1024,
+    "h": 1024,
+    "out": "../../ORBEngine/assets/wial_wohm/combat_fx/combat_fx_18.png"
+  },
+  {
+    "name": "combat_fx_19",
+    "prompt": "Combat animation effect: stagger stun stars, orbiting daze symbols. 6-frame animation grid arranged in rows on square canvas. game visual effect sprite sheet, dark fantasy, glowing particle effects, transparent background, pixel-painterly hybrid style, animation frames arranged in a grid",
+    "w": 1024,
+    "h": 1024,
+    "out": "../../ORBEngine/assets/wial_wohm/combat_fx/combat_fx_19.png"
+  },
+  {
+    "name": "combat_fx_20",
+    "prompt": "Combat animation effect: death dissolve, creature breaking into glowing ash. 6-frame animation grid arranged in rows on square canvas. game visual effect sprite sheet, dark fantasy, glowing particle effects, transparent background, pixel-painterly hybrid style, animation frames arranged in a grid",
+    "w": 1024,
+    "h": 1024,
+    "out": "../../ORBEngine/assets/wial_wohm/combat_fx/combat_fx_20.png"
+  },
+  {
+    "name": "combat_fx_21",
+    "prompt": "Combat animation effect: summon circle, arcane glyphs rotating and glowing. 6-frame animation grid arranged in rows on square canvas. game visual effect sprite sheet, dark fantasy, glowing particle effects, transparent background, pixel-painterly hybrid style, animation frames arranged in a grid",
+    "w": 1024,
+    "h": 1024,
+    "out": "../../ORBEngine/assets/wial_wohm/combat_fx/combat_fx_21.png"
+  },
+  {
+    "name": "combat_fx_22",
+    "prompt": "Combat animation effect: ground eruption, tentacles bursting from floor. 6-frame animation grid arranged in rows on square canvas. game visual effect sprite sheet, dark fantasy, glowing particle effects, transparent background, pixel-painterly hybrid style, animation frames arranged in a grid",
+    "w": 1024,
+    "h": 1024,
+    "out": "../../ORBEngine/assets/wial_wohm/combat_fx/combat_fx_22.png"
+  },
+  {
+    "name": "combat_fx_23",
+    "prompt": "Combat animation effect: sonic screech wave, concentric distortion rings. 6-frame animation grid arranged in rows on square canvas. game visual effect sprite sheet, dark fantasy, glowing particle effects, transparent background, pixel-painterly hybrid style, animation frames arranged in a grid",
+    "w": 1024,
+    "h": 1024,
+    "out": "../../ORBEngine/assets/wial_wohm/combat_fx/combat_fx_23.png"
+  },
+  {
+    "name": "combat_fx_24",
+    "prompt": "Combat animation effect: shadow teleport, dark mist implode and explode. 6-frame animation grid arranged in rows on square canvas. game visual effect sprite sheet, dark fantasy, glowing particle effects, transparent background, pixel-painterly hybrid style, animation frames arranged in a grid",
+    "w": 1024,
+    "h": 1024,
+    "out": "../../ORBEngine/assets/wial_wohm/combat_fx/combat_fx_24.png"
+  },
+  {
+    "name": "combat_fx_25",
+    "prompt": "Combat animation effect: ultimate burst, massive radial energy nova with debris. 6-frame animation grid arranged in rows on square canvas. game visual effect sprite sheet, dark fantasy, glowing particle effects, transparent background, pixel-painterly hybrid style, animation frames arranged in a grid",
+    "w": 1024,
+    "h": 1024,
+    "out": "../../ORBEngine/assets/wial_wohm/combat_fx/combat_fx_25.png"
+  },
+  {
+    "name": "nav_gloom_caverns_corridor_forward",
+    "prompt": "First-person navigation view: straight corridor stretching ahead, walls converging to a distant vanishing point. Environment: dark wet limestone caverns, dripping stalactites, phosphorescent fungus on walls, underground river mist. Dark atmospheric lighting, detailed wall and floor textures. first-person dungeon view, Shadowgate-style, dark atmospheric perspective, painterly digital art, moody lighting with volumetric fog, game navigation panel",
+    "w": 1344,
+    "h": 768,
+    "out": "../../ORBEngine/assets/wial_wohm/navigation/gloom_caverns/gloom_caverns_corridor_forward.png"
+  },
+  {
+    "name": "nav_gloom_caverns_t_intersection",
+    "prompt": "First-person navigation view: T-shaped intersection, corridor branching left and right with a wall ahead. Environment: dark wet limestone caverns, dripping stalactites, phosphorescent fungus on walls, underground river mist. Dark atmospheric lighting, detailed wall and floor textures. first-person dungeon view, Shadowgate-style, dark atmospheric perspective, painterly digital art, moody lighting with volumetric fog, game navigation panel",
+    "w": 1344,
+    "h": 768,
+    "out": "../../ORBEngine/assets/wial_wohm/navigation/gloom_caverns/gloom_caverns_t_intersection.png"
+  },
+  {
+    "name": "nav_gloom_caverns_left_turn",
+    "prompt": "First-person navigation view: corridor turning sharply to the left, right wall visible ahead. Environment: dark wet limestone caverns, dripping stalactites, phosphorescent fungus on walls, underground river mist. Dark atmospheric lighting, detailed wall and floor textures. first-person dungeon view, Shadowgate-style, dark atmospheric perspective, painterly digital art, moody lighting with volumetric fog, game navigation panel",
+    "w": 1344,
+    "h": 768,
+    "out": "../../ORBEngine/assets/wial_wohm/navigation/gloom_caverns/gloom_caverns_left_turn.png"
+  },
+  {
+    "name": "nav_gloom_caverns_right_turn",
+    "prompt": "First-person navigation view: corridor turning sharply to the right, left wall visible ahead. Environment: dark wet limestone caverns, dripping stalactites, phosphorescent fungus on walls, underground river mist. Dark atmospheric lighting, detailed wall and floor textures. first-person dungeon view, Shadowgate-style, dark atmospheric perspective, painterly digital art, moody lighting with volumetric fog, game navigation panel",
+    "w": 1344,
+    "h": 768,
+    "out": "../../ORBEngine/assets/wial_wohm/navigation/gloom_caverns/gloom_caverns_right_turn.png"
+  },
+  {
+    "name": "nav_gloom_caverns_dead_end",
+    "prompt": "First-person navigation view: dead end with ornate wall detail, no passage forward. Environment: dark wet limestone caverns, dripping stalactites, phosphorescent fungus on walls, underground river mist. Dark atmospheric lighting, detailed wall and floor textures. first-person dungeon view, Shadowgate-style, dark atmospheric perspective, painterly digital art, moody lighting with volumetric fog, game navigation panel",
+    "w": 1344,
+    "h": 768,
+    "out": "../../ORBEngine/assets/wial_wohm/navigation/gloom_caverns/gloom_caverns_dead_end.png"
+  },
+  {
+    "name": "nav_gloom_caverns_stairs_down",
+    "prompt": "First-person navigation view: stone staircase descending into deeper darkness. Environment: dark wet limestone caverns, dripping stalactites, phosphorescent fungus on walls, underground river mist. Dark atmospheric lighting, detailed wall and floor textures. first-person dungeon view, Shadowgate-style, dark atmospheric perspective, painterly digital art, moody lighting with volumetric fog, game navigation panel",
+    "w": 1344,
+    "h": 768,
+    "out": "../../ORBEngine/assets/wial_wohm/navigation/gloom_caverns/gloom_caverns_stairs_down.png"
+  },
+  {
+    "name": "nav_gloom_caverns_stairs_up",
+    "prompt": "First-person navigation view: stone staircase ascending toward faint light above. Environment: dark wet limestone caverns, dripping stalactites, phosphorescent fungus on walls, underground river mist. Dark atmospheric lighting, detailed wall and floor textures. first-person dungeon view, Shadowgate-style, dark atmospheric perspective, painterly digital art, moody lighting with volumetric fog, game navigation panel",
+    "w": 1344,
+    "h": 768,
+    "out": "../../ORBEngine/assets/wial_wohm/navigation/gloom_caverns/gloom_caverns_stairs_up.png"
+  },
+  {
+    "name": "nav_gloom_caverns_door_closed",
+    "prompt": "First-person navigation view: massive closed door or gate blocking the passage, ornate carvings. Environment: dark wet limestone caverns, dripping stalactites, phosphorescent fungus on walls, underground river mist. Dark atmospheric lighting, detailed wall and floor textures. first-person dungeon view, Shadowgate-style, dark atmospheric perspective, painterly digital art, moody lighting with volumetric fog, game navigation panel",
+    "w": 1344,
+    "h": 768,
+    "out": "../../ORBEngine/assets/wial_wohm/navigation/gloom_caverns/gloom_caverns_door_closed.png"
+  },
+  {
+    "name": "nav_gloom_caverns_door_open",
+    "prompt": "First-person navigation view: doorway standing open revealing a chamber beyond, light spilling through. Environment: dark wet limestone caverns, dripping stalactites, phosphorescent fungus on walls, underground river mist. Dark atmospheric lighting, detailed wall and floor textures. first-person dungeon view, Shadowgate-style, dark atmospheric perspective, painterly digital art, moody lighting with volumetric fog, game navigation panel",
+    "w": 1344,
+    "h": 768,
+    "out": "../../ORBEngine/assets/wial_wohm/navigation/gloom_caverns/gloom_caverns_door_open.png"
+  },
+  {
+    "name": "nav_gloom_caverns_large_chamber",
+    "prompt": "First-person navigation view: vast open chamber with high ceiling, pillars, and distant walls. Environment: dark wet limestone caverns, dripping stalactites, phosphorescent fungus on walls, underground river mist. Dark atmospheric lighting, detailed wall and floor textures. first-person dungeon view, Shadowgate-style, dark atmospheric perspective, painterly digital art, moody lighting with volumetric fog, game navigation panel",
+    "w": 1344,
+    "h": 768,
+    "out": "../../ORBEngine/assets/wial_wohm/navigation/gloom_caverns/gloom_caverns_large_chamber.png"
+  },
+  {
+    "name": "nav_gloom_caverns_narrow_passage",
+    "prompt": "First-person navigation view: tight narrow passage barely wide enough to squeeze through. Environment: dark wet limestone caverns, dripping stalactites, phosphorescent fungus on walls, underground river mist. Dark atmospheric lighting, detailed wall and floor textures. first-person dungeon view, Shadowgate-style, dark atmospheric perspective, painterly digital art, moody lighting with volumetric fog, game navigation panel",
+    "w": 1344,
+    "h": 768,
+    "out": "../../ORBEngine/assets/wial_wohm/navigation/gloom_caverns/gloom_caverns_narrow_passage.png"
+  },
+  {
+    "name": "nav_gloom_caverns_special_feature",
+    "prompt": "First-person navigation view: unique environmental feature: altar, machine, or anomaly in a small room. Environment: dark wet limestone caverns, dripping stalactites, phosphorescent fungus on walls, underground river mist. Dark atmospheric lighting, detailed wall and floor textures. first-person dungeon view, Shadowgate-style, dark atmospheric perspective, painterly digital art, moody lighting with volumetric fog, game navigation panel",
+    "w": 1344,
+    "h": 768,
+    "out": "../../ORBEngine/assets/wial_wohm/navigation/gloom_caverns/gloom_caverns_special_feature.png"
+  },
+  {
+    "name": "nav_sunken_temple_corridor_forward",
+    "prompt": "First-person navigation view: straight corridor stretching ahead, walls converging to a distant vanishing point. Environment: submerged ancient temple, barnacle-crusted stone columns, faded murals, waterlogged corridors lit by eerie green light. Dark atmospheric lighting, detailed wall and floor textures. first-person dungeon view, Shadowgate-style, dark atmospheric perspective, painterly digital art, moody lighting with volumetric fog, game navigation panel",
+    "w": 1344,
+    "h": 768,
+    "out": "../../ORBEngine/assets/wial_wohm/navigation/sunken_temple/sunken_temple_corridor_forward.png"
+  },
+  {
+    "name": "nav_sunken_temple_t_intersection",
+    "prompt": "First-person navigation view: T-shaped intersection, corridor branching left and right with a wall ahead. Environment: submerged ancient temple, barnacle-crusted stone columns, faded murals, waterlogged corridors lit by eerie green light. Dark atmospheric lighting, detailed wall and floor textures. first-person dungeon view, Shadowgate-style, dark atmospheric perspective, painterly digital art, moody lighting with volumetric fog, game navigation panel",
+    "w": 1344,
+    "h": 768,
+    "out": "../../ORBEngine/assets/wial_wohm/navigation/sunken_temple/sunken_temple_t_intersection.png"
+  },
+  {
+    "name": "nav_sunken_temple_left_turn",
+    "prompt": "First-person navigation view: corridor turning sharply to the left, right wall visible ahead. Environment: submerged ancient temple, barnacle-crusted stone columns, faded murals, waterlogged corridors lit by eerie green light. Dark atmospheric lighting, detailed wall and floor textures. first-person dungeon view, Shadowgate-style, dark atmospheric perspective, painterly digital art, moody lighting with volumetric fog, game navigation panel",
+    "w": 1344,
+    "h": 768,
+    "out": "../../ORBEngine/assets/wial_wohm/navigation/sunken_temple/sunken_temple_left_turn.png"
+  },
+  {
+    "name": "nav_sunken_temple_right_turn",
+    "prompt": "First-person navigation view: corridor turning sharply to the right, left wall visible ahead. Environment: submerged ancient temple, barnacle-crusted stone columns, faded murals, waterlogged corridors lit by eerie green light. Dark atmospheric lighting, detailed wall and floor textures. first-person dungeon view, Shadowgate-style, dark atmospheric perspective, painterly digital art, moody lighting with volumetric fog, game navigation panel",
+    "w": 1344,
+    "h": 768,
+    "out": "../../ORBEngine/assets/wial_wohm/navigation/sunken_temple/sunken_temple_right_turn.png"
+  },
+  {
+    "name": "nav_sunken_temple_dead_end",
+    "prompt": "First-person navigation view: dead end with ornate wall detail, no passage forward. Environment: submerged ancient temple, barnacle-crusted stone columns, faded murals, waterlogged corridors lit by eerie green light. Dark atmospheric lighting, detailed wall and floor textures. first-person dungeon view, Shadowgate-style, dark atmospheric perspective, painterly digital art, moody lighting with volumetric fog, game navigation panel",
+    "w": 1344,
+    "h": 768,
+    "out": "../../ORBEngine/assets/wial_wohm/navigation/sunken_temple/sunken_temple_dead_end.png"
+  },
+  {
+    "name": "nav_sunken_temple_stairs_down",
+    "prompt": "First-person navigation view: stone staircase descending into deeper darkness. Environment: submerged ancient temple, barnacle-crusted stone columns, faded murals, waterlogged corridors lit by eerie green light. Dark atmospheric lighting, detailed wall and floor textures. first-person dungeon view, Shadowgate-style, dark atmospheric perspective, painterly digital art, moody lighting with volumetric fog, game navigation panel",
+    "w": 1344,
+    "h": 768,
+    "out": "../../ORBEngine/assets/wial_wohm/navigation/sunken_temple/sunken_temple_stairs_down.png"
+  },
+  {
+    "name": "nav_sunken_temple_stairs_up",
+    "prompt": "First-person navigation view: stone staircase ascending toward faint light above. Environment: submerged ancient temple, barnacle-crusted stone columns, faded murals, waterlogged corridors lit by eerie green light. Dark atmospheric lighting, detailed wall and floor textures. first-person dungeon view, Shadowgate-style, dark atmospheric perspective, painterly digital art, moody lighting with volumetric fog, game navigation panel",
+    "w": 1344,
+    "h": 768,
+    "out": "../../ORBEngine/assets/wial_wohm/navigation/sunken_temple/sunken_temple_stairs_up.png"
+  },
+  {
+    "name": "nav_sunken_temple_door_closed",
+    "prompt": "First-person navigation view: massive closed door or gate blocking the passage, ornate carvings. Environment: submerged ancient temple, barnacle-crusted stone columns, faded murals, waterlogged corridors lit by eerie green light. Dark atmospheric lighting, detailed wall and floor textures. first-person dungeon view, Shadowgate-style, dark atmospheric perspective, painterly digital art, moody lighting with volumetric fog, game navigation panel",
+    "w": 1344,
+    "h": 768,
+    "out": "../../ORBEngine/assets/wial_wohm/navigation/sunken_temple/sunken_temple_door_closed.png"
+  },
+  {
+    "name": "nav_sunken_temple_door_open",
+    "prompt": "First-person navigation view: doorway standing open revealing a chamber beyond, light spilling through. Environment: submerged ancient temple, barnacle-crusted stone columns, faded murals, waterlogged corridors lit by eerie green light. Dark atmospheric lighting, detailed wall and floor textures. first-person dungeon view, Shadowgate-style, dark atmospheric perspective, painterly digital art, moody lighting with volumetric fog, game navigation panel",
+    "w": 1344,
+    "h": 768,
+    "out": "../../ORBEngine/assets/wial_wohm/navigation/sunken_temple/sunken_temple_door_open.png"
+  },
+  {
+    "name": "nav_sunken_temple_large_chamber",
+    "prompt": "First-person navigation view: vast open chamber with high ceiling, pillars, and distant walls. Environment: submerged ancient temple, barnacle-crusted stone columns, faded murals, waterlogged corridors lit by eerie green light. Dark atmospheric lighting, detailed wall and floor textures. first-person dungeon view, Shadowgate-style, dark atmospheric perspective, painterly digital art, moody lighting with volumetric fog, game navigation panel",
+    "w": 1344,
+    "h": 768,
+    "out": "../../ORBEngine/assets/wial_wohm/navigation/sunken_temple/sunken_temple_large_chamber.png"
+  },
+  {
+    "name": "nav_sunken_temple_narrow_passage",
+    "prompt": "First-person navigation view: tight narrow passage barely wide enough to squeeze through. Environment: submerged ancient temple, barnacle-crusted stone columns, faded murals, waterlogged corridors lit by eerie green light. Dark atmospheric lighting, detailed wall and floor textures. first-person dungeon view, Shadowgate-style, dark atmospheric perspective, painterly digital art, moody lighting with volumetric fog, game navigation panel",
+    "w": 1344,
+    "h": 768,
+    "out": "../../ORBEngine/assets/wial_wohm/navigation/sunken_temple/sunken_temple_narrow_passage.png"
+  },
+  {
+    "name": "nav_sunken_temple_special_feature",
+    "prompt": "First-person navigation view: unique environmental feature: altar, machine, or anomaly in a small room. Environment: submerged ancient temple, barnacle-crusted stone columns, faded murals, waterlogged corridors lit by eerie green light. Dark atmospheric lighting, detailed wall and floor textures. first-person dungeon view, Shadowgate-style, dark atmospheric perspective, painterly digital art, moody lighting with volumetric fog, game navigation panel",
+    "w": 1344,
+    "h": 768,
+    "out": "../../ORBEngine/assets/wial_wohm/navigation/sunken_temple/sunken_temple_special_feature.png"
+  },
+  {
+    "name": "nav_mausoleum_corridor_forward",
+    "prompt": "First-person navigation view: straight corridor stretching ahead, walls converging to a distant vanishing point. Environment: decrepit stone mausoleum, cracked sarcophagi along walls, cobwebs, faded inscriptions, dim candle glow. Dark atmospheric lighting, detailed wall and floor textures. first-person dungeon view, Shadowgate-style, dark atmospheric perspective, painterly digital art, moody lighting with volumetric fog, game navigation panel",
+    "w": 1344,
+    "h": 768,
+    "out": "../../ORBEngine/assets/wial_wohm/navigation/mausoleum/mausoleum_corridor_forward.png"
+  },
+  {
+    "name": "nav_mausoleum_t_intersection",
+    "prompt": "First-person navigation view: T-shaped intersection, corridor branching left and right with a wall ahead. Environment: decrepit stone mausoleum, cracked sarcophagi along walls, cobwebs, faded inscriptions, dim candle glow. Dark atmospheric lighting, detailed wall and floor textures. first-person dungeon view, Shadowgate-style, dark atmospheric perspective, painterly digital art, moody lighting with volumetric fog, game navigation panel",
+    "w": 1344,
+    "h": 768,
+    "out": "../../ORBEngine/assets/wial_wohm/navigation/mausoleum/mausoleum_t_intersection.png"
+  },
+  {
+    "name": "nav_mausoleum_left_turn",
+    "prompt": "First-person navigation view: corridor turning sharply to the left, right wall visible ahead. Environment: decrepit stone mausoleum, cracked sarcophagi along walls, cobwebs, faded inscriptions, dim candle glow. Dark atmospheric lighting, detailed wall and floor textures. first-person dungeon view, Shadowgate-style, dark atmospheric perspective, painterly digital art, moody lighting with volumetric fog, game navigation panel",
+    "w": 1344,
+    "h": 768,
+    "out": "../../ORBEngine/assets/wial_wohm/navigation/mausoleum/mausoleum_left_turn.png"
+  },
+  {
+    "name": "nav_mausoleum_right_turn",
+    "prompt": "First-person navigation view: corridor turning sharply to the right, left wall visible ahead. Environment: decrepit stone mausoleum, cracked sarcophagi along walls, cobwebs, faded inscriptions, dim candle glow. Dark atmospheric lighting, detailed wall and floor textures. first-person dungeon view, Shadowgate-style, dark atmospheric perspective, painterly digital art, moody lighting with volumetric fog, game navigation panel",
+    "w": 1344,
+    "h": 768,
+    "out": "../../ORBEngine/assets/wial_wohm/navigation/mausoleum/mausoleum_right_turn.png"
+  },
+  {
+    "name": "nav_mausoleum_dead_end",
+    "prompt": "First-person navigation view: dead end with ornate wall detail, no passage forward. Environment: decrepit stone mausoleum, cracked sarcophagi along walls, cobwebs, faded inscriptions, dim candle glow. Dark atmospheric lighting, detailed wall and floor textures. first-person dungeon view, Shadowgate-style, dark atmospheric perspective, painterly digital art, moody lighting with volumetric fog, game navigation panel",
+    "w": 1344,
+    "h": 768,
+    "out": "../../ORBEngine/assets/wial_wohm/navigation/mausoleum/mausoleum_dead_end.png"
+  },
+  {
+    "name": "nav_mausoleum_stairs_down",
+    "prompt": "First-person navigation view: stone staircase descending into deeper darkness. Environment: decrepit stone mausoleum, cracked sarcophagi along walls, cobwebs, faded inscriptions, dim candle glow. Dark atmospheric lighting, detailed wall and floor textures. first-person dungeon view, Shadowgate-style, dark atmospheric perspective, painterly digital art, moody lighting with volumetric fog, game navigation panel",
+    "w": 1344,
+    "h": 768,
+    "out": "../../ORBEngine/assets/wial_wohm/navigation/mausoleum/mausoleum_stairs_down.png"
+  },
+  {
+    "name": "nav_mausoleum_stairs_up",
+    "prompt": "First-person navigation view: stone staircase ascending toward faint light above. Environment: decrepit stone mausoleum, cracked sarcophagi along walls, cobwebs, faded inscriptions, dim candle glow. Dark atmospheric lighting, detailed wall and floor textures. first-person dungeon view, Shadowgate-style, dark atmospheric perspective, painterly digital art, moody lighting with volumetric fog, game navigation panel",
+    "w": 1344,
+    "h": 768,
+    "out": "../../ORBEngine/assets/wial_wohm/navigation/mausoleum/mausoleum_stairs_up.png"
+  },
+  {
+    "name": "nav_mausoleum_door_closed",
+    "prompt": "First-person navigation view: massive closed door or gate blocking the passage, ornate carvings. Environment: decrepit stone mausoleum, cracked sarcophagi along walls, cobwebs, faded inscriptions, dim candle glow. Dark atmospheric lighting, detailed wall and floor textures. first-person dungeon view, Shadowgate-style, dark atmospheric perspective, painterly digital art, moody lighting with volumetric fog, game navigation panel",
+    "w": 1344,
+    "h": 768,
+    "out": "../../ORBEngine/assets/wial_wohm/navigation/mausoleum/mausoleum_door_closed.png"
+  },
+  {
+    "name": "nav_mausoleum_door_open",
+    "prompt": "First-person navigation view: doorway standing open revealing a chamber beyond, light spilling through. Environment: decrepit stone mausoleum, cracked sarcophagi along walls, cobwebs, faded inscriptions, dim candle glow. Dark atmospheric lighting, detailed wall and floor textures. first-person dungeon view, Shadowgate-style, dark atmospheric perspective, painterly digital art, moody lighting with volumetric fog, game navigation panel",
+    "w": 1344,
+    "h": 768,
+    "out": "../../ORBEngine/assets/wial_wohm/navigation/mausoleum/mausoleum_door_open.png"
+  },
+  {
+    "name": "nav_mausoleum_large_chamber",
+    "prompt": "First-person navigation view: vast open chamber with high ceiling, pillars, and distant walls. Environment: decrepit stone mausoleum, cracked sarcophagi along walls, cobwebs, faded inscriptions, dim candle glow. Dark atmospheric lighting, detailed wall and floor textures. first-person dungeon view, Shadowgate-style, dark atmospheric perspective, painterly digital art, moody lighting with volumetric fog, game navigation panel",
+    "w": 1344,
+    "h": 768,
+    "out": "../../ORBEngine/assets/wial_wohm/navigation/mausoleum/mausoleum_large_chamber.png"
+  },
+  {
+    "name": "nav_mausoleum_narrow_passage",
+    "prompt": "First-person navigation view: tight narrow passage barely wide enough to squeeze through. Environment: decrepit stone mausoleum, cracked sarcophagi along walls, cobwebs, faded inscriptions, dim candle glow. Dark atmospheric lighting, detailed wall and floor textures. first-person dungeon view, Shadowgate-style, dark atmospheric perspective, painterly digital art, moody lighting with volumetric fog, game navigation panel",
+    "w": 1344,
+    "h": 768,
+    "out": "../../ORBEngine/assets/wial_wohm/navigation/mausoleum/mausoleum_narrow_passage.png"
+  },
+  {
+    "name": "nav_mausoleum_special_feature",
+    "prompt": "First-person navigation view: unique environmental feature: altar, machine, or anomaly in a small room. Environment: decrepit stone mausoleum, cracked sarcophagi along walls, cobwebs, faded inscriptions, dim candle glow. Dark atmospheric lighting, detailed wall and floor textures. first-person dungeon view, Shadowgate-style, dark atmospheric perspective, painterly digital art, moody lighting with volumetric fog, game navigation panel",
+    "w": 1344,
+    "h": 768,
+    "out": "../../ORBEngine/assets/wial_wohm/navigation/mausoleum/mausoleum_special_feature.png"
+  },
+  {
+    "name": "nav_sewer_corridor_forward",
+    "prompt": "First-person navigation view: straight corridor stretching ahead, walls converging to a distant vanishing point. Environment: industrial sewer tunnels, rusted pipes and grates, flowing murky water, chain-link fences, flickering utility lights. Dark atmospheric lighting, detailed wall and floor textures. first-person dungeon view, Shadowgate-style, dark atmospheric perspective, painterly digital art, moody lighting with volumetric fog, game navigation panel",
+    "w": 1344,
+    "h": 768,
+    "out": "../../ORBEngine/assets/wial_wohm/navigation/sewer/sewer_corridor_forward.png"
+  },
+  {
+    "name": "nav_sewer_t_intersection",
+    "prompt": "First-person navigation view: T-shaped intersection, corridor branching left and right with a wall ahead. Environment: industrial sewer tunnels, rusted pipes and grates, flowing murky water, chain-link fences, flickering utility lights. Dark atmospheric lighting, detailed wall and floor textures. first-person dungeon view, Shadowgate-style, dark atmospheric perspective, painterly digital art, moody lighting with volumetric fog, game navigation panel",
+    "w": 1344,
+    "h": 768,
+    "out": "../../ORBEngine/assets/wial_wohm/navigation/sewer/sewer_t_intersection.png"
+  },
+  {
+    "name": "nav_sewer_left_turn",
+    "prompt": "First-person navigation view: corridor turning sharply to the left, right wall visible ahead. Environment: industrial sewer tunnels, rusted pipes and grates, flowing murky water, chain-link fences, flickering utility lights. Dark atmospheric lighting, detailed wall and floor textures. first-person dungeon view, Shadowgate-style, dark atmospheric perspective, painterly digital art, moody lighting with volumetric fog, game navigation panel",
+    "w": 1344,
+    "h": 768,
+    "out": "../../ORBEngine/assets/wial_wohm/navigation/sewer/sewer_left_turn.png"
+  },
+  {
+    "name": "nav_sewer_right_turn",
+    "prompt": "First-person navigation view: corridor turning sharply to the right, left wall visible ahead. Environment: industrial sewer tunnels, rusted pipes and grates, flowing murky water, chain-link fences, flickering utility lights. Dark atmospheric lighting, detailed wall and floor textures. first-person dungeon view, Shadowgate-style, dark atmospheric perspective, painterly digital art, moody lighting with volumetric fog, game navigation panel",
+    "w": 1344,
+    "h": 768,
+    "out": "../../ORBEngine/assets/wial_wohm/navigation/sewer/sewer_right_turn.png"
+  },
+  {
+    "name": "nav_sewer_dead_end",
+    "prompt": "First-person navigation view: dead end with ornate wall detail, no passage forward. Environment: industrial sewer tunnels, rusted pipes and grates, flowing murky water, chain-link fences, flickering utility lights. Dark atmospheric lighting, detailed wall and floor textures. first-person dungeon view, Shadowgate-style, dark atmospheric perspective, painterly digital art, moody lighting with volumetric fog, game navigation panel",
+    "w": 1344,
+    "h": 768,
+    "out": "../../ORBEngine/assets/wial_wohm/navigation/sewer/sewer_dead_end.png"
+  },
+  {
+    "name": "nav_sewer_stairs_down",
+    "prompt": "First-person navigation view: stone staircase descending into deeper darkness. Environment: industrial sewer tunnels, rusted pipes and grates, flowing murky water, chain-link fences, flickering utility lights. Dark atmospheric lighting, detailed wall and floor textures. first-person dungeon view, Shadowgate-style, dark atmospheric perspective, painterly digital art, moody lighting with volumetric fog, game navigation panel",
+    "w": 1344,
+    "h": 768,
+    "out": "../../ORBEngine/assets/wial_wohm/navigation/sewer/sewer_stairs_down.png"
+  },
+  {
+    "name": "nav_sewer_stairs_up",
+    "prompt": "First-person navigation view: stone staircase ascending toward faint light above. Environment: industrial sewer tunnels, rusted pipes and grates, flowing murky water, chain-link fences, flickering utility lights. Dark atmospheric lighting, detailed wall and floor textures. first-person dungeon view, Shadowgate-style, dark atmospheric perspective, painterly digital art, moody lighting with volumetric fog, game navigation panel",
+    "w": 1344,
+    "h": 768,
+    "out": "../../ORBEngine/assets/wial_wohm/navigation/sewer/sewer_stairs_up.png"
+  },
+  {
+    "name": "nav_sewer_door_closed",
+    "prompt": "First-person navigation view: massive closed door or gate blocking the passage, ornate carvings. Environment: industrial sewer tunnels, rusted pipes and grates, flowing murky water, chain-link fences, flickering utility lights. Dark atmospheric lighting, detailed wall and floor textures. first-person dungeon view, Shadowgate-style, dark atmospheric perspective, painterly digital art, moody lighting with volumetric fog, game navigation panel",
+    "w": 1344,
+    "h": 768,
+    "out": "../../ORBEngine/assets/wial_wohm/navigation/sewer/sewer_door_closed.png"
+  },
+  {
+    "name": "nav_sewer_door_open",
+    "prompt": "First-person navigation view: doorway standing open revealing a chamber beyond, light spilling through. Environment: industrial sewer tunnels, rusted pipes and grates, flowing murky water, chain-link fences, flickering utility lights. Dark atmospheric lighting, detailed wall and floor textures. first-person dungeon view, Shadowgate-style, dark atmospheric perspective, painterly digital art, moody lighting with volumetric fog, game navigation panel",
+    "w": 1344,
+    "h": 768,
+    "out": "../../ORBEngine/assets/wial_wohm/navigation/sewer/sewer_door_open.png"
+  },
+  {
+    "name": "nav_sewer_large_chamber",
+    "prompt": "First-person navigation view: vast open chamber with high ceiling, pillars, and distant walls. Environment: industrial sewer tunnels, rusted pipes and grates, flowing murky water, chain-link fences, flickering utility lights. Dark atmospheric lighting, detailed wall and floor textures. first-person dungeon view, Shadowgate-style, dark atmospheric perspective, painterly digital art, moody lighting with volumetric fog, game navigation panel",
+    "w": 1344,
+    "h": 768,
+    "out": "../../ORBEngine/assets/wial_wohm/navigation/sewer/sewer_large_chamber.png"
+  },
+  {
+    "name": "nav_sewer_narrow_passage",
+    "prompt": "First-person navigation view: tight narrow passage barely wide enough to squeeze through. Environment: industrial sewer tunnels, rusted pipes and grates, flowing murky water, chain-link fences, flickering utility lights. Dark atmospheric lighting, detailed wall and floor textures. first-person dungeon view, Shadowgate-style, dark atmospheric perspective, painterly digital art, moody lighting with volumetric fog, game navigation panel",
+    "w": 1344,
+    "h": 768,
+    "out": "../../ORBEngine/assets/wial_wohm/navigation/sewer/sewer_narrow_passage.png"
+  },
+  {
+    "name": "nav_sewer_special_feature",
+    "prompt": "First-person navigation view: unique environmental feature: altar, machine, or anomaly in a small room. Environment: industrial sewer tunnels, rusted pipes and grates, flowing murky water, chain-link fences, flickering utility lights. Dark atmospheric lighting, detailed wall and floor textures. first-person dungeon view, Shadowgate-style, dark atmospheric perspective, painterly digital art, moody lighting with volumetric fog, game navigation panel",
+    "w": 1344,
+    "h": 768,
+    "out": "../../ORBEngine/assets/wial_wohm/navigation/sewer/sewer_special_feature.png"
+  },
+  {
+    "name": "nav_frost_cavern_corridor_forward",
+    "prompt": "First-person navigation view: straight corridor stretching ahead, walls converging to a distant vanishing point. Environment: frozen ice cavern, crystalline walls, icicle formations, pale blue ambient glow, frost-covered stone floor. Dark atmospheric lighting, detailed wall and floor textures. first-person dungeon view, Shadowgate-style, dark atmospheric perspective, painterly digital art, moody lighting with volumetric fog, game navigation panel",
+    "w": 1344,
+    "h": 768,
+    "out": "../../ORBEngine/assets/wial_wohm/navigation/frost_cavern/frost_cavern_corridor_forward.png"
+  },
+  {
+    "name": "nav_frost_cavern_t_intersection",
+    "prompt": "First-person navigation view: T-shaped intersection, corridor branching left and right with a wall ahead. Environment: frozen ice cavern, crystalline walls, icicle formations, pale blue ambient glow, frost-covered stone floor. Dark atmospheric lighting, detailed wall and floor textures. first-person dungeon view, Shadowgate-style, dark atmospheric perspective, painterly digital art, moody lighting with volumetric fog, game navigation panel",
+    "w": 1344,
+    "h": 768,
+    "out": "../../ORBEngine/assets/wial_wohm/navigation/frost_cavern/frost_cavern_t_intersection.png"
+  },
+  {
+    "name": "nav_frost_cavern_left_turn",
+    "prompt": "First-person navigation view: corridor turning sharply to the left, right wall visible ahead. Environment: frozen ice cavern, crystalline walls, icicle formations, pale blue ambient glow, frost-covered stone floor. Dark atmospheric lighting, detailed wall and floor textures. first-person dungeon view, Shadowgate-style, dark atmospheric perspective, painterly digital art, moody lighting with volumetric fog, game navigation panel",
+    "w": 1344,
+    "h": 768,
+    "out": "../../ORBEngine/assets/wial_wohm/navigation/frost_cavern/frost_cavern_left_turn.png"
+  },
+  {
+    "name": "nav_frost_cavern_right_turn",
+    "prompt": "First-person navigation view: corridor turning sharply to the right, left wall visible ahead. Environment: frozen ice cavern, crystalline walls, icicle formations, pale blue ambient glow, frost-covered stone floor. Dark atmospheric lighting, detailed wall and floor textures. first-person dungeon view, Shadowgate-style, dark atmospheric perspective, painterly digital art, moody lighting with volumetric fog, game navigation panel",
+    "w": 1344,
+    "h": 768,
+    "out": "../../ORBEngine/assets/wial_wohm/navigation/frost_cavern/frost_cavern_right_turn.png"
+  },
+  {
+    "name": "nav_frost_cavern_dead_end",
+    "prompt": "First-person navigation view: dead end with ornate wall detail, no passage forward. Environment: frozen ice cavern, crystalline walls, icicle formations, pale blue ambient glow, frost-covered stone floor. Dark atmospheric lighting, detailed wall and floor textures. first-person dungeon view, Shadowgate-style, dark atmospheric perspective, painterly digital art, moody lighting with volumetric fog, game navigation panel",
+    "w": 1344,
+    "h": 768,
+    "out": "../../ORBEngine/assets/wial_wohm/navigation/frost_cavern/frost_cavern_dead_end.png"
+  },
+  {
+    "name": "nav_frost_cavern_stairs_down",
+    "prompt": "First-person navigation view: stone staircase descending into deeper darkness. Environment: frozen ice cavern, crystalline walls, icicle formations, pale blue ambient glow, frost-covered stone floor. Dark atmospheric lighting, detailed wall and floor textures. first-person dungeon view, Shadowgate-style, dark atmospheric perspective, painterly digital art, moody lighting with volumetric fog, game navigation panel",
+    "w": 1344,
+    "h": 768,
+    "out": "../../ORBEngine/assets/wial_wohm/navigation/frost_cavern/frost_cavern_stairs_down.png"
+  },
+  {
+    "name": "nav_frost_cavern_stairs_up",
+    "prompt": "First-person navigation view: stone staircase ascending toward faint light above. Environment: frozen ice cavern, crystalline walls, icicle formations, pale blue ambient glow, frost-covered stone floor. Dark atmospheric lighting, detailed wall and floor textures. first-person dungeon view, Shadowgate-style, dark atmospheric perspective, painterly digital art, moody lighting with volumetric fog, game navigation panel",
+    "w": 1344,
+    "h": 768,
+    "out": "../../ORBEngine/assets/wial_wohm/navigation/frost_cavern/frost_cavern_stairs_up.png"
+  },
+  {
+    "name": "nav_frost_cavern_door_closed",
+    "prompt": "First-person navigation view: massive closed door or gate blocking the passage, ornate carvings. Environment: frozen ice cavern, crystalline walls, icicle formations, pale blue ambient glow, frost-covered stone floor. Dark atmospheric lighting, detailed wall and floor textures. first-person dungeon view, Shadowgate-style, dark atmospheric perspective, painterly digital art, moody lighting with volumetric fog, game navigation panel",
+    "w": 1344,
+    "h": 768,
+    "out": "../../ORBEngine/assets/wial_wohm/navigation/frost_cavern/frost_cavern_door_closed.png"
+  },
+  {
+    "name": "nav_frost_cavern_door_open",
+    "prompt": "First-person navigation view: doorway standing open revealing a chamber beyond, light spilling through. Environment: frozen ice cavern, crystalline walls, icicle formations, pale blue ambient glow, frost-covered stone floor. Dark atmospheric lighting, detailed wall and floor textures. first-person dungeon view, Shadowgate-style, dark atmospheric perspective, painterly digital art, moody lighting with volumetric fog, game navigation panel",
+    "w": 1344,
+    "h": 768,
+    "out": "../../ORBEngine/assets/wial_wohm/navigation/frost_cavern/frost_cavern_door_open.png"
+  },
+  {
+    "name": "nav_frost_cavern_large_chamber",
+    "prompt": "First-person navigation view: vast open chamber with high ceiling, pillars, and distant walls. Environment: frozen ice cavern, crystalline walls, icicle formations, pale blue ambient glow, frost-covered stone floor. Dark atmospheric lighting, detailed wall and floor textures. first-person dungeon view, Shadowgate-style, dark atmospheric perspective, painterly digital art, moody lighting with volumetric fog, game navigation panel",
+    "w": 1344,
+    "h": 768,
+    "out": "../../ORBEngine/assets/wial_wohm/navigation/frost_cavern/frost_cavern_large_chamber.png"
+  },
+  {
+    "name": "nav_frost_cavern_narrow_passage",
+    "prompt": "First-person navigation view: tight narrow passage barely wide enough to squeeze through. Environment: frozen ice cavern, crystalline walls, icicle formations, pale blue ambient glow, frost-covered stone floor. Dark atmospheric lighting, detailed wall and floor textures. first-person dungeon view, Shadowgate-style, dark atmospheric perspective, painterly digital art, moody lighting with volumetric fog, game navigation panel",
+    "w": 1344,
+    "h": 768,
+    "out": "../../ORBEngine/assets/wial_wohm/navigation/frost_cavern/frost_cavern_narrow_passage.png"
+  },
+  {
+    "name": "nav_cyber_tunnels_corridor_forward",
+    "prompt": "First-person navigation view: straight corridor stretching ahead, walls converging to a distant vanishing point. Environment: cyberpunk maintenance tunnels, exposed wiring and conduits, neon signage, holographic graffiti, steam vents. Dark atmospheric lighting, detailed wall and floor textures. first-person dungeon view, Shadowgate-style, dark atmospheric perspective, painterly digital art, moody lighting with volumetric fog, game navigation panel",
+    "w": 1344,
+    "h": 768,
+    "out": "../../ORBEngine/assets/wial_wohm/navigation/cyber_tunnels/cyber_tunnels_corridor_forward.png"
+  },
+  {
+    "name": "nav_cyber_tunnels_t_intersection",
+    "prompt": "First-person navigation view: T-shaped intersection, corridor branching left and right with a wall ahead. Environment: cyberpunk maintenance tunnels, exposed wiring and conduits, neon signage, holographic graffiti, steam vents. Dark atmospheric lighting, detailed wall and floor textures. first-person dungeon view, Shadowgate-style, dark atmospheric perspective, painterly digital art, moody lighting with volumetric fog, game navigation panel",
+    "w": 1344,
+    "h": 768,
+    "out": "../../ORBEngine/assets/wial_wohm/navigation/cyber_tunnels/cyber_tunnels_t_intersection.png"
+  },
+  {
+    "name": "nav_cyber_tunnels_left_turn",
+    "prompt": "First-person navigation view: corridor turning sharply to the left, right wall visible ahead. Environment: cyberpunk maintenance tunnels, exposed wiring and conduits, neon signage, holographic graffiti, steam vents. Dark atmospheric lighting, detailed wall and floor textures. first-person dungeon view, Shadowgate-style, dark atmospheric perspective, painterly digital art, moody lighting with volumetric fog, game navigation panel",
+    "w": 1344,
+    "h": 768,
+    "out": "../../ORBEngine/assets/wial_wohm/navigation/cyber_tunnels/cyber_tunnels_left_turn.png"
+  },
+  {
+    "name": "nav_cyber_tunnels_right_turn",
+    "prompt": "First-person navigation view: corridor turning sharply to the right, left wall visible ahead. Environment: cyberpunk maintenance tunnels, exposed wiring and conduits, neon signage, holographic graffiti, steam vents. Dark atmospheric lighting, detailed wall and floor textures. first-person dungeon view, Shadowgate-style, dark atmospheric perspective, painterly digital art, moody lighting with volumetric fog, game navigation panel",
+    "w": 1344,
+    "h": 768,
+    "out": "../../ORBEngine/assets/wial_wohm/navigation/cyber_tunnels/cyber_tunnels_right_turn.png"
+  },
+  {
+    "name": "nav_cyber_tunnels_dead_end",
+    "prompt": "First-person navigation view: dead end with ornate wall detail, no passage forward. Environment: cyberpunk maintenance tunnels, exposed wiring and conduits, neon signage, holographic graffiti, steam vents. Dark atmospheric lighting, detailed wall and floor textures. first-person dungeon view, Shadowgate-style, dark atmospheric perspective, painterly digital art, moody lighting with volumetric fog, game navigation panel",
+    "w": 1344,
+    "h": 768,
+    "out": "../../ORBEngine/assets/wial_wohm/navigation/cyber_tunnels/cyber_tunnels_dead_end.png"
+  },
+  {
+    "name": "nav_cyber_tunnels_stairs_down",
+    "prompt": "First-person navigation view: stone staircase descending into deeper darkness. Environment: cyberpunk maintenance tunnels, exposed wiring and conduits, neon signage, holographic graffiti, steam vents. Dark atmospheric lighting, detailed wall and floor textures. first-person dungeon view, Shadowgate-style, dark atmospheric perspective, painterly digital art, moody lighting with volumetric fog, game navigation panel",
+    "w": 1344,
+    "h": 768,
+    "out": "../../ORBEngine/assets/wial_wohm/navigation/cyber_tunnels/cyber_tunnels_stairs_down.png"
+  },
+  {
+    "name": "nav_cyber_tunnels_stairs_up",
+    "prompt": "First-person navigation view: stone staircase ascending toward faint light above. Environment: cyberpunk maintenance tunnels, exposed wiring and conduits, neon signage, holographic graffiti, steam vents. Dark atmospheric lighting, detailed wall and floor textures. first-person dungeon view, Shadowgate-style, dark atmospheric perspective, painterly digital art, moody lighting with volumetric fog, game navigation panel",
+    "w": 1344,
+    "h": 768,
+    "out": "../../ORBEngine/assets/wial_wohm/navigation/cyber_tunnels/cyber_tunnels_stairs_up.png"
+  },
+  {
+    "name": "nav_cyber_tunnels_door_closed",
+    "prompt": "First-person navigation view: massive closed door or gate blocking the passage, ornate carvings. Environment: cyberpunk maintenance tunnels, exposed wiring and conduits, neon signage, holographic graffiti, steam vents. Dark atmospheric lighting, detailed wall and floor textures. first-person dungeon view, Shadowgate-style, dark atmospheric perspective, painterly digital art, moody lighting with volumetric fog, game navigation panel",
+    "w": 1344,
+    "h": 768,
+    "out": "../../ORBEngine/assets/wial_wohm/navigation/cyber_tunnels/cyber_tunnels_door_closed.png"
+  },
+  {
+    "name": "nav_cyber_tunnels_door_open",
+    "prompt": "First-person navigation view: doorway standing open revealing a chamber beyond, light spilling through. Environment: cyberpunk maintenance tunnels, exposed wiring and conduits, neon signage, holographic graffiti, steam vents. Dark atmospheric lighting, detailed wall and floor textures. first-person dungeon view, Shadowgate-style, dark atmospheric perspective, painterly digital art, moody lighting with volumetric fog, game navigation panel",
+    "w": 1344,
+    "h": 768,
+    "out": "../../ORBEngine/assets/wial_wohm/navigation/cyber_tunnels/cyber_tunnels_door_open.png"
+  },
+  {
+    "name": "nav_cyber_tunnels_large_chamber",
+    "prompt": "First-person navigation view: vast open chamber with high ceiling, pillars, and distant walls. Environment: cyberpunk maintenance tunnels, exposed wiring and conduits, neon signage, holographic graffiti, steam vents. Dark atmospheric lighting, detailed wall and floor textures. first-person dungeon view, Shadowgate-style, dark atmospheric perspective, painterly digital art, moody lighting with volumetric fog, game navigation panel",
+    "w": 1344,
+    "h": 768,
+    "out": "../../ORBEngine/assets/wial_wohm/navigation/cyber_tunnels/cyber_tunnels_large_chamber.png"
+  },
+  {
+    "name": "nav_cyber_tunnels_narrow_passage",
+    "prompt": "First-person navigation view: tight narrow passage barely wide enough to squeeze through. Environment: cyberpunk maintenance tunnels, exposed wiring and conduits, neon signage, holographic graffiti, steam vents. Dark atmospheric lighting, detailed wall and floor textures. first-person dungeon view, Shadowgate-style, dark atmospheric perspective, painterly digital art, moody lighting with volumetric fog, game navigation panel",
+    "w": 1344,
+    "h": 768,
+    "out": "../../ORBEngine/assets/wial_wohm/navigation/cyber_tunnels/cyber_tunnels_narrow_passage.png"
+  },
+  {
+    "name": "enemy_cave_crawler",
+    "prompt": "Enemy creature: blind cave-crawling arthropod, many legs, pale chitinous shell, antennae. Full character sprite sheet with idle, patrol, attack, hurt, and death poses arranged in rows. dark fantasy enemy creature concept art sheet, Lovecraftian horror, wet organic textures, bioluminescent accents, multiple poses, game sprite sheet on dark background",
+    "w": 1024,
+    "h": 1024,
+    "out": "../../ORBEngine/assets/wial_wohm/enemies/enemy_01_cave_crawler.png"
+  },
+  {
+    "name": "enemy_fungal_shambler",
+    "prompt": "Enemy creature: shambling humanoid covered in bioluminescent fungi, spore clouds. Full character sprite sheet with idle, patrol, attack, hurt, and death poses arranged in rows. dark fantasy enemy creature concept art sheet, Lovecraftian horror, wet organic textures, bioluminescent accents, multiple poses, game sprite sheet on dark background",
+    "w": 1024,
+    "h": 1024,
+    "out": "../../ORBEngine/assets/wial_wohm/enemies/enemy_02_fungal_shambler.png"
+  },
+  {
+    "name": "enemy_rock_mimic",
+    "prompt": "Enemy creature: stone-textured ambush predator disguised as cave wall, gaping maw. Full character sprite sheet with idle, patrol, attack, hurt, and death poses arranged in rows. dark fantasy enemy creature concept art sheet, Lovecraftian horror, wet organic textures, bioluminescent accents, multiple poses, game sprite sheet on dark background",
+    "w": 1024,
+    "h": 1024,
+    "out": "../../ORBEngine/assets/wial_wohm/enemies/enemy_03_rock_mimic.png"
+  },
+  {
+    "name": "enemy_crystal_bat",
+    "prompt": "Enemy creature: large bat with crystalline wing membranes, sonic shriek pose. Full character sprite sheet with idle, patrol, attack, hurt, and death poses arranged in rows. dark fantasy enemy creature concept art sheet, Lovecraftian horror, wet organic textures, bioluminescent accents, multiple poses, game sprite sheet on dark background",
+    "w": 1024,
+    "h": 1024,
+    "out": "../../ORBEngine/assets/wial_wohm/enemies/enemy_04_crystal_bat.png"
+  },
+  {
+    "name": "enemy_cave_leech",
+    "prompt": "Enemy creature: giant leech-like creature coiled on ceiling, dripping saliva. Full character sprite sheet with idle, patrol, attack, hurt, and death poses arranged in rows. dark fantasy enemy creature concept art sheet, Lovecraftian horror, wet organic textures, bioluminescent accents, multiple poses, game sprite sheet on dark background",
+    "w": 1024,
+    "h": 1024,
+    "out": "../../ORBEngine/assets/wial_wohm/enemies/enemy_05_cave_leech.png"
+  },
+  {
+    "name": "enemy_stalactite_horror",
+    "prompt": "Enemy creature: creature fused with stalactites, dropping from above, sharp limbs. Full character sprite sheet with idle, patrol, attack, hurt, and death poses arranged in rows. dark fantasy enemy creature concept art sheet, Lovecraftian horror, wet organic textures, bioluminescent accents, multiple poses, game sprite sheet on dark background",
+    "w": 1024,
+    "h": 1024,
+    "out": "../../ORBEngine/assets/wial_wohm/enemies/enemy_06_stalactite_horror.png"
+  },
+  {
+    "name": "enemy_drowned_priest",
+    "prompt": "Enemy creature: waterlogged undead temple priest, tattered robes, barnacle-crusted staff. Full character sprite sheet with idle, patrol, attack, hurt, and death poses arranged in rows. dark fantasy enemy creature concept art sheet, Lovecraftian horror, wet organic textures, bioluminescent accents, multiple poses, game sprite sheet on dark background",
+    "w": 1024,
+    "h": 1024,
+    "out": "../../ORBEngine/assets/wial_wohm/enemies/enemy_07_drowned_priest.png"
+  },
+  {
+    "name": "enemy_temple_guardian",
+    "prompt": "Enemy creature: stone golem statue animated by ancient magic, crumbling but powerful. Full character sprite sheet with idle, patrol, attack, hurt, and death poses arranged in rows. dark fantasy enemy creature concept art sheet, Lovecraftian horror, wet organic textures, bioluminescent accents, multiple poses, game sprite sheet on dark background",
+    "w": 1024,
+    "h": 1024,
+    "out": "../../ORBEngine/assets/wial_wohm/enemies/enemy_08_temple_guardian.png"
+  },
+  {
+    "name": "enemy_eel_swarm",
+    "prompt": "Enemy creature: writhing mass of electric eels forming a humanoid shape. Full character sprite sheet with idle, patrol, attack, hurt, and death poses arranged in rows. dark fantasy enemy creature concept art sheet, Lovecraftian horror, wet organic textures, bioluminescent accents, multiple poses, game sprite sheet on dark background",
+    "w": 1024,
+    "h": 1024,
+    "out": "../../ORBEngine/assets/wial_wohm/enemies/enemy_09_eel_swarm.png"
+  },
+  {
+    "name": "enemy_coral_knight",
+    "prompt": "Enemy creature: armored warrior encrusted with living coral, sword and shield. Full character sprite sheet with idle, patrol, attack, hurt, and death poses arranged in rows. dark fantasy enemy creature concept art sheet, Lovecraftian horror, wet organic textures, bioluminescent accents, multiple poses, game sprite sheet on dark background",
+    "w": 1024,
+    "h": 1024,
+    "out": "../../ORBEngine/assets/wial_wohm/enemies/enemy_10_coral_knight.png"
+  },
+  {
+    "name": "enemy_abyssal_idol",
+    "prompt": "Enemy creature: floating animated temple idol, multiple arms, glowing sigil eye. Full character sprite sheet with idle, patrol, attack, hurt, and death poses arranged in rows. dark fantasy enemy creature concept art sheet, Lovecraftian horror, wet organic textures, bioluminescent accents, multiple poses, game sprite sheet on dark background",
+    "w": 1024,
+    "h": 1024,
+    "out": "../../ORBEngine/assets/wial_wohm/enemies/enemy_11_abyssal_idol.png"
+  },
+  {
+    "name": "enemy_crypt_wraith",
+    "prompt": "Enemy creature: translucent ghost emerging from sarcophagus, skeletal features. Full character sprite sheet with idle, patrol, attack, hurt, and death poses arranged in rows. dark fantasy enemy creature concept art sheet, Lovecraftian horror, wet organic textures, bioluminescent accents, multiple poses, game sprite sheet on dark background",
+    "w": 1024,
+    "h": 1024,
+    "out": "../../ORBEngine/assets/wial_wohm/enemies/enemy_12_crypt_wraith.png"
+  },
+  {
+    "name": "enemy_bone_collector",
+    "prompt": "Enemy creature: hunched creature assembling itself from scattered bones. Full character sprite sheet with idle, patrol, attack, hurt, and death poses arranged in rows. dark fantasy enemy creature concept art sheet, Lovecraftian horror, wet organic textures, bioluminescent accents, multiple poses, game sprite sheet on dark background",
+    "w": 1024,
+    "h": 1024,
+    "out": "../../ORBEngine/assets/wial_wohm/enemies/enemy_13_bone_collector.png"
+  },
+  {
+    "name": "enemy_tomb_spider",
+    "prompt": "Enemy creature: massive spider nesting in coffins, wrapped corpse decorations. Full character sprite sheet with idle, patrol, attack, hurt, and death poses arranged in rows. dark fantasy enemy creature concept art sheet, Lovecraftian horror, wet organic textures, bioluminescent accents, multiple poses, game sprite sheet on dark background",
+    "w": 1024,
+    "h": 1024,
+    "out": "../../ORBEngine/assets/wial_wohm/enemies/enemy_14_tomb_spider.png"
+  },
+  {
+    "name": "enemy_embalmer",
+    "prompt": "Enemy creature: tall gaunt figure with surgical tools, preservation jars on belt. Full character sprite sheet with idle, patrol, attack, hurt, and death poses arranged in rows. dark fantasy enemy creature concept art sheet, Lovecraftian horror, wet organic textures, bioluminescent accents, multiple poses, game sprite sheet on dark background",
+    "w": 1024,
+    "h": 1024,
+    "out": "../../ORBEngine/assets/wial_wohm/enemies/enemy_15_embalmer.png"
+  },
+  {
+    "name": "enemy_death_moth",
+    "prompt": "Enemy creature: giant moth with skull-pattern wings, hypnotic dust trail. Full character sprite sheet with idle, patrol, attack, hurt, and death poses arranged in rows. dark fantasy enemy creature concept art sheet, Lovecraftian horror, wet organic textures, bioluminescent accents, multiple poses, game sprite sheet on dark background",
+    "w": 1024,
+    "h": 1024,
+    "out": "../../ORBEngine/assets/wial_wohm/enemies/enemy_16_death_moth.png"
+  },
+  {
+    "name": "enemy_sludge_rat",
+    "prompt": "Enemy creature: oversized mutant rat dripping with toxic sludge, glowing eyes. Full character sprite sheet with idle, patrol, attack, hurt, and death poses arranged in rows. dark fantasy enemy creature concept art sheet, Lovecraftian horror, wet organic textures, bioluminescent accents, multiple poses, game sprite sheet on dark background",
+    "w": 1024,
+    "h": 1024,
+    "out": "../../ORBEngine/assets/wial_wohm/enemies/enemy_17_sludge_rat.png"
+  },
+  {
+    "name": "enemy_pipe_wurm",
+    "prompt": "Enemy creature: segmented worm creature emerging from broken pipe, acid drool. Full character sprite sheet with idle, patrol, attack, hurt, and death poses arranged in rows. dark fantasy enemy creature concept art sheet, Lovecraftian horror, wet organic textures, bioluminescent accents, multiple poses, game sprite sheet on dark background",
+    "w": 1024,
+    "h": 1024,
+    "out": "../../ORBEngine/assets/wial_wohm/enemies/enemy_18_pipe_wurm.png"
+  },
+  {
+    "name": "enemy_grate_lurker",
+    "prompt": "Enemy creature: flattened predator squeezing through floor grates, extending claws. Full character sprite sheet with idle, patrol, attack, hurt, and death poses arranged in rows. dark fantasy enemy creature concept art sheet, Lovecraftian horror, wet organic textures, bioluminescent accents, multiple poses, game sprite sheet on dark background",
+    "w": 1024,
+    "h": 1024,
+    "out": "../../ORBEngine/assets/wial_wohm/enemies/enemy_19_grate_lurker.png"
+  },
+  {
+    "name": "enemy_sewer_cultist",
+    "prompt": "Enemy creature: hooded humanoid cultist in waders, rusted ritual blade. Full character sprite sheet with idle, patrol, attack, hurt, and death poses arranged in rows. dark fantasy enemy creature concept art sheet, Lovecraftian horror, wet organic textures, bioluminescent accents, multiple poses, game sprite sheet on dark background",
+    "w": 1024,
+    "h": 1024,
+    "out": "../../ORBEngine/assets/wial_wohm/enemies/enemy_20_sewer_cultist.png"
+  },
+  {
+    "name": "enemy_bile_toad",
+    "prompt": "Enemy creature: bloated toxic toad, inflating throat sac, projectile venom. Full character sprite sheet with idle, patrol, attack, hurt, and death poses arranged in rows. dark fantasy enemy creature concept art sheet, Lovecraftian horror, wet organic textures, bioluminescent accents, multiple poses, game sprite sheet on dark background",
+    "w": 1024,
+    "h": 1024,
+    "out": "../../ORBEngine/assets/wial_wohm/enemies/enemy_21_bile_toad.png"
+  },
+  {
+    "name": "enemy_frost_elemental",
+    "prompt": "Enemy creature: humanoid ice formation, jagged crystal limbs, freezing aura. Full character sprite sheet with idle, patrol, attack, hurt, and death poses arranged in rows. dark fantasy enemy creature concept art sheet, Lovecraftian horror, wet organic textures, bioluminescent accents, multiple poses, game sprite sheet on dark background",
+    "w": 1024,
+    "h": 1024,
+    "out": "../../ORBEngine/assets/wial_wohm/enemies/enemy_22_frost_elemental.png"
+  },
+  {
+    "name": "enemy_snow_stalker",
+    "prompt": "Enemy creature: white-furred predator, camouflaged, pouncing pose. Full character sprite sheet with idle, patrol, attack, hurt, and death poses arranged in rows. dark fantasy enemy creature concept art sheet, Lovecraftian horror, wet organic textures, bioluminescent accents, multiple poses, game sprite sheet on dark background",
+    "w": 1024,
+    "h": 1024,
+    "out": "../../ORBEngine/assets/wial_wohm/enemies/enemy_23_snow_stalker.png"
+  },
+  {
+    "name": "enemy_ice_wraith",
+    "prompt": "Enemy creature: spectral figure trailing frozen mist, blue ethereal glow. Full character sprite sheet with idle, patrol, attack, hurt, and death poses arranged in rows. dark fantasy enemy creature concept art sheet, Lovecraftian horror, wet organic textures, bioluminescent accents, multiple poses, game sprite sheet on dark background",
+    "w": 1024,
+    "h": 1024,
+    "out": "../../ORBEngine/assets/wial_wohm/enemies/enemy_24_ice_wraith.png"
+  },
+  {
+    "name": "enemy_glacier_beetle",
+    "prompt": "Enemy creature: armored beetle with ice-encrusted shell, ramming horn. Full character sprite sheet with idle, patrol, attack, hurt, and death poses arranged in rows. dark fantasy enemy creature concept art sheet, Lovecraftian horror, wet organic textures, bioluminescent accents, multiple poses, game sprite sheet on dark background",
+    "w": 1024,
+    "h": 1024,
+    "out": "../../ORBEngine/assets/wial_wohm/enemies/enemy_25_glacier_beetle.png"
+  },
+  {
+    "name": "enemy_frozen_revenant",
+    "prompt": "Enemy creature: ancient warrior preserved in ice, cracking free, ice-blade weapon. Full character sprite sheet with idle, patrol, attack, hurt, and death poses arranged in rows. dark fantasy enemy creature concept art sheet, Lovecraftian horror, wet organic textures, bioluminescent accents, multiple poses, game sprite sheet on dark background",
+    "w": 1024,
+    "h": 1024,
+    "out": "../../ORBEngine/assets/wial_wohm/enemies/enemy_26_frozen_revenant.png"
+  },
+  {
+    "name": "enemy_haywire_drone",
+    "prompt": "Enemy creature: malfunctioning maintenance drone, sparking, erratic laser eye. Full character sprite sheet with idle, patrol, attack, hurt, and death poses arranged in rows. dark fantasy enemy creature concept art sheet, Lovecraftian horror, wet organic textures, bioluminescent accents, multiple poses, game sprite sheet on dark background",
+    "w": 1024,
+    "h": 1024,
+    "out": "../../ORBEngine/assets/wial_wohm/enemies/enemy_27_haywire_drone.png"
+  },
+  {
+    "name": "enemy_wire_phantom",
+    "prompt": "Enemy creature: humanoid shape formed from tangled wires and cables, electrified. Full character sprite sheet with idle, patrol, attack, hurt, and death poses arranged in rows. dark fantasy enemy creature concept art sheet, Lovecraftian horror, wet organic textures, bioluminescent accents, multiple poses, game sprite sheet on dark background",
+    "w": 1024,
+    "h": 1024,
+    "out": "../../ORBEngine/assets/wial_wohm/enemies/enemy_28_wire_phantom.png"
+  },
+  {
+    "name": "enemy_neon_slime",
+    "prompt": "Enemy creature: glowing neon-colored slime creature, absorbing light around it. Full character sprite sheet with idle, patrol, attack, hurt, and death poses arranged in rows. dark fantasy enemy creature concept art sheet, Lovecraftian horror, wet organic textures, bioluminescent accents, multiple poses, game sprite sheet on dark background",
+    "w": 1024,
+    "h": 1024,
+    "out": "../../ORBEngine/assets/wial_wohm/enemies/enemy_29_neon_slime.png"
+  },
+  {
+    "name": "enemy_rogue_mech",
+    "prompt": "Enemy creature: small bipedal security mech, damaged plating, targeting laser. Full character sprite sheet with idle, patrol, attack, hurt, and death poses arranged in rows. dark fantasy enemy creature concept art sheet, Lovecraftian horror, wet organic textures, bioluminescent accents, multiple poses, game sprite sheet on dark background",
+    "w": 1024,
+    "h": 1024,
+    "out": "../../ORBEngine/assets/wial_wohm/enemies/enemy_30_rogue_mech.png"
+  },
+  {
+    "name": "ambient_rain_drip",
+    "prompt": "Ambient environmental effect: rain drops and dripping water animation, vertical streaks and splash rings. 8-frame animation grid layout, transparent background. small ambient environmental effect animation sheet, dark fantasy, subtle atmospheric particles, transparent background, animation strip",
+    "w": 1024,
+    "h": 1024,
+    "out": "../../ORBEngine/assets/wial_wohm/ambient_fx/ambient_01_rain_drip.png"
+  },
+  {
+    "name": "ambient_fog_drift",
+    "prompt": "Ambient environmental effect: drifting fog wisps and mist tendrils, slowly curling and dissipating. 8-frame animation grid layout, transparent background. small ambient environmental effect animation sheet, dark fantasy, subtle atmospheric particles, transparent background, animation strip",
+    "w": 1024,
+    "h": 1024,
+    "out": "../../ORBEngine/assets/wial_wohm/ambient_fx/ambient_02_fog_drift.png"
+  },
+  {
+    "name": "ambient_fireflies",
+    "prompt": "Ambient environmental effect: floating bioluminescent firefly particles, pulsing teal and amber dots. 8-frame animation grid layout, transparent background. small ambient environmental effect animation sheet, dark fantasy, subtle atmospheric particles, transparent background, animation strip",
+    "w": 1024,
+    "h": 1024,
+    "out": "../../ORBEngine/assets/wial_wohm/ambient_fx/ambient_03_fireflies.png"
+  },
+  {
+    "name": "ambient_dust_motes",
+    "prompt": "Ambient environmental effect: floating dust particles in a light shaft, slow drift and sparkle. 8-frame animation grid layout, transparent background. small ambient environmental effect animation sheet, dark fantasy, subtle atmospheric particles, transparent background, animation strip",
+    "w": 1024,
+    "h": 1024,
+    "out": "../../ORBEngine/assets/wial_wohm/ambient_fx/ambient_04_dust_motes.png"
+  },
+  {
+    "name": "ambient_shimmer",
+    "prompt": "Ambient environmental effect: wet surface light shimmer and caustic reflections, rippling patterns. 8-frame animation grid layout, transparent background. small ambient environmental effect animation sheet, dark fantasy, subtle atmospheric particles, transparent background, animation strip",
+    "w": 1024,
+    "h": 1024,
+    "out": "../../ORBEngine/assets/wial_wohm/ambient_fx/ambient_05_shimmer.png"
+  },
+  {
+    "name": "ambient_drip_ooze",
+    "prompt": "Ambient environmental effect: viscous ooze dripping from ceiling, stretching and pooling on floor. 8-frame animation grid layout, transparent background. small ambient environmental effect animation sheet, dark fantasy, subtle atmospheric particles, transparent background, animation strip",
+    "w": 1024,
+    "h": 1024,
+    "out": "../../ORBEngine/assets/wial_wohm/ambient_fx/ambient_06_drip_ooze.png"
+  },
+  {
+    "name": "farm_farm_overview_spring",
+    "prompt": "Farm tile sheet: overhead farm overview in spring, fresh green crops sprouting, irrigation channels flowing, small buildings. Dark fantasy pastoral aesthetic with bioluminescent accents. top-down farm and agriculture map tile sheet, dark fantasy pastoral, muted greens and browns with bioluminescent crop glow, painterly game art",
+    "w": 1024,
+    "h": 1024,
+    "out": "../../ORBEngine/assets/wial_wohm/farm/farm_01_farm_overview_spring.png"
+  },
+  {
+    "name": "farm_farm_overview_summer",
+    "prompt": "Farm tile sheet: overhead farm overview in summer, lush mature crops, golden sunlight, buzzing insects. Dark fantasy pastoral aesthetic with bioluminescent accents. top-down farm and agriculture map tile sheet, dark fantasy pastoral, muted greens and browns with bioluminescent crop glow, painterly game art",
+    "w": 1024,
+    "h": 1024,
+    "out": "../../ORBEngine/assets/wial_wohm/farm/farm_02_farm_overview_summer.png"
+  },
+  {
+    "name": "farm_farm_overview_autumn",
+    "prompt": "Farm tile sheet: overhead farm overview in autumn, harvest-ready fields, amber and orange foliage, wind. Dark fantasy pastoral aesthetic with bioluminescent accents. top-down farm and agriculture map tile sheet, dark fantasy pastoral, muted greens and browns with bioluminescent crop glow, painterly game art",
+    "w": 1024,
+    "h": 1024,
+    "out": "../../ORBEngine/assets/wial_wohm/farm/farm_03_farm_overview_autumn.png"
+  },
+  {
+    "name": "farm_farm_overview_winter",
+    "prompt": "Farm tile sheet: overhead farm overview in winter, dormant brown fields, frost patterns, snow dusting. Dark fantasy pastoral aesthetic with bioluminescent accents. top-down farm and agriculture map tile sheet, dark fantasy pastoral, muted greens and browns with bioluminescent crop glow, painterly game art",
+    "w": 1024,
+    "h": 1024,
+    "out": "../../ORBEngine/assets/wial_wohm/farm/farm_04_farm_overview_winter.png"
+  },
+  {
+    "name": "farm_crop_field_planting",
+    "prompt": "Farm tile sheet: close-up crop field view during planting phase, tilled soil rows, seed holes, hand tools. Dark fantasy pastoral aesthetic with bioluminescent accents. top-down farm and agriculture map tile sheet, dark fantasy pastoral, muted greens and browns with bioluminescent crop glow, painterly game art",
+    "w": 1024,
+    "h": 1024,
+    "out": "../../ORBEngine/assets/wial_wohm/farm/farm_05_crop_field_planting.png"
+  },
+  {
+    "name": "farm_crop_field_growing",
+    "prompt": "Farm tile sheet: close-up crop field with growing plants, green shoots at various stages, support stakes. Dark fantasy pastoral aesthetic with bioluminescent accents. top-down farm and agriculture map tile sheet, dark fantasy pastoral, muted greens and browns with bioluminescent crop glow, painterly game art",
+    "w": 1024,
+    "h": 1024,
+    "out": "../../ORBEngine/assets/wial_wohm/farm/farm_06_crop_field_growing.png"
+  },
+  {
+    "name": "farm_crop_field_harvest",
+    "prompt": "Farm tile sheet: close-up crop field ready for harvest, ripe bioluminescent fruits and vegetables. Dark fantasy pastoral aesthetic with bioluminescent accents. top-down farm and agriculture map tile sheet, dark fantasy pastoral, muted greens and browns with bioluminescent crop glow, painterly game art",
+    "w": 1024,
+    "h": 1024,
+    "out": "../../ORBEngine/assets/wial_wohm/farm/farm_07_crop_field_harvest.png"
+  },
+  {
+    "name": "farm_crop_field_fallow",
+    "prompt": "Farm tile sheet: close-up fallow field, bare soil recovering, scattered old stalks and compost. Dark fantasy pastoral aesthetic with bioluminescent accents. top-down farm and agriculture map tile sheet, dark fantasy pastoral, muted greens and browns with bioluminescent crop glow, painterly game art",
+    "w": 1024,
+    "h": 1024,
+    "out": "../../ORBEngine/assets/wial_wohm/farm/farm_08_crop_field_fallow.png"
+  },
+  {
+    "name": "farm_barn_interior",
+    "prompt": "Farm tile sheet: rustic barn interior, hay bales, tool racks, stored harvest crates, warm light. Dark fantasy pastoral aesthetic with bioluminescent accents. top-down farm and agriculture map tile sheet, dark fantasy pastoral, muted greens and browns with bioluminescent crop glow, painterly game art",
+    "w": 1024,
+    "h": 1024,
+    "out": "../../ORBEngine/assets/wial_wohm/farm/farm_09_barn_interior.png"
+  },
+  {
+    "name": "farm_greenhouse",
+    "prompt": "Farm tile sheet: glass greenhouse with exotic glowing plants, humidity condensation, grow lights. Dark fantasy pastoral aesthetic with bioluminescent accents. top-down farm and agriculture map tile sheet, dark fantasy pastoral, muted greens and browns with bioluminescent crop glow, painterly game art",
+    "w": 1024,
+    "h": 1024,
+    "out": "../../ORBEngine/assets/wial_wohm/farm/farm_10_greenhouse.png"
+  },
+  {
+    "name": "farm_storage_cellar",
+    "prompt": "Farm tile sheet: underground storage cellar, barrels and jars of preserved food, cool stone walls. Dark fantasy pastoral aesthetic with bioluminescent accents. top-down farm and agriculture map tile sheet, dark fantasy pastoral, muted greens and browns with bioluminescent crop glow, painterly game art",
+    "w": 1024,
+    "h": 1024,
+    "out": "../../ORBEngine/assets/wial_wohm/farm/farm_11_storage_cellar.png"
+  },
+  {
+    "name": "farm_mill_exterior",
+    "prompt": "Farm tile sheet: water-powered grain mill building, turning wheel, sacks of flour, stone foundation. Dark fantasy pastoral aesthetic with bioluminescent accents. top-down farm and agriculture map tile sheet, dark fantasy pastoral, muted greens and browns with bioluminescent crop glow, painterly game art",
+    "w": 1024,
+    "h": 1024,
+    "out": "../../ORBEngine/assets/wial_wohm/farm/farm_12_mill_exterior.png"
+  },
+  {
+    "name": "farm_irrigation_source",
+    "prompt": "Farm tile sheet: natural spring water source feeding irrigation channels, valve controls, pipes. Dark fantasy pastoral aesthetic with bioluminescent accents. top-down farm and agriculture map tile sheet, dark fantasy pastoral, muted greens and browns with bioluminescent crop glow, painterly game art",
+    "w": 1024,
+    "h": 1024,
+    "out": "../../ORBEngine/assets/wial_wohm/farm/farm_13_irrigation_source.png"
+  },
+  {
+    "name": "farm_irrigation_channels",
+    "prompt": "Farm tile sheet: network of irrigation channels between crop rows, flowing water, sluice gates. Dark fantasy pastoral aesthetic with bioluminescent accents. top-down farm and agriculture map tile sheet, dark fantasy pastoral, muted greens and browns with bioluminescent crop glow, painterly game art",
+    "w": 1024,
+    "h": 1024,
+    "out": "../../ORBEngine/assets/wial_wohm/farm/farm_14_irrigation_channels.png"
+  },
+  {
+    "name": "farm_aqueduct_system",
+    "prompt": "Farm tile sheet: elevated aqueduct carrying water across the farm, stone arches, moss-covered. Dark fantasy pastoral aesthetic with bioluminescent accents. top-down farm and agriculture map tile sheet, dark fantasy pastoral, muted greens and browns with bioluminescent crop glow, painterly game art",
+    "w": 1024,
+    "h": 1024,
+    "out": "../../ORBEngine/assets/wial_wohm/farm/farm_15_aqueduct_system.png"
+  },
+  {
+    "name": "farm_farm_path_main",
+    "prompt": "Farm tile sheet: main dirt path through the farm, cart tracks, fences, signposts to areas. Dark fantasy pastoral aesthetic with bioluminescent accents. top-down farm and agriculture map tile sheet, dark fantasy pastoral, muted greens and browns with bioluminescent crop glow, painterly game art",
+    "w": 1024,
+    "h": 1024,
+    "out": "../../ORBEngine/assets/wial_wohm/farm/farm_16_farm_path_main.png"
+  },
+  {
+    "name": "farm_farm_path_orchard",
+    "prompt": "Farm tile sheet: winding path through a dark orchard, bioluminescent fruit trees, fallen leaves. Dark fantasy pastoral aesthetic with bioluminescent accents. top-down farm and agriculture map tile sheet, dark fantasy pastoral, muted greens and browns with bioluminescent crop glow, painterly game art",
+    "w": 1024,
+    "h": 1024,
+    "out": "../../ORBEngine/assets/wial_wohm/farm/farm_17_farm_path_orchard.png"
+  },
+  {
+    "name": "food_raw_roots",
+    "prompt": "Food and cooking icon sheet: assorted raw root vegetables, dark earthy tones, bioluminescent tubers. Grid of icons showing the item from multiple angles or states. cooking ingredient and prepared dish icon sheet, dark fantasy style, rich warm tones, painterly food art, game inventory icons arranged in grid",
+    "w": 1024,
+    "h": 1024,
+    "out": "../../ORBEngine/assets/wial_wohm/cooking/food_01_raw_roots.png"
+  },
+  {
+    "name": "food_raw_mushrooms",
+    "prompt": "Food and cooking icon sheet: variety of wild mushrooms, glowing caps, spore-dusted stems. Grid of icons showing the item from multiple angles or states. cooking ingredient and prepared dish icon sheet, dark fantasy style, rich warm tones, painterly food art, game inventory icons arranged in grid",
+    "w": 1024,
+    "h": 1024,
+    "out": "../../ORBEngine/assets/wial_wohm/cooking/food_02_raw_mushrooms.png"
+  },
+  {
+    "name": "food_raw_fish",
+    "prompt": "Food and cooking icon sheet: fresh caught fish and eels, iridescent scales, wet sheen. Grid of icons showing the item from multiple angles or states. cooking ingredient and prepared dish icon sheet, dark fantasy style, rich warm tones, painterly food art, game inventory icons arranged in grid",
+    "w": 1024,
+    "h": 1024,
+    "out": "../../ORBEngine/assets/wial_wohm/cooking/food_03_raw_fish.png"
+  },
+  {
+    "name": "food_raw_meat",
+    "prompt": "Food and cooking icon sheet: cuts of dark game meat, marbled textures, bone-in portions. Grid of icons showing the item from multiple angles or states. cooking ingredient and prepared dish icon sheet, dark fantasy style, rich warm tones, painterly food art, game inventory icons arranged in grid",
+    "w": 1024,
+    "h": 1024,
+    "out": "../../ORBEngine/assets/wial_wohm/cooking/food_04_raw_meat.png"
+  },
+  {
+    "name": "food_raw_grains",
+    "prompt": "Food and cooking icon sheet: harvested grain sheaves and loose kernels, golden and dark varieties. Grid of icons showing the item from multiple angles or states. cooking ingredient and prepared dish icon sheet, dark fantasy style, rich warm tones, painterly food art, game inventory icons arranged in grid",
+    "w": 1024,
+    "h": 1024,
+    "out": "../../ORBEngine/assets/wial_wohm/cooking/food_05_raw_grains.png"
+  },
+  {
+    "name": "food_raw_herbs",
+    "prompt": "Food and cooking icon sheet: bundles of fresh herbs, aromatic leaves, flowering tops. Grid of icons showing the item from multiple angles or states. cooking ingredient and prepared dish icon sheet, dark fantasy style, rich warm tones, painterly food art, game inventory icons arranged in grid",
+    "w": 1024,
+    "h": 1024,
+    "out": "../../ORBEngine/assets/wial_wohm/cooking/food_06_raw_herbs.png"
+  },
+  {
+    "name": "food_raw_fruits",
+    "prompt": "Food and cooking icon sheet: bioluminescent fruits, translucent skin showing glowing flesh. Grid of icons showing the item from multiple angles or states. cooking ingredient and prepared dish icon sheet, dark fantasy style, rich warm tones, painterly food art, game inventory icons arranged in grid",
+    "w": 1024,
+    "h": 1024,
+    "out": "../../ORBEngine/assets/wial_wohm/cooking/food_07_raw_fruits.png"
+  },
+  {
+    "name": "food_raw_eggs",
+    "prompt": "Food and cooking icon sheet: various creature eggs, speckled shells, different sizes. Grid of icons showing the item from multiple angles or states. cooking ingredient and prepared dish icon sheet, dark fantasy style, rich warm tones, painterly food art, game inventory icons arranged in grid",
+    "w": 1024,
+    "h": 1024,
+    "out": "../../ORBEngine/assets/wial_wohm/cooking/food_08_raw_eggs.png"
+  },
+  {
+    "name": "food_raw_spices",
+    "prompt": "Food and cooking icon sheet: ground and whole spices in small bowls, colorful powders. Grid of icons showing the item from multiple angles or states. cooking ingredient and prepared dish icon sheet, dark fantasy style, rich warm tones, painterly food art, game inventory icons arranged in grid",
+    "w": 1024,
+    "h": 1024,
+    "out": "../../ORBEngine/assets/wial_wohm/cooking/food_09_raw_spices.png"
+  },
+  {
+    "name": "food_raw_honey",
+    "prompt": "Food and cooking icon sheet: jars and combs of dark amber honey, dripping viscosity. Grid of icons showing the item from multiple angles or states. cooking ingredient and prepared dish icon sheet, dark fantasy style, rich warm tones, painterly food art, game inventory icons arranged in grid",
+    "w": 1024,
+    "h": 1024,
+    "out": "../../ORBEngine/assets/wial_wohm/cooking/food_10_raw_honey.png"
+  },
+  {
+    "name": "food_station_campfire",
+    "prompt": "Food and cooking icon sheet: open campfire cooking station, spit roast, hanging pot, flame glow. Grid of icons showing the item from multiple angles or states. cooking ingredient and prepared dish icon sheet, dark fantasy style, rich warm tones, painterly food art, game inventory icons arranged in grid",
+    "w": 1024,
+    "h": 1024,
+    "out": "../../ORBEngine/assets/wial_wohm/cooking/food_11_station_campfire.png"
+  },
+  {
+    "name": "food_station_cauldron",
+    "prompt": "Food and cooking icon sheet: large iron cauldron on stone hearth, bubbling stew, steam rising. Grid of icons showing the item from multiple angles or states. cooking ingredient and prepared dish icon sheet, dark fantasy style, rich warm tones, painterly food art, game inventory icons arranged in grid",
+    "w": 1024,
+    "h": 1024,
+    "out": "../../ORBEngine/assets/wial_wohm/cooking/food_12_station_cauldron.png"
+  },
+  {
+    "name": "food_station_oven",
+    "prompt": "Food and cooking icon sheet: clay brick oven with glowing coals, bread rising inside. Grid of icons showing the item from multiple angles or states. cooking ingredient and prepared dish icon sheet, dark fantasy style, rich warm tones, painterly food art, game inventory icons arranged in grid",
+    "w": 1024,
+    "h": 1024,
+    "out": "../../ORBEngine/assets/wial_wohm/cooking/food_13_station_oven.png"
+  },
+  {
+    "name": "food_station_smoker",
+    "prompt": "Food and cooking icon sheet: wooden smoker rack with hanging meats and fish, aromatic smoke. Grid of icons showing the item from multiple angles or states. cooking ingredient and prepared dish icon sheet, dark fantasy style, rich warm tones, painterly food art, game inventory icons arranged in grid",
+    "w": 1024,
+    "h": 1024,
+    "out": "../../ORBEngine/assets/wial_wohm/cooking/food_14_station_smoker.png"
+  },
+  {
+    "name": "food_station_fermenter",
+    "prompt": "Food and cooking icon sheet: fermentation crocks and barrels, bubbling lids, aging process. Grid of icons showing the item from multiple angles or states. cooking ingredient and prepared dish icon sheet, dark fantasy style, rich warm tones, painterly food art, game inventory icons arranged in grid",
+    "w": 1024,
+    "h": 1024,
+    "out": "../../ORBEngine/assets/wial_wohm/cooking/food_15_station_fermenter.png"
+  },
+  {
+    "name": "food_station_mortar",
+    "prompt": "Food and cooking icon sheet: stone mortar and pestle, grinding spices, powder dust cloud. Grid of icons showing the item from multiple angles or states. cooking ingredient and prepared dish icon sheet, dark fantasy style, rich warm tones, painterly food art, game inventory icons arranged in grid",
+    "w": 1024,
+    "h": 1024,
+    "out": "../../ORBEngine/assets/wial_wohm/cooking/food_16_station_mortar.png"
+  },
+  {
+    "name": "food_station_cutting",
+    "prompt": "Food and cooking icon sheet: wooden cutting board with knife, sliced ingredients, juice pooling. Grid of icons showing the item from multiple angles or states. cooking ingredient and prepared dish icon sheet, dark fantasy style, rich warm tones, painterly food art, game inventory icons arranged in grid",
+    "w": 1024,
+    "h": 1024,
+    "out": "../../ORBEngine/assets/wial_wohm/cooking/food_17_station_cutting.png"
+  },
+  {
+    "name": "food_station_drying",
+    "prompt": "Food and cooking icon sheet: drying rack with herbs and mushrooms, air-dried preservation. Grid of icons showing the item from multiple angles or states. cooking ingredient and prepared dish icon sheet, dark fantasy style, rich warm tones, painterly food art, game inventory icons arranged in grid",
+    "w": 1024,
+    "h": 1024,
+    "out": "../../ORBEngine/assets/wial_wohm/cooking/food_18_station_drying.png"
+  },
+  {
+    "name": "food_station_mixing",
+    "prompt": "Food and cooking icon sheet: mixing bowl with whisk, batter and dough being worked. Grid of icons showing the item from multiple angles or states. cooking ingredient and prepared dish icon sheet, dark fantasy style, rich warm tones, painterly food art, game inventory icons arranged in grid",
+    "w": 1024,
+    "h": 1024,
+    "out": "../../ORBEngine/assets/wial_wohm/cooking/food_19_station_mixing.png"
+  },
+  {
+    "name": "food_station_plating",
+    "prompt": "Food and cooking icon sheet: plating station with arranged dishes, garnish tools, serving presentation. Grid of icons showing the item from multiple angles or states. cooking ingredient and prepared dish icon sheet, dark fantasy style, rich warm tones, painterly food art, game inventory icons arranged in grid",
+    "w": 1024,
+    "h": 1024,
+    "out": "../../ORBEngine/assets/wial_wohm/cooking/food_20_station_plating.png"
+  },
+  {
+    "name": "food_dish_stew",
+    "prompt": "Food and cooking icon sheet: hearty dark stew in stone bowl, chunks of meat and vegetables, steam. Grid of icons showing the item from multiple angles or states. cooking ingredient and prepared dish icon sheet, dark fantasy style, rich warm tones, painterly food art, game inventory icons arranged in grid",
+    "w": 1024,
+    "h": 1024,
+    "out": "../../ORBEngine/assets/wial_wohm/cooking/food_21_dish_stew.png"
+  },
+  {
+    "name": "food_dish_roast",
+    "prompt": "Food and cooking icon sheet: roasted whole creature on platter, crispy skin, root vegetable garnish. Grid of icons showing the item from multiple angles or states. cooking ingredient and prepared dish icon sheet, dark fantasy style, rich warm tones, painterly food art, game inventory icons arranged in grid",
+    "w": 1024,
+    "h": 1024,
+    "out": "../../ORBEngine/assets/wial_wohm/cooking/food_22_dish_roast.png"
+  },
+  {
+    "name": "food_dish_bread",
+    "prompt": "Food and cooking icon sheet: freshly baked dark bread loaf, crusty exterior, steaming interior. Grid of icons showing the item from multiple angles or states. cooking ingredient and prepared dish icon sheet, dark fantasy style, rich warm tones, painterly food art, game inventory icons arranged in grid",
+    "w": 1024,
+    "h": 1024,
+    "out": "../../ORBEngine/assets/wial_wohm/cooking/food_23_dish_bread.png"
+  },
+  {
+    "name": "food_dish_pie",
+    "prompt": "Food and cooking icon sheet: deep dish meat and mushroom pie, golden crust, filling visible. Grid of icons showing the item from multiple angles or states. cooking ingredient and prepared dish icon sheet, dark fantasy style, rich warm tones, painterly food art, game inventory icons arranged in grid",
+    "w": 1024,
+    "h": 1024,
+    "out": "../../ORBEngine/assets/wial_wohm/cooking/food_24_dish_pie.png"
+  },
+  {
+    "name": "food_dish_soup",
+    "prompt": "Food and cooking icon sheet: clear broth soup in wooden bowl, floating herbs and egg. Grid of icons showing the item from multiple angles or states. cooking ingredient and prepared dish icon sheet, dark fantasy style, rich warm tones, painterly food art, game inventory icons arranged in grid",
+    "w": 1024,
+    "h": 1024,
+    "out": "../../ORBEngine/assets/wial_wohm/cooking/food_25_dish_soup.png"
+  },
+  {
+    "name": "food_dish_salad",
+    "prompt": "Food and cooking icon sheet: bioluminescent leaf salad with fruit and nut garnish, edible flowers. Grid of icons showing the item from multiple angles or states. cooking ingredient and prepared dish icon sheet, dark fantasy style, rich warm tones, painterly food art, game inventory icons arranged in grid",
+    "w": 1024,
+    "h": 1024,
+    "out": "../../ORBEngine/assets/wial_wohm/cooking/food_26_dish_salad.png"
+  },
+  {
+    "name": "food_dish_porridge",
+    "prompt": "Food and cooking icon sheet: thick grain porridge with honey drizzle and berry compote. Grid of icons showing the item from multiple angles or states. cooking ingredient and prepared dish icon sheet, dark fantasy style, rich warm tones, painterly food art, game inventory icons arranged in grid",
+    "w": 1024,
+    "h": 1024,
+    "out": "../../ORBEngine/assets/wial_wohm/cooking/food_27_dish_porridge.png"
+  },
+  {
+    "name": "food_dish_skewers",
+    "prompt": "Food and cooking icon sheet: grilled meat and vegetable skewers, char marks, dipping sauce. Grid of icons showing the item from multiple angles or states. cooking ingredient and prepared dish icon sheet, dark fantasy style, rich warm tones, painterly food art, game inventory icons arranged in grid",
+    "w": 1024,
+    "h": 1024,
+    "out": "../../ORBEngine/assets/wial_wohm/cooking/food_28_dish_skewers.png"
+  },
+  {
+    "name": "food_dish_dumplings",
+    "prompt": "Food and cooking icon sheet: steamed dumplings in bamboo basket, savory filling visible. Grid of icons showing the item from multiple angles or states. cooking ingredient and prepared dish icon sheet, dark fantasy style, rich warm tones, painterly food art, game inventory icons arranged in grid",
+    "w": 1024,
+    "h": 1024,
+    "out": "../../ORBEngine/assets/wial_wohm/cooking/food_29_dish_dumplings.png"
+  },
+  {
+    "name": "food_dish_cake",
+    "prompt": "Food and cooking icon sheet: layered dark celebration cake, bioluminescent frosting and fruit topping. Grid of icons showing the item from multiple angles or states. cooking ingredient and prepared dish icon sheet, dark fantasy style, rich warm tones, painterly food art, game inventory icons arranged in grid",
+    "w": 1024,
+    "h": 1024,
+    "out": "../../ORBEngine/assets/wial_wohm/cooking/food_30_dish_cake.png"
+  },
+  {
+    "name": "food_rare_elixir",
+    "prompt": "Food and cooking icon sheet: glowing magical elixir in crystal vial, swirling particles, healing potion. Grid of icons showing the item from multiple angles or states. cooking ingredient and prepared dish icon sheet, dark fantasy style, rich warm tones, painterly food art, game inventory icons arranged in grid",
+    "w": 1024,
+    "h": 1024,
+    "out": "../../ORBEngine/assets/wial_wohm/cooking/food_31_rare_elixir.png"
+  },
+  {
+    "name": "food_rare_feast",
+    "prompt": "Food and cooking icon sheet: grand feast spread across a long table, multiple dishes, goblets, candles. Grid of icons showing the item from multiple angles or states. cooking ingredient and prepared dish icon sheet, dark fantasy style, rich warm tones, painterly food art, game inventory icons arranged in grid",
+    "w": 1024,
+    "h": 1024,
+    "out": "../../ORBEngine/assets/wial_wohm/cooking/food_32_rare_feast.png"
+  },
+  {
+    "name": "food_rare_preserved",
+    "prompt": "Food and cooking icon sheet: collection of rare preserved delicacies in ornate jars, wax-sealed, labeled. Grid of icons showing the item from multiple angles or states. cooking ingredient and prepared dish icon sheet, dark fantasy style, rich warm tones, painterly food art, game inventory icons arranged in grid",
+    "w": 1024,
+    "h": 1024,
+    "out": "../../ORBEngine/assets/wial_wohm/cooking/food_33_rare_preserved.png"
+  },
+  {
+    "name": "food_rare_wial_treat",
+    "prompt": "Food and cooking icon sheet: special Wial creature treat, custom-crafted food that boosts evolution, glowing. Grid of icons showing the item from multiple angles or states. cooking ingredient and prepared dish icon sheet, dark fantasy style, rich warm tones, painterly food art, game inventory icons arranged in grid",
+    "w": 1024,
+    "h": 1024,
+    "out": "../../ORBEngine/assets/wial_wohm/cooking/food_34_rare_wial_treat.png"
+  }
+]

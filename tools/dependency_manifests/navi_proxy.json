@@ -1,0 +1,20 @@
+{
+  "project": "NaVi proxy",
+  "path": "drIpTECH/NaVi_AI_real-timeintercedencemodule",
+  "provider": "python",
+  "requirements_file": "drIpTECH/NaVi_AI_real-timeintercedencemodule/requirements.txt",
+  "module_groups": [
+    {
+      "name": "async_proxy_runtime",
+      "modules": [
+        "aiohttp",
+        "aiosqlite"
+      ],
+      "purpose": "Async HTTP proxy runtime and SQLite logging layer."
+    }
+  ],
+  "notes": [
+    "requests is documented for external callers, but the proxy itself depends on aiohttp and aiosqlite.",
+    "Keep this stack project-scoped because it is not needed for the workspace-wide test suites."
+  ]
+}

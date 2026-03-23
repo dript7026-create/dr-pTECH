@@ -1,0 +1,41 @@
+{
+  "package": "dirkodds_client_review_2026-03-20",
+  "generated_at": "2026-03-20T00:00:00",
+  "project": "DirkOdds",
+  "validated_scope": {
+    "tests": {
+      "command": ".\\.venv\\Scripts\\python.exe -m pytest tests\\test_model.py -q",
+      "status": "passed",
+      "passed_count": 6
+    },
+    "training": {
+      "command": ".\\.venv\\Scripts\\python.exe -m football_predictor.train --input football_predictor\\sample_data.csv --output .pytest_cache\\dirkodds_client_bundle.joblib --sport football",
+      "status": "passed",
+      "sport": "football",
+      "training_rows": 20,
+      "model_name": "random_forest",
+      "metrics": {
+        "log_loss": 0.8621150013350457,
+        "accuracy": 0.6,
+        "balanced_accuracy": 0.5
+      }
+    },
+    "demo_prediction": {
+      "fixture": {
+        "home_team": "TeamA",
+        "away_team": "TeamD",
+        "date": "2025-08-27",
+        "sport": "football"
+      },
+      "prediction": "Draw",
+      "confidence": 0.5918082783417937,
+      "uncertainty": 0.4081917216582063,
+      "entropy": 0.6493118192996412
+    }
+  },
+  "notes": [
+    "DirkOdds is a probabilistic decision-support tool and does not promise certainty or profit.",
+    "Live-data features depend on external sources, environment configuration, and network availability.",
+    "The included artifacts use the packaged sample dataset and a fresh trained football bundle."
+  ]
+}

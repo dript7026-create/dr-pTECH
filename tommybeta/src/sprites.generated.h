@@ -1,0 +1,1 @@
+#define HAVE_GENERATED_SPRITES 1

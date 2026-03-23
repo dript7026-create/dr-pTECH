@@ -1,0 +1,282 @@
+[
+  {
+    "name": "ambient_rain_drip",
+    "prompt": "Ambient environmental effect: rain drops and dripping water animation, vertical streaks and splash rings. 8-frame animation grid layout, transparent background. small ambient environmental effect animation sheet, dark fantasy, subtle atmospheric particles, transparent background, animation strip",
+    "w": 1024,
+    "h": 1024,
+    "out": "../../ORBEngine/assets/wial_wohm/ambient_fx/ambient_01_rain_drip.png"
+  },
+  {
+    "name": "ambient_fog_drift",
+    "prompt": "Ambient environmental effect: drifting fog wisps and mist tendrils, slowly curling and dissipating. 8-frame animation grid layout, transparent background. small ambient environmental effect animation sheet, dark fantasy, subtle atmospheric particles, transparent background, animation strip",
+    "w": 1024,
+    "h": 1024,
+    "out": "../../ORBEngine/assets/wial_wohm/ambient_fx/ambient_02_fog_drift.png"
+  },
+  {
+    "name": "ambient_fireflies",
+    "prompt": "Ambient environmental effect: floating bioluminescent firefly particles, pulsing teal and amber dots. 8-frame animation grid layout, transparent background. small ambient environmental effect animation sheet, dark fantasy, subtle atmospheric particles, transparent background, animation strip",
+    "w": 1024,
+    "h": 1024,
+    "out": "../../ORBEngine/assets/wial_wohm/ambient_fx/ambient_03_fireflies.png"
+  },
+  {
+    "name": "ambient_dust_motes",
+    "prompt": "Ambient environmental effect: floating dust particles in a light shaft, slow drift and sparkle. 8-frame animation grid layout, transparent background. small ambient environmental effect animation sheet, dark fantasy, subtle atmospheric particles, transparent background, animation strip",
+    "w": 1024,
+    "h": 1024,
+    "out": "../../ORBEngine/assets/wial_wohm/ambient_fx/ambient_04_dust_motes.png"
+  },
+  {
+    "name": "ambient_shimmer",
+    "prompt": "Ambient environmental effect: wet surface light shimmer and caustic reflections, rippling patterns. 8-frame animation grid layout, transparent background. small ambient environmental effect animation sheet, dark fantasy, subtle atmospheric particles, transparent background, animation strip",
+    "w": 1024,
+    "h": 1024,
+    "out": "../../ORBEngine/assets/wial_wohm/ambient_fx/ambient_05_shimmer.png"
+  },
+  {
+    "name": "ambient_drip_ooze",
+    "prompt": "Ambient environmental effect: viscous ooze dripping from ceiling, stretching and pooling on floor. 8-frame animation grid layout, transparent background. small ambient environmental effect animation sheet, dark fantasy, subtle atmospheric particles, transparent background, animation strip",
+    "w": 1024,
+    "h": 1024,
+    "out": "../../ORBEngine/assets/wial_wohm/ambient_fx/ambient_06_drip_ooze.png"
+  },
+  {
+    "name": "food_raw_roots",
+    "prompt": "Food and cooking icon sheet: assorted raw root vegetables, dark earthy tones, bioluminescent tubers. Grid of icons showing the item from multiple angles or states. cooking ingredient and prepared dish icon sheet, dark fantasy style, rich warm tones, painterly food art, game inventory icons arranged in grid",
+    "w": 1024,
+    "h": 1024,
+    "out": "../../ORBEngine/assets/wial_wohm/cooking/food_01_raw_roots.png"
+  },
+  {
+    "name": "food_raw_mushrooms",
+    "prompt": "Food and cooking icon sheet: variety of wild mushrooms, glowing caps, spore-dusted stems. Grid of icons showing the item from multiple angles or states. cooking ingredient and prepared dish icon sheet, dark fantasy style, rich warm tones, painterly food art, game inventory icons arranged in grid",
+    "w": 1024,
+    "h": 1024,
+    "out": "../../ORBEngine/assets/wial_wohm/cooking/food_02_raw_mushrooms.png"
+  },
+  {
+    "name": "food_raw_fish",
+    "prompt": "Food and cooking icon sheet: fresh caught fish and eels, iridescent scales, wet sheen. Grid of icons showing the item from multiple angles or states. cooking ingredient and prepared dish icon sheet, dark fantasy style, rich warm tones, painterly food art, game inventory icons arranged in grid",
+    "w": 1024,
+    "h": 1024,
+    "out": "../../ORBEngine/assets/wial_wohm/cooking/food_03_raw_fish.png"
+  },
+  {
+    "name": "food_raw_meat",
+    "prompt": "Food and cooking icon sheet: cuts of dark game meat, marbled textures, bone-in portions. Grid of icons showing the item from multiple angles or states. cooking ingredient and prepared dish icon sheet, dark fantasy style, rich warm tones, painterly food art, game inventory icons arranged in grid",
+    "w": 1024,
+    "h": 1024,
+    "out": "../../ORBEngine/assets/wial_wohm/cooking/food_04_raw_meat.png"
+  },
+  {
+    "name": "food_raw_grains",
+    "prompt": "Food and cooking icon sheet: harvested grain sheaves and loose kernels, golden and dark varieties. Grid of icons showing the item from multiple angles or states. cooking ingredient and prepared dish icon sheet, dark fantasy style, rich warm tones, painterly food art, game inventory icons arranged in grid",
+    "w": 1024,
+    "h": 1024,
+    "out": "../../ORBEngine/assets/wial_wohm/cooking/food_05_raw_grains.png"
+  },
+  {
+    "name": "food_raw_herbs",
+    "prompt": "Food and cooking icon sheet: bundles of fresh herbs, aromatic leaves, flowering tops. Grid of icons showing the item from multiple angles or states. cooking ingredient and prepared dish icon sheet, dark fantasy style, rich warm tones, painterly food art, game inventory icons arranged in grid",
+    "w": 1024,
+    "h": 1024,
+    "out": "../../ORBEngine/assets/wial_wohm/cooking/food_06_raw_herbs.png"
+  },
+  {
+    "name": "food_raw_fruits",
+    "prompt": "Food and cooking icon sheet: bioluminescent fruits, translucent skin showing glowing flesh. Grid of icons showing the item from multiple angles or states. cooking ingredient and prepared dish icon sheet, dark fantasy style, rich warm tones, painterly food art, game inventory icons arranged in grid",
+    "w": 1024,
+    "h": 1024,
+    "out": "../../ORBEngine/assets/wial_wohm/cooking/food_07_raw_fruits.png"
+  },
+  {
+    "name": "food_raw_eggs",
+    "prompt": "Food and cooking icon sheet: various creature eggs, speckled shells, different sizes. Grid of icons showing the item from multiple angles or states. cooking ingredient and prepared dish icon sheet, dark fantasy style, rich warm tones, painterly food art, game inventory icons arranged in grid",
+    "w": 1024,
+    "h": 1024,
+    "out": "../../ORBEngine/assets/wial_wohm/cooking/food_08_raw_eggs.png"
+  },
+  {
+    "name": "food_raw_spices",
+    "prompt": "Food and cooking icon sheet: ground and whole spices in small bowls, colorful powders. Grid of icons showing the item from multiple angles or states. cooking ingredient and prepared dish icon sheet, dark fantasy style, rich warm tones, painterly food art, game inventory icons arranged in grid",
+    "w": 1024,
+    "h": 1024,
+    "out": "../../ORBEngine/assets/wial_wohm/cooking/food_09_raw_spices.png"
+  },
+  {
+    "name": "food_raw_honey",
+    "prompt": "Food and cooking icon sheet: jars and combs of dark amber honey, dripping viscosity. Grid of icons showing the item from multiple angles or states. cooking ingredient and prepared dish icon sheet, dark fantasy style, rich warm tones, painterly food art, game inventory icons arranged in grid",
+    "w": 1024,
+    "h": 1024,
+    "out": "../../ORBEngine/assets/wial_wohm/cooking/food_10_raw_honey.png"
+  },
+  {
+    "name": "food_station_campfire",
+    "prompt": "Food and cooking icon sheet: open campfire cooking station, spit roast, hanging pot, flame glow. Grid of icons showing the item from multiple angles or states. cooking ingredient and prepared dish icon sheet, dark fantasy style, rich warm tones, painterly food art, game inventory icons arranged in grid",
+    "w": 1024,
+    "h": 1024,
+    "out": "../../ORBEngine/assets/wial_wohm/cooking/food_11_station_campfire.png"
+  },
+  {
+    "name": "food_station_cauldron",
+    "prompt": "Food and cooking icon sheet: large iron cauldron on stone hearth, bubbling stew, steam rising. Grid of icons showing the item from multiple angles or states. cooking ingredient and prepared dish icon sheet, dark fantasy style, rich warm tones, painterly food art, game inventory icons arranged in grid",
+    "w": 1024,
+    "h": 1024,
+    "out": "../../ORBEngine/assets/wial_wohm/cooking/food_12_station_cauldron.png"
+  },
+  {
+    "name": "food_station_oven",
+    "prompt": "Food and cooking icon sheet: clay brick oven with glowing coals, bread rising inside. Grid of icons showing the item from multiple angles or states. cooking ingredient and prepared dish icon sheet, dark fantasy style, rich warm tones, painterly food art, game inventory icons arranged in grid",
+    "w": 1024,
+    "h": 1024,
+    "out": "../../ORBEngine/assets/wial_wohm/cooking/food_13_station_oven.png"
+  },
+  {
+    "name": "food_station_smoker",
+    "prompt": "Food and cooking icon sheet: wooden smoker rack with hanging meats and fish, aromatic smoke. Grid of icons showing the item from multiple angles or states. cooking ingredient and prepared dish icon sheet, dark fantasy style, rich warm tones, painterly food art, game inventory icons arranged in grid",
+    "w": 1024,
+    "h": 1024,
+    "out": "../../ORBEngine/assets/wial_wohm/cooking/food_14_station_smoker.png"
+  },
+  {
+    "name": "food_station_fermenter",
+    "prompt": "Food and cooking icon sheet: fermentation crocks and barrels, bubbling lids, aging process. Grid of icons showing the item from multiple angles or states. cooking ingredient and prepared dish icon sheet, dark fantasy style, rich warm tones, painterly food art, game inventory icons arranged in grid",
+    "w": 1024,
+    "h": 1024,
+    "out": "../../ORBEngine/assets/wial_wohm/cooking/food_15_station_fermenter.png"
+  },
+  {
+    "name": "food_station_mortar",
+    "prompt": "Food and cooking icon sheet: stone mortar and pestle, grinding spices, powder dust cloud. Grid of icons showing the item from multiple angles or states. cooking ingredient and prepared dish icon sheet, dark fantasy style, rich warm tones, painterly food art, game inventory icons arranged in grid",
+    "w": 1024,
+    "h": 1024,
+    "out": "../../ORBEngine/assets/wial_wohm/cooking/food_16_station_mortar.png"
+  },
+  {
+    "name": "food_station_cutting",
+    "prompt": "Food and cooking icon sheet: wooden cutting board with knife, sliced ingredients, juice pooling. Grid of icons showing the item from multiple angles or states. cooking ingredient and prepared dish icon sheet, dark fantasy style, rich warm tones, painterly food art, game inventory icons arranged in grid",
+    "w": 1024,
+    "h": 1024,
+    "out": "../../ORBEngine/assets/wial_wohm/cooking/food_17_station_cutting.png"
+  },
+  {
+    "name": "food_station_drying",
+    "prompt": "Food and cooking icon sheet: drying rack with herbs and mushrooms, air-dried preservation. Grid of icons showing the item from multiple angles or states. cooking ingredient and prepared dish icon sheet, dark fantasy style, rich warm tones, painterly food art, game inventory icons arranged in grid",
+    "w": 1024,
+    "h": 1024,
+    "out": "../../ORBEngine/assets/wial_wohm/cooking/food_18_station_drying.png"
+  },
+  {
+    "name": "food_station_mixing",
+    "prompt": "Food and cooking icon sheet: mixing bowl with whisk, batter and dough being worked. Grid of icons showing the item from multiple angles or states. cooking ingredient and prepared dish icon sheet, dark fantasy style, rich warm tones, painterly food art, game inventory icons arranged in grid",
+    "w": 1024,
+    "h": 1024,
+    "out": "../../ORBEngine/assets/wial_wohm/cooking/food_19_station_mixing.png"
+  },
+  {
+    "name": "food_station_plating",
+    "prompt": "Food and cooking icon sheet: plating station with arranged dishes, garnish tools, serving presentation. Grid of icons showing the item from multiple angles or states. cooking ingredient and prepared dish icon sheet, dark fantasy style, rich warm tones, painterly food art, game inventory icons arranged in grid",
+    "w": 1024,
+    "h": 1024,
+    "out": "../../ORBEngine/assets/wial_wohm/cooking/food_20_station_plating.png"
+  },
+  {
+    "name": "food_dish_stew",
+    "prompt": "Food and cooking icon sheet: hearty dark stew in stone bowl, chunks of meat and vegetables, steam. Grid of icons showing the item from multiple angles or states. cooking ingredient and prepared dish icon sheet, dark fantasy style, rich warm tones, painterly food art, game inventory icons arranged in grid",
+    "w": 1024,
+    "h": 1024,
+    "out": "../../ORBEngine/assets/wial_wohm/cooking/food_21_dish_stew.png"
+  },
+  {
+    "name": "food_dish_roast",
+    "prompt": "Food and cooking icon sheet: roasted whole creature on platter, crispy skin, root vegetable garnish. Grid of icons showing the item from multiple angles or states. cooking ingredient and prepared dish icon sheet, dark fantasy style, rich warm tones, painterly food art, game inventory icons arranged in grid",
+    "w": 1024,
+    "h": 1024,
+    "out": "../../ORBEngine/assets/wial_wohm/cooking/food_22_dish_roast.png"
+  },
+  {
+    "name": "food_dish_bread",
+    "prompt": "Food and cooking icon sheet: freshly baked dark bread loaf, crusty exterior, steaming interior. Grid of icons showing the item from multiple angles or states. cooking ingredient and prepared dish icon sheet, dark fantasy style, rich warm tones, painterly food art, game inventory icons arranged in grid",
+    "w": 1024,
+    "h": 1024,
+    "out": "../../ORBEngine/assets/wial_wohm/cooking/food_23_dish_bread.png"
+  },
+  {
+    "name": "food_dish_pie",
+    "prompt": "Food and cooking icon sheet: deep dish meat and mushroom pie, golden crust, filling visible. Grid of icons showing the item from multiple angles or states. cooking ingredient and prepared dish icon sheet, dark fantasy style, rich warm tones, painterly food art, game inventory icons arranged in grid",
+    "w": 1024,
+    "h": 1024,
+    "out": "../../ORBEngine/assets/wial_wohm/cooking/food_24_dish_pie.png"
+  },
+  {
+    "name": "food_dish_soup",
+    "prompt": "Food and cooking icon sheet: clear broth soup in wooden bowl, floating herbs and egg. Grid of icons showing the item from multiple angles or states. cooking ingredient and prepared dish icon sheet, dark fantasy style, rich warm tones, painterly food art, game inventory icons arranged in grid",
+    "w": 1024,
+    "h": 1024,
+    "out": "../../ORBEngine/assets/wial_wohm/cooking/food_25_dish_soup.png"
+  },
+  {
+    "name": "food_dish_salad",
+    "prompt": "Food and cooking icon sheet: bioluminescent leaf salad with fruit and nut garnish, edible flowers. Grid of icons showing the item from multiple angles or states. cooking ingredient and prepared dish icon sheet, dark fantasy style, rich warm tones, painterly food art, game inventory icons arranged in grid",
+    "w": 1024,
+    "h": 1024,
+    "out": "../../ORBEngine/assets/wial_wohm/cooking/food_26_dish_salad.png"
+  },
+  {
+    "name": "food_dish_porridge",
+    "prompt": "Food and cooking icon sheet: thick grain porridge with honey drizzle and berry compote. Grid of icons showing the item from multiple angles or states. cooking ingredient and prepared dish icon sheet, dark fantasy style, rich warm tones, painterly food art, game inventory icons arranged in grid",
+    "w": 1024,
+    "h": 1024,
+    "out": "../../ORBEngine/assets/wial_wohm/cooking/food_27_dish_porridge.png"
+  },
+  {
+    "name": "food_dish_skewers",
+    "prompt": "Food and cooking icon sheet: grilled meat and vegetable skewers, char marks, dipping sauce. Grid of icons showing the item from multiple angles or states. cooking ingredient and prepared dish icon sheet, dark fantasy style, rich warm tones, painterly food art, game inventory icons arranged in grid",
+    "w": 1024,
+    "h": 1024,
+    "out": "../../ORBEngine/assets/wial_wohm/cooking/food_28_dish_skewers.png"
+  },
+  {
+    "name": "food_dish_dumplings",
+    "prompt": "Food and cooking icon sheet: steamed dumplings in bamboo basket, savory filling visible. Grid of icons showing the item from multiple angles or states. cooking ingredient and prepared dish icon sheet, dark fantasy style, rich warm tones, painterly food art, game inventory icons arranged in grid",
+    "w": 1024,
+    "h": 1024,
+    "out": "../../ORBEngine/assets/wial_wohm/cooking/food_29_dish_dumplings.png"
+  },
+  {
+    "name": "food_dish_cake",
+    "prompt": "Food and cooking icon sheet: layered dark celebration cake, bioluminescent frosting and fruit topping. Grid of icons showing the item from multiple angles or states. cooking ingredient and prepared dish icon sheet, dark fantasy style, rich warm tones, painterly food art, game inventory icons arranged in grid",
+    "w": 1024,
+    "h": 1024,
+    "out": "../../ORBEngine/assets/wial_wohm/cooking/food_30_dish_cake.png"
+  },
+  {
+    "name": "food_rare_elixir",
+    "prompt": "Food and cooking icon sheet: glowing magical elixir in crystal vial, swirling particles, healing potion. Grid of icons showing the item from multiple angles or states. cooking ingredient and prepared dish icon sheet, dark fantasy style, rich warm tones, painterly food art, game inventory icons arranged in grid",
+    "w": 1024,
+    "h": 1024,
+    "out": "../../ORBEngine/assets/wial_wohm/cooking/food_31_rare_elixir.png"
+  },
+  {
+    "name": "food_rare_feast",
+    "prompt": "Food and cooking icon sheet: grand feast spread across a long table, multiple dishes, goblets, candles. Grid of icons showing the item from multiple angles or states. cooking ingredient and prepared dish icon sheet, dark fantasy style, rich warm tones, painterly food art, game inventory icons arranged in grid",
+    "w": 1024,
+    "h": 1024,
+    "out": "../../ORBEngine/assets/wial_wohm/cooking/food_32_rare_feast.png"
+  },
+  {
+    "name": "food_rare_preserved",
+    "prompt": "Food and cooking icon sheet: collection of rare preserved delicacies in ornate jars, wax-sealed, labeled. Grid of icons showing the item from multiple angles or states. cooking ingredient and prepared dish icon sheet, dark fantasy style, rich warm tones, painterly food art, game inventory icons arranged in grid",
+    "w": 1024,
+    "h": 1024,
+    "out": "../../ORBEngine/assets/wial_wohm/cooking/food_33_rare_preserved.png"
+  },
+  {
+    "name": "food_rare_wial_treat",
+    "prompt": "Food and cooking icon sheet: special Wial creature treat, custom-crafted food that boosts evolution, glowing. Grid of icons showing the item from multiple angles or states. cooking ingredient and prepared dish icon sheet, dark fantasy style, rich warm tones, painterly food art, game inventory icons arranged in grid",
+    "w": 1024,
+    "h": 1024,
+    "out": "../../ORBEngine/assets/wial_wohm/cooking/food_34_rare_wial_treat.png"
+  }
+]

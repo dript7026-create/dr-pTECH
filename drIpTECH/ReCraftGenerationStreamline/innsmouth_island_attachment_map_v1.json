@@ -1,0 +1,103 @@
+{
+  "attachment_map_name": "innsmouth_island_attachment_map_v1",
+  "owner_module": "ORBGlue",
+  "date": "2026-03-11",
+  "description": "Formal runtime attachment-map contract for binding generated anchor-node metadata to player armor, weapon, and support sockets in InnsmouthIsland.",
+  "socket_order": [
+    "head",
+    "torso",
+    "right_hand",
+    "left_hand",
+    "hip",
+    "feet"
+  ],
+  "coordinate_space": {
+    "u_axis": "normalized local sprite width from 0.0 to 1.0",
+    "v_axis": "normalized local sprite height from 0.0 to 1.0",
+    "z_axis": "relative pseudo-depth weight from 0.0 to 1.0"
+  },
+  "bindings": {
+    "armor": {
+      "head": "headpiece and helm anchor",
+      "torso": "chest plate, mantle, and shoulder overlay anchor",
+      "hip": "waist cloth, skirt, and lower shell anchor",
+      "feet": "leg termination and grounded contact anchor"
+    },
+    "weapons": {
+      "right_hand": "melee grip socket",
+      "left_hand": "projectile or offhand socket",
+      "hip": "stowed large-weapon fallback anchor"
+    },
+    "environment_support": {
+      "feet": "ground-plane registration reference",
+      "torso": "mid-plane occlusion comparison reference"
+    }
+  },
+  "orb_module_contract": {
+    "ORBDimensionView": [
+      "consume socket z weights for depth translation and top-cap projection",
+      "stitch anchor nodes into pseudo-3D plane relationships"
+    ],
+    "ORBKinetics": [
+      "compare socket-aligned silhouettes against collision and hit-detection shapes",
+      "preserve tighter authored collision intent than decorative overflow"
+    ],
+    "ORBGlue": [
+      "bind generated anchor-node metadata to runtime socket ids",
+      "resolve equipment family attachments and animation-state handoff"
+    ]
+  },
+  "runtime_profiles": {
+    "base_sockets": {
+      "head": {"u": 0.5, "v": 0.18, "z": 0.92},
+      "torso": {"u": 0.5, "v": 0.41, "z": 0.72},
+      "right_hand": {"u": 0.66, "v": 0.55, "z": 0.58},
+      "left_hand": {"u": 0.34, "v": 0.47, "z": 0.6},
+      "hip": {"u": 0.49, "v": 0.6, "z": 0.44},
+      "feet": {"u": 0.5, "v": 0.9, "z": 0.08}
+    },
+    "armor_profiles": [
+      {"armor_set": 0, "head": {"u": 0.5, "v": 0.1782, "z": 0.92}, "torso": {"u": 0.5, "v": 0.4118, "z": 0.72}, "right_hand": {"u": 0.66, "v": 0.5269, "z": 0.58}, "left_hand": {"u": 0.34, "v": 0.4546, "z": 0.6}, "hip": {"u": 0.49, "v": 0.6018, "z": 0.44}, "feet": {"u": 0.5, "v": 0.9, "z": 0.08}},
+      {"armor_set": 1, "head": {"u": 0.5, "v": 0.1773, "z": 0.92}, "torso": {"u": 0.5, "v": 0.4127, "z": 0.72}, "right_hand": {"u": 0.66, "v": 0.5292, "z": 0.58}, "left_hand": {"u": 0.34, "v": 0.4562, "z": 0.6}, "hip": {"u": 0.49, "v": 0.6027, "z": 0.44}, "feet": {"u": 0.5, "v": 0.9, "z": 0.08}},
+      {"armor_set": 2, "head": {"u": 0.5, "v": 0.1777, "z": 0.92}, "torso": {"u": 0.5, "v": 0.4123, "z": 0.72}, "right_hand": {"u": 0.66, "v": 0.5223, "z": 0.58}, "left_hand": {"u": 0.34, "v": 0.4515, "z": 0.6}, "hip": {"u": 0.49, "v": 0.6023, "z": 0.44}, "feet": {"u": 0.5, "v": 0.9, "z": 0.08}},
+      {"armor_set": 3, "head": {"u": 0.5, "v": 0.1764, "z": 0.92}, "torso": {"u": 0.5, "v": 0.4136, "z": 0.72}, "right_hand": {"u": 0.66, "v": 0.5338, "z": 0.58}, "left_hand": {"u": 0.34, "v": 0.4592, "z": 0.6}, "hip": {"u": 0.49, "v": 0.6036, "z": 0.44}, "feet": {"u": 0.5, "v": 0.9, "z": 0.08}},
+      {"armor_set": 4, "head": {"u": 0.5, "v": 0.1759, "z": 0.92}, "torso": {"u": 0.5, "v": 0.4141, "z": 0.72}, "right_hand": {"u": 0.66, "v": 0.5315, "z": 0.58}, "left_hand": {"u": 0.34, "v": 0.4577, "z": 0.6}, "hip": {"u": 0.49, "v": 0.6041, "z": 0.44}, "feet": {"u": 0.5, "v": 0.9, "z": 0.08}},
+      {"armor_set": 5, "head": {"u": 0.5, "v": 0.175, "z": 0.92}, "torso": {"u": 0.5, "v": 0.415, "z": 0.72}, "right_hand": {"u": 0.66, "v": 0.5338, "z": 0.58}, "left_hand": {"u": 0.34, "v": 0.4592, "z": 0.6}, "hip": {"u": 0.49, "v": 0.605, "z": 0.44}, "feet": {"u": 0.5, "v": 0.9, "z": 0.08}},
+      {"armor_set": 6, "head": {"u": 0.5, "v": 0.1755, "z": 0.92}, "torso": {"u": 0.5, "v": 0.4145, "z": 0.72}, "right_hand": {"u": 0.66, "v": 0.5269, "z": 0.58}, "left_hand": {"u": 0.34, "v": 0.4546, "z": 0.6}, "hip": {"u": 0.49, "v": 0.6045, "z": 0.44}, "feet": {"u": 0.5, "v": 0.9, "z": 0.08}},
+      {"armor_set": 7, "head": {"u": 0.5, "v": 0.1741, "z": 0.92}, "torso": {"u": 0.5, "v": 0.4159, "z": 0.72}, "right_hand": {"u": 0.66, "v": 0.5362, "z": 0.58}, "left_hand": {"u": 0.34, "v": 0.4608, "z": 0.6}, "hip": {"u": 0.49, "v": 0.6059, "z": 0.44}, "feet": {"u": 0.5, "v": 0.9, "z": 0.08}},
+      {"armor_set": 8, "head": {"u": 0.5, "v": 0.1764, "z": 0.92}, "torso": {"u": 0.5, "v": 0.4136, "z": 0.72}, "right_hand": {"u": 0.66, "v": 0.52, "z": 0.58}, "left_hand": {"u": 0.34, "v": 0.45, "z": 0.6}, "hip": {"u": 0.49, "v": 0.6036, "z": 0.44}, "feet": {"u": 0.5, "v": 0.9, "z": 0.08}},
+      {"armor_set": 9, "head": {"u": 0.5, "v": 0.1736, "z": 0.92}, "torso": {"u": 0.5, "v": 0.4164, "z": 0.72}, "right_hand": {"u": 0.66, "v": 0.5385, "z": 0.58}, "left_hand": {"u": 0.34, "v": 0.4623, "z": 0.6}, "hip": {"u": 0.49, "v": 0.6064, "z": 0.44}, "feet": {"u": 0.5, "v": 0.9, "z": 0.08}},
+      {"armor_set": 10, "head": {"u": 0.5, "v": 0.175, "z": 0.92}, "torso": {"u": 0.5, "v": 0.415, "z": 0.72}, "right_hand": {"u": 0.66, "v": 0.5292, "z": 0.58}, "left_hand": {"u": 0.34, "v": 0.4562, "z": 0.6}, "hip": {"u": 0.49, "v": 0.605, "z": 0.44}, "feet": {"u": 0.5, "v": 0.9, "z": 0.08}},
+      {"armor_set": 11, "head": {"u": 0.5, "v": 0.1732, "z": 0.92}, "torso": {"u": 0.5, "v": 0.4168, "z": 0.72}, "right_hand": {"u": 0.66, "v": 0.5408, "z": 0.58}, "left_hand": {"u": 0.34, "v": 0.4638, "z": 0.6}, "hip": {"u": 0.49, "v": 0.6068, "z": 0.44}, "feet": {"u": 0.5, "v": 0.9, "z": 0.08}},
+      {"armor_set": 12, "head": {"u": 0.5, "v": 0.1723, "z": 0.92}, "torso": {"u": 0.5, "v": 0.4177, "z": 0.72}, "right_hand": {"u": 0.66, "v": 0.5385, "z": 0.58}, "left_hand": {"u": 0.34, "v": 0.4623, "z": 0.6}, "hip": {"u": 0.49, "v": 0.6077, "z": 0.44}, "feet": {"u": 0.5, "v": 0.9, "z": 0.08}},
+      {"armor_set": 13, "head": {"u": 0.5, "v": 0.17, "z": 0.92}, "torso": {"u": 0.5, "v": 0.42, "z": 0.72}, "right_hand": {"u": 0.66, "v": 0.5292, "z": 0.58}, "left_hand": {"u": 0.34, "v": 0.4562, "z": 0.6}, "hip": {"u": 0.49, "v": 0.61, "z": 0.44}, "feet": {"u": 0.5, "v": 0.9, "z": 0.08}}
+    ],
+    "melee_profiles": [
+      {"weapon_index": 0, "right_hand": {"u": 0.66, "v": 0.55, "z": 0.58}},
+      {"weapon_index": 1, "right_hand": {"u": 0.672, "v": 0.55, "z": 0.58}},
+      {"weapon_index": 2, "right_hand": {"u": 0.684, "v": 0.55, "z": 0.58}},
+      {"weapon_index": 3, "right_hand": {"u": 0.696, "v": 0.55, "z": 0.58}},
+      {"weapon_index": 4, "right_hand": {"u": 0.66, "v": 0.55, "z": 0.58}},
+      {"weapon_index": 5, "right_hand": {"u": 0.672, "v": 0.55, "z": 0.58}},
+      {"weapon_index": 6, "right_hand": {"u": 0.684, "v": 0.55, "z": 0.58}},
+      {"weapon_index": 7, "right_hand": {"u": 0.696, "v": 0.55, "z": 0.58}},
+      {"weapon_index": 8, "right_hand": {"u": 0.66, "v": 0.55, "z": 0.58}},
+      {"weapon_index": 9, "right_hand": {"u": 0.672, "v": 0.55, "z": 0.58}},
+      {"weapon_index": 10, "right_hand": {"u": 0.684, "v": 0.55, "z": 0.58}},
+      {"weapon_index": 11, "right_hand": {"u": 0.696, "v": 0.55, "z": 0.58}},
+      {"weapon_index": 12, "right_hand": {"u": 0.66, "v": 0.55, "z": 0.58}},
+      {"weapon_index": 13, "right_hand": {"u": 0.672, "v": 0.55, "z": 0.58}},
+      {"weapon_index": 14, "right_hand": {"u": 0.684, "v": 0.55, "z": 0.58}},
+      {"weapon_index": 15, "right_hand": {"u": 0.696, "v": 0.55, "z": 0.58}}
+    ],
+    "projectile_profiles": [
+      {"weapon_index": 16, "left_hand": {"u": 0.34, "v": 0.47, "z": 0.6}},
+      {"weapon_index": 17, "left_hand": {"u": 0.33, "v": 0.47, "z": 0.6}},
+      {"weapon_index": 18, "left_hand": {"u": 0.32, "v": 0.47, "z": 0.6}},
+      {"weapon_index": 19, "left_hand": {"u": 0.34, "v": 0.47, "z": 0.6}},
+      {"weapon_index": 20, "left_hand": {"u": 0.33, "v": 0.47, "z": 0.6}},
+      {"weapon_index": 21, "left_hand": {"u": 0.32, "v": 0.47, "z": 0.6}},
+      {"weapon_index": 22, "left_hand": {"u": 0.34, "v": 0.47, "z": 0.6}}
+    ]
+  }
+}

@@ -1,0 +1,769 @@
+{
+  "project_name": "KnavePrototype",
+  "seed": "KNAVE-PROTOTYPE-ADV-20260315",
+  "integrations": {
+    "godai": {
+      "mode": "asset_direction_conductor",
+      "difficulty_floor": 0.92,
+      "difficulty_ceiling": 1.42,
+      "designer_bias": "premium original dark-fantasy readability",
+      "evolution_targets": [
+        "silhouette_readability",
+        "material_storytelling",
+        "animation_density",
+        "environment_depth",
+        "fx_legibility",
+        "ui_authorship"
+      ]
+    }
+  },
+  "authoring": {
+    "clipstudio": {
+      "canvas": {
+        "width": 4096,
+        "height": 4096,
+        "layers": 18
+      },
+      "timeline_fps": 12,
+      "export_profile": {
+        "color_mode": "rgba",
+        "naming": "asset_id",
+        "slice_method": "layer_group"
+      },
+      "layers": [
+        {
+          "name": "bg_depth",
+          "blend_mode": "normal",
+          "visible": true
+        },
+        {
+          "name": "characters",
+          "blend_mode": "normal",
+          "visible": true
+        },
+        {
+          "name": "fx",
+          "blend_mode": "screen",
+          "visible": true
+        },
+        {
+          "name": "ui",
+          "blend_mode": "normal",
+          "visible": true
+        },
+        {
+          "name": "collision_guides",
+          "blend_mode": "multiply",
+          "visible": false
+        }
+      ],
+      "script_symbols": [
+        "KnaveSpawn",
+        "RivalGate",
+        "BossThreshold",
+        "GodAIConductorAnchor"
+      ],
+      "symbol_bindings": [
+        {
+          "symbol": "KnaveSpawn",
+          "asset_id": "knave_player_turnaround",
+          "role": "player_spawn"
+        },
+        {
+          "symbol": "RivalGate",
+          "asset_id": "knave_rival_huntress_sheet",
+          "role": "rival_encounter"
+        },
+        {
+          "symbol": "BossThreshold",
+          "asset_id": "knave_boss_regent_sheet",
+          "role": "boss_encounter"
+        },
+        {
+          "symbol": "GodAIConductorAnchor",
+          "asset_id": "knave_keyart_panel",
+          "role": "godai_style_anchor"
+        }
+      ],
+      "frame_tags": [
+        {
+          "tag": "keep_entry",
+          "frame": 0,
+          "scene_id": "ruined_keep_entry"
+        },
+        {
+          "tag": "crypt_descent",
+          "frame": 36,
+          "scene_id": "burial_crypt_descent"
+        }
+      ],
+      "hitboxes": [
+        {
+          "symbol": "KnaveSpawn",
+          "frame": 0,
+          "x": 10,
+          "y": 8,
+          "w": 28,
+          "h": 44,
+          "kind": "hurtbox"
+        },
+        {
+          "symbol": "BossThreshold",
+          "frame": 0,
+          "x": 0,
+          "y": 0,
+          "w": 64,
+          "h": 96,
+          "kind": "trigger"
+        }
+      ],
+      "script_bindings": [
+        {
+          "name": "begin_keep_pressure",
+          "event": "room_enter",
+          "target_symbol": "GodAIConductorAnchor",
+          "command": "evaluate_asset_pressure:ruined_keep_entry"
+        },
+        {
+          "name": "spawn_rival",
+          "event": "rival_intro",
+          "target_symbol": "RivalGate",
+          "command": "open_encounter:knave_rival_huntress"
+        }
+      ]
+    },
+    "blender": {
+      "scale": 0.1,
+      "extrusion_depth": 0.1,
+      "rig_profile": "paperdoll_humanoid",
+      "material_profiles": [
+        {
+          "name": "default_sprite_material",
+          "shader": "toon_principled",
+          "roughness": 0.7,
+          "normal_strength": 0.18
+        },
+        {
+          "name": "terrain_story_material",
+          "shader": "trim_sheet",
+          "roughness": 0.62,
+          "normal_strength": 0.3
+        },
+        {
+          "name": "spell_signal_material",
+          "shader": "emissive_layered",
+          "roughness": 0.2,
+          "normal_strength": 0.1
+        },
+        {
+          "name": "ui_inkglass_material",
+          "shader": "flat_glass",
+          "roughness": 0.15,
+          "normal_strength": 0.0
+        },
+        {
+          "name": "boss_regalia_material",
+          "shader": "toon_principled",
+          "roughness": 0.55,
+          "normal_strength": 0.28
+        }
+      ],
+      "rig_overrides": [
+        {
+          "asset_id": "knave_player_motion_suite",
+          "armature": "knave_hero",
+          "root_bone": "hips"
+        },
+        {
+          "asset_id": "knave_boss_regent_sheet",
+          "armature": "knave_boss",
+          "root_bone": "pelvis"
+        }
+      ],
+      "nodecraft_graphs": [
+        {
+          "name": "knave_world_stack",
+          "nodes": [
+            {
+              "id": "foreground",
+              "position": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "scale": 1.0
+            },
+            {
+              "id": "midground",
+              "position": [
+                8.0,
+                0.0,
+                -2.0
+              ],
+              "scale": 1.0
+            },
+            {
+              "id": "backdrop",
+              "position": [
+                16.0,
+                0.0,
+                -5.0
+              ],
+              "scale": 1.0
+            }
+          ],
+          "links": [
+            {
+              "from": "foreground",
+              "to": "midground",
+              "type": "LINKAGE_CHAIN",
+              "thickness": 0.4
+            },
+            {
+              "from": "midground",
+              "to": "backdrop",
+              "type": "LINKAGE_LATTICE",
+              "thickness": 0.3
+            }
+          ]
+        }
+      ],
+      "scene_build": [
+        {
+          "scene_id": "ruined_keep_entry",
+          "collection": "keep",
+          "world_mesh": "knave_keep_mesh"
+        },
+        {
+          "scene_id": "burial_crypt_descent",
+          "collection": "crypt",
+          "world_mesh": "knave_crypt_mesh"
+        },
+        {
+          "scene_id": "forest_of_oaths",
+          "collection": "forest",
+          "world_mesh": "knave_forest_mesh"
+        }
+      ]
+    },
+    "idtech2": {
+      "module_name": "g_knaveprototype",
+      "asset_root": "baseq2/knaveprototype",
+      "autofactor_prefix": "knaveproto",
+      "precache_groups": [
+        {
+          "group_name": "sound",
+          "entries": [
+            {
+              "alias": "knave_guard_ping",
+              "path": "sound/knaveproto/guard_ping.wav",
+              "asset_type": "sound"
+            },
+            {
+              "alias": "knave_regent_roar",
+              "path": "sound/knaveproto/regent_roar.wav",
+              "asset_type": "sound"
+            }
+          ]
+        }
+      ],
+      "system_dispatch": {
+        "knave_combat_system": {
+          "init_fn": "knave_combat_init",
+          "tick_fn": "knave_combat_tick"
+        },
+        "knave_rival_system": {
+          "init_fn": "knave_rival_init",
+          "tick_fn": "knave_rival_tick"
+        },
+        "knave_godai_system": {
+          "init_fn": "knave_godai_init",
+          "tick_fn": "knave_godai_tick"
+        }
+      },
+      "bootstrap": {
+        "entry_scene": "ruined_keep_entry",
+        "precache_phase": "game_init",
+        "spawn_phase": "level_load"
+      }
+    }
+  },
+  "assets": {
+    "tilesets": [
+      {
+        "id": "knave_keep_tiles_sheet",
+        "path": "authoring/clipstudio/tiles/knave_keep_tiles_sheet.png",
+        "usage": "tileset",
+        "material_profile": "terrain_story_material",
+        "generator_component": [
+          "environment",
+          "keep",
+          "stone"
+        ],
+        "tile_w": 64,
+        "tile_h": 64,
+        "semantic_tags": [
+          "environment",
+          "keep",
+          "stone"
+        ]
+      },
+      {
+        "id": "knave_crypt_tiles_sheet",
+        "path": "authoring/clipstudio/tiles/knave_crypt_tiles_sheet.png",
+        "usage": "tileset",
+        "material_profile": "terrain_story_material",
+        "generator_component": [
+          "environment",
+          "crypt",
+          "burial"
+        ],
+        "tile_w": 64,
+        "tile_h": 64,
+        "semantic_tags": [
+          "environment",
+          "crypt",
+          "burial"
+        ]
+      },
+      {
+        "id": "knave_forest_tiles_sheet",
+        "path": "authoring/clipstudio/tiles/knave_forest_tiles_sheet.png",
+        "usage": "tileset",
+        "material_profile": "terrain_story_material",
+        "generator_component": [
+          "environment",
+          "forest",
+          "ruin"
+        ],
+        "tile_w": 64,
+        "tile_h": 64,
+        "semantic_tags": [
+          "environment",
+          "forest",
+          "ruin"
+        ]
+      }
+    ],
+    "sprites": [
+      {
+        "id": "knave_player_turnaround",
+        "path": "authoring/clipstudio/sprites/knave_player_turnaround.png",
+        "usage": "player",
+        "material_profile": "default_sprite_material",
+        "generator_component": [
+          "hero",
+          "turnaround",
+          "armor",
+          "cloth"
+        ],
+        "frames": 8,
+        "collider": {
+          "shape": "capsule",
+          "radius": 0.3,
+          "height": 1.7
+        }
+      },
+      {
+        "id": "knave_player_motion_suite",
+        "path": "authoring/clipstudio/sprites/knave_player_motion_suite.png",
+        "usage": "player",
+        "material_profile": "default_sprite_material",
+        "generator_component": [
+          "hero",
+          "movement",
+          "combat",
+          "animation"
+        ],
+        "frames": 8,
+        "collider": {
+          "shape": "capsule",
+          "radius": 0.3,
+          "height": 1.7
+        }
+      },
+      {
+        "id": "knave_player_guard_suite",
+        "path": "authoring/clipstudio/sprites/knave_player_guard_suite.png",
+        "usage": "player",
+        "material_profile": "default_sprite_material",
+        "generator_component": [
+          "hero",
+          "guard",
+          "parry",
+          "stance"
+        ],
+        "frames": 8,
+        "collider": {
+          "shape": "capsule",
+          "radius": 0.3,
+          "height": 1.7
+        }
+      },
+      {
+        "id": "knave_player_finisher_suite",
+        "path": "authoring/clipstudio/sprites/knave_player_finisher_suite.png",
+        "usage": "player",
+        "material_profile": "default_sprite_material",
+        "generator_component": [
+          "hero",
+          "finisher",
+          "cinematic",
+          "combat"
+        ],
+        "frames": 8,
+        "collider": {
+          "shape": "capsule",
+          "radius": 0.3,
+          "height": 1.7
+        }
+      },
+      {
+        "id": "knave_enemy_duelist_sheet",
+        "path": "authoring/clipstudio/sprites/knave_enemy_duelist_sheet.png",
+        "usage": "enemy",
+        "material_profile": "default_sprite_material",
+        "generator_component": [
+          "enemy",
+          "duelist",
+          "elite"
+        ],
+        "frames": 8,
+        "collider": {
+          "shape": "capsule",
+          "radius": 0.3,
+          "height": 1.7
+        }
+      },
+      {
+        "id": "knave_enemy_lancer_sheet",
+        "path": "authoring/clipstudio/sprites/knave_enemy_lancer_sheet.png",
+        "usage": "enemy",
+        "material_profile": "default_sprite_material",
+        "generator_component": [
+          "enemy",
+          "lancer",
+          "reach"
+        ],
+        "frames": 8,
+        "collider": {
+          "shape": "capsule",
+          "radius": 0.3,
+          "height": 1.7
+        }
+      },
+      {
+        "id": "knave_enemy_hexcaster_sheet",
+        "path": "authoring/clipstudio/sprites/knave_enemy_hexcaster_sheet.png",
+        "usage": "enemy",
+        "material_profile": "default_sprite_material",
+        "generator_component": [
+          "enemy",
+          "caster",
+          "ritual"
+        ],
+        "frames": 8,
+        "collider": {
+          "shape": "capsule",
+          "radius": 0.3,
+          "height": 1.7
+        }
+      },
+      {
+        "id": "knave_enemy_bulwark_sheet",
+        "path": "authoring/clipstudio/sprites/knave_enemy_bulwark_sheet.png",
+        "usage": "enemy",
+        "material_profile": "default_sprite_material",
+        "generator_component": [
+          "enemy",
+          "bulwark",
+          "heavy"
+        ],
+        "frames": 8,
+        "collider": {
+          "shape": "capsule",
+          "radius": 0.3,
+          "height": 1.7
+        }
+      },
+      {
+        "id": "knave_boss_regent_sheet",
+        "path": "authoring/clipstudio/sprites/knave_boss_regent_sheet.png",
+        "usage": "boss",
+        "material_profile": "boss_regalia_material",
+        "generator_component": [
+          "boss",
+          "regent",
+          "phase"
+        ],
+        "frames": 8,
+        "collider": {
+          "shape": "capsule",
+          "radius": 0.3,
+          "height": 1.7
+        }
+      },
+      {
+        "id": "knave_companion_sheet",
+        "path": "authoring/clipstudio/sprites/knave_companion_sheet.png",
+        "usage": "ally",
+        "material_profile": "default_sprite_material",
+        "generator_component": [
+          "ally",
+          "companion",
+          "ranger"
+        ],
+        "frames": 8,
+        "collider": {
+          "shape": "capsule",
+          "radius": 0.3,
+          "height": 1.7
+        }
+      },
+      {
+        "id": "knave_rival_huntress_sheet",
+        "path": "authoring/clipstudio/sprites/knave_rival_huntress_sheet.png",
+        "usage": "rival",
+        "material_profile": "default_sprite_material",
+        "generator_component": [
+          "rival",
+          "hunter",
+          "pursuer"
+        ],
+        "frames": 8,
+        "collider": {
+          "shape": "capsule",
+          "radius": 0.3,
+          "height": 1.7
+        }
+      },
+      {
+        "id": "knave_ui_hud_suite",
+        "path": "authoring/clipstudio/sprites/knave_ui_hud_suite.png",
+        "usage": "ui",
+        "material_profile": "ui_inkglass_material",
+        "generator_component": [
+          "ui",
+          "hud",
+          "status"
+        ],
+        "frames": 8,
+        "collider": {
+          "shape": "capsule",
+          "radius": 0.3,
+          "height": 1.7
+        }
+      },
+      {
+        "id": "knave_fx_weapon_suite",
+        "path": "authoring/clipstudio/sprites/knave_fx_weapon_suite.png",
+        "usage": "fx",
+        "material_profile": "spell_signal_material",
+        "generator_component": [
+          "fx",
+          "weapon",
+          "impact"
+        ],
+        "frames": 8,
+        "collider": {
+          "shape": "sphere",
+          "radius": 0.05,
+          "height": 0.05
+        }
+      },
+      {
+        "id": "knave_fx_magic_suite",
+        "path": "authoring/clipstudio/sprites/knave_fx_magic_suite.png",
+        "usage": "fx",
+        "material_profile": "spell_signal_material",
+        "generator_component": [
+          "fx",
+          "magic",
+          "ritual"
+        ],
+        "frames": 8,
+        "collider": {
+          "shape": "sphere",
+          "radius": 0.05,
+          "height": 0.05
+        }
+      },
+      {
+        "id": "knave_keyart_panel",
+        "path": "authoring/clipstudio/sprites/knave_keyart_panel.png",
+        "usage": "cinematic",
+        "material_profile": "default_sprite_material",
+        "generator_component": [
+          "keyart",
+          "cinematic",
+          "marketing"
+        ],
+        "frames": 8,
+        "collider": {
+          "shape": "capsule",
+          "radius": 0.3,
+          "height": 1.7
+        }
+      }
+    ],
+    "portraits": [
+      {
+        "id": "knave_companion_portrait",
+        "path": "authoring/clipstudio/portraits/knave_companion_portrait.png",
+        "usage": "portrait",
+        "material_profile": "default_sprite_material",
+        "generator_component": [
+          "portrait",
+          "ally",
+          "dialogue"
+        ],
+        "precache": false
+      },
+      {
+        "id": "knave_rival_portrait",
+        "path": "authoring/clipstudio/portraits/knave_rival_portrait.png",
+        "usage": "portrait",
+        "material_profile": "default_sprite_material",
+        "generator_component": [
+          "portrait",
+          "rival",
+          "dialogue"
+        ],
+        "precache": false
+      }
+    ]
+  },
+  "gameplay": {
+    "scenes": [
+      {
+        "id": "ruined_keep_entry",
+        "scene_type": "exploration",
+        "location": "knave_keep",
+        "timeline_frames": [
+          0,
+          48
+        ],
+        "triggers": [
+          {
+            "id": "rival_intro",
+            "frame": 12,
+            "event": "rival_intro",
+            "target": "knave_rival"
+          }
+        ]
+      },
+      {
+        "id": "burial_crypt_descent",
+        "scene_type": "combat",
+        "location": "knave_crypt",
+        "timeline_frames": [
+          49,
+          96
+        ],
+        "triggers": [
+          {
+            "id": "boss_gate",
+            "frame": 70,
+            "event": "boss_intro",
+            "target": "knave_regent"
+          }
+        ]
+      },
+      {
+        "id": "forest_of_oaths",
+        "scene_type": "exploration",
+        "location": "knave_forest",
+        "timeline_frames": [
+          97,
+          144
+        ],
+        "triggers": [
+          {
+            "id": "godai_rebalance",
+            "frame": 120,
+            "event": "room_enter",
+            "target": "knave_player"
+          }
+        ]
+      }
+    ],
+    "entities": [
+      {
+        "id": "knave_player",
+        "classname": "knave_player",
+        "asset_id": "knave_player_motion_suite",
+        "spawn": [
+          128,
+          80,
+          0
+        ],
+        "logic_components": [
+          "controllable",
+          "stamina",
+          "godai_subject"
+        ]
+      },
+      {
+        "id": "knave_rival",
+        "classname": "knave_rival",
+        "asset_id": "knave_rival_huntress_sheet",
+        "spawn": [
+          640,
+          84,
+          0
+        ],
+        "logic_components": [
+          "duelist_ai",
+          "rival_tracker"
+        ]
+      },
+      {
+        "id": "knave_regent",
+        "classname": "knave_regent",
+        "asset_id": "knave_boss_regent_sheet",
+        "spawn": [
+          1280,
+          96,
+          0
+        ],
+        "logic_components": [
+          "boss_logic",
+          "phase_controller",
+          "godai_pressure_anchor"
+        ]
+      }
+    ],
+    "systems": [
+      {
+        "name": "knave_combat_system",
+        "priority": 10,
+        "lifecycle": [
+          "init",
+          "tick",
+          "shutdown"
+        ]
+      },
+      {
+        "name": "knave_rival_system",
+        "priority": 20,
+        "lifecycle": [
+          "init",
+          "tick"
+        ]
+      },
+      {
+        "name": "knave_godai_system",
+        "priority": 30,
+        "lifecycle": [
+          "init",
+          "tick"
+        ]
+      }
+    ]
+  },
+  "targets": {
+    "clipstudio_bundle": "clipstudio_bundle",
+    "blender_bundle": "blender_bundle",
+    "idtech2_bundle": "idtech2_bundle"
+  }
+}

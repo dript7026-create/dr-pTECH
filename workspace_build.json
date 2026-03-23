@@ -1,0 +1,174 @@
+{
+  "version": 1,
+  "projects": [
+    {
+      "id": "football_predictor_tests",
+      "name": "Football Predictor tests",
+      "path": ".",
+      "automation": "automatic",
+      "required_tools": ["python"],
+      "commands": [
+        ["python", "-m", "pytest", "tests/test_model.py", "-q"]
+      ],
+      "notes": "Root automated Python test coverage for the football predictor package."
+    },
+    {
+      "id": "speech_to_text_google_tests",
+      "name": "Speech-to-Text helper tests",
+      "path": ".",
+      "automation": "automatic",
+      "required_tools": ["python"],
+      "commands": [
+        ["python", "-m", "pytest", "speech_to_text_google/tests/test_google_stt.py", "-q"]
+      ],
+      "notes": "Offline unit coverage only; does not require Google credentials."
+    },
+    {
+      "id": "egosphere_make",
+      "name": "egosphere demo build",
+      "path": "egosphere",
+      "automation": "automatic",
+      "required_tools": ["make", "gcc"],
+      "commands": [
+        ["make"]
+      ],
+      "notes": "Builds the minimal C demo when a GCC-compatible make toolchain is present."
+    },
+    {
+      "id": "wialwohm_make",
+      "name": "WialWohm prototype build",
+      "path": "WialWohm",
+      "automation": "automatic",
+      "required_tools": ["make", "gcc"],
+      "commands": [
+        ["make"]
+      ],
+      "notes": "Builds the small C prototype with the local Makefile."
+    },
+    {
+      "id": "userprofiling_harness",
+      "name": "User profiling genome harness",
+      "path": ".",
+      "automation": "automatic",
+      "required_tools": ["gcc"],
+      "commands": [
+        ["gcc", "-O2", "-std=c11", "-DGENOME_ENABLED=1", "userprofiling/test_genome.c", "-lm", "-o", "userprofiling/userprofile.exe"]
+      ],
+      "notes": "Compiles the documented genome test harness when GCC is available."
+    },
+    {
+      "id": "test_chat_call_smoke",
+      "name": "OpenAI chat smoke script",
+      "path": ".",
+      "automation": "manual",
+      "required_tools": ["python"],
+      "required_env": ["OPENAI_API_KEY"],
+      "commands": [
+        ["python", "test_chat_call.py"]
+      ],
+      "notes": "Manual integration check. Excluded from automated root builds by design."
+    },
+    {
+      "id": "orbseeker_pygame",
+      "name": "OrbSeeker pygame prototype",
+      "path": "orbseeker",
+      "automation": "manual",
+      "required_tools": ["python"],
+      "commands": [
+        ["python", "orbseeker.py"]
+      ],
+      "notes": "Interactive runtime prototype rather than a deterministic build target."
+    },
+    {
+      "id": "orbseeker_idtech2",
+      "name": "OrbSeeker idTech2 game module",
+      "path": "orbseeker/idtech2_mod",
+      "automation": "manual",
+      "required_tools": ["cmake"],
+      "required_env": ["Q2_SDK_DIR"],
+      "commands": [
+        ["cmake", "-S", ".", "-B", "build", "-DQ2_SDK_DIR=%Q2_SDK_DIR%"],
+        ["cmake", "--build", "build", "--config", "Release"]
+      ],
+      "notes": "Requires a configured Quake II SDK checkout and manual link settings."
+    },
+    {
+      "id": "zipsongai_msvc",
+      "name": "zipSongAI Win32 build",
+      "path": "zipSongAI",
+      "automation": "manual",
+      "required_tools": ["cl"],
+      "commands": [
+        ["cl", "/nologo", "/EHsc", "/DUNICODE", "/D_UNICODE", "zipSongAI.c", "synthvoice.c", "shell32.lib", "comdlg32.lib", "comctl32.lib", "winmm.lib", "shlwapi.lib"]
+      ],
+      "notes": "Run from a Visual Studio Developer PowerShell with the Windows SDK loaded."
+    },
+    {
+      "id": "orbengine_msvc",
+      "name": "ORBEngine sandbox Win32 build",
+      "path": "ORBEngine",
+      "automation": "manual",
+      "required_tools": ["cl"],
+      "commands": [
+        ["cl", "/nologo", "/EHsc", "/DUNICODE", "/D_UNICODE", "/Iinclude", "src/orbengine.c", "src/orbengine_sandbox.c", "user32.lib", "gdi32.lib"]
+      ],
+      "notes": "Prototype Win32 sandbox build; intentionally excluded from default automation."
+    },
+    {
+      "id": "tommybeta_gbdk",
+      "name": "tommybeta Game Boy ROM",
+      "path": "tommybeta",
+      "automation": "automatic",
+      "required_tools": ["lcc"],
+      "commands": [
+        ["powershell", "-NoProfile", "-ExecutionPolicy", "Bypass", "-File", "build.ps1"]
+      ],
+      "notes": "Builds through the workspace GBDK toolchain bootstrap and produces tommybeta.gb."
+    },
+    {
+      "id": "tommygoomba_gbdk",
+      "name": "tommygoomba asset pipeline and ROM",
+      "path": "tommygoomba",
+      "automation": "automatic",
+      "required_tools": ["python", "lcc"],
+      "commands": [
+        ["powershell", "-NoProfile", "-ExecutionPolicy", "Bypass", "-File", "build.ps1"]
+      ],
+      "notes": "Builds the placeholder asset pipeline and produces tommygoomba_rom.gb through the workspace GBDK toolchain bootstrap."
+    },
+    {
+      "id": "kaijugaiden_devkitpro",
+      "name": "KaijuGaiden devkitPro build",
+      "path": ".",
+      "automation": "automatic",
+      "required_tools": ["make"],
+      "commands": [
+        ["powershell", "-NoProfile", "-ExecutionPolicy", "Bypass", "-File", "build.ps1"]
+      ],
+      "notes": "Uses the repaired root devkitPro wrapper to build kaijugaiden.gba through the workspace toolchain setup."
+    },
+    {
+      "id": "readaipolish_pipeline",
+      "name": "readAIpolish automated pipeline",
+      "path": "readAIpolish",
+      "automation": "manual",
+      "required_tools": ["powershell"],
+      "commands": [
+        ["powershell", "-NoProfile", "-ExecutionPolicy", "Bypass", "-File", "automate_all.ps1"]
+      ],
+      "notes": "Script installs system packages and elevates privileges, so it stays manual."
+    },
+    {
+      "id": "speech_to_text_google_cli",
+      "name": "Speech-to-Text CLI runtime",
+      "path": "speech_to_text_google",
+      "automation": "manual",
+      "required_tools": ["python"],
+      "required_env": ["GOOGLE_APPLICATION_CREDENTIALS"],
+      "commands": [
+        ["python", "google_speech_to_text.py", "examples/input.mp3", "-o", "out.txt"]
+      ],
+      "notes": "Runtime flow needs Google credentials and input media, so it is not part of the default root build."
+    }
+  ]
+}

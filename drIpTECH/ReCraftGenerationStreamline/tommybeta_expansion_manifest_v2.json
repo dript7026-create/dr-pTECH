@@ -1,0 +1,121 @@
+[
+  {
+    "name": "driptech_logo_splash",
+    "prompt": "drIpTECH logo splash screen for a Game Boy Advance action RPG, 240x160 fullscreen composition, polished studio mark over a dramatic mushroom-rainforest horizon, saturday morning cartoon meets classic funny-pages color blocking, bright readable shapes, adventurous original presentation art, no copyrighted characters or logos beyond drIpTECH",
+    "w": 240,
+    "h": 160,
+    "out": "../../tommybeta/assets/recraft/ui/driptech_logo_splash.png"
+  },
+  {
+    "name": "intro_story_panel_01_kidnapping",
+    "prompt": "TommyBeta intro cinematic story panel 1, little brown mushroom-headed hero discovers Mareaou kidnapping his wife, strong readable storytelling silhouettes, slanted action staging, saturday morning cartoon and funny-pages art language, original mushroom-empire parody fantasy, Game Boy Advance friendly fullscreen concept frame",
+    "w": 240,
+    "h": 160,
+    "out": "../../tommybeta/assets/recraft/cinematics/intro_story_panel_01_kidnapping.png"
+  },
+  {
+    "name": "intro_story_panel_02_escape",
+    "prompt": "TommyBeta intro cinematic story panel 2, Mareaou fleeing across a many-quadranted mushroom rainforest with Tommys wife in tow, dynamic chase composition, readable top-down-adjacent story framing, saturday morning cartoon and classic funny-pages style, original parody adventure tone, Game Boy Advance friendly fullscreen concept frame",
+    "w": 240,
+    "h": 160,
+    "out": "../../tommybeta/assets/recraft/cinematics/intro_story_panel_02_escape.png"
+  },
+  {
+    "name": "intro_story_panel_03_ramp_charge",
+    "prompt": "TommyBeta intro cinematic story panel 3, Tommy charging up a slanted rock outcrop ramp in furious pursuit, heroic anticipation pose, giant fungus landscape, bold readable shapes, saturday morning cartoon plus funny-pages energy, original mushroom-empire parody fantasy, Game Boy Advance friendly fullscreen concept frame",
+    "w": 240,
+    "h": 160,
+    "out": "../../tommybeta/assets/recraft/cinematics/intro_story_panel_03_ramp_charge.png"
+  },
+  {
+    "name": "intro_story_panel_04_horizon_launch",
+    "prompt": "TommyBeta intro cinematic story panel 4, Tommy launching off a rock ramp into the horizon after Mareaou and his kidnapped wife, dramatic airborne pursuit composition, stylized clouds and spores, saturday morning cartoon and funny-pages flair, original parody fantasy, Game Boy Advance friendly fullscreen concept frame",
+    "w": 240,
+    "h": 160,
+    "out": "../../tommybeta/assets/recraft/cinematics/intro_story_panel_04_horizon_launch.png"
+  },
+  {
+    "name": "intro_story_panel_05_fall_descent",
+    "prompt": "TommyBeta intro cinematic story panel 5, Tommy falling from the sky toward a top-down mushroom rainforest quadrant where Mareaou waits below, readable descent framing, spores and leaves whipping around him, saturday morning cartoon and classic funny-pages style, original parody action fantasy, Game Boy Advance friendly fullscreen concept frame",
+    "w": 240,
+    "h": 160,
+    "out": "../../tommybeta/assets/recraft/cinematics/intro_story_panel_05_fall_descent.png"
+  },
+  {
+    "name": "state_menu_sheet",
+    "prompt": "UI sheet for TommyBeta title and state menus, new run, load game, save game, return to title confirm, close screen, polished window templates and button states, chunky readable Game Boy Advance interface, saturday morning cartoon meets funny-pages styling, original mushroom-rainforest fantasy parody",
+    "w": 512,
+    "h": 256,
+    "out": "../../tommybeta/assets/recraft/ui/state_menu_sheet.png"
+  },
+  {
+    "name": "codex_sheet",
+    "prompt": "codex log UI sheet for TommyBeta Game Boy Advance action RPG, page frames, entry headers, tabs, icon markers, playful but readable adventure documentation interface, saturday morning cartoon and classic funny-pages style, original mushroom-rainforest fantasy parody, clean organized menu art",
+    "w": 512,
+    "h": 256,
+    "out": "../../tommybeta/assets/recraft/ui/codex_sheet.png"
+  },
+  {
+    "name": "pause_window_templates_sheet",
+    "prompt": "pause and popup window template sheet for TommyBeta, clean anti-flicker friendly menu windows, warning prompts, tutorial cards, save confirmation plates, bright readable Game Boy Advance UI shapes, saturday morning cartoon meets funny-pages design, original mushroom-rainforest adventure parody",
+    "w": 512,
+    "h": 256,
+    "out": "../../tommybeta/assets/recraft/ui/pause_window_templates_sheet.png"
+  },
+  {
+    "name": "pure_coherency_tiles_sheet_a",
+    "prompt": "pure coherency environment tile sheet A for TommyBeta top-down Game Boy Advance action RPG, dozens of top-down ground, grass, root, dirt, moss, stone, puddle, and edge tiles designed to interlock cleanly, saturday morning cartoon and funny-pages palette discipline, original mushroom-rainforest fantasy parody, highly readable tile atlas",
+    "w": 512,
+    "h": 512,
+    "out": "../../tommybeta/assets/recraft/environment/pure_coherency_tiles_sheet_a.png"
+  },
+  {
+    "name": "pure_coherency_tiles_sheet_b",
+    "prompt": "pure coherency environment tile sheet B for TommyBeta top-down Game Boy Advance action RPG, dozens of canopy-shadow, fungal floor, marsh, shallow water, bridge, and path transition tiles built for coherent repeated use, saturday morning cartoon and funny-pages style, original mushroom-rainforest fantasy parody, highly readable tile atlas",
+    "w": 512,
+    "h": 512,
+    "out": "../../tommybeta/assets/recraft/environment/pure_coherency_tiles_sheet_b.png"
+  },
+  {
+    "name": "pure_coherency_tiles_sheet_c",
+    "prompt": "pure coherency environment tile sheet C for TommyBeta top-down Game Boy Advance action RPG, dozens of temple floor, ruin edge, mushroom kingdom masonry, throne glade, and elevated root-platform tiles built to tile seamlessly, saturday morning cartoon and funny-pages discipline, original parody fantasy tile atlas",
+    "w": 512,
+    "h": 512,
+    "out": "../../tommybeta/assets/recraft/environment/pure_coherency_tiles_sheet_c.png"
+  },
+  {
+    "name": "pure_coherency_tiles_sheet_d",
+    "prompt": "pure coherency environment tile sheet D for TommyBeta top-down Game Boy Advance action RPG, dozens of night spore, glow fungus, hazard ring, decorative border, and environmental accent tiles for a coherent many-quadranted overworld, saturday morning cartoon and classic funny-pages style, original parody fantasy tile atlas",
+    "w": 512,
+    "h": 512,
+    "out": "../../tommybeta/assets/recraft/environment/pure_coherency_tiles_sheet_d.png"
+  },
+  {
+    "name": "environmental_objects_sheet_repass",
+    "prompt": "repass of TommyBeta environmental objects sheet to lock style coherence with the core set, top-down props for mushroom rainforest exploration, richer object detail without clutter, saturday morning cartoon meets funny-pages consistency, original mushroom-rainforest fantasy parody, avoid generic stock-art feel",
+    "w": 512,
+    "h": 512,
+    "out": "../../tommybeta/assets/recraft/environment/environmental_objects_sheet_repass.png"
+  },
+  {
+    "name": "roaming_creatures_sheet_repass",
+    "prompt": "repass of TommyBeta roaming creatures sheet to match the core set, top-down frogs beetles lizards and tiny mushroom critters with stronger charm, clearer silhouettes, saturday morning cartoon and funny-pages consistency, original parody fantasy rainforest mood, avoid generic stock-art feel",
+    "w": 512,
+    "h": 256,
+    "out": "../../tommybeta/assets/recraft/environment/roaming_creatures_sheet_repass.png"
+  },
+  {
+    "name": "mareaou_support_sheet",
+    "prompt": "top-down Mareaou support action sheet for TommyBeta, readable dodge, block, parry, heal, feint, and guard recovery poses to complement the existing attack set, saturday morning cartoon and funny-pages energy, original mushroom-empire rival design, Game Boy Advance friendly sprite-sheet concept with transparent background",
+    "w": 512,
+    "h": 512,
+    "out": "../../tommybeta/assets/recraft/characters/mareaou_support_sheet.png"
+  },
+  {
+    "name": "tommy_support_sheet",
+    "prompt": "top-down Tommy support action sheet for TommyBeta, readable heal, hurt, recovery, menu pose, intro-cinematic heroic poses, and chase silhouettes to complement the existing core set, saturday morning cartoon and funny-pages energy, original mushroom-rainforest parody hero design, Game Boy Advance friendly sprite-sheet concept with transparent background",
+    "w": 512,
+    "h": 512,
+    "out": "../../tommybeta/assets/recraft/characters/tommy_support_sheet.png"
+  }
+]

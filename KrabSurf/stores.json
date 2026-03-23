@@ -1,0 +1,44 @@
+[
+  {
+    "id": "steam",
+    "name": "Steam",
+    "url": "https://store.steampowered.com/",
+    "domains": ["store.steampowered.com", "steamcommunity.com"]
+  },
+  {
+    "id": "gog",
+    "name": "GOG",
+    "url": "https://www.gog.com/",
+    "domains": ["www.gog.com", "gog.com"]
+  },
+  {
+    "id": "itch",
+    "name": "itch.io",
+    "url": "https://itch.io/",
+    "domains": ["itch.io", "www.itch.io"]
+  },
+  {
+    "id": "epic",
+    "name": "Epic Games Store",
+    "url": "https://store.epicgames.com/",
+    "domains": ["store.epicgames.com"]
+  },
+  {
+    "id": "xbox",
+    "name": "Xbox Store",
+    "url": "https://www.xbox.com/games/store",
+    "domains": ["www.xbox.com", "xbox.com"]
+  },
+  {
+    "id": "microsoft",
+    "name": "Microsoft Apps",
+    "url": "https://apps.microsoft.com/",
+    "domains": ["apps.microsoft.com"]
+  },
+  {
+    "id": "humble",
+    "name": "Humble",
+    "url": "https://www.humblebundle.com/store",
+    "domains": ["www.humblebundle.com", "humblebundle.com"]
+  }
+]

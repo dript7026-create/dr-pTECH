@@ -1,0 +1,86 @@
+[
+  {
+    "name": "player_reptilian_assassin_concept",
+    "prompt": "third-person action RPG character concept, reptilian ninja assassin, modest minimal garb, athletic silhouette, rainforest island setting, readable from behind, action-game hero sheet feel, grounded fantasy, not sexualized",
+    "w": 1024,
+    "h": 1024,
+    "out": "../../ORBEngine/assets/recraft_demo/player_reptilian_assassin_concept.png"
+  },
+  {
+    "name": "player_spawn_smoke_fx",
+    "prompt": "fantasy game VFX sheet, poof of smoke for player spawn, transparent-friendly centered composition, soft gray vapor with subtle green jungle magic undertone, action RPG effects concept",
+    "w": 768,
+    "h": 768,
+    "out": "../../ORBEngine/assets/recraft_demo/player_spawn_smoke_fx.png"
+  },
+  {
+    "name": "enemy_slime_concept",
+    "prompt": "action RPG enemy concept art, rainforest island slime creature, readable combat silhouette, glossy toxic gel body, simple clean shape language, suitable for tutorial enemy",
+    "w": 768,
+    "h": 768,
+    "out": "../../ORBEngine/assets/recraft_demo/enemy_slime_concept.png"
+  },
+  {
+    "name": "enemy_wolf_concept",
+    "prompt": "action RPG enemy concept art, amazonian rainforest wolf-like predator, lean fast-moving silhouette, damp fur, jungle hunter, readable game enemy sheet, suitable for real-time combat",
+    "w": 768,
+    "h": 768,
+    "out": "../../ORBEngine/assets/recraft_demo/enemy_wolf_concept.png"
+  },
+  {
+    "name": "enemy_skeleton_man_concept",
+    "prompt": "action RPG enemy concept art, skeleton-man jungle warrior, ancient ruins influence, bone armor and weathered relic details, readable silhouette, suitable for tutorial and overworld combat",
+    "w": 768,
+    "h": 768,
+    "out": "../../ORBEngine/assets/recraft_demo/enemy_skeleton_man_concept.png"
+  },
+  {
+    "name": "amazonian_island_world_keyart",
+    "prompt": "third-person action RPG environment key art, small amazonian rainforest island with ruined stone pathways, shallow water, dense foliage, hidden loot spaces, exploration-friendly terrain, fantasy realism",
+    "w": 1344,
+    "h": 768,
+    "out": "../../ORBEngine/assets/recraft_demo/amazonian_island_world_keyart.png"
+  },
+  {
+    "name": "tutorial_prompt_ui_panel",
+    "prompt": "game UI concept, action RPG tutorial prompt window for Xbox controls, readable dark panel with jungle-green accent trim, space for multiple pages of text, B close indicator and LB RB page hints, polished but minimal",
+    "w": 1024,
+    "h": 576,
+    "out": "../../ORBEngine/assets/recraft_demo/tutorial_prompt_ui_panel.png"
+  },
+  {
+    "name": "hud_health_stamina_compass",
+    "prompt": "game HUD concept for third-person action RPG, health bar, stamina bar, compass, subtle jungle explorer fantasy style, Xbox-friendly readability, polished minimal interface",
+    "w": 1344,
+    "h": 384,
+    "out": "../../ORBEngine/assets/recraft_demo/hud_health_stamina_compass.png"
+  },
+  {
+    "name": "treasure_loot_chest_concept",
+    "prompt": "fantasy action RPG hidden treasure concept, rainforest stone chest with gold and weapon loot, overgrown ruins style, readable shape for exploration reward object",
+    "w": 768,
+    "h": 768,
+    "out": "../../ORBEngine/assets/recraft_demo/treasure_loot_chest_concept.png"
+  },
+  {
+    "name": "boss_duo_mesoamerican_hybrids",
+    "prompt": "final boss duo concept art for action RPG, paired Mayan and Aztec inspired animal-human hybrids, one jaguar themed and one eagle-serpent themed, fast vicious movement style, environmental combat personality, rainforest temple backdrop, cinematic boss key art",
+    "w": 1344,
+    "h": 768,
+    "out": "../../ORBEngine/assets/recraft_demo/boss_duo_mesoamerican_hybrids.png"
+  },
+  {
+    "name": "healing_item_concept",
+    "prompt": "action RPG healing item concept, rechargeable rainforest alchemy flask with luminous liquid, readable silhouette, persistent player support item",
+    "w": 768,
+    "h": 768,
+    "out": "../../ORBEngine/assets/recraft_demo/healing_item_concept.png"
+  },
+  {
+    "name": "focus_lockon_icon_set",
+    "prompt": "game UI icon concept set, lock-on reticle, parry icon, dual-attack prompts, LT RT special indicator, clean readable action RPG symbols with subtle jungle fantasy styling",
+    "w": 768,
+    "h": 768,
+    "out": "../../ORBEngine/assets/recraft_demo/focus_lockon_icon_set.png"
+  }
+]

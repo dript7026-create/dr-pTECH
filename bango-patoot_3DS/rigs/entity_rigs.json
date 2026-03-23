@@ -1,0 +1,50 @@
+{
+  "format": "bango_patoot_rig_v1",
+  "skeletons": [
+    {
+      "name": "bango_base_rig",
+      "entity": "Bango",
+      "sprite_sheet": "assets/source_sheets/bango_tpose_4angle.png",
+      "concept_loop": "assets/concept_loops/bango_idle_keypose_loop.gif",
+      "bones": [
+        {"name": "root", "parent": null, "x": 0.0, "y": 0.0},
+        {"name": "pelvis", "parent": "root", "x": 0.0, "y": 14.0},
+        {"name": "spine", "parent": "pelvis", "x": 0.0, "y": 28.0},
+        {"name": "chest", "parent": "spine", "x": 0.0, "y": 44.0},
+        {"name": "neck", "parent": "chest", "x": 0.0, "y": 56.0},
+        {"name": "head", "parent": "neck", "x": 0.0, "y": 70.0},
+        {"name": "horn_l", "parent": "head", "x": -10.0, "y": 84.0},
+        {"name": "horn_r", "parent": "head", "x": 10.0, "y": 84.0},
+        {"name": "arm_l", "parent": "chest", "x": -18.0, "y": 42.0},
+        {"name": "arm_r", "parent": "chest", "x": 18.0, "y": 42.0},
+        {"name": "hand_l", "parent": "arm_l", "x": -30.0, "y": 28.0},
+        {"name": "hand_r", "parent": "arm_r", "x": 30.0, "y": 28.0},
+        {"name": "leg_l", "parent": "pelvis", "x": -12.0, "y": -6.0},
+        {"name": "leg_r", "parent": "pelvis", "x": 12.0, "y": -6.0},
+        {"name": "foot_l", "parent": "leg_l", "x": -14.0, "y": -32.0},
+        {"name": "foot_r", "parent": "leg_r", "x": 14.0, "y": -32.0}
+      ]
+    },
+    {
+      "name": "patoot_base_rig",
+      "entity": "Patoot",
+      "sprite_sheet": "assets/source_sheets/patoot_tpose_4angle.png",
+      "concept_loop": "assets/concept_loops/patoot_strut_keypose_loop.gif",
+      "bones": [
+        {"name": "root", "parent": null, "x": 0.0, "y": 0.0},
+        {"name": "pelvis", "parent": "root", "x": 0.0, "y": 8.0},
+        {"name": "spine", "parent": "pelvis", "x": 0.0, "y": 24.0},
+        {"name": "neck", "parent": "spine", "x": 0.0, "y": 40.0},
+        {"name": "head", "parent": "neck", "x": 0.0, "y": 58.0},
+        {"name": "beak", "parent": "head", "x": 12.0, "y": 60.0},
+        {"name": "wing_l", "parent": "spine", "x": -20.0, "y": 30.0},
+        {"name": "wing_r", "parent": "spine", "x": 20.0, "y": 30.0},
+        {"name": "tail", "parent": "pelvis", "x": -8.0, "y": -8.0},
+        {"name": "leg_l", "parent": "pelvis", "x": -8.0, "y": -12.0},
+        {"name": "leg_r", "parent": "pelvis", "x": 8.0, "y": -12.0},
+        {"name": "foot_l", "parent": "leg_l", "x": -10.0, "y": -34.0},
+        {"name": "foot_r", "parent": "leg_r", "x": 10.0, "y": -34.0}
+      ]
+    }
+  ]
+}

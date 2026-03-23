@@ -1,0 +1,9 @@
+﻿TommyBeta VBA-M capture session
+Timestamp: 2026-03-16T20:56:42
+ROM: C:\Users\rrcar\Documents\drIpTECH\tommybeta\tommybeta_autoplay.gba
+Emulator: C:\Users\rrcar\Documents\visualboyadvance\visualboyadvance-m.exe
+Output AVI: C:\Users\rrcar\Documents\drIpTECH\tommybeta\capture\tommybeta_100_percent_run.avi
+DurationSeconds: 255
+ResolvedWindowTitle: VisualBoyAdvance-M 2.2.3
+ffmpeg stdout log: C:\Users\rrcar\Documents\drIpTECH\tommybeta\capture\capture_ffmpeg.out.log
+ffmpeg stderr log: C:\Users\rrcar\Documents\drIpTECH\tommybeta\capture\capture_ffmpeg.err.log

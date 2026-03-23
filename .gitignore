@@ -1,0 +1,80 @@
+# Workspace-local tooling and environments
+.venv/
+.jdk/
+.android-bootstrap/
+.copilot_bridge/
+.tools/
+.vscode/
+
+# Python caches
+__pycache__/
+**/__pycache__/
+.pytest_cache/
+**/.pytest_cache/
+.ipynb_checkpoints/
+**/.ipynb_checkpoints/
+*.pyc
+*.pyo
+
+# Build outputs and generated artifacts
+build/
+**/build/
+dist/
+**/dist/
+generated/
+**/generated/
+out/
+**/out/
+
+# Binary artifacts
+*.o
+*.obj
+*.a
+*.lib
+*.dll
+*.so
+*.dylib
+*.exe
+*.class
+*.jar
+*.apk
+*.gba
+*.gb
+*.gbc
+*.nds
+*.3dsx
+*.elf
+*.rom
+*.pak
+*.pyd
+
+# Archives and large handoff bundles
+*.zip
+*.7z
+*.rar
+
+# Logs and machine-local reports
+*.log
+*.tmp
+*.temp
+compile_*.log
+link.log
+gcc_version.log
+pip_check.txt
+pip_audit_report.txt
+workspace_file_count.txt
+workspace_size_bytes.txt
+venv_size_bytes.txt
+
+# Sensitive or workstation-local traces
+captures/
+traces/
+jupyter_kernels.json
+
+# Generated runtime data
+*_rivals.dat
+smoke_rivals.dat
+egosphere_rivals.dat
+
+# Large authoring source files better kept out of git mirrors
+*.clip

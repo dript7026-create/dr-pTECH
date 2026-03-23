@@ -1,0 +1,38 @@
+INNSMOUTH ISLAND PUBLIC ASSET BENCHMARK
+
+Date: 2026-03-11
+
+PURPOSE
+
+This document records the external public-asset benchmark pass used to pressure-test InnsmouthIsland asset-planning quality, modularity, consistency, and audit posture. No third-party assets were imported or copied into the project. The benchmark was used to derive production standards only.
+
+REFERENCES
+
+1. OpenGameArt. Home and community art index. https://opengameart.org/ Accessed 2026-03-11.
+2. OpenGameArt. Art marketplace cross-promotion. https://opengameart.org/content/art-marketplace-cross-promotion Accessed 2026-03-11.
+3. Kenney. Assets index. https://kenney.nl/assets Accessed 2026-03-11.
+4. Liberated Pixel Cup. Project overview and style-guide framing. https://lpc.opengameart.org/ Accessed 2026-03-11.
+
+WHAT THE BENCHMARK SHOWED
+
+- OpenGameArt showed breadth across art, UI, music, and sound plus explicit free-license culture, but also reinforced the need for per-asset provenance instead of platform-wide assumptions.
+- Kenney showed the value of family-complete modular kits across environments, UI, prompts, textures, and audio-adjacent support assets.
+- Liberated Pixel Cup showed the value of explicit style-guide discipline, shared perspective rules, and consistency strong enough for collaborative reuse.
+
+BENCHMARK CONCLUSIONS INCORPORATED INTO INNSMOUTHISLAND
+
+1. Modular completeness standard.
+2. Style-guide discipline standard.
+3. Provenance discipline standard.
+4. Interface completeness standard.
+5. Animation-system completeness standard.
+
+NON-ADOPTION RULES
+
+- Do not copy visual motifs, layouts, or sprite constructions directly from benchmarked sources.
+- Do not reuse prompt wording taken verbatim from benchmark references.
+- Do not assume platform-wide licensing from any single host; verify per asset if future importing or conditioning occurs.
+
+RESEARCH-INTEGRATED STANDALONE VERSION
+
+The separate research-integrated standalone executable exists to preserve these benchmark-informed standards without mutating the current main InnsmouthIsland demo branch. That build keeps gameplay parity while labeling itself as the benchmark-informed research track and pairing with the cited benchmark report, bibliography, and provenance ledger.

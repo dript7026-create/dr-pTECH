@@ -1,0 +1,100 @@
+[
+  {
+    "name": "innsmouth_player_master_sheet_v2",
+    "prompt": "master production-ready action-game character atlas for InnsmouthIsland, ooze-punk lovecraftian fish-man drifter protagonist, broad amphibious shoulders, neck frill, digitigrade legs, luminous throat sacs, salvage harness, wet shell and rope materials, black-tide New England rainforest horror mood, include crawl intro, idle breathing, moisture heal, walk, run, jump start, airborne, double-jump transition, ground dodge, air dodge, crouch, slide, focus-lock stance, light combo chain, heavy combo chain, aerial light, aerial plunge, block, parry flash, hurt, stagger, throwable use, projectile throw, shrine kneel, shrine resonance, victory ascend, defeat sink, high silhouette readability, third-person game-sheet layout, clean base anchors, neutral-light version, no text labels, premium concept atlas",
+    "w": 1216,
+    "h": 896,
+    "out": "../../ORBEngine/assets/innsmouth_island/innsmouth_player_master_sheet_v2.png"
+  },
+  {
+    "name": "innsmouth_enemy_roster_sheet_v2",
+    "prompt": "premium enemy roster atlas for InnsmouthIsland, black-tide ooze-punk lovecraftian field enemy lineup in a wet New England rainforest coast, Deep One Raider, Shoggoth Spawn, Nightgaunt Stalker, Mi-Go Scavenger, Ghoul Woodsman, Cultist Harpooner, Star-Spawn Wretch, Drowned Pilgrim, each with distinct silhouette, material breakup, weapon or ritual tool language, codex-quality portrait turn, gameplay readability, neutral-light reference framing, no logo, no text",
+    "w": 1216,
+    "h": 896,
+    "out": "../../ORBEngine/assets/innsmouth_island/innsmouth_enemy_roster_sheet_v2.png"
+  },
+  {
+    "name": "innsmouth_enemy_action_atlas_v2",
+    "prompt": "action atlas for InnsmouthIsland field enemies, ooze-punk lovecraftian animation concept sheet, for each field enemy show idle, locomotion, attack telegraph, attack release, recoil, stagger, death, plus special signature move beats like glide dive, harpoon throw, heal pulse, pressure burst, pseudopod slam, heavy readability for gameplay timing, wet black shadows, salt-crusted materials, high-end production art atlas",
+    "w": 1216,
+    "h": 896,
+    "out": "../../ORBEngine/assets/innsmouth_island/innsmouth_enemy_action_atlas_v2.png"
+  },
+  {
+    "name": "innsmouth_boss_duo_action_atlas_v2",
+    "prompt": "boss production atlas for InnsmouthIsland, reptilian abyss prince and jaguar eclipse tyrant, phase-structured action sheet, throne rise, spear cast, tail sweep, leap slam, venom spray, aerial dive, crouch stalk, claw fan, eclipse dash, blood-moon slam, chain pounce, death states, regal abyss ritual mood, humid temple crown environment hints, premium combat readability, boss-scale silhouette hierarchy, no text",
+    "w": 1536,
+    "h": 768,
+    "out": "../../ORBEngine/assets/innsmouth_island/innsmouth_boss_duo_action_atlas_v2.png"
+  },
+  {
+    "name": "innsmouth_melee_weapon_atlas_v2",
+    "prompt": "premium melee weapon atlas for InnsmouthIsland, 16 unique ooze-punk coastal horror weapons on neutral dark backdrop, Barnacle Shiv, Tide Hook, Coral Mace, Dock Cleaver, Shell Glaive, Pearl Pike, Kelp Lash, Mud-Saw Hatchet, Ooze Hammer, Brine Falx, Eelbone Saber, Ruin Breaker, Temple Harrow, Jetty Reaper, Black Pearl Axe, Abyss Halberd, each shown in full profile with close material callout feel, wet metal, shell, coral, rope, pearl, ooze, ritual detail, gameplay silhouette first, no text",
+    "w": 1536,
+    "h": 768,
+    "out": "../../ORBEngine/assets/innsmouth_island/innsmouth_melee_weapon_atlas_v2.png"
+  },
+  {
+    "name": "innsmouth_projectile_weapon_atlas_v2",
+    "prompt": "premium ranged and throwable atlas for InnsmouthIsland, Throwing Knives, Mudglass Darts, Harpoon Coil, Molotov Brine Flask, Dust Seed Pod, Pearl Bolt Caster, Eclipse Launcher, plus projectile silhouettes and impact states, ooze-punk ritual fishing technology, wet materials, ignition glow, fungal dust burst, gameplay icon readability, neutral-light presentation, no text",
+    "w": 1280,
+    "h": 832,
+    "out": "../../ORBEngine/assets/innsmouth_island/innsmouth_projectile_weapon_atlas_v2.png"
+  },
+  {
+    "name": "innsmouth_armor_set_atlas_v2",
+    "prompt": "master armor atlas for InnsmouthIsland, 14 armor sets for fish-man player, each set broken into upper right arm, lower right arm, upper left arm, lower left arm, upper right leg, lower right leg, upper left leg, lower left leg, plus torso guide and silhouette overview, Shore Rag Harness, Dockworker Saltmail, Kelp-Wrap Strider, Mudplate Forager, Pearl-Lashed Raider, Ooze-Forged Pilgrim, Brackish Duelist Rig, Murk Templar Shell, Nightgaunt Veilweave, Star-Spawn Pressure Suit, Cult Tide Mantle, Basalt Canopy Guard, Abyss Prince Husk, Eclipse Regalia, premium concept board, clean swappable piece separation, wet fabric and shell realism, no text",
+    "w": 896,
+    "h": 1216,
+    "out": "../../ORBEngine/assets/innsmouth_island/innsmouth_armor_set_atlas_v2.png"
+  },
+  {
+    "name": "innsmouth_pickups_and_shelters_atlas_v2",
+    "prompt": "interactive object atlas for InnsmouthIsland, throwing knife piles, brine flask caches, dust seed pods, brine salt clusters, MurkShelter architecture in dormant and activated states, save pulse, upgrade resonance flare, fast travel ring, pearl beacon, shrine interior mood, ooze-punk shrine engineering, readable gameplay-centered silhouettes, premium concept atlas, no text",
+    "w": 1216,
+    "h": 896,
+    "out": "../../ORBEngine/assets/innsmouth_island/innsmouth_pickups_and_shelters_atlas_v2.png"
+  },
+  {
+    "name": "innsmouth_micro_prop_atlas_v2",
+    "prompt": "micro prop and decal atlas for InnsmouthIsland, tide pebbles, shell shards, fish bones, barnacle crust decals, eel slime streaks, fungal caps, rope knots, wet leaves scatter, salt crystals, blood-in-water ripples, gameplay-safe environmental dressing for black-tide wet coast and rainforest swamp, high production readability, no text",
+    "w": 1280,
+    "h": 832,
+    "out": "../../ORBEngine/assets/innsmouth_island/innsmouth_micro_prop_atlas_v2.png"
+  },
+  {
+    "name": "innsmouth_environment_props_sheet_v2",
+    "prompt": "master environment prop atlas for InnsmouthIsland, 24 core props plus improved market-competitive detail, twisted cedar tree, mangrove root cluster, black rock, tidepool stone, ruined wharf post, fog lamp, barnacled shrine, fishing crate, driftwood arch, fungus stump, vine gate, gravestone, skull totem, broken skiff, eel basket, rope coil, wet fern cluster, dead coral, standing stone, tide altar, fungus boulder, lantern pole, rib cage ruin, ritual obelisk, plus stronger material breakup and gameplay anchor clarity, no text",
+    "w": 1536,
+    "h": 768,
+    "out": "../../ORBEngine/assets/innsmouth_island/innsmouth_environment_props_sheet_v2.png"
+  },
+  {
+    "name": "innsmouth_landmark_panorama_sheet_v2",
+    "prompt": "large landmark panorama board for InnsmouthIsland, storm shore arrival beach, drowned village street, fungal grove basin, black basalt ridge, tidal caverns mouth, central murk marsh, cyclopean seal temple, boss crown terrace, premium third-person action environment concept art with gameplay path readability, pseudo-3D friendly layering, occlusion-friendly silhouette breaks, no text",
+    "w": 1536,
+    "h": 768,
+    "out": "../../ORBEngine/assets/innsmouth_island/innsmouth_landmark_panorama_sheet_v2.png"
+  },
+  {
+    "name": "innsmouth_biome_ground_and_decal_sheet_v2",
+    "prompt": "ground material and decal atlas for InnsmouthIsland, black sand, wet dock planks, shrine stone, basalt shards, fungal moss, mud, shallow tide water edges, salt trails, ritual paint, blood wash, ooze slicks, puddle highlights, gameplay-tile readability, premium environment material sheet, no text",
+    "w": 1216,
+    "h": 896,
+    "out": "../../ORBEngine/assets/innsmouth_island/innsmouth_biome_ground_and_decal_sheet_v2.png"
+  },
+  {
+    "name": "innsmouth_ui_hud_codex_atlas_v2",
+    "prompt": "premium HUD and codex atlas for InnsmouthIsland, black wet-metal UI with eldritch brass trim, moisture bar, breathing sync meter, vitality, stamina, brine salt icon, weapon family icons, armor crests, pickup icons, focus reticle states, shrine fast-travel nodes, codex portrait frames, menu tab styling, highly readable Xbox-friendly action RPG interface, no text in main art areas",
+    "w": 1536,
+    "h": 768,
+    "out": "../../ORBEngine/assets/innsmouth_island/innsmouth_ui_hud_codex_atlas_v2.png"
+  },
+  {
+    "name": "innsmouth_fx_fog_light_ooze_atlas_v2",
+    "prompt": "effects atlas for InnsmouthIsland, low ground fog, canopy fog ribbons, rain streaks, hanging spores, pearl motes, shrine light shafts, black-tide splashes, seed pod dust clouds, flask fire bloom, parry flash, boss ritual pulses, wet impact bursts, premium layered VFX board for pseudo-3D action game, transparent-background friendly composition, no text",
+    "w": 1536,
+    "h": 768,
+    "out": "../../ORBEngine/assets/innsmouth_island/innsmouth_fx_fog_light_ooze_atlas_v2.png"
+  }
+]

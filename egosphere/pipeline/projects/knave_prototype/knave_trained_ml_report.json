@@ -1,0 +1,100 @@
+{
+  "training_examples": 27,
+  "axis_mse": {
+    "animation_density": 0.000944,
+    "environment_depth": 0.001635,
+    "fx_legibility": 0.001889,
+    "material_storytelling": 0.001559,
+    "silhouette_readability": 0.001704,
+    "ui_authorship": 0.003506
+  },
+  "godai_mse": {
+    "mercy": 2.2e-05,
+    "novelty": 8e-06,
+    "pressure": 1.4e-05
+  },
+  "history_examples": 7,
+  "component_examples": 20,
+  "preview_predictions": [
+    {
+      "asset_id": "knave_player_turnaround",
+      "predicted_axes": {
+        "animation_density": 0.021,
+        "environment_depth": 0.038,
+        "fx_legibility": 0.089,
+        "material_storytelling": 1.0,
+        "silhouette_readability": 0.98,
+        "ui_authorship": 0.972
+      },
+      "predicted_godai": {
+        "mercy": 1.042,
+        "novelty": 1.129,
+        "pressure": 1.003
+      }
+    },
+    {
+      "asset_id": "knave_player_motion_suite",
+      "predicted_axes": {
+        "animation_density": 1.0,
+        "environment_depth": 0.07,
+        "fx_legibility": 0.025,
+        "material_storytelling": 0.003,
+        "silhouette_readability": 0.959,
+        "ui_authorship": 0.0
+      },
+      "predicted_godai": {
+        "mercy": 1.08,
+        "novelty": 1.088,
+        "pressure": 0.954
+      }
+    },
+    {
+      "asset_id": "knave_player_guard_suite",
+      "predicted_axes": {
+        "animation_density": 1.0,
+        "environment_depth": 0.033,
+        "fx_legibility": 1.0,
+        "material_storytelling": 0.891,
+        "silhouette_readability": 0.028,
+        "ui_authorship": 0.0
+      },
+      "predicted_godai": {
+        "mercy": 1.048,
+        "novelty": 1.124,
+        "pressure": 1.0
+      }
+    },
+    {
+      "asset_id": "knave_player_finisher_suite",
+      "predicted_axes": {
+        "animation_density": 0.952,
+        "environment_depth": 0.907,
+        "fx_legibility": 0.926,
+        "material_storytelling": 0.092,
+        "silhouette_readability": 0.068,
+        "ui_authorship": 0.055
+      },
+      "predicted_godai": {
+        "mercy": 1.051,
+        "novelty": 1.125,
+        "pressure": 1.003
+      }
+    },
+    {
+      "asset_id": "knave_enemy_duelist_sheet",
+      "predicted_axes": {
+        "animation_density": 1.0,
+        "environment_depth": 0.0,
+        "fx_legibility": 0.0,
+        "material_storytelling": 0.081,
+        "silhouette_readability": 1.0,
+        "ui_authorship": 0.004
+      },
+      "predicted_godai": {
+        "mercy": 1.078,
+        "novelty": 1.086,
+        "pressure": 0.952
+      }
+    }
+  ]
+}

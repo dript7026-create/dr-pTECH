@@ -1,0 +1,28 @@
+{
+  "package": "dirkodds_android_client_2026-03-20",
+  "project": "DirkOdds Mobile",
+  "validated_scope": {
+    "build": {
+      "command": "gradle.bat clean assembleRelease --rerun-tasks --console=plain",
+      "status": "passed"
+    },
+    "apk": {
+      "path": "artifacts/DirkOddsMobile-release.apk",
+      "application_id": "com.driptech.dirkodds.mobile.preview",
+      "version_code": 5,
+      "version_name": "0.9-mobile-preview",
+      "target_sdk": 35,
+      "min_sdk": 24
+    },
+    "experience": {
+      "scenario_sports": ["football", "basketball", "baseball"],
+      "interaction_modes": ["prediction lane selection", "pulse pick", "set shape", "reflex tap"],
+      "render_mode": "abstract 3D OpenGL ES playback"
+    }
+  },
+  "guardrails": [
+    "No real player, league, franchise, or likeness-sensitive data is packaged in this build.",
+    "Scenarios, team names, venues, and textures are synthetic and anonymous.",
+    "This build is a review/testing preview, not a final licensed release."
+  ]
+}

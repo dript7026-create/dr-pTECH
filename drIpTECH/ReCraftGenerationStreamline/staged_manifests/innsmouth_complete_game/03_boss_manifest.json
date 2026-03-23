@@ -1,0 +1,53 @@
+[
+    {
+        "name":  "innsmouth_reptilian_abyss_prince_action_sheet_v3",
+        "category":  "boss",
+        "prompt_revision":  "transparent_orb32_v1",
+        "protocol_profile":  "innsmouth_island_dimensional_protocol_v1",
+        "pass_kind":  "complete_game",
+        "guide_ref":  "innsmouth_island_complete_game_prompt_guide_v1",
+        "prompt":  "ORBSystems 32-dimensional coherency boss action request for InnsmouthIsland; transparent background only, isolated alpha render, no opaque backdrop, full depth-precision mapping; Reptilian Abyss Prince keyframes for throne rise, spear cast, tail sweep, venom spray, leap slam, recoil, stagger, phase death, expressionistic angular regal-monster silhouette, no text",
+        "negative_prompt":  "opaque background, solid background, painted matte, text, watermark, logo, cropped figure",
+        "controls":  {
+                         "transparent_background":  true
+                     },
+        "transparent_background":  true,
+        "w":  1216,
+        "h":  896,
+        "out":  "../../../ORBEngine/assets/innsmouth_island/complete_game/bosses/innsmouth_reptilian_abyss_prince_action_sheet_v3.png"
+    },
+    {
+        "name":  "innsmouth_jaguar_eclipse_tyrant_action_sheet_v3",
+        "category":  "boss",
+        "prompt_revision":  "transparent_orb32_v1",
+        "protocol_profile":  "innsmouth_island_dimensional_protocol_v1",
+        "pass_kind":  "complete_game",
+        "guide_ref":  "innsmouth_island_complete_game_prompt_guide_v1",
+        "prompt":  "ORBSystems 32-dimensional coherency boss action request for InnsmouthIsland; transparent background only, isolated alpha render, no opaque backdrop, full depth-precision mapping; Jaguar Eclipse Tyrant keyframes for stalk crouch, eclipse dash, claw fan, chain pounce, blood-moon slam, recoil, stagger, phase death, angular predator silhouette and brutal line-of-action, no text",
+        "negative_prompt":  "opaque background, solid background, painted matte, text, watermark, logo, cropped figure",
+        "controls":  {
+                         "transparent_background":  true
+                     },
+        "transparent_background":  true,
+        "w":  1216,
+        "h":  896,
+        "out":  "../../../ORBEngine/assets/innsmouth_island/complete_game/bosses/innsmouth_jaguar_eclipse_tyrant_action_sheet_v3.png"
+    },
+    {
+        "name":  "innsmouth_boss_duo_ritual_transition_sheet_v3",
+        "category":  "boss",
+        "prompt_revision":  "transparent_orb32_v1",
+        "protocol_profile":  "innsmouth_island_dimensional_protocol_v1",
+        "pass_kind":  "complete_game",
+        "guide_ref":  "innsmouth_island_complete_game_prompt_guide_v1",
+        "prompt":  "ORBSystems 32-dimensional coherency boss ritual request for InnsmouthIsland; transparent background only, isolated alpha render, no opaque backdrop, full depth-precision mapping; boss duo ritual transition frames for eclipse court summoning, seal fracture, throne resonance, synchronized rage escalation, angular ceremonial posing and hard compositional rhythm, no text",
+        "negative_prompt":  "opaque background, solid background, painted matte, text, watermark, logo, cropped figure",
+        "controls":  {
+                         "transparent_background":  true
+                     },
+        "transparent_background":  true,
+        "w":  1216,
+        "h":  896,
+        "out":  "../../../ORBEngine/assets/innsmouth_island/complete_game/bosses/innsmouth_boss_duo_ritual_transition_sheet_v3.png"
+    }
+]

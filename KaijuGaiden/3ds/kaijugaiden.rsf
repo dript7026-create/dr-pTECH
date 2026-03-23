@@ -1,0 +1,19 @@
+BasicInfo:
+  Title: KaijuGaiden
+  CompanyCode: "00"
+  ProductCode: CTR-H-KGDN
+  ContentType: Application
+  Logo: Nintendo
+
+TitleInfo:
+  UniqueId: 0x0D1A7D
+  Category: Application
+
+SystemControlInfo:
+  StackSize: 0x4000
+
+Option:
+  UseOnSD: true
+  EnableCompress: true
+  FreeProductCode: true
+  MediaFootPadding: false

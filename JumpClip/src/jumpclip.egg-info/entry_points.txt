@@ -1,0 +1,2 @@
+[console_scripts]
+jumpclip = jumpclip.cli:main

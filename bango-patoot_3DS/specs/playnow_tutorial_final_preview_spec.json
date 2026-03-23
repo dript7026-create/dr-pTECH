@@ -1,0 +1,82 @@
+{
+  "id": "tutorial_final_preview",
+  "title": "Bango: Unchained - Bango&Patoot Final Tutorial Preview",
+  "deliverable_role": "marketplace_ready_onboarding_preview",
+  "engine_mode": "orbengine_dual_tutorial_final_preview",
+  "environment": "market_dread_support_pocket",
+  "runtime_contract": {
+    "focus": "demonstrate a stronger shippable tutorial beat with Patoot-heavy support, lighter Bango lead pressure, and constant social-anxiety dread without losing readability",
+    "camera_model": "tickgnosis_anchor_scale_camera_coherency_with_dread_support_metrics",
+    "enemy_family": "nightmaresludgebio_orbs"
+  },
+  "support_dread_model": {
+    "patoot_presence": "high_support_signal",
+    "bango_resolve": "recoverable_action_signal",
+    "dread_pressure": "persistent_encroaching_entropy_signal",
+    "design_rule": "dread may raise tension, but must never break finishability or prompt readability"
+  },
+  "environment_preview_slices": [
+    "apiary_junction_hub",
+    "brassroot_borough",
+    "saint_voltage_arcade",
+    "ossuary_transit",
+    "gutterwake_sewers",
+    "cinder_tenements",
+    "aviary_last_broadcast",
+    "witchcoil_spire"
+  ],
+  "control_lessons": [
+    "move_and_camera_under_pressure",
+    "focus_and_support_loop",
+    "block_parry_recovery",
+    "heal_timing_under_dread",
+    "special_release_for_stability",
+    "combined_wave_finish"
+  ],
+  "waves": [
+    {
+      "stage": 1,
+      "lesson": "opening_contact_pair",
+      "enemies": [
+        "scout",
+        "scout"
+      ]
+    },
+    {
+      "stage": 2,
+      "lesson": "market_pressure_pair",
+      "enemies": [
+        "mire",
+        "scout"
+      ]
+    },
+    {
+      "stage": 3,
+      "lesson": "horror_threshold",
+      "enemies": [
+        "horror",
+        "mire"
+      ]
+    },
+    {
+      "stage": 4,
+      "lesson": "marketplace_finish_wave",
+      "enemies": [
+        "scout",
+        "mire",
+        "horror",
+        "scout"
+      ]
+    }
+  ],
+  "success_state": {
+    "rule": "defeat_all_waves_and_hold_readability",
+    "expected_duration_minutes": 6,
+    "proof_points": [
+      "tutorial tension is visibly higher than the prototype",
+      "Patoot support loop is explicit in HUD and prompts",
+      "Bango action lead remains playable under dread pressure",
+      "the slice is presentable as a marketplace-facing final tutorial preview"
+    ]
+  }
+}

@@ -1,0 +1,93 @@
+{
+  "manifest_name": "neowakeup_gui_pass_600",
+  "manifest_version": "2026-03-12.neowakeup_gui_pass_600",
+  "intent": "600-credit Recraft pass for the primary NeoWakeUP control hub visual system.",
+  "budget": {
+    "unit_cost": 75,
+    "asset_count": 8,
+    "total_credits": 600
+  },
+  "shared_prompt_appendix": "NeoWakeUP planetary mind network visual system. Transparent background unless asset is a full panel. High readability for desktop UI, no text unless the asset specifically requests glyph samples. Use crisp silhouettes and coherent philosophy-driven design language: techno-noetic cartography, disciplined geometry, luminous signal ecology, non-corporate, reflective, alive without looking generic.",
+  "assets": [
+    {
+      "name": "planetary_mind_planet_core",
+      "prompt": "Transparent background planet graphic for a live planetary mind network, layered atmosphere rings, data-ocean glow, continental light constellations, sacred-technical cartography aesthetic, centered composition. NeoWakeUP planetary mind network visual system. Transparent background unless asset is a full panel. High readability for desktop UI, no text unless the asset specifically requests glyph samples. Use crisp silhouettes and coherent philosophy-driven design language: techno-noetic cartography, disciplined geometry, luminous signal ecology, non-corporate, reflective, alive without looking generic.",
+      "negative_prompt": "black background, stars, text, logo, watermark, blurry edges, cropped planet",
+      "w": 1024,
+      "h": 1024,
+      "api_units": 75,
+      "model": "recraftv4",
+      "out": "gui_pass_600/planet/planetary_mind_planet_core.png"
+    },
+    {
+      "name": "humanoid_mind_icons_set_a",
+      "prompt": "Transparent background sprite lineup sheet containing five unique humanoid icons representing distinct minds in a living network: analyst, dreamer, mediator, maker, sentinel. Arrange as five separated full-body icons on one sheet with consistent baseline and equal spacing. NeoWakeUP planetary mind network visual system. Transparent background unless asset is a full panel. High readability for desktop UI, no text unless the asset specifically requests glyph samples. Use crisp silhouettes and coherent philosophy-driven design language: techno-noetic cartography, disciplined geometry, luminous signal ecology, non-corporate, reflective, alive without looking generic.",
+      "negative_prompt": "merged characters, background scene, text labels, duplicates, cropped limbs",
+      "w": 1024,
+      "h": 1024,
+      "api_units": 75,
+      "model": "recraftv4",
+      "out": "gui_pass_600/icons/humanoid_mind_icons_set_a.png"
+    },
+    {
+      "name": "network_channel_streams",
+      "prompt": "Transparent background set of network mapping channel stream graphics: arcs, braided beams, filament highways, modular connection lines, signal conduits, all separated on one sheet for UI compositing. NeoWakeUP planetary mind network visual system. Transparent background unless asset is a full panel. High readability for desktop UI, no text unless the asset specifically requests glyph samples. Use crisp silhouettes and coherent philosophy-driven design language: techno-noetic cartography, disciplined geometry, luminous signal ecology, non-corporate, reflective, alive without looking generic.",
+      "negative_prompt": "background scene, text, clutter, perspective environment",
+      "w": 1024,
+      "h": 1024,
+      "api_units": 75,
+      "model": "recraftv4",
+      "out": "gui_pass_600/network/network_channel_streams.png"
+    },
+    {
+      "name": "signal_transfer_spritesheet",
+      "prompt": "Transparent background PNG sprite sheet in a single horizontal row, eight columns left-to-right, animated signal transfer pulse moving through a channel stream, clean loop, each column a distinct frame. NeoWakeUP planetary mind network visual system. Transparent background unless asset is a full panel. High readability for desktop UI, no text unless the asset specifically requests glyph samples. Use crisp silhouettes and coherent philosophy-driven design language: techno-noetic cartography, disciplined geometry, luminous signal ecology, non-corporate, reflective, alive without looking generic.",
+      "negative_prompt": "multiple rows, text, background panel, irregular frame sizes",
+      "w": 1024,
+      "h": 1024,
+      "api_units": 75,
+      "model": "recraftv4",
+      "out": "gui_pass_600/network/signal_transfer_spritesheet.png"
+    },
+    {
+      "name": "node_marker_spritesheet",
+      "prompt": "Transparent background PNG sprite sheet in a single horizontal row, eight columns left-to-right, node marker activation animation for when a humanoid mind contributes to the overarching process, luminous pulse loop, each column a frame. NeoWakeUP planetary mind network visual system. Transparent background unless asset is a full panel. High readability for desktop UI, no text unless the asset specifically requests glyph samples. Use crisp silhouettes and coherent philosophy-driven design language: techno-noetic cartography, disciplined geometry, luminous signal ecology, non-corporate, reflective, alive without looking generic.",
+      "negative_prompt": "multiple rows, text, background panel, messy glow",
+      "w": 1024,
+      "h": 1024,
+      "api_units": 75,
+      "model": "recraftv4",
+      "out": "gui_pass_600/network/node_marker_spritesheet.png"
+    },
+    {
+      "name": "font_glyph_reference_uppercase",
+      "prompt": "Custom uppercase alphanumeric glyph reference for NeoWakeUP, philosophy-based AI nomenclature aesthetic, austere techno-calligraphic forms, all glyphs isolated and evenly spaced, transparent background, reference sheet for later font tracing. NeoWakeUP planetary mind network visual system. Transparent background unless asset is a full panel. High readability for desktop UI, no text unless the asset specifically requests glyph samples. Use crisp silhouettes and coherent philosophy-driven design language: techno-noetic cartography, disciplined geometry, luminous signal ecology, non-corporate, reflective, alive without looking generic.",
+      "negative_prompt": "paragraph text, decorative poster, watermark, background scene",
+      "w": 1024,
+      "h": 1024,
+      "api_units": 75,
+      "model": "recraftv4",
+      "out": "gui_pass_600/font/font_glyph_reference_uppercase.png"
+    },
+    {
+      "name": "font_glyph_reference_lowercase",
+      "prompt": "Custom lowercase alphanumeric glyph reference for NeoWakeUP, philosophy-based AI nomenclature aesthetic, austere techno-calligraphic forms, all glyphs isolated and evenly spaced, transparent background, reference sheet for later font tracing. NeoWakeUP planetary mind network visual system. Transparent background unless asset is a full panel. High readability for desktop UI, no text unless the asset specifically requests glyph samples. Use crisp silhouettes and coherent philosophy-driven design language: techno-noetic cartography, disciplined geometry, luminous signal ecology, non-corporate, reflective, alive without looking generic.",
+      "negative_prompt": "paragraph text, decorative poster, watermark, background scene",
+      "w": 1024,
+      "h": 1024,
+      "api_units": 75,
+      "model": "recraftv4",
+      "out": "gui_pass_600/font/font_glyph_reference_lowercase.png"
+    },
+    {
+      "name": "font_glyph_reference_digits_symbols",
+      "prompt": "Custom digits and symbolic punctuation glyph reference for NeoWakeUP, philosophy-based AI nomenclature aesthetic, technical but organic, transparent background, evenly spaced glyph sheet for font tracing. NeoWakeUP planetary mind network visual system. Transparent background unless asset is a full panel. High readability for desktop UI, no text unless the asset specifically requests glyph samples. Use crisp silhouettes and coherent philosophy-driven design language: techno-noetic cartography, disciplined geometry, luminous signal ecology, non-corporate, reflective, alive without looking generic.",
+      "negative_prompt": "paragraph text, poster, watermark, background scene",
+      "w": 1024,
+      "h": 1024,
+      "api_units": 75,
+      "model": "recraftv4",
+      "out": "gui_pass_600/font/font_glyph_reference_digits_symbols.png"
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "manifest_name": "neowakeup_gui_pass_300_corrective",
+  "manifest_version": "2026-03-12.neowakeup_gui_pass_300_corrective",
+  "intent": "200-credit corrective Recraft pass for transparency-sensitive NeoWakeUP GUI assets.",
+  "budget": {
+    "unit_cost": 40,
+    "asset_count": 5,
+    "total_credits": 200
+  },
+  "shared_prompt_appendix": "NeoWakeUP corrective UI asset pass for transparency-sensitive interface elements. Every asset must be isolated on a truly transparent background with no backing plate, no poster field, no scene fill, and no opaque framing. Deliver clean silhouettes and internal detail only.",
+  "assets": [
+    {
+      "name": "dial_knob_set_transparency_corrective",
+      "prompt": "Transparent background sheet of NeoWakeUP dials and knobs only, floating isolated controls, no panel, no scene, no shadow card, neutral hover and active variations grouped cleanly. NeoWakeUP corrective UI asset pass for transparency-sensitive interface elements. Every asset must be isolated on a truly transparent background with no backing plate, no poster field, no scene fill, and no opaque framing. Deliver clean silhouettes and internal detail only.",
+      "w": 1024,
+      "h": 1024,
+      "api_units": 40,
+      "model": "recraftv4",
+      "out": "gui_pass_300_corrective/controls/dial_knob_set.png"
+    },
+    {
+      "name": "slider_track_set_transparency_corrective",
+      "prompt": "Transparent background sheet of NeoWakeUP slider tracks and thumbs only, isolated controls with no panel fill and no surrounding background, precise technical styling. NeoWakeUP corrective UI asset pass for transparency-sensitive interface elements. Every asset must be isolated on a truly transparent background with no backing plate, no poster field, no scene fill, and no opaque framing. Deliver clean silhouettes and internal detail only.",
+      "w": 1024,
+      "h": 1024,
+      "api_units": 40,
+      "model": "recraftv4",
+      "out": "gui_pass_300_corrective/controls/slider_track_set.png"
+    },
+    {
+      "name": "button_cluster_set_transparency_corrective",
+      "prompt": "Transparent background sheet of NeoWakeUP action buttons only, isolated controls, no backdrop, no words, no panel card, coherent visual states for start, pause, commit, simulate, export. NeoWakeUP corrective UI asset pass for transparency-sensitive interface elements. Every asset must be isolated on a truly transparent background with no backing plate, no poster field, no scene fill, and no opaque framing. Deliver clean silhouettes and internal detail only.",
+      "w": 1024,
+      "h": 1024,
+      "api_units": 40,
+      "model": "recraftv4",
+      "out": "gui_pass_300_corrective/controls/button_cluster_set.png"
+    },
+    {
+      "name": "node_map_overlay_transparency_corrective",
+      "prompt": "Transparent background neural node-map overlay for NeoWakeUP, only the graph filaments, orbital guides, and node anchors, no backing panel or opaque fill. NeoWakeUP corrective UI asset pass for transparency-sensitive interface elements. Every asset must be isolated on a truly transparent background with no backing plate, no poster field, no scene fill, and no opaque framing. Deliver clean silhouettes and internal detail only.",
+      "w": 1024,
+      "h": 1024,
+      "api_units": 40,
+      "model": "recraftv4",
+      "out": "gui_pass_300_corrective/network/node_map_overlay.png"
+    },
+    {
+      "name": "brand_mark_set_transparency_corrective",
+      "prompt": "Transparent background NeoWakeUP brand mark sheet only, isolated sigil, badge, and compact emblem variants, no card, no poster, no opaque field. NeoWakeUP corrective UI asset pass for transparency-sensitive interface elements. Every asset must be isolated on a truly transparent background with no backing plate, no poster field, no scene fill, and no opaque framing. Deliver clean silhouettes and internal detail only.",
+      "w": 1024,
+      "h": 1024,
+      "api_units": 40,
+      "model": "recraftv4",
+      "out": "gui_pass_300_corrective/branding/brand_mark_set.png"
+    }
+  ]
+}

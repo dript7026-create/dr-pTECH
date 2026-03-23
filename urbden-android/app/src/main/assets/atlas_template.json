@@ -1,0 +1,9 @@
+{
+  "tile_w": 32,
+  "tile_h": 32,
+  "cols": 0,
+  "rows": 0,
+  "frames": {
+    "tile_example": {"x":0,"y":0,"w":32,"h":32}
+  }
+}

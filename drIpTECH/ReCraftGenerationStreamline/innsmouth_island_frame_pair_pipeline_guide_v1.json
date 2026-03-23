@@ -1,0 +1,33 @@
+{
+  "guide_name": "innsmouth_island_frame_pair_pipeline_guide_v1",
+  "date": "2026-03-11",
+  "purpose": "Paired final-render and depth-hit-precision frame-by-frame expansion guide for complex InnsmouthIsland animations.",
+  "budget_target": {
+    "max_api_units": 3000,
+    "estimated_api_units": 2880
+  },
+  "pairing_rules": {
+    "required_pair": "Every animation frame must be generated twice: one final in-game render-direction frame and one depth-hit-precision frame.",
+    "congruency": [
+      "The precision frame must match the final-render frame in pose, camera, silhouette contour, limb spread, weapon angle, and costume breakup.",
+      "No precision frame may invent a different line-of-action or omit decorative masses that materially alter hit or dodge readability.",
+      "Final and precision outputs must be immediately comparable as congruent frame twins for the same still moment."
+    ],
+    "precision_requirements": [
+      "Depth planes must be more explicit than the final render version.",
+      "Hit, hurt, traversal, and weapon-contact silhouettes must be tighter and more legible than decorative overflow.",
+      "Anchor-node logic must remain compatible with the Innsmouth dimensional protocol profile."
+    ]
+  },
+  "render_rules": {
+    "transparent_background": true,
+    "controls": {
+      "transparent_background": true
+    },
+    "silhouette": "expressionistic, angular, aggressive, game-readable",
+    "camera": "stable gameplay-facing side view with no cinematic angle drift across paired frames",
+    "lighting": "single coherent in-game light family across both pair roles"
+  },
+  "base_asset_policy": "Use the already generated complete_game character sheets as the canonical costume, material, and silhouette baseline.",
+  "output_root": "../../ORBEngine/assets/innsmouth_island/frame_pair_expansion"
+}

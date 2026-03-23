@@ -1,0 +1,182 @@
+[
+  {
+    "name": "eggshell_cauldron_empty",
+    "prompt": "dark fantasy cooking scene, giant cracked eggshell bottom used as a cauldron sitting over a campfire, empty interior showing pearlescent inner shell texture, fire pit with glowing embers underneath, moody cave kitchen setting, painted fantasy game style, high detail, no text",
+    "w": 1024,
+    "h": 1024,
+    "out": "cooking_sim/cauldron_empty.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "eggshell_cauldron_simmering",
+    "prompt": "dark fantasy cooking scene, giant cracked eggshell bottom used as a cauldron over a campfire, bubbling liquid stew inside with steam rising, warm orange firelight, ingredients visible in the broth, moody cave kitchen setting, painted fantasy game style, high detail, no text",
+    "w": 1024,
+    "h": 1024,
+    "out": "cooking_sim/cauldron_simmering.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "eggshell_cauldron_boiling",
+    "prompt": "dark fantasy cooking scene, giant cracked eggshell bottom used as a cauldron over a roaring fire, violently boiling liquid with thick steam clouds, intense orange-red firelight, glowing hot shell edges, moody cave kitchen setting, painted fantasy game style, high detail, no text",
+    "w": 1024,
+    "h": 1024,
+    "out": "cooking_sim/cauldron_boiling.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "eggshell_cauldron_burning",
+    "prompt": "dark fantasy cooking scene, giant cracked eggshell bottom cauldron over excessive fire, charred blackened contents with acrid smoke, orange-red glow from scorched ingredients, burnt warning aesthetic, moody cave kitchen, painted fantasy game style, high detail, no text",
+    "w": 1024,
+    "h": 1024,
+    "out": "cooking_sim/cauldron_burning.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "fire_low_embers",
+    "prompt": "transparent background dark fantasy campfire visual, low smoldering embers under a cooking pit, gentle warm glow, scattered coals and ash, minimal flames, quiet heat aesthetic, painted fantasy game style, no text",
+    "w": 1024,
+    "h": 1024,
+    "out": "cooking_sim/fire_low.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "fire_medium_flames",
+    "prompt": "transparent background dark fantasy campfire visual, medium steady cooking fire under a pit, orange-yellow dancing flames, good cooking heat, crackling wood, warm ambient glow, painted fantasy game style, no text",
+    "w": 1024,
+    "h": 1024,
+    "out": "cooking_sim/fire_medium.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "fire_high_blaze",
+    "prompt": "transparent background dark fantasy campfire visual, high roaring blaze cooking fire, intense orange-red towering flames, sparks flying upward, dangerous heat level, aggressive fire aesthetic, painted fantasy game style, no text",
+    "w": 1024,
+    "h": 1024,
+    "out": "cooking_sim/fire_high.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "stirring_ladle_action",
+    "prompt": "transparent background dark fantasy cooking animation, wooden ladle stirring swirling stew in a cauldron, circular motion trail effect, liquid vortex with floating ingredient chunks, warm steam rising, cooking action aesthetic, painted fantasy game style, no text",
+    "w": 1024,
+    "h": 1024,
+    "out": "cooking_sim/stir_action.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "ingredient_roots_mushrooms",
+    "prompt": "transparent background dark fantasy ingredient illustration, cave root vegetables and glowing mushrooms arranged for cooking, variety of twisted dark roots and bioluminescent fungi, fresh ingredients ready for the cauldron, painted fantasy game style, high detail, no text",
+    "w": 1024,
+    "h": 1024,
+    "out": "cooking_sim/ingredient_roots_mushroom.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "ingredient_fish_meat",
+    "prompt": "transparent background dark fantasy ingredient illustration, fresh swamp fish and dark creature meat cuts arranged for cooking, raw protein ingredients with visible marbling, fresh game and catch ready for cauldron, painted fantasy game style, high detail, no text",
+    "w": 1024,
+    "h": 1024,
+    "out": "cooking_sim/ingredient_fish_meat.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "ingredient_grains_herbs",
+    "prompt": "transparent background dark fantasy ingredient illustration, ember grains and wohm herbs arranged for cooking, golden-brown grain clusters and dark aromatic herb bundles, seasoning and base ingredients, painted fantasy game style, high detail, no text",
+    "w": 1024,
+    "h": 1024,
+    "out": "cooking_sim/ingredient_grains_herbs.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "water_splash_effect",
+    "prompt": "transparent background dark fantasy cooking visual effect, water being splashed into a hot cauldron, dramatic steam burst and sizzle effect, water droplets and vapor cloud, cooling action aesthetic, painted fantasy game style, no text",
+    "w": 1024,
+    "h": 1024,
+    "out": "cooking_sim/water_splash.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "cooking_steam_rising",
+    "prompt": "transparent background dark fantasy cooking visual effect, aromatic steam wisps rising from a cauldron, curling vapor trails with visible warmth shimmer, gentle fragrant steam aesthetic, painted fantasy game style, no text",
+    "w": 1024,
+    "h": 1024,
+    "out": "cooking_sim/steam_rising.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "dish_result_excellent",
+    "prompt": "dark fantasy served dish illustration, beautifully presented stew in a carved bone bowl, rich golden-brown broth with colorful garnishes, steam curling upward, excellent quality meal from eggshell cauldron cooking, satisfying completion aesthetic, painted fantasy game style, high detail, no text",
+    "w": 1024,
+    "h": 1024,
+    "out": "cooking_sim/dish_excellent.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "dish_result_mediocre",
+    "prompt": "dark fantasy served dish illustration, adequate but unremarkable stew in a rough clay bowl, brownish murky broth with undistinguished chunks, mild steam, mediocre quality meal, passable completion aesthetic, painted fantasy game style, no text",
+    "w": 1024,
+    "h": 1024,
+    "out": "cooking_sim/dish_mediocre.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "dish_result_burnt",
+    "prompt": "dark fantasy served dish illustration, burnt charred mess in a cracked bowl, blackened overcooked food chunks with acrid smoke wisps, failed cooking attempt, disappointing burnt food aesthetic, painted fantasy game style, no text",
+    "w": 1024,
+    "h": 1024,
+    "out": "cooking_sim/dish_burnt.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "cooking_ui_temperature_gauge",
+    "prompt": "transparent background dark fantasy game UI element, ornate temperature gauge thermometer with bone and metal frame, graduated markings showing cold blue to hot red zones, sweet spot marked in golden glow, cooking HUD aesthetic, painted fantasy game style, no text",
+    "w": 1024,
+    "h": 1024,
+    "out": "cooking_sim/ui_temp_gauge.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "cooking_ui_moisture_indicator",
+    "prompt": "transparent background dark fantasy game UI element, ornate moisture level indicator with water drop motif and bone frame, graduated markings showing dry to saturated zones, optimal moisture zone in blue glow, cooking HUD aesthetic, painted fantasy game style, no text",
+    "w": 1024,
+    "h": 1024,
+    "out": "cooking_sim/ui_moisture.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "cooking_kitchen_background",
+    "prompt": "dark fantasy cave kitchen background scene, underground cooking alcove with hanging dried herbs and preserved meats, stone shelves with ingredient jars, warm firelight illumination, giant eggshell cauldron center stage over fire pit, moody atmospheric depth, painted fantasy game style, no text",
+    "w": 1024,
+    "h": 1024,
+    "out": "cooking_sim/kitchen_background.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "eggshell_cauldron_perfectly_cooked",
+    "prompt": "dark fantasy cooking scene, giant cracked eggshell bottom cauldron over a steady fire, perfectly cooked golden stew with aromatic steam, ingredients beautifully melded, serene warm glow, optimal cooking result, satisfaction aesthetic, moody cave kitchen, painted fantasy game style, high detail, no text",
+    "w": 1024,
+    "h": 1024,
+    "out": "cooking_sim/cauldron_perfect.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  }
+]

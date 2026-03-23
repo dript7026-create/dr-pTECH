@@ -1,0 +1,149 @@
+TOMMY GOOMBA — Recraft / Artist Prompt Templates (Prompt-ready descriptions)
+
+How to use:
+- Replace variables in {curly braces} (size, frames, variant, color hints) per-asset. 
+- Set Recraft to generate PNG, indexed palette where possible, otherwise post-process to 4-shade palette.
+- Request an indexed 4-color (2bpp) result or a high-contrast PNG that can be losslessly dithered to 4 shades.
+- Ask for sprite-sheets: frames left-to-right, no spacing, transparent background.
+- Negative guidance: "no photorealism, no gradients, no anti-aliasing, no extra colors, no text, no logos".
+
+Common generation settings (recommended):
+- Output format: PNG
+- Canvas: exact pixel size (e.g., 16x16, 8x8, 32x32). Use multiple-of-8 dimensions.
+- Palette: 4 shades only (Game Boy style): white, light-gray, dark-gray, black. "Use only 4 distinct tones"
+- Style: "8-bit Game Boy pixel art, crisp pixels, hard edges, no blur"
+- Lighting: "flat, high-contrast silhouette"
+- Composition: centered on transparent background, pivot at bottom-center unless otherwise specified
+
+Negative prompt (copy for each request):
+- "no photorealistic rendering, no anti-aliasing, no soft gradients, no additional colors, no text, no logos, no complex shading, no alpha greys inside sprite (only full transparency allowed for padding)"
+
+Template blocks (copy and fill per asset):
+
+---
+ASSET: {asset_name}
+Target size: {W}x{H} px
+Frames: {N} (sprite-sheet, frames left-to-right, no spacing)
+Primary prompt:
+"Create a {W}x{H} pixel-art sprite for a Game Boy-style game in a 4-shade palette. The subject: {short_description}. Use crisp, readable pixel outlines, flat high-contrast shading with only 4 tones (white, light-gray, dark-gray, black). Sprite must be tile-aligned (multiples of 8) and centered on a transparent background. Animation: {animation_description}. Pivot point: {pivot_description}. Provide frames in a single PNG sprite-sheet (frames ordered left-to-right) with transparent background."
+Generation hints:
+- "Use limited detail appropriate for Game Boy 2bpp; ensure silhouette reads at small sizes."
+- "Prefer clear readable shapes over texture."
+Negative: {negative_prompt}
+Example final prompt (fill variables):
+"Create a 16x16 pixel-art sprite for a Game Boy-style game in a 4-shade palette. The subject: Tommy the small mushroom-hero idle pose, breathing. Use crisp, readable pixel outlines, flat high-contrast shading with only 4 tones (white, light-gray, dark-gray, black). Sprite must be tile-aligned and centered on a transparent background. Animation: 2-frame subtle breathing loop, frame order left-to-right. Pivot point: bottom-center. Provide frames in a single 32x16 sprite-sheet PNG with transparent background." - Negative: no photorealism, no anti-aliasing, no extra colors
+
+---
+
+Now: per-asset prompt-ready descriptions. Each entry below is ready to paste into Recraft's prompt field (edit size/frames as needed).
+
+1) player_idle (Tommy idle)
+Create a 16x16 pixel-art sprite for a Game Boy-style game in a 4-shade palette. The subject: Tommy the mushroom-hero idle pose (slight breathing). Use crisp, readable pixel outlines and flat high-contrast shading with only 4 tones (white, light-gray, dark-gray, black). Tile-aligned and centered on transparent background. Animation: 2-frame subtle breathing loop, frames left-to-right. Pivot: bottom-center at x=8,y=15. Output as a single 32x16 PNG sprite-sheet. Negative: no photorealism, no anti-aliasing, no extra colors.
+
+2) player_walk
+Create a 16x16 pixel-art sprite for a Game Boy-style game in a 4-shade palette. The subject: Tommy walking cycle, energetic small-steps. Use crisp pixel edges, readable silhouette. Animation: 4 frames (left foot, neutral, right foot, neutral), frames left-to-right. Timing: snappy walk (engine timing 6 ticks/frame). Pivot: bottom-center. Output: one 64x16 PNG sprite-sheet. Negative: no gradients, no additional colors.
+
+3) player_run
+Create a 16x16 pixel-art sprite in Game Boy 4-shade style. Subject: Tommy running (lean forward, fast legs). 4 frames, left-to-right, output 64x16 PNG. Use darker mid-shade for silhouette depth, no gradients, pivot bottom-center.
+
+4) player_jump_up / peak / down
+Create three 16x16 pixel-art frames (or a single 48x16 sprite-sheet containing 3 frames) for a Game Boy 4-shade palette: jump start (knees tuck), peak (compact), fall (legs extended). Clear silhouette for platform collisions. Pivot bottom-center. Negative as above.
+
+5) player_attack_slam
+Create a 24x16 pixel-art sprite-sheet (3 frames, 72x16 PNG) for a strong slam attack. Subject: Tommy winds back (telegraph), strikes with stomp/arm, then recover. Provide clear struck-area extension to the right (reach) while maintaining pivot bottom-center. Use readable attack telegraph frame.
+
+6) player_dodge
+Create a 16x16 2-frame sprite-sheet (32x16 PNG) showing a quick dodge roll with slight afterimage. One frame is normal, second is a slightly offset/brightened copy to convey motion. Palette limited to 4 tones.
+
+7) player_parry
+Create a 16x16 2-frame sprite-sheet (32x16 PNG) showing a parry pose (brief freeze) then recovery. Add a subtle bright flash (use darkest + lightest) on the parry frame but remain within 4 tones.
+
+8) player_hit / knockback
+Create a 16x16 2-frame sprite-sheet (32x16) showing hit reaction and brief stunned posture. Slight backward offset on frame 2 to show knockback; provide consistent bounding box.
+
+9) player_death
+Create a 16x16 4-frame sprite-sheet (64x16) illustrating collapse and vanish with a final black silhouette. Keep transitions readable and dramatic; avoid complex blends.
+
+10) player_heal_combo (A+B heal)
+Create a 16x16 6-frame overlay sprite-sheet (96x16) showing a pulsing sparkle/energy blossom around Tommy. Use white/light-gray highlights in a ring shape, minimal black outlines. Provide particle subset sprites (small 8x8) if possible.
+
+11) ui_life_seg
+Create an 8x8 PNG (single tile) showing one life segment for HUD. High-contrast fill and dark outline. Save as 8x8 PNG with transparent background. Use 4-shade palette.
+
+12) ui_stamina_fill & bg
+Create an 8x8 fill tile and 8x8 background tile for stamina bar. Simple horizontal fill shape; fill tile uses mid-gray, background is lighter.
+
+13) ui_item icons
+Create 8x8 PNG icons for heart and bomb (or requested items). Stylized, readable at 8x8, 4-shade palette.
+
+14) enemy_goomba family
+Create a 16x16 enemy sprite set in 4-shade palette. Provide idle 2-frame (32x16), walk 4-frame (64x16), and death 3-frame (48x16) sprite-sheets. Subject: small rounded mushroom-enemy with expressive eyes. Provide one color-variant by altering mid-tone (recolor layer).
+
+15) enemy_beetle_shield
+Create a 16x16 3-frame shield-break sprite-sheet (48x16) plus 2-frame shielded idle (32x16). Shielded frames show opaque curved shell; shield-break frame shows cracking and vulnerability with a flash.
+
+16) enemy_ranged
+Create a 16x16 3-frame sprite-sheet for a ranged spawner enemy; include separate 8x8 projectile sprite (1 or 2 frames). Projectile: sharp small pixel bullet contrasting to background.
+
+17) boss_1 (phase assets)
+For boss composites, request tiled components rather than one giant sprite: produce 32x32 or 48x48 tiles for boss body parts and an assembled tilemap JSON. Example prompt: "Create 32x32 phased boss tiles, Game Boy 4-shade pixel art, readable silhouette, provide 6 frames for phase idle loop, and provide separate 16x16 tiles for arms and eyes for engine assembly." Negative: no gradients.
+
+18) fx_projectile_small
+Create an 8x8 sprite (1-2 frames) representing a small enemy bullet. Crisp edges, high contrast, 4-shade palette.
+
+19) fx_proj_player_shard
+Create an 8x8 3-frame spinning shard sprite-sheet (24x8 PNG). Use highlights on small edges; keep palette to 4 tones.
+
+20) tiles_ground_basic tilesheet
+Create an 8x8 tilesheet PNG containing a 4x4 grid (16 tiles) of ground tiles: center, left edge, right edge, top-left corner, top-right corner, slopes, and one decorative tile. Use Game Boy 4-shade palette, designed to tile seamlessly. Also export a JSON mapping describing indices.
+
+21) tiles_decor (background)
+Create repeatable 8x8 decorative tiles for parallax layers. Keep minimal detail and readable silhouettes.
+
+22) tiles_spike (hazard)
+Create an 8x8 spike tile and a 2-frame pulsing spike variant (16x8 PNG) flagged as hazard. Ensure pointy silhouette reads clearly.
+
+23) bg layers (mountains/hills/clouds)
+Create larger repeatable strips (64x32 or sets of 32x16 tiles) for background parallax. Use simple silhouettes, 4-shade palette, low detail.
+
+24) ui_title_logo
+Create a title logo image sized to multiples of 8 (example 96x24) in 4-shade sprite-style. Keep text-free stylized iconography if desired; otherwise provide a separate logo + glyphs.
+
+25) ui_button
+Create a 56x8 button tile sheet (2 frames) showing normal and highlighted states. Simple 8x8 tile-based border pieces or single 56x8 sprites acceptable.
+
+26) ui_window_tiles
+Produce an 8x8 window border tileset (corners, edges, center fill) in 4 shades. Export as 8x8 tilesheet and mapping JSON.
+
+27) font_gb
+Create an 8x8 bitmap font tilesheet containing ASCII uppercase A-Z, digits 0-9, and common punctuation. Each glyph fits in 8x8 cell; export as PNG and mapping JSON.
+
+28) vfx_hit_spark
+Create an 8x8 4-frame expanding spark sprite-sheet (32x8 PNG). Quick bright flash then fade, 4-shade palette.
+
+29) vfx_heal_glow
+Create a 16x16 6-frame pulsing glow overlay sprite-sheet (96x16). Soft ring effect using only 4 shades.
+
+30) vfx_smoke_puff
+Create 8x8 4-frame puff sprite-sheet, subtle expansion/fade.
+
+31) portraits (cutscene)
+Create 32x32 portrait sprites with neutral/angry/surprised expressions for Tommy and NPCs. Keep high-contrast shading, simplified features, 4-shade palette. Provide separate eye/mouth layers in layered PSD if possible.
+
+32) misc (cursor, checkpoint_flag, map marker)
+Cursor: 8x8 2-frame flicker.
+Checkpoint flag: 8x16 3-frame wave (24x16 PNG).
+Map marker: simple 8x8 tile.
+
+Final generation notes for all prompts
+- Request "no anti-aliasing" and "nearest-neighbor scaling" (if engine supports), so pixels are clean.
+- For animated sprite-sheets, request exact output canvas equal to (frame_count * frame_width) x frame_height.
+- If Recraft cannot directly output indexed 2bpp, request a high-contrast PNG and then run `convert_assets.py` to reduce to 4-shade indexed PNG.
+- When requesting variants (color swaps), ask for layers or multiple passes with the same line-art to preserve silhouette.
+
+If you want, I can now:
+- Batch-generate MVP placeholder sprites locally (Pillow-based) matching these prompts, or
+- Run `recraft_generate.py` to attempt server generation for selected assets (you must confirm to spend credits), or
+- Produce per-asset JSON metadata stubs for bounding boxes/pivots to accompany each prompt.
+
+End of prompt file.

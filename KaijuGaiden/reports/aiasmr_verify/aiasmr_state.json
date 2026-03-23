@@ -1,0 +1,85 @@
+{
+  "profile": {
+    "scene": 6,
+    "genre": 0,
+    "tension": 3,
+    "pulse": 7,
+    "voice": 4,
+    "noise": 0
+  },
+  "decision": {
+    "scene_label": "cypher",
+    "voice_label": "system",
+    "mode": "phrygian",
+    "root": "C",
+    "drone_gain": 0.444,
+    "pulse_gain": 0.36,
+    "lead_gain": 0.184,
+    "noise_gain": 0.05,
+    "mic_blend": 0.1,
+    "speech_rate": 1.01,
+    "speech_pitch": 1.15,
+    "event_label": "victory",
+    "event_value": 0,
+    "last_tts": "PURIFY REEF NODES",
+    "realtime_synth_ready": true,
+    "tts_bus_ready": true,
+    "mic_bus_ready": true,
+    "instrument_emulation_ready": true,
+    "updated_at": 1773942989.1245084,
+    "layers": [
+      {
+        "role": "drone",
+        "instrument": "sub_bass_pad",
+        "waveform": "triangle",
+        "register": "low",
+        "gain": 0.444,
+        "pan": -0.15,
+        "articulation": "drone",
+        "root": "C",
+        "mode": "phrygian"
+      },
+      {
+        "role": "pulse",
+        "instrument": "glass_mallet",
+        "waveform": "bell",
+        "register": "mid",
+        "gain": 0.36,
+        "pan": 0.1,
+        "articulation": "ostinato",
+        "root": "C",
+        "mode": "phrygian"
+      },
+      {
+        "role": "lead",
+        "instrument": "pulse_synth",
+        "waveform": "pulse",
+        "register": "high",
+        "gain": 0.184,
+        "pan": 0.22,
+        "articulation": "accent",
+        "root": "C",
+        "mode": "phrygian"
+      },
+      {
+        "role": "mic_bus",
+        "instrument": "room_capture",
+        "waveform": "input",
+        "register": "full",
+        "gain": 0.15,
+        "pan": 0.0,
+        "articulation": "reactive",
+        "root": "C",
+        "mode": "phrygian"
+      }
+    ]
+  },
+  "capabilities": {
+    "realtime_synth": true,
+    "multi_layer": true,
+    "instrument_emulation": true,
+    "tts": true,
+    "mic_input": true
+  },
+  "source": "[AIASMR] sc=6 gn=0 tn=3 pu=7 vc=4 nz=0"
+}

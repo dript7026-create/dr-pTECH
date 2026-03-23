@@ -1,0 +1,89 @@
+# JumpClip
+
+JumpClip is a prompt-driven sprite animation toolkit for building sprite sheets, PNG frame sequences, and animated GIF previews from a character concept, animation prompt, and a synthesized style profile.
+
+This first-pass project focuses on three things:
+
+- public-domain and user-supplied reference discovery
+- grid and proportion analysis over reference images
+- procedural sprite rendering driven by animation prompts and synthesized design profiles
+
+## Scope
+
+JumpClip does not copy proprietary game art. The reference pipeline is designed for:
+
+- public-domain image sources
+- openly licensed image databases
+- user-provided local references
+
+The rendering system synthesizes a new profile from measured proportions, palette tendencies, silhouette coverage, line density, and grid-relative spatial statistics.
+
+## Current Pipeline
+
+1. Collect public references from Openverse or Wikimedia Commons into a manifest.
+2. Analyze those references into a design profile.
+3. Render a new sprite animation as:
+   - sprite sheet PNG
+   - PNG frame sequence
+   - animated GIF preview
+
+## Artistic Bias
+
+Prompt parsing can weight the renderer toward generalized influences such as:
+
+- gothic composition
+- anatomical sketch structure
+- surreal elongation
+- Goya-like shadow pressure
+- Bosch-like ornamental density
+
+These are treated as broad public-domain art-study influences, not as instructions to reproduce specific copyrighted works.
+
+## Install
+
+```powershell
+cd JumpClip
+python -m venv .venv
+.\.venv\Scripts\Activate.ps1
+pip install -e .
+```
+
+## Usage
+
+Collect references:
+
+```powershell
+jumpclip collect --provider openverse --query "public domain pixel art gothic sprite" --out refs.json
+```
+
+Analyze references:
+
+```powershell
+jumpclip analyze --manifest refs.json --out profile.json --download-dir .cache\refs
+```
+
+Render a sprite sheet:
+
+```powershell
+jumpclip render --profile profile.json --character "clockwork revenant duelist" --animation "run cycle" --prompt "gothic pixel art, anatomical sketch logic, surreal dali stretch, goya shadows, bosch detail" --out out\revenant_sheet.png --format sheet
+```
+
+Render an animated GIF:
+
+```powershell
+jumpclip render --profile profile.json --character "clockwork revenant duelist" --animation "attack combo" --prompt "gothic pixel art with anatomical sketch structure" --out out\revenant.gif --format gif
+```
+
+## Files
+
+- `src/jumpclip/reference_sources.py`: public-image collectors and manifest normalization
+- `src/jumpclip/analysis.py`: grid-statistics, silhouette, palette, and design-profile synthesis
+- `src/jumpclip/render.py`: procedural animation renderer and exporters
+- `src/jumpclip/cli.py`: command line interface
+
+## Next Steps
+
+- plug in a model-backed image synthesis stage behind the current procedural renderer
+- add sprite cleanup and frame inbetweening tools
+- add reference clustering for genre and era snapshots
+- add a UI for pose tuning and frame review

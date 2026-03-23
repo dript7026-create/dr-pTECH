@@ -1,0 +1,335 @@
+[
+  {
+    "name": "orb_shell_main_window_frame",
+    "prompt": "transparent background premium custom Windows desktop game-engine UI asset for ORBEngine, clean bespoke shell language, obsidian slate base, brushed brass trim, muted teal signal light, soft ember accent, monolithic sci-fantasy industrial tooling aesthetic, readable at small sizes, no text labels unless specifically requested, main engine shell frame with title bar, dock wells, command strip, and flexible content viewport",
+    "w": 1024,
+    "h": 1024,
+    "out": "orbengine_ui_shell/orb_shell_main_window_frame.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "orb_shell_scene_hierarchy_panel",
+    "prompt": "transparent background premium custom Windows desktop game-engine UI asset for ORBEngine, clean bespoke shell language, obsidian slate base, brushed brass trim, muted teal signal light, soft ember accent, monolithic sci-fantasy industrial tooling aesthetic, readable at small sizes, no text labels unless specifically requested, hierarchy and outliner shell for scene tree and object listing",
+    "w": 1024,
+    "h": 1024,
+    "out": "orbengine_ui_shell/orb_shell_scene_hierarchy_panel.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "orb_shell_inspector_panel",
+    "prompt": "transparent background premium custom Windows desktop game-engine UI asset for ORBEngine, clean bespoke shell language, obsidian slate base, brushed brass trim, muted teal signal light, soft ember accent, monolithic sci-fantasy industrial tooling aesthetic, readable at small sizes, no text labels unless specifically requested, property inspector shell with grouped controls, foldout lanes, and stat blocks",
+    "w": 1024,
+    "h": 1024,
+    "out": "orbengine_ui_shell/orb_shell_inspector_panel.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "orb_shell_asset_browser_panel",
+    "prompt": "transparent background premium custom Windows desktop game-engine UI asset for ORBEngine, clean bespoke shell language, obsidian slate base, brushed brass trim, muted teal signal light, soft ember accent, monolithic sci-fantasy industrial tooling aesthetic, readable at small sizes, no text labels unless specifically requested, asset browser shell with breadcrumbs, search strip, and tiled content area",
+    "w": 1024,
+    "h": 1024,
+    "out": "orbengine_ui_shell/orb_shell_asset_browser_panel.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "orb_shell_nodegraph_window",
+    "prompt": "transparent background premium custom Windows desktop game-engine UI asset for ORBEngine, clean bespoke shell language, obsidian slate base, brushed brass trim, muted teal signal light, soft ember accent, monolithic sci-fantasy industrial tooling aesthetic, readable at small sizes, no text labels unless specifically requested, floating node graph editor shell with grid margin, pin shelves, and tab rail",
+    "w": 1024,
+    "h": 1024,
+    "out": "orbengine_ui_shell/orb_shell_nodegraph_window.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "orb_shell_console_log_panel",
+    "prompt": "transparent background premium custom Windows desktop game-engine UI asset for ORBEngine, clean bespoke shell language, obsidian slate base, brushed brass trim, muted teal signal light, soft ember accent, monolithic sci-fantasy industrial tooling aesthetic, readable at small sizes, no text labels unless specifically requested, developer console shell with filter rail, line gutter, and status footer",
+    "w": 1024,
+    "h": 1024,
+    "out": "orbengine_ui_shell/orb_shell_console_log_panel.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "orb_shell_timeline_panel",
+    "prompt": "transparent background premium custom Windows desktop game-engine UI asset for ORBEngine, clean bespoke shell language, obsidian slate base, brushed brass trim, muted teal signal light, soft ember accent, monolithic sci-fantasy industrial tooling aesthetic, readable at small sizes, no text labels unless specifically requested, timeline and keyframe shell with scrub rail, track stack, and transport housing",
+    "w": 1024,
+    "h": 1024,
+    "out": "orbengine_ui_shell/orb_shell_timeline_panel.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "orb_shell_tool_properties_float",
+    "prompt": "transparent background premium custom Windows desktop game-engine UI asset for ORBEngine, clean bespoke shell language, obsidian slate base, brushed brass trim, muted teal signal light, soft ember accent, monolithic sci-fantasy industrial tooling aesthetic, readable at small sizes, no text labels unless specifically requested, small floating tool settings shell for contextual brush or transform properties",
+    "w": 1024,
+    "h": 1024,
+    "out": "orbengine_ui_shell/orb_shell_tool_properties_float.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "orb_shell_command_palette",
+    "prompt": "transparent background premium custom Windows desktop game-engine UI asset for ORBEngine, clean bespoke shell language, obsidian slate base, brushed brass trim, muted teal signal light, soft ember accent, monolithic sci-fantasy industrial tooling aesthetic, readable at small sizes, no text labels unless specifically requested, command palette shell with omnibox header, result stack, shortcut hint column, and ghosted recent command rail",
+    "w": 1024,
+    "h": 1024,
+    "out": "orbengine_ui_shell/orb_shell_command_palette.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "orb_shell_docking_overlay_guides",
+    "prompt": "transparent background premium custom Windows desktop game-engine UI asset for ORBEngine, clean bespoke shell language, obsidian slate base, brushed brass trim, muted teal signal light, soft ember accent, monolithic sci-fantasy industrial tooling aesthetic, readable at small sizes, no text labels unless specifically requested, docking and panel-placement overlay shell with quadrant guides, preview glow, and snap targets",
+    "w": 1024,
+    "h": 1024,
+    "out": "orbengine_ui_shell/orb_shell_docking_overlay_guides.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "orb_nav_tabs_primary_strip",
+    "prompt": "transparent background premium custom Windows desktop game-engine UI asset for ORBEngine, clean bespoke shell language, obsidian slate base, brushed brass trim, muted teal signal light, soft ember accent, monolithic sci-fantasy industrial tooling aesthetic, readable at small sizes, no text labels unless specifically requested, navigation tab strip with multiple coherent tab states in one asset: active, idle, hovered, attention, disabled",
+    "w": 1024,
+    "h": 1024,
+    "out": "orbengine_ui_shell/orb_nav_tabs_primary_strip.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "orb_nav_tabs_secondary_strip",
+    "prompt": "transparent background premium custom Windows desktop game-engine UI asset for ORBEngine, clean bespoke shell language, obsidian slate base, brushed brass trim, muted teal signal light, soft ember accent, monolithic sci-fantasy industrial tooling aesthetic, readable at small sizes, no text labels unless specifically requested, secondary utility tab strip with compact state variants and subtle hierarchy cues",
+    "w": 1024,
+    "h": 1024,
+    "out": "orbengine_ui_shell/orb_nav_tabs_secondary_strip.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "orb_nav_breadcrumb_capsules",
+    "prompt": "transparent background premium custom Windows desktop game-engine UI asset for ORBEngine, clean bespoke shell language, obsidian slate base, brushed brass trim, muted teal signal light, soft ember accent, monolithic sci-fantasy industrial tooling aesthetic, readable at small sizes, no text labels unless specifically requested, breadcrumb capsule navigation pieces for deep editor views and drill-down panels",
+    "w": 1024,
+    "h": 1024,
+    "out": "orbengine_ui_shell/orb_nav_breadcrumb_capsules.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "orb_nav_workspace_switcher",
+    "prompt": "transparent background premium custom Windows desktop game-engine UI asset for ORBEngine, clean bespoke shell language, obsidian slate base, brushed brass trim, muted teal signal light, soft ember accent, monolithic sci-fantasy industrial tooling aesthetic, readable at small sizes, no text labels unless specifically requested, workspace switcher tab bar for scene, materials, scripting, debug, and UI authoring modes",
+    "w": 1024,
+    "h": 1024,
+    "out": "orbengine_ui_shell/orb_nav_workspace_switcher.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "orb_popup_modal_template",
+    "prompt": "transparent background premium custom Windows desktop game-engine UI asset for ORBEngine, clean bespoke shell language, obsidian slate base, brushed brass trim, muted teal signal light, soft ember accent, monolithic sci-fantasy industrial tooling aesthetic, readable at small sizes, no text labels unless specifically requested, large modal popup shell template with layered frame, confirm area, and content body",
+    "w": 1024,
+    "h": 1024,
+    "out": "orbengine_ui_shell/orb_popup_modal_template.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "orb_popup_context_menu_shell",
+    "prompt": "transparent background premium custom Windows desktop game-engine UI asset for ORBEngine, clean bespoke shell language, obsidian slate base, brushed brass trim, muted teal signal light, soft ember accent, monolithic sci-fantasy industrial tooling aesthetic, readable at small sizes, no text labels unless specifically requested, context menu and command list popup shell with nested arrow affordances",
+    "w": 1024,
+    "h": 1024,
+    "out": "orbengine_ui_shell/orb_popup_context_menu_shell.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "orb_popup_dropdown_shell",
+    "prompt": "transparent background premium custom Windows desktop game-engine UI asset for ORBEngine, clean bespoke shell language, obsidian slate base, brushed brass trim, muted teal signal light, soft ember accent, monolithic sci-fantasy industrial tooling aesthetic, readable at small sizes, no text labels unless specifically requested, dropdown list shell template with scroll gutter and item highlight states",
+    "w": 1024,
+    "h": 1024,
+    "out": "orbengine_ui_shell/orb_popup_dropdown_shell.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "orb_popup_notification_toast",
+    "prompt": "transparent background premium custom Windows desktop game-engine UI asset for ORBEngine, clean bespoke shell language, obsidian slate base, brushed brass trim, muted teal signal light, soft ember accent, monolithic sci-fantasy industrial tooling aesthetic, readable at small sizes, no text labels unless specifically requested, notification toast shell with icon well, short headline lane, and dismiss corner",
+    "w": 1024,
+    "h": 1024,
+    "out": "orbengine_ui_shell/orb_popup_notification_toast.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "orb_popup_tooltip_shell",
+    "prompt": "transparent background premium custom Windows desktop game-engine UI asset for ORBEngine, clean bespoke shell language, obsidian slate base, brushed brass trim, muted teal signal light, soft ember accent, monolithic sci-fantasy industrial tooling aesthetic, readable at small sizes, no text labels unless specifically requested, tooltip shell with compact frame, pointer notch, and short metadata stripe",
+    "w": 1024,
+    "h": 1024,
+    "out": "orbengine_ui_shell/orb_popup_tooltip_shell.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "orb_popup_dialog_choice_grid",
+    "prompt": "transparent background premium custom Windows desktop game-engine UI asset for ORBEngine, clean bespoke shell language, obsidian slate base, brushed brass trim, muted teal signal light, soft ember accent, monolithic sci-fantasy industrial tooling aesthetic, readable at small sizes, no text labels unless specifically requested, choice dialog shell template with multi-button footer, icon socket, and warning accent state",
+    "w": 1024,
+    "h": 1024,
+    "out": "orbengine_ui_shell/orb_popup_dialog_choice_grid.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "orb_font_monotype_uppercase_atlas",
+    "prompt": "transparent background premium custom Windows desktop game-engine UI asset for ORBEngine, clean bespoke shell language, obsidian slate base, brushed brass trim, muted teal signal light, soft ember accent, monolithic sci-fantasy industrial tooling aesthetic, readable at small sizes, no text labels unless specifically requested, custom alphanumeric monotype font atlas, uppercase A through Z plus core symbols, grid aligned, clean transparent background",
+    "w": 1024,
+    "h": 1024,
+    "out": "orbengine_ui_shell/orb_font_monotype_uppercase_atlas.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "orb_font_monotype_lowercase_atlas",
+    "prompt": "transparent background premium custom Windows desktop game-engine UI asset for ORBEngine, clean bespoke shell language, obsidian slate base, brushed brass trim, muted teal signal light, soft ember accent, monolithic sci-fantasy industrial tooling aesthetic, readable at small sizes, no text labels unless specifically requested, custom alphanumeric monotype font atlas, lowercase a through z plus alternate punctuation, grid aligned, clean transparent background",
+    "w": 1024,
+    "h": 1024,
+    "out": "orbengine_ui_shell/orb_font_monotype_lowercase_atlas.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "orb_font_monotype_numeric_atlas",
+    "prompt": "transparent background premium custom Windows desktop game-engine UI asset for ORBEngine, clean bespoke shell language, obsidian slate base, brushed brass trim, muted teal signal light, soft ember accent, monolithic sci-fantasy industrial tooling aesthetic, readable at small sizes, no text labels unless specifically requested, custom alphanumeric monotype font atlas, numerals 0 through 9 with currency, math, and time separators, grid aligned, clean transparent background",
+    "w": 1024,
+    "h": 1024,
+    "out": "orbengine_ui_shell/orb_font_monotype_numeric_atlas.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "orb_font_monotype_extended_ui_atlas",
+    "prompt": "transparent background premium custom Windows desktop game-engine UI asset for ORBEngine, clean bespoke shell language, obsidian slate base, brushed brass trim, muted teal signal light, soft ember accent, monolithic sci-fantasy industrial tooling aesthetic, readable at small sizes, no text labels unless specifically requested, custom alphanumeric monotype font atlas, brackets, arrows, slashes, underscores, pipes, coding punctuation, and UI shorthand marks, grid aligned, clean transparent background",
+    "w": 1024,
+    "h": 1024,
+    "out": "orbengine_ui_shell/orb_font_monotype_extended_ui_atlas.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "orb_cursor_precision_set",
+    "prompt": "transparent background premium custom Windows desktop game-engine UI asset for ORBEngine, clean bespoke shell language, obsidian slate base, brushed brass trim, muted teal signal light, soft ember accent, monolithic sci-fantasy industrial tooling aesthetic, readable at small sizes, no text labels unless specifically requested, custom cursor set atlas for arrow, beam, precision crosshair, and target reticle states",
+    "w": 1024,
+    "h": 1024,
+    "out": "orbengine_ui_shell/orb_cursor_precision_set.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "orb_cursor_transform_set",
+    "prompt": "transparent background premium custom Windows desktop game-engine UI asset for ORBEngine, clean bespoke shell language, obsidian slate base, brushed brass trim, muted teal signal light, soft ember accent, monolithic sci-fantasy industrial tooling aesthetic, readable at small sizes, no text labels unless specifically requested, custom cursor set atlas for move, rotate, scale, and axis-handle interaction states",
+    "w": 1024,
+    "h": 1024,
+    "out": "orbengine_ui_shell/orb_cursor_transform_set.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "orb_cursor_resize_set",
+    "prompt": "transparent background premium custom Windows desktop game-engine UI asset for ORBEngine, clean bespoke shell language, obsidian slate base, brushed brass trim, muted teal signal light, soft ember accent, monolithic sci-fantasy industrial tooling aesthetic, readable at small sizes, no text labels unless specifically requested, custom cursor set atlas for horizontal, vertical, diagonal, and panel-divider resize states",
+    "w": 1024,
+    "h": 1024,
+    "out": "orbengine_ui_shell/orb_cursor_resize_set.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "orb_cursor_link_and_pick_set",
+    "prompt": "transparent background premium custom Windows desktop game-engine UI asset for ORBEngine, clean bespoke shell language, obsidian slate base, brushed brass trim, muted teal signal light, soft ember accent, monolithic sci-fantasy industrial tooling aesthetic, readable at small sizes, no text labels unless specifically requested, custom cursor set atlas for hand, grab, eyedropper, link, and picker interaction states",
+    "w": 1024,
+    "h": 1024,
+    "out": "orbengine_ui_shell/orb_cursor_link_and_pick_set.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "orb_icons_toolbar_editing",
+    "prompt": "transparent background premium custom Windows desktop game-engine UI asset for ORBEngine, clean bespoke shell language, obsidian slate base, brushed brass trim, muted teal signal light, soft ember accent, monolithic sci-fantasy industrial tooling aesthetic, readable at small sizes, no text labels unless specifically requested, toolbar icon atlas for select, move, rotate, scale, duplicate, delete, and snap editing tools",
+    "w": 1024,
+    "h": 1024,
+    "out": "orbengine_ui_shell/orb_icons_toolbar_editing.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "orb_icons_toolbar_world",
+    "prompt": "transparent background premium custom Windows desktop game-engine UI asset for ORBEngine, clean bespoke shell language, obsidian slate base, brushed brass trim, muted teal signal light, soft ember accent, monolithic sci-fantasy industrial tooling aesthetic, readable at small sizes, no text labels unless specifically requested, toolbar icon atlas for terrain, lights, fog, camera, markers, portals, and region setup tools",
+    "w": 1024,
+    "h": 1024,
+    "out": "orbengine_ui_shell/orb_icons_toolbar_world.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "orb_icons_toolbar_scripting",
+    "prompt": "transparent background premium custom Windows desktop game-engine UI asset for ORBEngine, clean bespoke shell language, obsidian slate base, brushed brass trim, muted teal signal light, soft ember accent, monolithic sci-fantasy industrial tooling aesthetic, readable at small sizes, no text labels unless specifically requested, toolbar icon atlas for script, compile, hot reload, debug, breakpoint, and event graph tools",
+    "w": 1024,
+    "h": 1024,
+    "out": "orbengine_ui_shell/orb_icons_toolbar_scripting.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "orb_icons_toolbar_animation",
+    "prompt": "transparent background premium custom Windows desktop game-engine UI asset for ORBEngine, clean bespoke shell language, obsidian slate base, brushed brass trim, muted teal signal light, soft ember accent, monolithic sci-fantasy industrial tooling aesthetic, readable at small sizes, no text labels unless specifically requested, toolbar icon atlas for keyframe, easing, scrub, onion skin, playback, and rig controls",
+    "w": 1024,
+    "h": 1024,
+    "out": "orbengine_ui_shell/orb_icons_toolbar_animation.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "orb_icons_toolbar_materials",
+    "prompt": "transparent background premium custom Windows desktop game-engine UI asset for ORBEngine, clean bespoke shell language, obsidian slate base, brushed brass trim, muted teal signal light, soft ember accent, monolithic sci-fantasy industrial tooling aesthetic, readable at small sizes, no text labels unless specifically requested, toolbar icon atlas for brush, fill, sampler, material slot, shader graph, and texture import tools",
+    "w": 1024,
+    "h": 1024,
+    "out": "orbengine_ui_shell/orb_icons_toolbar_materials.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "orb_icons_status_indicators",
+    "prompt": "transparent background premium custom Windows desktop game-engine UI asset for ORBEngine, clean bespoke shell language, obsidian slate base, brushed brass trim, muted teal signal light, soft ember accent, monolithic sci-fantasy industrial tooling aesthetic, readable at small sizes, no text labels unless specifically requested, status icon atlas for success, warning, error, dirty, sync, lock, and perf states",
+    "w": 1024,
+    "h": 1024,
+    "out": "orbengine_ui_shell/orb_icons_status_indicators.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "orb_icons_inventory_and_widgets",
+    "prompt": "transparent background premium custom Windows desktop game-engine UI asset for ORBEngine, clean bespoke shell language, obsidian slate base, brushed brass trim, muted teal signal light, soft ember accent, monolithic sci-fantasy industrial tooling aesthetic, readable at small sizes, no text labels unless specifically requested, widget icon atlas for tabs, drawers, pin, favorite, visibility, folder, list, grid, and filter controls",
+    "w": 1024,
+    "h": 1024,
+    "out": "orbengine_ui_shell/orb_icons_inventory_and_widgets.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "orb_icons_scrollbar_and_splitters",
+    "prompt": "transparent background premium custom Windows desktop game-engine UI asset for ORBEngine, clean bespoke shell language, obsidian slate base, brushed brass trim, muted teal signal light, soft ember accent, monolithic sci-fantasy industrial tooling aesthetic, readable at small sizes, no text labels unless specifically requested, widget icon atlas for scrollbar caps, thumb states, splitter handles, and drag affordances",
+    "w": 1024,
+    "h": 1024,
+    "out": "orbengine_ui_shell/orb_icons_scrollbar_and_splitters.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "orb_icons_window_controls",
+    "prompt": "transparent background premium custom Windows desktop game-engine UI asset for ORBEngine, clean bespoke shell language, obsidian slate base, brushed brass trim, muted teal signal light, soft ember accent, monolithic sci-fantasy industrial tooling aesthetic, readable at small sizes, no text labels unless specifically requested, window chrome icon atlas for close, maximize, restore, minimize, undock, collapse, and pin controls",
+    "w": 1024,
+    "h": 1024,
+    "out": "orbengine_ui_shell/orb_icons_window_controls.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  }
+]

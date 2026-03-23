@@ -1,0 +1,11 @@
+{
+  "date": "2026-03-11",
+  "frame_pair_manifest": "innsmouth_island_frame_pair_expansion_manifest.json",
+  "tile_pair_manifest": "innsmouth_island_tiles_skybox_pair_expansion_manifest.json",
+  "frame_items": 72,
+  "frame_estimated_api_units": 2880,
+  "frame_budget_target": 3000,
+  "tile_items": 36,
+  "tile_estimated_api_units": 1440,
+  "tile_budget_target": 1500
+}

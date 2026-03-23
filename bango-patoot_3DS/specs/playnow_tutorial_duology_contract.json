@@ -1,0 +1,53 @@
+{
+  "contract_name": "playnow_tutorial_duology_v1",
+  "version": "2026-03-13",
+  "language": "playnow_manifest_contract_json",
+  "objective": "Generate exactly two tutorial deliverables for the Bango: Unchained - Bango&Patoot hybrid DODOGame pipeline: one low-risk prototype tutorial and one stronger final-game preview tutorial.",
+  "deliverables": [
+    {
+      "id": "tutorial_prototype",
+      "pass_label": "tutorial32",
+      "spec_file": "specs/playnow_tutorial_prototype_spec.json",
+      "runtime_mode": "orbengine_dual_tutorial_prototype",
+      "asset_manifest_role": "prototype_onboarding"
+    },
+    {
+      "id": "tutorial_final_preview",
+      "pass_label": "tutorial_final_preview",
+      "spec_file": "specs/playnow_tutorial_final_preview_spec.json",
+      "runtime_mode": "orbengine_dual_tutorial_final_preview",
+      "asset_manifest_role": "marketplace_ready_onboarding_preview"
+    }
+  ],
+  "generation_rules": {
+    "engine_stack": [
+      "DoENGINE",
+      "ORBEngine",
+      "IllusionCanvasInteractive"
+    ],
+    "enemy_contract": "Both tutorials must use the three nightmaresludgebio orb-drone archetypes: scout, mire, horror.",
+    "control_contract": "Both tutorials must expose movement, jump or sprint movement pressure, dodge, light attack, heavy attack, block, parry, focus, heal, and special release.",
+    "support_dread_contract": "The final preview tutorial must encode Patoot-heavy support, lighter Bango lead presence, and an encroaching dread field as readable gameplay telemetry rather than ambiguous lore-only text.",
+    "delivery_contract": "PlayNOW runtime manifests, finalstage manifests, and DODOGame handoff data must all reference the same two tutorial deliverables.",
+    "asset_budget_contract": "The dedicated tutorial duology art pass must target exactly 8000 planned credits.",
+    "budget_split_contract": {
+      "current_tutorial_delivery": 3000,
+      "forward_buffer_total": 5000,
+      "forward_buffer_suballocations": {
+        "hub_world_landscapes_tilesets": 2500,
+        "weapons_and_armor": 1000,
+        "remaining_priority_content": 1500
+      },
+      "remaining_project_credits_before_pass": 19960,
+      "remaining_project_credits_after_pass": 11960
+    },
+    "traceability_contract": "Every asset entry must carry a stable trace_id, budget bucket, deliverable tags, and stage lineage from recraft 2D master through polish, Blender ingest, model or animation binding, and runtime packaging."
+  },
+  "output_contract": {
+    "manifests_dir": "generated/bangonow/manifests",
+    "playnow_dir": "generated/playnow",
+    "raw_asset_dir": "production_raw/bangonow/tutorial_duology_8000",
+    "polished_asset_dir": "production_polished/bangonow/tutorial_duology_8000",
+    "budget_contract_file": "specs/bango_fullgame_completion_budget_contract.json"
+  }
+}

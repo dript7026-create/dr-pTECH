@@ -1,0 +1,135 @@
+[
+  {
+    "name": "quadrant_01_canopy_spawn",
+    "prompt": "top-down rainforest exploration zone for a Game Boy Advance action RPG, 240x160 map-like composition, saturday morning cartoon energy mixed with classic newspaper funny-pages color blocking, giant mushroom trunks, layered roots, puddles, readable walkable top-down paths, top-down clearings for real-time combat, original whimsical plumber-brothers parody mood without copyrighted characters or logos, gba-friendly environment concept art",
+    "w": 240,
+    "h": 160,
+    "out": "../../tommybeta/assets/recraft/quadrants/quadrant_01_canopy_spawn.png"
+  },
+  {
+    "name": "quadrant_02_river_mist",
+    "prompt": "top-down rainforest exploration zone for a Game Boy Advance action RPG, 240x160 map-like composition, misty river crossing with giant toadstools, moss stones, shallow stream, readable top-down walkable banks and bridges, playful cartoon-comic palette, original whimsical parody adventure mood, gba-friendly environment concept art",
+    "w": 240,
+    "h": 160,
+    "out": "../../tommybeta/assets/recraft/quadrants/quadrant_02_river_mist.png"
+  },
+  {
+    "name": "quadrant_03_ruined_mushroom_gate",
+    "prompt": "top-down rainforest exploration zone for a Game Boy Advance action RPG, 240x160 map-like composition, ruined mushroom gate, carved stone arches, damp vines, bright fungal caps, readable top-down chokepoints and plazas for exploration and real-time combat, saturday morning cartoon plus funny-pages mood, original parody fantasy, gba-friendly environment concept art",
+    "w": 240,
+    "h": 160,
+    "out": "../../tommybeta/assets/recraft/quadrants/quadrant_03_ruined_mushroom_gate.png"
+  },
+  {
+    "name": "quadrant_04_bog_platforms",
+    "prompt": "top-down rainforest exploration zone for a Game Boy Advance action RPG, 240x160 map-like composition, fungal bog with wooden platforms, giant reeds, low fog, glowing spores, readable top-down platform paths and combat pockets, newspaper funny-pages simplification with cartoon color, original whimsical parody mood, gba-friendly environment concept art",
+    "w": 240,
+    "h": 160,
+    "out": "../../tommybeta/assets/recraft/quadrants/quadrant_04_bog_platforms.png"
+  },
+  {
+    "name": "quadrant_05_root_bridge",
+    "prompt": "top-down rainforest exploration zone for a Game Boy Advance action RPG, 240x160 map-like composition, thick root bridge across a forest drop, giant mushroom shelves, hanging vines, readable top-down traversal loops and combat clearings, adventurous cartoon-comic mood, original plumber-brothers parody atmosphere without direct references, gba-friendly environment concept art",
+    "w": 240,
+    "h": 160,
+    "out": "../../tommybeta/assets/recraft/quadrants/quadrant_05_root_bridge.png"
+  },
+  {
+    "name": "quadrant_06_fungal_temple",
+    "prompt": "top-down rainforest exploration zone for a Game Boy Advance action RPG, 240x160 map-like composition, small fungal temple court, moss altar, mushroom banners, readable top-down temple paths and open real-time combat floor, cartoon-comic palette, original parody fantasy mood, gba-friendly environment concept art",
+    "w": 240,
+    "h": 160,
+    "out": "../../tommybeta/assets/recraft/quadrants/quadrant_06_fungal_temple.png"
+  },
+  {
+    "name": "quadrant_07_night_spores",
+    "prompt": "top-down rainforest exploration zone for a Game Boy Advance action RPG, 240x160 map-like composition, twilight jungle with bioluminescent spores, tall mushroom stalks, readable top-down walkways and combat spaces, dreamy saturday morning cartoon atmosphere with classic funny-pages shapes, original parody fantasy, gba-friendly environment concept art",
+    "w": 240,
+    "h": 160,
+    "out": "../../tommybeta/assets/recraft/quadrants/quadrant_07_night_spores.png"
+  },
+  {
+    "name": "quadrant_08_throne_glade",
+    "prompt": "top-down rainforest exploration zone for a Game Boy Advance action RPG, 240x160 map-like composition, throne glade made of giant fungus and roots, readable top-down boss arena ringed by exploration paths and props, dramatic cartoon-comic mood, original whimsical parody royalty, gba-friendly environment concept art",
+    "w": 240,
+    "h": 160,
+    "out": "../../tommybeta/assets/recraft/quadrants/quadrant_08_throne_glade.png"
+  },
+  {
+    "name": "tommy_animation_master_sheet",
+    "prompt": "top-down entity sprite sheet concept for TommyBeta protagonist, readable overhead action-RPG monster hero for Game Boy Advance, transparent-background presentation, top-down idle, walk in four directions, bite attack from overhead, charge startup, dodge roll, heal, and eight readable special move keyframes, saturday morning cartoon and classic newspaper funny-pages art feel, original parody adventure tone, gba-friendly silhouette and color grouping",
+    "w": 512,
+    "h": 512,
+    "out": "../../tommybeta/assets/recraft/characters/tommy_animation_master_sheet.png"
+  },
+  {
+    "name": "mareaou_animation_master_sheet",
+    "prompt": "top-down entity sprite sheet concept for Mareaou rival fighter in TommyBeta, overhead action-RPG mushroom-empire duelist for Game Boy Advance, transparent-background presentation, top-down idle, patrol, strafe, dodge, attack tells, damage, finisher stun, defeat pose, and seven readable overhead attacks, saturday morning cartoon plus funny-pages feel, original parody fantasy tone, gba-friendly silhouette and color grouping",
+    "w": 512,
+    "h": 512,
+    "out": "../../tommybeta/assets/recraft/characters/mareaou_animation_master_sheet.png"
+  },
+  {
+    "name": "tommy_hud_sheet",
+    "prompt": "HUD concept sheet for TommyBeta top-down Game Boy Advance action RPG, transparent-background UI sheet showing Tommy health bar, stamina bar, map-facing special loadout panel, chunky funny-pages readability, bright saturday morning cartoon adventure styling, original parody fantasy rainforest theme",
+    "w": 512,
+    "h": 256,
+    "out": "../../tommybeta/assets/recraft/ui/tommy_hud_sheet.png"
+  },
+  {
+    "name": "special_icon_sheet",
+    "prompt": "icon sheet for TommyBeta top-down Game Boy Advance action RPG specials, 8 distinct overhead action icons for Charge Dash, Sky Chomp, Tail Cyclone, Ember Spit, Iron Gut Slam, Phantom Pounce, Hunger Howl, Crownbreaker Frenzy, plus selector variants, clean transparent-background style, cartoon-comic readability, original parody fantasy tone",
+    "w": 512,
+    "h": 256,
+    "out": "../../tommybeta/assets/recraft/ui/special_icon_sheet.png"
+  },
+  {
+    "name": "title_menu_sheet",
+    "prompt": "title menu concept sheet for TommyBeta top-down Game Boy Advance action RPG, rainforest-toadstool empire theme, logo treatment, menu framing, top-down adventure map hints, saturday morning cartoon and newspaper funny-pages style, original parody fantasy title art and menu button states",
+    "w": 512,
+    "h": 256,
+    "out": "../../tommybeta/assets/recraft/ui/title_menu_sheet.png"
+  },
+  {
+    "name": "ingame_menu_and_endscreens_sheet",
+    "prompt": "menu and end-screen concept sheet for TommyBeta top-down Game Boy Advance action RPG, pause menu widgets, tutorial panel fragments, win screen panel, game over panel, return prompts, chunky funny-pages readability, bright cartoon rainforest fantasy UI style",
+    "w": 512,
+    "h": 256,
+    "out": "../../tommybeta/assets/recraft/ui/ingame_menu_and_endscreens_sheet.png"
+  },
+  {
+    "name": "tommy_fall_intro_sheet",
+    "prompt": "animation concept sheet for TommyBeta intro sequence, Tommy dropping into a top-down rainforest map and landing in a clearing, overhead impact frames, leaves and spores bursting outward, cinematic but gba-friendly storyboard sprite sheet with cartoon-comic energy",
+    "w": 512,
+    "h": 256,
+    "out": "../../tommybeta/assets/recraft/cinematics/tommy_fall_intro_sheet.png"
+  },
+  {
+    "name": "environmental_objects_sheet",
+    "prompt": "top-down environmental object sheet for TommyBeta Game Boy Advance action RPG, overhead trees, mushroom caps, bushes, hanging vines, logs, signposts, rocks, collectible-looking but non-destructible scenic props to populate a top-down landscape, saturday morning cartoon plus funny-pages style, gba-friendly object readability",
+    "w": 512,
+    "h": 512,
+    "out": "../../tommybeta/assets/recraft/environment/environmental_objects_sheet.png"
+  },
+  {
+    "name": "roaming_creatures_sheet",
+    "prompt": "top-down roaming creature animation sheet for TommyBeta rainforest world, overhead frogs, beetles, lizards, tiny mushroom critters, loopable idle and scamper motions, classic funny-pages charm with cartoon color blocking, gba-friendly silhouettes and compact poses",
+    "w": 512,
+    "h": 256,
+    "out": "../../tommybeta/assets/recraft/environment/roaming_creatures_sheet.png"
+  },
+  {
+    "name": "ambience_fx_sheet",
+    "prompt": "environmental ambience fx sheet for TommyBeta top-down Game Boy Advance action RPG, drifting spores, mist curls, leaf motes, soft rain sparkle, subtle magical jungle glows viewed from overhead, loopable transparent-background effect frames, cartoon-comic readability",
+    "w": 512,
+    "h": 256,
+    "out": "../../tommybeta/assets/recraft/fx/ambience_fx_sheet.png"
+  },
+  {
+    "name": "combat_fx_sheet",
+    "prompt": "top-down combat fx animation sheet for TommyBeta Game Boy Advance action RPG, overhead bite hit sparks, dash trails, parry flash, block impact, heal pulse, stun stars, finisher cue, and exaggerated special move effects for Tommy's 8 specials, transparent-background style, saturday morning cartoon and funny-pages readability",
+    "w": 512,
+    "h": 512,
+    "out": "../../tommybeta/assets/recraft/fx/combat_fx_sheet.png"
+  }
+]

@@ -1,0 +1,17 @@
+{
+  "name": "doengine",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Recovered and normalized DoENGINE workspace",
+  "type": "commonjs",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "typecheck": "tsc --noEmit -p tsconfig.json"
+  },
+  "devDependencies": {
+    "typescript": "^5.8.2",
+    "@types/node": "^24.0.0"
+  }
+}

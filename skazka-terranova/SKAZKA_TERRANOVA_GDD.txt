@@ -1,0 +1,75 @@
+SKAZKA: TERRANOVA — GAME DESIGN DOCUMENT (GDD)
+Version: 1.0
+Date: 2026-03-08
+
+Overview
+- High concept: A folk-tech action-RPG that fuses Slavic fairytale rites with Newgrounds-era net-culture. Real-time rhythm-based combat—inspired by Tommy Goomba's beat-tick mechanics—interlocks with a "Reel" system where media tokens (sprite fragments, audio loops, tags) act as ritual components. Designed foremost for PC with full support for gamepads and other common controllers.
+- Platforms: Windows (primary), HTML5 export for Newgrounds (demo), optional Unity build targets.
+
+Narrative
+- Core story: Misha searches for their missing sister Katya, who has been swallowed into a viral archive called the "Unfinished Reel." The world is a hybrid: birch forests and reed marshes exist side-by-side with arcades, bootleg servers, and pixel shrines. The player navigates three major realms (Orchard, Marsh, Mire) and their Terranova analogues (Arcade Den, GIF Shrine, Server Bazaar) to recover tokens and names that free Katya.
+- Tone: Melancholic folklore filtered through affectionate satire of net culture. Emphasize moral weight of bargains.
+
+Core Systems
+1) Real-time Rhythm Combat (RRC)
+- Base model: Derived from Tommy Goomba's beat-tick system. Combat runs on a global tempo (configurable BPM). Actions (attacks, parries, dodges, ritual casts) are tied to beat windows.
+- Beat Windows: "Perfect" (±50 ms), "Good" (±120 ms), "Miss". Successful perfect hits increase combo and build a "Ritual Meter." Misses break combos and reduce stamina.
+- Stamina & Recovery: Every action consumes stamina; perfect-timed actions consume less. Stamina recharges passively; certain tokens grant faster recovery.
+- Parry/Dodge QTEs: Some enemy attacks display a colored marker on the beat; timed parry grants a counter window. Tommy Goomba parry/dodge timing and stamina interplay are reused and expanded with directional inputs for controllers.
+- Beat-Tick Events: Environmental hazards, reel glitches, and support behaviors are synchronized to the tempo, creating rhythm puzzles during combat.
+
+2) Reel & Media Deck
+- Tokens: Items have media types (audio loop, sprite shard, tag). Players build 3-slot ritual files in a Media Deck: Audio + Sprite + Tag => Ritual effect (heal, stun, control, reveal name fragment).
+- Interlink: Using a ritual consumes Media Deck slots and triggers a timed ritual sequence that must be played to the beat to succeed—embedding rhythm mechanics into both combat and exploration.
+
+3) Controller-First Design
+- All primary actions mapped with controller parity: face buttons for Light/Heavy/Interact, shoulder buttons for Rhythm-Input modifiers, triggers for targeted rituals, left stick for move, right stick for camera/aim, D-pad for quick token select, back/menu for Media Deck management.
+- Input latency compensation: configurable offset slider; per-controller profiles; vibration cues for beat ticks.
+- Accessibility: allow keyboard-only, remappable inputs, colorblind-friendly markers, adjustable BPM and window sizes.
+
+4) Progression & Skill Tree
+- XP & Levels: Players gain XP from combat, rituals, and story objectives. Levels unlock skill points.
+- Branching Skill Tree (Sill Tree): a sprawling, visible tree with three major branches—Hearth (support/rituals), Echo (rhythm/attack enhancers), and Thread (stealth/manipulation). Each branch contains nodes: passive boosts, new ritual recipes, stance modifiers, and ultimate-bindings.
+- Example nodes:
+  - Hearth: "Domovoi Mend" (crafting efficiency), "Hearth Ward" (ally buff when camped).
+  - Echo: "Perfect Rhythm" (wider perfect window after successive perfects), "Beat Burst" (area knockback on perfect chain).
+  - Thread: "Silent Promise" (reduced detection), "Mask of Ribbons" (consume token for cinematic stealth).
+- Respec: mid-to-late game option costing ritual currency.
+
+Enemies & Encounters
+- Design intent: low-tier encounters are numerous, riffing on Slavic creatures reimagined with Newgrounds-parallels and satirical net motifs. Encounters are designed for short rhythm-combat loops with occasional ritual-integrated puzzles.
+- Examples (low-tier):
+  - Net-Leshy (sprite thief): flings banner-projectiles; vulnerable to praise/remix rituals. (Newgrounds-parallel: banner spammer)
+  - Cache Gremlin (domestic file rat): rushes in packs; short, fast attacks—punishable by area-perfect timing.
+  - Rusalka-Streamer Minion: lures with chorus-beat; applies 'hushed' debuff unless player answers with an honest audio token.
+  - GIF Poltergeist: appears as looping sprite; resists physical damage but can be desynced by corrupt audio tokens.
+- Encounter flow: pre-combat reel-condition (e.g., a shrine plays a loop), combat with tempo modifiers, ritual windows that alter fight state.
+
+Combat Examples & Systems Integration
+- Encounter: Arcade Den Ambush
+  - Tempo: 110 BPM; Leshy summons banners on the 1&3 beat; player must parry on 2 for counters.
+  - Ritual usage: slot a sprite+tag to charm the Leshy for one bar.
+- Boss: Zmey-Collector
+  - Multi-phase with alternating tempos; one phase is "hoard" phase where the Zmey caches promises (collect tokens mid-fight), another phase forces rhythm puzzles to break DRM shards.
+
+UI / HUD
+- Rhythm HUD: circular beat ring, combo counter, stamina bar, Media Deck quick slots. Controller prompts appear with iconography derived from classic Newgrounds-style buttons.
+- Media Deck screen: drag-and-drop on PC; quick-swap via D-pad on controller.
+
+Art & Audio
+- Visuals: mixed pixel-hand stitched aesthetic—4-shade Game Boy palettes for certain modes, expanded 16-bit arcade palette for Terranova neon. Reuse Tommny Goomba asset pipeline ideas: compact tiles, modular sprite shards.
+- Audio: chiptune + field recordings + lo-fi samples. Each region has a base BPM that can be modulated by events.
+
+Technical Notes
+- Engine: Unity recommended for rapid prototyping and HTML5 export (Newgrounds demo). Modular systems: Tempo Manager, Media Deck, Combat State Machine, SkillTree service.
+- Controller handling: use Unity Input System with profiles for XInput and common PC controllers; implement input-lag calibration.
+
+Production & Next Steps
+- Near-term prototyping: implement Tempo Manager and a single combat arena with Leshy/Cache Gremlin using Tommy Goomba beat-tick timing. Create Media Deck UI and 3 example rituals.
+- Assets: convert placeholder assets to final tile palettes; clean `tiles.c` where needed.
+- Milestones: Prototype combat (M1), Media Deck + Rituals (M2), Skill Tree integration (M3), Newgrounds HTML5 demo export (M4).
+
+Appendix: Mapping Tommy Goomba mechanics to Terranova
+- Reuse beat-tick loop, perfect/good/miss windows, stamina interplay, and QTE parry windows. Expand with ritual-casting choreography, controller directional parries, and tempo-shifting boss mechanics.
+
+End of GDD

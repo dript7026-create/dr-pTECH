@@ -1,0 +1,150 @@
+TommyBeta GBA Proof-of-Concept Roguelike
+Preproduction Brief
+Date: 2026-03-10
+
+Project Direction
+- Target platform: Game Boy Advance
+- Deliverable: standalone .gba ROM for TommyBeta
+- Build direction: migrate from the current tiny Game Boy prototype to a dedicated GBA gameplay implementation
+- Asset direction: use your supplied concept sheets as the source for Recraft-assisted production of final gameplay assets, effects, HUD, menus, and iconography
+
+Core Gameplay Loop
+1. Title menu appears with Start Game
+2. Start Game loads the world scene
+3. Tommy falls from the sky and lands in the environment
+4. Mario is already present and waiting
+5. Combat begins
+6. Player uses:
+   - A = bite attack
+   - B = currently selected special
+   - Select = cycle unlocked specials assigned to B
+7. On first run only, tutorial messages explain:
+   - A is bite
+   - B is special
+   - Select cycles unlocked specials
+   - stamina is consumed by every move
+   - zero stamina causes a temporary stun
+   - zero health causes defeat
+   - specials are lost on death
+8. If Mario is defeated, the next Mario fight begins
+9. If Tommy dies, show Game Over screen, then A returns to menu
+10. If Tommy defeats Mario with every special as the final move in a single run, show Win screen, then A returns to menu
+
+Combat Rules
+- Tommy and Mario both have health and stamina
+- Every move consumes stamina
+- Reaching zero stamina causes temporary stun / vulnerability
+- Reaching zero health causes defeat
+- Mario cannot die immediately at zero health
+- Instead, Mario enters a finisher state
+- In finisher state, Tommy must use a special move, not the bite attack, to secure the kill
+- A run is only considered complete after Mario has been finished by every special at least once in that same run
+
+Progression Rules
+- Tommy starts each run with the base special only
+- Every 3 Mario defeats in the same run unlocks the next special
+- Total specials designed for this project: 8
+- Specials reset on player death
+- Persistent systems survive death:
+   - player-choice-based history log
+   - experience points
+   - level-ups
+
+Designed Special Move Set
+1. Charge Dash
+- Default unlocked special
+- Tommy lunges forward in a straight burst
+- Strong single-target finisher tool
+- Low windup, medium stamina cost
+
+2. Sky Chomp
+- Tommy springs upward and crashes down with a bite impact
+- Good anti-air / gap-closing finisher
+- Medium stamina cost
+
+3. Tail Cyclone
+- Tommy spins in place and hits in a short radius around himself
+- Crowd-control style despite the one-on-one format
+- Good when Mario is pressuring at close range
+- Medium stamina cost
+
+4. Ember Spit
+- Tommy spits a short-range burning projectile or burst cone
+- Good for spacing and forcing Mario into a weak state
+- Medium stamina cost
+
+5. Iron Gut Slam
+- Tommy braces, then body-slams the ground for a shock impact
+- Slow, heavy, high-damage option
+- High stamina cost
+
+6. Phantom Pounce
+- Tommy blinks or darts behind Mario, then strikes
+- Mobility / reposition special
+- Medium-high stamina cost
+
+7. Hunger Howl
+- Tommy unleashes a roar that drains Mario stamina and briefly buffs Tommy recovery
+- Tactical / sustain special
+- Lower direct damage, utility-heavy
+- Medium stamina cost
+
+8. Crownbreaker Frenzy
+- Final unlock
+- Multi-hit savage rush ending in a decisive finisher bite
+- Highest damage and highest stamina cost
+- Intended as a prestige finisher for late-run wins
+
+Unlock Cadence
+- 0 defeats: Charge Dash
+- 3 defeats: Sky Chomp
+- 6 defeats: Tail Cyclone
+- 9 defeats: Ember Spit
+- 12 defeats: Iron Gut Slam
+- 15 defeats: Phantom Pounce
+- 18 defeats: Hunger Howl
+- 21 defeats: Crownbreaker Frenzy
+
+Required Concept Sheets From User
+The user plans to provide 9 PNG concept sheets. These are the exact requested categories for intake.
+
+1. Tommy character concept sheet
+2. Mario character concept sheet
+3. Environment concept sheet
+4. Tommy HUD health/stamina concept sheet
+5. Title menu concept sheet
+6. Win / lose screen concept sheet
+7. Special ability icon concept sheet
+8. Additional gameplay presentation concept sheet for effects / combat readability
+9. Additional gameplay presentation concept sheet for world / object detail
+
+Recommended Asset Sheet Structure
+- PNG format
+- Keep major subjects separated and clearly labeled where possible
+- Prefer transparent or clean flat backgrounds when possible
+- Include front / side / action poses for characters if available
+- Include close-up HUD details for bars, icons, and frames
+- Include notes on mood, palette, and any non-negotiable visual identity choices
+
+What We Will Generate From The Concept Sheets
+- Tommy idle, fall, land, move, bite, hurt, stun, finisher, and victory animation sets
+- Mario idle, move, attack, hurt, stun, finisher-state, and defeat animation sets
+- Background tiles, environment tiles, arena dressing, and menu UI assets
+- HUD frames, health / stamina meters, special icons, tutorial panels, title art, win / loss screens
+- Impact VFX, landing VFX, bite VFX, special-move VFX, and finisher-state cues
+
+Immediate Implementation Notes
+- Current TommyBeta codebase is still a minimal Game Boy prototype, not a GBA game
+- GBA toolchain exists on this machine via devkitPro, but the TommyBeta project has not yet been converted to a GBA build target
+- Recraft generation cannot start until the concept PNG sheets are uploaded into the workspace
+
+Next Execution Steps
+1. User uploads the 9 PNG concept sheets
+2. Build a concrete TommyBeta GBA project structure
+3. Define Recraft prompts per asset family using the uploaded concepts
+4. Generate asset packs and post-process them for GBA constraints
+5. Implement the GBA gameplay loop, tutorial, combat, progression, finishers, win/loss flow, and persistence layer
+6. Build and test the .gba ROM
+
+Current Blocker
+- The concept sheets are not yet present in the workspace, so Recraft-driven asset generation cannot begin yet

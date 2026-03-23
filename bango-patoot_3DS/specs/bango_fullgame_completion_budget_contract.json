@@ -1,0 +1,66 @@
+{
+  "contract_name": "bango_fullgame_completion_budget_contract_v1",
+  "version": "2026-03-13",
+  "currency": "credits",
+  "total_remaining_project_credits": 19960,
+  "current_recraft_pass": {
+    "name": "tutorial_duology_and_forward_buffer_pass",
+    "allocated_credits": 8000,
+    "post_pass_remaining_credits": 11960,
+    "purpose": "Use the current pass to ship two tutorial deliverables while buffering ahead into the market-finish full game instead of producing tutorial-only throwaway assets."
+  },
+  "allocation_model": {
+    "current_tutorial_delivery": {
+      "credits": 3000,
+      "coverage": [
+        "prototype tutorial immediate assets",
+        "final tutorial preview immediate assets",
+        "current HUD and FX readability"
+      ]
+    },
+    "forward_buffer_total": {
+      "credits": 5000,
+      "suballocations": {
+        "hub_world_landscapes_tilesets": {
+          "credits": 2500,
+          "purpose": "Fill the hub and world landscape, environment, and tileset backlog with usable forward-production assets."
+        },
+        "weapons_and_armor": {
+          "credits": 1000,
+          "purpose": "Cover starter and upgrade-path weapons and armor with market-finish-ready silhouettes and modular breakdowns."
+        },
+        "remaining_priority_content": {
+          "credits": 1500,
+          "purpose": "Finish basic-tier enemies, support-dread UI telemetry, hub dialogue and object packs, and runtime calibration."
+        }
+      }
+    }
+  },
+  "traceability_requirements": {
+    "asset_identity": [
+      "trace_id",
+      "name",
+      "category",
+      "budget_bucket",
+      "deliverable_tags"
+    ],
+    "required_stages": [
+      "recraft_generation",
+      "auto_polish",
+      "blender_ingest",
+      "rig_or_scene_conversion",
+      "runtime_packaging",
+      "animation_or_gameplay_binding"
+    ],
+    "goal": "Every generated 2D asset can be tracked forward into 3D models, rigs, animations, runtime packs, and final game usage without losing source intent or budget ownership."
+  },
+  "quality_posture": {
+    "objective": "contemporary premium readability and market finish within current budget reality",
+    "non_goal": "unbounded guarantee language not supported by current capital, time, or vendor validation",
+    "discipline": [
+      "use hard traceability instead of vague quality claims",
+      "keep tutorial assets reusable in the shipping game",
+      "treat the tutorial pass as the first shippable content slice, not a disposable prototype"
+    ]
+  }
+}

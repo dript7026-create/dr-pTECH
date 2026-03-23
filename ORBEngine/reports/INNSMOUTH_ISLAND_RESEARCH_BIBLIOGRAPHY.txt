@@ -1,0 +1,70 @@
+INNSMOUTH ISLAND RESEARCH BIBLIOGRAPHY
+
+Date: 2026-03-11
+
+PURPOSE
+
+This bibliography records the actual references consulted, generated, or relied upon during the InnsmouthIsland standalone demo expansion, asset-bible drafting, Recraft prompt generation planning, and ORBEngine integration planning. It is intended as an audit-support document for provenance review, copyright-risk review, and internal reconstruction of how design and prompt decisions were formed.
+
+SCOPE NOTES
+
+- This document only lists sources that were directly accessed in the workspace during the session or were already present as project documentation.
+- No external third-party asset files were imported into the repo during this session.
+- No public-domain or open-course art packs were copied into the project during this session.
+- A planned comparative public-asset web lookup was attempted but canceled before retrieval, so no external website content was actually incorporated into the resulting asset bible.
+
+PRIMARY INTERNAL SOURCES CONSULTED
+
+1. ORBEngine/src/innsmouth_island_demo.cpp
+2. drIpTECH/ReCraftGenerationStreamline/innsmouth_island_manifest.json
+3. ORBEngine/assets/innsmouth_island
+4. ORBEngine/ORBEngine_ARCHITECTURE.md
+5. ORBEngine/include/orbengine.h
+6. ORBEngine/src/orbengine.c
+7. ORBEngine/src/orbengine_sandbox.c
+
+GENERATED INTERNAL RESEARCH OUTPUTS
+
+1. ORBEngine/reports/INNSMOUTH_ISLAND_ASSET_BIBLE.md
+2. ORBEngine/reports/INNSMOUTH_ISLAND_ASSET_BIBLE.txt
+3. drIpTECH/ReCraftGenerationStreamline/innsmouth_island_master_manifest.json
+
+EXISTING TOOLING AND DOCUMENTATION RELEVANT TO ASSET GENERATION
+
+1. drIpTECH/ReCraftGenerationStreamline/README.md
+2. drIpTECH/ReCraftGenerationStreamline/batch_run_manifest.py
+3. drIpTECH/ReCraftGenerationStreamline/recraft documentation urls.txt
+
+BUILD AND VALIDATION EVIDENCE
+
+1. ORBEngine/build_innsmouth_island.ps1
+2. ORBEngine/innsmouth_island_demo.exe
+3. ORBEngine sandbox rebuild using src/orbengine.c and src/orbengine_sandbox.c after ORB module config additions
+
+EXTERNAL REFERENCES CONSULTED
+
+1. OpenGameArt. Home and community art index. https://opengameart.org/ Accessed 2026-03-11.
+2. OpenGameArt. Art marketplace cross-promotion. https://opengameart.org/content/art-marketplace-cross-promotion Accessed 2026-03-11.
+3. Kenney. Assets index. https://kenney.nl/assets Accessed 2026-03-11.
+4. Liberated Pixel Cup. Project overview and style-guide framing. https://lpc.opengameart.org/ Accessed 2026-03-11.
+
+EXTERNAL REFERENCES STATUS
+
+- External public-asset benchmark content is now incorporated into the saved research outputs as cited production standards only.
+- No external website images, audio, or packaged assets were downloaded into the repo during this session.
+- No prompt text from those sites was copied verbatim into the InnsmouthIsland manifests.
+
+PROVENANCE AND RISK NOTES
+
+- The InnsmouthIsland art planning in this session was derived from in-repo gameplay definitions, prior in-repo prompt manifests, and newly authored descriptive prompt language.
+- The output documents are planning and prompt documents, not copies of third-party art.
+- If future image-conditioned generation is performed using outside reference images, those source files should be logged here with source URL or local acquisition path, date accessed, license or rights basis, and whether used for inspiration, control image conditioning, overpaint, or direct editing.
+- If user-supplied audio stems or one-shots are later added, they should be cataloged in a follow-up appendix with ownership and usage scope.
+
+RECOMMENDED AUDIT ADDITIONS FOR FUTURE SESSIONS
+
+1. Save exact generation timestamps and prompt revisions for every Recraft batch.
+2. Store hashes for generated images and any source control/reference images.
+3. Keep a per-asset provenance table linking prompt, control image, output file, and intended runtime use.
+4. Record any external visual references before they are used in prompt-conditioning workflows.
+5. Record license notes for any user-supplied audio or reference packs before import.

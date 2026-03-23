@@ -1,0 +1,79 @@
+[
+  {
+    "name": "innsmouth_player_fishman_sheet",
+    "prompt": "dark ooze-punk chiaroscuro lovecraftian action game character sprite sheet, fish-man protagonist crawling out of the sea onto a humid New England rainforest shore, 16-panel sheet including crawl, idle, heal, walk, run, jump, dodge, crouch, slide, focus-lock, light attack, heavy attack, block, parry, hurt, victory, moody ink-black shadows and wet bioluminescent highlights, readable third-person game concept sheet",
+    "w": 1024,
+    "h": 1024,
+    "out": "../../ORBEngine/assets/innsmouth_island/innsmouth_player_fishman_sheet.png"
+  },
+  {
+    "name": "innsmouth_opening_storyboard",
+    "prompt": "dark ooze-punk chiaroscuro lovecraftian opening storyboard for a game called InnsmouthIsland, fish-man hero crawling out of stormy sea onto wet black-sand New England shore swallowed by rainforest humidity, 6-panel cinematic sequence, readable game intro art",
+    "w": 1344,
+    "h": 768,
+    "out": "../../ORBEngine/assets/innsmouth_island/innsmouth_opening_storyboard.png"
+  },
+  {
+    "name": "innsmouth_enemy_roster_sheet",
+    "prompt": "dark ooze-punk chiaroscuro lovecraftian enemy roster sheet for InnsmouthIsland, 8 basic enemies based on lovecraft lore: Deep One raider, shoggoth spawn, nightgaunt stalker, mi-go scavenger, ghoul woodsman, cultist harpooner, star-spawn wretch, drowned pilgrim, arranged as readable character lineup with labels and wet rainforest New England mood",
+    "w": 1344,
+    "h": 768,
+    "out": "../../ORBEngine/assets/innsmouth_island/innsmouth_enemy_roster_sheet.png"
+  },
+  {
+    "name": "innsmouth_basic_enemy_anim_sheet",
+    "prompt": "dark ooze-punk chiaroscuro lovecraftian action game animation sheet, 12-frame generic basic enemy cycle for InnsmouthIsland including idle, patrol, run, strike, recoil, lunge, stagger, collapse, readable sprite-sheet style layout, wet inked shadows, ooze and fog",
+    "w": 1344,
+    "h": 768,
+    "out": "../../ORBEngine/assets/innsmouth_island/innsmouth_basic_enemy_anim_sheet.png"
+  },
+  {
+    "name": "innsmouth_boss_duo_anim_sheet",
+    "prompt": "dark ooze-punk chiaroscuro lovecraftian boss animation sheet for InnsmouthIsland, 16-frame concept sheet of two eldritch deity bosses inspired by Mayan and Aztec animal-human hybrids, one reptilian abyss-priest and one jaguar eclipse tyrant, readable action poses and boss-state panels, humid rainforest occult ruin tone",
+    "w": 1344,
+    "h": 768,
+    "out": "../../ORBEngine/assets/innsmouth_island/innsmouth_boss_duo_anim_sheet.png"
+  },
+  {
+    "name": "innsmouth_environment_props_sheet",
+    "prompt": "dark ooze-punk chiaroscuro lovecraftian environment prop sheet for InnsmouthIsland, 24 distinct environmental objects for a humid New England rainforest coast: twisted cedar tree, mangrove root cluster, black rock, tidepool stone, ruined wharf post, fog lamp, barnacled shrine, fishing crate, driftwood arch, fungus stump, vine gate, gravestone, skull totem, broken skiff, eel basket, rope coil, wet fern cluster, dead coral, standing stone, tide altar, fungus boulder, lantern pole, rib cage ruin, ritual obelisk, arranged on a clean prop sheet",
+    "w": 1344,
+    "h": 768,
+    "out": "../../ORBEngine/assets/innsmouth_island/innsmouth_environment_props_sheet.png"
+  },
+  {
+    "name": "innsmouth_world_map",
+    "prompt": "dark ooze-punk chiaroscuro lovecraftian world map concept for InnsmouthIsland, 12 square kilometer island landscape in New England USA reimagined as humid rainforest coast, top-down adventure map with black shorelines, drowned village, fungal grove, wet basalt ridge, cyclopean shrine, tidal caverns, central swamp, boss temple, exploration readability",
+    "w": 1024,
+    "h": 1024,
+    "out": "../../ORBEngine/assets/innsmouth_island/innsmouth_world_map.png"
+  },
+  {
+    "name": "innsmouth_world_keyart",
+    "prompt": "dark ooze-punk chiaroscuro lovecraftian environment key art for InnsmouthIsland, New England coast under rainforest humidity, drowned colonial ruins, black tidal pools, twisted trees, oppressive fog, wet jungle canopy, third-person action exploration landscape, readable gameplay mood art",
+    "w": 1344,
+    "h": 768,
+    "out": "../../ORBEngine/assets/innsmouth_island/innsmouth_world_keyart.png"
+  },
+  {
+    "name": "innsmouth_ui_menu_panel",
+    "prompt": "dark ooze-punk chiaroscuro lovecraftian game UI menu panel for InnsmouthIsland, Xbox-friendly interface with tabs for character, inventory, equipment, map, questlog, codex, slick wet-black panels, eldritch brass highlights, clear space for menu lists and descriptions",
+    "w": 1344,
+    "h": 768,
+    "out": "../../ORBEngine/assets/innsmouth_island/innsmouth_ui_menu_panel.png"
+  },
+  {
+    "name": "innsmouth_hud_sheet",
+    "prompt": "dark ooze-punk chiaroscuro lovecraftian HUD concept for InnsmouthIsland, moisture meter, breathing resonance meter, health, stamina, lock-on reticle, parry cue, minimap compass, Xbox readability, wet black metal and sickly sea-glow interface",
+    "w": 1344,
+    "h": 384,
+    "out": "../../ORBEngine/assets/innsmouth_island/innsmouth_hud_sheet.png"
+  },
+  {
+    "name": "innsmouth_icons_sheet",
+    "prompt": "dark ooze-punk chiaroscuro lovecraftian UI icon sheet for InnsmouthIsland, icons for lock-on, block, parry, moisture healing, breathing sync, quest, codex, inventory, map, equipment, confirm, back, arranged as clean game UI symbols",
+    "w": 1024,
+    "h": 1024,
+    "out": "../../ORBEngine/assets/innsmouth_island/innsmouth_icons_sheet.png"
+  }
+]

@@ -1,0 +1,110 @@
+[
+  {
+    "name": "kier_rat_ronin_refine",
+    "prompt": "fully transparent background only, no backdrop, no floor, no frame, no environment, dense detailed 2D side-view spritesheet for Kier Rat Ronin, rat-man ronin protagonist in Pertinence: Tribunal, character should occupy most of the canvas with readable idle, walk, run, crouch, jump_start, jump_air poses, hand-painted souls-like metroidvania style, distinct silhouette, wide color range focused on #c1524a, mist-lashed tribunal frontier influence only in costume design, no text",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/sprites/kier_rat_ronin_refine.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "village_elder_refine",
+    "prompt": "fully transparent background only, no backdrop, no floor, no frame, no environment, dense detailed 2D side-view spritesheet for Village Elder, NPC in Pertinence: Tribunal, character should occupy most of the canvas with readable idle, talk, gesture, bless, recoil poses, hand-painted souls-like metroidvania style, distinct silhouette, marsh tribunal costume language, no text",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/sprites/village_elder_refine.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "rope_ferryman_refine",
+    "prompt": "fully transparent background only, no backdrop, no floor, no frame, no environment, dense detailed 2D side-view spritesheet for Rope Ferryman, NPC in Pertinence: Tribunal, character should occupy most of the canvas with readable idle, beckon, row, turn, recoil poses, hand-painted souls-like metroidvania style, distinct silhouette, river-worn tribunal costume design, no text",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/sprites/rope_ferryman_refine.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "archive_child_refine",
+    "prompt": "fully transparent background only, no backdrop, no floor, no frame, no environment, dense detailed 2D side-view spritesheet for Archive Child, NPC in Pertinence: Tribunal, character should occupy most of the canvas with readable idle, scribble, point, cower, run poses, hand-painted souls-like metroidvania style, distinct silhouette, parchment-and-relic design language, no text",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/sprites/archive_child_refine.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "penitent_poet_refine",
+    "prompt": "fully transparent background only, no backdrop, no floor, no frame, no environment, dense detailed 2D side-view spritesheet for Penitent Poet, NPC in Pertinence: Tribunal, character should occupy most of the canvas with readable idle, recite, kneel, stagger, depart poses, hand-painted souls-like metroidvania style, distinct silhouette, mourning tribunal costume language, no text",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/sprites/penitent_poet_refine.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "salt_toad_refine",
+    "prompt": "fully transparent background only, no backdrop, no floor, no frame, no environment, dense detailed 2D side-view spritesheet for Salt Toad, fauna in Pertinence: Tribunal, creature should occupy most of the canvas with readable idle, hop, croak, recoil, flee poses, hand-painted souls-like metroidvania style, distinct silhouette, mineral marsh coloration, no text",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/sprites/salt_toad_refine.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "goduly_ink_saint_refine",
+    "prompt": "fully transparent background only, no backdrop, no floor, no frame, no environment, dense detailed 2D side-view spritesheet for Goduly Ink Saint, goduly being in Pertinence: Tribunal, character must fill more of the canvas and maintain a strong readable silhouette across idle, invoke, glide, condemn, dissolve poses, hand-painted souls-like metroidvania style, ornate ink-and-script divinity motifs, no text",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/sprites/goduly_ink_saint_refine.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "vermin_lantern_refine",
+    "prompt": "fully transparent background only, no backdrop, no floor, no frame, no environment, dense detailed 2D side-view spritesheet for Vermin Lantern, low-tier enemy in Pertinence: Tribunal, character must fill more of the canvas with stronger silhouette separation across idle, patrol_walk, alert_run, bite, lunge, stagger poses, hand-painted souls-like metroidvania style, marsh plague-shrine design language, no text",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/sprites/vermin_lantern_refine.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "reed_sapper_refine",
+    "prompt": "fully transparent background only, no backdrop, no floor, no frame, no environment, dense detailed 2D side-view spritesheet for Reed Sapper, low-tier enemy in Pertinence: Tribunal, character must fill more of the canvas with stronger silhouette separation across idle, patrol_walk, alert_run, bite, lunge, stagger poses, hand-painted souls-like metroidvania style, marsh sabotage motif, no text",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/sprites/reed_sapper_refine.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "tar_crow_refine",
+    "prompt": "fully transparent background only, no backdrop, no floor, no frame, no environment, dense detailed 2D side-view spritesheet for Tar Crow, low-tier enemy in Pertinence: Tribunal, creature must fill more of the canvas with stronger silhouette separation across idle, patrol_walk, alert_run, bite, lunge, stagger poses, hand-painted souls-like metroidvania style, tar-black plague bird design language, no text",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/sprites/tar_crow_refine.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "goduly_fallow_crown_refine",
+    "prompt": "fully transparent background only, no backdrop, no floor, no frame, no environment, dense detailed 2D side-view spritesheet for Goduly Fallow Crown, goduly being in Pertinence: Tribunal, character must fill more of the canvas and maintain a strong readable silhouette across idle, invoke, glide, condemn, dissolve poses, hand-painted souls-like metroidvania style, hollow regalia and crown-like silhouette emphasis, no text",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/sprites/goduly_fallow_crown_refine.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "pale_usher_refine",
+    "prompt": "fully transparent background only, no backdrop, no floor, no frame, no environment, dense detailed 2D side-view spritesheet for Pale Usher, low-tier enemy in Pertinence: Tribunal, character must fill more of the canvas with stronger silhouette separation across idle, patrol_walk, alert_run, bite, lunge, stagger poses, hand-painted souls-like metroidvania style, ceremonial plague-attendant motif, no text",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/sprites/pale_usher_refine.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  }
+]

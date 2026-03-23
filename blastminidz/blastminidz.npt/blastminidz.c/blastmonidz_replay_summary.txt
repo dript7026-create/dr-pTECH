@@ -1,0 +1,9 @@
+Blastmonidz adaptive replay summary
+Future ArtiSapiens should mutate from these standings and chemistry totals.
+chemistry=60,68,14
+theme=Consensus Ember
+world_phase=Mythic Drift
+Player BlastKin -> doctrine=Harmonizer delay=39 form=Seed Form alive=0 feed=35,51,100,63,19 ai=human pilot genome=passes 13 | silhouette 0.46 | shading 0.48 | depth 0.59 | cosmetic 0.54 | structure 0.43 | mutation 0.61 | motion 0.48 | hero 3 | rival 0 | dir 2 | stride 2
+ArtiSapien Kestrel -> doctrine=Steward delay=0 form=Burst Form alive=1 feed=94,92,18,11,100 ai=Steward | gather | det 170 dice 40 final 67 genome=passes 13 | silhouette 0.66 | shading 0.52 | depth 0.67 | cosmetic 0.52 | structure 0.67 | mutation 0.76 | motion 0.53 | hero 0 | rival 0 | dir 2 | stride 2
+ArtiSapien Morrow -> doctrine=Steward delay=0 form=Burst Form alive=1 feed=99,97,24,12,100 ai=Steward | stabilize | det 122 dice 46 final 69 genome=passes 13 | silhouette 0.67 | shading 0.53 | depth 0.69 | cosmetic 0.54 | structure 0.68 | mutation 0.77 | motion 0.54 | hero 3 | rival 1 | dir 0 | stride 2
+ArtiSapien Vanta -> doctrine=Steward delay=0 form=Burst Form alive=1 feed=92,96,30,10,100 ai=Steward | mediate | det 95 dice 42 final 65 genome=passes 13 | silhouette 0.74 | shading 0.56 | depth 0.72 | cosmetic 0.55 | structure 0.77 | mutation 0.81 | motion 0.56 | hero 1 | rival 0 | dir 1 | stride 2

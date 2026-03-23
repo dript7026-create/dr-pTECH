@@ -1,0 +1,550 @@
+{
+  "frame_pairs": {
+    "pair_count": 36,
+    "flagged_count": 36,
+    "flagged_pair_keys": [
+      "abyss_prince_phase_f01",
+      "abyss_prince_phase_f02",
+      "abyss_prince_phase_f03",
+      "abyss_prince_phase_f04",
+      "cultist_harpooner_throw_f01",
+      "cultist_harpooner_throw_f02",
+      "cultist_harpooner_throw_f03",
+      "cultist_harpooner_throw_f04",
+      "deep_one_raider_rush_f01",
+      "deep_one_raider_rush_f02",
+      "deep_one_raider_rush_f03",
+      "deep_one_raider_rush_f04",
+      "jaguar_tyrant_pounce_f01",
+      "jaguar_tyrant_pounce_f02",
+      "jaguar_tyrant_pounce_f03",
+      "jaguar_tyrant_pounce_f04",
+      "nightgaunt_glide_f01",
+      "nightgaunt_glide_f02",
+      "nightgaunt_glide_f03",
+      "nightgaunt_glide_f04",
+      "player_air_dodge_f01",
+      "player_air_dodge_f02",
+      "player_air_dodge_f03",
+      "player_air_dodge_f04",
+      "player_heavy_combo_f01",
+      "player_heavy_combo_f02",
+      "player_heavy_combo_f03",
+      "player_heavy_combo_f04",
+      "player_light_combo_f01",
+      "player_light_combo_f02",
+      "player_light_combo_f03",
+      "player_light_combo_f04",
+      "shoggoth_spring_f01",
+      "shoggoth_spring_f02",
+      "shoggoth_spring_f03",
+      "shoggoth_spring_f04"
+    ],
+    "worst_iou": 0.2486,
+    "max_bbox_delta_px": 361,
+    "max_coverage_delta": 0.55148
+  },
+  "tile_pairs": {
+    "pair_count": 18,
+    "flagged_count": 0,
+    "flagged_pair_keys": [],
+    "worst_iou": 1.0,
+    "max_bbox_delta_px": 0,
+    "max_coverage_delta": 0.0
+  },
+  "frame_pair_details": [
+    {
+      "pair_key": "abyss_prince_phase_f01",
+      "final": "C:\\Users\\rrcar\\Documents\\drIpTECH\\ORBEngine\\assets\\innsmouth_island\\frame_pair_expansion\\final\\boss\\abyss_prince_phase_f01_final_v1.png",
+      "precision": "C:\\Users\\rrcar\\Documents\\drIpTECH\\ORBEngine\\assets\\innsmouth_island\\frame_pair_expansion\\precision\\boss\\abyss_prince_phase_f01_precision_v1.png",
+      "iou": 0.33407,
+      "coverage_delta": 0.47027,
+      "bbox_delta_px": 0,
+      "flagged": true
+    },
+    {
+      "pair_key": "abyss_prince_phase_f02",
+      "final": "C:\\Users\\rrcar\\Documents\\drIpTECH\\ORBEngine\\assets\\innsmouth_island\\frame_pair_expansion\\final\\boss\\abyss_prince_phase_f02_final_v1.png",
+      "precision": "C:\\Users\\rrcar\\Documents\\drIpTECH\\ORBEngine\\assets\\innsmouth_island\\frame_pair_expansion\\precision\\boss\\abyss_prince_phase_f02_precision_v1.png",
+      "iou": 0.44288,
+      "coverage_delta": 0.17679,
+      "bbox_delta_px": 0,
+      "flagged": true
+    },
+    {
+      "pair_key": "abyss_prince_phase_f03",
+      "final": "C:\\Users\\rrcar\\Documents\\drIpTECH\\ORBEngine\\assets\\innsmouth_island\\frame_pair_expansion\\final\\boss\\abyss_prince_phase_f03_final_v1.png",
+      "precision": "C:\\Users\\rrcar\\Documents\\drIpTECH\\ORBEngine\\assets\\innsmouth_island\\frame_pair_expansion\\precision\\boss\\abyss_prince_phase_f03_precision_v1.png",
+      "iou": 0.52207,
+      "coverage_delta": 0.08068,
+      "bbox_delta_px": 84,
+      "flagged": true
+    },
+    {
+      "pair_key": "abyss_prince_phase_f04",
+      "final": "C:\\Users\\rrcar\\Documents\\drIpTECH\\ORBEngine\\assets\\innsmouth_island\\frame_pair_expansion\\final\\boss\\abyss_prince_phase_f04_final_v1.png",
+      "precision": "C:\\Users\\rrcar\\Documents\\drIpTECH\\ORBEngine\\assets\\innsmouth_island\\frame_pair_expansion\\precision\\boss\\abyss_prince_phase_f04_precision_v1.png",
+      "iou": 0.52621,
+      "coverage_delta": 0.20839,
+      "bbox_delta_px": 16,
+      "flagged": true
+    },
+    {
+      "pair_key": "cultist_harpooner_throw_f01",
+      "final": "C:\\Users\\rrcar\\Documents\\drIpTECH\\ORBEngine\\assets\\innsmouth_island\\frame_pair_expansion\\final\\enemy\\cultist_harpooner_throw_f01_final_v1.png",
+      "precision": "C:\\Users\\rrcar\\Documents\\drIpTECH\\ORBEngine\\assets\\innsmouth_island\\frame_pair_expansion\\precision\\enemy\\cultist_harpooner_throw_f01_precision_v1.png",
+      "iou": 0.51149,
+      "coverage_delta": 0.331,
+      "bbox_delta_px": 237,
+      "flagged": true
+    },
+    {
+      "pair_key": "cultist_harpooner_throw_f02",
+      "final": "C:\\Users\\rrcar\\Documents\\drIpTECH\\ORBEngine\\assets\\innsmouth_island\\frame_pair_expansion\\final\\enemy\\cultist_harpooner_throw_f02_final_v1.png",
+      "precision": "C:\\Users\\rrcar\\Documents\\drIpTECH\\ORBEngine\\assets\\innsmouth_island\\frame_pair_expansion\\precision\\enemy\\cultist_harpooner_throw_f02_precision_v1.png",
+      "iou": 0.34201,
+      "coverage_delta": 0.24968,
+      "bbox_delta_px": 108,
+      "flagged": true
+    },
+    {
+      "pair_key": "cultist_harpooner_throw_f03",
+      "final": "C:\\Users\\rrcar\\Documents\\drIpTECH\\ORBEngine\\assets\\innsmouth_island\\frame_pair_expansion\\final\\enemy\\cultist_harpooner_throw_f03_final_v1.png",
+      "precision": "C:\\Users\\rrcar\\Documents\\drIpTECH\\ORBEngine\\assets\\innsmouth_island\\frame_pair_expansion\\precision\\enemy\\cultist_harpooner_throw_f03_precision_v1.png",
+      "iou": 0.32775,
+      "coverage_delta": 0.04822,
+      "bbox_delta_px": 83,
+      "flagged": true
+    },
+    {
+      "pair_key": "cultist_harpooner_throw_f04",
+      "final": "C:\\Users\\rrcar\\Documents\\drIpTECH\\ORBEngine\\assets\\innsmouth_island\\frame_pair_expansion\\final\\enemy\\cultist_harpooner_throw_f04_final_v1.png",
+      "precision": "C:\\Users\\rrcar\\Documents\\drIpTECH\\ORBEngine\\assets\\innsmouth_island\\frame_pair_expansion\\precision\\enemy\\cultist_harpooner_throw_f04_precision_v1.png",
+      "iou": 0.38987,
+      "coverage_delta": 0.12256,
+      "bbox_delta_px": 4,
+      "flagged": true
+    },
+    {
+      "pair_key": "deep_one_raider_rush_f01",
+      "final": "C:\\Users\\rrcar\\Documents\\drIpTECH\\ORBEngine\\assets\\innsmouth_island\\frame_pair_expansion\\final\\enemy\\deep_one_raider_rush_f01_final_v1.png",
+      "precision": "C:\\Users\\rrcar\\Documents\\drIpTECH\\ORBEngine\\assets\\innsmouth_island\\frame_pair_expansion\\precision\\enemy\\deep_one_raider_rush_f01_precision_v1.png",
+      "iou": 0.38906,
+      "coverage_delta": 0.43004,
+      "bbox_delta_px": 0,
+      "flagged": true
+    },
+    {
+      "pair_key": "deep_one_raider_rush_f02",
+      "final": "C:\\Users\\rrcar\\Documents\\drIpTECH\\ORBEngine\\assets\\innsmouth_island\\frame_pair_expansion\\final\\enemy\\deep_one_raider_rush_f02_final_v1.png",
+      "precision": "C:\\Users\\rrcar\\Documents\\drIpTECH\\ORBEngine\\assets\\innsmouth_island\\frame_pair_expansion\\precision\\enemy\\deep_one_raider_rush_f02_precision_v1.png",
+      "iou": 0.39021,
+      "coverage_delta": 0.08974,
+      "bbox_delta_px": 19,
+      "flagged": true
+    },
+    {
+      "pair_key": "deep_one_raider_rush_f03",
+      "final": "C:\\Users\\rrcar\\Documents\\drIpTECH\\ORBEngine\\assets\\innsmouth_island\\frame_pair_expansion\\final\\enemy\\deep_one_raider_rush_f03_final_v1.png",
+      "precision": "C:\\Users\\rrcar\\Documents\\drIpTECH\\ORBEngine\\assets\\innsmouth_island\\frame_pair_expansion\\precision\\enemy\\deep_one_raider_rush_f03_precision_v1.png",
+      "iou": 0.48796,
+      "coverage_delta": 0.06444,
+      "bbox_delta_px": 3,
+      "flagged": true
+    },
+    {
+      "pair_key": "deep_one_raider_rush_f04",
+      "final": "C:\\Users\\rrcar\\Documents\\drIpTECH\\ORBEngine\\assets\\innsmouth_island\\frame_pair_expansion\\final\\enemy\\deep_one_raider_rush_f04_final_v1.png",
+      "precision": "C:\\Users\\rrcar\\Documents\\drIpTECH\\ORBEngine\\assets\\innsmouth_island\\frame_pair_expansion\\precision\\enemy\\deep_one_raider_rush_f04_precision_v1.png",
+      "iou": 0.44651,
+      "coverage_delta": 0.34999,
+      "bbox_delta_px": 0,
+      "flagged": true
+    },
+    {
+      "pair_key": "jaguar_tyrant_pounce_f01",
+      "final": "C:\\Users\\rrcar\\Documents\\drIpTECH\\ORBEngine\\assets\\innsmouth_island\\frame_pair_expansion\\final\\boss\\jaguar_tyrant_pounce_f01_final_v1.png",
+      "precision": "C:\\Users\\rrcar\\Documents\\drIpTECH\\ORBEngine\\assets\\innsmouth_island\\frame_pair_expansion\\precision\\boss\\jaguar_tyrant_pounce_f01_precision_v1.png",
+      "iou": 0.4551,
+      "coverage_delta": 0.45553,
+      "bbox_delta_px": 361,
+      "flagged": true
+    },
+    {
+      "pair_key": "jaguar_tyrant_pounce_f02",
+      "final": "C:\\Users\\rrcar\\Documents\\drIpTECH\\ORBEngine\\assets\\innsmouth_island\\frame_pair_expansion\\final\\boss\\jaguar_tyrant_pounce_f02_final_v1.png",
+      "precision": "C:\\Users\\rrcar\\Documents\\drIpTECH\\ORBEngine\\assets\\innsmouth_island\\frame_pair_expansion\\precision\\boss\\jaguar_tyrant_pounce_f02_precision_v1.png",
+      "iou": 0.46966,
+      "coverage_delta": 0.2643,
+      "bbox_delta_px": 3,
+      "flagged": true
+    },
+    {
+      "pair_key": "jaguar_tyrant_pounce_f03",
+      "final": "C:\\Users\\rrcar\\Documents\\drIpTECH\\ORBEngine\\assets\\innsmouth_island\\frame_pair_expansion\\final\\boss\\jaguar_tyrant_pounce_f03_final_v1.png",
+      "precision": "C:\\Users\\rrcar\\Documents\\drIpTECH\\ORBEngine\\assets\\innsmouth_island\\frame_pair_expansion\\precision\\boss\\jaguar_tyrant_pounce_f03_precision_v1.png",
+      "iou": 0.45126,
+      "coverage_delta": 0.0225,
+      "bbox_delta_px": 5,
+      "flagged": true
+    },
+    {
+      "pair_key": "jaguar_tyrant_pounce_f04",
+      "final": "C:\\Users\\rrcar\\Documents\\drIpTECH\\ORBEngine\\assets\\innsmouth_island\\frame_pair_expansion\\final\\boss\\jaguar_tyrant_pounce_f04_final_v1.png",
+      "precision": "C:\\Users\\rrcar\\Documents\\drIpTECH\\ORBEngine\\assets\\innsmouth_island\\frame_pair_expansion\\precision\\boss\\jaguar_tyrant_pounce_f04_precision_v1.png",
+      "iou": 0.2486,
+      "coverage_delta": 0.0346,
+      "bbox_delta_px": 221,
+      "flagged": true
+    },
+    {
+      "pair_key": "nightgaunt_glide_f01",
+      "final": "C:\\Users\\rrcar\\Documents\\drIpTECH\\ORBEngine\\assets\\innsmouth_island\\frame_pair_expansion\\final\\enemy\\nightgaunt_glide_f01_final_v1.png",
+      "precision": "C:\\Users\\rrcar\\Documents\\drIpTECH\\ORBEngine\\assets\\innsmouth_island\\frame_pair_expansion\\precision\\enemy\\nightgaunt_glide_f01_precision_v1.png",
+      "iou": 0.2551,
+      "coverage_delta": 0.44264,
+      "bbox_delta_px": 0,
+      "flagged": true
+    },
+    {
+      "pair_key": "nightgaunt_glide_f02",
+      "final": "C:\\Users\\rrcar\\Documents\\drIpTECH\\ORBEngine\\assets\\innsmouth_island\\frame_pair_expansion\\final\\enemy\\nightgaunt_glide_f02_final_v1.png",
+      "precision": "C:\\Users\\rrcar\\Documents\\drIpTECH\\ORBEngine\\assets\\innsmouth_island\\frame_pair_expansion\\precision\\enemy\\nightgaunt_glide_f02_precision_v1.png",
+      "iou": 0.31379,
+      "coverage_delta": 0.09398,
+      "bbox_delta_px": 0,
+      "flagged": true
+    },
+    {
+      "pair_key": "nightgaunt_glide_f03",
+      "final": "C:\\Users\\rrcar\\Documents\\drIpTECH\\ORBEngine\\assets\\innsmouth_island\\frame_pair_expansion\\final\\enemy\\nightgaunt_glide_f03_final_v1.png",
+      "precision": "C:\\Users\\rrcar\\Documents\\drIpTECH\\ORBEngine\\assets\\innsmouth_island\\frame_pair_expansion\\precision\\enemy\\nightgaunt_glide_f03_precision_v1.png",
+      "iou": 0.4488,
+      "coverage_delta": 0.4381,
+      "bbox_delta_px": 3,
+      "flagged": true
+    },
+    {
+      "pair_key": "nightgaunt_glide_f04",
+      "final": "C:\\Users\\rrcar\\Documents\\drIpTECH\\ORBEngine\\assets\\innsmouth_island\\frame_pair_expansion\\final\\enemy\\nightgaunt_glide_f04_final_v1.png",
+      "precision": "C:\\Users\\rrcar\\Documents\\drIpTECH\\ORBEngine\\assets\\innsmouth_island\\frame_pair_expansion\\precision\\enemy\\nightgaunt_glide_f04_precision_v1.png",
+      "iou": 0.42426,
+      "coverage_delta": 0.04231,
+      "bbox_delta_px": 87,
+      "flagged": true
+    },
+    {
+      "pair_key": "player_air_dodge_f01",
+      "final": "C:\\Users\\rrcar\\Documents\\drIpTECH\\ORBEngine\\assets\\innsmouth_island\\frame_pair_expansion\\final\\player\\player_air_dodge_f01_final_v1.png",
+      "precision": "C:\\Users\\rrcar\\Documents\\drIpTECH\\ORBEngine\\assets\\innsmouth_island\\frame_pair_expansion\\precision\\player\\player_air_dodge_f01_precision_v1.png",
+      "iou": 0.35073,
+      "coverage_delta": 0.16462,
+      "bbox_delta_px": 0,
+      "flagged": true
+    },
+    {
+      "pair_key": "player_air_dodge_f02",
+      "final": "C:\\Users\\rrcar\\Documents\\drIpTECH\\ORBEngine\\assets\\innsmouth_island\\frame_pair_expansion\\final\\player\\player_air_dodge_f02_final_v1.png",
+      "precision": "C:\\Users\\rrcar\\Documents\\drIpTECH\\ORBEngine\\assets\\innsmouth_island\\frame_pair_expansion\\precision\\player\\player_air_dodge_f02_precision_v1.png",
+      "iou": 0.37644,
+      "coverage_delta": 0.26377,
+      "bbox_delta_px": 103,
+      "flagged": true
+    },
+    {
+      "pair_key": "player_air_dodge_f03",
+      "final": "C:\\Users\\rrcar\\Documents\\drIpTECH\\ORBEngine\\assets\\innsmouth_island\\frame_pair_expansion\\final\\player\\player_air_dodge_f03_final_v1.png",
+      "precision": "C:\\Users\\rrcar\\Documents\\drIpTECH\\ORBEngine\\assets\\innsmouth_island\\frame_pair_expansion\\precision\\player\\player_air_dodge_f03_precision_v1.png",
+      "iou": 0.42887,
+      "coverage_delta": 0.12309,
+      "bbox_delta_px": 0,
+      "flagged": true
+    },
+    {
+      "pair_key": "player_air_dodge_f04",
+      "final": "C:\\Users\\rrcar\\Documents\\drIpTECH\\ORBEngine\\assets\\innsmouth_island\\frame_pair_expansion\\final\\player\\player_air_dodge_f04_final_v1.png",
+      "precision": "C:\\Users\\rrcar\\Documents\\drIpTECH\\ORBEngine\\assets\\innsmouth_island\\frame_pair_expansion\\precision\\player\\player_air_dodge_f04_precision_v1.png",
+      "iou": 0.34508,
+      "coverage_delta": 0.5483,
+      "bbox_delta_px": 56,
+      "flagged": true
+    },
+    {
+      "pair_key": "player_heavy_combo_f01",
+      "final": "C:\\Users\\rrcar\\Documents\\drIpTECH\\ORBEngine\\assets\\innsmouth_island\\frame_pair_expansion\\final\\player\\player_heavy_combo_f01_final_v1.png",
+      "precision": "C:\\Users\\rrcar\\Documents\\drIpTECH\\ORBEngine\\assets\\innsmouth_island\\frame_pair_expansion\\precision\\player\\player_heavy_combo_f01_precision_v1.png",
+      "iou": 0.41533,
+      "coverage_delta": 0.25044,
+      "bbox_delta_px": 0,
+      "flagged": true
+    },
+    {
+      "pair_key": "player_heavy_combo_f02",
+      "final": "C:\\Users\\rrcar\\Documents\\drIpTECH\\ORBEngine\\assets\\innsmouth_island\\frame_pair_expansion\\final\\player\\player_heavy_combo_f02_final_v1.png",
+      "precision": "C:\\Users\\rrcar\\Documents\\drIpTECH\\ORBEngine\\assets\\innsmouth_island\\frame_pair_expansion\\precision\\player\\player_heavy_combo_f02_precision_v1.png",
+      "iou": 0.41983,
+      "coverage_delta": 0.14115,
+      "bbox_delta_px": 0,
+      "flagged": true
+    },
+    {
+      "pair_key": "player_heavy_combo_f03",
+      "final": "C:\\Users\\rrcar\\Documents\\drIpTECH\\ORBEngine\\assets\\innsmouth_island\\frame_pair_expansion\\final\\player\\player_heavy_combo_f03_final_v1.png",
+      "precision": "C:\\Users\\rrcar\\Documents\\drIpTECH\\ORBEngine\\assets\\innsmouth_island\\frame_pair_expansion\\precision\\player\\player_heavy_combo_f03_precision_v1.png",
+      "iou": 0.57006,
+      "coverage_delta": 0.17624,
+      "bbox_delta_px": 0,
+      "flagged": true
+    },
+    {
+      "pair_key": "player_heavy_combo_f04",
+      "final": "C:\\Users\\rrcar\\Documents\\drIpTECH\\ORBEngine\\assets\\innsmouth_island\\frame_pair_expansion\\final\\player\\player_heavy_combo_f04_final_v1.png",
+      "precision": "C:\\Users\\rrcar\\Documents\\drIpTECH\\ORBEngine\\assets\\innsmouth_island\\frame_pair_expansion\\precision\\player\\player_heavy_combo_f04_precision_v1.png",
+      "iou": 0.41933,
+      "coverage_delta": 0.17559,
+      "bbox_delta_px": 0,
+      "flagged": true
+    },
+    {
+      "pair_key": "player_light_combo_f01",
+      "final": "C:\\Users\\rrcar\\Documents\\drIpTECH\\ORBEngine\\assets\\innsmouth_island\\frame_pair_expansion\\final\\player\\player_light_combo_f01_final_v1.png",
+      "precision": "C:\\Users\\rrcar\\Documents\\drIpTECH\\ORBEngine\\assets\\innsmouth_island\\frame_pair_expansion\\precision\\player\\player_light_combo_f01_precision_v1.png",
+      "iou": 0.41404,
+      "coverage_delta": 0.24782,
+      "bbox_delta_px": 321,
+      "flagged": true
+    },
+    {
+      "pair_key": "player_light_combo_f02",
+      "final": "C:\\Users\\rrcar\\Documents\\drIpTECH\\ORBEngine\\assets\\innsmouth_island\\frame_pair_expansion\\final\\player\\player_light_combo_f02_final_v1.png",
+      "precision": "C:\\Users\\rrcar\\Documents\\drIpTECH\\ORBEngine\\assets\\innsmouth_island\\frame_pair_expansion\\precision\\player\\player_light_combo_f02_precision_v1.png",
+      "iou": 0.33243,
+      "coverage_delta": 0.28025,
+      "bbox_delta_px": 116,
+      "flagged": true
+    },
+    {
+      "pair_key": "player_light_combo_f03",
+      "final": "C:\\Users\\rrcar\\Documents\\drIpTECH\\ORBEngine\\assets\\innsmouth_island\\frame_pair_expansion\\final\\player\\player_light_combo_f03_final_v1.png",
+      "precision": "C:\\Users\\rrcar\\Documents\\drIpTECH\\ORBEngine\\assets\\innsmouth_island\\frame_pair_expansion\\precision\\player\\player_light_combo_f03_precision_v1.png",
+      "iou": 0.45101,
+      "coverage_delta": 0.05878,
+      "bbox_delta_px": 0,
+      "flagged": true
+    },
+    {
+      "pair_key": "player_light_combo_f04",
+      "final": "C:\\Users\\rrcar\\Documents\\drIpTECH\\ORBEngine\\assets\\innsmouth_island\\frame_pair_expansion\\final\\player\\player_light_combo_f04_final_v1.png",
+      "precision": "C:\\Users\\rrcar\\Documents\\drIpTECH\\ORBEngine\\assets\\innsmouth_island\\frame_pair_expansion\\precision\\player\\player_light_combo_f04_precision_v1.png",
+      "iou": 0.51329,
+      "coverage_delta": 0.11979,
+      "bbox_delta_px": 161,
+      "flagged": true
+    },
+    {
+      "pair_key": "shoggoth_spring_f01",
+      "final": "C:\\Users\\rrcar\\Documents\\drIpTECH\\ORBEngine\\assets\\innsmouth_island\\frame_pair_expansion\\final\\enemy\\shoggoth_spring_f01_final_v1.png",
+      "precision": "C:\\Users\\rrcar\\Documents\\drIpTECH\\ORBEngine\\assets\\innsmouth_island\\frame_pair_expansion\\precision\\enemy\\shoggoth_spring_f01_precision_v1.png",
+      "iou": 0.64264,
+      "coverage_delta": 0.1432,
+      "bbox_delta_px": 0,
+      "flagged": true
+    },
+    {
+      "pair_key": "shoggoth_spring_f02",
+      "final": "C:\\Users\\rrcar\\Documents\\drIpTECH\\ORBEngine\\assets\\innsmouth_island\\frame_pair_expansion\\final\\enemy\\shoggoth_spring_f02_final_v1.png",
+      "precision": "C:\\Users\\rrcar\\Documents\\drIpTECH\\ORBEngine\\assets\\innsmouth_island\\frame_pair_expansion\\precision\\enemy\\shoggoth_spring_f02_precision_v1.png",
+      "iou": 0.37194,
+      "coverage_delta": 0.36818,
+      "bbox_delta_px": 0,
+      "flagged": true
+    },
+    {
+      "pair_key": "shoggoth_spring_f03",
+      "final": "C:\\Users\\rrcar\\Documents\\drIpTECH\\ORBEngine\\assets\\innsmouth_island\\frame_pair_expansion\\final\\enemy\\shoggoth_spring_f03_final_v1.png",
+      "precision": "C:\\Users\\rrcar\\Documents\\drIpTECH\\ORBEngine\\assets\\innsmouth_island\\frame_pair_expansion\\precision\\enemy\\shoggoth_spring_f03_precision_v1.png",
+      "iou": 0.46223,
+      "coverage_delta": 0.06726,
+      "bbox_delta_px": 30,
+      "flagged": true
+    },
+    {
+      "pair_key": "shoggoth_spring_f04",
+      "final": "C:\\Users\\rrcar\\Documents\\drIpTECH\\ORBEngine\\assets\\innsmouth_island\\frame_pair_expansion\\final\\enemy\\shoggoth_spring_f04_final_v1.png",
+      "precision": "C:\\Users\\rrcar\\Documents\\drIpTECH\\ORBEngine\\assets\\innsmouth_island\\frame_pair_expansion\\precision\\enemy\\shoggoth_spring_f04_precision_v1.png",
+      "iou": 0.34026,
+      "coverage_delta": 0.55148,
+      "bbox_delta_px": 4,
+      "flagged": true
+    }
+  ],
+  "tile_pair_details": [
+    {
+      "pair_key": "black_reef_jag",
+      "final": "C:\\Users\\rrcar\\Documents\\drIpTECH\\ORBEngine\\assets\\innsmouth_island\\tiles_skybox_pair_expansion\\final\\env_tile\\black_reef_jag_final_v1.png",
+      "precision": "C:\\Users\\rrcar\\Documents\\drIpTECH\\ORBEngine\\assets\\innsmouth_island\\tiles_skybox_pair_expansion\\precision\\env_tile\\black_reef_jag_precision_v1.png",
+      "iou": 1.0,
+      "coverage_delta": 0.0,
+      "bbox_delta_px": 0,
+      "flagged": false
+    },
+    {
+      "pair_key": "coral_bridge_segment",
+      "final": "C:\\Users\\rrcar\\Documents\\drIpTECH\\ORBEngine\\assets\\innsmouth_island\\tiles_skybox_pair_expansion\\final\\env_tile\\coral_bridge_segment_final_v1.png",
+      "precision": "C:\\Users\\rrcar\\Documents\\drIpTECH\\ORBEngine\\assets\\innsmouth_island\\tiles_skybox_pair_expansion\\precision\\env_tile\\coral_bridge_segment_precision_v1.png",
+      "iou": 1.0,
+      "coverage_delta": 0.0,
+      "bbox_delta_px": 0,
+      "flagged": false
+    },
+    {
+      "pair_key": "distant_cliff_band",
+      "final": "C:\\Users\\rrcar\\Documents\\drIpTECH\\ORBEngine\\assets\\innsmouth_island\\tiles_skybox_pair_expansion\\final\\skybox_tile\\distant_cliff_band_final_v1.png",
+      "precision": "C:\\Users\\rrcar\\Documents\\drIpTECH\\ORBEngine\\assets\\innsmouth_island\\tiles_skybox_pair_expansion\\precision\\skybox_tile\\distant_cliff_band_precision_v1.png",
+      "iou": 1.0,
+      "coverage_delta": 0.0,
+      "bbox_delta_px": 0,
+      "flagged": false
+    },
+    {
+      "pair_key": "dock_plank_wet",
+      "final": "C:\\Users\\rrcar\\Documents\\drIpTECH\\ORBEngine\\assets\\innsmouth_island\\tiles_skybox_pair_expansion\\final\\env_tile\\dock_plank_wet_final_v1.png",
+      "precision": "C:\\Users\\rrcar\\Documents\\drIpTECH\\ORBEngine\\assets\\innsmouth_island\\tiles_skybox_pair_expansion\\precision\\env_tile\\dock_plank_wet_precision_v1.png",
+      "iou": 1.0,
+      "coverage_delta": 0.0,
+      "bbox_delta_px": 0,
+      "flagged": false
+    },
+    {
+      "pair_key": "drowned_wharf_silhouette",
+      "final": "C:\\Users\\rrcar\\Documents\\drIpTECH\\ORBEngine\\assets\\innsmouth_island\\tiles_skybox_pair_expansion\\final\\skybox_tile\\drowned_wharf_silhouette_final_v1.png",
+      "precision": "C:\\Users\\rrcar\\Documents\\drIpTECH\\ORBEngine\\assets\\innsmouth_island\\tiles_skybox_pair_expansion\\precision\\skybox_tile\\drowned_wharf_silhouette_precision_v1.png",
+      "iou": 1.0,
+      "coverage_delta": 0.0,
+      "bbox_delta_px": 0,
+      "flagged": false
+    },
+    {
+      "pair_key": "eclipse_halo_core",
+      "final": "C:\\Users\\rrcar\\Documents\\drIpTECH\\ORBEngine\\assets\\innsmouth_island\\tiles_skybox_pair_expansion\\final\\skybox_tile\\eclipse_halo_core_final_v1.png",
+      "precision": "C:\\Users\\rrcar\\Documents\\drIpTECH\\ORBEngine\\assets\\innsmouth_island\\tiles_skybox_pair_expansion\\precision\\skybox_tile\\eclipse_halo_core_precision_v1.png",
+      "iou": 1.0,
+      "coverage_delta": 0.0,
+      "bbox_delta_px": 0,
+      "flagged": false
+    },
+    {
+      "pair_key": "eel_hatchery_grate",
+      "final": "C:\\Users\\rrcar\\Documents\\drIpTECH\\ORBEngine\\assets\\innsmouth_island\\tiles_skybox_pair_expansion\\final\\env_tile\\eel_hatchery_grate_final_v1.png",
+      "precision": "C:\\Users\\rrcar\\Documents\\drIpTECH\\ORBEngine\\assets\\innsmouth_island\\tiles_skybox_pair_expansion\\precision\\env_tile\\eel_hatchery_grate_precision_v1.png",
+      "iou": 1.0,
+      "coverage_delta": 0.0,
+      "bbox_delta_px": 0,
+      "flagged": false
+    },
+    {
+      "pair_key": "grave_mire_silt",
+      "final": "C:\\Users\\rrcar\\Documents\\drIpTECH\\ORBEngine\\assets\\innsmouth_island\\tiles_skybox_pair_expansion\\final\\env_tile\\grave_mire_silt_final_v1.png",
+      "precision": "C:\\Users\\rrcar\\Documents\\drIpTECH\\ORBEngine\\assets\\innsmouth_island\\tiles_skybox_pair_expansion\\precision\\env_tile\\grave_mire_silt_precision_v1.png",
+      "iou": 1.0,
+      "coverage_delta": 0.0,
+      "bbox_delta_px": 0,
+      "flagged": false
+    },
+    {
+      "pair_key": "mangrove_root_bank",
+      "final": "C:\\Users\\rrcar\\Documents\\drIpTECH\\ORBEngine\\assets\\innsmouth_island\\tiles_skybox_pair_expansion\\final\\env_tile\\mangrove_root_bank_final_v1.png",
+      "precision": "C:\\Users\\rrcar\\Documents\\drIpTECH\\ORBEngine\\assets\\innsmouth_island\\tiles_skybox_pair_expansion\\precision\\env_tile\\mangrove_root_bank_precision_v1.png",
+      "iou": 1.0,
+      "coverage_delta": 0.0,
+      "bbox_delta_px": 0,
+      "flagged": false
+    },
+    {
+      "pair_key": "mud_path_rut",
+      "final": "C:\\Users\\rrcar\\Documents\\drIpTECH\\ORBEngine\\assets\\innsmouth_island\\tiles_skybox_pair_expansion\\final\\env_tile\\mud_path_rut_final_v1.png",
+      "precision": "C:\\Users\\rrcar\\Documents\\drIpTECH\\ORBEngine\\assets\\innsmouth_island\\tiles_skybox_pair_expansion\\precision\\env_tile\\mud_path_rut_precision_v1.png",
+      "iou": 1.0,
+      "coverage_delta": 0.0,
+      "bbox_delta_px": 0,
+      "flagged": false
+    },
+    {
+      "pair_key": "obsidian_pool_rim",
+      "final": "C:\\Users\\rrcar\\Documents\\drIpTECH\\ORBEngine\\assets\\innsmouth_island\\tiles_skybox_pair_expansion\\final\\env_tile\\obsidian_pool_rim_final_v1.png",
+      "precision": "C:\\Users\\rrcar\\Documents\\drIpTECH\\ORBEngine\\assets\\innsmouth_island\\tiles_skybox_pair_expansion\\precision\\env_tile\\obsidian_pool_rim_precision_v1.png",
+      "iou": 1.0,
+      "coverage_delta": 0.0,
+      "bbox_delta_px": 0,
+      "flagged": false
+    },
+    {
+      "pair_key": "occult_star_scar",
+      "final": "C:\\Users\\rrcar\\Documents\\drIpTECH\\ORBEngine\\assets\\innsmouth_island\\tiles_skybox_pair_expansion\\final\\skybox_tile\\occult_star_scar_final_v1.png",
+      "precision": "C:\\Users\\rrcar\\Documents\\drIpTECH\\ORBEngine\\assets\\innsmouth_island\\tiles_skybox_pair_expansion\\precision\\skybox_tile\\occult_star_scar_precision_v1.png",
+      "iou": 1.0,
+      "coverage_delta": 0.0,
+      "bbox_delta_px": 0,
+      "flagged": false
+    },
+    {
+      "pair_key": "reef_spike_ground",
+      "final": "C:\\Users\\rrcar\\Documents\\drIpTECH\\ORBEngine\\assets\\innsmouth_island\\tiles_skybox_pair_expansion\\final\\env_tile\\reef_spike_ground_final_v1.png",
+      "precision": "C:\\Users\\rrcar\\Documents\\drIpTECH\\ORBEngine\\assets\\innsmouth_island\\tiles_skybox_pair_expansion\\precision\\env_tile\\reef_spike_ground_precision_v1.png",
+      "iou": 1.0,
+      "coverage_delta": 0.0,
+      "bbox_delta_px": 0,
+      "flagged": false
+    },
+    {
+      "pair_key": "shoreline_brine_stone",
+      "final": "C:\\Users\\rrcar\\Documents\\drIpTECH\\ORBEngine\\assets\\innsmouth_island\\tiles_skybox_pair_expansion\\final\\env_tile\\shoreline_brine_stone_final_v1.png",
+      "precision": "C:\\Users\\rrcar\\Documents\\drIpTECH\\ORBEngine\\assets\\innsmouth_island\\tiles_skybox_pair_expansion\\precision\\env_tile\\shoreline_brine_stone_precision_v1.png",
+      "iou": 1.0,
+      "coverage_delta": 0.0,
+      "bbox_delta_px": 0,
+      "flagged": false
+    },
+    {
+      "pair_key": "shrine_basin_floor",
+      "final": "C:\\Users\\rrcar\\Documents\\drIpTECH\\ORBEngine\\assets\\innsmouth_island\\tiles_skybox_pair_expansion\\final\\env_tile\\shrine_basin_floor_final_v1.png",
+      "precision": "C:\\Users\\rrcar\\Documents\\drIpTECH\\ORBEngine\\assets\\innsmouth_island\\tiles_skybox_pair_expansion\\precision\\env_tile\\shrine_basin_floor_precision_v1.png",
+      "iou": 1.0,
+      "coverage_delta": 0.0,
+      "bbox_delta_px": 0,
+      "flagged": false
+    },
+    {
+      "pair_key": "storm_cloud_mass_a",
+      "final": "C:\\Users\\rrcar\\Documents\\drIpTECH\\ORBEngine\\assets\\innsmouth_island\\tiles_skybox_pair_expansion\\final\\skybox_tile\\storm_cloud_mass_a_final_v1.png",
+      "precision": "C:\\Users\\rrcar\\Documents\\drIpTECH\\ORBEngine\\assets\\innsmouth_island\\tiles_skybox_pair_expansion\\precision\\skybox_tile\\storm_cloud_mass_a_precision_v1.png",
+      "iou": 1.0,
+      "coverage_delta": 0.0,
+      "bbox_delta_px": 0,
+      "flagged": false
+    },
+    {
+      "pair_key": "storm_cloud_mass_b",
+      "final": "C:\\Users\\rrcar\\Documents\\drIpTECH\\ORBEngine\\assets\\innsmouth_island\\tiles_skybox_pair_expansion\\final\\skybox_tile\\storm_cloud_mass_b_final_v1.png",
+      "precision": "C:\\Users\\rrcar\\Documents\\drIpTECH\\ORBEngine\\assets\\innsmouth_island\\tiles_skybox_pair_expansion\\precision\\skybox_tile\\storm_cloud_mass_b_precision_v1.png",
+      "iou": 1.0,
+      "coverage_delta": 0.0,
+      "bbox_delta_px": 0,
+      "flagged": false
+    },
+    {
+      "pair_key": "temple_step_basalt",
+      "final": "C:\\Users\\rrcar\\Documents\\drIpTECH\\ORBEngine\\assets\\innsmouth_island\\tiles_skybox_pair_expansion\\final\\env_tile\\temple_step_basalt_final_v1.png",
+      "precision": "C:\\Users\\rrcar\\Documents\\drIpTECH\\ORBEngine\\assets\\innsmouth_island\\tiles_skybox_pair_expansion\\precision\\env_tile\\temple_step_basalt_precision_v1.png",
+      "iou": 1.0,
+      "coverage_delta": 0.0,
+      "bbox_delta_px": 0,
+      "flagged": false
+    }
+  ],
+  "thresholds": {
+    "min_iou": 0.88,
+    "max_coverage_delta": 0.18,
+    "max_bbox_delta_px": 32
+  }
+}

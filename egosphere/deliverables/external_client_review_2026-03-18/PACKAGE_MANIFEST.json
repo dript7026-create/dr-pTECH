@@ -1,0 +1,35 @@
+﻿{
+    "package_name":  "external_client_review_2026-03-18",
+    "generated_at":  "2026-03-19T14:47:34",
+    "package_root":  "C:\\Users\\rrcar\\Documents\\drIpTECH\\egosphere\\deliverables\\external_client_review_2026-03-18",
+    "review_zip_path":  "C:\\Users\\rrcar\\Documents\\drIpTECH\\egosphere\\deliverables\\external_client_review_2026-03-18.zip",
+    "review_zip_latest_path":  "C:\\Users\\rrcar\\Documents\\drIpTECH\\egosphere\\deliverables\\external_client_review_latest.zip",
+    "top_level_documents":  [
+                                "CLIENT_EXEC_SUMMARY.md",
+                                "PRODUCT_BRIEF.md",
+                                "README.md",
+                                "REVIEW_GUIDE.md",
+                                "SHORT_NOTICE_DEPLOYMENT_CHECKLIST.md",
+                                "VALIDATION_SNAPSHOT.json",
+                                "DEPLOYMENT_STATUS.json",
+                                "PACKAGE_MANIFEST.json"
+                            ],
+    "key_repo_artifacts":  [
+                               "repo/README.md",
+                               "repo/egosphere.h",
+                               "repo/egosphere.c",
+                               "repo/smoke_test.c",
+                               "repo/tools/validate_pipeline.py",
+                               "repo/tools/run_pertinence_e2e.py",
+                               "repo/pipeline/README.md",
+                               "repo/pipeline/sample_project/game_project.drip3d.json",
+                               "repo/pipeline/out/validation/",
+                               "repo/pipeline/projects/pertinence_tribunal/",
+                               "repo/pipeline/out/pertinence_tribunal_validation/"
+                           ],
+    "package_rules":  [
+                          "Use DEPLOYMENT_STATUS.json for current rebuild context.",
+                          "Use VALIDATION_SNAPSHOT.json for the validated technical snapshot.",
+                          "Use external_client_review_latest.zip as the stable short-notice archive path."
+                      ]
+}

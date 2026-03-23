@@ -1,0 +1,34 @@
+[
+  {
+    "name": "bango_turnaround_sheet",
+    "prompt": "Transparent background four-angle turnaround sheet for Bango in Bango-Patoot, urban fantasy horror, readable silhouette, rig-friendly posture, clean key-pose spacing, pseudo-3D shading cues.",
+    "w": 1536,
+    "h": 1024,
+    "out": "generated/bango_turnaround_sheet.png",
+    "negative_prompt": "solid background, blurry silhouette, cropped limbs, unreadable pose"
+  },
+  {
+    "name": "bango_keypose_loop_sheet",
+    "prompt": "Transparent background key-pose sequence sheet for Bango in Bango-Patoot, six major posture beats suitable for GIF loop planning and rig mapping, expressive motion arcs, urban occult adventure tone.",
+    "w": 1536,
+    "h": 1536,
+    "out": "generated/bango_keypose_loop_sheet.png",
+    "negative_prompt": "solid background, merged frames, unreadable anatomy, missing extremities"
+  },
+  {
+    "name": "patoot_turnaround_sheet",
+    "prompt": "Transparent background four-angle turnaround sheet for Patoot in Bango-Patoot, urban fantasy horror, readable silhouette, rig-friendly posture, clean key-pose spacing, pseudo-3D shading cues.",
+    "w": 1536,
+    "h": 1024,
+    "out": "generated/patoot_turnaround_sheet.png",
+    "negative_prompt": "solid background, blurry silhouette, cropped limbs, unreadable pose"
+  },
+  {
+    "name": "patoot_keypose_loop_sheet",
+    "prompt": "Transparent background key-pose sequence sheet for Patoot in Bango-Patoot, six major posture beats suitable for GIF loop planning and rig mapping, expressive motion arcs, urban occult adventure tone.",
+    "w": 1536,
+    "h": 1536,
+    "out": "generated/patoot_keypose_loop_sheet.png",
+    "negative_prompt": "solid background, merged frames, unreadable anatomy, missing extremities"
+  }
+]

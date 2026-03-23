@@ -1,0 +1,114 @@
+BLASTONIDZ DESIGN ORGANISM REPORT
+
+Aggregate profile
+assets 299 | elastic 0.16 | env 0.35 | structure 0.61 | ornament 0.24 | palette 0.33 | symmetry 0.24
+
+Theory synthesis
+The archive reads as a compact construction grammar: moderate chromatic depth, high edge-led silhouette control, and a foundation-heavy massing strategy. In art-theory terms it privileges legible figure-ground contrast over painterly ambiguity; in architectural terms it behaves like prefabricated modular assembly with ornament applied at the contour rather than at the structural core; in construction terms it repeats reliable load-bearing motifs and then lets curvature and palette accents carry identity.
+
+Applied reading
+- Art theory: silhouette control outranks interior texture, so identity is carried by contour rhythm and color hierarchy.
+- Design theory: the asset base behaves like a modular kit where repeated primitives are varied through timing, hue reassignment, and local ornament.
+- Architecture: massing is bottom-weighted and foundation-biased, which makes forms read as stable and load-bearing rather than floating.
+- Civil and construction logic: crate, tile, bomb, and body forms all privilege prefabrication, repeatability, and reliable joint logic over bespoke one-off detailing.
+- Evolution pipeline: animation elasticity, environmental mutation bias, structural discipline, and ornamental bias can be treated as phenotype controls for runtime adaptation.
+
+title.logo
+  path=C:\Users\rrcar\Documents\drIpTECH\blastminidz\blastminidz.npt\blastminidz.c\bomberman_archive_cache\titleScreen.png
+  ratio 1.78 | cover 1.00 | palette 0.75 | contrast 0.19 | edge 0.00 | curve 0.00 | sym 1.00/1.00 | modular 1.00 | mass 0.50 | tension 0.90
+title.backdrop
+  path=C:\Users\rrcar\Documents\drIpTECH\blastminidz\blastminidz.npt\blastminidz.c\bomberman_archive_cache\titleScreen.jpg
+  ratio 1.78 | cover 1.00 | palette 0.78 | contrast 0.26 | edge 0.00 | curve 0.00 | sym 1.00/1.00 | modular 1.00 | mass 0.50 | tension 0.90
+arena.floor
+  path=C:\Users\rrcar\Documents\drIpTECH\blastminidz\blastminidz.npt\blastminidz.c\bomberman_archive_cache\graphics/bomb, crate, tile, paint/bMan tile.png
+  ratio 1.16 | cover 0.87 | palette 0.20 | contrast 0.21 | edge 0.05 | curve 0.01 | sym 0.83/0.83 | modular 0.99 | mass 0.49 | tension 0.72
+arena.bombPouch
+  path=C:\Users\rrcar\Documents\drIpTECH\blastminidz\blastminidz.npt\blastminidz.c\bomberman_archive_cache\graphics/bomb, crate, tile, paint/bMan bombPouch.png
+  ratio 0.79 | cover 0.66 | palette 0.23 | contrast 0.16 | edge 0.11 | curve 0.03 | sym 0.54/0.50 | modular 0.98 | mass 0.62 | tension 0.49
+arena.crate[0]
+  path=C:\Users\rrcar\Documents\drIpTECH\blastminidz\blastminidz.npt\blastminidz.c\bomberman_archive_cache\graphics/bomb, crate, tile, paint/crate.png
+  ratio 1.04 | cover 0.85 | palette 0.20 | contrast 0.12 | edge 0.07 | curve 0.01 | sym 0.80/0.80 | modular 0.99 | mass 0.48 | tension 0.64
+arena.crate[1]
+  path=C:\Users\rrcar\Documents\drIpTECH\blastminidz\blastminidz.npt\blastminidz.c\bomberman_archive_cache\graphics/bomb, crate, tile, paint/bMan door.png
+  ratio 1.09 | cover 0.85 | palette 0.23 | contrast 0.22 | edge 0.04 | curve 0.01 | sym 0.83/0.77 | modular 0.99 | mass 0.45 | tension 0.67
+arena.crate[2]
+  path=C:\Users\rrcar\Documents\drIpTECH\blastminidz\blastminidz.npt\blastminidz.c\bomberman_archive_cache\graphics/bomb, crate, tile, paint/bMan gunPowder.png
+  ratio 1.24 | cover 0.79 | palette 0.20 | contrast 0.23 | edge 0.08 | curve 0.02 | sym 0.72/0.70 | modular 0.98 | mass 0.47 | tension 0.77
+paint[0]
+  path=C:\Users\rrcar\Documents\drIpTECH\blastminidz\blastminidz.npt\blastminidz.c\bomberman_archive_cache\graphics/bomb, crate, tile, paint/redPaint.png
+  ratio 0.94 | cover 0.55 | palette 0.16 | contrast 0.23 | edge 0.21 | curve 0.06 | sym 0.40/0.36 | modular 0.95 | mass 0.41 | tension 0.58
+paint[1]
+  path=C:\Users\rrcar\Documents\drIpTECH\blastminidz\blastminidz.npt\blastminidz.c\bomberman_archive_cache\graphics/bomb, crate, tile, paint/greenPaint.png
+  ratio 1.16 | cover 0.51 | palette 0.23 | contrast 0.30 | edge 0.24 | curve 0.07 | sym 0.29/0.31 | modular 0.94 | mass 0.60 | tension 0.72
+paint[2]
+  path=C:\Users\rrcar\Documents\drIpTECH\blastminidz\blastminidz.npt\blastminidz.c\bomberman_archive_cache\graphics/bomb, crate, tile, paint/bluePaint.png
+  ratio 1.14 | cover 0.50 | palette 0.22 | contrast 0.18 | edge 0.24 | curve 0.08 | sym 0.31/0.32 | modular 0.94 | mass 0.55 | tension 0.71
+paint[3]
+  path=C:\Users\rrcar\Documents\drIpTECH\blastminidz\blastminidz.npt\blastminidz.c\bomberman_archive_cache\graphics/bomb, crate, tile, paint/goldPaint.png
+  ratio 0.94 | cover 0.52 | palette 0.28 | contrast 0.25 | edge 0.18 | curve 0.05 | sym 0.37/0.34 | modular 0.95 | mass 0.56 | tension 0.58
+paint[4]
+  path=C:\Users\rrcar\Documents\drIpTECH\blastminidz\blastminidz.npt\blastminidz.c\bomberman_archive_cache\graphics/bomb, crate, tile, paint/purplePaint.png
+  ratio 1.13 | cover 0.58 | palette 0.25 | contrast 0.19 | edge 0.22 | curve 0.07 | sym 0.42/0.45 | modular 0.95 | mass 0.50 | tension 0.70
+bomb.frame[0]
+  path=C:\Users\rrcar\Documents\drIpTECH\blastminidz\blastminidz.npt\blastminidz.c\bomberman_archive_cache\graphics/bomb, crate, tile, paint/bMan bomb0001.png
+  ratio 1.17 | cover 0.37 | palette 0.25 | contrast 0.20 | edge 0.13 | curve 0.04 | sym 0.36/0.32 | modular 0.97 | mass 0.58 | tension 0.72
+bomb.frame[3]
+  path=C:\Users\rrcar\Documents\drIpTECH\blastminidz\blastminidz.npt\blastminidz.c\bomberman_archive_cache\graphics/bomb, crate, tile, paint/bMan bomb0004.png
+  ratio 1.17 | cover 0.37 | palette 0.25 | contrast 0.20 | edge 0.13 | curve 0.04 | sym 0.36/0.32 | modular 0.97 | mass 0.58 | tension 0.72
+bomb.frame[6]
+  path=C:\Users\rrcar\Documents\drIpTECH\blastminidz\blastminidz.npt\blastminidz.c\bomberman_archive_cache\graphics/bomb, crate, tile, paint/bMan bomb0007.png
+  ratio 1.26 | cover 0.33 | palette 0.27 | contrast 0.21 | edge 0.22 | curve 0.06 | sym 0.25/0.19 | modular 0.94 | mass 0.69 | tension 0.78
+bomb.frame[9]
+  path=C:\Users\rrcar\Documents\drIpTECH\blastminidz\blastminidz.npt\blastminidz.c\bomberman_archive_cache\graphics/bomb, crate, tile, paint/bMan bomb0010.png
+  ratio 0.92 | cover 0.42 | palette 0.27 | contrast 0.20 | edge 0.16 | curve 0.04 | sym 0.28/0.38 | modular 0.96 | mass 0.56 | tension 0.57
+bomb.frame[12]
+  path=C:\Users\rrcar\Documents\drIpTECH\blastminidz\blastminidz.npt\blastminidz.c\bomberman_archive_cache\graphics/bomb, crate, tile, paint/bMan bomb0013.png
+  ratio 0.92 | cover 0.42 | palette 0.27 | contrast 0.20 | edge 0.16 | curve 0.04 | sym 0.28/0.38 | modular 0.96 | mass 0.56 | tension 0.57
+bomb.frame[15]
+  path=C:\Users\rrcar\Documents\drIpTECH\blastminidz\blastminidz.npt\blastminidz.c\bomberman_archive_cache\graphics/bomb, crate, tile, paint/bMan bomb0016.png
+  ratio 1.24 | cover 0.38 | palette 0.25 | contrast 0.20 | edge 0.18 | curve 0.05 | sym 0.31/0.26 | modular 0.96 | mass 0.66 | tension 0.77
+hero[0][0][0]
+  path=C:\Users\rrcar\Documents\drIpTECH\blastminidz\blastminidz.npt\blastminidz.c\bomberman_archive_cache\graphics/characters/bMan forWalk0001.png
+  ratio 0.61 | cover 0.29 | palette 0.38 | contrast 0.18 | edge 0.14 | curve 0.04 | sym 0.30/0.29 | modular 0.96 | mass 0.49 | tension 0.38
+hero[0][1][0]
+  path=C:\Users\rrcar\Documents\drIpTECH\blastminidz\blastminidz.npt\blastminidz.c\bomberman_archive_cache\graphics/characters/bMan backWalk0001.png
+  ratio 0.95 | cover 0.43 | palette 0.31 | contrast 0.17 | edge 0.15 | curve 0.04 | sym 0.35/0.31 | modular 0.96 | mass 0.46 | tension 0.59
+hero[0][2][0]
+  path=C:\Users\rrcar\Documents\drIpTECH\blastminidz\blastminidz.npt\blastminidz.c\bomberman_archive_cache\graphics/characters/bMan sideWalk0001.png
+  ratio 0.80 | cover 0.31 | palette 0.31 | contrast 0.20 | edge 0.15 | curve 0.04 | sym 0.29/0.29 | modular 0.96 | mass 0.45 | tension 0.50
+hero[1][0][0]
+  path=C:\Users\rrcar\Documents\drIpTECH\blastminidz\blastminidz.npt\blastminidz.c\bomberman_archive_cache\graphics/characters/bMan forWalk20001.png
+  ratio 0.75 | cover 0.31 | palette 0.45 | contrast 0.28 | edge 0.16 | curve 0.05 | sym 0.31/0.25 | modular 0.95 | mass 0.39 | tension 0.47
+hero[1][1][0]
+  path=C:\Users\rrcar\Documents\drIpTECH\blastminidz\blastminidz.npt\blastminidz.c\bomberman_archive_cache\graphics/characters/bMan backWalk20001.png
+  ratio 0.93 | cover 0.40 | palette 0.39 | contrast 0.31 | edge 0.20 | curve 0.06 | sym 0.31/0.31 | modular 0.94 | mass 0.46 | tension 0.58
+hero[1][2][0]
+  path=C:\Users\rrcar\Documents\drIpTECH\blastminidz\blastminidz.npt\blastminidz.c\bomberman_archive_cache\graphics/characters/bMan sideWalk20001.png
+  ratio 0.64 | cover 0.28 | palette 0.34 | contrast 0.29 | edge 0.18 | curve 0.05 | sym 0.18/0.18 | modular 0.95 | mass 0.65 | tension 0.40
+hero[2][0][0]
+  path=C:\Users\rrcar\Documents\drIpTECH\blastminidz\blastminidz.npt\blastminidz.c\bomberman_archive_cache\graphics/characters/bMan forWalk30001.png
+  ratio 0.71 | cover 0.12 | palette 0.27 | contrast 0.24 | edge 0.12 | curve 0.03 | sym 0.00/0.29 | modular 0.97 | mass 0.51 | tension 0.44
+hero[2][1][0]
+  path=C:\Users\rrcar\Documents\drIpTECH\blastminidz\blastminidz.npt\blastminidz.c\bomberman_archive_cache\graphics/characters/bMan backWalk30001.png
+  ratio 1.11 | cover 0.42 | palette 0.28 | contrast 0.21 | edge 0.13 | curve 0.03 | sym 0.37/0.36 | modular 0.96 | mass 0.49 | tension 0.69
+hero[2][2][0]
+  path=C:\Users\rrcar\Documents\drIpTECH\blastminidz\blastminidz.npt\blastminidz.c\bomberman_archive_cache\graphics/characters/bMan sideWalk30001.png
+  ratio 0.73 | cover 0.30 | palette 0.28 | contrast 0.25 | edge 0.15 | curve 0.05 | sym 0.22/0.21 | modular 0.95 | mass 0.66 | tension 0.45
+hero[3][0][0]
+  path=C:\Users\rrcar\Documents\drIpTECH\blastminidz\blastminidz.npt\blastminidz.c\bomberman_archive_cache\graphics/characters/bMan forWalk40001.png
+  ratio 0.70 | cover 0.29 | palette 0.44 | contrast 0.17 | edge 0.14 | curve 0.04 | sym 0.28/0.27 | modular 0.96 | mass 0.45 | tension 0.43
+hero[3][1][0]
+  path=C:\Users\rrcar\Documents\drIpTECH\blastminidz\blastminidz.npt\blastminidz.c\bomberman_archive_cache\graphics/characters/bMan backWalk40001.png
+  ratio 0.77 | cover 0.40 | palette 0.30 | contrast 0.17 | edge 0.15 | curve 0.05 | sym 0.30/0.31 | modular 0.95 | mass 0.55 | tension 0.47
+hero[3][2][0]
+  path=C:\Users\rrcar\Documents\drIpTECH\blastminidz\blastminidz.npt\blastminidz.c\bomberman_archive_cache\graphics/characters/bMan sideWalk40001.png
+  ratio 0.82 | cover 0.34 | palette 0.38 | contrast 0.16 | edge 0.17 | curve 0.05 | sym 0.28/0.29 | modular 0.96 | mass 0.45 | tension 0.51
+rival.side[0][0]
+  path=C:\Users\rrcar\Documents\drIpTECH\blastminidz\blastminidz.npt\blastminidz.c\bomberman_archive_cache\graphics/characters/bMan baddieWalkSide0001.png
+  ratio 1.48 | cover 0.30 | palette 0.36 | contrast 0.25 | edge 0.19 | curve 0.05 | sym 0.26/0.13 | modular 0.96 | mass 0.28 | tension 0.91
+rival.side[1][0]
+  path=C:\Users\rrcar\Documents\drIpTECH\blastminidz\blastminidz.npt\blastminidz.c\bomberman_archive_cache\graphics/characters/bMan baddieWalkSide20001.png
+  ratio 1.79 | cover 0.26 | palette 0.36 | contrast 0.25 | edge 0.22 | curve 0.06 | sym 0.30/0.09 | modular 0.95 | mass 0.20 | tension 0.89
+rival.back[0]
+  path=C:\Users\rrcar\Documents\drIpTECH\blastminidz\blastminidz.npt\blastminidz.c\bomberman_archive_cache\graphics/characters/bMan baddieWalkback0001.png
+  ratio 1.23 | cover 0.36 | palette 0.36 | contrast 0.26 | edge 0.14 | curve 0.04 | sym 0.27/0.27 | modular 0.97 | mass 0.37 | tension 0.76

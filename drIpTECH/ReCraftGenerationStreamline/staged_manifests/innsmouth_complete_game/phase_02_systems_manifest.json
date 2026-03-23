@@ -1,0 +1,172 @@
+[
+    {
+        "name":  "innsmouth_melee_weapons_set_a_v3",
+        "category":  "equipment",
+        "prompt_revision":  "transparent_orb32_v1",
+        "protocol_profile":  "innsmouth_island_dimensional_protocol_v1",
+        "pass_kind":  "complete_game",
+        "guide_ref":  "innsmouth_island_complete_game_prompt_guide_v1",
+        "prompt":  "ORBSystems 32-dimensional coherency weapon sheet for InnsmouthIsland; transparent background only, isolated alpha render, no opaque backdrop, full depth-precision mapping and grip socket clarity; Barnacle Shiv, Tide Hook, Coral Mace, Dock Cleaver, Shell Glaive, Pearl Pike, Kelp Lash, Mud-Saw Hatchet as single-asset-focused weapon studies with expressionistic angular silhouettes, no text",
+        "negative_prompt":  "opaque background, solid background, painted matte, text, watermark, logo",
+        "controls":  {
+                         "transparent_background":  true
+                     },
+        "transparent_background":  true,
+        "w":  1536,
+        "h":  768,
+        "out":  "../../../ORBEngine/assets/innsmouth_island/complete_game/equipment/innsmouth_melee_weapons_set_a_v3.png"
+    },
+    {
+        "name":  "innsmouth_melee_weapons_set_b_v3",
+        "category":  "equipment",
+        "prompt_revision":  "transparent_orb32_v1",
+        "protocol_profile":  "innsmouth_island_dimensional_protocol_v1",
+        "pass_kind":  "complete_game",
+        "guide_ref":  "innsmouth_island_complete_game_prompt_guide_v1",
+        "prompt":  "ORBSystems 32-dimensional coherency weapon sheet for InnsmouthIsland; transparent background only, alpha isolated render, no opaque backdrop, full depth-precision mapping and grip socket clarity; Ooze Hammer, Brine Falx, Eelbone Saber, Ruin Breaker, Temple Harrow, Jetty Reaper, Black Pearl Axe, Newgame Plus Abyss Halberd as isolated weapon studies with angular silhouette priority and premium material breakup, no text",
+        "negative_prompt":  "opaque background, solid background, painted matte, text, watermark, logo",
+        "controls":  {
+                         "transparent_background":  true
+                     },
+        "transparent_background":  true,
+        "w":  1536,
+        "h":  768,
+        "out":  "../../../ORBEngine/assets/innsmouth_island/complete_game/equipment/innsmouth_melee_weapons_set_b_v3.png"
+    },
+    {
+        "name":  "innsmouth_projectile_and_throwables_v3",
+        "category":  "equipment",
+        "prompt_revision":  "transparent_orb32_v1",
+        "protocol_profile":  "innsmouth_island_dimensional_protocol_v1",
+        "pass_kind":  "complete_game",
+        "guide_ref":  "innsmouth_island_complete_game_prompt_guide_v1",
+        "prompt":  "ORBSystems 32-dimensional coherency ranged equipment sheet for InnsmouthIsland; transparent background only, isolated alpha render, no opaque backdrop, full depth-precision mapping and hand-socket clarity; Throwing Knives, Mudglass Darts, Harpoon Coil, Molotov Brine Flask, Dust Seed Pod, Pearl Bolt Caster, Newgame Plus Eclipse Launcher with projectile and handoff silhouettes, angular readable posing language, no text",
+        "negative_prompt":  "opaque background, solid background, painted matte, text, watermark, logo",
+        "controls":  {
+                         "transparent_background":  true
+                     },
+        "transparent_background":  true,
+        "w":  1536,
+        "h":  768,
+        "out":  "../../../ORBEngine/assets/innsmouth_island/complete_game/equipment/innsmouth_projectile_and_throwables_v3.png"
+    },
+    {
+        "name":  "innsmouth_armor_sets_one_to_seven_v3",
+        "category":  "equipment",
+        "prompt_revision":  "transparent_orb32_v1",
+        "protocol_profile":  "innsmouth_island_dimensional_protocol_v1",
+        "pass_kind":  "complete_game",
+        "guide_ref":  "innsmouth_island_complete_game_prompt_guide_v1",
+        "prompt":  "ORBSystems 32-dimensional coherency armor request for InnsmouthIsland; transparent background only, isolated alpha render, no opaque backdrop, full overlay and socket precision; Shore Rag Harness, Dockworker Saltmail, Kelp-Wrap Strider, Mudplate Forager, Pearl-Lashed Raider, Ooze-Forged Pilgrim, Brackish Duelist Rig broken into swappable limb and torso overlays with angular silhouette logic and hidden registration anchor discipline, no text",
+        "negative_prompt":  "opaque background, solid background, painted matte, text, watermark, logo",
+        "controls":  {
+                         "transparent_background":  true
+                     },
+        "transparent_background":  true,
+        "w":  896,
+        "h":  1216,
+        "out":  "../../../ORBEngine/assets/innsmouth_island/complete_game/equipment/innsmouth_armor_sets_one_to_seven_v3.png"
+    },
+    {
+        "name":  "innsmouth_armor_sets_eight_to_fourteen_v3",
+        "category":  "equipment",
+        "prompt_revision":  "transparent_orb32_v1",
+        "protocol_profile":  "innsmouth_island_dimensional_protocol_v1",
+        "pass_kind":  "complete_game",
+        "guide_ref":  "innsmouth_island_complete_game_prompt_guide_v1",
+        "prompt":  "ORBSystems 32-dimensional coherency armor request for InnsmouthIsland; transparent background only, isolated alpha render, no opaque backdrop, full overlay and socket precision; Murk Templar Shell, Nightgaunt Veilweave, Star-Spawn Pressure Suit, Cult Tide Mantle, Basalt Canopy Guard, Abyss Prince Husk, Newgame Plus Eclipse Regalia broken into swappable limb and torso overlays with expressionistic angular silhouette treatment and hidden registration anchor discipline, no text",
+        "negative_prompt":  "opaque background, solid background, painted matte, text, watermark, logo",
+        "controls":  {
+                         "transparent_background":  true
+                     },
+        "transparent_background":  true,
+        "w":  896,
+        "h":  1216,
+        "out":  "../../../ORBEngine/assets/innsmouth_island/complete_game/equipment/innsmouth_armor_sets_eight_to_fourteen_v3.png"
+    },
+    {
+        "name":  "innsmouth_pickups_and_resources_v3",
+        "category":  "interactive",
+        "prompt_revision":  "transparent_orb32_v1",
+        "protocol_profile":  "innsmouth_island_dimensional_protocol_v1",
+        "pass_kind":  "complete_game",
+        "guide_ref":  "innsmouth_island_complete_game_prompt_guide_v1",
+        "prompt":  "ORBSystems 32-dimensional coherency pickup request for InnsmouthIsland; transparent background only, isolated alpha render, no opaque backdrop, full depth-precision mapping; brine salt, black kelp, salt sigils, throwing knife piles, fire bomb caches, seed pods, consumable bundles, angular silhouette clusters designed for instant gameplay readability, no text",
+        "negative_prompt":  "opaque background, solid background, painted matte, text, watermark, logo",
+        "controls":  {
+                         "transparent_background":  true
+                     },
+        "transparent_background":  true,
+        "w":  1216,
+        "h":  896,
+        "out":  "../../../ORBEngine/assets/innsmouth_island/complete_game/interactive/innsmouth_pickups_and_resources_v3.png"
+    },
+    {
+        "name":  "innsmouth_murkshelter_dormant_and_activated_v3",
+        "category":  "interactive",
+        "prompt_revision":  "transparent_orb32_v1",
+        "protocol_profile":  "innsmouth_island_dimensional_protocol_v1",
+        "pass_kind":  "complete_game",
+        "guide_ref":  "innsmouth_island_complete_game_prompt_guide_v1",
+        "prompt":  "ORBSystems 32-dimensional coherency shelter request for InnsmouthIsland; transparent background only, isolated alpha render, no opaque backdrop, full depth-precision mapping and interaction anchor discipline; MurkShelter dormant and activated states, pearl network ring, upgrade resonance bloom, fast-travel activation geometry, expressionistic angular shrine engineering, no text",
+        "negative_prompt":  "opaque background, solid background, painted matte, text, watermark, logo",
+        "controls":  {
+                         "transparent_background":  true
+                     },
+        "transparent_background":  true,
+        "w":  1216,
+        "h":  896,
+        "out":  "../../../ORBEngine/assets/innsmouth_island/complete_game/interactive/innsmouth_murkshelter_dormant_and_activated_v3.png"
+    },
+    {
+        "name":  "innsmouth_ui_hud_core_v3",
+        "category":  "ui",
+        "prompt_revision":  "transparent_orb32_v1",
+        "protocol_profile":  "innsmouth_island_dimensional_protocol_v1",
+        "pass_kind":  "complete_game",
+        "guide_ref":  "innsmouth_island_complete_game_prompt_guide_v1",
+        "prompt":  "ORBSystems 32-dimensional coherency UI request for InnsmouthIsland; transparent background only, isolated alpha render, no opaque backdrop; HUD core with moisture bar, breathing sync meter, vitality, stamina, boss health shell, focus target widgets, angular black-wet-metal framing with eldritch brass trim, no text in main art zones",
+        "negative_prompt":  "opaque background, solid background, painted matte, scenic mockup, watermark, logo",
+        "controls":  {
+                         "transparent_background":  true
+                     },
+        "transparent_background":  true,
+        "w":  1536,
+        "h":  768,
+        "out":  "../../../ORBEngine/assets/innsmouth_island/complete_game/ui/innsmouth_ui_hud_core_v3.png"
+    },
+    {
+        "name":  "innsmouth_ui_inventory_equipment_v3",
+        "category":  "ui",
+        "prompt_revision":  "transparent_orb32_v1",
+        "protocol_profile":  "innsmouth_island_dimensional_protocol_v1",
+        "pass_kind":  "complete_game",
+        "guide_ref":  "innsmouth_island_complete_game_prompt_guide_v1",
+        "prompt":  "ORBSystems 32-dimensional coherency UI request for InnsmouthIsland; transparent background only on alpha, no opaque backdrop; inventory equipment menu frames, armor slot plates, weapon slot crests, shrine upgrade cards, codex frame language, expressionistic angular ornament and readable gamepad-era structure, no text in main art zones",
+        "negative_prompt":  "opaque background, solid background, painted matte, scenic mockup, watermark, logo",
+        "controls":  {
+                         "transparent_background":  true
+                     },
+        "transparent_background":  true,
+        "w":  1536,
+        "h":  768,
+        "out":  "../../../ORBEngine/assets/innsmouth_island/complete_game/ui/innsmouth_ui_inventory_equipment_v3.png"
+    },
+    {
+        "name":  "innsmouth_ui_icons_and_codex_v3",
+        "category":  "ui",
+        "prompt_revision":  "transparent_orb32_v1",
+        "protocol_profile":  "innsmouth_island_dimensional_protocol_v1",
+        "pass_kind":  "complete_game",
+        "guide_ref":  "innsmouth_island_complete_game_prompt_guide_v1",
+        "prompt":  "ORBSystems 32-dimensional coherency icon request for InnsmouthIsland; transparent background only, isolated alpha render, no opaque backdrop; weapon family icons, armor crests, pickup icons, shrine node icons, quest markers, codex portrait frames, map glyphs, expressionistic angular icon silhouettes with premium readability, no text",
+        "negative_prompt":  "opaque background, solid background, painted matte, scenic mockup, watermark, logo",
+        "controls":  {
+                         "transparent_background":  true
+                     },
+        "transparent_background":  true,
+        "w":  1536,
+        "h":  768,
+        "out":  "../../../ORBEngine/assets/innsmouth_island/complete_game/ui/innsmouth_ui_icons_and_codex_v3.png"
+    }
+]

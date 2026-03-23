@@ -1,0 +1,117 @@
+Clip Studio Paint Plugin / Feature Summary
+Date: 2026-03-10
+Location: drIpTech_ClipStudio_Plug-Ins
+
+Overview
+This plugin set is currently implemented as a native C prototype layer for pixel brush behavior, animation timeline helpers, and visual scripting support. It is organized around a core source file, a public header, a small local demo, and a simple Makefile for native builds.
+
+Primary Files
+- ClipStudioPixelBrushSuite.c: core implementation of brush logic, layer alpha writes, animation helpers, and scripting/timeline utilities.
+- ClipStudioPixelBrushSuite.h: public types and function declarations for the plugin suite.
+- test_plugin_demo.c: executable demo that exercises the major feature groups.
+- Makefile: local native build entrypoint for the demo.
+
+Implemented Brush Features
+1. Standard pixel brush
+- Writes solid alpha values into the active layer.
+- Intended for direct pixel placement with opacity control.
+
+2. Watercolor brush
+- Uses distance-based falloff and pressure-sensitive blur behavior.
+- Produces softer edges than the standard pixel brush.
+
+3. Oil brush
+- Uses pressure and intensity to simulate thicker blended coverage.
+- Applies stronger alpha blending for a denser painted result.
+
+4. Airbrush
+- Uses a radial spray region derived from brush size, pressure, and intensity.
+- Produces a softer dispersed coverage around the stroke origin.
+
+5. Charcoal / pastel brush
+- Applies grain-style opacity using brush intensity.
+- Intended to represent rougher textured marks.
+
+6. Feathered brush
+- Applies edge-distance fading to create soft-edge strokes.
+- Pressure and intensity both affect the visible result.
+
+Canvas and Brush Data Model
+- BrushProperties stores pixel size, opacity, brush type, intensity, layer depth, and animation frame.
+- CanvasStroke stores x/y coordinates and pressure.
+- CanvasState stores canvas width, height, layer count, per-layer pixel buffers, and the active brush.
+- Alpha writes are performed through apply_pixel_alpha(), which bounds-checks both pixel coordinates and layer index.
+
+Animation and Timeline Features
+1. Animation frame tracking
+- update_animation_frame() updates the active brush frame on the canvas.
+
+2. AI inbetweening stub
+- ai_inbetween_frames() advances frame state between keyframes.
+- Current status: placeholder implementation only; no actual interpolation or stroke synthesis yet.
+
+3. Timeline frame model
+- Supports FRAME_KEY, FRAME_BLANK, FRAME_INBETWEEN, and FRAME_TRIGGER.
+- TimelineFrame stores the frame type and frame index.
+
+4. Scene sequencing
+- SceneSequence stores first trigger frame, last trigger frame, and scene name.
+- SceneSequenceArray is a dynamic array with initialization, growth, insertion, and cleanup helpers.
+
+Translayer / Depth Feature
+- apply_translayer_gradation() distributes brush alpha across multiple layers using a z-depth value.
+- This acts like a simple pseudo-3D layer blend where opacity varies by layer distance from the requested depth.
+- Intended use: layered paint or depth-stacked visual effects.
+
+Visual Scripting and Symbol Features
+1. Symbol objects
+- SymbolObject stores symbol name, timeline length, and a dynamic frame list.
+- symbol_init(), symbol_add_frame(), and symbol_free() manage symbol lifecycle and frame storage.
+
+2. Script attachment helpers
+- tie_script_to_symbol() binds a VisualScript to a SymbolObject.
+- tie_script_to_button() binds a button to the script target's animation symbol.
+- tie_script_to_frame() exists as a stub placeholder for future frame-level script binding.
+
+3. Button and script structures
+- ButtonObject stores a button name and associated animation symbol.
+- VisualScript stores script name, script type, and target symbol.
+
+4. Hit detection
+- HitDetection stores hitbox count and hitbox data pointer.
+- define_hit_detection() assigns hitbox metadata for collision-driven interactions.
+
+Demo Coverage
+The demo currently verifies the following:
+- Canvas allocation and multi-layer setup.
+- Translayer gradation execution.
+- AI inbetween stub invocation.
+- Symbol initialization and frame insertion.
+- Scene sequence array creation and insertion.
+- Script-to-symbol and script-to-button linkage.
+- Hit detection metadata assignment.
+
+Build Status
+- A local native build path exists via the Makefile.
+- The demo executable was successfully produced during the recent build verification.
+- Important environment note: GCC worked when MinGW's bin directory was available on PATH.
+- Known working compiler path: C:\ProgramData\mingw64\mingw64\bin
+
+Current Limitations
+- This is a C prototype layer, not yet a packaged Clip Studio Paint plugin with host integration hooks.
+- ai_inbetween_frames() is a stub and does not yet generate real intermediate animation data.
+- tie_script_to_frame() is also a stub.
+- Rendering currently focuses on alpha channel writes; there is no full color paint pipeline yet.
+- There is no serialization, file I/O, UI panel integration, or Clip Studio API bridge in the current implementation.
+- The translayer function computes grad_step but does not currently use it.
+
+Recommended Next Steps
+1. Define the actual Clip Studio host/plugin integration boundary.
+2. Expand the AI inbetween system from frame stepping to stroke interpolation.
+3. Add color channels, blend modes, and per-layer compositing behavior.
+4. Convert the script/frame helpers from placeholders into executable timeline actions.
+5. Add documentation for expected memory ownership and runtime setup.
+6. Add ignore rules or cleanup flow for generated build artifacts and logs.
+
+Bottom Line
+The current plugin set is best described as a structured native prototype for a Clip Studio Paint feature suite. It already includes multiple brush styles, layered depth effects, timeline primitives, symbol/script wiring, and a local demo build, but it still needs real Clip Studio integration and fuller animation logic to become a production-ready plugin package.

@@ -1,0 +1,17 @@
+{
+  "package_name": "dirkodds_android_client_2026-03-20",
+  "project": "DirkOdds Mobile",
+  "top_level_files": [
+    "HANDOFF_NOTE.md",
+    "CLIENT_EXEC_SUMMARY.md",
+    "README.md",
+    "VALIDATION_SUMMARY.json",
+    "PACKAGE_MANIFEST.json"
+  ],
+  "artifact_files": [
+    "artifacts/DirkOddsMobile-release.apk"
+  ],
+  "repo_files": [
+    "repo/urbden-android/README.md"
+  ]
+}

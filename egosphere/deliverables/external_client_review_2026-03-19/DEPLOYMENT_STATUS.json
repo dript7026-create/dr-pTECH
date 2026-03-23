@@ -1,0 +1,40 @@
+﻿{
+    "prepared_at":  "2026-03-20T00:11:28",
+    "prepared_by":  "egosphere/tools/prepare_client_preview.ps1",
+    "workspace_root":  "C:\\Users\\rrcar\\Documents\\drIpTECH",
+    "review_dir":  "C:\\Users\\rrcar\\Documents\\drIpTECH\\egosphere\\deliverables\\external_client_review_2026-03-19",
+    "review_zip_path":  "C:\\Users\\rrcar\\Documents\\drIpTECH\\egosphere\\deliverables\\external_client_review_2026-03-19.zip",
+    "review_zip_latest_path":  "C:\\Users\\rrcar\\Documents\\drIpTECH\\egosphere\\deliverables\\external_client_review_latest.zip",
+    "android_review_app":  {
+                               "variant":  "release",
+                               "gradle_task":  "assembleRelease",
+                               "path":  "C:\\Users\\rrcar\\Documents\\drIpTECH\\urbden-android\\app\\build\\outputs\\apk\\release\\app-release.apk",
+                               "package_path":  "C:\\Users\\rrcar\\Documents\\drIpTECH\\egosphere\\deliverables\\external_client_review_2026-03-19\\egosphere_review_app.apk",
+                               "latest_path":  "C:\\Users\\rrcar\\Documents\\drIpTECH\\egosphere\\deliverables\\external_client_review_latest.apk",
+                               "requested":  true,
+                               "present":  true
+                           },
+    "bootstrap":  {
+                      "python_exe":  "C:\\Users\\rrcar\\Documents\\drIpTECH\\.venv\\Scripts\\python.exe",
+                      "jdk_root":  "C:\\Users\\rrcar\\Documents\\drIpTECH\\.jdk\\jdk-17.0.16",
+                      "sdk_root":  "C:\\Users\\rrcar\\Documents\\drIpTECH\\.android-bootstrap\\android-sdk",
+                      "gradle_root":  "C:\\Users\\rrcar\\Documents\\drIpTECH\\.android-bootstrap\\gradle-8.7"
+                  },
+    "required_docs":  [
+                          "HANDOFF_NOTE.md",
+                          "CLIENT_EXEC_SUMMARY.md",
+                          "CLIENT_PRESENTATION_SCRIPT.md",
+                          "PRODUCT_BRIEF.md",
+                          "README.md",
+                          "REVIEW_GUIDE.md",
+                          "SHORT_NOTICE_DEPLOYMENT_CHECKLIST.md",
+                          "VALIDATION_SNAPSHOT.json"
+                      ],
+    "notes":  [
+                  "Run the preparation script from the workspace root for short-notice rebuilds.",
+                  "Use script console output for exact artifact timestamps and byte counts.",
+                  "Use HANDOFF_NOTE.md as the fastest external starting point before the executive summary.",
+                  "Treat the Android APK as a review companion app rather than a runtime port.",
+                  "Set -ApkVariant release when you need the installable release build variant."
+              ]
+}

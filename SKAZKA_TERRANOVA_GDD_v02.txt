@@ -1,0 +1,730 @@
+SKAZKA: TERRANOVA -- Complete Game Design & Asset Specification v0.2
+====================================================================
+
+
+I. GAME STATE MACHINE
+=====================
+
+FARIM_OPEN
+  |-> SPLASH_SCREEN          (drIpTECH / SKAZKA logo, 3s auto-advance)
+        |-> INTRO_CUTSCENE   (Recraft-generated stills, voice-over narration)
+              |-> [Hold B / Esc / Start to skip -- prompt shown from frame 1]
+        |-> TITLE_MENU       (New Game | Continue | Options | Credits)
+              |-> NEW_GAME   -> PLAYER_ROOM (Act I, Scene 1)
+              |-> CONTINUE   -> load save -> restore last checkpoint region
+              |-> OPTIONS    -> audio / video / controls sub-menu
+
+GAMEPLAY REGIONS (state per region):
+  PLAYER_ROOM -> VILLAGE_SQUARE -> DARK_WOOD_1 -> DARK_WOOD_2
+  -> BONE_MARKET -> HOLLOW_MOUNTAIN_APPROACH -> HOLLOW_MOUNTAIN_INTERIOR
+  -> THE_VEIL_THRESHOLD -> MEGABOSS_ARENA
+
+GAME_OVER  ->  TITLE_MENU
+CREDITS    ->  TITLE_MENU
+
+
+II. CONTROLLER INPUT MAP
+========================
+
+Action               Xbox                   PlayStation            Switch Pro             Keyboard
+----                 ----                   -----------            ----------             --------
+Move Left            L-Stick Left / D-Left  L-Stick Left / D-Left  L-Stick Left / D-Left  A / Left Arrow
+Move Right           L-Stick Right / D-Rgt  L-Stick Right / D-Rgt  L-Stick Right / D-Rgt  D / Right Arrow
+Jump                 A                      Cross                  B                      Space
+Attack (Beat)        X                      Square                 Y                      J
+Ritual / Reel        Y                      Triangle               X                      K
+Deck Slot 1          LB                     L1                     L                      1
+Deck Slot 2          RB                     R1                     R                      2
+Deck Slot 3          LT                     L2                     ZL                     3
+Parry                B                      Circle                 A                      L-Shift
+Map / Pause          Start                  Options                +                      Esc
+Skip Cutscene        Hold B (1.5s)          Hold Circle (1.5s)     Hold A (1.5s)          Hold Esc (1.5s)
+Confirm / Interact   A                      Cross                  B                      Enter
+Cancel / Back        B                      Circle                 A                      Backspace
+QTE Prompt 1         A                      Cross                  B                      Space
+QTE Prompt 2         X                      Square                 Y                      J
+QTE Prompt 3         RT                     R2                     ZR                     F
+QTE Prompt 4         LT                     L2                     ZL                     Q
+
+
+III. COMPLETE ASSET REQUIREMENTS LIST
+======================================
+
+A -- Backgrounds / Environments
+--------------------------------
+ID       Asset Name                  Dimensions   Notes
+BG_001   Room_Misha_Day              1280x720     Player bedroom, morning light, Slavic folk decor
+BG_002   Room_Misha_Night            1280x720     Same room, night -- candle glow, shadows deeper
+BG_003   Village_Square_Day          1280x720     Cobble, well, Orthodox-adjacent steeple, birch trees
+BG_004   Village_Square_Night        1280x720     Lantern glow, silhouette figures at windows
+BG_005   Dark_Wood_Edge              1280x720     Treeline, fog, birch bark textures, mushroom rings
+BG_006   Dark_Wood_Deep              1280x720     Dense canopy, no sky, bioluminescent fungi, rune-carved trunks
+BG_007   Bone_Market                 1280x720     Open-air stalls, hanging charms, skulls repurposed as lanterns
+BG_008   Hollow_Mountain_Approach    1280x720     Scree, dead pines, distant cave mouth glowing red-amber
+BG_009   Hollow_Mountain_Interior    1280x720     Stalactites, ember veins in rock, altar silhouettes
+BG_010   Veil_Threshold              1280x720     Abstract -- half-world, reversed sky, floating cassette tape fragments
+BG_011   MegaBoss_Arena              1280x720     Cracked void-stone floor, Newgrounds mascot runes, pulsing sigil grid
+BG_012   Title_Screen                1280x720     SKAZKA wordmark over stylised forest silhouette / reel-film border
+BG_013   Credits_Scroll_BG          1280x720     Slow-pan starfield with folk-embroidery star pattern overlay
+
+B -- Character Sprites / Rigs
+------------------------------
+ID       Asset Name                  Format                  Notes
+CH_001   Misha_Body                  PNG rig parts (x10)     Existing -- refine detail, add subliminal rune on back
+CH_002   Misha_Face_Neutral          PNG                     Isolated face for dialogue portrait
+CH_003   Misha_Face_Alarmed          PNG                     Eyebrows up, pupils contracted
+CH_004   Misha_Face_Resolute         PNG                     Jaw set, slight smirk
+CH_005   Leshy_Body                  PNG rig parts (x8)      Existing -- add wound states (3 damage overlays)
+CH_006   Leshy_Face_Idle             PNG                     Hollow eye sockets, leaf-crown
+CH_007   Leshy_Face_Enraged          PNG                     Jaw unhinged, eyes bleed light
+CH_008   Domovoi_Vendor              PNG full sprite         Existing -- add blinking animation frame
+CH_009   Kikimora_Enemy              PNG rig (x8)            Bent-limb spirit, needle-fingers
+CH_010   Rusalka_Enemy               PNG rig (x8)            Translucent, trailing hair, waterlogged
+CH_011   Poludnitsa_Enemy            PNG rig (x6)            Noon-witch, scythe, heat-shimmer outline
+CH_012   Zmeya_Officer               PNG rig (x10)           Dragon-officer hybrid, Newgrounds logo corrupted as badge
+CH_013   SKAZKA_MegaBoss_Phase1      PNG rig (x14)           Koschei-Deathless fused with Newgrounds Tank torso, cassette-tape spine
+CH_014   SKAZKA_MegaBoss_Phase2      PNG rig (x14)           Phase 2 -- Tank shattered, exposed skeleton drive-core, orange aura
+CH_015   SKAZKA_MegaBoss_Phase3      PNG rig (x14)           Phase 3 -- silhouette only, negative-space form, runes self-assembling
+CH_016   Narrator_Spirit             PNG portrait            Eyeless elder face, mouth perpetually moving
+CH_017   Baba_Yaga_Merchant          PNG full sprite         Mortar & pestle implied, Newgrounds watermark tattooed on palm
+
+C -- UI / HUD Elements
+-----------------------
+ID       Asset Name                  Format                   Notes
+UI_001   HUD_Frame_Main              PNG                      Existing -- refine border, add embroidered corner motifs
+UI_002   HP_Bar_Fill                 PNG (tileable)           Red-to-orange gradient, Slavic bead texture
+UI_003   Stamina_Bar_Fill            PNG (tileable)           Cyan shimmer, cassette tape reel texture
+UI_004   Enemy_HP_Bar_Fill           PNG (tileable)           Sickly green, bone texture
+UI_005   Beat_Indicator_Ring         PNG spritesheet 8fr      Pulses on beat -- golden ring, rune glyph
+UI_006   Combo_Counter_Display       PNG frame                Slot for combo number
+UI_007   MediaDeck_Panel             PNG                      Existing -- add tarnish/grime detail
+UI_008   DeckSlot_Empty              PNG                      Hollow rectangle, faint rune emboss
+UI_009   DeckSlot_Filled             PNG                      Glowing card-slot with emblem
+UI_010   ReelWindow_Frame            PNG                      Slot-machine style chrome frame, Slavic folk border
+UI_011   ReelSymbol_Birch            PNG 64x64                Birch leaf reel symbol
+UI_012   ReelSymbol_Skull            PNG 64x64                Stylised skull reel symbol
+UI_013   ReelSymbol_Flame            PNG 64x64                Flame reel symbol
+UI_014   ReelSymbol_Eye              PNG 64x64                Eye reel symbol (subliminal -- blinks one frame too long)
+UI_015   ReelSymbol_Cassette         PNG 64x64                Cassette tape reel symbol
+UI_016   ReelSymbol_Rune             PNG 64x64                Elder rune reel symbol
+UI_017   RegionGate_Lock_Icon        PNG 48x48                Chain-and-rune padlock
+UI_018   RegionGate_Unlock_Anim      PNG spritesheet 6fr      Lock dissolving into smoke
+UI_019   Skip_Prompt_Bar             PNG                      "Hold [B] to skip" -- fill bar indicator beneath
+UI_020   Skip_Prompt_Background      PNG                      Translucent dark pill-shape
+UI_021   Popup_Window_Standard       PNG                      Standard dialogue/text box, folk-embroidered border, dark fill
+UI_022   Popup_Window_Warning        PNG                      Red-tinted border, skull corner motifs
+UI_023   Popup_Window_Lore           PNG                      Parchment texture, aged edges, rune-script trim
+UI_024   Popup_Window_QTE            PNG                      High-contrast, pulsing border, countdown arc
+UI_025   DialoguePortrait_Frame      PNG                      Oval birch-bark frame for character face portraits
+UI_026   TitleMenu_Selection_Highlight PNG                    Carved-wood selection indicator
+UI_027   SaveSlot_Panel              PNG                      Save-file slot frame, 3 instances
+UI_028   Minimap_Frame               PNG                      Embroidered cloth minimap border
+UI_029   Notification_Banner         PNG                      Top-screen banner for region entry notifications
+UI_030   QTE_ButtonPrompt_Large      PNG x4                   Generic round button icon x4 colours (no specific brand)
+UI_031   QTE_ButtonPrompt_Small      PNG x4                   Small versions of above
+UI_032   QTE_SuccessFlash            PNG                      Green burst overlay
+UI_033   QTE_FailFlash               PNG                      Red burst overlay
+
+D -- FX / Particles
+--------------------
+ID       Asset                    Notes
+FX_001   HitSpark_Perfect         Spritesheet 6fr -- gold spark burst
+FX_002   HitSpark_Good            Spritesheet 6fr -- white spark
+FX_003   HitSpark_Miss            Spritesheet 4fr -- grey dissipate
+FX_004   RitualRing_Idle          Existing -- add rune glow pulse
+FX_005   RitualRing_Activate      Spritesheet 8fr -- runes light sequentially
+FX_006   RitualRing_Fail          Spritesheet 6fr -- ring shatters inward
+FX_007   ParryMarker              Existing
+FX_008   StunStar                 Spritesheet 4fr -- cartoon stars orbit enemy head
+FX_009   RegionWarp_Enter         Spritesheet 10fr -- screen-edge wipe with folk-pattern border
+FX_010   SubtextFlash             PNG 1 frame -- single-frame subliminal image (see Section VIII)
+FX_011   MegaBoss_PhaseTransition Spritesheet 16fr -- screen whiteout with embedded rune grid
+FX_012   QTE_WindowOpen           Spritesheet 8fr -- QTE panel slams in from top
+FX_013   BloodFog_Overlay         PNG (additive tint) -- red-tinted fog for high-threat areas
+FX_014   CassetteEject_Anim       Spritesheet 8fr -- tape ejects and dissolves
+
+E -- Fonts (2 custom)
+----------------------
+ID        Name              Style                                                                   Use
+FONT_001  Terranova Sans    Geometric sans-serif, subtle Cyrillic-inspired terminals, clean/eroded  HUD numbers, menus, UI labels, combat text
+FONT_002  Leshy Script      Hand-carved runic lettering, organic baseline waver, birch-scratch       Dialogue boxes, lore pop-ups, title wordmark, region names
+
+Both fonts must include: A-Z, a-z, 0-9, basic punctuation, Cyrillic characters, and special glyphs.
+
+F -- Audio Assets
+-----------------
+ID        Asset                   Type       Notes
+SFX_001   Attack_Perfect          WAV short  Sharp metallic ring + organic thud
+SFX_002   Attack_Good             WAV short  Softer thud
+SFX_003   Attack_Miss             WAV short  Whoosh + hollow click
+SFX_004   Parry                   WAV short  Wood-block crack + resonance
+SFX_005   Ritual_Activate         WAV short  Low rune-drone swell
+SFX_006   Ritual_Heal             WAV short  Chime + breath
+SFX_007   Ritual_Stun             WAV short  Bass thump + glass break
+SFX_008   Ritual_Damage           WAV short  Distorted growl burst
+SFX_009   Enemy_Hurt              WAV short  Hollow grunt
+SFX_010   Enemy_Stun              WAV short  Wooden-creak distort
+SFX_011   Player_Hurt             WAV short  Sharp inhale + impact
+SFX_012   Player_Death            WAV short  Long exhale, birch-trees-in-wind fade
+SFX_013   QTE_Success             WAV short  Bright sting
+SFX_014   QTE_Fail                WAV short  Low thud + dropout
+SFX_015   UI_Select               WAV short  Quiet wooden click
+SFX_016   UI_Confirm              WAV short  Low chime
+SFX_017   UI_Back                 WAV short  Reverse chime
+SFX_018   RegionGate_Locked       WAV short  Chain rattle + rune hum
+SFX_019   RegionGate_Unlock       WAV short  Stone grinding + triumphant sting
+SFX_020   ReelSpin_Loop           WAV loop   Mechanical reel spinning
+SFX_021   ReelStop                WAV short  Clunk of reel stopping
+SFX_022   CassetteInsert          WAV short  Tape clicking into player
+SFX_023   HeartbeatSubtle         WAV loop   Very low -- used under boss phase 2 (subliminal)
+SFX_024   ChildLaughter_Distant   WAV oneshot  Subliminal -- played at -18dB under fog areas
+BGM_001   Title_Theme             OGG loop   Folk-electronic fusion; balalaika riff over lo-fi beat
+BGM_002   Misha_Room              OGG loop   Warm, bedroom ambient; music box + vinyl crackle
+BGM_003   Village_Day             OGG loop   Upbeat folk -- accordion, hand drum
+BGM_004   Village_Night           OGG loop   Tense -- same melody inverted and slowed
+BGM_005   Dark_Wood               OGG loop   Sparse -- single bowed string, wind, distant bells
+BGM_006   Bone_Market             OGG loop   Unsettling market lilt -- hurdy-gurdy over trap hi-hats
+BGM_007   Hollow_Mountain         OGG loop   Industrial Slavic -- hammer-strike rhythm, drone
+BGM_008   Veil_Threshold          OGG loop   Reversed folk melody, flanged vocal stabs
+BGM_009   MegaBoss_Phase1         OGG loop   Aggressive folk-metal -- balalaika shred + kick
+BGM_010   MegaBoss_Phase2         OGG loop   Same but half-tempo, corrupted -- glitch drops every 8 bars
+BGM_011   MegaBoss_Phase3         OGG loop   Total silence except heartbeat sub-bass and one sustained note
+BGM_012   Credits                 OGG loop   Reprise of title theme, acoustic, gentle
+VO_001-120  Voice lines           OGG mono 44.1k  All narrator + character dialogue lines (see Section V)
+
+G -- Intro Cutscene Asset List (Recraft Generation Pass -- DO NOT RUN YET)
+---------------------------------------------------------------------------
+Scene    Prompt Summary                                                           Output
+Cut_01   Aerial view, dark Slavic forest at dawn, mist, birch trees               intro_cut_01.png
+Cut_02   Small village through trees, warm window lights, church silhouette        intro_cut_02.png
+Cut_03   Interior: boy's bedroom, wooden toys, wall hanging, moonlight             intro_cut_03.png
+Cut_04   Close-up of boy's hand holding cassette tape labeled "Terranova"          intro_cut_04.png
+Cut_05   Forest edge at night -- something moves in trees, not quite visible       intro_cut_05.png
+Cut_06   Cracked screen showing Newgrounds logo, overgrown with vines and moss     intro_cut_06.png
+Cut_07   Spiral of folk symbols (runes, birds, knots) forming a vortex            intro_cut_07.png
+Cut_08   SKAZKA: TERRANOVA title card over the forest silhouette                   intro_cut_08.png
+
+
+IV. WORLD MAP & REGION GATING
+===============================
+
+[MISHA'S ROOM]
+      |  (auto, story trigger)
+[VILLAGE SQUARE] <-----------------------------------------+
+      |                                                     |
+      | Gate: speak to elder (unlocks after intro VO)       |
+[DARK WOOD -- EDGE]                                         |
+      |                                                     |
+      | Gate: defeat Leshy (first encounter)                |
+[DARK WOOD -- DEEP]                                         |
+      |  |                                                  |
+      |  +- Gate: find Domovoi (side path, unlock reel)     |
+      |                                                     |
+      | Gate: collect 3 Bone Charms (found in Deep Wood)    |
+[BONE MARKET]                                               |
+      |                                                     |
+      | Gate: acquire Hollow Key (from Baba Yaga trade)     |
+[HOLLOW MOUNTAIN -- APPROACH]                               |
+      |                                                     |
+      | Gate: defeat Zmeya Officer (mini-boss)              |
+[HOLLOW MOUNTAIN -- INTERIOR]                               |
+      |                                                     |
+      | Gate: complete the Cassette Ritual (3-reel combo)   |
+[VEIL THRESHOLD]                                            |
+      |                                                     |
+      | Gate: hear all 7 Narrator VO fragments              |
+[MEGABOSS ARENA] -------------------------------------------+
+
+Region entry triggers a notification banner (UI_029) with the region name in LESHY SCRIPT font.
+Locked gates show RegionGate_Lock_Icon with a one-line lore hint.
+
+
+V. COMPLETE GAME NARRATIVE
+===========================
+
+NARRATIVE FRAME -- The Subliminal Spine
+----------------------------------------
+Every piece of named content in SKAZKA: Terranova is the story of a boy who keeps watching
+the same video on the internet. He doesn't know this. The player, accumulating small textual
+anomalies, eventually does.
+
+
+ACT I -- THE ROOM AND THE WOOD
+--------------------------------
+
+Scene 1 -- Misha's Room (morning)
+
+[Narrator VO -- VO_001]
+"You've been here before. You just don't remember it yet."
+
+[Narrator VO -- VO_002]
+"His name is Misha. The cassette player is already warm. Someone pressed play before he woke up."
+
+Misha stands in his room. The player can examine three objects before the door is accessible:
+
+  - The Cassette Player -> [VO_003]: "It plays a song he hasn't heard. He hums along anyway."
+  - The Window -> [VO_004]: "The village. Birch and smoke. A crow on the fence that does not move when called."
+  - The Folk Doll on the shelf -> [VO_005]: "She's been turned to face the wall again. He doesn't remember doing that."
+
+When the player moves to exit:
+
+[Narrator VO -- VO_006]
+"The door was locked yesterday. Today it isn't. He decides not to think about why."
+
+---
+
+Scene 2 -- Village Square
+
+Elder Voron intercepts:
+
+[Elder Voron -- VO_007]
+"Boy. You're going into the Wood."
+
+[Misha -- VO_008]
+"I heard the sound again last night. The one that comes from the trees."
+
+[Elder Voron -- VO_009]
+"Everyone hears it eventually. Most have the sense to shut their windows."
+
+[Elder Voron -- VO_010]
+"Take this. It's a striking chart. You'll understand when the beat finds you."
+(Player receives Media Deck -- tutorial unlocked)
+
+[Elder Voron -- VO_011]
+"The Wood remembers every boy who walked in and came back changed. It doesn't remember their names."
+
+---
+
+Scene 3 -- Dark Wood Edge (first encounter: Leshy patrol)
+
+[Narrator VO -- VO_012]
+"The first thing the Wood shows you is something that used to be a man. The Leshy. It is mostly bark now. Mostly."
+
+[Pre-combat VO -- VO_013]
+"It doesn't speak. It beats. Listen."
+
+[Post-combat VO -- VO_014]
+"It falls. The Wood notes this. Something further in shifts its weight."
+
+---
+
+Scene 4 -- Dark Wood Edge (meeting Domovoi vendor, side path)
+
+[Domovoi -- VO_015]
+"You found me. Most don't bother. I keep my shop where the light's wrong on purpose."
+
+[Domovoi -- VO_016]
+"Ritual reels. Three for the price of one silence. What's a silence? You'll owe me one quiet moment.
+I collect them. Don't worry: you've already spent more than you meant to."
+(Player receives first reel slot set.)
+
+[Domovoi -- VO_017]
+(If player returns) "You smell like someone who's been here before. Same posture, same confusion.
+Third time this week for you, yes?"
+
+
+ACT II -- THE DEEP WOOD AND THE BONE MARKET
+---------------------------------------------
+
+Scene 5 -- Dark Wood Deep (multiple Kikimora encounters)
+
+[Narrator VO -- VO_018]
+"The Kikimora work in pairs. One makes you look right. One takes from the left. They learned this
+from watching something that learned it from watching people."
+
+[Combat -- Kikimora taunt, VO_019]
+(sung) "Boy-boy-boy who plays the beat -- what happens when the song repeats -- "
+
+[Combat -- Kikimora taunt, VO_020]
+"We remember the last one. He ran the same path. Went right, went left, went -- (click)"
+
+[Post-combat VO -- VO_021]
+"The Kikimora don't die. They fold. They'll unfold somewhere you're not watching."
+
+---
+
+Scene 6 -- Dark Wood Deep (discovery of the 3 Bone Charms)
+
+Bone Charm 1 -- near a collapsed shrine:
+[Narrator VO -- VO_022]
+"The trinket is cold. The shrine was for a forest spirit who stopped being thanked. Forgetting is
+its own kind of violence."
+
+Bone Charm 2 -- near a Rusalka encounter (river-bank sub-area):
+[Rusalka -- VO_023]
+"You're not the one I'm waiting for. But you'll do. You all do."
+
+[Rusalka combat goad -- VO_024]
+"You fight like someone trying to remember how. Yes. Keep trying. I remember watching you practice."
+
+[Narrator VO -- VO_025]
+"The charm is made from a splinter of a cassette case. You know this because you put it there.
+You don't know this yet."
+
+Bone Charm 3 -- near a hollow birch (Poludnitsa ambush, noon-light lighting cue):
+[Poludnitsa -- VO_026]
+"Stop. It is exactly noon. Answer my question or I will not let the moment pass."
+
+[Poludnitsa -- VO_027]
+"What is the last song you heard that you didn't choose?"
+
+(Player given three dialogue options -- all are the same answer formatted differently. Poludnitsa approves all three.)
+
+[Poludnitsa -- VO_028]
+"Acceptable. Here -- what you were already carrying before you arrived."
+
+---
+
+Scene 7 -- Bone Market
+
+[Narrator VO -- VO_029]
+"The market trades in things that aren't here anymore. The vendors are very patient about it."
+
+[Baba Yaga -- VO_030]
+"I've sold this key seventeen times this season. It always comes back to me. That means it never
+found who it was meant for. Or it always does. One of those."
+
+[Baba Yaga -- VO_031]
+"(examining Misha) You've looped before. Smaller loops than this. That's why the birds follow you --
+they're attempting to triangulate the recursion."
+(Player trades 3 Bone Charms for Hollow Key.)
+
+[Baba Yaga -- VO_032]
+"The Mountain is not the goal. It's the casing. What's inside the casing is the goal.
+And what's inside that: well. That's where you come in."
+
+
+ACT III -- THE HOLLOW MOUNTAIN
+--------------------------------
+
+Scene 8 -- Hollow Mountain Approach (Zmeya Officer mini-boss)
+
+[Narrator VO -- VO_033]
+"The Zmeya Officer was not always a dragon. It was an administrator. The distinction narrowed over centuries."
+
+[Zmeya Officer -- VO_034]
+"HALT. This facility requires authorisation. State your origin point, loop number, and current cassette index."
+
+[Misha -- VO_035]
+"...what?"
+
+[Zmeya Officer -- VO_036]
+"Irregular. Processing. Defaulting to COMBAT RESOLUTION PROTOCOL."
+
+[Mid-combat -- Zmeya Officer, VO_037]
+"You have been here before. Records indicate: seventeen prior attempts, zero successful escalations.
+You are showing marginal improvement. Marginal."
+
+[Defeat -- Zmeya Officer, VO_038]
+"...access granted. Marginal. Note filed. Loop counter... incrementing."
+(Zmeya falls -- Hollow Mountain gate unlocks.)
+
+---
+
+Scene 9 -- Hollow Mountain Interior
+
+[Narrator VO -- VO_039]
+"The inside of the Mountain remembers the outside. That's what makes it hollow -- not an absence
+of stone, but an excess of memory."
+
+(Multiple Rusalka + Kikimora encounters -- escalating difficulty, no new dialogue.)
+
+[Cassette Ritual Scene -- VO_040]
+"There is a player mounted in the rock. It has been waiting. The tape inside has your handwriting on the label."
+
+[Misha -- VO_041]
+"I didn't write this."
+
+[Narrator VO -- VO_042]
+"Not yet."
+
+(Player must execute the 3-reel Cassette Combo -- Cassette + Rune + Eye symbols -- to open the inner gate.
+This is the full reel-system tutorial moment.)
+
+[Post-ritual VO -- VO_043]
+"The Mountain's inner gate opens. The sound it makes is the sound of something that has been held
+closed a long time finally deciding to help."
+
+
+ACT IV -- THE VEIL
+--------------------
+
+Scene 10 -- Veil Threshold (7 Narrator VO fragments scattered through prior regions -- if all collected)
+
+[Narrator VO -- VO_044]
+"You found all seven. Good. Now they assemble."
+
+[Fragment Assembly -- VO_045]
+"He is not dreaming. The boy is not dreaming. He is playing. He has always been playing. The medium
+and the message are the boy and the tape and the forest and the loop."
+
+[Fragment 1 -- retroactively whispered in Room, VO_046]
+(barely audible) "first time."
+
+[Fragment 2 -- retroactively in Village, VO_047]
+(barely audible) "second path."
+
+[Fragments 3-7 -- accumulated through play]
+(Together they spell: "this. is. the. last. loop.")
+
+[Narrator VO -- VO_048]
+"You understand now, don't you? The Wood keeps him. The loop keeps the Wood. The tape keeps the loop.
+And at the centre of the tape there is a name."
+
+[Narrator VO -- VO_049]
+"The name is the one you haven't heard yet."
+
+(Veil Threshold zone -- reversed visual palette. Player navigates through a half-world where all previous
+NPCs appear as reversed silhouettes, walking backward on their original paths. No combat. Pure navigation.)
+
+[Baba Yaga silhouette -- VO_050]
+(backward audio, subtitle only) "You'll understand on the way back."
+
+
+ACT V -- THE MEGABOSS
+-----------------------
+
+Scene 11 -- Boss Ante-Chamber
+
+[Narrator VO -- VO_051]
+"His name is Koschei. But that is a frame placed around something that doesn't have a name.
+In this iteration, the frame has been bolted onto a tank."
+
+[Narrator VO -- VO_052]
+"The cassette plays. The tank plays. Koschei plays. All three are playing the same song.
+The boy is not allowed to stop."
+
+------------------------------------------------------------
+MEGABOSS: KOSCHEI-DEATHLESS / TANK-PRIME
+"The Deathless Engine -- He Who Runs the Loop"
+------------------------------------------------------------
+
+PHASE 1 -- Koschei-Tank Prime (at full HP)
+Visual: Giant skeletal figure fused with Newgrounds Tank chassis. Cassette tape spinal column.
+Folk rune sigils embedded in armour plates like circuit boards. Moves with bureaucratic deliberateness.
+
+[MegaBoss Phase 1 intro -- VO_053]
+"Log entry. Loop seventeen. Irregular player detected. Additional loop has been -- felt appropriate
+to say: I am tired. But I am not permitted to stop. Are you?"
+
+Phase 1 attacks:
+  - Beat Cannon: Fires a slow projectile on every 4th beat -- perfectly dodgeable if player is in-beat.
+  - Rune Sweep: Arm sweep telegraphed 2 beats early -- parry window.
+  - Folder Drop: Summons 3 stacks of administrative folders -- destroy via ritual or they stack into damage pillars.
+  - Loop Echo: At 66% HP -- spawns a near-transparent copy of Misha (half-power). Echo says VO_046 on spawn.
+
+QTE Event 1 (Phase 1 to 2 transition at 40% HP):
+  Screen freezes on Koschei staggering. QTE window opens.
+  [VO_054]: "He reaches inside the chassis. Something is being removed."
+  Prompt sequence: [A] [X] [RT] [LT] -- represents "pulling the tape from the drive"
+  SUCCESS: Tape flies out, phase 2 begins with explosion FX.
+  FAIL: Koschei heals 10% HP. QTE does not repeat -- combat continues.
+
+---
+
+PHASE 2 -- Koschei Unshelled (40%-15% HP)
+Visual: Tank chassis shattered. Exposed skeleton drive-core. Runes moving across bones.
+Orange aura. Faster, more erratic.
+
+[Phase 2 dialogue -- VO_055]
+"There. Now you see it. The drive. The deathless part. You can't destroy it. It's backed up
+in the tape you're carrying."
+
+[Narrator VO -- VO_056]
+"...Misha checks his pocket. The tape from his room. It is warm."
+
+Phase 2 attacks:
+  - Bone Chain: Long-range chain attack -- requires beat-timed double parry.
+  - Rune Barrage: Three rune-missiles in irregular rhythm -- breaks player's beat sync if hit.
+  - Admin Override: Summons Zmeya Officer shade -- defeat in 8 beats or Koschei heals 5%.
+  - Temporal Fold: At 25% HP -- screen briefly (1 frame) shows Misha's room background. (Full subliminal moment.)
+
+QTE Event 2 (Phase 2 to 3 transition at 15% HP):
+  [VO_057]: "He opens his chest. There is a cassette player inside. It is playing your tape."
+  Prompt: [X] [A] [A] [LT] [RT] -- "press play on the override track"
+  SUCCESS: Phase 3 begins.
+  FAIL: Phase 2 resets to 25% HP. QTE available again at 15%.
+
+---
+
+PHASE 3 -- The Name (15%-0%)
+Visual: All visuals strip back to silhouette. Screen goes to near-black. BGM: heartbeat sub-bass +
+one sustained note. Koschei visible only as negative-space cutout with self-assembling runes.
+
+[Phase 3 dialogue -- VO_058]
+(barely a sound -- subtitled): "Say the name. You know it now. You've heard it seventeen times."
+
+[Narrator VO -- VO_059]
+"Misha understands. Not as a thought. As a rhythm."
+
+Phase 3 mechanics:
+  - Beat indicator speeds up to 200% BPM.
+  - Attack windows are now 1-beat windows only.
+  - Three Super Ritual Combos required in sequence: each uses full 3-symbol reel draw.
+  - Any miss causes a 30-second Shadow Loop -- all enemies re-enter, Koschei heals 5%.
+  - On the third successful ritual: the deathless core is struck.
+
+Final QTE -- "The Last Tape":
+  Full-screen QTE. Screen shows Misha's hand reaching toward the cassette player in the boss.
+  All four buttons displayed on screen simultaneously.
+  Player must press them in the order they light up: 4 rounds, each faster.
+  [VO_060]: "Press play."
+  (Round 4 success) The screen goes white.
+
+---
+
+THE ENDING
+-----------
+
+[Narrator VO -- VO_061]
+"The tape ends. As tapes do. The Wood is quiet for the first time in seventeen loops."
+
+[Narrator VO -- VO_062]
+"Misha walks out of the Mountain. The village is there. The crow on the fence. The elder Voron,
+who says nothing and looks like someone who has been waiting for a long time to be able to stop."
+
+[Narrator VO -- VO_063]
+"The cassette player in his pocket is cold now. He doesn't put a new tape in. Not today."
+
+[Narrator VO -- VO_064]
+"He goes home. The folk doll on the shelf is facing the right way."
+
+[Narrator VO -- VO_065]
+"He doesn't know what that means. He knows it's right."
+
+[Final subtitle -- on black screen, Leshy Script font, very small, centre frame]:
+"You were the eighteenth."
+
+
+VI. COMBAT ENCOUNTER TABLE
+============================
+
+Region                        Enemy Types               Count  Special Conditions
+------                        -----------               -----  ------------------
+Misha's Room                  None                      --
+Village Square                None (safe zone)           --
+Dark Wood Edge                Leshy x1                   1     First blood, tutorial
+Dark Wood Edge                Kikimora x2                2     Random encounter on re-entry
+Dark Wood Deep                Leshy x2, Kikimora x2      4     Standard patrol loop
+Dark Wood Deep                Rusalka x1                 1     Charm 2 trigger (scripted)
+Dark Wood Deep                Poludnitsa x1              1     Charm 3 trigger (noon only, scripted)
+Dark Wood Deep                Kikimora x3                1     After all 3 charms found (wave)
+Bone Market                   None (vendor zone)         --
+Hollow Mountain Approach      Zmeya Officer x1           1     Gate guard (mini-boss)
+Hollow Mountain Approach      Leshy x2, Kikimora x2      4     Free patrol
+Hollow Mountain Interior      Rusalka x2, Kikimora x3    5     Dense -- respawn 1x
+Hollow Mountain Interior      Leshy x3                   3     After cassette ritual
+Veil Threshold                None (stealth/eerie)       --
+MegaBoss Arena                KOSCHEI-TANK-PRIME         3 phases  Final encounter
+
+Rhythm Patterns (for random encounters):
+  - Folk Pattern:    Regular 4/4,   BPM 90-110   -- forgiving
+  - Forest Pattern:  Irregular 5/4, BPM 100-120  -- requires adaptive timing
+  - Mountain Pattern:  7/8,         BPM 130-150  -- expert, introduces off-beat attacks
+
+
+VII. NEWGROUNDS x SLAVIC FOLKLORE ICONOGRAPHY FUSION DESIGN SYSTEM
+====================================================================
+
+VISUAL GRAMMAR
+---------------
+- Colour palette: Muted Slavic earthtones (ochre, birch-white, pine-shadow green, deep red-oxide)
+  corrupted by Newgrounds orange (#FF6600) on broken/corrupted elements. Orange = the intrusion.
+
+- Border language: All UI panels use folk-embroidery micro-borders. Where embroidery is interrupted
+  by a corrupted element, it resolves into pixelated Newgrounds logo fragments.
+
+- Enemy design rule: Every enemy has one Newgrounds-culture reference fused onto a Slavic archetype.
+  The Zmeya Officer wears the Tank logo as a badge. The Rusalka's hair floats in a looping animated
+  GIF frame. The Poludnitsa's scythe is a film-scrub slider.
+
+- Text rule: Lore text is set in Leshy Script. All "corrupted" or "from the other world" text appears
+  in Terranova Sans with random characters replaced by Newgrounds mascot ASCII glyphs.
+
+- Sound rule: Every BGM track uses traditional Slavic instrumentation as the melodic layer. The rhythmic
+  layer is lo-fi electronic -- specifically sounds recognisable from 2000s Flash era (GarageBand
+  presets, 8-bit SFX used as percussion).
+
+- Architecture rule: All Slavic structures are proportionally correct to folk references. Each has one
+  panel or sign that is clearly a rendered webpage -- a 404 error, a broken image placeholder, a
+  "skip intro" button carved in stone.
+
+
+VIII. SUBLIMINAL SUBTEXT SYSTEM
+=================================
+
+IMPLEMENTATION
+---------------
+At precisely defined moments, one frame (or 2 frames at 60fps) of a SubtextFlash image (FX_010)
+is inserted into the rendering pipeline. These are invisible to conscious perception at normal
+playback speed but visible if the player captures a screenshot at the right millisecond.
+The SubtextFlash images form a message when read in order.
+
+SUBTEXT EVENTS (in order)
+--------------------------
+#    Trigger                         SubtextFlash content
+1    Player first enters Dark Wood   A simple counter: "1" in Leshy Script
+2    Rusalka defeated                "2"
+3    Poludnitsa defeated             "3"
+4    Bone Market first entered       "4"
+5    Zmeya Officer defeated          "5"
+6    Cassette Ritual completed       "6"
+7    Veil Threshold entered          "7"
+8    MegaBoss Phase 1 to 2 QTE       "8"
+9    MegaBoss Phase 2 to 3 QTE       "9"
+10   Final QTE round 4 success       "10"
+11   Credits roll begins             Misha's room. Empty. Cassette player on shelf. Counter reads "18."
+
+Additionally, SFX_024 (ChildLaughter_Distant) is mixed at -18dB under BGM_005 (Dark Wood) and
+BGM_008 (Veil Threshold). Inaudible on phone speakers. Audible on headphones at specific loudness level.
+
+
+IX. CONTROLLER BUTTON ICON ASSETS (GENERIC)
+=============================================
+
+Four icons, styled as plain geometric shapes without branding:
+  - Icon A (confirm/jump):  Filled circle, accent colour 1
+  - Icon B (cancel/skip):   Filled circle, accent colour 2
+  - Icon X (attack):        Filled square, accent colour 3
+  - Icon Y (ritual):        Filled triangle, accent colour 4
+
+All four exist at two sizes (UI_030 large, UI_031 small).
+Only face button shapes needed for QTE prompts -- no triggers, bumpers, or D-pad icons.
+
+
+X. NEXT IMPLEMENTATION STEPS (Code)
+=====================================
+
+When ready to code this expansion:
+
+1. State machine in game.h
+   Add GamePhase enum: PHASE_SPLASH, PHASE_CUTSCENE, PHASE_TITLE, PHASE_ROOM,
+   PHASE_WORLD, PHASE_BOSS, PHASE_CREDITS
+
+2. Controller abstraction
+   Add CWInput struct mapping SDL_GameController buttons + keyboard to abstract actions from Section II
+
+3. Region gate system
+   Add region_flags bitfield to GameState; gate checks in map-transition code
+
+4. QTE system
+   Add QTEEvent struct (sequence, timing windows, success/fail callbacks); render QTE panel from UI_024
+
+5. Voice/audio hooks
+   Add cw_play_vo(int vo_id) shim using SDL_mixer
+
+6. Subtext system
+   Add subtext_flash_frame counter + render_subtext_flash() that injects one frame at trigger points
+
+7. Save system
+   Serialize GameState + region_flags + narrator_fragments_collected to binary save file
+
+8. Recraft manifest
+   Generate skazka_v2_manifest.json for all new background + character assets
+   (all prompts defined above in Section III-G and character descriptions in Section III-B)
+   Run generation pass when approved
+
+
+====================================================================
+SKAZKA: TERRANOVA -- GDD v0.2 -- drIpTECH -- 2026
+====================================================================

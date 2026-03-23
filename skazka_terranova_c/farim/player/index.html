@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FARIM Player</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <div class="shell">
+    <aside class="sidebar">
+      <h1>FARIM Player</h1>
+      <p class="subtitle">Browser runtime reference for `FluidAnimationRealityInteractiveMedia`.</p>
+      <label class="field">
+        <span>Package URL</span>
+        <input id="packageUrl" type="text" value="../../build/skazka_terranova_demo.farim">
+      </label>
+      <div class="actions">
+        <button id="loadBtn">Load Package</button>
+        <button id="nextMapBtn">Next Map</button>
+      </div>
+      <div class="status" id="status">Idle</div>
+      <div class="legend">
+        <div><strong>Controls</strong></div>
+        <div>`A` / `D`: Move</div>
+        <div>`J`: Attack</div>
+        <div>`K`: Ritual</div>
+        <div>`M`: Next map</div>
+      </div>
+      <pre class="meta" id="meta"></pre>
+    </aside>
+    <main class="stage-wrap">
+      <canvas id="stage" width="1280" height="720"></canvas>
+    </main>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js"></script>
+  <script type="module" src="./player.js"></script>
+</body>
+</html>

@@ -1,0 +1,97 @@
+{
+  "profile_name": "innsmouth_island_dimensional_protocol_v1",
+  "date": "2026-03-11",
+  "purpose": "Full asset-requirements manifest profile for pseudo-3D-ready InnsmouthIsland asset generation and runtime translation.",
+  "attachment_map": "innsmouth_island_attachment_map_v1.json",
+  "global_requirements": {
+    "module_ownership": {
+      "ORBDimensionView": [
+        "dimensional anchor node interpretation",
+        "curvature-consistent depth translation",
+        "top-cap projection",
+        "foreground occlusion and adjacent plane stitching"
+      ],
+      "ORBKinetics": [
+        "invisible hit and traversal silhouettes",
+        "exact-mask collision intent",
+        "anchor-linked collision precision",
+        "deterministic runtime approximation from authored silhouettes"
+      ],
+      "ORBGlue": [
+        "binding anchor and silhouette data to gameplay state",
+        "equipment socket and cosmetic attachment binding",
+        "animation-collision coherence",
+        "precision telemetry and discovery progression linkage"
+      ]
+    },
+    "anchor_nodes": {
+      "representation": "hidden alpha-zero distinct-color tether markers in transparent canvas margins",
+      "required_classes": [
+        "corner_nw",
+        "corner_ne",
+        "corner_se",
+        "corner_sw",
+        "top_plane",
+        "mid_plane",
+        "foot_plane"
+      ]
+    },
+    "detection_silhouettes": {
+      "policy": "Every gameplay-relevant asset family must define an invisible collision or interaction silhouette tighter than decorative overflow.",
+      "precision_goal": "pixel-precise authoring intent even if runtime begins with simplified silhouette approximation"
+    },
+    "shading": {
+      "policy": "single dominant light family with coherent highlight, shadow, and curvature cues for pseudo-3D depth translation",
+      "disallow": [
+        "contradictory rim directions",
+        "ambiguous inward shadow wells",
+        "flat unlayered environment masses"
+      ]
+    },
+    "translation": {
+      "policy": "assets must decompose into coherent plane groups for cubic-space stitching on a 2D canvas",
+      "runtime_targets": [
+        "foreground occlusion",
+        "top-cap projection",
+        "adjacent plane linking",
+        "socket-based equipment overlays"
+      ]
+    }
+  },
+  "family_requirements": {
+    "player": [
+      "equipment sockets",
+      "combat hit silhouette",
+      "curvature-consistent torso and limb lighting"
+    ],
+    "armor": [
+      "piece-swappable limbs and headpieces",
+      "anchor-readable overlay breakup",
+      "cosmetic render fidelity"
+    ],
+    "weapons": [
+      "grip socket clarity",
+      "combat sweep readability",
+      "decorative overflow excluded from collision intent"
+    ],
+    "environment": [
+      "foot-body-cap layering",
+      "adjacency anchors",
+      "occlusion silhouette"
+    ],
+    "ground": [
+      "top-plane perspective discipline",
+      "tile-edge stitchability",
+      "traversal silhouette zones"
+    ],
+    "fx": [
+      "low-mid-high stack anchors",
+      "volumetric-friendly layer separation",
+      "gameplay readability under occlusion"
+    ]
+  },
+  "generation_passes": {
+    "full": "innsmouth_island_protocol_full_manifest.json",
+    "polish": "innsmouth_island_protocol_polish_manifest.json"
+  }
+}

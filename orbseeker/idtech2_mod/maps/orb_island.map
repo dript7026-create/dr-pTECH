@@ -1,0 +1,35 @@
+// TrenchBroom/Quake .map for OrbSeeker island hub (simple placeholder)
+
+// entity 0
+{
+    "classname" "worldspawn"
+    "_bright" "1"
+
+    // brush: island base
+    ( -256 -256 0 ) ( 256 -256 0 ) ( 256 256 0 ) ( -256 256 0 ) ___texture___ 0 0 0 1 1
+    ( -256 -256 0 ) ( -256 -256 64 ) ( -256 256 64 ) ( -256 256 0 ) ___texture___ 0 0 0 1 1
+    ( 256 -256 0 ) ( 256 -256 64 ) ( 256 256 64 ) ( 256 256 0 ) ___texture___ 0 0 0 1 1
+    ( -256 -256 64 ) ( 256 -256 64 ) ( 256 256 64 ) ( -256 256 64 ) ___texture___ 0 0 0 1 1
+    ( -256 -256 0 ) ( -256 -256 64 ) ( 256 -256 64 ) ( 256 -256 0 ) ___texture___ 0 0 0 1 1
+    ( -256 256 0 ) ( -256 256 64 ) ( 256 256 64 ) ( 256 256 0 ) ___texture___ 0 0 0 1 1
+}
+
+// player start
+{
+    "classname" "info_player_start"
+    "origin" "0 0 72"
+}
+
+// raft entity placeholder
+{
+    "classname" "func_train"
+    "model" "*1"
+    "origin" "160 0 48"
+}
+
+// monkey NPC placeholder
+{
+    "classname" "misc_model"
+    "model" "models/monsters/monkey/tris.md2"
+    "origin" "120 -20 80"
+}

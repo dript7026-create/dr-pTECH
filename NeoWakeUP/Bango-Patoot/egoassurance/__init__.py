@@ -1,0 +1,1 @@
+"""Bango-Patoot EgoAssurance modules."""

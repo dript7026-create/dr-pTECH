@@ -1,0 +1,317 @@
+INNSMOUTH ISLAND ASSET BIBLE
+
+PROGRESS NOTE
+
+- The standalone executable path is validated through ORBEngine/build_innsmouth_island.ps1 and currently supports the InnsmouthIsland player, 10 total enemy entities, 23 weapons, 14 armor sets, persistent pickups, MurkShelters, shrine flow, lock-on, aerial actions, and a software atmospheric lighting pass.
+- The next gameplay-side engineering steps are intentionally deferred: boss-specific aerial phases, visible armor silhouette swaps, richer shrine upgrade consequences, fast-travel map choice, and full NG+ carryover.
+- This document freezes the asset-production pass so art, audio, pseudo-3D translation, physics mapping, and gameplay binding can proceed without losing the current gameplay state.
+
+PRODUCTION DOCTRINE
+
+- Tone: black-tide ooze-punk, wet New England ruin-horror, fungal bioluminescence, industrial fishing salvage, barnacle-metal, ceremonial abyss iconography.
+- Readability rule: every gameplay-significant silhouette must remain legible at gameplay camera distance before atmospheric treatment is added.
+- Material rule: surfaces should always communicate one of these states: soaked, salt-crusted, fungal, tar-black, oxidized brass, cracked basalt, eel-slick hide, or pearl-lit ritual polish.
+- Competitive-quality target: every asset needs three simultaneous readings: immediate gameplay silhouette, mid-range material storytelling, and close inspection micro-detail.
+- Animation doctrine: each motion set must have anticipation, commit, impact, settle, and recovery beats even if the runtime currently compresses them into fewer frames.
+- Audio doctrine: every action-worthy state requires a dry one-shot, a wet tail, and a systemic layer hook for ambience/music ducking.
+
+NAMING AND EXPORT RULES
+
+- Prefix all final InnsmouthIsland art with innsmouth_.
+- Split sheets by role: player, enemy, boss, weapon, armor, pickup, shelter, prop, landmark, ui, fx, codex.
+- Store authored pivots in metadata using foot-anchor for characters, center-anchor for pickups, base-anchor for props, and entry-anchor for traversable landmarks.
+- Keep collision-authoring masks separate from paint layers.
+- Author silhouette-safe versions first, then atmospheric overpaint variants second.
+- Preserve a neutral-light reference render for each asset so ORBdimensionView can derive pseudo-depth and collision extents consistently.
+
+ENTITY ANIMATION AND MOVESET SPECIFICATION
+
+PLAYER: FISH-MAN DRIFTER
+
+- Core silhouette: broad shoulders, amphibious neck frill, digitigrade lower legs, ribbed forearms, tide-wrapped waist gear, luminous throat sacs, salvage weapon harness.
+- Required animation suite:
+  - crawl_beach_intro: 12 frames.
+  - idle_breathing: 10 frames with throat pulse and shoulder drift.
+  - heal_moisture_draw: 12 frames with palm-to-chest resonance.
+  - walk_8dir_feel sheet posed for forward/strafe readability: 12 frames.
+  - run_8dir_feel: 12 frames with stronger shoulder lead.
+  - jump_start: 6 frames.
+  - jump_airborne: 8 frames.
+  - double_jump_or_air_kick transition: 6 frames.
+  - dodge_ground: 8 frames.
+  - dodge_air: 8 frames.
+  - crouch_lower: 4 frames.
+  - crouch_idle: 6 frames.
+  - slide: 8 frames with spray trail.
+  - focus_lock_stance: 8 frames.
+  - light_attack_chain_a_b_c: 8 plus 8 plus 10 frames.
+  - heavy_attack_chain_a_b: 12 plus 14 frames.
+  - aerial_light: 8 frames.
+  - aerial_heavy_plunge: 10 frames.
+  - block_start_hold_release: 4 plus 6 plus 4 frames.
+  - parry_flash: 6 frames.
+  - hurt_front and hurt_back: 6 plus 6 frames.
+  - stagger_short and stagger_long: 6 plus 10 frames.
+  - consume_throwable and consumable_use: 8 plus 8 frames.
+  - projectile_throw and projectile_aim: 8 plus 6 frames.
+  - shrine_rest_kneel: 12 frames.
+  - shrine_upgrade_resonance: 12 frames.
+  - victory_tide_ascend: 16 frames.
+  - defeat_sink: 12 frames.
+- Audio one-shots:
+  - wet footstep light, wet footstep heavy, stone footstep, wood footstep, shallow water splash, dodge splash, jump launch, landing thud, block shell ring, parry sting, light hit flesh, heavy hit crack, hurt hiss, healing resonance, seed pod throw, flask toss, knife fan release, shrine kneel, shrine awaken, death exhale.
+
+STANDARD ENEMIES
+
+- Deep One Raider: idle, patrol, alert, rush, 2-hit combo, grab feint, recoil, stagger, collapse, wet roar.
+- Shoggoth Spawn: pulsate idle, creep, split-lunge, pseudopod slam, recoil wobble, rupture death.
+- Nightgaunt Stalker: perch idle, glide, burst dive, talon slash, air recoil, perch reset, death fold.
+- Mi-Go Scavenger: idle twitch, sidestep, probe strike, scavenger harvest, recoil, alarm call, collapse.
+- Ghoul Woodsman: idle sway, trudge, overhead chop, shoulder rush, howl, recoil, kneel death.
+- Cultist Harpooner: idle prayer, strafe, aim, throw, reel-back, panic retreat, collapse.
+- Star-Spawn Wretch: idle vent, stalk, crush swipe, pressure burst, recoil, eruption death.
+- Drowned Pilgrim: kneel idle, drift walk, blessing channel, staff strike, heal pulse, recoil, robe slump death.
+
+BOSSES
+
+- Reptilian Abyss Prince:
+  - phase 1: idle throne rise, spear cast, tail sweep, command roar, leap slam, recoil.
+  - phase 2: venom spray, double sweep, pillar perch, aerial dive, summon seal pulse.
+  - phase 3: enraged crawl, triple strike, tidal shockwave, death unravel.
+- Jaguar Eclipse Tyrant:
+  - phase 1: crouch stalk, claw fan, shadow pounce, wall cling, recoil.
+  - phase 2: aerial rake, eclipse dash, roar burst, decoy fade, blood-moon slam.
+  - phase 3: chain pounce, corkscrew maul, collapsing roar, death disintegration.
+
+WEAPON VISUAL ASSET SPECIFICATION
+
+MELEE WEAPONS
+
+- Barnacle Shiv
+- Tide Hook
+- Coral Mace
+- Dock Cleaver
+- Shell Glaive
+- Pearl Pike
+- Kelp Lash
+- Mud-Saw Hatchet
+- Ooze Hammer
+- Brine Falx
+- Eelbone Saber
+- Ruin Breaker
+- Temple Harrow
+- Jetty Reaper
+- Black Pearl Axe
+- Newgame+ Abyss Halberd
+
+PROJECTILE AND THROWABLE WEAPONS
+
+- Throwing Knives
+- Mudglass Darts
+- Harpoon Coil
+- Molotov Brine Flask
+- Dust Seed Pod
+- Pearl Bolt Caster
+- Newgame+ Eclipse Launcher
+
+ARMOR SET VISUAL ASSET SPECIFICATION
+
+Each armor set must be authored as eight swappable pieces:
+
+- Upper Right Arm
+- Lower Right Arm
+- Upper Left Arm
+- Lower Left Arm
+- Upper Right Leg
+- Lower Right Leg
+- Upper Left Leg
+- Lower Left Leg
+
+Armor sets:
+
+- Shore Rag Harness
+- Dockworker Saltmail
+- Kelp-Wrap Strider
+- Mudplate Forager
+- Pearl-Lashed Raider
+- Ooze-Forged Pilgrim
+- Brackish Duelist Rig
+- Murk Templar Shell
+- Nightgaunt Veilweave
+- Star-Spawn Pressure Suit
+- Cult Tide Mantle
+- Basalt Canopy Guard
+- Abyss Prince Husk
+- Newgame+ Eclipse Regalia
+
+PICKUPS, SHELTERS, AND INTERACTIVE WORLD OBJECTS
+
+- Throwing knife pile variants.
+- Brine flask cache variants.
+- Seed pod bundle variants.
+- Brine salt cluster variants.
+- MurkShelter architecture set with distant silhouette, exterior, activated pearl beacon, interior menu backdrop, upgrade resonance flare, fast-travel ring, and save-memory pulse.
+
+ENVIRONMENT ASSET STACK FROM SMALLEST TO LARGEST
+
+MICRO PROPS
+
+- tide pebbles
+- shell shards
+- fish bones
+- barnacle crust decals
+- eel slime streak decals
+- fungal caps cluster
+- rope knots
+- wet leaves scatter
+- salt crystals
+- blood-in-water ripple decals
+
+CORE PROP SHEET TARGETS
+
+- twisted cedar tree
+- mangrove root cluster
+- black rock
+- tidepool stone
+- ruined wharf post
+- fog lamp
+- barnacled shrine
+- fishing crate
+- driftwood arch
+- fungus stump
+- vine gate
+- gravestone
+- skull totem
+- broken skiff
+- eel basket
+- rope coil
+- wet fern cluster
+- dead coral
+- standing stone
+- tide altar
+- fungus boulder
+- lantern pole
+- rib cage ruin
+- ritual obelisk
+
+MEDIUM STRUCTURES
+
+- collapsed dock span
+- flooded watch hut
+- shrine bridge segment
+- fungus-choked fence line
+- ritual boat cradle
+- eel smoke kiln
+- half-sunk chapel room
+- coral ossuary mound
+
+LARGE LANDMARKS
+
+- drowned village street
+- black basalt ridge
+- fungal grove basin
+- tidal caverns entrance
+- central murk marsh
+- cyclopean seal temple
+- boss crown terrace
+- storm shore arrival beach
+
+ATMOSPHERIC LAYERS
+
+- ground fog low
+- mid-canopy fog ribbons
+- rain sheets near camera
+- hanging spores
+- pearl motes
+- swamp flies
+- temple light shafts
+- water reflection streak bands
+
+AUDIO SPECIFICATION
+
+COMBAT AND INTERACTION ONE-SHOTS
+
+- player locomotion per surface: black sand, wet wood, basalt, shrine stone, muck, shallow water.
+- player exertion set: inhale, exhale, jump, land, hurt, heavy hurt, heal, parry, block, dodge, death.
+- weapon impacts by family: blade flesh, blade shell, blunt flesh, blunt stone, polearm stab, thrown knife hit, flask shatter, fire bloom, seed pod burst, bolt impact.
+- enemy vocals: idle, alert, attack, hurt, death for each of the 8 field enemy types.
+- boss vocals: phase start, special telegraph, stagger, enraged loop, death for each boss.
+- shrine audio: dormant hum, discovery ping, activation bloom, heal bed, save chime, upgrade surge, travel swell.
+- pickup audio: knife gather, flask pickup, seed gather, salt collect.
+
+FADE-COMPATIBLE ATMOSPHERIC SOUNDSCAPES
+
+- Arrival Shore
+- Drowned Village
+- Fungal Grove
+- Basalt Ridge
+- Murk Marsh
+- Tidal Caverns
+- Temple Approaches
+- Boss Crown
+
+MUSIC TRACKS AND STEMS
+
+- Title: 5 stems.
+- Exploration Low Threat: 6 stems.
+- Exploration High Threat: add pulse percussion and dissonant breath choir.
+- Shrine Safe State: 4 stems.
+- Seal Hunt Combat: 7 stems.
+- Boss Duo Phase 1: 6 stems.
+- Boss Duo Phase 2: 8 stems.
+- Boss Duo Phase 3: 9 stems.
+- Victory: 4 stems.
+
+ORBDIMENSIONVIEW TRANSLATION RULES
+
+- Use authored foot anchors as world contact points.
+- Split every character into depth bands: feet, shins, torso, head, carried gear, overhead effects.
+- Treat pseudo-height as authored metadata, not inferred transparency.
+- Props need base polygons for collision and separate visual overhang polygons.
+- Large landmarks need traversal masks plus occlusion silhouettes.
+- Atmospherics should stack in three planes: foreground veil, gameplay plane, far-depth body.
+- Recommended metadata per asset: pivot base, visual height, depth band count, shadow radius, occlusion class, collision proxy, hurtbox proxy, and interaction radius where applicable.
+
+ORBKINETICS MAPPING RULES
+
+- Exact collision should resolve against authored gameplay hulls, not painted silhouette fringe.
+- Every animation that changes stance must publish updated hurtbox and hurt-footprint metadata.
+- Aerial attacks require separate vertical occupancy lanes.
+- Pickups use circular interact proxies; shelters use capsule interact proxies; enemies use hull plus hurtbox sets.
+- Weapons require arc metadata: horizontal reach, vertical threat band, startup, active, recovery, stagger impulse.
+- Landmarks require surface tags: slick, shallow_water, loose_rock, shrine_stone, fungal_soft, wood_decay.
+
+ORBGLUE GAMEPLAY BINDING RULES
+
+- Discovery, codex entries, audio reveals, and lighting accents should all unlock from the same discovery event.
+- Shrine state should simultaneously control save availability, fast-travel availability, nearby light color, ambient mix, and codex note injection.
+- Weapon unlocks should trigger equipment UI highlight, codex update, and a unique pickup or forge sound.
+- Armor unlocks should drive defense values, movement feel descriptors, and visible limb-piece swaps.
+- Brine salt should bind to drop VFX, pickup SFX, shrine UI counters, and unlock notification copy from a single progression event.
+- Boss phase changes should publish a unified state packet to animation, lighting, music stem intensity, projectile frequency, and HUD warning logic.
+
+RECRAFT PASS GUIDANCE
+
+- Use the current asset sheets in ORBEngine/assets/innsmouth_island as reference controls when working in the Recraft UI or any image-conditioned workflow.
+- Use the generated manifest in drIpTECH/ReCraftGenerationStreamline/innsmouth_island_master_manifest.json for the text prompt base.
+- Favor atlas generation over isolated single assets for cohesion.
+- Keep every prompt explicit about gameplay readability, wet material breakup, silhouette uniqueness, and anchor clarity.
+
+DELIVERABLE CHECKLIST
+
+- Player master sheet
+- Enemy field roster sheet
+- Enemy action atlas
+- Boss duo action atlas
+- Melee weapon atlas
+- Projectile and throwable atlas
+- Armor set atlas with eight limb pieces per set
+- Pickup and MurkShelter atlas
+- Micro prop atlas
+- Core prop atlas
+- Landmark panorama sheet
+- Biome ground and decal sheet
+- HUD and icon atlas
+- Fog, light, ooze, and impact FX atlas
+- Audio implementation list with one-shots, atmospheres, and music stems
+- ORBdimensionView, ORBKinetics, and ORBGlue integration notes

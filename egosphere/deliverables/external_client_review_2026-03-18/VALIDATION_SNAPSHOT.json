@@ -1,0 +1,55 @@
+{
+  "prepared_date": "2026-03-18",
+  "repository": "egosphere",
+  "review_scope": [
+    "core gameplay cognition module",
+    "sample authoring pipeline",
+    "Pertinence Tribunal scaled example"
+  ],
+  "core_module": {
+    "command": "make smoke-test",
+    "status": "passed",
+    "summary": "smoke-test ok: Smoke Rival [inspector] threat=0.44 pressure=0.05 combo=0.03 mercy=0.66 ambition=0.52 engagements=3"
+  },
+  "sample_pipeline": {
+    "command": "c:/Users/rrcar/Documents/drIpTECH/.venv/Scripts/python.exe tools/validate_pipeline.py",
+    "status": "passed",
+    "project_name": "EgosphereGame",
+    "system_count": 4,
+    "entity_count": 3,
+    "precache_count": 5
+  },
+  "pertinence_validation": {
+    "command": "c:/Users/rrcar/Documents/drIpTECH/.venv/Scripts/python.exe tools/run_pertinence_e2e.py",
+    "status": "passed",
+    "build_output": {
+      "sprite_assets": 88,
+      "tilesets": 8,
+      "portraits": 6,
+      "fx_assets": 16,
+      "recraft_requests": 102,
+      "recraft_budget_units": 4080
+    },
+    "asset_checks": {
+      "png_assets_checked": 102,
+      "png_transparency_failures": 0
+    },
+    "blender_report": {
+      "mode": "dry-run",
+      "scene_count": 32,
+      "lift_count": 88
+    },
+    "idtech_summary": {
+      "asset_count": 102,
+      "precache_count": 102,
+      "system_count": 6,
+      "entity_count": 19
+    },
+    "recraft_api_key_present": true
+  },
+  "review_notes": [
+    "Historical Pertinence contact-sheet review folders are empty in the current repository snapshot.",
+    "Legacy markdown lint issues exist in some generated docs but do not block the validated code and bundle outputs.",
+    "This snapshot is intended for review, not final production signoff."
+  ]
+}

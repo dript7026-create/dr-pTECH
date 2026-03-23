@@ -1,0 +1,147 @@
+{
+  "spec_name": "bango_patoot_qa_demo_3d_reconstruction_spec",
+  "spec_version": "2026-03-12.v1",
+  "manifest_reference": "recraft/bango_patoot_qa_demo_manifest.json",
+  "purpose": "Defines the per-pixel, per-region, per-symbol-object, per-depth-layer, and per-rig translation contract for turning approved 2D masters into 3D-ready reconstruction data.",
+  "pipeline_stages": [
+    "pixel_matrix",
+    "neighbor_analysis_32",
+    "boundary_classification",
+    "region_segmentation",
+    "symbol_object_graph",
+    "depth_map_inference",
+    "spatial_metric_translation",
+    "mesh_contract_projection",
+    "rig_mapping",
+    "surface_texture_contract",
+    "keypose_intake_contract",
+    "runtime_inbetween_constraints"
+  ],
+  "neighbor_stencil_32": [
+    [-1, -1], [0, -1], [1, -1], [-1, 0], [1, 0], [-1, 1], [0, 1], [1, 1],
+    [-2, -2], [0, -2], [2, -2], [-2, 0], [2, 0], [-2, 2], [0, 2], [2, 2],
+    [-2, -1], [-1, -2], [1, -2], [2, -1], [-2, 1], [-1, 2], [1, 2], [2, 1],
+    [0, -3], [-1, -3], [1, -3], [-3, 0], [3, 0], [0, 3], [-1, 3], [1, 3]
+  ],
+  "pixel_record": {
+    "fields": [
+      "x",
+      "y",
+      "rgba",
+      "linear_rgb",
+      "lab",
+      "alpha_state",
+      "gradient_magnitude",
+      "gradient_direction",
+      "edge_confidence",
+      "region_id",
+      "symbol_id",
+      "depth_hint",
+      "surface_normal_hint",
+      "confidence"
+    ]
+  },
+  "region_rules": {
+    "empty_alpha_threshold": 0.05,
+    "soft_transition_delta_e_max": 8.0,
+    "hard_transition_delta_e_min": 14.0,
+    "silhouette_alpha_delta_min": 0.45,
+    "artifact_region_pixel_count_max": 6
+  },
+  "symbol_object_fields": [
+    "symbol_id",
+    "parent_symbol_id",
+    "category",
+    "bounding_box",
+    "pixel_count",
+    "boundary_contour",
+    "centroid",
+    "primary_color_family",
+    "material_family",
+    "thickness_hint",
+    "pivot_candidates",
+    "socket_candidates",
+    "collision_type",
+    "deformation_type",
+    "adjacent_symbol_ids",
+    "occlusion_order_hint"
+  ],
+  "depth_map_fields": [
+    "z_depth_normalized",
+    "x_surface_tilt",
+    "y_surface_tilt",
+    "confidence"
+  ],
+  "category_translation_rules": {
+    "player": {
+      "mesh_target": "rigged_actor_blockout",
+      "bind_to_rig": true,
+      "runtime_export": "24x36",
+      "deformation_priority": ["spine", "arms", "legs", "head", "secondary accessories"]
+    },
+    "companion": {
+      "mesh_target": "rigged_actor_blockout",
+      "bind_to_rig": true,
+      "runtime_export": "24x36",
+      "deformation_priority": ["neck", "head", "wings", "legs", "tail"]
+    },
+    "npc": {
+      "mesh_target": "rigged_or_statue_actor_blockout",
+      "bind_to_rig": true,
+      "runtime_export": "24x36",
+      "portrait_crop": "96x96"
+    },
+    "enemy": {
+      "mesh_target": "rigged_enemy_blockout",
+      "bind_to_rig": true,
+      "runtime_export": "24x36"
+    },
+    "enemy_elite": {
+      "mesh_target": "rigged_enemy_blockout",
+      "bind_to_rig": true,
+      "runtime_export": "32x48"
+    },
+    "boss": {
+      "mesh_target": "rigged_boss_blockout",
+      "bind_to_rig": true,
+      "runtime_export": "32x48"
+    },
+    "world": {
+      "mesh_target": "modular_environment_blockout",
+      "bind_to_rig": false,
+      "repeat_safe": true
+    },
+    "interactable": {
+      "mesh_target": "rigid_or_hinged_prop_blockout",
+      "bind_to_rig": false,
+      "collision_required": true
+    },
+    "wildlife": {
+      "mesh_target": "simple_actor_or_billboard_blockout",
+      "bind_to_rig": true
+    },
+    "fx": {
+      "mesh_target": "billboard_or_volume_card",
+      "bind_to_rig": false
+    },
+    "ui": {
+      "mesh_target": "screen_space_only",
+      "bind_to_rig": false
+    }
+  },
+  "required_outputs_per_asset": [
+    "pixel_matrix.json",
+    "region_map.json",
+    "symbol_objects.json",
+    "depth_map.png",
+    "spatial_metrics.json",
+    "mesh_contract.json",
+    "surface_contract.json"
+  ],
+  "animated_asset_extra_outputs": [
+    "rig_mapping.json",
+    "keypose_intake.json",
+    "runtime_inbetween_constraints.json"
+  ],
+  "practical_constraint": "The repo does not yet contain the approved generated QA demo master assets required to execute this full reconstruction pipeline. This spec defines the exact contract to run once those masters exist."
+}

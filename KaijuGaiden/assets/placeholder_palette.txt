@@ -1,0 +1,4 @@
+Placeholder palette and assets notes for Kaiju Gaiden prototype
+
+- Replace with PNG sprite sheets and palettes converted by tools/convert_tiles.py (not included yet).
+- Recommended GBA palettes: 4 palettes of 16 colors each (4bpp tiles).

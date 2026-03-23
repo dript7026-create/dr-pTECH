@@ -1,0 +1,202 @@
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 1
+Hexadecimal [32-Bits]
+
+Symbol Table
+
+    .__.$$$.                                                    =   00002710 L
+    .__.ABS.                                                    =   00000000 G
+    .__.CPU.                                                    =   00000000 L
+    .__.H$L.                                                    =   00000000 L
+    _LCDC_REG                                                       ******** GX
+  0 ___str_0                                                        000010CA R
+  0 ___str_1                                                        000010D0 R
+  0 ___str_10                                                       00001BCF R
+  0 ___str_11                                                       00001BDF R
+  0 ___str_12                                                       00001BEB R
+  0 ___str_13                                                       00001BF7 R
+  0 ___str_14                                                       00001C06 R
+  0 ___str_15                                                       00001C16 R
+  0 ___str_16                                                       00001C23 R
+  0 ___str_17                                                       00001C2D R
+  0 ___str_18                                                       00001C42 R
+  0 ___str_19                                                       00001C56 R
+  0 ___str_2                                                        000017DE R
+  0 ___str_20                                                       00001C5B R
+  0 ___str_21                                                       00001C6B R
+  0 ___str_22                                                       00001C71 R
+  0 ___str_23                                                       00001C80 R
+  0 ___str_24                                                       00001C88 R
+  0 ___str_25                                                       00001C98 R
+  0 ___str_26                                                       00001C9E R
+  0 ___str_27                                                       00001CAD R
+  0 ___str_28                                                       00001CB3 R
+  0 ___str_29                                                       00001CB9 R
+  0 ___str_3                                                        000017E4 R
+  0 ___str_30                                                       00001CC7 R
+  0 ___str_31                                                       00002891 R
+  0 ___str_32                                                       0000289A R
+  0 ___str_33                                                       000028A6 R
+  0 ___str_34                                                       000028B0 R
+  0 ___str_35                                                       000028B8 R
+  0 ___str_36                                                       000028C0 R
+  0 ___str_37                                                       00002AC4 R
+  0 ___str_38                                                       00002B12 R
+  0 ___str_39                                                       000038BA R
+  0 ___str_4                                                        000017E9 R
+  0 ___str_40                                                       000038C1 R
+  0 ___str_41                                                       000038CB R
+  0 ___str_42                                                       0000394E R
+  0 ___str_43                                                       00003958 R
+  0 ___str_5                                                        000017EE R
+  0 ___str_6                                                        000017F4 R
+  0 ___str_7                                                        00001BB3 R
+  0 ___str_8                                                        00001BB8 R
+  0 ___str_9                                                        00001BBC R
+    __divsint                                                       ******** GX
+    __divuchar                                                      ******** GX
+    __divuint                                                       ******** GX
+  3 __joy_cur                                                       00000001 R
+  3 __joy_prev                                                      00000000 R
+    __modsint                                                       ******** GX
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 2
+Hexadecimal [32-Bits]
+
+Symbol Table
+
+    __moduchar                                                      ******** GX
+  8 __xinit___joy_cur                                               00000001 R
+  8 __xinit___joy_prev                                              00000000 R
+  0 _abs_distance_u8                                                000011C0 R
+  0 _attack_hits_target                                             00001146 R
+  0 _bg_char_to_tile                                                00000B9B R
+  0 _bg_clear_row                                                   00001116 R
+  0 _bg_draw_beach                                                  00000FEB R
+  0 _bg_draw_beach_rows                                             00000E9C R
+  0 _bg_draw_beach_water_only                                       00000FF1 R
+  0 _bg_draw_number_2                                               000010D9 R
+  0 _bg_draw_splash                                                 00001025 R
+  0 _bg_draw_text                                                   00000C03 R
+  0 _bg_draw_title                                                  00001075 R
+  0 _bg_fill                                                        00000B76 R
+  0 _boss_attack_label                                              000017B0 R
+  0 _boss_attack_recover_frames                                     00001822 R
+  0 _boss_attack_windup_frames                                      000017F9 R
+  0 _boss_current_range                                             0000184B R
+  0 _boss_init                                                      00002F99 R
+  0 _boss_pick_attack                                               00001874 R
+  0 _boss_take_damage                                               00002FC9 R
+  0 _boss_update                                                    0000307A R
+  0 _camera_apply_x                                                 000012F9 R
+  0 _camera_apply_y                                                 00001314 R
+  0 _camera_punch                                                   000012B0 R
+  0 _camera_reset                                                   0000128C R
+  0 _camera_shake_x                                                 000012C1 R
+  0 _camera_shake_y                                                 000012DC R
+  0 _cinematic_init                                                 000026A9 R
+  0 _cinematic_update                                               000026C2 R
+  0 _clamp_s8                                                       000011CE R
+  0 _combat_camera_update                                           0000132F R
+  0 _combat_init                                                    00003394 R
+  0 _combat_minions_alive                                           00001129 R
+  0 _combat_set_banner                                              0000122A R
+  0 _combat_update                                                  0000343B R
+  0 _cypher_init                                                    000037E9 R
+  0 _cypher_update                                                  000038D6 R
+    _display_off                                                    ******** GX
+  0 _game_load_tiles                                                000000A3 R
+  0 _gameover_init                                                  00003927 R
+  0 _gameover_update                                                00003969 R
+  2 _gs                                                             00000000 R
+  0 _hud_draw                                                       000018DD R
+  0 _input_capture_frame                                            00001234 R
+    _joypad                                                         ******** GX
+  0 _main                                                           000039C8 GR
+  0 _main_gb_dmg_pal_20000_1046                                     00003B17 R
+    _memset                                                         ******** GX
+  0 _minion_spawn_wave                                              00002B17 R
+  0 _minion_update_all                                              00002BF5 R
+  0 _password_decode                                                00000D75 R
+  0 _password_draw                                                  000027FF R
+  0 _password_encode                                                00000CC3 R
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 3
+Hexadecimal [32-Bits]
+
+Symbol Table
+
+  0 _password_hex_to_nibble                                         00000C5A R
+  0 _password_init                                                  000028C7 R
+  0 _password_nibble_to_hex                                         00000C4B R
+  0 _password_update                                                00002919 R
+  0 _plat_delay_frames                                              00000097 R
+  0 _plat_held                                                      0000000D R
+  0 _plat_input_mask                                                00000026 R
+  0 _plat_load_bkg_tiles                                            00000077 R
+  0 _plat_load_sprite_tiles                                         00000087 R
+  0 _plat_poll_input                                                00000000 R
+  0 _plat_pressed                                                   00000016 R
+  0 _plat_pressed_mask                                              0000002D R
+  0 _plat_set_bkg_tile                                              0000003C R
+  0 _plat_set_sprite                                                00000047 R
+  0 _plat_vsync                                                     00000039 R
+  0 _player_attack_minions                                          00002E03 R
+    _set_bkg_data                                                   ******** GX
+    _set_bkg_palette                                                ******** GX
+    _set_bkg_tile_xy                                                ******** GX
+    _set_sprite_data                                                ******** GX
+    _shadow_OAM                                                     ******** GX
+  0 _splash_init                                                    0000261E R
+  0 _splash_update                                                  0000262F R
+  0 _spr_boss_p1_data                                               000007F6 R
+  0 _spr_boss_p2_data                                               00000876 R
+  0 _spr_boss_p3_data                                               000008F6 R
+  0 _spr_cinematic_a                                                000009F6 R
+  0 _spr_cinematic_b                                                00000AB6 R
+  0 _spr_draw_boss                                                  00001ED7 R
+  0 _spr_draw_cinematic                                             00002485 R
+  0 _spr_draw_fx                                                    000023D4 R
+  0 _spr_draw_minions                                               00002017 R
+  0 _spr_draw_rei                                                   00001CD6 R
+  0 _spr_fx_hit_data                                                000009B6 R
+  0 _spr_fx_nano_data                                               000009D6 R
+  0 _spr_hide_all                                                   00002609 R
+  0 _spr_minion_data                                                00000976 R
+  0 _spr_rei_attack_data                                            00000796 R
+  0 _spr_rei_idle_data                                              000006D6 R
+  0 _spr_rei_run_data                                               00000736 R
+  0 _stage_intro_init                                               00002A94 R
+  0 _stage_intro_update                                             00002AC9 R
+  0 _tile_blank                                                     000003F6 R
+  0 _tile_boss_hp_bar                                               000005D6 R
+  0 _tile_cliff_ab                                                  00000446 R
+  0 _tile_digit                                                     00000636 R
+  0 _tile_ground_lr                                                 00000406 R
+  0 _tile_hp_seg                                                    000005C6 R
+  0 _tile_sky_ab                                                    00000466 R
+  0 _tile_splash                                                    00000486 R
+  0 _tile_title                                                     00000506 R
+  0 _tile_water_ab                                                  00000426 R
+  0 _title_init                                                     0000272A R
+  0 _title_update                                                   0000273E R
+    _wait_vbl_done                                                  ******** GX
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 4
+Hexadecimal [32-Bits]
+
+Symbol Table
+
+
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (GameBoy)                  Page 5
+Hexadecimal [32-Bits]
+
+Area Table
+
+   0 _CODE                                      size     3B1F   flags    0
+   1 _HRAM                                      size        0   flags    0
+   2 _DATA                                      size       88   flags    0
+   3 _INITIALIZED                               size        2   flags    0
+   4 _DABS                                      size        0   flags    8
+   5 _HOME                                      size        0   flags    0
+   6 _GSINIT                                    size        0   flags    0
+   7 _GSFINAL                                   size        0   flags    0
+   8 _INITIALIZER                               size        2   flags    0
+   9 _CABS                                      size        0   flags    8
+

@@ -1,0 +1,38 @@
+[
+  {
+    "name": "artbook_cover_v2",
+    "prompt": "premium horror concept art book cover base image, towering Soviet apartment stairwell descending into impossible darkness, a lone child standing at the base of the frame facing upward, mold-like bioluminescent growths along cracked walls, sodium orange bulb high above, peeling stairwell green paint, strong negative space for title at upper center, severe atmospheric depth, painterly digital concept art, cinematic, high detail, no text",
+    "w": 1344,
+    "h": 768,
+    "out": "artbook/page01_cover_base.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "artbook_table_of_contents",
+    "prompt": "atmospheric horror dossier spread, Soviet apartment blueprint fragments, pinned photographs, hand-drawn arrows, torn notes, stairwell diagrams, ritual markings, evidence-board composition with clear empty layout space for a table of contents panel, nicotine yellow paper, bruised violet shadows, sodium orange desk lamp light, painterly digital concept art, high detail, no text",
+    "w": 1344,
+    "h": 768,
+    "out": "artbook/page02_toc_base.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "artbook_legalities_page",
+    "prompt": "moody archival legal page background, aged Soviet office desk with stamped folders, red wax seal, typed reports, bureaucratic forms, fountain pen, evidence tags, faint apartment floorplans beneath translucent paper, low amber desk light against cold shadow, clean central composition for a legal notice panel, painterly digital concept art, high detail, no text",
+    "w": 1344,
+    "h": 768,
+    "out": "artbook/page12_legalities_base.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "artbook_rear_cover",
+    "prompt": "rear cover concept art base image, bleak Soviet courtyard after rain at blue-hour night, concrete block facades looming in silence, weak window glow, dead playground, wet asphalt reflections, a distant stairwell entrance radiating faint orange light, melancholy horror atmosphere, restrained composition with space for a small back-cover blurb near the lower right, painterly digital concept art, high detail, no text",
+    "w": 1344,
+    "h": 768,
+    "out": "artbook/page13_rear_cover_base.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  }
+]

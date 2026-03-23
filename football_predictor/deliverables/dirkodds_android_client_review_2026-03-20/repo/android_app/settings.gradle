@@ -1,0 +1,2 @@
+rootProject.name = 'urbden-android'
+include ':app'

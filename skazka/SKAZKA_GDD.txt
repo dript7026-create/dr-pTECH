@@ -1,0 +1,14 @@
+﻿SKAZKA - GAME DESIGN DOCUMENT (GDD)
+Version: 1.0
+Date: 2026-03-08
+
+- Startup: drIpTech -> Do9Graphics -> DripSkullTechnologies -> SKAZKA title -> skippable cinematic
+- Main Menu: New Game / Continue / Settings / Exit
+- Settings: Master, Music, SFX knobs + Performance/Quality toggle
+- New Game overwrite prompt when save exists
+- Core content: 123 minions, 14 overworld bosses, 8 plot bosses, 436 puzzles
+- Companion: demon-cherub fairy morality system
+- Platform: Windows + Xbox Series Controller support (XInput)
+
+END OF DOCUMENT
+

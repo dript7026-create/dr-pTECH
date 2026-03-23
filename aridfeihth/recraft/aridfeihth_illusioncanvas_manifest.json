@@ -1,0 +1,87 @@
+{
+  "name": "aridfeihth_illusioncanvas_vertical_slice",
+  "version": "2026-03-13.vertical-slice",
+  "intent": "Dedicated IllusionCanvasInteractive production manifest for the aridfeihth vertical slice. This keeps the project on its own asset-program path instead of inheriting the broader Bango clip-blend-id stream.",
+  "assets": [
+    {
+      "name": "latchspire_refuge_backdrop",
+      "category": "environment_set",
+      "out": "aridfeihth/production_raw/spaces/latchspire_refuge_backdrop.png",
+      "generation_mode": "packed_master",
+      "pipeline_targets": ["illusioncanvas"],
+      "protocol": {"layout": "room_backdrop", "derived_outputs": ["parallax_plate", "collision_preview"]}
+    },
+    {
+      "name": "choir_stair_backdrop",
+      "category": "environment_set",
+      "out": "aridfeihth/production_raw/spaces/choir_stair_backdrop.png",
+      "generation_mode": "packed_master",
+      "pipeline_targets": ["illusioncanvas"],
+      "protocol": {"layout": "room_backdrop", "derived_outputs": ["parallax_plate", "encounter_zone_preview"]}
+    },
+    {
+      "name": "glasswind_causeway_backdrop",
+      "category": "environment_set",
+      "out": "aridfeihth/production_raw/spaces/glasswind_causeway_backdrop.png",
+      "generation_mode": "packed_master",
+      "pipeline_targets": ["illusioncanvas"],
+      "protocol": {"layout": "room_backdrop", "derived_outputs": ["parallax_plate", "hazard_mask"]}
+    },
+    {
+      "name": "ember_nave_backdrop",
+      "category": "environment_set",
+      "out": "aridfeihth/production_raw/spaces/ember_nave_backdrop.png",
+      "generation_mode": "packed_master",
+      "pipeline_targets": ["illusioncanvas"],
+      "protocol": {"layout": "room_backdrop", "derived_outputs": ["parallax_plate", "boss_gate_overlay"]}
+    },
+    {
+      "name": "field_handler_sheet",
+      "category": "character_sheet",
+      "out": "aridfeihth/production_raw/actors/field_handler_sheet.png",
+      "generation_mode": "packed_master",
+      "pipeline_targets": ["illusioncanvas"],
+      "protocol": {"layout": "sideview_actor_sheet", "derived_outputs": ["collision_preview", "idle_pose_strip"]}
+    },
+    {
+      "name": "mirror_newt_sheet",
+      "category": "character_sheet",
+      "out": "aridfeihth/production_raw/actors/mirror_newt_sheet.png",
+      "generation_mode": "packed_master",
+      "pipeline_targets": ["illusioncanvas"],
+      "protocol": {"layout": "simiam_key_sheet", "derived_outputs": ["rescue_pose_strip"]}
+    },
+    {
+      "name": "latch_spider_sheet",
+      "category": "character_sheet",
+      "out": "aridfeihth/production_raw/actors/latch_spider_sheet.png",
+      "generation_mode": "packed_master",
+      "pipeline_targets": ["illusioncanvas"],
+      "protocol": {"layout": "simiam_key_sheet", "derived_outputs": ["rescue_pose_strip"]}
+    },
+    {
+      "name": "salt_ram_sheet",
+      "category": "character_sheet",
+      "out": "aridfeihth/production_raw/actors/salt_ram_sheet.png",
+      "generation_mode": "packed_master",
+      "pipeline_targets": ["illusioncanvas"],
+      "protocol": {"layout": "simiam_key_sheet", "derived_outputs": ["route_break_preview"]}
+    },
+    {
+      "name": "bond_weave_fx",
+      "category": "combat_fx",
+      "out": "aridfeihth/production_raw/effects/bond_weave_fx.png",
+      "generation_mode": "packed_master",
+      "pipeline_targets": ["illusioncanvas"],
+      "protocol": {"layout": "effect_strip", "derived_outputs": ["impact_variants"]}
+    },
+    {
+      "name": "aridfeihth_hud_pack",
+      "category": "hud_pack",
+      "out": "aridfeihth/production_raw/interface/aridfeihth_hud_pack.png",
+      "generation_mode": "packed_master",
+      "pipeline_targets": ["illusioncanvas"],
+      "protocol": {"layout": "hud_pack", "derived_outputs": ["bond_meter_overlay", "milestone_frame"]}
+    }
+  ]
+}

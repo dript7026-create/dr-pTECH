@@ -1,0 +1,920 @@
+[
+  {
+    "name": "kier_rat_ronin",
+    "prompt": "transparent background detailed 2D side-view spritesheet for Kier Rat Ronin, a rat-man ronin protagonist in Pertinence: Tribunal; distinct silhouette, hand-painted souls-like metroidvania style, wide color range focused on #c1524a, environmental influence from mist-lashed tribunal frontier, include readable key poses for idle, idle_breath, walk, run, sprint_stop, crouch, high detail, no text",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/sprites/kier_rat_ronin.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "ash_censer",
+    "prompt": "transparent background detailed 2D side-view spritesheet for Ash Censer, a low-tier skirmisher enemy in Pertinence: Tribunal; distinct silhouette, hand-painted souls-like metroidvania style, wide color range focused on #6c5e4a, environmental influence from marsh settlements and plague shrines, include readable key poses for idle, patrol_walk, alert_run, feint, thrust, retreat, high detail, no text",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/sprites/ash_censer.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "mildew_spearman",
+    "prompt": "transparent background detailed 2D side-view spritesheet for Mildew Spearman, a low-tier skirmisher enemy in Pertinence: Tribunal; distinct silhouette, hand-painted souls-like metroidvania style, wide color range focused on #736353, environmental influence from marsh settlements and plague shrines, include readable key poses for idle, patrol_walk, alert_run, feint, thrust, retreat, high detail, no text",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/sprites/mildew_spearman.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "shrine_urchin",
+    "prompt": "transparent background detailed 2D side-view spritesheet for Shrine Urchin, a low-tier ambush enemy in Pertinence: Tribunal; distinct silhouette, hand-painted souls-like metroidvania style, wide color range focused on #7a685c, environmental influence from marsh settlements and plague shrines, include readable key poses for idle, creep, ceiling_drop, scuttle, swipe, poison_spit, high detail, no text",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/sprites/shrine_urchin.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "gutter_flagellant",
+    "prompt": "transparent background detailed 2D side-view spritesheet for Gutter Flagellant, a low-tier brute enemy in Pertinence: Tribunal; distinct silhouette, hand-painted souls-like metroidvania style, wide color range focused on #816d65, environmental influence from marsh settlements and plague shrines, include readable key poses for idle, stomp_walk, guard_up, shield_bash, overhead_slam, charge, high detail, no text",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/sprites/gutter_flagellant.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "vermin_lantern",
+    "prompt": "transparent background detailed 2D side-view spritesheet for Vermin Lantern, a low-tier ranged enemy in Pertinence: Tribunal; distinct silhouette, hand-painted souls-like metroidvania style, wide color range focused on #88726e, environmental influence from marsh settlements and plague shrines, include readable key poses for idle, patrol_walk, backpedal, aim_fire, reload, trap_set, high detail, no text",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/sprites/vermin_lantern.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "docket_hound",
+    "prompt": "transparent background detailed 2D side-view spritesheet for Docket Hound, a low-tier ambush enemy in Pertinence: Tribunal; distinct silhouette, hand-painted souls-like metroidvania style, wide color range focused on #8f7777, environmental influence from marsh settlements and plague shrines, include readable key poses for idle, creep, ceiling_drop, scuttle, swipe, poison_spit, high detail, no text",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/sprites/docket_hound.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "reed_sapper",
+    "prompt": "transparent background detailed 2D side-view spritesheet for Reed Sapper, a low-tier ranged enemy in Pertinence: Tribunal; distinct silhouette, hand-painted souls-like metroidvania style, wide color range focused on #967c80, environmental influence from marsh settlements and plague shrines, include readable key poses for idle, patrol_walk, backpedal, aim_fire, reload, trap_set, high detail, no text",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/sprites/reed_sapper.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "silt_acolyte",
+    "prompt": "transparent background detailed 2D side-view spritesheet for Silt Acolyte, a low-tier skirmisher enemy in Pertinence: Tribunal; distinct silhouette, hand-painted souls-like metroidvania style, wide color range focused on #9d8189, environmental influence from marsh settlements and plague shrines, include readable key poses for idle, patrol_walk, alert_run, feint, thrust, retreat, high detail, no text",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/sprites/silt_acolyte.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "briar_monk",
+    "prompt": "transparent background detailed 2D side-view spritesheet for Briar Monk, a low-tier brute enemy in Pertinence: Tribunal; distinct silhouette, hand-painted souls-like metroidvania style, wide color range focused on #a48692, environmental influence from marsh settlements and plague shrines, include readable key poses for idle, stomp_walk, guard_up, shield_bash, overhead_slam, charge, high detail, no text",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/sprites/briar_monk.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "tar_crow",
+    "prompt": "transparent background detailed 2D side-view spritesheet for Tar Crow, a low-tier ambush enemy in Pertinence: Tribunal; distinct silhouette, hand-painted souls-like metroidvania style, wide color range focused on #ab8b9b, environmental influence from marsh settlements and plague shrines, include readable key poses for idle, creep, ceiling_drop, scuttle, swipe, poison_spit, high detail, no text",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/sprites/tar_crow.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "pale_usher",
+    "prompt": "transparent background detailed 2D side-view spritesheet for Pale Usher, a low-tier ranged enemy in Pertinence: Tribunal; distinct silhouette, hand-painted souls-like metroidvania style, wide color range focused on #b290a4, environmental influence from marsh settlements and plague shrines, include readable key poses for idle, patrol_walk, backpedal, aim_fire, reload, trap_set, high detail, no text",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/sprites/pale_usher.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "mire_hauler",
+    "prompt": "transparent background detailed 2D side-view spritesheet for Mire Hauler, a low-tier brute enemy in Pertinence: Tribunal; distinct silhouette, hand-painted souls-like metroidvania style, wide color range focused on #b995ad, environmental influence from marsh settlements and plague shrines, include readable key poses for idle, stomp_walk, guard_up, shield_bash, overhead_slam, charge, high detail, no text",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/sprites/mire_hauler.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "plague_bell",
+    "prompt": "transparent background detailed 2D side-view spritesheet for Plague Bell, a low-tier skirmisher enemy in Pertinence: Tribunal; distinct silhouette, hand-painted souls-like metroidvania style, wide color range focused on #c09ab6, environmental influence from marsh settlements and plague shrines, include readable key poses for idle, patrol_walk, alert_run, feint, thrust, retreat, high detail, no text",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/sprites/plague_bell.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "quill_marauder",
+    "prompt": "transparent background detailed 2D side-view spritesheet for Quill Marauder, a low-tier skirmisher enemy in Pertinence: Tribunal; distinct silhouette, hand-painted souls-like metroidvania style, wide color range focused on #6d9fbf, environmental influence from marsh settlements and plague shrines, include readable key poses for idle, patrol_walk, alert_run, feint, thrust, retreat, high detail, no text",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/sprites/quill_marauder.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "writ_leech",
+    "prompt": "transparent background detailed 2D side-view spritesheet for Writ Leech, a low-tier ambush enemy in Pertinence: Tribunal; distinct silhouette, hand-painted souls-like metroidvania style, wide color range focused on #74a450, environmental influence from marsh settlements and plague shrines, include readable key poses for idle, creep, ceiling_drop, scuttle, swipe, poison_spit, high detail, no text",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/sprites/writ_leech.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "salt_rustic",
+    "prompt": "transparent background detailed 2D side-view spritesheet for Salt Rustic, a low-tier brute enemy in Pertinence: Tribunal; distinct silhouette, hand-painted souls-like metroidvania style, wide color range focused on #7ba959, environmental influence from marsh settlements and plague shrines, include readable key poses for idle, stomp_walk, guard_up, shield_bash, overhead_slam, charge, high detail, no text",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/sprites/salt_rustic.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "veil_skulker",
+    "prompt": "transparent background detailed 2D side-view spritesheet for Veil Skulker, a low-tier ambush enemy in Pertinence: Tribunal; distinct silhouette, hand-painted souls-like metroidvania style, wide color range focused on #82ae62, environmental influence from marsh settlements and plague shrines, include readable key poses for idle, creep, ceiling_drop, scuttle, swipe, poison_spit, high detail, no text",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/sprites/veil_skulker.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "lantern_broker",
+    "prompt": "transparent background detailed 2D side-view spritesheet for Lantern Broker, a low-tier ranged enemy in Pertinence: Tribunal; distinct silhouette, hand-painted souls-like metroidvania style, wide color range focused on #89b36b, environmental influence from marsh settlements and plague shrines, include readable key poses for idle, patrol_walk, backpedal, aim_fire, reload, trap_set, high detail, no text",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/sprites/lantern_broker.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "reed_cutthroat",
+    "prompt": "transparent background detailed 2D side-view spritesheet for Reed Cutthroat, a low-tier skirmisher enemy in Pertinence: Tribunal; distinct silhouette, hand-painted souls-like metroidvania style, wide color range focused on #90b874, environmental influence from marsh settlements and plague shrines, include readable key poses for idle, patrol_walk, alert_run, feint, thrust, retreat, high detail, no text",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/sprites/reed_cutthroat.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "plague_harrier",
+    "prompt": "transparent background detailed 2D side-view spritesheet for Plague Harrier, a low-tier ambush enemy in Pertinence: Tribunal; distinct silhouette, hand-painted souls-like metroidvania style, wide color range focused on #97bd7d, environmental influence from marsh settlements and plague shrines, include readable key poses for idle, creep, ceiling_drop, scuttle, swipe, poison_spit, high detail, no text",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/sprites/plague_harrier.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "ossuary_porter",
+    "prompt": "transparent background detailed 2D side-view spritesheet for Ossuary Porter, a low-tier brute enemy in Pertinence: Tribunal; distinct silhouette, hand-painted souls-like metroidvania style, wide color range focused on #9ec286, environmental influence from marsh settlements and plague shrines, include readable key poses for idle, stomp_walk, guard_up, shield_bash, overhead_slam, charge, high detail, no text",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/sprites/ossuary_porter.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "tithe_stalker",
+    "prompt": "transparent background detailed 2D side-view spritesheet for Tithe Stalker, a low-tier ranged enemy in Pertinence: Tribunal; distinct silhouette, hand-painted souls-like metroidvania style, wide color range focused on #a5c78f, environmental influence from marsh settlements and plague shrines, include readable key poses for idle, patrol_walk, backpedal, aim_fire, reload, trap_set, high detail, no text",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/sprites/tithe_stalker.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "marsh_carrion",
+    "prompt": "transparent background detailed 2D side-view spritesheet for Marsh Carrion, a low-tier ambush enemy in Pertinence: Tribunal; distinct silhouette, hand-painted souls-like metroidvania style, wide color range focused on #ac5e98, environmental influence from marsh settlements and plague shrines, include readable key poses for idle, creep, ceiling_drop, scuttle, swipe, poison_spit, high detail, no text",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/sprites/marsh_carrion.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "censer_duelist",
+    "prompt": "transparent background detailed 2D side-view spritesheet for Censer Duelist, a low-tier skirmisher enemy in Pertinence: Tribunal; distinct silhouette, hand-painted souls-like metroidvania style, wide color range focused on #b363a1, environmental influence from marsh settlements and plague shrines, include readable key poses for idle, patrol_walk, alert_run, feint, thrust, retreat, high detail, no text",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/sprites/censer_duelist.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "ossuary_knight",
+    "prompt": "transparent background detailed 2D side-view spritesheet for Ossuary Knight, a mid-tier duelist enemy in Pertinence: Tribunal; distinct silhouette, hand-painted souls-like metroidvania style, wide color range focused on #526c81, environmental influence from cathedral precincts and ash bridges, include readable key poses for idle, walk, run, jump, feint, light_attack, high detail, no text",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/sprites/ossuary_knight.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "marsh_inquisitor",
+    "prompt": "transparent background detailed 2D side-view spritesheet for Marsh Inquisitor, a mid-tier duelist enemy in Pertinence: Tribunal; distinct silhouette, hand-painted souls-like metroidvania style, wide color range focused on #5d7992, environmental influence from cathedral precincts and ash bridges, include readable key poses for idle, walk, run, jump, feint, light_attack, high detail, no text",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/sprites/marsh_inquisitor.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "chain_hierophant",
+    "prompt": "transparent background detailed 2D side-view spritesheet for Chain Hierophant, a mid-tier caster enemy in Pertinence: Tribunal; distinct silhouette, hand-painted souls-like metroidvania style, wide color range focused on #6886a3, environmental influence from cathedral precincts and ash bridges, include readable key poses for idle, walk, hover_step, ward_raise, projectile_cast, sigil_drop, high detail, no text",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/sprites/chain_hierophant.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "catacomb_duelist",
+    "prompt": "transparent background detailed 2D side-view spritesheet for Catacomb Duelist, a mid-tier duelist enemy in Pertinence: Tribunal; distinct silhouette, hand-painted souls-like metroidvania style, wide color range focused on #7393b4, environmental influence from cathedral precincts and ash bridges, include readable key poses for idle, walk, run, jump, feint, light_attack, high detail, no text",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/sprites/catacomb_duelist.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "abbey_ballista",
+    "prompt": "transparent background detailed 2D side-view spritesheet for Abbey Ballista, a mid-tier siege enemy in Pertinence: Tribunal; distinct silhouette, hand-painted souls-like metroidvania style, wide color range focused on #7ea0c5, environmental influence from cathedral precincts and ash bridges, include readable key poses for idle, deploy_walk, brace, aim, fire_volley, reload, high detail, no text",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/sprites/abbey_ballista.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "river_herald",
+    "prompt": "transparent background detailed 2D side-view spritesheet for River Herald, a mid-tier caster enemy in Pertinence: Tribunal; distinct silhouette, hand-painted souls-like metroidvania style, wide color range focused on #89ad86, environmental influence from cathedral precincts and ash bridges, include readable key poses for idle, walk, hover_step, ward_raise, projectile_cast, sigil_drop, high detail, no text",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/sprites/river_herald.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "gilded_bailiff",
+    "prompt": "transparent background detailed 2D side-view spritesheet for Gilded Bailiff, a mid-tier duelist enemy in Pertinence: Tribunal; distinct silhouette, hand-painted souls-like metroidvania style, wide color range focused on #94ba97, environmental influence from cathedral precincts and ash bridges, include readable key poses for idle, walk, run, jump, feint, light_attack, high detail, no text",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/sprites/gilded_bailiff.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "moonlit_chastener",
+    "prompt": "transparent background detailed 2D side-view spritesheet for Moonlit Chastener, a mid-tier caster enemy in Pertinence: Tribunal; distinct silhouette, hand-painted souls-like metroidvania style, wide color range focused on #9f6da8, environmental influence from cathedral precincts and ash bridges, include readable key poses for idle, walk, hover_step, ward_raise, projectile_cast, sigil_drop, high detail, no text",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/sprites/moonlit_chastener.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "pestilent_warden",
+    "prompt": "transparent background detailed 2D side-view spritesheet for Pestilent Warden, a mid-tier siege enemy in Pertinence: Tribunal; distinct silhouette, hand-painted souls-like metroidvania style, wide color range focused on #aa7ab9, environmental influence from cathedral precincts and ash bridges, include readable key poses for idle, deploy_walk, brace, aim, fire_volley, reload, high detail, no text",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/sprites/pestilent_warden.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "ferry_exorcist",
+    "prompt": "transparent background detailed 2D side-view spritesheet for Ferry Exorcist, a mid-tier caster enemy in Pertinence: Tribunal; distinct silhouette, hand-painted souls-like metroidvania style, wide color range focused on #b587ca, environmental influence from cathedral precincts and ash bridges, include readable key poses for idle, walk, hover_step, ward_raise, projectile_cast, sigil_drop, high detail, no text",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/sprites/ferry_exorcist.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "brine_archivist",
+    "prompt": "transparent background detailed 2D side-view spritesheet for Brine Archivist, a mid-tier siege enemy in Pertinence: Tribunal; distinct silhouette, hand-painted souls-like metroidvania style, wide color range focused on #c0948b, environmental influence from cathedral precincts and ash bridges, include readable key poses for idle, deploy_walk, brace, aim, fire_volley, reload, high detail, no text",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/sprites/brine_archivist.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "verdict_lancer",
+    "prompt": "transparent background detailed 2D side-view spritesheet for Verdict Lancer, a mid-tier duelist enemy in Pertinence: Tribunal; distinct silhouette, hand-painted souls-like metroidvania style, wide color range focused on #53a19c, environmental influence from cathedral precincts and ash bridges, include readable key poses for idle, walk, run, jump, feint, light_attack, high detail, no text",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/sprites/verdict_lancer.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "cathedral_chorister",
+    "prompt": "transparent background detailed 2D side-view spritesheet for Cathedral Chorister, a mid-tier caster enemy in Pertinence: Tribunal; distinct silhouette, hand-painted souls-like metroidvania style, wide color range focused on #5eaead, environmental influence from cathedral precincts and ash bridges, include readable key poses for idle, walk, hover_step, ward_raise, projectile_cast, sigil_drop, high detail, no text",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/sprites/cathedral_chorister.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "ashen_reliquary",
+    "prompt": "transparent background detailed 2D side-view spritesheet for Ashen Reliquary, a mid-tier siege enemy in Pertinence: Tribunal; distinct silhouette, hand-painted souls-like metroidvania style, wide color range focused on #69bbbe, environmental influence from cathedral precincts and ash bridges, include readable key poses for idle, deploy_walk, brace, aim, fire_volley, reload, high detail, no text",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/sprites/ashen_reliquary.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "sepulchral_judge",
+    "prompt": "transparent background detailed 2D side-view spritesheet for Sepulchral Judge, a top-tier boss enemy in Pertinence: Tribunal; distinct silhouette, hand-painted souls-like metroidvania style, wide color range focused on #78466e, environmental influence from trial arenas and reality-render chambers, include readable key poses for idle, walk, run, crouch, jump, light_attack_1, high detail, no text",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/sprites/sepulchral_judge.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "abbess_of_brine",
+    "prompt": "transparent background detailed 2D side-view spritesheet for Abbess Of Brine, a top-tier boss enemy in Pertinence: Tribunal; distinct silhouette, hand-painted souls-like metroidvania style, wide color range focused on #8c5580, environmental influence from trial arenas and reality-render chambers, include readable key poses for idle, walk, run, crouch, jump, light_attack_1, high detail, no text",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/sprites/abbess_of_brine.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "the_sable_notary",
+    "prompt": "transparent background detailed 2D side-view spritesheet for The Sable Notary, a top-tier boss enemy in Pertinence: Tribunal; distinct silhouette, hand-painted souls-like metroidvania style, wide color range focused on #a06492, environmental influence from trial arenas and reality-render chambers, include readable key poses for idle, walk, run, crouch, jump, light_attack_1, high detail, no text",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/sprites/the_sable_notary.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "cathedral_mandible",
+    "prompt": "transparent background detailed 2D side-view spritesheet for Cathedral Mandible, a top-tier boss enemy in Pertinence: Tribunal; distinct silhouette, hand-painted souls-like metroidvania style, wide color range focused on #b473a4, environmental influence from trial arenas and reality-render chambers, include readable key poses for idle, walk, run, crouch, jump, light_attack_1, high detail, no text",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/sprites/cathedral_mandible.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "the_plague_cartographer",
+    "prompt": "transparent background detailed 2D side-view spritesheet for The Plague Cartographer, a top-tier boss enemy in Pertinence: Tribunal; distinct silhouette, hand-painted souls-like metroidvania style, wide color range focused on #c882b6, environmental influence from trial arenas and reality-render chambers, include readable key poses for idle, walk, run, crouch, jump, light_attack_1, high detail, no text",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/sprites/the_plague_cartographer.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "the_ashen_magistrate",
+    "prompt": "transparent background detailed 2D side-view spritesheet for The Ashen Magistrate, a top-tier boss enemy in Pertinence: Tribunal; distinct silhouette, hand-painted souls-like metroidvania style, wide color range focused on #dc91c8, environmental influence from trial arenas and reality-render chambers, include readable key poses for idle, walk, run, crouch, jump, light_attack_1, high detail, no text",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/sprites/the_ashen_magistrate.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "the_reed_colossus",
+    "prompt": "transparent background detailed 2D side-view spritesheet for The Reed Colossus, a top-tier boss enemy in Pertinence: Tribunal; distinct silhouette, hand-painted souls-like metroidvania style, wide color range focused on #f0a0da, environmental influence from trial arenas and reality-render chambers, include readable key poses for idle, walk, run, crouch, jump, light_attack_1, high detail, no text",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/sprites/the_reed_colossus.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "village_elder",
+    "prompt": "transparent background detailed 2D side-view spritesheet for Village Elder, a civilian or quest NPC in Pertinence: Tribunal; distinct silhouette, hand-painted souls-like metroidvania style, wide color range focused on #4a825c, environmental influence from villages, ferries, and archive quarters, include readable key poses for idle, walk, run, turn, crouch, jump, high detail, no text",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/sprites/village_elder.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "smith_of_brass",
+    "prompt": "transparent background detailed 2D side-view spritesheet for Smith Of Brass, a civilian or quest NPC in Pertinence: Tribunal; distinct silhouette, hand-painted souls-like metroidvania style, wide color range focused on #5c8d64, environmental influence from villages, ferries, and archive quarters, include readable key poses for idle, walk, run, turn, crouch, jump, high detail, no text",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/sprites/smith_of_brass.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "rope_ferryman",
+    "prompt": "transparent background detailed 2D side-view spritesheet for Rope Ferryman, a civilian or quest NPC in Pertinence: Tribunal; distinct silhouette, hand-painted souls-like metroidvania style, wide color range focused on #6e986c, environmental influence from villages, ferries, and archive quarters, include readable key poses for idle, walk, run, turn, crouch, jump, high detail, no text",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/sprites/rope_ferryman.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "archive_child",
+    "prompt": "transparent background detailed 2D side-view spritesheet for Archive Child, a civilian or quest NPC in Pertinence: Tribunal; distinct silhouette, hand-painted souls-like metroidvania style, wide color range focused on #80a374, environmental influence from villages, ferries, and archive quarters, include readable key poses for idle, walk, run, turn, crouch, jump, high detail, no text",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/sprites/archive_child.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "moss_physician",
+    "prompt": "transparent background detailed 2D side-view spritesheet for Moss Physician, a civilian or quest NPC in Pertinence: Tribunal; distinct silhouette, hand-painted souls-like metroidvania style, wide color range focused on #92ae7c, environmental influence from villages, ferries, and archive quarters, include readable key poses for idle, walk, run, turn, crouch, jump, high detail, no text",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/sprites/moss_physician.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "penitent_poet",
+    "prompt": "transparent background detailed 2D side-view spritesheet for Penitent Poet, a civilian or quest NPC in Pertinence: Tribunal; distinct silhouette, hand-painted souls-like metroidvania style, wide color range focused on #a4b984, environmental influence from villages, ferries, and archive quarters, include readable key poses for idle, walk, run, turn, crouch, jump, high detail, no text",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/sprites/penitent_poet.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "reed_fox",
+    "prompt": "transparent background detailed 2D side-view spritesheet for Reed Fox, a ambient fauna in Pertinence: Tribunal; distinct silhouette, hand-painted souls-like metroidvania style, wide color range focused on #56643a, environmental influence from wetlands, canopy, and cavern margins, include readable key poses for idle, walk, run, turn, crouch, jump, high detail, no text",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/sprites/reed_fox.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "cinder_heron",
+    "prompt": "transparent background detailed 2D side-view spritesheet for Cinder Heron, a ambient fauna in Pertinence: Tribunal; distinct silhouette, hand-painted souls-like metroidvania style, wide color range focused on #667048, environmental influence from wetlands, canopy, and cavern margins, include readable key poses for idle, walk, run, turn, crouch, jump, high detail, no text",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/sprites/cinder_heron.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "salt_toad",
+    "prompt": "transparent background detailed 2D side-view spritesheet for Salt Toad, a ambient fauna in Pertinence: Tribunal; distinct silhouette, hand-painted souls-like metroidvania style, wide color range focused on #767c56, environmental influence from wetlands, canopy, and cavern margins, include readable key poses for idle, walk, run, turn, crouch, jump, high detail, no text",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/sprites/salt_toad.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "sable_rat",
+    "prompt": "transparent background detailed 2D side-view spritesheet for Sable Rat, a ambient fauna in Pertinence: Tribunal; distinct silhouette, hand-painted souls-like metroidvania style, wide color range focused on #868864, environmental influence from wetlands, canopy, and cavern margins, include readable key poses for idle, walk, run, turn, crouch, jump, high detail, no text",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/sprites/sable_rat.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "fen_goat",
+    "prompt": "transparent background detailed 2D side-view spritesheet for Fen Goat, a ambient fauna in Pertinence: Tribunal; distinct silhouette, hand-painted souls-like metroidvania style, wide color range focused on #969472, environmental influence from wetlands, canopy, and cavern margins, include readable key poses for idle, walk, run, turn, crouch, jump, high detail, no text",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/sprites/fen_goat.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "mire_owl",
+    "prompt": "transparent background detailed 2D side-view spritesheet for Mire Owl, a ambient fauna in Pertinence: Tribunal; distinct silhouette, hand-painted souls-like metroidvania style, wide color range focused on #a6a080, environmental influence from wetlands, canopy, and cavern margins, include readable key poses for idle, walk, run, turn, crouch, jump, high detail, no text",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/sprites/mire_owl.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "glass_eel",
+    "prompt": "transparent background detailed 2D side-view spritesheet for Glass Eel, a ambient fauna in Pertinence: Tribunal; distinct silhouette, hand-painted souls-like metroidvania style, wide color range focused on #b6ac8e, environmental influence from wetlands, canopy, and cavern margins, include readable key poses for idle, walk, run, turn, crouch, jump, high detail, no text",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/sprites/glass_eel.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "dusk_stag",
+    "prompt": "transparent background detailed 2D side-view spritesheet for Dusk Stag, a ambient fauna in Pertinence: Tribunal; distinct silhouette, hand-painted souls-like metroidvania style, wide color range focused on #c6b89c, environmental influence from wetlands, canopy, and cavern margins, include readable key poses for idle, walk, run, turn, crouch, jump, high detail, no text",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/sprites/dusk_stag.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "goduly_amber_accord",
+    "prompt": "transparent background detailed 2D side-view spritesheet for Goduly Amber Accord, a neutral cosmic deity avatar in Pertinence: Tribunal; distinct silhouette, hand-painted souls-like metroidvania style, wide color range focused on #a0844a, environmental influence from astral tribunal overlays and memory reefs, include readable key poses for idle, walk, run, turn, crouch, jump, high detail, no text",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/sprites/goduly_amber_accord.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "goduly_brass_tide",
+    "prompt": "transparent background detailed 2D side-view spritesheet for Goduly Brass Tide, a neutral cosmic deity avatar in Pertinence: Tribunal; distinct silhouette, hand-painted souls-like metroidvania style, wide color range focused on #a78f57, environmental influence from astral tribunal overlays and memory reefs, include readable key poses for idle, walk, run, turn, crouch, jump, high detail, no text",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/sprites/goduly_brass_tide.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "goduly_cerulean_mercy",
+    "prompt": "transparent background detailed 2D side-view spritesheet for Goduly Cerulean Mercy, a neutral cosmic deity avatar in Pertinence: Tribunal; distinct silhouette, hand-painted souls-like metroidvania style, wide color range focused on #ae9a64, environmental influence from astral tribunal overlays and memory reefs, include readable key poses for idle, walk, run, turn, crouch, jump, high detail, no text",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/sprites/goduly_cerulean_mercy.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "goduly_docket_flame",
+    "prompt": "transparent background detailed 2D side-view spritesheet for Goduly Docket Flame, a neutral cosmic deity avatar in Pertinence: Tribunal; distinct silhouette, hand-painted souls-like metroidvania style, wide color range focused on #b5a571, environmental influence from astral tribunal overlays and memory reefs, include readable key poses for idle, walk, run, turn, crouch, jump, high detail, no text",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/sprites/goduly_docket_flame.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "goduly_ember_refrain",
+    "prompt": "transparent background detailed 2D side-view spritesheet for Goduly Ember Refrain, a neutral cosmic deity avatar in Pertinence: Tribunal; distinct silhouette, hand-painted souls-like metroidvania style, wide color range focused on #bcb07e, environmental influence from astral tribunal overlays and memory reefs, include readable key poses for idle, walk, run, turn, crouch, jump, high detail, no text",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/sprites/goduly_ember_refrain.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "goduly_fallow_crown",
+    "prompt": "transparent background detailed 2D side-view spritesheet for Goduly Fallow Crown, a neutral cosmic deity avatar in Pertinence: Tribunal; distinct silhouette, hand-painted souls-like metroidvania style, wide color range focused on #c3bb8b, environmental influence from astral tribunal overlays and memory reefs, include readable key poses for idle, walk, run, turn, crouch, jump, high detail, no text",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/sprites/goduly_fallow_crown.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "goduly_gilt_murmur",
+    "prompt": "transparent background detailed 2D side-view spritesheet for Goduly Gilt Murmur, a neutral cosmic deity avatar in Pertinence: Tribunal; distinct silhouette, hand-painted souls-like metroidvania style, wide color range focused on #cac698, environmental influence from astral tribunal overlays and memory reefs, include readable key poses for idle, walk, run, turn, crouch, jump, high detail, no text",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/sprites/goduly_gilt_murmur.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "goduly_hollow_orbit",
+    "prompt": "transparent background detailed 2D side-view spritesheet for Goduly Hollow Orbit, a neutral cosmic deity avatar in Pertinence: Tribunal; distinct silhouette, hand-painted souls-like metroidvania style, wide color range focused on #d1d1a5, environmental influence from astral tribunal overlays and memory reefs, include readable key poses for idle, walk, run, turn, crouch, jump, high detail, no text",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/sprites/goduly_hollow_orbit.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "goduly_ink_saint",
+    "prompt": "transparent background detailed 2D side-view spritesheet for Goduly Ink Saint, a neutral cosmic deity avatar in Pertinence: Tribunal; distinct silhouette, hand-painted souls-like metroidvania style, wide color range focused on #d8dcb2, environmental influence from astral tribunal overlays and memory reefs, include readable key poses for idle, walk, run, turn, crouch, jump, high detail, no text",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/sprites/goduly_ink_saint.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "goduly_jade_resolve",
+    "prompt": "transparent background detailed 2D side-view spritesheet for Goduly Jade Resolve, a neutral cosmic deity avatar in Pertinence: Tribunal; distinct silhouette, hand-painted souls-like metroidvania style, wide color range focused on #df8dbf, environmental influence from astral tribunal overlays and memory reefs, include readable key poses for idle, walk, run, turn, crouch, jump, high detail, no text",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/sprites/goduly_jade_resolve.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "goduly_knotted_light",
+    "prompt": "transparent background detailed 2D side-view spritesheet for Goduly Knotted Light, a neutral cosmic deity avatar in Pertinence: Tribunal; distinct silhouette, hand-painted souls-like metroidvania style, wide color range focused on #e698cc, environmental influence from astral tribunal overlays and memory reefs, include readable key poses for idle, walk, run, turn, crouch, jump, high detail, no text",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/sprites/goduly_knotted_light.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "goduly_lantern_grace",
+    "prompt": "transparent background detailed 2D side-view spritesheet for Goduly Lantern Grace, a neutral cosmic deity avatar in Pertinence: Tribunal; distinct silhouette, hand-painted souls-like metroidvania style, wide color range focused on #eda3d9, environmental influence from astral tribunal overlays and memory reefs, include readable key poses for idle, walk, run, turn, crouch, jump, high detail, no text",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/sprites/goduly_lantern_grace.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "ronin_slash_arc",
+    "prompt": "transparent background detailed 2D combat and traversal FX spritesheet for Ronin Slash Arc in Pertinence: Tribunal; readable frame-to-frame energy motion for combat slash arc, painterly metroidvania style, coherent with tribunal swamp-cathedral world palette, color focus on #ecdeb4, no backdrop, no floor, no frame, no text",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/sprites/ronin_slash_arc.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "heavy_slash_wave",
+    "prompt": "transparent background detailed 2D combat and traversal FX spritesheet for Heavy Slash Wave in Pertinence: Tribunal; readable frame-to-frame energy motion for heavy combat shockwave, painterly metroidvania style, coherent with tribunal swamp-cathedral world palette, color focus on #d2a872, no backdrop, no floor, no frame, no text",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/sprites/heavy_slash_wave.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "parry_flash",
+    "prompt": "transparent background detailed 2D combat and traversal FX spritesheet for Parry Flash in Pertinence: Tribunal; readable frame-to-frame energy motion for parry flash, painterly metroidvania style, coherent with tribunal swamp-cathedral world palette, color focus on #f2f7ff, no backdrop, no floor, no frame, no text",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/sprites/parry_flash.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "counter_sparks",
+    "prompt": "transparent background detailed 2D combat and traversal FX spritesheet for Counter Sparks in Pertinence: Tribunal; readable frame-to-frame energy motion for counter sparks, painterly metroidvania style, coherent with tribunal swamp-cathedral world palette, color focus on #ffd676, no backdrop, no floor, no frame, no text",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/sprites/counter_sparks.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "dodge_afterimage",
+    "prompt": "transparent background detailed 2D combat and traversal FX spritesheet for Dodge Afterimage in Pertinence: Tribunal; readable frame-to-frame energy motion for afterimage trail, painterly metroidvania style, coherent with tribunal swamp-cathedral world palette, color focus on #96b6dc, no backdrop, no floor, no frame, no text",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/sprites/dodge_afterimage.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "wall_jump_dust",
+    "prompt": "transparent background detailed 2D combat and traversal FX spritesheet for Wall Jump Dust in Pertinence: Tribunal; readable frame-to-frame energy motion for wall jump dust plume, painterly metroidvania style, coherent with tribunal swamp-cathedral world palette, color focus on #c4b9a5, no backdrop, no floor, no frame, no text",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/sprites/wall_jump_dust.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "plunge_impact",
+    "prompt": "transparent background detailed 2D combat and traversal FX spritesheet for Plunge Impact in Pertinence: Tribunal; readable frame-to-frame energy motion for plunge impact burst, painterly metroidvania style, coherent with tribunal swamp-cathedral world palette, color focus on #b69078, no backdrop, no floor, no frame, no text",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/sprites/plunge_impact.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "relic_cast_ring",
+    "prompt": "transparent background detailed 2D combat and traversal FX spritesheet for Relic Cast Ring in Pertinence: Tribunal; readable frame-to-frame energy motion for relic cast ring, painterly metroidvania style, coherent with tribunal swamp-cathedral world palette, color focus on #70a4e2, no backdrop, no floor, no frame, no text",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/sprites/relic_cast_ring.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "goduly_verdict_seal",
+    "prompt": "transparent background detailed 2D combat and traversal FX spritesheet for Goduly Verdict Seal in Pertinence: Tribunal; readable frame-to-frame energy motion for goduly verdict seal, painterly metroidvania style, coherent with tribunal swamp-cathedral world palette, color focus on #dbbc64, no backdrop, no floor, no frame, no text",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/sprites/goduly_verdict_seal.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "ink_sigil_flare",
+    "prompt": "transparent background detailed 2D combat and traversal FX spritesheet for Ink Sigil Flare in Pertinence: Tribunal; readable frame-to-frame energy motion for ink sigil flare, painterly metroidvania style, coherent with tribunal swamp-cathedral world palette, color focus on #6f75ab, no backdrop, no floor, no frame, no text",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/sprites/ink_sigil_flare.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "plague_spore_burst",
+    "prompt": "transparent background detailed 2D combat and traversal FX spritesheet for Plague Spore Burst in Pertinence: Tribunal; readable frame-to-frame energy motion for plague spore burst, painterly metroidvania style, coherent with tribunal swamp-cathedral world palette, color focus on #9ac279, no backdrop, no floor, no frame, no text",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/sprites/plague_spore_burst.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "lantern_fire_bloom",
+    "prompt": "transparent background detailed 2D combat and traversal FX spritesheet for Lantern Fire Bloom in Pertinence: Tribunal; readable frame-to-frame energy motion for lantern fire bloom, painterly metroidvania style, coherent with tribunal swamp-cathedral world palette, color focus on #ffb248, no backdrop, no floor, no frame, no text",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/sprites/lantern_fire_bloom.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "rain_splash_sheet",
+    "prompt": "transparent background detailed 2D combat and traversal FX spritesheet for Rain Splash Sheet in Pertinence: Tribunal; readable frame-to-frame energy motion for rain splash effect, painterly metroidvania style, coherent with tribunal swamp-cathedral world palette, color focus on #74a8d6, no backdrop, no floor, no frame, no text",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/sprites/rain_splash_sheet.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "cinder_wake",
+    "prompt": "transparent background detailed 2D combat and traversal FX spritesheet for Cinder Wake in Pertinence: Tribunal; readable frame-to-frame energy motion for cinder wake effect, painterly metroidvania style, coherent with tribunal swamp-cathedral world palette, color focus on #f4a466, no backdrop, no floor, no frame, no text",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/sprites/cinder_wake.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "fog_gate_ripple",
+    "prompt": "transparent background detailed 2D combat and traversal FX spritesheet for Fog Gate Ripple in Pertinence: Tribunal; readable frame-to-frame energy motion for fog gate ripple, painterly metroidvania style, coherent with tribunal swamp-cathedral world palette, color focus on #c4d4e4, no backdrop, no floor, no frame, no text",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/sprites/fog_gate_ripple.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "boss_phase_shift_ring",
+    "prompt": "transparent background detailed 2D combat and traversal FX spritesheet for Boss Phase Shift Ring in Pertinence: Tribunal; readable frame-to-frame energy motion for boss phase shift ring, painterly metroidvania style, coherent with tribunal swamp-cathedral world palette, color focus on #b876bc, no backdrop, no floor, no frame, no text",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/sprites/boss_phase_shift_ring.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "tribunal_sky_dawn",
+    "prompt": "transparent layered environment sheet for Tribunal Sky Dawn in Pertinence: Tribunal, rich colors, parallax-ready, pseudo-3D depth cues, distinct silhouette forms, no text",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/tiles/tribunal_sky_dawn.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "tribunal_sky_dusk",
+    "prompt": "transparent layered environment sheet for Tribunal Sky Dusk in Pertinence: Tribunal, rich colors, parallax-ready, pseudo-3D depth cues, distinct silhouette forms, no text",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/tiles/tribunal_sky_dusk.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "salt_forest_canopy",
+    "prompt": "transparent layered environment sheet for Salt Forest Canopy in Pertinence: Tribunal, rich colors, parallax-ready, pseudo-3D depth cues, distinct silhouette forms, no text",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/tiles/salt_forest_canopy.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "ossuary_spires",
+    "prompt": "transparent layered environment sheet for Ossuary Spires in Pertinence: Tribunal, rich colors, parallax-ready, pseudo-3D depth cues, distinct silhouette forms, no text",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/tiles/ossuary_spires.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "marsh_mist_depth",
+    "prompt": "transparent layered environment sheet for Marsh Mist Depth in Pertinence: Tribunal, rich colors, parallax-ready, pseudo-3D depth cues, distinct silhouette forms, no text",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/tiles/marsh_mist_depth.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "cathedral_depth_strip",
+    "prompt": "transparent layered environment sheet for Cathedral Depth Strip in Pertinence: Tribunal, rich colors, parallax-ready, pseudo-3D depth cues, distinct silhouette forms, no text",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/tiles/cathedral_depth_strip.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "reality_render_rain",
+    "prompt": "transparent layered environment sheet for Reality Render Rain in Pertinence: Tribunal, rich colors, parallax-ready, pseudo-3D depth cues, distinct silhouette forms, no text",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/tiles/reality_render_rain.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "moonlit_cinders",
+    "prompt": "transparent layered environment sheet for Moonlit Cinders in Pertinence: Tribunal, rich colors, parallax-ready, pseudo-3D depth cues, distinct silhouette forms, no text",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/tiles/moonlit_cinders.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "kier_portrait",
+    "prompt": "transparent illustrated dialogue portrait for Kier Portrait in Pertinence: Tribunal, painterly detail, high contrast face, no text",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/portraits/kier_portrait.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "abbess_portrait",
+    "prompt": "transparent illustrated dialogue portrait for Abbess Portrait in Pertinence: Tribunal, painterly detail, high contrast face, no text",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/portraits/abbess_portrait.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "judge_portrait",
+    "prompt": "transparent illustrated dialogue portrait for Judge Portrait in Pertinence: Tribunal, painterly detail, high contrast face, no text",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/portraits/judge_portrait.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "elder_portrait",
+    "prompt": "transparent illustrated dialogue portrait for Elder Portrait in Pertinence: Tribunal, painterly detail, high contrast face, no text",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/portraits/elder_portrait.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "goduly_portrait",
+    "prompt": "transparent illustrated dialogue portrait for Goduly Portrait in Pertinence: Tribunal, painterly detail, high contrast face, no text",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/portraits/goduly_portrait.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "boss_portrait",
+    "prompt": "transparent illustrated dialogue portrait for Boss Portrait in Pertinence: Tribunal, painterly detail, high contrast face, no text",
+    "w": 1024,
+    "h": 1024,
+    "out": "authoring/clipstudio/portraits/boss_portrait.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  }
+]

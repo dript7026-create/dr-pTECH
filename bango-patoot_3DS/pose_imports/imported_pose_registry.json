@@ -1,0 +1,23 @@
+[
+  {
+    "entity": "Bango",
+    "rig": "bango_base_rig",
+    "move_name": "Horn Rush Prototype",
+    "frame_index": 0,
+    "duration_ms": 120,
+    "source_image": "pose_imports/bango_horn_rush_keyframe_001.png",
+    "tags": [
+      "combat",
+      "ground",
+      "starter"
+    ],
+    "inbetween": {
+      "method": "physics_hint",
+      "stiffness": 0.62,
+      "damping": 0.27,
+      "overshoot": 0.11,
+      "gravity_bias": 0.34
+    },
+    "pose_json": "C:\\Users\\rrcar\\Documents\\drIpTECH\\bango-patoot_3DS\\pose_imports\\pose_import_template.json"
+  }
+]

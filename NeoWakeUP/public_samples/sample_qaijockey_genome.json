@@ -1,0 +1,27 @@
+{
+  "genetics": {
+    "active_index": 0,
+    "generations": 0,
+    "population": [
+      {
+        "courage": 0.94,
+        "instinct_noise": 0.18,
+        "patience": 1.08,
+        "predictive_weight": 0.58,
+        "reactive_weight": 1.02,
+        "stress_weight": 0.88
+      }
+    ],
+    "scores": [
+      0.0
+    ]
+  },
+  "losses": 0,
+  "relationships": {
+    "nodes": {},
+    "sensitivity": 1.0
+  },
+  "skill": 0.75,
+  "win_rate": 0.5,
+  "wins": 0
+}

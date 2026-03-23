@@ -1,0 +1,427 @@
+Bango-Patoot: Underhive Nocturne
+
+Document Purpose
+This is the full design brief for the original Nintendo 3DS project Bango-Patoot. It consolidates story, world structure, progression rules, system logic, and a full production asset list for later implementation.
+
+High Concept
+Bango-Patoot is an original 3D collectathon action-RPG with horror-fantasy worldbuilding, shrine-based progression, and duo traversal. The player controls Bango, a horned prehistoric bear-descended undercity survivor, and Patoot, a bird-reptile hybrid companion who extends movement, combat, and puzzle expression. The game unfolds through a vertical city-underworld where industrial blasphemy, hive-mysticism, gang rule, and cryptid folklore overlap.
+
+Core Pillars
+1. Duo traversal in dense readable 3D spaces.
+2. Collectathon progression fused with an RPG attribute and skill system.
+3. Urban horror expressed through atmosphere, folklore, architecture, and social decay rather than gore alone.
+4. Shrine-centered build refinement, route planning, and social-state shifts.
+5. Original silhouettes, terms, factions, and narrative identity.
+
+Product Definition
+- Genre: 3D collectathon action-RPG.
+- Platform target: Nintendo 3DS.
+- Camera: third-person free camera with soft lock in combat zones.
+- Session shape: 20 to 45 minute exploration runs between shrine rest points.
+- Target playtime: 17 hours main path, 23 hours full completion.
+- Rating target: Teen.
+
+Player Fantasy
+The player should feel like an odd but gifted survivor descending through a city-body that behaves like a haunted organism. Bango is physically grounded, stubborn, sensory-attuned, and resilient. Patoot makes movement and situational awareness feel clever rather than merely fast. Together they are feral, ritual, practical, emotionally distinct, and visibly inseparable.
+
+Narrative Overview
+Premise:
+During the annual Nightcomb Feast, the lights of Brassroot Borough fail in a cascading blackout called a hushfall. In the darkness, the cyberwitch Matra Vey steals Tula, Bango's sister, and several hive-kin children, using hymn-engines to siphon memory, devotion, and fear from the undercity. Bango and Patoot begin a rescue mission that expands into a larger revelation: the city is being prepared as a living ritual machine.
+
+Themes:
+- Family obligation versus self-erasure.
+- Disability-aware perception as strength.
+- Ritual versus institution.
+- Folklore surviving inside infrastructure.
+- Companionship as adaptive intelligence.
+- Memory as a civic resource.
+
+Main Cast
+Bango:
+Autism-spectrum Horned-Urs descended from prehistoric tunnel-dwellers. Literal, pattern-focused, protective, and physically powerful. Learns that his precise perception is the only thing that can consistently detect the city's false ritual harmonics.
+
+Patoot:
+Bird-reptile hybrid companion. Functions as scout, traversal assist, ritual familiar, and emotional counterpoint.
+
+Tula:
+Bango's older sister and hive-keeper apprentice. Her stable chant-memory makes her vital to Matra Vey's plan.
+
+Mother Comb Edda:
+First shrine guide and apiary elder.
+
+Vilm Siltcoat:
+Salvage broker and practical ally.
+
+Sister Halceon:
+Defected chapel enforcer who reveals doctrinal truth about the machine-cults.
+
+Matra Vey:
+Cyberwitch antagonist who wants to convert the entire city into a controlled thinking body.
+
+Full Narrative Structure
+Prologue: The Hushfall
+The player learns basic movement during the Nightcomb Feast. A blackout raid steals Tula and several children. Bango reaches the first shrine too late and receives the first echo-memory from Tula.
+
+Act I: Brassroot Borough
+Restore the first shrine circuit, learn the economy, and hunt the kidnappers' route. End boss: Honey Debt Collector.
+
+Act II: Saint Voltage Arcade
+Infiltrate chapel-market circuits and expose the devotion-to-machine pipeline. End boss: Bishop Static.
+
+Act III: Ossuary Transit
+Reopen the rail backbone and discover how the city buried the unwanted inside infrastructure. End boss: Railmouth Ossivar.
+
+Act IV: Gutterwake Sewers
+Interrupt the alchemical runoff that feeds the ritual engine. End boss: Maw-of-Silt.
+
+Act V: Cinder Tenements
+Break the apartment chapel network and rescue captive households. End boss: Caretaker Red Mother.
+
+Act VI: Aviary of the Last Broadcast
+Seize the last clean signal tower and prepare Tula's counter-hymn. End boss: Broadcast Harrower.
+
+Act VII: Witchcoil Spire
+Rescue Tula, ascend the ritual-factory, and destroy Matra Vey's obedience lattice.
+
+Ending
+The city survives but remains scarred. The shrines are restored as voluntary civic memory points rather than control nodes.
+
+Postgame
+Unlocks sealed shrines, remixed districts, faction-resolution quests, and an optional true ending route.
+
+World Structure
+Hub:
+Apiary Junction, the central undercity plaza connected to all seven major districts.
+
+District Order:
+1. Brassroot Borough
+2. Saint Voltage Arcade
+3. Ossuary Transit
+4. Gutterwake Sewers
+5. Cinder Tenements
+6. Aviary of the Last Broadcast
+7. Witchcoil Spire
+
+District Rules
+- Each district has 1 major shrine, 2 minor shrines, 1 boss arena, 3 to 5 traversal landmarks, 2 rescue chains, and 1 faction side route.
+- Each district visibly changes after purification.
+
+Gameplay Systems
+Traversal:
+Bango provides run, jump, ledge grab, push, pull, slam, horn bash, and sprint. Patoot adds hover assist, scouting, switch pecking, line carries, and midair correction. Upgrades add wall-runs, honey rail grinding, shrine pull grapples, and combat traversal cancels.
+
+Collectibles:
+- Hive Sigils: macro progression.
+- Nocturne Notes: currency.
+- Lantern Kin: rescue set bonuses.
+- Shrine Pollen: upgrade component.
+- Choir Scraps: lore and hidden route keys.
+
+Attributes:
+- Vigor
+- Honeyheart
+- Taloncraft
+- Nerve
+- Grit
+- Arcana
+
+Stamina Logic:
+- Base stamina: 100.
+- Light actions: 8 to 14 cost.
+- Heavy actions: 20 to 35 cost.
+- Dodge: 18 cost.
+- Aerial correction: 10 cost.
+
+Move Catalog Logic:
+Moves are composed from stance, locomotion mode, body emphasis, angle, element or ward modifier, combo index, utility tags, and fear-state modifier. Each move stores stamina cost, hit count, damage scalar, knockback scalar, keyframe count, interpolation hints, and sound profile.
+
+Skill Trees:
+- Horn Path
+- Claw Path
+- Patoot Path
+- Shrine Path
+- Salvage Path
+- Resonance Path
+
+Shrines:
+Shrines are checkpoints, heal points, build refinement points, fast travel anchors, and district-state triggers.
+
+Quest Logic:
+- Main quest for district completion and Tula recovery.
+- Rescue chains for Lantern Kin.
+- Faction quests for gangs, shrine keepers, salvagers, and chapel defectors.
+- Myth quests for hidden bosses and codex pages.
+
+Relationship Logic:
+NPEs track trust, fear, debt, respect, rivalry, and mimicry. These values alter prices, warnings, ambush frequency, pursuit persistence, rescue access, and district social response.
+
+Save Data
+Stores district completion, shrine states, collectibles, builds, move unlocks, relationship values, quest flags, and currencies.
+
+Presentation
+Top Screen:
+- stereoscopic world view
+- combat and objective HUD
+
+Bottom Screen:
+- map
+- shrine menu
+- skill pages
+- move pages
+- relationship summaries
+
+Audio Direction
+Industrial drone, ritual percussion, broken choir, reed textures, and hive-like harmonics. Districts need clear sonic identities. Shrine audio must sound restorative but not soft.
+
+Art Direction
+Horned-prehistoric anatomy meets soot-blackened infrastructure, brass devotional machinery, old urban folklore, and hive geometry. Colors lean toward ochre, rust, soot black, dead teal, lantern amber, acidic green, and shrine gold.
+
+Full Asset Bible
+Ownership Note:
+The player has stated they plan to personally build later concept animation, T-pose sheets, environment art, object art, and audio assets. The following list is the complete specification target.
+
+Hero Asset Set: Bango
+- Broad shoulders, heavy forearms, horned brow, feather-scale mantle, tail, shrine wraps, scavenged belt hardware, knee plating, hive token necklace.
+- Palette: umber, bone ivory, oxidized brass, ember-orange eye accents, muted teal cloth tabs.
+
+Bango Animation Frames
+Idle A, 8 frames:
+1. Neutral stand.
+2. Inhale.
+3. Horn dip.
+4. Claw flex.
+5. Head turn.
+6. Exhale.
+7. Tail shift.
+8. Neutral reset.
+
+Walk, 8 frames:
+1. Left contact.
+2. Hip pass.
+3. Mid-stride.
+4. Right reach.
+5. Right contact.
+6. Hip pass.
+7. Reverse mid-stride.
+8. Left reach.
+
+Run, 8 frames:
+1. Compression.
+2. Drive.
+3. Airborne.
+4. Contact.
+5. Compression.
+6. Drive.
+7. Airborne reverse.
+8. Contact.
+
+Jump start, 4 frames:
+1. Bend.
+2. Sweep.
+3. Thrust.
+4. Release.
+
+Jump apex, 2 frames.
+Fall, 2 frames.
+Land, 4 frames.
+Light combo 1, 6 frames.
+Light combo 2, 6 frames.
+Light combo 3, 7 frames.
+Heavy horn bash, 7 frames.
+Dodge, 5 frames.
+Interact, 4 frames.
+Hurt, 4 frames.
+Defeat, 6 frames.
+Shrine refine, 6 frames.
+
+Companion Asset Set: Patoot
+- Compact torso, long neck, blunt hooked beak, crest, scaled hind legs, short wing-arms, fan tail, lantern ankle charm.
+- Palette: moss green, soot blue, ivory beak edges, amber eye, brass harness loops.
+
+Patoot Animation Frames
+Perch idle, 6 frames.
+Ground strut, 8 frames.
+Hover, 8 frames.
+Peck switch, 5 frames.
+Spit ward, 6 frames.
+Alarm, 4 frames.
+Comfort, 4 frames.
+
+Tula Asset Set
+- Hive-keeper apron, prayer tags, memory beads, lantern sash.
+- Animations: idle 6, talk 6, chant 8, captive restraint 6, sabotage 6, rescue embrace 4.
+
+NPC Sets
+- Mother Comb Edda: idle 6, talk 8, blessing 6.
+- Vilm Siltcoat: idle 6, talk 8, hammer 5.
+- Sister Halceon: idle 6, prayer 6, warning 4.
+
+Enemy Families
+- Honey Debtors: idle 6, walk 8, swing 6, grab 5, stagger 4, defeat 6.
+- Voltage Chapel Knives: idle 6, glide step 8, knife burst 6, shield 5, stagger 4, defeat 6.
+- Ossuary Rail Beasts: idle 6, crawl 8, lunge 6, bell roar 5, break 5, defeat 7.
+- Gutterwake Cryptids: idle 6, crawl 8, spit 6, bite 5, hurt 4, defeat 6.
+- Nursery Dolls: still 2, twitch wake 4, scuttle 8, leap 5, scream 4, shatter 6.
+- Broadcast Flocks: perch 4, flap 8, dive 6, scream 4, spark death 5.
+
+Bosses
+- Honey Debt Collector
+- Bishop Static
+- Railmouth Ossivar
+- Maw-of-Silt
+- Caretaker Red Mother
+- Broadcast Harrower
+- Matra Vey
+
+Every boss requires intro, idle, locomotion, light attack, heavy attack, special, stagger, phase transition, and defeat sets.
+
+Environment Asset Sets
+Brassroot Borough:
+- worker rowhouses
+- apiary comb vaults
+- steam alleys
+- brass balconies
+- animated steam vent, hive lamp flicker, lift crank
+
+Saint Voltage Arcade:
+- neon chapel facades
+- kiosk stalls
+- miracle cabinets
+- confession booths
+- animated neon flicker, slot light cycle, speaker throb
+
+Ossuary Transit:
+- broken train shells
+- bone furnaces
+- signal towers
+- memorial walls
+- animated signal lamps, chains, ash fans
+
+Gutterwake Sewers:
+- sluice gates
+- fungus altars
+- pipe throat tunnels
+- drowned workshops
+- animated runoff drips, algae shimmer, floodgate crank
+
+Cinder Tenements:
+- apartment facades
+- laundry spans
+- hidden altars
+- nursery chapels
+- animated window pulse, ember drift, prayer mobile sway
+
+Aviary of the Last Broadcast:
+- cage bridges
+- signal spires
+- loudspeaker crowns
+- wind corridors
+- animated antenna pulses, cable sparks, wing shadow bands
+
+Witchcoil Spire:
+- ritual lifts
+- comb-cathedral arches
+- choir pistons
+- memory looms
+- animated glyph pulse, piston drive, lattice flare
+
+Props and Pickups
+- Hive Sigils
+- Nocturne Notes
+- Lantern Kin cages
+- Shrine pollen jars
+- Salvage scrap bundles
+- Choir tape reels
+- Healing honey flasks
+
+Pickup frames:
+- appear 4
+- idle float 6
+- collect burst 5
+
+VFX Assets
+- claw arcs
+- horn bursts
+- ward circles
+- Patoot spit trails
+- shrine activation columns
+- purification fog clears
+- boss phase bursts
+
+UI Assets
+- title logo
+- file select plates
+- six attribute icons
+- six skill icons
+- collectible counters
+- shrine tabs
+- map markers
+- relationship portraits
+- dialogue frames
+
+Cinematic Needs
+- opening feast tableau
+- blackout raid panels
+- seven Tula echo visions
+- district entry hero shots
+- final ascent sequence
+- ending tableau variants
+
+Audio Assets
+Music:
+- title theme
+- hub loop
+- seven district loops
+- seven district danger layers
+- seven boss themes
+- shrine cue
+- Tula motif
+- final ascent cue
+- ending and postgame cues
+
+Ambience:
+- hive hum
+- steam pressure
+- rail resonance
+- sewer drip
+- neon buzz
+- apartment creak and memory murmur
+- wind cage whistle
+- spire machine prayer throb
+
+Foley:
+- Bango footsteps by material
+- Patoot footsteps by material
+- climb scrapes
+- horn impacts
+- claw swipes
+- cloth and harness shifts
+- shrine bowl placement
+- switch pecks
+
+Voice and Vocal Texture:
+- Bango exertions and affirmations
+- Patoot chirps and alarms
+- Tula chants and distress
+- NPC bark sets
+- boss callouts
+
+Interface Audio:
+- confirm
+- cancel
+- stat spend
+- shrine refine success
+- collectible pickup family
+- objective update sting
+- danger escalation sting
+
+Implementation Priorities
+1. Movement and camera readability.
+2. Shrine loop and collectible loop.
+3. One complete district slice with boss.
+4. Save/load and relationship persistence.
+5. District state transitions.
+6. Full art and audio production.
+
+Handoff Summary
+This document is the main design reference for when development resumes. Immediate missing production inputs are final concept art, final T-pose sheets, environment and object art, and audio delivery.

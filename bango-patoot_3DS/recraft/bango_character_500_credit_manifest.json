@@ -1,0 +1,193 @@
+{
+  "manifest_name": "bango_character_500_credit_pass",
+  "manifest_version": "2026-03-12.bango_character_pass",
+  "intent": "500-credit Recraft pass exclusively for Bango character art, model surfacing, turnarounds, and keypose reference.",
+  "budget": {
+    "unit_cost": 50,
+    "asset_count": 10,
+    "total_credits": 500
+  },
+  "shared_prompt_appendix": "Orthographic or effectively orthographic technical character presentation. Transparent background. Stable baseline. Full silhouette preserved. Readable small-scale material separation. Suitable for later rig tracing, mesh blockout, and keypose translation.",
+  "assets": [
+    {
+      "name": "bango_turnaround_tpose_4view",
+      "prompt": "Bango turnaround master sheet in T-pose, front, left profile, right profile, and rear view, transparent background, stable baseline, orthographic presentation, technical character reference.",
+      "w": 2048,
+      "h": 768,
+      "runtime_target": "4-view rig and model reference master",
+      "category": "bango_character_asset",
+      "negative_prompt": "perspective scene, background environment, text, watermark, blur, painterly smear, cropped body, inconsistent proportions",
+      "api_units": 50,
+      "model": "recraftv4",
+      "out": "bango_assets/bango_turnaround_tpose_4view.png",
+      "integration_role": [
+        "bango model reference",
+        "texture authoring reference",
+        "animation keypose intake",
+        "inbetween validation input"
+      ]
+    },
+    {
+      "name": "bango_surface_albedo_tiles",
+      "prompt": "Bango material tile sheet containing clean fur, leather, brass, horn, cloth, and wax detail swatches for polygonal model texturing, transparent or neutral presentation.",
+      "w": 1024,
+      "h": 1024,
+      "runtime_target": "material albedo reference atlas",
+      "category": "bango_character_asset",
+      "negative_prompt": "perspective scene, background environment, text, watermark, blur, painterly smear, cropped body, inconsistent proportions",
+      "api_units": 50,
+      "model": "recraftv4",
+      "out": "bango_assets/bango_surface_albedo_tiles.png",
+      "integration_role": [
+        "bango model reference",
+        "texture authoring reference",
+        "animation keypose intake",
+        "inbetween validation input"
+      ]
+    },
+    {
+      "name": "bango_surface_height_masks",
+      "prompt": "Bango material height and relief hint atlas matching the albedo tile regions for fur, leather, brass, horn, cloth, and wax surfaces.",
+      "w": 1024,
+      "h": 1024,
+      "runtime_target": "height-mask atlas reference",
+      "category": "bango_character_asset",
+      "negative_prompt": "perspective scene, background environment, text, watermark, blur, painterly smear, cropped body, inconsistent proportions",
+      "api_units": 50,
+      "model": "recraftv4",
+      "out": "bango_assets/bango_surface_height_masks.png",
+      "integration_role": [
+        "bango model reference",
+        "texture authoring reference",
+        "animation keypose intake",
+        "inbetween validation input"
+      ]
+    },
+    {
+      "name": "bango_surface_material_masks",
+      "prompt": "Bango material mask atlas with clean separations for fur, leather, brass, horn, cloth, and wax regions, made for later texture projection and rigged model surfacing.",
+      "w": 1024,
+      "h": 1024,
+      "runtime_target": "material-id atlas reference",
+      "category": "bango_character_asset",
+      "negative_prompt": "perspective scene, background environment, text, watermark, blur, painterly smear, cropped body, inconsistent proportions",
+      "api_units": 50,
+      "model": "recraftv4",
+      "out": "bango_assets/bango_surface_material_masks.png",
+      "integration_role": [
+        "bango model reference",
+        "texture authoring reference",
+        "animation keypose intake",
+        "inbetween validation input"
+      ]
+    },
+    {
+      "name": "bango_idle_keyposes",
+      "prompt": "Bango idle keypose sheet, orthographic presentation, transparent background, readable shoulder and head motion arcs, stable feet baseline.",
+      "w": 1536,
+      "h": 768,
+      "runtime_target": "idle keypose intake",
+      "category": "bango_character_asset",
+      "negative_prompt": "perspective scene, background environment, text, watermark, blur, painterly smear, cropped body, inconsistent proportions",
+      "api_units": 50,
+      "model": "recraftv4",
+      "out": "bango_assets/bango_idle_keyposes.png",
+      "integration_role": [
+        "bango model reference",
+        "texture authoring reference",
+        "animation keypose intake",
+        "inbetween validation input"
+      ]
+    },
+    {
+      "name": "bango_locomotion_keyposes",
+      "prompt": "Bango locomotion keypose sheet for walk-run cycle, clean readable contact, down, passing, and high positions, orthographic technical presentation.",
+      "w": 2048,
+      "h": 768,
+      "runtime_target": "locomotion keypose intake",
+      "category": "bango_character_asset",
+      "negative_prompt": "perspective scene, background environment, text, watermark, blur, painterly smear, cropped body, inconsistent proportions",
+      "api_units": 50,
+      "model": "recraftv4",
+      "out": "bango_assets/bango_locomotion_keyposes.png",
+      "integration_role": [
+        "bango model reference",
+        "texture authoring reference",
+        "animation keypose intake",
+        "inbetween validation input"
+      ]
+    },
+    {
+      "name": "bango_attack_keyposes",
+      "prompt": "Bango combat keypose sheet for horn-rush and melee chaining, transparent background, readable torso twist and leg drive, technical animation reference.",
+      "w": 2048,
+      "h": 768,
+      "runtime_target": "combat keypose intake",
+      "category": "bango_character_asset",
+      "negative_prompt": "perspective scene, background environment, text, watermark, blur, painterly smear, cropped body, inconsistent proportions",
+      "api_units": 50,
+      "model": "recraftv4",
+      "out": "bango_assets/bango_attack_keyposes.png",
+      "integration_role": [
+        "bango model reference",
+        "texture authoring reference",
+        "animation keypose intake",
+        "inbetween validation input"
+      ]
+    },
+    {
+      "name": "bango_recovery_keyposes",
+      "prompt": "Bango dodge, recovery, and hit-react keypose sheet, orthographic, transparent background, stable silhouette for inbetween planning.",
+      "w": 1536,
+      "h": 768,
+      "runtime_target": "recovery keypose intake",
+      "category": "bango_character_asset",
+      "negative_prompt": "perspective scene, background environment, text, watermark, blur, painterly smear, cropped body, inconsistent proportions",
+      "api_units": 50,
+      "model": "recraftv4",
+      "out": "bango_assets/bango_recovery_keyposes.png",
+      "integration_role": [
+        "bango model reference",
+        "texture authoring reference",
+        "animation keypose intake",
+        "inbetween validation input"
+      ]
+    },
+    {
+      "name": "bango_expression_heads",
+      "prompt": "Bango expression turnaround heads and facial material study, front, profile, and three-quarter neutralized to orthographic readability for model detailing.",
+      "w": 1536,
+      "h": 768,
+      "runtime_target": "head detail reference",
+      "category": "bango_character_asset",
+      "negative_prompt": "perspective scene, background environment, text, watermark, blur, painterly smear, cropped body, inconsistent proportions",
+      "api_units": 50,
+      "model": "recraftv4",
+      "out": "bango_assets/bango_expression_heads.png",
+      "integration_role": [
+        "bango model reference",
+        "texture authoring reference",
+        "animation keypose intake",
+        "inbetween validation input"
+      ]
+    },
+    {
+      "name": "bango_accessories_sheet",
+      "prompt": "Bango gear and accessory technical sheet, harness, buckles, horn bands, bracers, satchel, and shrine tokens, transparent background, modeling reference.",
+      "w": 1536,
+      "h": 768,
+      "runtime_target": "accessory model and texture reference",
+      "category": "bango_character_asset",
+      "negative_prompt": "perspective scene, background environment, text, watermark, blur, painterly smear, cropped body, inconsistent proportions",
+      "api_units": 50,
+      "model": "recraftv4",
+      "out": "bango_assets/bango_accessories_sheet.png",
+      "integration_role": [
+        "bango model reference",
+        "texture authoring reference",
+        "animation keypose intake",
+        "inbetween validation input"
+      ]
+    }
+  ]
+}

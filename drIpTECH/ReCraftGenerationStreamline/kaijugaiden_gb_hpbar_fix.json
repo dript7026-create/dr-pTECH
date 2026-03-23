@@ -1,0 +1,15 @@
+[
+  {
+    "name": "hud_boss_hp_bar",
+    "prompt": "Game Boy pixel art boss health bar UI element: horizontal 6-segment energy gauge with thick outer border, filled segments alternating shades of grey, 4-shade greyscale, arcade style boss health indicator, wide horizontal layout, clear and bold",
+    "w": 1024,
+    "h": 1024,
+    "out": "../../../../KaijuGaiden/assets/gb/hud_boss_hp_bar.png",
+    "extra_body": {
+      "style_id": "pixel_art",
+      "controls": {
+        "colors": [[0,0,0],[85,85,85],[170,170,170],[255,255,255]]
+      }
+    }
+  }
+]

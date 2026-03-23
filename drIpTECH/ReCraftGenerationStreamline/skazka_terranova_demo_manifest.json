@@ -1,0 +1,236 @@
+[
+  {
+    "name": "wild_orchard_backdrop",
+    "category": "background",
+    "prompt": "side-scrolling action RPG background plate, Tarnished Orchard at dusk, birch trees, heavy fruit, broken ritual fences, mossy path, melancholic slavic fairytale merged with net-art neon residue, layered depth, strong silhouette readability, wide panoramic composition, no characters, no text",
+    "w": 1536,
+    "h": 768,
+    "out": "../../skazka_terranova_c/assets/generated/backgrounds/wild_orchard_backdrop.png",
+    "farim_layer": "background",
+    "palette_target": "modern-pixel-vector"
+  },
+  {
+    "name": "wild_marsh_backdrop",
+    "category": "background",
+    "prompt": "side-scrolling action RPG background plate, Reeded Marsh with dark teal water, wind-bent reeds, ghost-song atmosphere, drifting CRT scanline echoes, layered parallax banks, slavic folklore mood fused with old web visual noise, no characters, no text",
+    "w": 1536,
+    "h": 768,
+    "out": "../../skazka_terranova_c/assets/generated/backgrounds/wild_marsh_backdrop.png",
+    "farim_layer": "background",
+    "palette_target": "modern-pixel-vector"
+  },
+  {
+    "name": "wild_mire_backdrop",
+    "category": "background",
+    "prompt": "side-scrolling action RPG background plate, Smoldering Mire with ember fissures, black peat, twisted roots, wyrm-burnt fog, layered side-view traversal space, eerie folklore atmosphere with subtle corrupted forum-glow accents, no characters, no text",
+    "w": 1536,
+    "h": 768,
+    "out": "../../skazka_terranova_c/assets/generated/backgrounds/wild_mire_backdrop.png",
+    "farim_layer": "background",
+    "palette_target": "modern-pixel-vector"
+  },
+  {
+    "name": "hub_city_segment_a",
+    "category": "background",
+    "prompt": "side-scrolling folk-tech hub city segment, Terranova lower walkway with birch-timber facades, arcade shrines, hanging cables, lantern kiosks, traversable street composition, high color contrast, no characters, no text",
+    "w": 1536,
+    "h": 768,
+    "out": "../../skazka_terranova_c/assets/generated/backgrounds/hub_city_segment_a.png",
+    "farim_layer": "background",
+    "palette_target": "xbox-series"
+  },
+  {
+    "name": "hub_city_segment_b",
+    "category": "background",
+    "prompt": "side-scrolling folk-tech hub city segment, Terranova market bridge with stalls, signal banners, communal ritual terminals, navigable profile view, vibrant but grounded colors, no characters, no text",
+    "w": 1536,
+    "h": 768,
+    "out": "../../skazka_terranova_c/assets/generated/backgrounds/hub_city_segment_b.png",
+    "farim_layer": "background",
+    "palette_target": "xbox-series"
+  },
+  {
+    "name": "hub_city_segment_c",
+    "category": "background",
+    "prompt": "side-scrolling folk-tech hub city segment, upper terrace with projection icons, shrine rooftops, three enterable building fronts, traversal-friendly composition, colorful but readable, no characters, no text",
+    "w": 1536,
+    "h": 768,
+    "out": "../../skazka_terranova_c/assets/generated/backgrounds/hub_city_segment_c.png",
+    "farim_layer": "background",
+    "palette_target": "xbox-series"
+  },
+  {
+    "name": "hud_rhythm_frame",
+    "category": "ui",
+    "prompt": "game HUD frame for rhythm action RPG, side-view layout, health, stamina, combo ring, beat pulse bar, subtle slavic knotwork merged with old-web chrome, transparent background, crisp vector-like edges, no text labels",
+    "w": 1024,
+    "h": 1024,
+    "out": "../../skazka_terranova_c/assets/generated/ui/hud_rhythm_frame.png",
+    "farim_layer": "ui",
+    "palette_target": "xbox-series"
+  },
+  {
+    "name": "media_deck_panel",
+    "category": "ui",
+    "prompt": "ritual media deck interface panel for action RPG, three large token sockets, one result lane, ornate wood-and-CRT hybrid frame, transparent background, readable controller-first layout, no text labels",
+    "w": 1024,
+    "h": 1024,
+    "out": "../../skazka_terranova_c/assets/generated/ui/media_deck_panel.png",
+    "farim_layer": "ui",
+    "palette_target": "xbox-series"
+  },
+  {
+    "name": "misha_head",
+    "category": "rig_part",
+    "entity": "misha",
+    "prompt": "character rig part on transparent background, Misha head for 2D side-view action rig, slavic wanderer with short dark hair, scarf tie, expressive silhouette, clean painterly cutout, no neck body included, centered on canvas with transparent margin, no text",
+    "w": 1024,
+    "h": 1024,
+    "out": "../../skazka_terranova_c/assets/generated/rigs/misha_head.png",
+    "farim_layer": "actors",
+    "joint_anchors": {
+      "neck_pivot": [0.50, 0.78],
+      "look_at": [0.63, 0.34]
+    }
+  },
+  {
+    "name": "misha_torso",
+    "category": "rig_part",
+    "entity": "misha",
+    "prompt": "character rig part on transparent background, Misha torso for 2D side-view action rig, layered coat, sash, belt charms, readable silhouette, shoulders visible, hips visible, no head, no limbs, centered with generous transparent margin, no text",
+    "w": 1024,
+    "h": 1024,
+    "out": "../../skazka_terranova_c/assets/generated/rigs/misha_torso.png",
+    "farim_layer": "actors",
+    "joint_anchors": {
+      "neck_socket": [0.50, 0.14],
+      "shoulder_l": [0.27, 0.23],
+      "shoulder_r": [0.73, 0.23],
+      "hip_l": [0.40, 0.86],
+      "hip_r": [0.60, 0.86]
+    }
+  },
+  {
+    "name": "misha_arm_segment",
+    "category": "rig_part",
+    "entity": "misha",
+    "prompt": "character rig limb segment on transparent background, side-view upper arm and sleeve segment for Misha 2D puppet animation, hand not included, isolated single limb piece, neutral angle, centered with transparent margin, no text",
+    "w": 1024,
+    "h": 1024,
+    "out": "../../skazka_terranova_c/assets/generated/rigs/misha_arm_segment.png",
+    "farim_layer": "actors",
+    "joint_anchors": {
+      "pivot_parent": [0.18, 0.20],
+      "pivot_child": [0.80, 0.74]
+    }
+  },
+  {
+    "name": "misha_forearm_hand_segment",
+    "category": "rig_part",
+    "entity": "misha",
+    "prompt": "character rig limb segment on transparent background, side-view forearm and gloved hand segment for Misha 2D puppet animation, isolated single piece, readable combat silhouette, centered with transparent margin, no text",
+    "w": 1024,
+    "h": 1024,
+    "out": "../../skazka_terranova_c/assets/generated/rigs/misha_forearm_hand_segment.png",
+    "farim_layer": "actors",
+    "joint_anchors": {
+      "pivot_parent": [0.16, 0.18],
+      "weapon_socket": [0.83, 0.70]
+    }
+  },
+  {
+    "name": "misha_leg_segment",
+    "category": "rig_part",
+    "entity": "misha",
+    "prompt": "character rig limb segment on transparent background, side-view upper leg with layered cloth for Misha 2D puppet animation, isolated single piece, neutral pose, centered with transparent margin, no text",
+    "w": 1024,
+    "h": 1024,
+    "out": "../../skazka_terranova_c/assets/generated/rigs/misha_leg_segment.png",
+    "farim_layer": "actors",
+    "joint_anchors": {
+      "pivot_parent": [0.26, 0.18],
+      "pivot_child": [0.70, 0.82]
+    }
+  },
+  {
+    "name": "misha_shin_foot_segment",
+    "category": "rig_part",
+    "entity": "misha",
+    "prompt": "character rig limb segment on transparent background, side-view shin and boot segment for Misha 2D puppet animation, isolated single piece, readable foot silhouette, centered with transparent margin, no text",
+    "w": 1024,
+    "h": 1024,
+    "out": "../../skazka_terranova_c/assets/generated/rigs/misha_shin_foot_segment.png",
+    "farim_layer": "actors",
+    "joint_anchors": {
+      "pivot_parent": [0.24, 0.16],
+      "foot_contact": [0.78, 0.87]
+    }
+  },
+  {
+    "name": "leshy_core",
+    "category": "rig_part",
+    "entity": "leshy",
+    "prompt": "enemy rig core on transparent background, side-view Leshy trunk torso and head fused from bark and moss, antler-branch silhouette, readable mid-boss profile, isolated puppet core piece, centered with transparent margin, no text",
+    "w": 1024,
+    "h": 1024,
+    "out": "../../skazka_terranova_c/assets/generated/rigs/leshy_core.png",
+    "farim_layer": "actors",
+    "joint_anchors": {
+      "shoulder_l": [0.28, 0.34],
+      "shoulder_r": [0.72, 0.34],
+      "hip_l": [0.42, 0.88],
+      "hip_r": [0.58, 0.88]
+    }
+  },
+  {
+    "name": "leshy_limb",
+    "category": "rig_part",
+    "entity": "leshy",
+    "prompt": "enemy rig limb on transparent background, branch-and-root limb segment for Leshy 2D puppet animation, one isolated limb piece, thorny silhouette, centered with transparent margin, no text",
+    "w": 1024,
+    "h": 1024,
+    "out": "../../skazka_terranova_c/assets/generated/rigs/leshy_limb.png",
+    "farim_layer": "actors",
+    "joint_anchors": {
+      "pivot_parent": [0.18, 0.18],
+      "pivot_child": [0.78, 0.82]
+    }
+  },
+  {
+    "name": "domovoi_vendor",
+    "category": "npc",
+    "prompt": "side-view NPC concept on transparent background, friendly domovoi shopkeeper for folk-tech city interior, apron, candle lantern, compact silhouette, designed for in-game roaming and dialogue scenes, centered, no text",
+    "w": 1024,
+    "h": 1024,
+    "out": "../../skazka_terranova_c/assets/generated/npcs/domovoi_vendor.png",
+    "farim_layer": "actors",
+    "joint_anchors": {
+      "center_mass": [0.50, 0.58],
+      "feet": [0.51, 0.90]
+    }
+  },
+  {
+    "name": "ritual_ring_fx",
+    "category": "fx",
+    "prompt": "transparent background VFX sheet element, ritual ring burst for rhythm combat, folk runes mixed with CRT chroma echo, circular energy pulse, vivid but readable, centered, no text",
+    "w": 1024,
+    "h": 1024,
+    "out": "../../skazka_terranova_c/assets/generated/fx/ritual_ring_fx.png",
+    "farim_layer": "fx",
+    "joint_anchors": {
+      "origin": [0.50, 0.50]
+    }
+  },
+  {
+    "name": "parry_marker_fx",
+    "category": "fx",
+    "prompt": "transparent background VFX icon, rhythm parry marker with strong timing readability, slavic sigil meets arcade hit prompt, vivid contrast, centered, no text",
+    "w": 1024,
+    "h": 1024,
+    "out": "../../skazka_terranova_c/assets/generated/fx/parry_marker_fx.png",
+    "farim_layer": "fx",
+    "joint_anchors": {
+      "origin": [0.50, 0.50]
+    }
+  }
+]

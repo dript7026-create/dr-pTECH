@@ -1,0 +1,18 @@
+{
+  "references": [
+    {
+      "provider": "local",
+      "identifier": "sample_001",
+      "title": "Replace With A Public Domain Reference",
+      "image_url": null,
+      "source_url": null,
+      "license_name": "Public Domain",
+      "creator": "Unknown",
+      "tags": ["pixel-art", "gothic", "sprite"],
+      "width": null,
+      "height": null,
+      "local_path": "examples/reference_placeholder.png"
+    }
+  ],
+  "count": 1
+}

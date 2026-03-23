@@ -1,0 +1,17 @@
+[
+  {
+    "name": "tommy_sprite",
+    "prompt": "16x16 pixel chibi sprite, Game Boy 4-shade palette, clear silhouette",
+    "w": 16,
+    "h": 16,
+    "out": "assets/tommy_sprite.png",
+    "extra_body": { "style_id": "pixel_basic", "controls": { "colors": [[0,0,0],[85,85,85],[170,170,170],[255,255,255]] } }
+  },
+  {
+    "name": "bg_day",
+    "prompt": "160x144 pixel background, simple tiles, limited palette",
+    "w": 160,
+    "h": 144,
+    "out": "assets/bg_day.png"
+  }
+]

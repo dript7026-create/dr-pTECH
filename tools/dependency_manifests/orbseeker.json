@@ -1,0 +1,19 @@
+{
+  "project": "orbseeker",
+  "path": "orbseeker",
+  "provider": "python",
+  "requirements_file": "orbseeker/requirements.txt",
+  "module_groups": [
+    {
+      "name": "pygame_runtime",
+      "modules": [
+        "pygame"
+      ],
+      "purpose": "Playable OrbSeeker prototype runtime."
+    }
+  ],
+  "notes": [
+    "Install only when working on the OrbSeeker pygame prototype.",
+    "This stack is intentionally kept out of the shared workspace requirements."
+  ]
+}

@@ -1,0 +1,227 @@
+[
+  {
+    "name": "splash_ecbmps_gutenberg",
+    "prompt": "hero splash artwork for ECBMPS desktop reader, renaissance gutenberg printing press philosophy reimagined as illuminated book workstation, carved walnut press frame, brass screw mechanics, vellum folios, incunabula ornament, rubricated initials, restrained drIpTECH book-shell identity, elegant front-facing composition, premium editorial UI art, transparent-friendly framing, no text",
+    "w": 1280,
+    "h": 720,
+    "out": "branding/splash_ecbmps.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "ecbmps_icon_16_gutenberg",
+    "prompt": "tiny file icon for ECBMPS, miniature illuminated codex with brass clasp and rubricated initial, renaissance printshop aesthetic, crisp silhouette, parchment ivory, oxblood red, antique gold, transparent background, 16x16 usability-first icon",
+    "w": 16,
+    "h": 16,
+    "out": "icons/ecbmps_icon_16.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "ecbmps_icon_32_gutenberg",
+    "prompt": "file icon for ECBMPS, illuminated codex with brass clasp and rubricated initial, renaissance gutenberg printing-press design language, parchment ivory, oxblood red, antique gold, transparent background, highly legible 32x32 icon",
+    "w": 32,
+    "h": 32,
+    "out": "icons/ecbmps_icon_32.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "ecbmps_icon_48_gutenberg",
+    "prompt": "file icon for ECBMPS, illuminated codex with engraved brass corner guards, rubricated drop-cap emblem, renaissance printshop aesthetic, parchment ivory, oxblood, old gold, transparent background, elegant 48x48 desktop icon",
+    "w": 48,
+    "h": 48,
+    "out": "icons/ecbmps_icon_48.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "ecbmps_icon_64_gutenberg",
+    "prompt": "file icon for ECBMPS, premium illuminated codex with brass clasp and engraved page edging, gutenberg press aesthetic, parchment and antique gold palette, transparent background, richly detailed but clean 64x64 icon",
+    "w": 64,
+    "h": 64,
+    "out": "icons/ecbmps_icon_64.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "ecbmps_icon_128_gutenberg",
+    "prompt": "desktop icon for ECBMPS, luxurious illuminated codex with carved wood press motif and rubricated insignia, renaissance printing house aesthetic, vellum, oxblood, lampblack and antique gold, transparent background, refined 128x128 application icon",
+    "w": 128,
+    "h": 128,
+    "out": "icons/ecbmps_icon_128.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "ecbmps_icon_256_gutenberg",
+    "prompt": "hero application icon for ECBMPS, ornate illuminated codex with brass hardware and carved gutenberg press ornament, vellum leaves, rubricated initial, antique gold embossing, transparent background, luxurious 256x256 icon art",
+    "w": 256,
+    "h": 256,
+    "out": "icons/ecbmps_icon_256.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "ecbmps_frame_tl_gutenberg",
+    "prompt": "UI frame corner tile top-left for digital book reader, renaissance printing-press ornament, carved walnut border, brass leafwork, vellum inset, subtle engraved filigree, transparent background, decorative but functional corner asset",
+    "w": 64,
+    "h": 64,
+    "out": "gui/ecbmps/frame_tl.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "ecbmps_frame_tr_gutenberg",
+    "prompt": "UI frame corner tile top-right for digital book reader, renaissance printing-press ornament, carved walnut border, brass leafwork, vellum inset, subtle engraved filigree, transparent background, decorative but functional corner asset",
+    "w": 64,
+    "h": 64,
+    "out": "gui/ecbmps/frame_tr.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "ecbmps_frame_bl_gutenberg",
+    "prompt": "UI frame corner tile bottom-left for digital book reader, renaissance printing-press ornament, carved walnut border, brass leafwork, vellum inset, subtle engraved filigree, transparent background, decorative but functional corner asset",
+    "w": 64,
+    "h": 64,
+    "out": "gui/ecbmps/frame_bl.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "ecbmps_frame_br_gutenberg",
+    "prompt": "UI frame corner tile bottom-right for digital book reader, renaissance printing-press ornament, carved walnut border, brass leafwork, vellum inset, subtle engraved filigree, transparent background, decorative but functional corner asset",
+    "w": 64,
+    "h": 64,
+    "out": "gui/ecbmps/frame_br.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "ecbmps_titlebar_bg_gutenberg",
+    "prompt": "titlebar background tile for a desktop book reader, renaissance gutenberg printshop aesthetic, carved walnut strip, brass rule lines, subtle vellum marbling, horizontal seamless UI banner, luxurious but restrained, no text",
+    "w": 256,
+    "h": 36,
+    "out": "gui/ecbmps/titlebar/titlebar_bg.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "ecbmps_close_normal_gutenberg",
+    "prompt": "window close button icon normal state, renaissance printer's seal aesthetic, antique brass medallion with lampblack X mark, parchment and oxblood accent, transparent background, elegant UI control",
+    "w": 24,
+    "h": 24,
+    "out": "gui/ecbmps/titlebar/close_normal.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "ecbmps_close_hover_gutenberg",
+    "prompt": "window close button icon hover state, renaissance printer's seal aesthetic, antique brass medallion with illuminated oxblood X mark and warm gilded glow, transparent background, elegant UI control",
+    "w": 24,
+    "h": 24,
+    "out": "gui/ecbmps/titlebar/close_hover.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "ecbmps_close_pressed_gutenberg",
+    "prompt": "window close button icon pressed state, renaissance printer's seal aesthetic, antique brass medallion with stamped oxblood X mark, slightly inset, transparent background, elegant UI control",
+    "w": 24,
+    "h": 24,
+    "out": "gui/ecbmps/titlebar/close_pressed.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "ecbmps_min_normal_gutenberg",
+    "prompt": "window minimize button icon normal state, antique brass printer control medallion with horizontal rule glyph, renaissance press aesthetic, parchment and gold palette, transparent background",
+    "w": 24,
+    "h": 24,
+    "out": "gui/ecbmps/titlebar/minimize_normal.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "ecbmps_min_hover_gutenberg",
+    "prompt": "window minimize button icon hover state, antique brass printer control medallion with glowing horizontal rule glyph, renaissance press aesthetic, warm gilded highlight, transparent background",
+    "w": 24,
+    "h": 24,
+    "out": "gui/ecbmps/titlebar/minimize_hover.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "ecbmps_max_normal_gutenberg",
+    "prompt": "window maximize button icon normal state, antique brass printer control medallion with square press-form glyph, renaissance printshop aesthetic, parchment and gold palette, transparent background",
+    "w": 24,
+    "h": 24,
+    "out": "gui/ecbmps/titlebar/maximize_normal.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "ecbmps_max_hover_gutenberg",
+    "prompt": "window maximize button icon hover state, antique brass printer control medallion with illuminated square press-form glyph, renaissance printshop aesthetic, warm gilded highlight, transparent background",
+    "w": 24,
+    "h": 24,
+    "out": "gui/ecbmps/titlebar/maximize_hover.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "ecbmps_bg_light_gutenberg",
+    "prompt": "full-page reading background for digital codex mode, clean vellum sheet with faint deckled fiber, subtle renaissance paper grain, softly lit ivory parchment, seamless, no text or figures",
+    "w": 800,
+    "h": 600,
+    "out": "gui/ecbmps/backgrounds/light.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "ecbmps_bg_dark_gutenberg",
+    "prompt": "full-page reading background for dark codex mode, lampblack paper with faint letterpress impression texture and muted brass dusting, seamless, subdued renaissance printshop mood, no text or figures",
+    "w": 800,
+    "h": 600,
+    "out": "gui/ecbmps/backgrounds/dark.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "ecbmps_bg_sepia_gutenberg",
+    "prompt": "full-page reading background for sepia codex mode, aged parchment with subtle foxing, handmade vellum tone, faint letterpress texture, seamless, elegant renaissance book surface, no text or figures",
+    "w": 800,
+    "h": 600,
+    "out": "gui/ecbmps/backgrounds/sepia.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "ecbmps_bg_night_gutenberg",
+    "prompt": "full-page reading background for night codex mode, deep indigo-black paper with ghosted engraver flourishes and almost invisible brass specks, seamless, restrained renaissance nocturne texture, no text or figures",
+    "w": 800,
+    "h": 600,
+    "out": "gui/ecbmps/backgrounds/night.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "ecbmps_scroll_thumb_gutenberg",
+    "prompt": "custom scrollbar thumb for digital codex interface, small carved walnut and brass slider with engraved renaissance filigree, transparent background, tactile UI ornament",
+    "w": 16,
+    "h": 16,
+    "out": "gui/ecbmps/scrollbar/thumb.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  },
+  {
+    "name": "ecbmps_scroll_track_gutenberg",
+    "prompt": "custom scrollbar track for digital codex interface, narrow vellum-and-walnut strip with brass rule lines and subtle renaissance ornament, vertical UI element, transparent-friendly edges",
+    "w": 16,
+    "h": 64,
+    "out": "gui/ecbmps/scrollbar/track.png",
+    "api_units": 40,
+    "model": "recraftv4"
+  }
+]

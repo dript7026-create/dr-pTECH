@@ -1,0 +1,52 @@
+TOMMYBETA GBA RUNTIME ASSET MANIFEST
+
+Build target:
+- tommybeta.gba
+
+Converted directly into Mode 3 runtime bitmaps:
+- assets/recraft/quadrants/quadrant_01_canopy_spawn.png
+- assets/recraft/quadrants/quadrant_02_river_mist.png
+- assets/recraft/quadrants/quadrant_03_ruined_mushroom_gate.png
+- assets/recraft/quadrants/quadrant_04_bog_platforms.png
+- assets/recraft/quadrants/quadrant_05_root_bridge.png
+- assets/recraft/quadrants/quadrant_06_fungal_temple.png
+- assets/recraft/quadrants/quadrant_07_night_spores.png
+- assets/recraft/quadrants/quadrant_08_throne_glade.png
+- assets/recraft/ui/title_menu_sheet.png
+- assets/recraft/ui/ingame_menu_and_endscreens_sheet.png
+- assets/recraft/cinematics/tommy_fall_intro_sheet.png
+- assets/recraft/ui/tommy_hud_sheet.png
+
+- Regenerated with top-down action-RPG prompts:
+- All current TommyBeta prompts now emphasize top-down exploration, top-down combat sprites, top-down environments, and a saturday-morning-cartoon plus classic funny-pages parody direction.
+- Mario-specific references were intentionally not used; prompts were kept original and non-infringing.
+
+- assets/recraft/ui/special_icon_sheet.png
+- assets/recraft/fx/ambience_fx_sheet.png
+- assets/recraft/fx/combat_fx_sheet_basic.png
+- assets/recraft/fx/combat_fx_sheet_specials.png
+- assets/recraft/characters/tommy_core_motion_sheet.png
+- assets/recraft/characters/tommy_bite_combo_sheet.png
+- assets/recraft/characters/tommy_specials_sheet_a.png
+- assets/recraft/characters/tommy_specials_sheet_b.png
+- assets/recraft/characters/mareaou_core_motion_sheet.png
+- assets/recraft/characters/mareaou_attack_sheet_a.png
+- assets/recraft/characters/mareaou_attack_sheet_b.png
+- assets/recraft/environment/environmental_objects_sheet.png
+- assets/recraft/environment/roaming_creatures_sheet.png
+
+Runtime use in the current ROM:
+- Title screen prefers title_menu_sheet when available.
+- Tutorial overlays on the currently selected quadrant background.
+- Real-time gameplay now happens directly on the top-down quadrant maps instead of in separate battle scenes.
+- Tommy and Mareaou render from generated top-down-oriented character frames instead of placeholder primitives.
+- Environmental objects and roaming critters are drawn from the generated environment sheets to populate the landscape.
+- Combat and ambience overlays use the generated FX sheets during live map exploration.
+- Combat HUD uses tommy_hud_sheet as the top and bottom panel art.
+- Current special selection uses special_icon_sheet.
+- Game-over and win screens prefer ingame_menu_and_endscreens_sheet when available.
+- The gameplay renderer avoids full-screen redraws during exploration and instead restores small background regions behind moving actors to reduce visible flicker.
+
+Generated C assets:
+- build/gba_assets/tommybeta_mode3_assets.h
+- build/gba_assets/tommybeta_mode3_assets.c

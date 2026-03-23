@@ -1,0 +1,40 @@
+SKAZKA — Newgrounds-Adapted Narrative (TERRANOVA)
+
+When Misha first left the river town, they walked past splintered posters advertising midnight flash jams and the smell of machine oil from arcade cabinets. The spirits here accept mixtapes and meme-forms as payment; bargain with a Rusalka using a corrupted MP3, and it will sing you a chorus of glitch-lore. The world is skewed, half folkloric and half neon; villages run on barter, browsers, and bootleg charm.
+
+Premise:
+- In Terranova, the old bargains survived but learned to speak in the tongues of net.art and flash animations. Katya's disappearance ties to a viral page called "The Unfinished Reel", where clips of lost people loop and alter reality. Your mission: navigate analog subcultures—arcade dens, hacker bazaars, GIF shrines—and reclaim Katya from the reel.
+
+Mechanics and Motifs:
+- Tokens as Media: Ribbons become sprite-sheets; carved spoons become floppy disks. Tokens slot into a 'media deck' system: combine a ripped audio loop, a sprite fragment, and a tag to craft a ritual file that convinces a spirit to leak memory.
+- Remix Battles: Conflicts play out partly as rhythm-duels and partly as spoof-creation contests. Throw a corrupted clip into a Rusalka's stream to break its song, or feed the Leshy a fan-art that flatters its ego.
+- Community Reputation: NPCs react to your uploads and remixes. Upload kindness and receive favors; hoard and monetize tokens and watch friends vanish from your feed.
+
+Key Characters (rewritten):
+- Misha: A DIY net-artist who knows the rites of both hearth and hashtag. Playstyle leans on improvisation and social cunning.
+- Katya: Her profile vanished from the reel, but fragments of her uploads are cached in hidden servers; rescuing her means navigating servers and dodging moderation demons.
+- Net-Leshy: A sprite-thief who trades skins and banners for names. It loves praise and hates being ignored.
+- Rusalka-Streamer: A performer whose live-streams rip viewers into soft focus. Counter her by sending honest mixes that recall true names.
+- Zmey-Collector: A digital hoarder who caches promises in DRM-laden archives; free them and the Zmey loses bite.
+
+Tone:
+- Satirical but affectionate. The game lampoons internet subcultures while treating the emotional core—family, promise, and memory—with sincerity. Visuals mix pixel-art, VHS grain, and hand-stitched folk motifs.
+
+Progression and Endings:
+- Upload the three ritual media files to the Unfinished Reel; free Katya's cached profile and decide whether to restore her privacy or monetize her presence for influence.
+- Choices affect the net: restore names and watch communities heal; weaponize the reel and gain followers but lose intimacy.
+
+Localization Notes for Newgrounds Release:
+- Keep file sizes friendly; provide an HTML5 export with embedded assets. Offer a toggle to run in low-bandwidth pixel-mode.
+- Include cheeky easter eggs referencing classic Flash-era portals and community icons, but avoid direct trademark use.
+
+Monetization/Distribution:
+- Free-to-play demo on Newgrounds with a paid tier for extended ritual decks and extra endings. Provide a ZIP with 'fans' extras and a DRM-free archive for supporters.
+
+Art Direction:
+- Palette: Neon-copper, VHS-blue, paper-cream. Mix 4-color Game Boy-inspired palettes with 16-bit arcade hues.
+- Sound: Chiptune loops mixed with lo-fi samples, field recordings, and modem-sounds. Include options to simulate tape-hiss or web-lag.
+
+---
+
+End of Newgrounds-Adapted Narrative

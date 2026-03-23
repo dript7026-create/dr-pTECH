@@ -1,0 +1,107 @@
+{
+  "prepared_date": "2026-03-20",
+  "prepared_at": "2026-03-20T00:11:05.259696-04:00",
+  "repository": "egosphere",
+  "review_scope": [
+    "core gameplay cognition module",
+    "full pipeline validation suite",
+    "Pertinence Tribunal scaled example",
+    "demo runtime save/load snapshot"
+  ],
+  "core_module": {
+    "command": "make smoke-test",
+    "status": "passed",
+    "summary": {
+      "rival_name": "Smoke Rival",
+      "archetype": "inspector",
+      "threat": 0.49,
+      "pressure": 0.05,
+      "combo": 0.03,
+      "mercy": 0.66,
+      "ambition": 0.52,
+      "engagements": 3
+    }
+  },
+  "validation_suite": {
+    "command": "C:/Users/rrcar/Documents/drIpTECH/.venv/Scripts/python.exe tools/validate_pipeline.py --suite all",
+    "status": "passed",
+    "sample": {
+      "project_name": "EgosphereGame",
+      "system_count": 4,
+      "entity_count": 3,
+      "precache_count": 5,
+      "pipeline_output": {
+        "project": "EgosphereGame",
+        "clipstudio_bundle": "pipeline/out/validation/clipstudio_bundle/clipstudio_export.json",
+        "blender_bundle": "pipeline/out/validation/blender_bundle/blender_conversion.json",
+        "idtech2_bundle": "pipeline/out/validation/idtech2_bundle/idtech2_manifest.json"
+      }
+    },
+    "pertinence": {
+      "build_output": {
+        "project_root": "pipeline/projects/pertinence_tribunal",
+        "sprite_assets": 88,
+        "tilesets": 8,
+        "portraits": 6,
+        "fx_assets": 16,
+        "recraft_requests": 102,
+        "recraft_budget_units": 4080
+      },
+      "asset_checks": {
+        "png_assets_checked": 102,
+        "png_transparency_failures": 0
+      },
+      "blender_report": {
+        "mode": "dry-run",
+        "scene_count": 32,
+        "lift_count": 88
+      },
+      "idtech_summary": {
+        "asset_count": 102,
+        "precache_count": 102,
+        "system_count": 6,
+        "entity_count": 19
+      },
+      "recraft_manifest": {
+        "path": "pipeline/projects/pertinence_tribunal/recraft_manifest.json",
+        "api_key_present": true
+      }
+    }
+  },
+  "demo_runtime": {
+    "command": ".\\demo.exe",
+    "status": "passed",
+    "summary": {
+      "final_rival_name": "The Ashen Magistrate",
+      "archetype": "verdict-knight",
+      "threat": 1.1,
+      "pressure": 1.0,
+      "combo": 0.99,
+      "mercy": 0.67,
+      "ambition": 0.43,
+      "engagements": 500,
+      "reloaded_planner_states": 24,
+      "reloaded_planner_actions": 5,
+      "replay_capacity": 384,
+      "resonance": {
+        "familiarity": 1.0,
+        "reciprocity": 0.85,
+        "tension": 0.58,
+        "permeability": 0.67
+      },
+      "narrative_field": {
+        "active": 1,
+        "revelation": 0.48,
+        "alliance": 0.57,
+        "rupture": 0.22,
+        "ending": 0.72,
+        "omen": 0.42
+      }
+    }
+  },
+  "review_notes": [
+    "Historical Pertinence contact-sheet review folders are empty in the current repository snapshot.",
+    "Legacy markdown lint issues exist in some generated docs but do not block the validated code and bundle outputs.",
+    "This snapshot is intended for review, not final production signoff."
+  ]
+}
