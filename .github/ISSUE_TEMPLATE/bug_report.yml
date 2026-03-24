@@ -1,0 +1,37 @@
+name: Bug report
+description: Report a reproducible defect in a project or workspace tool.
+title: "[Bug]: "
+labels:
+  - bug
+body:
+  - type: input
+    id: project
+    attributes:
+      label: Project or path
+      placeholder: egosphere/tools/validate_pipeline.py
+    validations:
+      required: true
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: What is broken and what did you expect instead?
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Reproduction steps
+      description: Include exact commands, inputs, or file paths when possible.
+    validations:
+      required: true
+  - type: textarea
+    id: validation
+    attributes:
+      label: Validation attempted
+      description: Mention tests, scripts, or manual checks already run.
+  - type: textarea
+    id: context
+    attributes:
+      label: Environment and context
+      description: OS, toolchain, interpreter version, and any relevant local setup.

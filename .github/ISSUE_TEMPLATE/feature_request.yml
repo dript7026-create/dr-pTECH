@@ -1,0 +1,37 @@
+name: Feature request
+description: Propose a new capability, workflow, or project improvement.
+title: "[Feature]: "
+labels:
+  - enhancement
+body:
+  - type: input
+    id: project
+    attributes:
+      label: Project or path
+      placeholder: DoENGINE, egosphere/pipeline, workspace tooling
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem or opportunity
+      description: What limitation or gap is driving this request?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed change
+      description: Describe the desired behavior or outcome.
+    validations:
+      required: true
+  - type: textarea
+    id: constraints
+    attributes:
+      label: Constraints
+      description: Note platform, dependency, budget, or compatibility constraints.
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+      description: List any current workaround or rejected approach.

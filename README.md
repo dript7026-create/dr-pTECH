@@ -111,6 +111,7 @@ Open-Source Mirror Policy
 - This repository is intended to be the durable open-source mirror for the active drIpTECH workspace source, documentation, and reproducible tooling.
 - Machine-local environments, caches, oversized build outputs, archives, and handoff bundles are excluded through the repo-level `.gitignore` so publication does not depend on workstation-local Git settings.
 - The baseline CI entry point is `.github/workflows/workspace-health.yml`, which runs the curated workspace health check on pushes and pull requests.
+- Contributor intake is handled through `CONTRIBUTING.md`, `SECURITY.md`, `.github/ISSUE_TEMPLATE/`, and `.github/pull_request_template.md`.
 - Third-party attribution should continue to be recorded in [THIRD_PARTY_CREDITS.md](THIRD_PARTY_CREDITS.md) and the relevant manifest under `tools/dependency_manifests/`.
 
 If you'd like, I can: add CI config, scaffold the `conceptlife.c` tests, or produce hex previews for firmware candidates now. Which would you prefer?
