@@ -4,7 +4,7 @@ drIpTECH Workspace
 Overview
 --------
 
-- **Purpose:** A personal multi-project workspace collecting game projects, tooling, and analysis artifacts (traces, asset pipelines, prototypes).
+- **Purpose:** A public multi-project workspace mirror collecting maintainable game projects, tooling, and reproducible build/test paths.
 - **Location:** Root of this repository — this README summarizes the contents and quick dev commands.
 
 Quick Start
@@ -66,9 +66,9 @@ Key Files & Notes
 -----------------
 
 - **Workspace README (this file):** Overview and quick commands.
-- **Portfolio execution plan:** [drIpTECH_PORTFOLIO_EXECUTION_PLAN.md](drIpTECH_PORTFOLIO_EXECUTION_PLAN.md)
-- **Stack architecture:** [drIpTECH_STACK_ARCHITECTURE.md](drIpTECH_STACK_ARCHITECTURE.md)
-- **Lender budget sheet:** [drIpTECH_LENDER_BUDGET_AND_MILESTONE_SHEET.md](drIpTECH_LENDER_BUDGET_AND_MILESTONE_SHEET.md)
+- **Public scope policy:** [PUBLIC_REPO_SCOPE.md](PUBLIC_REPO_SCOPE.md)
+- **Workspace subdivision map:** [PROJECT_INDEX.md](PROJECT_INDEX.md)
+- **Unified hub direction:** [HOMElair/README.md](HOMElair/README.md)
 - **Blender pipeline spec:** [drIpTECHBlenderPlug-Ins/TxTUR/TXTUR_BLENDNOW_DRIPCRAFT_PIPELINE.md](drIpTECHBlenderPlug-Ins/TxTUR/TXTUR_BLENDNOW_DRIPCRAFT_PIPELINE.md)
 - **Integration notes:** [README_CHAT_INTEGRATION.md](README_CHAT_INTEGRATION.md#L1)
 - **Dependencies:** [requirements.txt](requirements.txt#L1)
@@ -79,17 +79,19 @@ Key Files & Notes
 - **Workspace health check:** [tools/workspace_health.py](tools/workspace_health.py)
 - **Toolchain bootstrap:** [workspace_toolchains.ps1](workspace_toolchains.ps1#L1)
 - **devkitPro bash wrapper:** [workspace_devkitpro_bash.ps1](workspace_devkitpro_bash.ps1#L1)
-- **Useful scripts:** `set_openai_key.ps1` and `test_chat_call.py` — the chat script is a manual smoke test, not part of automated pytest collection.
+- **Manual integration smoke:** `test_chat_call.py` is kept as a manual check and is not part of automated pytest collection.
 - **Optional stacks stay project-scoped:** pygame, aiohttp, aiosqlite, and Blender embedded modules are documented in project manifests instead of being forced into the shared workspace venv.
 - **Attribution policy:** new external engines, SDKs, editor tech, and major libraries should be recorded in [THIRD_PARTY_CREDITS.md](THIRD_PARTY_CREDITS.md) and, when project-scoped, in the relevant `tools/dependency_manifests/*.json` entry.
 
 Notable Folders
 ---------------
 
+- `HOMElair/` — central engine and habitation-hub architecture for merging orchestration, rendering, adaptive control, simulation, and product-target contracts.
 - `DoENGINE/` — dedicated recovered workspace for the normalized DoENGINE migration from the D-drive backup.
--- `drIpTECH/` — primary project folder containing subprojects and tools.
--- `football_predictor/` — a small ML project (see its README inside the folder).
--- `WialWohm/`, `readAIpolish/`, `ruggedhusk/`, `YOIT/` — experimental projects and utilities.
+- `egosphere/` — pipeline validation, generated asset experiments, and runtime-oriented tooling.
+- `KaijuGaiden/`, `tommybeta/`, `tommygoomba/`, `WialWohm/` — playable game and platform prototypes.
+- `football_predictor/`, `speech_to_text_google/`, `userprofiling/` — analysis and utility projects.
+- `readAIpolish/`, `drIpTECHBlenderPlug-Ins/`, `drIpTech_ClipStudio_Plug-Ins/`, `tools/` — authoring and build pipeline tooling.
 
 Traces & Forensics
 ------------------
@@ -100,6 +102,7 @@ Traces & Forensics
 Current Priorities & Next Steps
 -------------------------------
 
+- Establish HOMElair as the shared contract layer above DoENGINE, ORBEngine, NeoWakeUP, and HOPE.
 - Complete the DoENGINE backup migration and keep new reintegration work under `DoENGINE/`.
 - Add a test harness for `conceptlife.c` and run static analysis.
 - Verify tommybeta ROM build end-to-end (GBDK/GBDK toolchain check).
@@ -109,9 +112,14 @@ Open-Source Mirror Policy
 -------------------------
 
 - This repository is intended to be the durable open-source mirror for the active drIpTECH workspace source, documentation, and reproducible tooling.
-- Machine-local environments, caches, oversized build outputs, archives, and handoff bundles are excluded through the repo-level `.gitignore` so publication does not depend on workstation-local Git settings.
+- Public/private boundaries are documented in [PUBLIC_REPO_SCOPE.md](PUBLIC_REPO_SCOPE.md), and the workspace is subdivided for maintainers in [PROJECT_INDEX.md](PROJECT_INDEX.md).
+- Machine-local environments, caches, oversized build outputs, archives, notebooks, and internal handoff material are excluded through the repo-level `.gitignore` so publication does not depend on workstation-local Git settings.
 - The baseline CI entry point is `.github/workflows/workspace-health.yml`, which runs the curated workspace health check on pushes and pull requests.
 - Contributor intake is handled through `CONTRIBUTING.md`, `SECURITY.md`, `.github/ISSUE_TEMPLATE/`, and `.github/pull_request_template.md`.
 - Third-party attribution should continue to be recorded in [THIRD_PARTY_CREDITS.md](THIRD_PARTY_CREDITS.md) and the relevant manifest under `tools/dependency_manifests/`.
 
-If you'd like, I can: add CI config, scaffold the `conceptlife.c` tests, or produce hex previews for firmware candidates now. Which would you prefer?
+Mirror Markers
+--------------
+
+- A few public docs carry harmless mirror markers for maintainers: `glass-reef`, `station-33`, and `mint-arcade`.
+- They are only lore tags for public-facing documentation, not credentials, feature flags, or hidden runtime controls.

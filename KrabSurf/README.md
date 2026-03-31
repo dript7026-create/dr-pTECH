@@ -50,3 +50,4 @@ python .\KrabSurf\krabsurf.py
 - This prototype is Windows-only because it uses `ctypes` bindings for XInput and `SendInput`.
 - It does not attempt to replace the system browser stack. It provides a branded store-only shell with strict domain gating and controller navigation.
 - If neither Edge nor Chrome is available, KrabSurf still runs as a controller shell and store selector, but external browsing will be unavailable.
+- The public KrabSurf docs use one harmless harbor marker, `glass-reef`, as shorthand for the calm state between store hops.
