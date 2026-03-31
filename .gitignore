@@ -71,6 +71,29 @@ captures/
 traces/
 jupyter_kernels.json
 
+# Public mirror boundary: internal strategy, lender, and local operator files
+CERT_REPORT.md
+EMAIL_TO_SECURITY.md
+LEGAL_REPORT.md
+README_FOR_IT.md
+README_master.md
+CHAT_INTEGRATION_PROGRESS.md
+drIpTECH_COMPLETE_EXECUTION_AND_LENDER_PACKAGE.md
+drIpTECH_COMPLETE_EXECUTION_AND_LENDER_PACKAGE.txt
+drIpTECH_LENDER_BUDGET_AND_MILESTONE_SHEET.md
+drIpTECH_PORTFOLIO_EXECUTION_PLAN.md
+drIpTECH_STACK_ARCHITECTURE.md
+metadata.json
+pip_list.json
+pip_licenses.md
+set_openai_key.ps1
+set_recraft_key.ps1
+chat_integration.ipynb
+driptech_jupyter_setup.ipynb
+jpytr.ipynb
+skazka/notebooks/dev_session.ipynb
+drIpTECH.bak
+
 # Generated runtime data
 *_rivals.dat
 smoke_rivals.dat
@@ -78,3 +101,81 @@ egosphere_rivals.dat
 
 # Large authoring source files better kept out of git mirrors
 *.clip
+
+# ═══════════════════════════════════════════════════════════════════
+# SECURITY HARDENING — business/financial/credential protection
+# ═══════════════════════════════════════════════════════════════════
+
+# Secrets and credentials (prevent any future accidents)
+*.env
+.env.*
+!.env.example
+*.pem
+!**/certifi/cacert.pem
+*.p12
+*.pfx
+*.jks
+*.keystore
+*.key
+!*.key.example
+**/credentials/
+**/secrets/
+**/.secrets/
+*secret*.json
+*credential*.json
+*token*.json
+!**/game_project*.json
+!**/manifest*.json
+!**/schema*.json
+
+# Private keys and certificates
+*.crt
+*.cer
+!**/certifi/**
+
+# Financial and business-sensitive documents
+*invoice*
+*financial*
+*bank*account*
+*tax*return*
+*budget*private*
+*payroll*
+*nda_*
+*confidential_*
+
+# OAuth/auth state files
+oauth2_*.json
+google-credentials.json
+service-account*.json
+
+# SDK and large binary toolchains (never commit)
+android-bootstrap/android-sdk/
+**/android-sdk/
+**/ndk/
+**/gradle/wrapper/gradle-wrapper.jar
+
+# OS and editor noise
+Thumbs.db
+Desktop.ini
+.DS_Store
+*.swp
+*.swo
+*~
+
+# Clipboard guard runtime state
+scripts/clipboard_guard.log
+scripts/clipboard_guard.pid
+scripts/clipboard_guard.status.json
+
+# Build log artifacts that may leak paths
+D_drive_root_asset_validation.json
+compile_commands.json
+ORBEngine/build_errors.txt
+ORBEngine/build_full_output.txt
+ORBEngine/build_stderr.txt
+ORBEngine/build_stdout.txt
+ORBEngine/mini_stderr.txt
+ORBEngine/mini_stdout.txt
+ORBEngine/pp_stderr.txt
+ORBEngine/pp_stdout.txt
+ORBEngine/mini.cpp
