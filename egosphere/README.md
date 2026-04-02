@@ -68,7 +68,7 @@ python tools/validate_pipeline.py --gui
 
 Pipeline validation:
 
-- `python tools/validate_pipeline.py` runs the fast sample-project regression and checks that the Clip Studio, Blender, and idTech2 bundles were emitted with the expected files.
+- `python tools/validate_pipeline.py` runs the fast sample-project regression and checks that the art export, Blender, and engine bundles were emitted with the expected files.
 - `python tools/validate_pipeline.py --suite pertinence` runs the Pertinence: Tribunal end-to-end validation path.
 - `python tools/validate_pipeline.py --suite all` runs both suites and prints a combined JSON report.
 - `python tools/validate_pipeline.py --gui` launches a standalone Tk desktop app with suite selection, live execution logs, and a JSON summary pane.

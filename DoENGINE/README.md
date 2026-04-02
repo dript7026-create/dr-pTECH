@@ -11,6 +11,7 @@ DoENGINE is the dedicated recovered workspace for the D-drive `doengine-backup` 
 - `packages/bango-target/src/` — normalized TypeScript reintegration of the Bango engine-target bridge.
 - `packages/hybrid-engine/src/` — cross-DoENGINE and ORBEngine runtime profile builder for DODOGame-hosted hybrid rendering.
 - `packages/donow/src/` — DoENGINE automated implementation module for clip-blend-id runtime ingest.
+- `games/` — per-title source-ingest branches staged for DODO hybrid runtime registration.
 - `apps/` — standalone DoENGINE GUI application sources.
 - `tools/` — Python-side manifest and runtime builders for DoENGINE operations.
 - `docs/philosophy/` — theory, nomenclature, and hardware-trace concepts.
@@ -28,6 +29,8 @@ The source snapshot was recovered from `D:\doengine-backup` and preserved as rea
 `apps/dodogame.py` now includes an embedded `Illusion 3D` viewport driven by `apps/dodo_engine3d.py`. The renderer is a mesh-and-camera pipeline with shader-style passes for sky gradient, floor warp, stepped lambert/rim lighting, fog, and scanline/canvas grain so the output lands in the intended IllusionCanvas pseudo-3D space instead of a flat launcher mockup.
 
 The renderer also supports manifest-driven scene loading, billboard cards, lightweight script directives, OBJ mesh ingestion, and binary glTF (`.glb`) mesh ingestion so DODO can present an actual BangoNOW pipeline gallery instead of only a hard-coded tech demo. `tools/build_bangonow_showcase.py` scans the best playable BangoNOW package it can find and emits a scene manifest consumed by the launcher. When a real BangoNOW `player_glb` is present, the showcase now instantiates that asset directly instead of falling back to a proxy monolith.
+
+DoENGINE now also includes a source-ingest branch for `toadstoolmin bubble SWINGPUSH` under `games/toadstoolmin_bubble_swingpush/`, with a C entry file and game profile manifest registered into the DODO hybrid runtime as a fresh title seed.
 
 For headless validation or artifact export:
 
