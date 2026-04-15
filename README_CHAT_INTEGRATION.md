@@ -8,11 +8,11 @@ Quick start
 python -m pip install -r requirements.txt
 ```
 
-2. Set your API key (example on Windows PowerShell):
+2. Set your API key from the launch-key helper (Windows PowerShell):
 
 ```powershell
-$env:OPENAI_API_KEY = "sk-..."
-# Optionally:
+.\set_openai_key.ps1
+# Optionally, in the same shell:
 $env:OPENAI_CHAT_MODEL = "gpt-4o-mini"
 ```
 
@@ -26,4 +26,4 @@ Notes
 
 Security
 
-- Do not commit your API key to source control. Use environment variables or a secrets manager.
+- Do not commit your API key to source control. Use the helper script, environment variables, or a secrets manager.

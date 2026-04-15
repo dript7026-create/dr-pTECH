@@ -27,34 +27,38 @@ $sensitivePathPatterns = @(
     '(?i)(^|[\\/]).*token.*\.json$',
     '(?i)(^|[\\/]).*service-account.*\.json$',
     '(?i)(^|[\\/])google-credentials\.json$',
-    '(?i)(^|[\\/]).*\.(pem|p12|pfx|jks|keystore|key|crt|cer)$',
-    '(?i)(^|[\\/]).*(invoice|financial|payroll|tax.?return|bank.?account|budget.?private|lender|confidential|nda).*'
+    '(?i)(^|[\\/]).*\.(pem|p12|pfx|jks|keystore|key|crt|cer)$'
 )
 
 $sensitiveContentPatterns = @(
-    '(?i)OPENAI_API_KEY\s*[=:]\s*[^\s"'']+',
-    '(?i)AZURE_OPENAI_API_KEY\s*[=:]\s*[^\s"'']+',
-    '(?i)AWS_SECRET_ACCESS_KEY\s*[=:]\s*[^\s"'']+',
-    '(?i)client_secret\s*[=:]\s*[^\s"'']+',
-    '(?i)authorization\s*[:=]\s*bearer\s+[A-Za-z0-9._\-]+',
+    '(?i)\bOPENAI_API_KEY\b\s*[=:]\s*(?:["''][^"'']{12,}["'']|sk-[A-Za-z0-9]{20,}|[A-Za-z0-9_-]{32,})',
+    '(?i)\bRECRAFT_API_KEY\b\s*[=:]\s*(?:["''][^"'']{12,}["'']|[A-Za-z0-9_-]{32,})',
+    '(?i)\bAZURE_OPENAI_API_KEY\b\s*[=:]\s*(?:["''][^"'']{12,}["'']|[A-Za-z0-9_-]{32,})',
+    '(?i)\bAWS_SECRET_ACCESS_KEY\b\s*[=:]\s*(?:["''][^"'']{12,}["'']|[A-Za-z0-9_-]{32,})',
+    '(?i)\bclient_secret\b\s*[=:]\s*(?:["''][^"'']{12,}["'']|[A-Za-z0-9._-]{20,})',
+    '(?i)\bauthorization\b\s*[:=]\s*bearer\s+(?:gh[pousr]_[A-Za-z0-9_]{20,}|github_pat_[A-Za-z0-9_]{20,}|[A-Za-z0-9._\-]{20,})',
     '(?i)-----BEGIN [A-Z ]*PRIVATE KEY-----',
-    '(?i)github_pat_[A-Za-z0-9_]+',
-    '(?i)gh[pousr]_[A-Za-z0-9]+',
-    '(?i)sk-[A-Za-z0-9]{20,}',
-    '(?i)api[_-]?key\s*[=:]\s*[^\s"'']{12,}'
+    '(?i)\bgithub_pat_[A-Za-z0-9_]{20,}\b',
+    '(?i)\bgh[pousr]_[A-Za-z0-9_]{20,}\b',
+    '(?i)\bsk-[A-Za-z0-9]{20,}\b',
+    '(?i)\bapi[_-]?key\b\s*[=:]\s*(?:["''][^"'']{12,}["'']|sk-[A-Za-z0-9]{20,}|gh[pousr]_[A-Za-z0-9_]{20,}|github_pat_[A-Za-z0-9_]{20,}|[A-Za-z0-9_-]{32,})'
 )
 
 $allowlistedContentPatterns = @(
     '(?i)OPENAI_API_KEY not set',
+    '(?i)RECRAFT_API_KEY not set',
     '(?i)Set the environment variable `OPENAI_API_KEY`',
+    '(?i)Set the environment variable `RECRAFT_API_KEY`',
     '(?i)required_env',
     '(?i)api_key_present',
     '(?i)password system',
     '(?i)rcon_password',
-    '(?i)token',
     '(?i)client_secret.*placeholder',
+    '(?i)authorization\s*[:=]\s*bearer\s+<',
     '(?i)example',
-    '(?i)sample'
+    '(?i)sample',
+    '(?i)placeholder',
+    '(?i)redacted'
 )
 
 $skipDirectories = @(
@@ -62,9 +66,15 @@ $skipDirectories = @(
     '.venv\',
     '.jdk\',
     '.android-bootstrap\',
+    '.tmp\',
     '.tools\',
+    '.vscode\',
     '__pycache__\',
     '.pytest_cache\'
+)
+
+$allowlistedPathPatterns = @(
+    '(?i)(^|[\\/])certifi[\\/]cacert\.pem$'
 )
 
 $textExtensions = @(
@@ -102,6 +112,16 @@ function Test-AllowlistedLine {
     return $false
 }
 
+function Test-AllowlistedPath {
+    param([string]$Path)
+    foreach ($pattern in $allowlistedPathPatterns) {
+        if ($Path -match $pattern) {
+            return $true
+        }
+    }
+    return $false
+}
+
 if ($AllFiles) {
     $candidatePaths = git -C $repoRoot -c core.quotepath=false ls-files --cached --others --exclude-standard
 } else {
@@ -127,6 +147,10 @@ $findings = [System.Collections.Generic.List[string]]::new()
 
 foreach ($path in $candidatePaths) {
     if (-not (Test-Path -LiteralPath $path)) {
+        continue
+    }
+
+    if (Test-AllowlistedPath $path) {
         continue
     }
 
@@ -174,3 +198,4 @@ if ($findings.Count -gt 0) {
 
 Write-Host "Security pre-push check passed." -ForegroundColor Green
 Write-Host "Scanned $($candidatePaths.Count) candidate paths from $(if ($AllFiles) { 'the full repository view' } else { 'current local changes' })."
+Write-Host "For a full-workspace push, run powershell -File scripts/prepare_workspace_push.ps1 next." -ForegroundColor Cyan

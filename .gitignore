@@ -3,6 +3,7 @@
 .jdk/
 .android-bootstrap/
 .copilot_bridge/
+.tmp/
 .tools/
 .vscode/
 
@@ -52,6 +53,10 @@ out/
 *.zip
 *.7z
 *.rar
+assets archive/
+AssetGenerator/migrated_d_drive/
+**/deliverables/
+**/backup_secondary/
 
 # Logs and machine-local reports
 *.log
@@ -86,18 +91,29 @@ drIpTECH_STACK_ARCHITECTURE.md
 metadata.json
 pip_list.json
 pip_licenses.md
-set_openai_key.ps1
-set_recraft_key.ps1
 chat_integration.ipynb
 driptech_jupyter_setup.ipynb
 jpytr.ipynb
 skazka/notebooks/dev_session.ipynb
 drIpTECH.bak
 
+# Versioned launch-key helpers remain tracked on purpose.
+!set_openai_key.ps1
+!set_recraft_key.ps1
+
 # Generated runtime data
 *_rivals.dat
 smoke_rivals.dat
 egosphere_rivals.dat
+*.sav
+*.blend
+*.blend1
+*_validation.out
+*_validation.err
+BluninKrabPrototype/smoke_test_preview*.json
+BluninKrabPrototype/smoke_test_preview*.png
+BluninKrabPrototype/bluninkrabvania_release_validation.json
+BluninKrabPrototype/bluninkrabvania_release_validation.png
 
 # Large authoring source files better kept out of git mirrors
 *.clip

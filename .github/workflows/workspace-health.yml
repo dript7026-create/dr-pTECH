@@ -14,6 +14,10 @@ jobs:
       - name: Check out repository
         uses: actions/checkout@v4
 
+      - name: Run repository security gate
+        shell: powershell
+        run: .\scripts\pre_push_security_check.ps1 -AllFiles
+
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
