@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>drIpTRIUMVIRATE</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <canvas id="matrix-canvas"></canvas>
+  <div class="scanlines"></div>
+  <div class="crt">
+
+    <!-- TOP BAR -->
+    <header class="topbar">
+      <div class="logo">drIp<span class="accent">TRIUMVIRATE</span></div>
+      <div class="status-row">
+        <span class="led green"></span><span class="status-label">LIVE</span>
+        <span class="led cyan"></span><span class="status-label">SIGNALS</span>
+        <span class="led magenta"></span><span class="status-label">STUDIO</span>
+        <span class="uptime" id="uptime">T+00:00:00</span>
+      </div>
+      <div class="topbar-controls">
+        <button id="btn-auto-pulse" class="btn-icon" title="Auto-pulse feel state every 30s">&#x27F3;</button>
+        <button id="btn-disco" class="btn-icon" title="Disco ball">&#x1fa69;</button>
+        <button id="btn-dubstep" class="btn-icon" title="Dubstep engine">&#9835;</button>
+        <button id="btn-matrix" class="btn-icon active" title="Matrix rain">&#9619;</button>
+      </div>
+    </header>
+
+    <!-- THREE-PANEL TRIUMVIRATE -->
+    <main class="triumvirate">
+
+      <!-- PANEL 1: drIpLIVE -->
+      <section class="panel live-panel">
+        <div class="panel-header">
+          <span class="prompt">$</span> drIpLIVE <span class="blink">_</span>
+        </div>
+        <div class="panel-sub">experiential runtime</div>
+        <div class="dial-group" id="dial-group">
+          <div class="dial" data-feel="urgency">
+            <canvas class="dial-canvas" width="68" height="68"></canvas>
+            <div class="dial-tag">URG</div>
+            <div class="dial-val">0.50</div>
+          </div>
+          <div class="dial" data-feel="trust">
+            <canvas class="dial-canvas" width="68" height="68"></canvas>
+            <div class="dial-tag">TRU</div>
+            <div class="dial-val">0.50</div>
+          </div>
+          <div class="dial" data-feel="wonder">
+            <canvas class="dial-canvas" width="68" height="68"></canvas>
+            <div class="dial-tag">WND</div>
+            <div class="dial-val">0.50</div>
+          </div>
+          <div class="dial" data-feel="tenderness">
+            <canvas class="dial-canvas" width="68" height="68"></canvas>
+            <div class="dial-tag">TND</div>
+            <div class="dial-val">0.50</div>
+          </div>
+          <div class="dial" data-feel="grit">
+            <canvas class="dial-canvas" width="68" height="68"></canvas>
+            <div class="dial-tag">GRT</div>
+            <div class="dial-val">0.50</div>
+          </div>
+          <div class="dial" data-feel="clarity">
+            <canvas class="dial-canvas" width="68" height="68"></canvas>
+            <div class="dial-tag">CLR</div>
+            <div class="dial-val">0.50</div>
+          </div>
+          <div class="dial" data-feel="volatility">
+            <canvas class="dial-canvas" width="68" height="68"></canvas>
+            <div class="dial-tag">VOL</div>
+            <div class="dial-val">0.50</div>
+          </div>
+        </div>
+
+        <div class="weather-row">
+          <button class="btn-weather active" data-weather="clear">CLEAR</button>
+          <button class="btn-weather" data-weather="charged">CHARGED</button>
+          <button class="btn-weather" data-weather="static">STATIC</button>
+          <button class="btn-weather" data-weather="storm">STORM</button>
+        </div>
+
+        <div class="ctx-sliders">
+          <label>HOUR <input type="range" id="ctx-hour" min="0" max="24" step="0.5" value="12"><span id="ctx-hour-val">12.0</span></label>
+          <label>ENERGY <input type="range" id="ctx-energy" min="0" max="1" step="0.01" value="0.65"><span id="ctx-energy-val">0.65</span></label>
+          <label>AUDIENCE <input type="range" id="ctx-audience" min="0" max="1" step="0.01" value="0.70"><span id="ctx-audience-val">0.70</span></label>
+          <label>FRESHNESS <input type="range" id="ctx-freshness" min="0" max="1" step="0.01" value="0.75"><span id="ctx-freshness-val">0.75</span></label>
+          <label>NOISE <input type="range" id="ctx-noise" min="0" max="1" step="0.01" value="0.40"><span id="ctx-noise-val">0.40</span></label>
+        </div>
+        <button id="btn-pulse" class="btn-action">PULSE</button>
+      </section>
+
+      <!-- PANEL 2: dripsignals -->
+      <section class="panel signals-panel">
+        <div class="panel-header">
+          <span class="prompt">$</span> dripsignals <span class="blink">_</span>
+        </div>
+        <div class="panel-sub">feeling &rarr; signal bridge</div>
+        <div class="signal-flow" id="signal-flow">
+          <div class="flow-line dim">&gt; awaiting pulse...</div>
+        </div>
+        <div class="signal-bars" id="signal-bars"></div>
+        <div class="resonance-meter">
+          <span>RESONANCE</span>
+          <div class="meter-track"><div class="meter-fill" id="resonance-fill"></div></div>
+          <strong id="resonance-value">---</strong>
+        </div>
+      </section>
+
+      <!-- PANEL 3: drIpSignalStudio -->
+      <section class="panel studio-panel">
+        <div class="panel-header">
+          <span class="prompt">$</span> drIpSignalStudio <span class="blink">_</span>
+        </div>
+        <div class="panel-sub">campaign output engine</div>
+        <div class="profile-inputs">
+          <label>BRAND <input id="p-brand" type="text" value="drIpTECH" class="term-input"></label>
+          <label>PRODUCT <input id="p-product" type="text" value="Signal Forge" class="term-input"></label>
+          <label>AUDIENCE <input id="p-audience" type="text" value="builders who need sharper campaign drafts" class="term-input"></label>
+          <label>OFFER <input id="p-offer" type="text" value="turn complex work into concise visual campaigns" class="term-input"></label>
+          <label>TONE <input id="p-tone" type="text" value="incisive, cinematic, optimistic" class="term-input"></label>
+          <label>CTA <input id="p-cta" type="text" value="Book a build sprint" class="term-input"></label>
+        </div>
+        <button id="btn-generate" class="btn-action btn-fire">&gt; GENERATE PLAN</button>
+        <div class="studio-output" id="studio-output">
+          <div class="flow-line dim">&gt; standing by...</div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- PIPELINE STATS BAR -->
+    <div id="stats-bar" class="stats-bar"></div>
+
+    <!-- MATRIX TASK BOARD -->
+    <section class="panel task-panel">
+      <div class="panel-header">
+        <span class="prompt">$</span> ls -la /pipeline/ <span class="blink">_</span>
+      </div>
+      <div class="task-terminal" id="task-terminal">
+        <div class="flow-line dim">loading tasks...</div>
+      </div>
+      <div class="task-controls">
+        <input type="text" id="task-input" placeholder="new_task_label" class="term-input" maxlength="120">
+        <div class="priority-row">
+          <span>PRI</span>
+          <input type="range" id="task-priority" min="1" max="10" value="5">
+          <span id="task-priority-val">5</span>
+        </div>
+        <button id="btn-add-task" class="btn-action">+ ADD</button>
+      </div>
+    </section>
+
+    <!-- DISCO BALL -->
+    <div id="disco-container" class="disco-container hidden">
+      <div class="disco-ball">
+        <div class="disco-core"></div>
+        <div class="disco-facets"></div>
+      </div>
+      <div class="disco-rays"></div>
+    </div>
+
+    <!-- DJ BAR -->
+    <div class="dj-bar" id="dj-bar">
+      <span class="dj-label">DJ drIp</span>
+      <span class="dj-bpm" id="dj-bpm">140 BPM</span>
+      <span class="dj-track" id="dj-track">---</span>
+      <canvas id="dj-viz" class="dj-viz" width="320" height="40"></canvas>
+      <button id="btn-dj-next" class="btn-icon" title="Next set">&#x23ed;</button>
+    </div>
+
+  </div>
+
+  <script src="/matrix.js"></script>
+  <script src="/disco.js"></script>
+  <script src="/app.js"></script>
+</body>
+</html>

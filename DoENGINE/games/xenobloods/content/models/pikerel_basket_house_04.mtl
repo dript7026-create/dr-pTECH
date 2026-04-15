@@ -1,0 +1,29 @@
+newmtl basket_body
+Kd 0.55 0.37 0.18
+Ka 0.20 0.12 0.05
+Ks 0.08 0.06 0.02
+Ns 32.0
+
+newmtl roof_lid
+Kd 0.68 0.49 0.22
+Ka 0.25 0.18 0.08
+Ks 0.10 0.08 0.03
+Ns 28.0
+
+newmtl basket_trim
+Kd 0.23 0.15 0.08
+Ka 0.09 0.05 0.03
+Ks 0.04 0.04 0.04
+Ns 14.0
+
+newmtl door_frame
+Kd 0.16 0.08 0.05
+Ka 0.05 0.03 0.02
+Ks 0.03 0.03 0.03
+Ns 10.0
+
+newmtl window_frame
+Kd 0.78 0.72 0.54
+Ka 0.16 0.14 0.08
+Ks 0.18 0.18 0.16
+Ns 40.0

@@ -142,7 +142,11 @@
     "authoring": [
       "KaijuGaiden/assets/placeholderassets/Audio",
       "KaijuGaiden/assets/placeholderassets/Graphical",
-      "KaijuGaiden/assets/titlescreen"
+      "KaijuGaiden/assets/titlescreen",
+      "KaijuGaiden/BOSS_DESIGN_PROFILES.md",
+      "KaijuGaiden/BOSS_SPRITE_PROMPT_SHEETS.md",
+      "KaijuGaiden/BOSS_MINION_ECOLOGY_PROFILES.md",
+      "KaijuGaiden/boss_asset_manifest.json"
     ],
     "planned": [
       "boss_2_sprite_set",
@@ -150,7 +154,10 @@
       "expanded_minion_roster",
       "vn_panel_art",
       "multiplayer_ui_assets",
-      "full_audio_package"
+      "full_audio_package",
+      "boss_specific_sprite_banks",
+      "boss_turnaround_prompt_sheets",
+      "ecology_specific_minion_sprite_sets"
     ]
   },
   "prototypeModules": [

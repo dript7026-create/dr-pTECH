@@ -1,0 +1,63 @@
+{
+  "bridgeAffordanceSpan": 0.8839,
+  "bridgeAnimBlendMsBase": 59.59,
+  "bridgeAtmosphericCorrosives": 0.2442,
+  "bridgeAtmosphericIrritants": 0.0936,
+  "bridgeCausalityFeedback": 0.4325,
+  "bridgeContactAccuracyHint": 0.8756,
+  "bridgeEntityFeedback": 0.7111,
+  "bridgeHandheldBias": 0.25,
+  "bridgeHemoneuralStress": 0.0983,
+  "bridgeHitboxActiveRatioHint": 0.8779,
+  "bridgeHopeAdaptiveShare": 0.5765,
+  "bridgeHopeClogRisk": 0.1441,
+  "bridgeHopePredictiveShare": 0.8922,
+  "bridgeHopeTheta": 0.815,
+  "bridgeInputLatencyMs": 8.75,
+  "bridgeInputPressure": 0.2886,
+  "bridgeInteractionDensityHint": 0.3228,
+  "bridgeMatterFluidTurbulence": 0.3485,
+  "bridgeMatterGasDiffusion": 0.1,
+  "bridgeMatterInsolventImpurities": 0.267,
+  "bridgeMatterLiquidFlow": 0.8113,
+  "bridgeMatterReactiveVolume": 63.73,
+  "bridgeMatterSolidDensity": 0.8771,
+  "bridgeMatterTensionStasis": 0.2948,
+  "bridgeMatterToxicants": 0.208,
+  "bridgePlasmicInstability": 0.3889,
+  "bridgePresentBudgetMs": 16.67,
+  "bridgeRenderReactivity": 0.3442,
+  "bridgeRenderScale": 1.0,
+  "bridgeRespiratoryBurden": 0.1952,
+  "bridgeSceneId": "thunder_reef_duel",
+  "bridgeSceneType": "boss-rush",
+  "bridgeSensorChannels": 1,
+  "bridgeTargetName": "host",
+  "bridgeVfxLoadHint": 0.3742,
+  "bridgeVolumetricBias": 0.6146,
+  "bridgeVolumetricSupport": 0.5928,
+  "primary_target": "host",
+  "project_name": "Kaiju Gaiden",
+  "runtime": {
+    "entry_scene": "thunder_reef_duel",
+    "system_graph": [
+      "combat",
+      "boss_motion",
+      "silhouette_hit_detection",
+      "environmental_regen",
+      "fx_audio_bridge"
+    ]
+  },
+  "targets": [
+    {
+      "causality_feedback": 0.4325,
+      "handheld_bias": 0.25,
+      "input_latency_ms": 8.75,
+      "name": "host",
+      "present_budget_ms": 16.67,
+      "render_scale": 1.0,
+      "sensor_channels": 1,
+      "volumetric_support": 0.5928
+    }
+  ]
+}

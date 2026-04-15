@@ -1,0 +1,196 @@
+{
+  "density_profile": {
+    "detail_multiplier": "12x over the first-pass blueprint boards",
+    "quadrant_micro_form_target": "3-5 micro-forms per quadrant",
+    "focus_rule": "Paths, silhouettes, and combat telegraphs keep the strongest value contrast even as detail increases.",
+    "folklore_rule": "Every metatile carries at least one cathedral-grotesque or daemon-corrupted architectural cue."
+  },
+  "metatiles": [
+    {
+      "id": "shore_wreck",
+      "role": "opening beach landing",
+      "palette_role": "shorelight",
+      "quadrants": [
+        "surf_foam",
+        "broken_raft_planks",
+        "wet_sand",
+        "drift_debris"
+      ],
+      "depth_notes": [
+        "thin foam fringe at the horizon edge",
+        "wreck shadow cast down-right",
+        "debris trails leading inland"
+      ],
+      "gothic_motifs": [
+        "raft ribs echo a collapsed chapel roof",
+        "foam mouths curl like worn gargoyle spillways",
+        "a snapped mast reads like a broken processional standard"
+      ],
+      "micro_forms": [
+        "rope knots grouped like bead relics",
+        "shell crescents tucked into sand pockets",
+        "plank nails breaking the timber edge",
+        "small claw-like foam hooks under the wreck"
+      ],
+      "pixel_exchange_notes": [
+        "Every added plank chip should be balanced by shaving an adjacent foam fringe.",
+        "Rope beads stay on the outer contour while the interior boards are trimmed thinner."
+      ]
+    },
+    {
+      "id": "dune_path",
+      "role": "beach-to-inland guidance",
+      "palette_role": "sunbleached",
+      "quadrants": [
+        "crest_shadow",
+        "wind_lines",
+        "footpath_band",
+        "grass_tufts"
+      ],
+      "depth_notes": [
+        "foreground path must be the highest contrast",
+        "dunes curve to frame player travel",
+        "grass tufts imply wind direction"
+      ],
+      "gothic_motifs": [
+        "dune shoulders rise like buried buttresses",
+        "wind-carved hollows form corbel-eye shadows",
+        "thorn grass reads like low tracery along the path"
+      ],
+      "micro_forms": [
+        "split hoof prints mixed into the sand",
+        "reed shadows stitched across the path edge",
+        "tiny stone chips marking travel rhythm",
+        "swept ripples that converge toward the safe route"
+      ],
+      "pixel_exchange_notes": [
+        "Each new wind line removes equal mass from a nearby dune band.",
+        "Grass silhouettes stay sharp by hollowing the sand behind them rather than thickening the tuft."
+      ]
+    },
+    {
+      "id": "field_vista",
+      "role": "playable meadow with epic scope",
+      "palette_role": "lush",
+      "quadrants": [
+        "near_grass",
+        "mid_grass",
+        "flower_strip",
+        "horizon_band"
+      ],
+      "depth_notes": [
+        "keep near grass darker than the horizon",
+        "mid band should imply rolling land",
+        "flower strip is decorative, not noisy"
+      ],
+      "gothic_motifs": [
+        "distant fence posts read like a shattered cloister rhythm",
+        "horizon breaks hint at ruined shrine arches",
+        "flower clusters form rosary-like repetition rather than random scatter"
+      ],
+      "micro_forms": [
+        "paired blade clumps at the foreground edge",
+        "small bloom knots locked to the path of travel",
+        "low shadow cups under each roll of land",
+        "distant ruin marks kept sparse and vertical"
+      ],
+      "pixel_exchange_notes": [
+        "New bloom pixels must come from cut grass voids, not wider meadows.",
+        "Horizon ruins stay thin by carving sky gaps between their ribs."
+      ]
+    },
+    {
+      "id": "settlement_foundation",
+      "role": "future build site",
+      "palette_role": "warm_earth",
+      "quadrants": [
+        "stake_markers",
+        "plank_stack",
+        "packed_soil",
+        "cloth_banner"
+      ],
+      "depth_notes": [
+        "stakes need a top-lit silhouette",
+        "banner points toward the intended approach",
+        "packed soil should read flatter than meadow grass"
+      ],
+      "gothic_motifs": [
+        "stakes align like a bare nave frame",
+        "brace planks echo pointed arch geometry",
+        "banner tears suggest a pilgrim standard reclaimed from ruin"
+      ],
+      "micro_forms": [
+        "rope lashings at stake joins",
+        "tool marks cut into the topsoil",
+        "nail heads and wedge chips along the plank stack",
+        "banner fringe and seam breaks"
+      ],
+      "pixel_exchange_notes": [
+        "When banner tears are added, remove cloth bulk from the hem silhouette.",
+        "Soil cuts should sharpen the post bases without enlarging the foundation mass."
+      ]
+    },
+    {
+      "id": "shrine_monolith",
+      "role": "reseed and lore monument",
+      "palette_role": "moonstone",
+      "quadrants": [
+        "monolith_crown",
+        "glyph_face",
+        "step_plinth",
+        "offering_ring"
+      ],
+      "depth_notes": [
+        "monolith must dominate the skyline",
+        "glyph face gets the brightest value step",
+        "offering ring should pull the eye to center"
+      ],
+      "gothic_motifs": [
+        "monolith crown borrows the read of a pointed canopy",
+        "glyph recesses behave like broken tracery windows",
+        "the offering ring frames the base like a saint niche gone uncanny"
+      ],
+      "micro_forms": [
+        "chip lines around each glyph recess",
+        "hairline cracks descending from the crown",
+        "tiny votive stones circling the plinth",
+        "shadow crescents under offerings"
+      ],
+      "pixel_exchange_notes": [
+        "Added glyph hooks must be balanced by cutting extra air into the inner recesses.",
+        "The crown silhouette stays narrow by trimming side chips when top ornament is added."
+      ]
+    },
+    {
+      "id": "rim_battlefield",
+      "role": "hostile outer-rim combat",
+      "palette_role": "abyssal",
+      "quadrants": [
+        "void_break",
+        "spine_rocks",
+        "ash_sand",
+        "impact_cracks"
+      ],
+      "depth_notes": [
+        "void break is darkest and cleanest",
+        "spine rocks angle inward toward the arena",
+        "impact cracks carry motion into telegraph spaces"
+      ],
+      "gothic_motifs": [
+        "spine rocks rise like failed flying buttresses",
+        "void breaches resemble open gargoyle maws",
+        "broken shrine ribs create an arena of corrupted architecture"
+      ],
+      "micro_forms": [
+        "tooth-like chips along the void lip",
+        "ash eddies caught between spine stones",
+        "small relic fragments embedded in the grit",
+        "crack branches that aim toward attack lanes"
+      ],
+      "pixel_exchange_notes": [
+        "Every added tooth on the void lip removes equal dark mass from the adjacent rock shelf.",
+        "Crack branches stay thin by opening ash gaps instead of thickening the line."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,206 @@
+{
+  "_notes": {
+    "voice_models": "alloy/nova/onyx are OpenAI TTS code names repurposed here as synth-style tags for a generative audio pipeline",
+    "archetypes": ["Prism Bloom (0)", "Glue Braid (1)", "Ember Choir (2)", "Halo Scythe (3)", "Luster Knot (4)"],
+    "encounter_titles": ["Prism Tail", "Glue Stall", "Spectrum Mote", "Ember Roll", "Luster Knot"]
+  },
+  "assets": [
+
+    {
+      "name": "dubstep-pressure-bed",
+      "prompt": "Procedural dubstep reference loop 142 BPM: hard sidechain kick, wobble bass with filter sweep, clipped LFO hats, bass sub drop every 8 bars, arena battle tension, clean rhythmic readability for a Flash rhythm game prototype",
+      "style": "hard dubstep, electronic, 142 BPM, sidechain heavy",
+      "voice": "alloy",
+      "duration_seconds": 32,
+      "loop": true,
+      "out": "assets/audio/dubstep-pressure-bed.mp3"
+    },
+
+    {
+      "name": "encounter-intro-prism-bloom",
+      "prompt": "Encounter intro sting for Prism Bloom: a rising three-note spectral chord that fans outward like a prism splitting light, warm golden tone base, high shimmer treble, resolves on a punchy kick hit",
+      "style": "electronic sting, prismatic, bright, 0.8 seconds",
+      "voice": "nova",
+      "duration_seconds": 1,
+      "loop": false,
+      "out": "assets/audio/encounter-intro-prism-bloom.mp3"
+    },
+    {
+      "name": "encounter-intro-glue-stall",
+      "prompt": "Encounter intro sting for Glue Stall: a slow warped bassy wobble that bends down and sticks, viscous low-mid smear, slightly off-rhythm to imply stickiness, resolves with a dull thud",
+      "style": "electronic sting, bass wobble, viscous, 0.9 seconds",
+      "voice": "onyx",
+      "duration_seconds": 1,
+      "loop": false,
+      "out": "assets/audio/encounter-intro-glue-stall.mp3"
+    },
+    {
+      "name": "encounter-intro-spectrum-mote",
+      "prompt": "Encounter intro sting for Spectrum Mote: three orbiting chime tones rotating in a trefoil pattern, molten amber-pink midrange with pale violet overtone, sinuous tail fade",
+      "style": "electronic sting, chime, orbiting, 0.7 seconds",
+      "voice": "nova",
+      "duration_seconds": 1,
+      "loop": false,
+      "out": "assets/audio/encounter-intro-spectrum-mote.mp3"
+    },
+    {
+      "name": "encounter-intro-ember-roll",
+      "prompt": "Encounter intro sting for Ember Roll: a sharp metallic scythe slash followed by a crisp ring decay, icy high transient then warm-crimson resonance ring, short and aggressive",
+      "style": "electronic sting, metallic slash, ring, 0.6 seconds",
+      "voice": "alloy",
+      "duration_seconds": 1,
+      "loop": false,
+      "out": "assets/audio/encounter-intro-ember-roll.mp3"
+    },
+    {
+      "name": "encounter-intro-luster-knot",
+      "prompt": "Encounter intro sting for Luster Knot: a dense cluster chord in deep violet harmonics with five satellite tones spiraling outward, heavy bass fundamental, golden upper radiance, imposing final boss energy",
+      "style": "electronic sting, cluster, boss, 1.1 seconds",
+      "voice": "onyx",
+      "duration_seconds": 2,
+      "loop": false,
+      "out": "assets/audio/encounter-intro-luster-knot.mp3"
+    },
+
+    {
+      "name": "lane-hit-head-flick",
+      "prompt": "Short rhythmic hit sound for catching a Head Flick cue: a bright upward snap with cobalt overtone, like a sharp finger click followed by a tiny spectral ping",
+      "style": "rhythm hit, snappy, bright, 60ms",
+      "voice": "nova",
+      "duration_seconds": 0.1,
+      "loop": false,
+      "out": "assets/audio/lane-hit-head-flick.mp3"
+    },
+    {
+      "name": "lane-hit-torso-pulse",
+      "prompt": "Short rhythmic hit sound for catching a Torso Pulse cue: a deep body thud with a harmonic spectral shockwave ring expanding outward, punchy and satisfying",
+      "style": "rhythm hit, body impact, pulse, 80ms",
+      "voice": "onyx",
+      "duration_seconds": 0.1,
+      "loop": false,
+      "out": "assets/audio/lane-hit-torso-pulse.mp3"
+    },
+    {
+      "name": "lane-hit-hand-halo",
+      "prompt": "Short rhythmic hit sound for catching a Hand Halo cue: a spinning ring tone shimmer that resolves into a clean bell stop, ethereal and round",
+      "style": "rhythm hit, halo ring, shimmer, 90ms",
+      "voice": "nova",
+      "duration_seconds": 0.1,
+      "loop": false,
+      "out": "assets/audio/lane-hit-hand-halo.mp3"
+    },
+    {
+      "name": "lane-hit-foot-spark",
+      "prompt": "Short rhythmic hit sound for catching a Foot Spark cue: an electric ground-strike zap with a four-point starburst crackle and a sharp yellow-white transient",
+      "style": "rhythm hit, electric zap, crackle, 70ms",
+      "voice": "alloy",
+      "duration_seconds": 0.1,
+      "loop": false,
+      "out": "assets/audio/lane-hit-foot-spark.mp3"
+    },
+
+    {
+      "name": "lane-miss-buzz",
+      "prompt": "Short miss-buzz for a missed rhythm cue: a blunt descending tone that cuts off early, slightly dissonant, flash of cold blue static",
+      "style": "rhythm miss, buzz, cold, 100ms",
+      "voice": "alloy",
+      "duration_seconds": 0.1,
+      "loop": false,
+      "out": "assets/audio/lane-miss-buzz.mp3"
+    },
+
+    {
+      "name": "pose-lock-stinger-success",
+      "prompt": "Pose-lock success finisher: a bright spectral collapse — sustained golden tone rises then shatters into a shower of ascending chime sparkle, satisfying rhythm-game win sting",
+      "style": "finisher sting, bright, spectral collapse, 1.4 seconds",
+      "voice": "nova",
+      "duration_seconds": 2,
+      "loop": false,
+      "out": "assets/audio/pose-lock-stinger-success.mp3"
+    },
+    {
+      "name": "pose-lock-stinger-fail",
+      "prompt": "Pose-lock failure stinger: tail backlash recoil sound — a harsh descending wobble that bends away rapidly, cold and punishing, slight reverse-reverb tail",
+      "style": "failure sting, descending wobble, punishing, 0.9 seconds",
+      "voice": "onyx",
+      "duration_seconds": 1,
+      "loop": false,
+      "out": "assets/audio/pose-lock-stinger-fail.mp3"
+    },
+
+    {
+      "name": "outfit-tier-unlock-1",
+      "prompt": "Outfit tier 1 unlock sound — Pulse Sash equip: a quick ascending shimmer with a sash-crack transient at the top, light and bright",
+      "style": "power-up, ascending, crisp, 0.6 seconds",
+      "voice": "nova",
+      "duration_seconds": 1,
+      "loop": false,
+      "out": "assets/audio/outfit-tier-unlock-1.mp3"
+    },
+    {
+      "name": "outfit-tier-unlock-2",
+      "prompt": "Outfit tier 2 unlock sound — Prism Skirt equip: a prismatic chord fan across three spectral tones, slightly longer shimmer, the skirt fabric sparkle crackling",
+      "style": "power-up, prismatic chord, 0.7 seconds",
+      "voice": "nova",
+      "duration_seconds": 1,
+      "loop": false,
+      "out": "assets/audio/outfit-tier-unlock-2.mp3"
+    },
+    {
+      "name": "outfit-tier-unlock-3",
+      "prompt": "Outfit tier 3 unlock sound — Halo Rig equip: a resonant ring tone sustaining for a beat, cable-tension snap accent, warm and weighty",
+      "style": "power-up, ring sustain, halo, 0.9 seconds",
+      "voice": "alloy",
+      "duration_seconds": 1,
+      "loop": false,
+      "out": "assets/audio/outfit-tier-unlock-3.mp3"
+    },
+    {
+      "name": "outfit-tier-unlock-4",
+      "prompt": "Outfit tier 4 unlock sound — Light Envisioned transformation: a full epic rise with a spectral crown burst at the peak, five satellite tones circling, golden radiance sustain — the most impressive power-up in the game",
+      "style": "power-up, transformation, epic spectral, 1.6 seconds",
+      "voice": "nova",
+      "duration_seconds": 2,
+      "loop": false,
+      "out": "assets/audio/outfit-tier-unlock-4.mp3"
+    },
+
+    {
+      "name": "litemite-warning-hiss",
+      "prompt": "LiteMite spawn warning hiss: sentient light motes condensing in the visible spectrum, static pressure building with a high emberence crackle and then a short sharp pop as the enemy materialises",
+      "style": "warning, static, crackle, build, 0.8 seconds",
+      "voice": "alloy",
+      "duration_seconds": 1,
+      "loop": false,
+      "out": "assets/audio/litemite-warning-hiss.mp3"
+    },
+    {
+      "name": "litemite-defeat-explosion",
+      "prompt": "LiteMite defeat explosion: a warm expanding ring of sound that shatters outward in all directions — spectral debris scatter, light-mote sparks pinging away, hollow ring decay at the end",
+      "style": "explosion, warm, ring decay, 1.2 seconds",
+      "voice": "alloy",
+      "duration_seconds": 2,
+      "loop": false,
+      "out": "assets/audio/litemite-defeat-explosion.mp3"
+    },
+
+    {
+      "name": "combo-multiplier-3x",
+      "prompt": "Combo x3 milestone jingle: a tight three-note ascending triplet with spectral shimmer, upbeat and confirming",
+      "style": "milestone jingle, triplet, 0.4 seconds",
+      "voice": "nova",
+      "duration_seconds": 0.5,
+      "loop": false,
+      "out": "assets/audio/combo-multiplier-3x.mp3"
+    },
+    {
+      "name": "combo-multiplier-7x",
+      "prompt": "Combo x7 milestone jingle: a bright fifth interval with a digital glitter burst over it, energetic and proud",
+      "style": "milestone jingle, fifth interval, 0.5 seconds",
+      "voice": "nova",
+      "duration_seconds": 0.5,
+      "loop": false,
+      "out": "assets/audio/combo-multiplier-7x.mp3"
+    }
+  ]
+}

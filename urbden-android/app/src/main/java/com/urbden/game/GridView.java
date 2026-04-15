@@ -10,6 +10,7 @@ import android.view.View;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 
 public class GridView extends View {
     public static class GridMetric {
@@ -81,8 +82,10 @@ public class GridView extends View {
 
     @Override
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
-        int minHeight = dp(220);
-        int desiredHeight = dp(36) + metrics.size() * dp(48);
+        int columnCount = columnCountForWidth(MeasureSpec.getSize(widthMeasureSpec));
+        int rowCount = Math.max(1, (int) Math.ceil(metrics.size() / (float) columnCount));
+        int minHeight = dp(104);
+        int desiredHeight = dp(24) + rowCount * dp(62) + Math.max(0, rowCount - 1) * dp(8);
         int resolvedHeight = resolveSize(Math.max(minHeight, desiredHeight), heightMeasureSpec);
         int resolvedWidth = resolveSize(dp(320), widthMeasureSpec);
         setMeasuredDimension(resolvedWidth, resolvedHeight);
@@ -94,13 +97,13 @@ public class GridView extends View {
 
         float width = getWidth();
         float height = getHeight();
-        float outer = dp(10);
-        float corner = dp(22);
+        float outer = dp(6);
+        float corner = dp(18);
         rect.set(outer, outer, width - outer, height - outer);
         canvas.drawRoundRect(rect, corner, corner, trackPaint);
         canvas.drawRoundRect(rect, corner, corner, framePaint);
 
-        rect.set(outer + dp(10), outer + dp(10), width - outer - dp(10), outer + dp(16));
+        rect.set(outer + dp(8), outer + dp(8), width - outer - dp(8), outer + dp(12));
         canvas.drawRoundRect(rect, dp(8), dp(8), accentPaint);
 
         if (metrics.isEmpty()) {
@@ -110,50 +113,69 @@ public class GridView extends View {
             return;
         }
 
-        float labelWidth = dp(116);
-        float left = outer + dp(12);
-        float top = outer + dp(24);
-        float trackLeft = left + labelWidth;
-        float trackRight = width - outer - dp(16);
-        float rowHeight = dp(40);
+        int columnCount = columnCountForWidth((int) width);
+        int rowCount = Math.max(1, (int) Math.ceil(metrics.size() / (float) columnCount));
+        float left = outer + dp(8);
+        float top = outer + dp(18);
+        float right = width - outer - dp(8);
+        float bottom = height - outer - dp(8);
+        float columnGap = dp(8);
         float rowGap = dp(8);
-        float trackCorner = dp(11);
+        float cellWidth = (right - left - (columnCount - 1) * columnGap) / columnCount;
+        float cellHeight = rowCount > 0
+                ? Math.max(dp(52), (bottom - top - (rowCount - 1) * rowGap) / rowCount)
+                : dp(52);
+        float trackCorner = dp(8);
 
         for (int index = 0; index < metrics.size(); index++) {
             GridMetric metric = metrics.get(index);
-            float rowTop = top + index * (rowHeight + rowGap);
-            float rowBottom = rowTop + rowHeight;
+            int column = index % columnCount;
+            int row = index / columnCount;
+            float cellLeft = left + column * (cellWidth + columnGap);
+            float cellTop = top + row * (cellHeight + rowGap);
+            float cellRight = cellLeft + cellWidth;
+            float cellBottom = cellTop + cellHeight;
 
-            rect.set(left - dp(4), rowTop - dp(2), trackRight, rowBottom + dp(2));
+            rect.set(cellLeft, cellTop, cellRight, cellBottom);
             canvas.drawRoundRect(rect, dp(12), dp(12), rowPaint);
 
-            float labelBaseline = rowTop + dp(14);
-            float detailBaseline = rowTop + dp(29);
-            canvas.drawText(metric.label, left, labelBaseline, labelPaint);
-            canvas.drawText(metric.detail, left, detailBaseline, detailPaint);
-            canvas.drawText(String.format("%02d", Math.round(metric.value * 100f)), trackRight, labelBaseline, valuePaint);
-
             accentPaint.setColor(metric.color);
-            rect.set(left - dp(4), rowTop + dp(4), left, rowBottom - dp(4));
-            canvas.drawRoundRect(rect, dp(6), dp(6), accentPaint);
+            rect.set(cellLeft + dp(8), cellTop + dp(8), cellLeft + dp(12), cellTop + dp(24));
+            canvas.drawRoundRect(rect, dp(4), dp(4), accentPaint);
 
-            rect.set(trackLeft, rowTop + dp(6), trackRight, rowBottom - dp(6));
+            float labelLeft = cellLeft + dp(18);
+            float labelBaseline = cellTop + dp(18);
+            float detailBaseline = cellTop + dp(31);
+            float valueRight = cellRight - dp(8);
+            canvas.drawText(metric.label, labelLeft, labelBaseline, labelPaint);
+            canvas.drawText(metric.detail, labelLeft, detailBaseline, detailPaint);
+            canvas.drawText(String.format(Locale.US, "%02d", Math.round(metric.value * 100f)), valueRight, labelBaseline, valuePaint);
+
+            float trackLeft = cellLeft + dp(8);
+            float trackRight = cellRight - dp(8);
+            float trackTop = cellBottom - dp(16);
+            float trackBottom = cellBottom - dp(8);
+            rect.set(trackLeft, trackTop, trackRight, trackBottom);
             canvas.drawRoundRect(rect, trackCorner, trackCorner, framePaint);
             canvas.drawRoundRect(rect, trackCorner, trackCorner, trackPaint);
 
             float fillRight = trackLeft + (trackRight - trackLeft) * metric.value;
             if (fillRight > trackLeft) {
                 glowPaint.setColor(metric.color);
-                rect.set(trackLeft, rowTop + dp(4), fillRight, rowBottom - dp(4));
+                rect.set(trackLeft, trackTop - dp(1), fillRight, trackBottom + dp(1));
                 canvas.drawRoundRect(rect, trackCorner, trackCorner, glowPaint);
 
                 fillPaint.setColor(metric.color);
-                rect.set(trackLeft, rowTop + dp(8), fillRight, rowBottom - dp(8));
+                rect.set(trackLeft, trackTop, fillRight, trackBottom);
                 canvas.drawRoundRect(rect, trackCorner, trackCorner, fillPaint);
 
-                canvas.drawCircle(fillRight, rowTop + rowHeight / 2f, dp(5), fillPaint);
+                canvas.drawCircle(fillRight, (trackTop + trackBottom) / 2f, dp(3), fillPaint);
             }
         }
+    }
+
+    private int columnCountForWidth(int width) {
+        return width < dp(300) ? 1 : 2;
     }
 
     private int dp(int value) {

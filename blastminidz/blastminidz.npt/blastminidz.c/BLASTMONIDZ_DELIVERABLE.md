@@ -12,7 +12,8 @@ This package is the current Windows host vertical slice for Blastmonidz.
 
 ## Shipped Feature Spec
 
-- maximized full-screen title scene with archive-backed title art, animated bomb pulses, rotating silhouette families, and live anti-gossip rhyme marquee copy
+- maximized full-screen title arena with cobblestoned floor staging, central Play/Load relics, ambient fanfare audio, and an archive-backed intrepid bomb-bearer posed in the upper-right quadrant
+- title-screen biochemical atmosphere pass that reacts to Play/Load switching motion and drives ecological paint-field mutation across the arena floor
 - lore brief and archive coherency browser
 - starter token draw with procedurally selected archive-backed portraits
 - seeded procedural graphics engine that rotates full Bomberman walk-frame pools, bomb animation frames, paint overlays, and arena prop variants into unique per-run presentation

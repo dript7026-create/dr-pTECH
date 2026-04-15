@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="dirkodds_launcher_bg">#090D1F</color>
-    <color name="dirkodds_launcher_cyan">#16F5D3</color>
-    <color name="dirkodds_launcher_magenta">#FF5FC8</color>
-    <color name="dirkodds_launcher_gold">#FFC14C</color>
+    <color name="dirkodds_launcher_bg">#081021</color>
+    <color name="dirkodds_launcher_cyan">#56E5FF</color>
+    <color name="dirkodds_launcher_magenta">#FF7ABA</color>
+    <color name="dirkodds_launcher_gold">#FFD480</color>
     <color name="dirkodds_launcher_ink">#111827</color>
 </resources>

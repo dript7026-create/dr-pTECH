@@ -1,0 +1,87 @@
+{
+  "folklore_design_rules": [
+    "Use medieval and gothic grotesque logic: hybrid beasts, elongated gargoyle throats, corbel-mask faces, and apotropaic guardian poses twisted toward hunger.",
+    "Favor vice-bearing relics such as bells, chains, censers, tags, and cages over random spikes.",
+    "Surface detail should feel carved, weathered, scorched, and shrine-adjacent rather than smooth or purely organic.",
+    "Every new barb, horn ridge, or relic loop must be paid for by cutting back membrane, cheek, or torso fill nearby."
+  ],
+  "actors": [
+    {
+      "id": "daemon_kin",
+      "archetype": "wandering famine grotesque",
+      "canvas": [32, 32],
+      "body_core": [8, 8, 16, 16],
+      "hybrid_sources": [
+        "goat",
+        "vulture",
+        "bat",
+        "hound"
+      ],
+      "mouth_design": "elongated gargoyle throat ending in a furnace-like maw",
+      "adornments": [
+        "forward-curving horn pair",
+        "collapsed halo ring",
+        "shoulder spines",
+        "rib reliquary charms",
+        "ash prayer tags",
+        "tail tassel"
+      ],
+      "vice_markers": [
+        "hunger bells",
+        "rib reliquary",
+        "stolen knot cord"
+      ],
+      "surface_layers": [
+        "weathered stone ridges",
+        "hide membrane seams",
+        "soot halo around the maw"
+      ],
+      "animation_sets": [
+        {"id": "perch", "frames": 2},
+        {"id": "roam", "frames": 4},
+        {"id": "windup", "frames": 3},
+        {"id": "lunge", "frames": 3},
+        {"id": "stagger", "frames": 2}
+      ]
+    },
+    {
+      "id": "daemon_of_famine",
+      "archetype": "cathedral guardian turned outer-rim sovereign",
+      "canvas": [32, 32],
+      "body_core": [8, 8, 16, 16],
+      "hybrid_sources": [
+        "stag goat",
+        "lion",
+        "raven",
+        "dragon"
+      ],
+      "mouth_design": "deep spout-maw with a split lower jaw and ember throat",
+      "adornments": [
+        "crown horns",
+        "cheek barbs",
+        "back spines",
+        "ritual arm bands",
+        "hanging waist relics",
+        "broken censer chains",
+        "processional spine banner"
+      ],
+      "vice_markers": [
+        "famine reliquary cage",
+        "ash censer",
+        "tithe chain"
+      ],
+      "surface_layers": [
+        "cathedral-stone plating",
+        "charred hide seams",
+        "void cracks in the crown"
+      ],
+      "animation_sets": [
+        {"id": "perch_guard", "frames": 2},
+        {"id": "advance", "frames": 4},
+        {"id": "windup", "frames": 4},
+        {"id": "slam", "frames": 4},
+        {"id": "break_state", "frames": 3}
+      ]
+    }
+  ]
+}

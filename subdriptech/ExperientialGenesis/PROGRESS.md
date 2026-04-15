@@ -15,3 +15,8 @@
 - connect EG outputs to additional approved workspace modules
 - expose a small control surface for scenario presets and runtime inspection
 - add richer replay viewers and persistent state rehydration from saved history
+
+## 2026-03-25
+
+- Added a dedicated KaijuGaiden runtime adapter plus HOPE runtime contract export so EG can guide the boss-runtime bridge through approved, deterministic parameters instead of ad hoc JSON alone.
+- Extended the EG runner and tests to cover KaijuGaiden adapter registration and contract emission.

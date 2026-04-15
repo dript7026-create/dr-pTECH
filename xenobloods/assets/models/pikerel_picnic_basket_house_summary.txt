@@ -1,0 +1,4 @@
+Pikerel Picnic Basket House
+Vertices: 4700
+UVs: 4700
+Triangles: 8568

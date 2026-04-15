@@ -1,0 +1,57 @@
+{
+  "project": "Farmer's Feather Chibi Overhaul",
+  "runtime_target": "Nintendo Game Boy DMG",
+  "authoring_target": {
+    "metatile_canvas_px": [32, 32],
+    "actor_canvas_px": [32, 32],
+    "actor_core_px": [16, 16],
+    "telegraph_space_px": [16, 16]
+  },
+  "complexity_target": {
+    "detail_multiplier": "12x over the first-pass review mockups",
+    "silhouette_rule": "Every major form must read at three levels: primary mass, secondary breakup, and micro-detail accents.",
+    "pixel_budget_rule": "When a highlight, barb, seam, relic, or notch is added, reclaim equivalent mass through adjacent negative-space shaving instead of expanding total silhouette bulk.",
+    "line_definition_rule": "Contour cuts happen beside the readable line, shape, or curve, never through its clean outer read.",
+    "review_goal": "Rendered review boards must prove high-detail density while remaining believable for later DMG slicing."
+  },
+  "translation_rules": [
+    "Author environment as 32x32 metatiles with epic silhouettes and depth bands, then slice each block into sixteen 8x8 DMG tiles.",
+    "Author characters on a 32x32 canvas, but keep the readable body mass inside the central 16x16 core.",
+    "Reserve the remaining 16x16 envelope for weapon arcs, spell trails, cape flare, and hit telegraphs.",
+    "Armor and tool pieces are independent draggable layers keyed to named anchor points on every animation frame.",
+    "Balance added detail with removed pixels so downsampled DMG exports keep their contour logic and value separation.",
+    "Favor cathedral-grotesque asymmetry, apotropaic guardian posing, and beast-human hybrid breakup over flat decorative noise.",
+    "Export runtime sheets as DMG-safe 8x8 and 8x16 chunks while preserving the higher-level 32x32 authoring guides for art review."
+  ],
+  "pixel_economy_principles": [
+    "Trade flat fill for contour notches, seam breaks, shadow pockets, and selective cutaways rather than growing the silhouette.",
+    "When a horn gains a ring, ridge, or barb, shave an adjacent membrane, cheek, or interior highlight so the total read stays disciplined.",
+    "Use negative space around jawlines, rib cages, relic chains, and claw gaps to preserve curves without over-thickening forms.",
+    "Micro-detail clusters belong at the narrative focal points: face, throat, hands, relics, telegraph edges, and shrine glyphs."
+  ],
+  "folklore_inspirations": {
+    "medieval": [
+      "Cathedral gargoyles and grotesques as apotropaic guardians perched above danger.",
+      "Dragon-throated river monsters with elongated mouths and necks that project outward like spouts.",
+      "Bestiary hybrids blending goat, lion, carrion bird, hound, and bat traits into a single readable silhouette.",
+      "Vice-marking objects such as bells, chains, censers, reliquary cages, and spoiled prayer ribbons."
+    ],
+    "gothic": [
+      "Ribbed arches, tracery breaks, pointed canopies, and ruin silhouettes that imply sacred architecture gone feral.",
+      "Mask-like corbels, hidden faces, exaggerated mouths, and weather-darkened stone ornament.",
+      "Soot streaks, cracked shrine ornament, and vertical spine rhythms that echo nave ribs and flying buttresses."
+    ]
+  },
+  "style_direction": {
+    "player": "anime-chibi survivor proportions, fully clothed, oversized eyes, clean silhouette, readable tool posing, and restrained apotropaic trim at collar, belt, and hems",
+    "daemons": "medieval and gothic folkloric hybrids with gargoyle throats, horn crowns, spine ridges, vice relics, and dramatic asymmetry that still reads at DMG scale",
+    "environment": "broad cinematic scope, layered horizons, shrine ruins, broken tracery, wreckage, and dune depth in every biome",
+    "combat": "telegraphed and choreographed attack arcs that read clearly before contact and feel carved into the surrounding negative space"
+  },
+  "files": {
+    "environment": "environment_manifest.json",
+    "player": "player_actor_manifest.json",
+    "equipment": "equipment_layers.json",
+    "daemons": "daemon_actor_manifest.json"
+  }
+}

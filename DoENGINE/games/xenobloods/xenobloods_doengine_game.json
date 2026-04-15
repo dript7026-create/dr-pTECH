@@ -1,0 +1,325 @@
+{
+  "package_id": "xenobloods-doengine-game",
+  "game_id": "xenobloods",
+  "scene_manifest": "content/scenes/xenobloods_pikerel_swamp_showcase.json",
+  "packaged_models_dir": "content/models",
+  "packaged_billboards_dir": "content/billboards",
+  "packaged_scripts_dir": "scripts",
+  "default_save_path": "saves/default_save.json",
+  "gameplay_bridge": {
+    "path": "scripts/doengine_xenobloods_bridge.py",
+    "factory": "create_bridge"
+  },
+  "demo_checkpoints": [
+    "landborne_entry",
+    "ether_recall",
+    "gourd_incubation",
+    "landborne_reborn",
+    "boss_intro",
+    "boss_clash",
+    "boss_defeat"
+  ],
+  "gameplay_bindings": {
+    "pikerel_lagoon": {
+      "object_id": "lagoon_water",
+      "kind": "water-plane",
+      "label": "Pikerel Lagoon",
+      "role": "water-plane"
+    },
+    "swamp_island_core": {
+      "object_id": "swamp_island_core",
+      "kind": "terrain-core",
+      "label": "Swamp Island Core",
+      "role": "terrain-core"
+    },
+    "sewer_preview_gate": {
+      "object_id": "sewer_preview",
+      "kind": "future-biome-preview",
+      "label": "Sewer Tunnel Blockout",
+      "role": "future-biome-preview",
+      "unlock_flag": "sewer_unlocked"
+    },
+    "village_house_01": {
+      "object_id": "house_01",
+      "kind": "village-house",
+      "label": "Pikerel Basket House 1",
+      "role": "village-house",
+      "district": "pikerel_village"
+    },
+    "village_house_02": {
+      "object_id": "house_02",
+      "kind": "village-house",
+      "label": "Pikerel Basket House 2",
+      "role": "village-house",
+      "district": "pikerel_village"
+    },
+    "village_house_03": {
+      "object_id": "house_03",
+      "kind": "village-house",
+      "label": "Pikerel Basket House 3",
+      "role": "village-house",
+      "district": "pikerel_village"
+    },
+    "village_house_04": {
+      "object_id": "house_04",
+      "kind": "village-house",
+      "label": "Pikerel Basket House 4",
+      "role": "village-house",
+      "district": "pikerel_village"
+    },
+    "village_house_05": {
+      "object_id": "house_05",
+      "kind": "village-house",
+      "label": "Pikerel Basket House 5",
+      "role": "village-house",
+      "district": "pikerel_village"
+    },
+    "village_house_06": {
+      "object_id": "house_06",
+      "kind": "village-house",
+      "label": "Pikerel Basket House 6",
+      "role": "village-house",
+      "district": "pikerel_village"
+    },
+    "walkway_1_1": {
+      "object_id": "walkway_1_1",
+      "kind": "walkway",
+      "label": "Walkway Segment",
+      "role": "walkway"
+    },
+    "walkway_1_2": {
+      "object_id": "walkway_1_2",
+      "kind": "walkway",
+      "label": "Walkway Segment",
+      "role": "walkway"
+    },
+    "walkway_1_3": {
+      "object_id": "walkway_1_3",
+      "kind": "walkway",
+      "label": "Walkway Segment",
+      "role": "walkway"
+    },
+    "walkway_1_4": {
+      "object_id": "walkway_1_4",
+      "kind": "walkway",
+      "label": "Walkway Segment",
+      "role": "walkway"
+    },
+    "walkway_2_1": {
+      "object_id": "walkway_2_1",
+      "kind": "walkway",
+      "label": "Walkway Segment",
+      "role": "walkway"
+    },
+    "walkway_2_2": {
+      "object_id": "walkway_2_2",
+      "kind": "walkway",
+      "label": "Walkway Segment",
+      "role": "walkway"
+    },
+    "walkway_2_3": {
+      "object_id": "walkway_2_3",
+      "kind": "walkway",
+      "label": "Walkway Segment",
+      "role": "walkway"
+    },
+    "walkway_2_4": {
+      "object_id": "walkway_2_4",
+      "kind": "walkway",
+      "label": "Walkway Segment",
+      "role": "walkway"
+    },
+    "walkway_3_1": {
+      "object_id": "walkway_3_1",
+      "kind": "walkway",
+      "label": "Walkway Segment",
+      "role": "walkway"
+    },
+    "walkway_3_2": {
+      "object_id": "walkway_3_2",
+      "kind": "walkway",
+      "label": "Walkway Segment",
+      "role": "walkway"
+    },
+    "walkway_3_3": {
+      "object_id": "walkway_3_3",
+      "kind": "walkway",
+      "label": "Walkway Segment",
+      "role": "walkway"
+    },
+    "walkway_3_4": {
+      "object_id": "walkway_3_4",
+      "kind": "walkway",
+      "label": "Walkway Segment",
+      "role": "walkway"
+    },
+    "walkway_4_1": {
+      "object_id": "walkway_4_1",
+      "kind": "walkway",
+      "label": "Walkway Segment",
+      "role": "walkway"
+    },
+    "walkway_4_2": {
+      "object_id": "walkway_4_2",
+      "kind": "walkway",
+      "label": "Walkway Segment",
+      "role": "walkway"
+    },
+    "walkway_4_3": {
+      "object_id": "walkway_4_3",
+      "kind": "walkway",
+      "label": "Walkway Segment",
+      "role": "walkway"
+    },
+    "walkway_4_4": {
+      "object_id": "walkway_4_4",
+      "kind": "walkway",
+      "label": "Walkway Segment",
+      "role": "walkway"
+    },
+    "soul_shrine_01": {
+      "object_id": "shrine_post_1",
+      "kind": "shrine-marker",
+      "label": "Soul Shrine Post",
+      "role": "shrine-marker",
+      "plane_target": "up"
+    },
+    "soul_shrine_02": {
+      "object_id": "shrine_post_2",
+      "kind": "shrine-marker",
+      "label": "Soul Shrine Post",
+      "role": "shrine-marker",
+      "plane_target": "low"
+    },
+    "soul_shrine_03": {
+      "object_id": "shrine_post_3",
+      "kind": "shrine-marker",
+      "label": "Soul Shrine Post",
+      "role": "shrine-marker",
+      "plane_target": "land"
+    },
+    "reed_cluster_01": {
+      "object_id": "reed_cluster_1",
+      "kind": "foliage",
+      "label": "Swamp Reeds",
+      "role": "foliage"
+    },
+    "reed_cluster_02": {
+      "object_id": "reed_cluster_2",
+      "kind": "foliage",
+      "label": "Swamp Reeds",
+      "role": "foliage"
+    },
+    "reed_cluster_03": {
+      "object_id": "reed_cluster_3",
+      "kind": "foliage",
+      "label": "Swamp Reeds",
+      "role": "foliage"
+    },
+    "reed_cluster_04": {
+      "object_id": "reed_cluster_4",
+      "kind": "foliage",
+      "label": "Swamp Reeds",
+      "role": "foliage"
+    },
+    "reed_cluster_05": {
+      "object_id": "reed_cluster_5",
+      "kind": "foliage",
+      "label": "Swamp Reeds",
+      "role": "foliage"
+    },
+    "reed_cluster_06": {
+      "object_id": "reed_cluster_6",
+      "kind": "foliage",
+      "label": "Swamp Reeds",
+      "role": "foliage"
+    },
+    "lagoon_dock_01": {
+      "object_id": "dock_platform_1",
+      "kind": "dock",
+      "label": "Lagoon Dock",
+      "role": "dock",
+      "route_hint": "lagoon_crossing"
+    },
+    "lagoon_dock_02": {
+      "object_id": "dock_platform_2",
+      "kind": "dock",
+      "label": "Lagoon Dock",
+      "role": "dock",
+      "route_hint": "lagoon_crossing"
+    },
+    "mangrove_cluster_01": {
+      "object_id": "mangrove_cluster_1",
+      "kind": "tree-root",
+      "label": "Mangrove Root Cluster",
+      "role": "tree-root"
+    },
+    "mangrove_cluster_02": {
+      "object_id": "mangrove_cluster_2",
+      "kind": "tree-root",
+      "label": "Mangrove Root Cluster",
+      "role": "tree-root"
+    },
+    "mangrove_cluster_03": {
+      "object_id": "mangrove_cluster_3",
+      "kind": "tree-root",
+      "label": "Mangrove Root Cluster",
+      "role": "tree-root"
+    },
+    "mangrove_cluster_04": {
+      "object_id": "mangrove_cluster_4",
+      "kind": "tree-root",
+      "label": "Mangrove Root Cluster",
+      "role": "tree-root"
+    },
+    "player_life_landborne": {
+      "object_id": "player_life_landborne",
+      "kind": "player-life-state",
+      "label": "Ishtasha: Landborne",
+      "role": "player-life-state",
+      "life_form": "landborne"
+    },
+    "player_life_gourd_infant": {
+      "object_id": "player_life_gourd_infant",
+      "kind": "player-life-state",
+      "label": "Ishtasha: Gourd Infant",
+      "role": "player-life-state",
+      "life_form": "gourd_infant"
+    },
+    "player_life_etheric_current": {
+      "object_id": "player_life_etheric_current",
+      "kind": "player-life-state",
+      "label": "Ishtasha: Etheric Current",
+      "role": "player-life-state",
+      "life_form": "etheric_current"
+    },
+    "encounter_scarab_child": {
+      "object_id": "encounter_scarab_child",
+      "kind": "encounter-preview",
+      "label": "Scarab Child Acolyte",
+      "role": "encounter-preview",
+      "actor_id": "scarab_child_acolyte"
+    },
+    "encounter_lattice_ward": {
+      "object_id": "encounter_lattice_ward",
+      "kind": "encounter-preview",
+      "label": "Lattice Ward",
+      "role": "encounter-preview",
+      "actor_id": "lattice_ward"
+    },
+    "boss_lahgroid": {
+      "object_id": "boss_lahgroid",
+      "kind": "boss-preview",
+      "label": "Lahgroid Hierophant",
+      "role": "boss-preview",
+      "actor_id": "lahgroid_hierophant",
+      "threshold": "boss_intro"
+    }
+  },
+  "package_notes": [
+    "Standalone Xenobloods DoENGINE package built from generated OBJ/MTL assets.",
+    "Scene object ids remain stable so gameplay state can bind directly to authored mesh and billboard entries.",
+    "Lifecycle portraits, encounter billboards, and Lahgroid boss media are packaged with the game project.",
+    "Default save path is packaged with the game project for load/save validation inside DoENGINE."
+  ]
+}

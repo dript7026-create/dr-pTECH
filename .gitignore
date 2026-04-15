@@ -117,11 +117,22 @@ BluninKrabPrototype/smoke_test_preview*.json
 BluninKrabPrototype/smoke_test_preview*.png
 BluninKrabPrototype/bluninkrabvania_release_validation.json
 BluninKrabPrototype/bluninkrabvania_release_validation.png
+farmers_feather/*.ihx
+farmers_feather/*.map
+farmers_feather/*.noi
+farmers_feather/review_package/
+DoENGINE/games/xenobloods/saves/
+xenobloods/assets/jumpclip_bundles/
+xenobloods/JumpClipAssets/
+xenobloods/jumpclip_pipeline_link*.json
+xenobloods/jumpclip_preview_roster.json
 
 # Large authoring source files better kept out of git mirrors
 *.clip
 pocode/windows/dripwave/toolchain/
+pocode/windows/dripwave/projects/*/bin/
 blastminidz/blastminidz.npt/blastminidz.c/blastmonidz_bridge_outbox.txt
+blastminidz/blastminidz.npt/blastminidz.c/blastmonidz_title_fanfare.wav
 
 # ═══════════════════════════════════════════════════════════════════
 # SECURITY HARDENING — business/financial/credential protection

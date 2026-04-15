@@ -9,25 +9,109 @@
 
 #ifdef _WIN32
 #include <windows.h>
+
+typedef enum {
+    INPUT_CONTEXT_GENERIC = 0,
+    INPUT_CONTEXT_MENU,
+    INPUT_CONTEXT_CONFIRM,
+    INPUT_CONTEXT_TURN
+} InputContext;
+static int g_menu_selection = 1;
 #endif
 
 static void clear_screen(void) {
     printf("\033[2J\033[H");
 }
 
-static int read_console_line(char *buffer, size_t size) {
+static int try_window_input(char *buffer, size_t size, InputContext context) {
+    int input = blastmonidz_window_pop_input();
+    if (input == 0) {
+        return 0;
+    }
+    switch (context) {
+        case INPUT_CONTEXT_MENU:
+            if (input == '^') {
+                g_menu_selection = g_menu_selection > 1 ? g_menu_selection - 1 : 5;
+                buffer[0] = '\0';
+                return 1;
+            }
+            if (input == 'v') {
+                g_menu_selection = g_menu_selection < 5 ? g_menu_selection + 1 : 1;
+                buffer[0] = '\0';
+                return 1;
+            }
+            if (input == '!' || input == '>') {
+                snprintf(buffer, size, "%d", g_menu_selection);
+                return 1;
+            }
+            if (input == '?' || input == 'q' || input == '<') {
+                snprintf(buffer, size, "5");
+                return 1;
+            }
+            if (input >= '1' && input <= '5') {
+                snprintf(buffer, size, "%c", input);
+                return 1;
+            }
+            break;
+        case INPUT_CONTEXT_CONFIRM:
+            if (input == '!' || input == '?' || input == 't' || input == '\r' || input == '\n') {
+                snprintf(buffer, size, "\n");
+                return 1;
+            }
+            break;
+        case INPUT_CONTEXT_TURN:
+            switch (input) {
+                case '^': snprintf(buffer, size, "w"); return 1;
+                case 'v': snprintf(buffer, size, "s"); return 1;
+                case '<': snprintf(buffer, size, "a"); return 1;
+                case '>': snprintf(buffer, size, "d"); return 1;
+                case '!': snprintf(buffer, size, "b"); return 1;
+                case '?': snprintf(buffer, size, "t"); return 1;
+                case 'c': case 'r': case 't': case 'q':
+                case 'w': case 'a': case 's': case 'd': case 'b':
+                    snprintf(buffer, size, "%c", input);
+                    return 1;
+                default:
+                    break;
+            }
+            break;
+        case INPUT_CONTEXT_GENERIC:
+        default:
+            if (input == '!' || input == '\r' || input == '\n') {
+                snprintf(buffer, size, "\n");
+                return 1;
+            }
+            if (input >= '1' && input <= '5') {
+                snprintf(buffer, size, "%c", input);
+                return 1;
+            }
+            break;
+    }
+    return 0;
+}
+
+static int read_console_line(char *buffer, size_t size, InputContext context) {
 #ifdef _WIN32
     HANDLE stdin_handle = GetStdHandle(STD_INPUT_HANDLE);
     if (stdin_handle != INVALID_HANDLE_VALUE && stdin_handle != NULL) {
-        for (;;) {
-            DWORD wait_result = WaitForSingleObject(stdin_handle, 16);
-            blastmonidz_bridge_poll();
-            blastmonidz_window_pump();
-            if (wait_result == WAIT_OBJECT_0) {
-                break;
-            }
-            if (wait_result == WAIT_FAILED) {
-                break;
+        DWORD stdin_type = GetFileType(stdin_handle);
+        if (stdin_type == FILE_TYPE_CHAR) {
+            for (;;) {
+                DWORD wait_result = WaitForSingleObject(stdin_handle, 16);
+                blastmonidz_bridge_poll();
+                blastmonidz_window_pump();
+                if (blastmonidz_window_should_close()) {
+                    return 0;
+                }
+                if (try_window_input(buffer, size, context)) {
+                    return 1;
+                }
+                if (wait_result == WAIT_OBJECT_0) {
+                    break;
+                }
+                if (wait_result == WAIT_FAILED) {
+                    break;
+                }
             }
         }
     }
@@ -42,7 +126,39 @@ static int read_console_line(char *buffer, size_t size) {
 static void wait_for_enter(const char *prompt) {
     char buffer[32];
     printf("%s", prompt);
-    read_console_line(buffer, sizeof(buffer));
+    read_console_line(buffer, sizeof(buffer), INPUT_CONTEXT_CONFIRM);
+}
+
+static void print_saved_snapshot(void) {
+    FILE *profile = fopen(blastmonidz_run_profile_path, "r");
+    FILE *replay = fopen(blastmonidz_replay_summary_path, "r");
+    char line[512];
+    blastmonidz_bridge_publish_status("menu", "Load snapshot opened.");
+    blastmonidz_window_present_title();
+    clear_screen();
+    printf("=== LOAD LAST RUN SNAPSHOT ===\n\n");
+    if (!profile && !replay) {
+        printf("No saved Blastmonidz snapshot is present yet. Complete a run to generate profile and replay files.\n\n");
+        wait_for_enter("Press Enter to return to the title menu...");
+        return;
+    }
+    if (profile) {
+        printf("-- RUN PROFILE --\n");
+        while (fgets(line, (int)sizeof(line), profile)) {
+            printf("%s", line);
+        }
+        fclose(profile);
+        printf("\n");
+    }
+    if (replay) {
+        printf("-- REPLAY SUMMARY --\n");
+        while (fgets(line, (int)sizeof(line), replay)) {
+            printf("%s", line);
+        }
+        fclose(replay);
+        printf("\n");
+    }
+    wait_for_enter("Press Enter to return to the title menu...");
 }
 
 static void print_archive_catalog(void) {
@@ -85,6 +201,7 @@ static void print_lore_brief(void) {
 
 static int show_title_menu(void) {
     char buffer[32];
+    int selection = g_menu_selection;
     const AssetArchetype *logo_asset = blastmonidz_title_logo_asset();
     const AssetArchetype *backdrop_asset = blastmonidz_title_backdrop_asset();
     const AssetArchetype *motion_asset = blastmonidz_primary_motion_asset();
@@ -96,30 +213,44 @@ static int show_title_menu(void) {
         printf("                    B L A S T M O N I D Z                   \n");
         printf("============================================================\n\n");
         printf("Blastmonidz: Consensus Arena Vertical Slice\n");
-        printf("Archive-backed host build: Bomberman.zip now detonates as a maximized full-screen title wall with animated bomb cycles, rotating silhouette families, adaptive paint fields, and reactive arena props\n");
+        printf("Archive-backed host build: the title menu now stages a cobblestoned arena with central Play/Load relics, an intrepid balancing bomb-bearer, ambient fanfare, and ecological chemistry visuals driven by the button-switch pulse\n");
         printf("Priority title sources: %s, %s, %s\n", logo_asset->archive_entry, backdrop_asset->archive_entry, motion_asset->archive_entry);
         printf("Lore note: Blastminidz remains the handheld spinoff line inside the fiction.\n");
-        printf("Deliverable scope: full match loop, save output, archive browser, and Windows companion render.\n\n");
+        printf("Deliverable scope: play/load title arena, full match loop, save output, archive browser, and Windows companion render.\n\n");
+        printf("Input focus stays in this terminal. The companion window is visual-only.\n\n");
         printf("Bridge status: %s\n", blastmonidz_bridge_latest_status());
         printf("Latest inbox:  %s\n", blastmonidz_bridge_latest_inbox());
         printf("Workflow files: %s | %s\n\n", blastmonidz_bridge_inbox_path(), blastmonidz_bridge_outbox_path());
-        printf("1. Start arena run\n");
-        printf("2. View world brief\n");
-        printf("3. View archive catalog\n");
-        printf("4. Quit\n\n");
+        selection = g_menu_selection;
+        printf("%c 1. Play arena run\n", selection == 1 ? '>' : ' ');
+        printf("%c 2. Load last run snapshot\n", selection == 2 ? '>' : ' ');
+        printf("%c 3. View world brief\n", selection == 3 ? '>' : ' ');
+        printf("%c 4. View archive catalog\n", selection == 4 ? '>' : ' ');
+        printf("%c 5. Quit\n\n", selection == 5 ? '>' : ' ');
+        printf("Xbox: d-pad/left stick choose, A or Start confirm, B or View quit\n\n");
         printf("Select: ");
-        if (!read_console_line(buffer, sizeof(buffer))) {
-            return 4;
+        if (!read_console_line(buffer, sizeof(buffer), INPUT_CONTEXT_MENU)) {
+            return 5;
+        }
+        if (buffer[0] == '\0') {
+            continue;
         }
         if (buffer[0] == '1') {
+            g_menu_selection = 1;
             return 1;
         }
         if (buffer[0] == '2') {
-            print_lore_brief();
+            g_menu_selection = 2;
+            print_saved_snapshot();
         } else if (buffer[0] == '3') {
-            print_archive_catalog();
+            g_menu_selection = 3;
+            print_lore_brief();
         } else if (buffer[0] == '4') {
-            return 4;
+            g_menu_selection = 4;
+            print_archive_catalog();
+        } else if (buffer[0] == '5') {
+            g_menu_selection = 5;
+            return 5;
         }
     }
 }
@@ -142,7 +273,7 @@ static void print_starter_draw(const GameState *state) {
             player->mon.starter->growth_family);
     }
     printf("\n");
-    wait_for_enter("Press Enter to launch the consensus arena...");
+    wait_for_enter("Press Enter or press A/Start on the Xbox controller to launch the consensus arena...");
 }
 
 static void render_arena(const GameState *state) {
@@ -188,6 +319,7 @@ static void render_arena(const GameState *state) {
     printf("asset genome: %s\n\n", asset_genome);
     printf("Bridge: %s\n", blastmonidz_bridge_latest_status());
     printf("Inbox:  %s\n\n", blastmonidz_bridge_latest_inbox());
+    printf("Play from this terminal window. The companion window mirrors the state but does not take input.\n\n");
 
     for (y = view.top; y < view.top + view.height; ++y) {
         for (x = view.left; x < view.left + view.width; ++x) {
@@ -249,19 +381,20 @@ static void render_arena(const GameState *state) {
             x == BLASTMONIDZ_HOME_TILES - 1 ? "" : " | ");
     }
     printf("\nControls: w/a/s/d move, b bomb, c cycle concoction, r manifest if ghost-ready, t wait, q quit run\n");
+    printf("Xbox: d-pad/left stick move, A or RT bomb, X or RB cycle, Y manifest, B or Start wait, View quit run\n");
 }
 
 static int handle_human_turn(GameState *state) {
     char buffer[32];
     Blastonid *mon = &state->players[0].mon;
     if (!mon->alive) {
-        printf("Ghost state. Press r to manifest when chemistry is aligned, or t to wait: ");
+        printf("Ghost state. Press r to manifest when chemistry is aligned, or t to wait. Xbox: Y manifest, B/Start wait: ");
     } else if (mon->delay_ticks > 0) {
-        printf("Consensus lag holds you for %d more ticks. Press t to continue: ", mon->delay_ticks);
+        printf("Consensus lag holds you for %d more ticks. Press t to continue. Xbox: B/Start continue: ", mon->delay_ticks);
     } else {
-        printf("Command: ");
+        printf("Command (Xbox: stick/d-pad move, A bomb, X/RB cycle, Y manifest, B wait, View quit): ");
     }
-    if (!read_console_line(buffer, sizeof(buffer))) {
+    if (!read_console_line(buffer, sizeof(buffer), INPUT_CONTEXT_TURN)) {
         return 0;
     }
     return blastmonidz_handle_player_command(state, 0, (char)tolower((unsigned char)buffer[0]));
@@ -362,16 +495,20 @@ static void run_game(void) {
 int main(void) {
     srand((unsigned int)time(NULL));
     blastmonidz_bridge_init();
+    blastmonidz_window_reset_close_request();
     if (!blastmonidz_window_init()) {
         fprintf(stderr, "Failed to initialize the Blastmonidz companion window.\n");
     }
     for (;;) {
         int selection = show_title_menu();
+        if (blastmonidz_window_should_close()) {
+            break;
+        }
         blastmonidz_bridge_poll();
         blastmonidz_window_pump();
         if (selection == 1) {
             run_game();
-        } else if (selection == 4) {
+        } else if (selection == 5) {
             break;
         }
     }

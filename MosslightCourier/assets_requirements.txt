@@ -1,0 +1,175 @@
+Mosslight Courier Asset Requirements
+====================================
+
+Global Asset Rules
+------------------
+- File format: BMP.
+- Recommended bit depth: 24-bit or 32-bit BMP.
+- Transparency key: pure magenta RGB(255, 0, 255).
+- Scaling: all assets are drawn at native pixel size and then window-scaled.
+- Internal game resolution: 320 x 192.
+- Tile size: 16 x 16.
+- Sprite rendering assumes nearest-neighbor style art with no soft blur.
+
+Folder
+------
+- Place every file in: MosslightCourier/assets/
+
+1. tile_sheet.bmp
+-----------------
+- Canvas size: 64 x 64.
+- Layout: 4 columns x 4 rows.
+- Cell size: 16 x 16 per tile.
+- Required tile index order, row-major:
+  - 0: meadow grass
+  - 1: worn path
+  - 2: hedge wall
+  - 3: shallow water
+  - 4: flower patch
+  - 5: stepping stones / bridge
+  - 6: gate closed
+  - 7: gate open
+  - 8: moss lantern post
+  - 9: cracked stone
+  - 10: crate / parcel box
+  - 11: exit pad highlight
+  - 12: dark soil
+  - 13: reeds
+  - 14: marsh bloom accent
+  - 15: reserve decorative tile
+- Style notes:
+  - Grass must be readable beneath sprites.
+  - Hedge wall silhouette should feel solid and blocking.
+  - Closed gate must clearly imply obstruction.
+  - Open gate should visually communicate a safe exit.
+
+2. player_courier.bmp
+---------------------
+- Canvas size: 72 x 96.
+- Layout: 3 columns x 4 rows.
+- Frame size: 24 x 24.
+- Row order:
+  - Row 0: facing down
+  - Row 1: facing left
+  - Row 2: facing right
+  - Row 3: facing up
+- Column order:
+  - Column 0: idle / planted step
+  - Column 1: walk frame A
+  - Column 2: walk frame B
+- Design notes:
+  - Character should read as a tiny marsh courier with a satchel and lantern accent.
+  - Keep silhouette broad at the shoulders and narrow at the feet.
+  - Include one bright focal color on the lantern or satchel clasp.
+  - Avoid high-frequency detail on the torso so the sprite remains readable.
+
+3. enemy_beetle.bmp
+-------------------
+- Canvas size: 48 x 96.
+- Layout: 2 columns x 4 rows.
+- Frame size: 24 x 24.
+- Row order:
+  - Row 0: facing down
+  - Row 1: facing left
+  - Row 2: facing right
+  - Row 3: facing up
+- Column order:
+  - Column 0: idle / closed legs
+  - Column 1: moving / open legs
+- Design notes:
+  - Beetle should feel low, dense, and thorny.
+  - Shell highlight should make it distinguishable from floor detail.
+  - Head should face the direction of motion clearly.
+
+4. enemy_wisp.bmp
+-----------------
+- Canvas size: 64 x 16.
+- Layout: 4 columns x 1 row.
+- Frame size: 16 x 16.
+- Frame order:
+  - frame 0: compact glow
+  - frame 1: stretched left
+  - frame 2: stretched right
+  - frame 3: expanded pulse
+- Design notes:
+  - Wisp should be airy and luminous.
+  - Outer edge should stay soft in shape but crisp in sprite contour.
+  - The center must remain bright enough to spot quickly.
+
+5. pickup_seed.bmp
+------------------
+- Canvas size: 64 x 16.
+- Layout: 4 columns x 1 row.
+- Frame size: 16 x 16.
+- Frame order:
+  - frame 0: dim idle
+  - frame 1: glow rise
+  - frame 2: peak glow
+  - frame 3: glow fall
+- Design notes:
+  - This is the primary collectible and must always pop against ground tiles.
+  - Use a bright center with a halo silhouette.
+  - Keep shape simple: seed, bulb, or floating lantern fruit.
+
+6. hud_icons.bmp
+----------------
+- Canvas size: 48 x 16.
+- Layout: 3 columns x 1 row.
+- Frame size: 16 x 16.
+- Icon order:
+  - 0: heart
+  - 1: seed counter icon
+  - 2: stage / clock icon
+- Design notes:
+  - Icons must read in a single glance.
+  - Heart should look full and sturdy, not delicate.
+  - Seed icon should match pickup_seed.bmp visually.
+
+7. title_logo.bmp
+-----------------
+- Canvas size: 256 x 64.
+- Single image.
+- Usage: title screen center banner.
+- Design notes:
+  - Text: MOSSLIGHT COURIER.
+  - Strong hand-painted adventure feel.
+  - Include a lantern, moss bloom, or satchel motif integrated into the lettering.
+  - Keep empty border padding so the logo can breathe on screen.
+
+8. backdrop_day.bmp
+-------------------
+- Canvas size: 320 x 192.
+- Single full-screen image.
+- Usage: title background and fallback stage atmosphere layer.
+- Design notes:
+  - Dusk marsh palette.
+  - Large simple shapes: tree silhouettes, lily water, distant glow lamps.
+  - Do not add small texture everywhere; gameplay sprites must remain readable on top.
+
+Optional Nice-to-Have Replacements
+---------------------------------
+- If you want a richer presentation later, you can add these even though the current code does not require them:
+  - stage_clear_panel.bmp at 192 x 48
+  - game_over_panel.bmp at 192 x 48
+  - win_panel.bmp at 192 x 48
+
+Palette Guidance
+----------------
+- Suggested base grass: deep muted green.
+- Suggested path: warm moss-brown.
+- Suggested water: dark teal-blue.
+- Suggested accent glow: yellow-green or cyan-gold.
+- Suggested courier accent: amber lantern with one saturated cloth color.
+
+Readability Targets
+-------------------
+- Player sprite must remain readable at a glance from 2 meters away on a monitor.
+- Collectibles should visually outrank floor decoration.
+- Enemies should never blend into hedge walls.
+- Gate open/closed states must be understandable even in peripheral vision.
+
+If You Want To Push Yourself
+----------------------------
+- Keep the courier readable with only 6 to 8 colors.
+- Make the beetle and wisp feel unrelated despite tiny sprite budgets.
+- Make the entire game feel cohesive without over-detailing the tile sheet.

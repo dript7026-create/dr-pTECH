@@ -1,10 +1,20 @@
 # -*- mode: python ; coding: utf-8 -*-
 
+from pathlib import Path
+
+
+ROOT = Path.cwd()
+BUILD_DIR = ROOT / 'build'
+OPTIONAL_BINARIES = []
+wrapper = BUILD_DIR / 'xinput_wrapper.dll'
+if wrapper.exists():
+    OPTIONAL_BINARIES.append((str(wrapper), 'build'))
+
 
 a = Analysis(
     ['host_graphical.py'],
     pathex=[],
-    binaries=[],
+    binaries=OPTIONAL_BINARIES,
     datas=[('assets', 'assets'), ('assets/placeholderassets', 'assets/placeholderassets')],
     hiddenimports=[],
     hookspath=[],
@@ -22,7 +32,7 @@ exe = EXE(
     a.binaries,
     a.datas,
     [],
-    name='kaijugaiden_gui',
+    name='kaijugaiden_windows_xbox',
     debug=False,
     bootloader_ignore_signals=False,
     strip=False,

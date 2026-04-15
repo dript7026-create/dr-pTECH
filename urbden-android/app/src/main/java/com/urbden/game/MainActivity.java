@@ -31,6 +31,7 @@ public class MainActivity extends Activity {
     private TextView scenarioTitleView;
     private TextView scenarioSummaryView;
     private TextView scenarioVenueView;
+    private TextView scenarioIdentityView;
     private TextView predictionView;
     private GridView metricView;
     private Button awayButton;
@@ -46,43 +47,53 @@ public class MainActivity extends Activity {
 
         ScrollView scrollView = new ScrollView(this);
         scrollView.setFillViewport(true);
-        scrollView.setBackgroundColor(Color.rgb(6, 8, 18));
+        scrollView.setBackgroundColor(Color.rgb(5, 8, 20));
         LinearLayout root = new LinearLayout(this);
         root.setOrientation(LinearLayout.VERTICAL);
         root.setPadding(padding, padding, padding, padding);
-        root.setBackgroundColor(Color.rgb(6, 8, 18));
+        root.setBackgroundColor(Color.rgb(5, 8, 20));
+
+        LinearLayout heroPanel = buildHeroPanel();
+        root.addView(heroPanel);
 
         TextView eyebrowView = new TextView(this);
-        eyebrowView.setText("DIRK//ODDS SIGNAL DECK");
-        eyebrowView.setTextColor(Color.rgb(24, 246, 210));
+        eyebrowView.setText("CLIENT REVIEW BUILD");
+        eyebrowView.setTextColor(Color.rgb(96, 230, 255));
         eyebrowView.setTextSize(TypedValue.COMPLEX_UNIT_SP, 11);
         eyebrowView.setTypeface(Typeface.create("sans-serif-medium", Typeface.BOLD));
         eyebrowView.setLetterSpacing(0.18f);
-        root.addView(eyebrowView);
+        heroPanel.addView(eyebrowView);
 
         TextView titleView = new TextView(this);
         titleView.setText(buildBrandTitle());
         titleView.setTextColor(Color.rgb(240, 246, 255));
-        titleView.setTextSize(TypedValue.COMPLEX_UNIT_SP, 31);
+        titleView.setTextSize(TypedValue.COMPLEX_UNIT_SP, 33);
         titleView.setTypeface(Typeface.create("sans-serif-black", Typeface.BOLD));
-        titleView.setPadding(0, dp(4), 0, dp(2));
-        root.addView(titleView);
+        titleView.setPadding(0, dp(6), 0, dp(4));
+        heroPanel.addView(titleView);
+
+        LinearLayout heroChipRow = new LinearLayout(this);
+        heroChipRow.setOrientation(LinearLayout.HORIZONTAL);
+        heroChipRow.setPadding(0, dp(4), 0, dp(4));
+        heroChipRow.addView(buildHeroChip("SYNTHETIC SPORTS", Color.rgb(96, 230, 255), Color.rgb(9, 39, 52)));
+        heroChipRow.addView(buildHeroChip("LIVE 3D TESTBED", Color.rgb(255, 212, 128), Color.rgb(52, 32, 11)));
+        heroPanel.addView(heroChipRow);
 
         TextView subtitleView = new TextView(this);
         subtitleView.setText(
-                "Anonymous multi-sport prediction testing with abstract 3D playback, subtle reflex windows, and lightweight coaching interactions. " +
-                        "No real leagues, franchises, player identities, or licensed likenesses are used in this mobile preview.");
+            "Fast signal reads, interactive playback, and coached pressure testing for fictional matchups. " +
+                "No real leagues, clubs, players, or licensed likenesses appear in this preview.");
         subtitleView.setTextSize(TypedValue.COMPLEX_UNIT_SP, 15);
-        subtitleView.setTextColor(Color.rgb(150, 172, 196));
-        subtitleView.setPadding(0, dp(8), 0, dp(16));
-        root.addView(subtitleView);
+        subtitleView.setTextColor(Color.rgb(186, 196, 216));
+        subtitleView.setPadding(0, dp(10), 0, 0);
+        heroPanel.addView(subtitleView);
 
         LinearLayout deckPanel = buildPanel();
         root.addView(deckPanel);
 
         TextView deckLabel = new TextView(this);
-        deckLabel.setText("SYNTHETIC MATCH DECK");
-        deckLabel.setTextColor(Color.rgb(24, 246, 210));
+        deckLabel.setText("TEST SCENARIOS");
+        deckLabel.setTextColor(Color.rgb(96, 230, 255));
         deckLabel.setTypeface(Typeface.create("sans-serif-medium", Typeface.BOLD));
         deckLabel.setLetterSpacing(0.12f);
         deckLabel.setTextSize(TypedValue.COMPLEX_UNIT_SP, 14);
@@ -116,6 +127,12 @@ public class MainActivity extends Activity {
         scenarioVenueView.setPadding(0, dp(6), 0, dp(10));
         detailPanel.addView(scenarioVenueView);
 
+        scenarioIdentityView = new TextView(this);
+        scenarioIdentityView.setTextSize(TypedValue.COMPLEX_UNIT_SP, 13);
+        scenarioIdentityView.setTextColor(Color.rgb(196, 211, 232));
+        scenarioIdentityView.setPadding(0, 0, 0, dp(10));
+        detailPanel.addView(scenarioIdentityView);
+
         metricView = new GridView(this);
         detailPanel.addView(metricView, new LinearLayout.LayoutParams(
                 ViewGroup.LayoutParams.MATCH_PARENT,
@@ -125,8 +142,8 @@ public class MainActivity extends Activity {
         root.addView(pickPanel);
 
         TextView pickLabel = new TextView(this);
-        pickLabel.setText("PREDICTION LANE");
-        pickLabel.setTextColor(Color.rgb(255, 192, 65));
+        pickLabel.setText("CALL THE LANE");
+        pickLabel.setTextColor(Color.rgb(255, 212, 128));
         pickLabel.setTypeface(Typeface.create("sans-serif-medium", Typeface.BOLD));
         pickLabel.setLetterSpacing(0.1f);
         pickLabel.setTextSize(TypedValue.COMPLEX_UNIT_SP, 14);
@@ -137,9 +154,9 @@ public class MainActivity extends Activity {
         pickRow.setOrientation(LinearLayout.HORIZONTAL);
         pickPanel.addView(pickRow);
 
-        awayButton = buildPredictionButton("Away Edge", DirkOddsSimulator.OUTCOME_AWAY);
+        awayButton = buildPredictionButton("Away Lane", DirkOddsSimulator.OUTCOME_AWAY);
         drawButton = buildPredictionButton("Draw Lane", DirkOddsSimulator.OUTCOME_DRAW);
-        homeButton = buildPredictionButton("Home Edge", DirkOddsSimulator.OUTCOME_HOME);
+        homeButton = buildPredictionButton("Home Lane", DirkOddsSimulator.OUTCOME_HOME);
         pickRow.addView(awayButton, new LinearLayout.LayoutParams(0, ViewGroup.LayoutParams.WRAP_CONTENT, 1f));
         pickRow.addView(drawButton, new LinearLayout.LayoutParams(0, ViewGroup.LayoutParams.WRAP_CONTENT, 1f));
         pickRow.addView(homeButton, new LinearLayout.LayoutParams(0, ViewGroup.LayoutParams.WRAP_CONTENT, 1f));
@@ -151,23 +168,22 @@ public class MainActivity extends Activity {
     pickPanel.addView(predictionView);
 
         Button launchButton = new Button(this);
-    stylePrimaryButton(launchButton, Color.rgb(255, 74, 194), Color.rgb(255, 196, 88));
-    launchButton.setText("Launch Neon 3D Test");
+        stylePrimaryButton(launchButton, Color.rgb(255, 74, 194), Color.rgb(255, 196, 88));
+        launchButton.setText("Enter Signal Arena");
         launchButton.setOnClickListener(view -> launchScenario());
-    pickPanel.addView(launchButton);
+        pickPanel.addView(launchButton);
 
         TextView footer = new TextView(this);
         footer.setText(
-                "The mobile preview uses fictional team identities, abstract avatars, and synthetic match states. " +
-                        "It is intended for interaction design, prediction testing, and review, not guaranteed forecasting.");
+                "Fictional identities only. Built for client review, interaction testing, and prediction-flow evaluation rather than guaranteed forecasting.");
         footer.setTextSize(TypedValue.COMPLEX_UNIT_SP, 12);
-    footer.setTextColor(Color.rgb(112, 130, 154));
+        footer.setTextColor(Color.rgb(112, 130, 154));
         footer.setPadding(0, dp(10), 0, 0);
         root.addView(footer);
 
         for (DirkOddsScenario scenario : scenarios) {
             Button button = new Button(this);
-            button.setText(String.format(Locale.US, "%s  %s vs %s", sportGlyph(scenario.sport), scenario.homeTeam, scenario.awayTeam));
+            button.setText(String.format(Locale.US, "%s  %s", sportGlyph(scenario.sport), scenario.matchupDeckLabel()));
             styleScenarioButton(button, scenario);
             button.setOnClickListener(view -> selectScenario(scenario));
             scenarioButtons.add(button);
@@ -177,9 +193,9 @@ public class MainActivity extends Activity {
         if (!scenarios.isEmpty()) {
             selectScenario(scenarios.get(0));
         } else {
-            scenarioTitleView.setText("No scenarios available");
-            scenarioSummaryView.setText("The packaged mobile scenario deck could not be loaded.");
-            scenarioVenueView.setText("Add assets/dirkodds/scenarios.json before launching playback.");
+            scenarioTitleView.setText("No scenarios loaded");
+            scenarioSummaryView.setText("The packaged scenario deck is missing from this build.");
+            scenarioVenueView.setText("Restore assets/dirkodds/scenarios.json to enable playback.");
         }
 
         scrollView.addView(root);
@@ -199,15 +215,23 @@ public class MainActivity extends Activity {
         scenarioTitleView.setText(scenario.title);
         scenarioSummaryView.setText(scenario.summary);
         scenarioVenueView.setText(String.format(Locale.US, "%s  %s | %s vs %s | %s", sportGlyph(scenario.sport), titleCase(scenario.sport), scenario.homeTeam, scenario.awayTeam, scenario.venue));
+        scenarioIdentityView.setText(
+            scenario.identityHeadline() + "\n" +
+            scenario.sidelineBrief() + "\n" +
+            scenario.uniformBrief());
 
         List<GridView.GridMetric> metrics = new ArrayList<>();
-        metrics.add(new GridView.GridMetric("Away", scenario.awayTeam, scenario.awayProbability, scenario.awayColor));
+        metrics.add(new GridView.GridMetric(scenario.laneLabel(DirkOddsSimulator.OUTCOME_AWAY), scenario.awayTeam, scenario.awayProbability, scenario.awayColor));
         if (scenario.supportsDraw()) {
-            metrics.add(new GridView.GridMetric("Draw", "balanced lane", scenario.drawProbability, 0xFFB9A44C));
+            metrics.add(new GridView.GridMetric(scenario.laneLabel(DirkOddsSimulator.OUTCOME_DRAW), scenario.isQuickthings() ? "codex balance" : "balanced lane", scenario.drawProbability, 0xFFB9A44C));
         }
-        metrics.add(new GridView.GridMetric("Home", scenario.homeTeam, scenario.homeProbability, scenario.homeColor));
-        metrics.add(new GridView.GridMetric("Tempo", scenario.venue, scenario.tempo, 0xFF7AC74F));
+        metrics.add(new GridView.GridMetric(scenario.laneLabel(DirkOddsSimulator.OUTCOME_HOME), scenario.homeTeam, scenario.homeProbability, scenario.homeColor));
+        metrics.add(new GridView.GridMetric(scenario.isQuickthings() ? "Course Tempo" : "Tempo", scenario.venue, scenario.tempo, 0xFF7AC74F));
         metricView.setMetrics(metrics);
+
+        awayButton.setText(scenario.laneLabel(DirkOddsSimulator.OUTCOME_AWAY));
+        drawButton.setText(scenario.laneLabel(DirkOddsSimulator.OUTCOME_DRAW));
+        homeButton.setText(scenario.laneLabel(DirkOddsSimulator.OUTCOME_HOME));
 
         if (!scenario.supportsDraw() && predictedOutcome == DirkOddsSimulator.OUTCOME_DRAW) {
             predictedOutcome = scenario.homeProbability >= scenario.awayProbability
@@ -246,28 +270,30 @@ public class MainActivity extends Activity {
         homeButton.setEnabled(predictedOutcome != DirkOddsSimulator.OUTCOME_HOME);
         drawButton.setEnabled(selectedScenario != null && selectedScenario.supportsDraw() && predictedOutcome != DirkOddsSimulator.OUTCOME_DRAW);
         if (selectedScenario == null) {
-            predictionView.setText("No scenario selected.");
+            predictionView.setText("Pick a scenario to arm the playback lane.");
             return;
         }
 
         String prediction;
         if (predictedOutcome == DirkOddsSimulator.OUTCOME_AWAY) {
-            prediction = selectedScenario.awayTeam + " edge";
+            prediction = selectedScenario.activeCallText(predictedOutcome);
             tintPredictionButton(awayButton, true, selectedScenario.awayColor);
             tintPredictionButton(drawButton, false, 0xFFB9A44C);
             tintPredictionButton(homeButton, false, selectedScenario.homeColor);
         } else if (predictedOutcome == DirkOddsSimulator.OUTCOME_DRAW) {
-            prediction = "balanced draw lane";
+            prediction = selectedScenario.activeCallText(predictedOutcome);
             tintPredictionButton(awayButton, false, selectedScenario.awayColor);
             tintPredictionButton(drawButton, true, 0xFFB9A44C);
             tintPredictionButton(homeButton, false, selectedScenario.homeColor);
         } else {
-            prediction = selectedScenario.homeTeam + " edge";
+            prediction = selectedScenario.activeCallText(predictedOutcome);
             tintPredictionButton(awayButton, false, selectedScenario.awayColor);
             tintPredictionButton(drawButton, false, 0xFFB9A44C);
             tintPredictionButton(homeButton, true, selectedScenario.homeColor);
         }
-        predictionView.setText("Current test pick: " + prediction + ". Use pulse, shape, and reflex taps during playback to pressure-test it in motion.");
+        predictionView.setText(selectedScenario.isQuickthings()
+                ? "Active call: " + prediction + ". Use Rift, Sync, and Strike control during playback to route the bream through portals, keep entropy below consensus, and sink the Choice Well."
+                : "Active call: " + prediction + ". Use pulse, shape, and reflex during playback to test whether the read survives live pressure.");
         predictionView.animate()
             .alpha(0.72f)
             .setDuration(0)
@@ -276,14 +302,52 @@ public class MainActivity extends Activity {
     }
 
     private SpannableString buildBrandTitle() {
-        String text = "DIRK//ODDS MOBILE";
+        String text = "DIRK//ODDS\nSIGNAL ARENA";
         SpannableString styled = new SpannableString(text);
-        styled.setSpan(new ForegroundColorSpan(Color.rgb(30, 242, 216)), 0, 4, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+        styled.setSpan(new ForegroundColorSpan(Color.rgb(96, 230, 255)), 0, 4, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
         styled.setSpan(new ForegroundColorSpan(Color.rgb(246, 248, 255)), 4, 6, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
-        styled.setSpan(new ForegroundColorSpan(Color.rgb(255, 88, 196)), 6, 10, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
-        styled.setSpan(new ForegroundColorSpan(Color.rgb(255, 196, 88)), 11, text.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+        styled.setSpan(new ForegroundColorSpan(Color.rgb(255, 122, 186)), 6, 10, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+        styled.setSpan(new ForegroundColorSpan(Color.rgb(255, 212, 128)), 11, text.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
         styled.setSpan(new StyleSpan(Typeface.BOLD), 0, text.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
         return styled;
+    }
+
+    private LinearLayout buildHeroPanel() {
+        LinearLayout panel = new LinearLayout(this);
+        panel.setOrientation(LinearLayout.VERTICAL);
+        panel.setPadding(dp(20), dp(20), dp(20), dp(20));
+        LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(
+                ViewGroup.LayoutParams.MATCH_PARENT,
+                ViewGroup.LayoutParams.WRAP_CONTENT);
+        params.bottomMargin = dp(14);
+        panel.setLayoutParams(params);
+        GradientDrawable background = new GradientDrawable(
+                GradientDrawable.Orientation.TL_BR,
+                new int[] {Color.rgb(7, 12, 28), Color.rgb(18, 16, 42), Color.rgb(12, 29, 37)});
+        background.setCornerRadius(dp(26));
+            background.setStroke(dp(1), Color.argb(220, 120, 222, 255));
+        panel.setBackground(background);
+        return panel;
+    }
+
+    private TextView buildHeroChip(String label, int textColor, int fillColor) {
+        TextView chip = new TextView(this);
+        chip.setText(label);
+        chip.setTextColor(textColor);
+        chip.setTextSize(TypedValue.COMPLEX_UNIT_SP, 11);
+        chip.setTypeface(Typeface.create("sans-serif-medium", Typeface.BOLD));
+        chip.setPadding(dp(10), dp(6), dp(10), dp(6));
+        GradientDrawable background = new GradientDrawable();
+        background.setColor(fillColor);
+        background.setCornerRadius(dp(999));
+        background.setStroke(dp(1), Color.argb(180, Color.red(textColor), Color.green(textColor), Color.blue(textColor)));
+        chip.setBackground(background);
+        LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(
+                ViewGroup.LayoutParams.WRAP_CONTENT,
+                ViewGroup.LayoutParams.WRAP_CONTENT);
+        params.rightMargin = dp(8);
+        chip.setLayoutParams(params);
+        return chip;
     }
 
     private LinearLayout buildPanel() {
@@ -374,6 +438,12 @@ public class MainActivity extends Activity {
 
     private String sportGlyph(String sport) {
         switch (sport) {
+            case "multisport":
+                return "◈";
+            case "quickthings":
+                return "◉";
+            case "hockey":
+                return "⌁";
             case "basketball":
                 return "◎";
             case "baseball":

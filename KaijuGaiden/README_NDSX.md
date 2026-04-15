@@ -9,6 +9,7 @@ This project uses `.ndsx` as a self-contained distribution wrapper for the live 
 - A single archive containing the current runnable `.3dsx`
 - The matching `.smdh` metadata
 - The adaptive stereo profile used by the 3DS build
+- The HOPE runtime bridge when a generated contract is available
 - Release instructions and branding assets
 
 ## What NDSX Is Not
@@ -21,6 +22,7 @@ This project uses `.ndsx` as a self-contained distribution wrapper for the live 
 
 - `ndsx/manifest.json`
 - `adaptive/profile.json`
+- `adaptive/hope_runtime_contract.json` when present
 - `payload/kaijugaiden.3dsx`
 - `payload/kaijugaiden.smdh`
 - `payload/icon.png`
@@ -37,7 +39,7 @@ The wrapper profile currently carries named presets for:
 ## Build The Wrapper
 
 ```powershell
-Set-Location C:\Users\rrcar\Documents\drIpTECH\KaijuGaiden
+Set-Location .\KaijuGaiden
 ..\.venv\Scripts\python.exe .\tools\ndsx_tool.py pack `
   --exe .\dist\kaijugaiden.3dsx `
   --smdh .\dist\kaijugaiden.smdh `
@@ -93,7 +95,7 @@ Preflight the target first if you want the tool to confirm the card layout befor
   --app-name kaijugaiden
 ```
 
-This copies the runnable embedded `.3dsx` payload, `.smdh`, and the wrapper profile into `E:\3ds\kaijugaiden`.
+This copies the runnable embedded `.3dsx` payload, `.smdh`, the wrapper profile, and the HOPE runtime contract when present into `E:\3ds\kaijugaiden`.
 
 `--target-layout` supports:
 
@@ -127,6 +129,7 @@ The release folder also includes:
 - `SHA256SUMS.txt`
 - `release_manifest.json`
 - `install_kaijugaiden_cia_to_3ds_sd.ps1`
+- `hope_runtime_contract.json` when a generated bridge contract was found during the release build
 
 ## Build The Installable CIA
 

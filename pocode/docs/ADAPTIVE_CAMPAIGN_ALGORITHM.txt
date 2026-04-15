@@ -1,0 +1,140 @@
+POCODE ADAPTIVE CAMPAIGN ALGORITHM
+
+PURPOSE
+Convert a requested software project into a fast-paced adaptive lesson campaign with a seeded world map, rising intricacy, cryptic matching and identification loops, optional restorative stops, and a final assembled build.
+
+INPUTS
+- project idea
+- target language
+- learner level
+- preferred session length
+- seed word
+
+CORE RULES
+1. Parse the project idea into software features.
+2. Break those features into concept dependencies.
+3. Group concepts into lesson clusters.
+4. Assign each cluster a lesson pressure value.
+5. Increase intricacy as the campaign progresses.
+6. Increase obscurity of matching and identification distractors after each mastery checkpoint.
+7. Generate a per-project world map from the seed word.
+8. Insert non-lesson nodes into longer campaigns.
+9. Let restorative avatar stops reduce upcoming pressure for a short span.
+
+PROJECT DECOMPOSITION
+1. Identify nouns, actions, storage needs, user inputs, outputs, and rules from the project idea.
+2. Convert those into feature blocks.
+3. Convert feature blocks into code concepts.
+4. Topologically sort concepts into a teachable order.
+5. Reserve the last lessons for integration, debugging, and assembly.
+
+LESSON DIFFICULTY CURVE
+For each lesson index L in total lesson count N:
+- pacing_multiplier = 1.0 + (L / N) * 0.6
+- intricacy_multiplier = 1.0 + (L / N) * 0.9
+- obscurity_multiplier = 1.0 + (L / N) * 1.1
+
+When player mastery is high:
+- shorten hint text
+- reduce explicit syntax labels
+- replace direct matches with structurally similar distractors
+- combine two concepts in one round
+
+When player mastery falls:
+- keep campaign order stable
+- widen timing windows
+- add one direct clue per round
+- shift one cryptic distractor back to a simpler distractor tier
+
+GAME LOOP TYPES
+- identify: what does this code do
+- match: pair syntax, behavior, or output with the correct meaning
+- repair: fix a bug or restore correct ordering
+- assemble: place fragments into a valid structure
+- predict: choose the correct output or state transition
+- milestone build: write or place a real project step
+
+CRYPTOGRAPHIC OBSCURING STYLE
+Obscuring should mean cognitively indirect, not unfair.
+
+Tier 1:
+- direct terminology
+- direct output labels
+- obvious wrong answers
+
+Tier 2:
+- similar outputs
+- same syntax family
+- same concept but wrong scope or wrong order
+
+Tier 3:
+- plausible distractors sharing shape and tone with correct answer
+- indirect behavioral descriptions
+- output choices differing by one branch or one iteration
+
+Tier 4:
+- mixed-concept distractors
+- partial correctness traps
+- answers described by consequence instead of name
+
+SEEDED MAP GENERATION
+1. Normalize seed word to uppercase letters and digits.
+2. Hash seed word + project idea + language.
+3. Use hash stream to generate branch choices, rest stops, reward caches, and map theme accents.
+4. Keep all lesson dependencies valid even when route shape changes.
+5. Make the map deterministic for the same inputs.
+
+MAP NODE TYPES
+- lesson
+- boss lesson
+- integration lesson
+- reward cache
+- avatar stop
+- hot bath
+- wardrobe kiosk
+- arcade break
+- CRT lounge
+
+NON-LESSON STOP EFFECTS
+Hot bath:
+- lowers lesson pressure for next 2 to 3 nodes
+- increases timing forgiveness
+- slightly raises streak recovery chance
+
+Wardrobe kiosk:
+- unlock or equip cosmetic items
+- no pressure effect
+
+Arcade break:
+- minor currency gain
+- tiny mastery bonus to pattern recognition
+
+CRT lounge:
+- reveals one future node modifier
+- lowers ambiguity in the next lesson set
+
+ADAPTIVE STATE VARIABLES
+- mastery score
+- pacing pressure
+- obscurity tier
+- recent error streak
+- confidence bonus
+- restoration buffer
+- avatar comfort
+
+CAMPAIGN LOOP
+1. Generate map.
+2. Place lessons and rest nodes.
+3. Play node.
+4. Update mastery and pressure.
+5. Apply restorative modifiers if present.
+6. Re-tune next lesson packet.
+7. Continue until final integration build.
+
+OUTPUTS
+- campaign metadata
+- lesson queue
+- node map
+- avatar rewards
+- pacing modifiers
+- milestone build sequence

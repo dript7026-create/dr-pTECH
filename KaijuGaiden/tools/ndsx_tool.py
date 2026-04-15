@@ -40,6 +40,17 @@ def resolve_workspace_root() -> Path:
     return Path(__file__).resolve().parent.parent
 
 
+def resolve_hope_contract_candidates(dist_dir: Path | None = None) -> list[Path]:
+    workspace_root = resolve_workspace_root()
+    candidates: list[Path] = []
+    if dist_dir is not None:
+        candidates.append(dist_dir / "hope_runtime_contract.json")
+    candidates.append(workspace_root / "runtime" / "hope_runtime_contract.json")
+    candidates.append(workspace_root.parent / "egosphere" / "pipeline" / "out" / "kaijugaiden_hope" / "runtime" / "hope_runtime_contract.json")
+    candidates.append(workspace_root.parent / "egosphere" / "pipeline" / "out" / "lantern_resonance_hope" / "runtime" / "hope_runtime_contract.json")
+    return candidates
+
+
 def resolve_tool_candidates(tool_name: str, devkitpro: Path | None = None) -> list[Path]:
     workspace_root = resolve_workspace_root()
     candidates: list[Path] = []
@@ -91,14 +102,26 @@ def ensure_runtime_artifacts(dist_dir: Path, build_3ds_dir: Path) -> dict[str, P
     return artifacts
 
 
-def pack_ndsx(exe: Path, smdh: Path, profile_path: Path, out_path: Path, icon: Path | None = None) -> dict:
+def pack_ndsx(exe: Path, smdh: Path, profile_path: Path, out_path: Path, icon: Path | None = None, hope_contract: Path | None = None) -> dict:
     ensure_parent(out_path)
     profile = load_json(profile_path)
     manifest = build_manifest(exe, smdh, profile, icon if icon and icon.exists() else None)
+    hope_contract_payload = None
+    if hope_contract is not None and hope_contract.exists():
+        hope_contract_payload = load_json(hope_contract)
+        manifest["hopeRuntimeContract"] = {
+            "path": "adaptive/hope_runtime_contract.json",
+            "source": str(hope_contract),
+            "target": hope_contract_payload.get("bridgeTargetName"),
+            "scene": hope_contract_payload.get("bridgeSceneId"),
+            "sha256": sha256_file(hope_contract),
+        }
 
     with zipfile.ZipFile(out_path, "w", compression=zipfile.ZIP_DEFLATED) as archive:
         archive.writestr("ndsx/manifest.json", json.dumps(manifest, indent=2))
         archive.writestr("adaptive/profile.json", json.dumps(profile, indent=2))
+        if hope_contract_payload is not None:
+            archive.writestr("adaptive/hope_runtime_contract.json", json.dumps(hope_contract_payload, indent=2))
         archive.writestr("docs/LAUNCH.txt", launch_text(manifest))
         archive.write(exe, "payload/kaijugaiden.3dsx")
         archive.write(smdh, "payload/kaijugaiden.smdh")
@@ -311,8 +334,9 @@ def cmd_pack(args: argparse.Namespace) -> int:
     smdh = Path(args.smdh).resolve()
     profile_path = Path(args.profile).resolve()
     icon = Path(args.icon).resolve() if args.icon else None
+    hope_contract = Path(args.hope_contract).resolve() if args.hope_contract else None
     out_path = Path(args.out).resolve()
-    print(json.dumps(pack_ndsx(exe, smdh, profile_path, out_path, icon), indent=2))
+    print(json.dumps(pack_ndsx(exe, smdh, profile_path, out_path, icon, hope_contract), indent=2))
     return 0
 
 
@@ -356,9 +380,12 @@ def cmd_deploy(args: argparse.Namespace) -> int:
         exe_bytes = archive.read("payload/kaijugaiden.3dsx")
         smdh_bytes = archive.read("payload/kaijugaiden.smdh")
         profile_bytes = archive.read("adaptive/profile.json")
+        hope_contract_bytes = archive.read("adaptive/hope_runtime_contract.json") if "adaptive/hope_runtime_contract.json" in archive.namelist() else None
     (app_dir / "kaijugaiden.3dsx").write_bytes(exe_bytes)
     (app_dir / "kaijugaiden.smdh").write_bytes(smdh_bytes)
     (app_dir / "ndsx_profile.json").write_bytes(profile_bytes)
+    if hope_contract_bytes is not None:
+        (app_dir / "hope_runtime_contract.json").write_bytes(hope_contract_bytes)
     launch_path = app_dir / "LAUNCH_FROM_NDSX.txt"
     launch_path.write_text(
         textwrap.dedent(
@@ -369,9 +396,11 @@ def cmd_deploy(args: argparse.Namespace) -> int:
             - kaijugaiden.3dsx
             - kaijugaiden.smdh
             - ndsx_profile.json
+            - hope_runtime_contract.json when present in the wrapper
 
             Launch from your 3DS Homebrew Launcher as the standard 3DSX payload.
             The adaptive stereo defaults are recorded in ndsx_profile.json.
+            The HOPE runtime bridge, when present, is loaded from hope_runtime_contract.json.
             """
         ),
         encoding="utf-8",
@@ -396,6 +425,7 @@ def release_readme_text() -> str:
         - kaijugaiden.3dsx: runnable 3DS homebrew executable
         - kaijugaiden.smdh: 3DS homebrew metadata/icon bundle
         - kaijugaiden.ndsx: self-contained distribution wrapper embedding the live 3DSX build
+        - hope_runtime_contract.json: optional HOPE runtime bridge staged for the 3DS build when available
         - kaijugaiden.cia: installable 3DS title, if the CIA packaging toolchain was available when the release was built
 
         How to run:
@@ -403,7 +433,8 @@ def release_readme_text() -> str:
         2. Launch the app from the Homebrew Launcher.
         3. Or install kaijugaiden.cia with FBI for a HOME Menu title.
         4. Press L in-game for the adaptive stereo options overlay.
-        5. Or deploy directly from the wrapper with the included PowerShell helper.
+        5. The HOPE runtime bridge is read from hope_runtime_contract.json when staged beside the app.
+        6. Or deploy directly from the wrapper with the included PowerShell helper.
 
         Helper examples:
         - Verify a card first: .\\verify_3ds_sd_layout.ps1 -TargetPath E:\\
@@ -621,7 +652,7 @@ def cmd_release(args: argparse.Namespace) -> int:
     release_dir = Path(args.out_dir).resolve()
     release_dir.mkdir(parents=True, exist_ok=True)
     copies = ["kaijugaiden.3dsx", "kaijugaiden.smdh", "kaijugaiden.ndsx"]
-    optional_copies = ["kaijugaiden.cia"]
+    optional_copies = ["kaijugaiden.cia", "hope_runtime_contract.json"]
     for name in copies:
         shutil.copy2(dist_dir / name, release_dir / name)
     for name in optional_copies:
@@ -715,6 +746,7 @@ def cmd_doctor(args: argparse.Namespace) -> int:
         "distSmdh": dist_dir / "kaijugaiden.smdh",
         "distNdsx": dist_dir / "kaijugaiden.ndsx",
         "distCia": dist_dir / "kaijugaiden.cia",
+        "hopeContract": first_existing_path(resolve_hope_contract_candidates(dist_dir)),
         "elf": build_3ds_dir / "kaijugaiden.elf",
         "rsf": build_3ds_dir / "kaijugaiden.rsf",
         "profile": build_3ds_dir / "ndsx_adaptive_profile.json",
@@ -732,9 +764,9 @@ def cmd_doctor(args: argparse.Namespace) -> int:
         },
         "files": {
             name: {
-                "path": str(path),
-                "present": path.exists(),
-                **({"size": path.stat().st_size} if path.exists() and path.is_file() else {}),
+                "path": str(path) if path is not None else None,
+                "present": path is not None and path.exists(),
+                **({"size": path.stat().st_size} if path is not None and path.exists() and path.is_file() else {}),
             }
             for name, path in files.items()
         },
@@ -755,6 +787,8 @@ def cmd_build_release(args: argparse.Namespace) -> int:
     release_dir = Path(args.out_dir).resolve() if args.out_dir else dist_dir / "kaijugaiden_3ds_release"
     profile = Path(args.profile).resolve() if args.profile else build_3ds_dir / "ndsx_adaptive_profile.json"
     icon = Path(args.icon).resolve() if args.icon else build_3ds_dir / "icon.png"
+    detected_hope_contract = first_existing_path(resolve_hope_contract_candidates(dist_dir))
+    hope_contract = Path(args.hope_contract).resolve() if args.hope_contract else detected_hope_contract
     ndsx_out = dist_dir / "kaijugaiden.ndsx"
     artifacts = ensure_runtime_artifacts(dist_dir, build_3ds_dir)
     results: dict[str, object] = {
@@ -766,7 +800,20 @@ def cmd_build_release(args: argparse.Namespace) -> int:
         print(json.dumps({"missingInputs": missing}, indent=2))
         return 1
 
-    results["ndsx"] = pack_ndsx(artifacts["3dsx"], artifacts["smdh"], profile, ndsx_out, icon if icon.exists() else None)
+    if hope_contract is not None and hope_contract.exists():
+        staged_hope_contract = dist_dir / "hope_runtime_contract.json"
+        if hope_contract != staged_hope_contract.resolve():
+            shutil.copy2(hope_contract, staged_hope_contract)
+        results["hopeContract"] = str(staged_hope_contract)
+
+    results["ndsx"] = pack_ndsx(
+        artifacts["3dsx"],
+        artifacts["smdh"],
+        profile,
+        ndsx_out,
+        icon if icon.exists() else None,
+        staged_hope_contract if hope_contract is not None and hope_contract.exists() else None,
+    )
 
     if not args.skip_cia:
         cia_args = argparse.Namespace(
@@ -808,6 +855,7 @@ def build_parser() -> argparse.ArgumentParser:
     pack.add_argument("--profile", required=True)
     pack.add_argument("--out", required=True)
     pack.add_argument("--icon")
+    pack.add_argument("--hope-contract")
     pack.set_defaults(func=cmd_pack)
 
     inspect_cmd = subparsers.add_parser("inspect", help="Read the manifest from a .ndsx archive")
@@ -852,6 +900,7 @@ def build_parser() -> argparse.ArgumentParser:
     build_release.add_argument("--out-dir")
     build_release.add_argument("--profile")
     build_release.add_argument("--icon")
+    build_release.add_argument("--hope-contract")
     build_release.add_argument("--makerom")
     build_release.add_argument("--bannertool")
     build_release.add_argument("--skip-cia", action="store_true")

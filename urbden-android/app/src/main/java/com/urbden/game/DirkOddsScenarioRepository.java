@@ -10,6 +10,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.Collections;
 import java.util.List;
 
@@ -25,6 +26,7 @@ public final class DirkOddsScenarioRepository {
             for (int i = 0; i < items.length(); i++) {
                 scenarios.add(DirkOddsScenario.fromJson(items.getJSONObject(i)));
             }
+            scenarios.sort(Comparator.comparingInt(DirkOddsScenarioRepository::scenarioPriority));
             return scenarios;
         } catch (Exception exception) {
             return Collections.emptyList();
@@ -51,5 +53,30 @@ public final class DirkOddsScenarioRepository {
             }
         }
         return builder.toString();
+    }
+
+    private static int scenarioPriority(DirkOddsScenario scenario) {
+        if (scenario == null) {
+            return Integer.MAX_VALUE;
+        }
+        if ("multisport".equals(scenario.sport)) {
+            return 0;
+        }
+        if ("football".equals(scenario.sport)) {
+            return 1;
+        }
+        if ("basketball".equals(scenario.sport)) {
+            return 2;
+        }
+        if ("baseball".equals(scenario.sport)) {
+            return 3;
+        }
+        if ("hockey".equals(scenario.sport)) {
+            return 4;
+        }
+        if (scenario.isQuickthings()) {
+            return 9;
+        }
+        return 5;
     }
 }

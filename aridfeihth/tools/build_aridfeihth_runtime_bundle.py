@@ -15,10 +15,12 @@ if str(ILLUSION_ROOT) not in sys.path:
 def main(argv: list[str] | None = None) -> int:
     iig_module = importlib.import_module("illusioncanvasinteractive.iig")
     runtime_manifest_module = importlib.import_module("illusioncanvasinteractive.runtime_manifest")
+    prototype_content_module = importlib.import_module("illusioncanvasinteractive.prototype_content")
     load_iig = iig_module.load_iig
     save_iig = iig_module.save_iig
     build_illusioncanvas_runtime_manifest = runtime_manifest_module.build_illusioncanvas_runtime_manifest
     enrich_iig_document = runtime_manifest_module.enrich_iig_document
+    apply_prototype_expansion = prototype_content_module.apply_prototype_expansion
 
     parser = argparse.ArgumentParser(description="Build dedicated aridfeihth IllusionCanvas runtime outputs")
     parser.add_argument("--source", default=str(ROOT / "aridfeihth" / "recraft" / "aridfeihth_illusioncanvas_manifest.json"))
@@ -40,7 +42,7 @@ def main(argv: list[str] | None = None) -> int:
     out_manifest_path.parent.mkdir(parents=True, exist_ok=True)
     out_manifest_path.write_text(json.dumps(runtime_manifest, indent=2), encoding="utf-8")
 
-    template_document = load_iig(template_path)
+    template_document = apply_prototype_expansion(load_iig(template_path))
     enriched_document = enrich_iig_document(
         template_document,
         runtime_manifest,

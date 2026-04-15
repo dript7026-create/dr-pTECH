@@ -7,6 +7,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from experiential_genesis.adapters import ArchesAndAngelsAdapter, IllusionCanvasAdapter
 from experiential_genesis.authorization import AuthorizationScope, MutationDomain, safe_profile
 from experiential_genesis.hypermanager import build_demo_hypermanager
+from experiential_genesis.kaijugaiden import build_kaijugaiden_runtime_contract, export_kaijugaiden_runtime_contract
 
 
 def test_hypermanager_tick_returns_consensus_frame() -> None:
@@ -64,3 +65,47 @@ def test_demo_preset_changes_initial_state() -> None:
     calm_arches = calm.adapters["archesandangels"]
     storm_arches = storm.adapters["archesandangels"]
     assert calm_arches.campaign_stability > storm_arches.campaign_stability
+
+
+def test_hypermanager_can_register_kaijugaiden_adapter() -> None:
+    manager = build_demo_hypermanager(include_kaijugaiden=True, kaijugaiden_scene_id="storm_reef_duel")
+    frame = manager.tick()
+    assert frame.tick_index == 1
+    assert "kaijugaiden" in manager.adapters
+    adapter = manager.adapters["kaijugaiden"]
+    assert adapter.scene_id == "storm_reef_duel"
+
+
+def test_kaijugaiden_contract_export_has_runtime_bridge_keys(tmp_path: Path) -> None:
+    manager = build_demo_hypermanager(include_kaijugaiden=True, preset="storm")
+    manager.tick()
+    adapter = manager.adapters["kaijugaiden"]
+    payload = build_kaijugaiden_runtime_contract(adapter)
+    assert payload["bridgeSceneId"] == "harbor_boss_duel"
+    assert payload["bridgeHitboxActiveRatioHint"] > 0.0
+    assert payload["bridgeMatterLiquidFlow"] > 0.0
+    assert payload["bridgeMatterToxicants"] > 0.0
+    assert payload["bridgeMatterInsolventImpurities"] > 0.0
+    assert payload["bridgeAtmosphericCorrosives"] > 0.0
+    assert payload["bridgeAtmosphericIrritants"] > 0.0
+    assert payload["bridgeRespiratoryBurden"] > 0.0
+    assert payload["bridgeHemoneuralStress"] > 0.0
+    assert payload["bridgePlasmicInstability"] > 0.0
+    assert payload["bridgeMatterTensionStasis"] > 0.0
+    assert payload["bridgeTimelineProjectProgress"] > 0.0
+    assert payload["bridgeTimelinePredictiveVision"] > 0.0
+    assert payload["bridgeTimelineDerivativeFinalState"] > 0.0
+    assert payload["bridgeTimelineRefinementDepth"] > 0.0
+    assert "timeline_projection_layer" in payload["runtime"]["system_graph"]
+    exported = export_kaijugaiden_runtime_contract(adapter, tmp_path / "hope_runtime_contract.json")
+    loaded = json.loads(exported.read_text(encoding="utf-8"))
+    assert loaded["bridgeRenderReactivity"] > 0.0
+    assert loaded["bridgeHopeAdaptiveShare"] > 0.0
+    assert 0.0 <= loaded["bridgeMatterToxicants"] <= 1.0
+    assert 0.0 <= loaded["bridgeMatterInsolventImpurities"] <= 1.0
+    assert 0.0 <= loaded["bridgeAtmosphericCorrosives"] <= 1.0
+    assert 0.0 <= loaded["bridgeAtmosphericIrritants"] <= 1.0
+    assert 0.0 <= loaded["bridgeTimelineProjectProgress"] <= 1.0
+    assert 0.0 <= loaded["bridgeTimelinePredictiveVision"] <= 1.0
+    assert 0.0 <= loaded["bridgeTimelineDerivativeFinalState"] <= 1.0
+    assert 0.0 <= loaded["bridgeTimelineRefinementDepth"] <= 1.0

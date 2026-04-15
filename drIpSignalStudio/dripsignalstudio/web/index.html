@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>drIpSignalStudio</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <div class="noise"></div>
+  <main class="shell">
+    <section class="hero panel">
+      <div class="hero-copy">
+        <p class="eyebrow">drIpSignalStudio</p>
+        <h1>Generate five manual submission-ready ad drafts per day.</h1>
+        <p class="lede">Tune the signals, rank the windows, and produce full creative packages with scripts, captions, visual direction, and checklists. You decide what gets posted and when.</p>
+      </div>
+      <div class="hero-score">
+        <span>Market posture</span>
+        <strong id="market-posture">loading</strong>
+        <p>Overall pressure score</p>
+        <div class="score-chip" id="overall-score">0.000</div>
+      </div>
+    </section>
+
+    <section class="layout">
+      <form id="planner-form" class="panel controls">
+        <div class="section-title">Brand profile</div>
+        <label>Brand name<input id="brand_name" name="brand_name" type="text"></label>
+        <label>Product name<input id="product_name" name="product_name" type="text"></label>
+        <label>Audience<textarea id="audience" name="audience" rows="2"></textarea></label>
+        <label>Offer<textarea id="offer" name="offer" rows="2"></textarea></label>
+        <label>Tone<input id="tone" name="tone" type="text"></label>
+        <label>Call to action<input id="cta" name="cta" type="text"></label>
+        <label>Landing page<input id="landing_page" name="landing_page" type="text"></label>
+
+        <div class="section-title section-gap">Signal inputs</div>
+        <div id="signal-grid" class="signal-grid"></div>
+
+        <div class="button-row">
+          <button type="submit">Generate plan</button>
+          <button type="button" id="reset-defaults" class="button-ghost">Reset defaults</button>
+        </div>
+      </form>
+
+      <section class="output-column">
+        <article class="panel">
+          <div class="section-title">Recommended windows</div>
+          <div id="window-list" class="stack"></div>
+        </article>
+
+        <article class="panel">
+          <div class="section-title">Draft packages</div>
+          <div id="draft-list" class="draft-list"></div>
+        </article>
+      </section>
+    </section>
+  </main>
+
+  <script src="/app.js"></script>
+</body>
+</html>

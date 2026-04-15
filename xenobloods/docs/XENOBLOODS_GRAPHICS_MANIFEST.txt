@@ -1,0 +1,135 @@
+XenoBloods Graphics Asset Manifest
+
+Manifest Standard
+This manifest now serves two connected tracks:
+1. a 2D-first prototype path built around sprite bundles, UI atlases, and timing-map assets
+2. a preserved 3D/CGI planning path for retained worldpack and presentation targets
+The live prototype should assume 2D-facing delivery first, while the existing 3D asset branch remains intentionally preserved.
+
+Lifecycle Coverage Rule
+Every major living asset family must define state variants for:
+1. gourd_infant
+2. landborne
+3. etheric
+Optional plane variants:
+- up_aspected
+- low_aspected
+
+Player Character Set
+
+XB_CHAR_PLAYER_BASE
+- hero character
+- 120k hero LOD0
+- 4 x 4k texture set
+- lifecycle states: gourd_infant, landborne, etheric, up_aspected, low_aspected
+- pixel priorities: iris striation, blood vessel normals, ritual seam stitching, ether crackle mask
+
+XB_CHAR_PLAYER_GOURD_INFANT
+- 40k mesh
+- 2 x 2k texture set
+- animation states: curl, pulse, strain_left, strain_right, shell_kick, rupture_burst, emerge_collapse
+
+XB_CHAR_PLAYER_ETHERIC_CURRENT
+- 28k mesh plus GPU ribbons
+- 1 x 2k flow mask, 1 x 2k emissive atlas
+
+Core NPC Families
+- XB_NPC_GOURD_KEEPER
+- XB_NPC_SOUL_SHRINE_ATTENDANT
+- XB_NPC_LOW_MOURNER
+
+Enemy Schism Families
+
+Rendline
+- XB_EN_RND_SCOUT
+- XB_EN_RND_CAPTAIN
+
+Lattice
+- XB_EN_LAT_WARD
+- XB_EN_LAT_HERALD
+
+Mirecast
+- XB_EN_MIR_SIBYL
+- XB_EN_MIR_BASIN_PRIEST
+
+Idolwrought
+- XB_EN_IDL_SENTINEL
+- XB_EN_IDL_BELL_TORSO
+
+Mirrorblood
+- XB_EN_MIRROR_RIVAL_A
+- XB_EN_MIRROR_RIVAL_B
+
+Bosses
+- XB_BOSS_NOMA_SHELL_WARDEN
+- XB_BOSS_OPAL_TETRARCH
+- XB_BOSS_MOURNING_ENGINE_IX
+
+Plane Environment Sets
+
+Land
+- XB_ENV_LAND_VEINMARKET_STREET_KIT, 96 pieces
+- XB_ENV_LAND_GOURD_FORGE, 34 pieces
+
+Up
+- XB_ENV_UP_GRAMATOS_HALL, 72 pieces
+- XB_ENV_UP_TETRARCH_BRIDGE, 21 pieces
+
+Low
+- XB_ENV_LOW_SORROW_DELTA, 88 pieces
+- XB_ENV_LOW_MOURN_CHANNEL, 27 pieces
+
+Soul Shrine Set
+- XB_ENV_SHRINE_CORE, 9 major variants plus minor variants
+- XB_PROP_AMNIOTIC_GOURD_SERIES, 18 interactive props with whole, filled, cracked, mended, infant-active, and ether-empty states
+
+Weapons and Equipment
+- Blood Blades: XB_WPN_BLD_01 through XB_WPN_BLD_08
+- Verdict Polearms: XB_WPN_VDT_01 through XB_WPN_VDT_06
+- Gourd Hammers: XB_WPN_GRD_01 through XB_WPN_GRD_05
+- Ether Bows: XB_WPN_ETH_01 through XB_WPN_ETH_05
+- Sibeline Wands: XB_WPN_SIB_01 through XB_WPN_SIB_07
+
+FX Library
+- blood spill ground
+- blood reclaim swirl
+- blood burn aura
+- blood mark rupture
+- ether stream
+- shrine exit ribbon
+- soul navigation sparks
+- verdict rain
+- law sigil fractures
+- harmonic lensing
+- blood mist
+- forge sparks
+- grief fog
+- confusion halos
+
+UI Asset Set
+- health bar atlas
+- stamina bar atlas
+- blood reserve gauge
+- acuity meter
+- gourd inventory strip
+- shrine routing map
+- blood banking panel
+- rebirth rupture prompts
+- schism ledger card frames
+
+Asset Count Summary
+- hero and lifecycle variants: 3 primary forms plus 2 plane overlays
+- core NPCs: 12 named variants
+- common enemies: 20
+- elite enemies: 12
+- adaptive rivals: 4
+- bosses: 8
+- weapon assets: 31
+- shrine variants: 9 major and 12 minor
+- gourd props: 18
+- modular environment pieces: about 338
+- major VFX families: 14
+- HUD and menu atlases: 11
+
+Approval Rule
+No character, enemy, or shrine asset is approved unless it reads correctly in beauty renders, gameplay-distance silhouette checks, heavy blood saturation, low-light fog, and ether-overlay passes.

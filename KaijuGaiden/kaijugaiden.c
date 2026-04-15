@@ -405,6 +405,10 @@ static inline void plat_audio_tts(u8 speaker, const char *line) {
 #define SCREEN_W SCR_W
 #define SCREEN_H SCR_H
 
+#define FB_LAYER_BG      0
+#define FB_LAYER_ENTITY  1
+#define FB_LAYER_FX      2
+
 /* GB palette (DMG greenscale approximated as grey) */
 static const u32 gb_palette[4] = {
     0xFFE8F8E0u,   /* shade 0 — lightest */
@@ -413,6 +417,30 @@ static const u32 gb_palette[4] = {
     0xFF081820u    /* shade 3 — darkest */
 };
 
+static const u32 gb_entity_palette[4] = {
+    0xFFFFF2D8u,
+    0xFFF48D43u,
+    0xFFC53C31u,
+    0xFF261214u
+};
+
+static const u32 gb_fx_palette[4] = {
+    0xFFFFF7E8u,
+    0xFFF1DB4Fu,
+    0xFF5DC5DAu,
+    0xFF182235u
+};
+
+#ifdef HAS_SDL2
+static const u32 *host_palette_for_layer(u8 layer_tag) {
+    switch (layer_tag) {
+        case FB_LAYER_ENTITY: return gb_entity_palette;
+        case FB_LAYER_FX:     return gb_fx_palette;
+        default:              return gb_palette;
+    }
+}
+#endif
+
 #ifdef TARGET_3DS
 static const u32 ctr_palette[4] = {
     0xE0F8E8u,
@@ -420,6 +448,28 @@ static const u32 ctr_palette[4] = {
     0x566834u,
     0x201808u
 };
+
+static const u32 ctr_entity_palette[4] = {
+    0xD8F2FFu,
+    0x438DF4u,
+    0x313CC5u,
+    0x141226u
+};
+
+static const u32 ctr_fx_palette[4] = {
+    0xE8F7FFu,
+    0x4FDBF1u,
+    0xDAC55Du,
+    0x352218u
+};
+
+static const u32 *ctr_palette_for_layer(u8 layer_tag) {
+    switch (layer_tag) {
+        case FB_LAYER_ENTITY: return ctr_entity_palette;
+        case FB_LAYER_FX:     return ctr_fx_palette;
+        default:              return ctr_palette;
+    }
+}
 
 #define CTR_TOP_W 400
 #define CTR_TOP_H 240
@@ -517,6 +567,7 @@ static void ctr_draw_status_panel(void);
 
 /* Framebuffer: 1 byte per pixel, 0–3 shade index */
 static u8 fb[SCREEN_H][SCREEN_W];
+static u8 fb_layer[SCREEN_H][SCREEN_W];
 
 /* Tile map: BKG_ROWS×BKG_COLS tile indices */
 static u8 bkg_map[BKG_ROWS][BKG_COLS];
@@ -548,10 +599,123 @@ static u8 host_autoplay_hold_mask = 0;
 static u8 host_autoplay_hold_frames = 0;
 static u8 host_autoplay_last_phase = 0xFF;
 
+typedef struct HopeRuntimeBridge {
+    u8 loaded;
+    char source[128];
+    char target_name[32];
+    char scene_id[48];
+    char scene_type[32];
+    float input_latency_ms;
+    float present_budget_ms;
+    float render_scale;
+    float handheld_bias;
+    float sensor_channels;
+    float volumetric_support;
+    float causality_feedback;
+    float matter_solid_density;
+    float matter_liquid_flow;
+    float matter_gas_diffusion;
+    float matter_fluid_turbulence;
+    float matter_reactive_volume;
+    float input_pressure;
+    float entity_feedback;
+    float render_reactivity;
+    float volumetric_bias;
+    float affordance_span;
+    float hope_theta;
+    float hope_clog_risk;
+    float hope_predictive_share;
+    float hope_adaptive_share;
+    float interaction_density_hint;
+    float hitbox_active_ratio_hint;
+    float contact_accuracy_hint;
+    float vfx_load_hint;
+    float anim_blend_ms_base;
+} HopeRuntimeBridge;
+
+static HopeRuntimeBridge hope_bridge = {
+    0,
+    "defaults",
+    "host",
+    "entry",
+    "exploration",
+    8.0f,
+    16.67f,
+    1.0f,
+    0.25f,
+    1.0f,
+    0.5f,
+    0.5f,
+    0.42f,
+    0.34f,
+    0.28f,
+    0.22f,
+    48.0f,
+    0.5f,
+    0.5f,
+    0.5f,
+    0.5f,
+    0.5f,
+    0.0f,
+    0.0f,
+    0.0f,
+    0.0f,
+    0.5f,
+    0.5f,
+    0.8f,
+    0.2f,
+    80.0f
+};
+static char hope_bridge_status[48] = "HOPE DEFAULTS";
+
 #ifdef TARGET_HOST
 static void host_autoplay_init(void);
 static u8 host_autoplay_buttons(void);
 #endif
+
+static float hope_clampf(float value, float min_value, float max_value) {
+    if (value < min_value) return min_value;
+    if (value > max_value) return max_value;
+    return value;
+}
+
+static float hope_parse_json_float(const char *text, const char *key, float fallback) {
+    const char *marker = strstr(text, key);
+    const char *colon;
+    char *end_ptr;
+    float value;
+    if (!marker) return fallback;
+    colon = strchr(marker, ':');
+    if (!colon) return fallback;
+    colon++;
+    value = strtof(colon, &end_ptr);
+    if (end_ptr == colon) return fallback;
+    return value;
+}
+
+static int hope_parse_json_string(const char *text, const char *key, char *dest, size_t dest_size) {
+    const char *marker = strstr(text, key);
+    const char *colon;
+    const char *start;
+    const char *end;
+    size_t length;
+    if (!marker || dest_size == 0) return 0;
+    colon = strchr(marker, ':');
+    if (!colon) return 0;
+    start = strchr(colon, '"');
+    if (!start) return 0;
+    start++;
+    end = strchr(start, '"');
+    if (!end) return 0;
+    length = (size_t)(end - start);
+    if (length >= dest_size) length = dest_size - 1;
+    memcpy(dest, start, length);
+    dest[length] = '\0';
+    return 1;
+}
+
+static void hope_bridge_apply_runtime_bias(void);
+static void hope_bridge_load(void);
 
 /* Input state */
 #ifdef TARGET_3DS
@@ -649,6 +813,108 @@ static void plat_poll_input(void) {
 #endif
 }
 
+static void hope_bridge_apply_runtime_bias(void) {
+#ifdef TARGET_3DS
+    ctr_profile_audio_bias = hope_clampf(ctr_profile_audio_bias + hope_bridge.render_reactivity * 0.10f + hope_bridge.volumetric_bias * 0.04f + hope_bridge.vfx_load_hint * 0.06f, 0.15f, 1.8f);
+    ctr_profile_sinus_bias = hope_clampf(ctr_profile_sinus_bias + hope_bridge.hope_clog_risk * 0.18f + hope_bridge.matter_fluid_turbulence * 0.10f + hope_bridge.interaction_density_hint * 0.08f, 0.25f, 2.0f);
+    ctr_profile_focus_strain_weight = hope_clampf(ctr_profile_focus_strain_weight + hope_bridge.handheld_bias * 0.14f + hope_bridge.input_latency_ms / 120.0f + hope_bridge.contact_accuracy_hint * 0.10f, 0.55f, 2.2f);
+    if (hope_bridge.handheld_bias >= 0.72f) ctr_stereo_comfort = 1;
+    if (hope_bridge.handheld_bias >= 0.84f || hope_bridge.present_budget_ms <= 16.67f) ctr_smoothing_mode = 2;
+    if (hope_bridge.hitbox_active_ratio_hint >= 0.70f) ctr_smoothing_mode = (ctr_smoothing_mode < 2) ? 1 : ctr_smoothing_mode;
+    if (hope_bridge.anim_blend_ms_base <= 60.0f) ctr_smoothing_mode = 2;
+    ctr_sync_preset_index();
+#endif
+#ifdef TARGET_HOST
+    printf("[HOPE-BRIDGE] tgt=%s scene=%s type=%s hhb=%.2f vol=%.2f clog=%.2f react=%.2f intd=%.2f hbx=%.2f cacc=%.2f vfx=%.2f abl=%.1f\n",
+           hope_bridge.target_name,
+           hope_bridge.scene_id,
+           hope_bridge.scene_type,
+           hope_bridge.handheld_bias,
+           hope_bridge.volumetric_support,
+           hope_bridge.hope_clog_risk,
+           hope_bridge.render_reactivity,
+           hope_bridge.interaction_density_hint,
+           hope_bridge.hitbox_active_ratio_hint,
+           hope_bridge.contact_accuracy_hint,
+           hope_bridge.vfx_load_hint,
+           hope_bridge.anim_blend_ms_base);
+    fflush(stdout);
+#endif
+}
+
+static void hope_bridge_load(void) {
+    static const char *paths[] = {
+#ifdef TARGET_3DS
+        "hope_runtime_contract.json",
+        CTR_APP_DIR "/hope_runtime_contract.json",
+        "sdmc:/3ds/kaijugaiden/hope_runtime_contract.json",
+#else
+        "hope_runtime_contract.json",
+        "runtime/hope_runtime_contract.json",
+        "../egosphere/pipeline/out/kaijugaiden_hope/runtime/hope_runtime_contract.json",
+        "../egosphere/pipeline/out/lantern_resonance_hope/runtime/hope_runtime_contract.json",
+#endif
+    };
+    char contract_text[4096];
+    size_t bytes_read;
+    FILE *file = NULL;
+    size_t i;
+
+    for (i = 0; i < sizeof(paths) / sizeof(paths[0]); ++i) {
+        file = fopen(paths[i], "rb");
+        if (file) {
+            strncpy(hope_bridge.source, paths[i], sizeof(hope_bridge.source) - 1);
+            hope_bridge.source[sizeof(hope_bridge.source) - 1] = '\0';
+            break;
+        }
+    }
+
+    if (!file) {
+        strncpy(hope_bridge_status, "HOPE DEFAULTS", sizeof(hope_bridge_status) - 1);
+        hope_bridge_status[sizeof(hope_bridge_status) - 1] = '\0';
+        hope_bridge.loaded = 0;
+        return;
+    }
+
+    bytes_read = fread(contract_text, 1, sizeof(contract_text) - 1, file);
+    fclose(file);
+    contract_text[bytes_read] = '\0';
+
+    hope_bridge.loaded = 1;
+    hope_parse_json_string(contract_text, "\"bridgeTargetName\"", hope_bridge.target_name, sizeof(hope_bridge.target_name));
+    hope_parse_json_string(contract_text, "\"bridgeSceneId\"", hope_bridge.scene_id, sizeof(hope_bridge.scene_id));
+    hope_parse_json_string(contract_text, "\"bridgeSceneType\"", hope_bridge.scene_type, sizeof(hope_bridge.scene_type));
+    hope_bridge.input_latency_ms = hope_parse_json_float(contract_text, "\"bridgeInputLatencyMs\"", hope_bridge.input_latency_ms);
+    hope_bridge.present_budget_ms = hope_parse_json_float(contract_text, "\"bridgePresentBudgetMs\"", hope_bridge.present_budget_ms);
+    hope_bridge.render_scale = hope_parse_json_float(contract_text, "\"bridgeRenderScale\"", hope_bridge.render_scale);
+    hope_bridge.handheld_bias = hope_parse_json_float(contract_text, "\"bridgeHandheldBias\"", hope_bridge.handheld_bias);
+    hope_bridge.sensor_channels = hope_parse_json_float(contract_text, "\"bridgeSensorChannels\"", hope_bridge.sensor_channels);
+    hope_bridge.volumetric_support = hope_parse_json_float(contract_text, "\"bridgeVolumetricSupport\"", hope_bridge.volumetric_support);
+    hope_bridge.causality_feedback = hope_parse_json_float(contract_text, "\"bridgeCausalityFeedback\"", hope_bridge.causality_feedback);
+    hope_bridge.matter_solid_density = hope_parse_json_float(contract_text, "\"bridgeMatterSolidDensity\"", hope_bridge.matter_solid_density);
+    hope_bridge.matter_liquid_flow = hope_parse_json_float(contract_text, "\"bridgeMatterLiquidFlow\"", hope_bridge.matter_liquid_flow);
+    hope_bridge.matter_gas_diffusion = hope_parse_json_float(contract_text, "\"bridgeMatterGasDiffusion\"", hope_bridge.matter_gas_diffusion);
+    hope_bridge.matter_fluid_turbulence = hope_parse_json_float(contract_text, "\"bridgeMatterFluidTurbulence\"", hope_bridge.matter_fluid_turbulence);
+    hope_bridge.matter_reactive_volume = hope_parse_json_float(contract_text, "\"bridgeMatterReactiveVolume\"", hope_bridge.matter_reactive_volume);
+    hope_bridge.input_pressure = hope_parse_json_float(contract_text, "\"bridgeInputPressure\"", hope_bridge.input_pressure);
+    hope_bridge.entity_feedback = hope_parse_json_float(contract_text, "\"bridgeEntityFeedback\"", hope_bridge.entity_feedback);
+    hope_bridge.render_reactivity = hope_parse_json_float(contract_text, "\"bridgeRenderReactivity\"", hope_bridge.render_reactivity);
+    hope_bridge.volumetric_bias = hope_parse_json_float(contract_text, "\"bridgeVolumetricBias\"", hope_bridge.volumetric_bias);
+    hope_bridge.affordance_span = hope_parse_json_float(contract_text, "\"bridgeAffordanceSpan\"", hope_bridge.affordance_span);
+    hope_bridge.hope_theta = hope_parse_json_float(contract_text, "\"bridgeHopeTheta\"", hope_bridge.hope_theta);
+    hope_bridge.hope_clog_risk = hope_parse_json_float(contract_text, "\"bridgeHopeClogRisk\"", hope_bridge.hope_clog_risk);
+    hope_bridge.hope_predictive_share = hope_parse_json_float(contract_text, "\"bridgeHopePredictiveShare\"", hope_bridge.hope_predictive_share);
+    hope_bridge.hope_adaptive_share = hope_parse_json_float(contract_text, "\"bridgeHopeAdaptiveShare\"", hope_bridge.hope_adaptive_share);
+    hope_bridge.interaction_density_hint = hope_parse_json_float(contract_text, "\"bridgeInteractionDensityHint\"", hope_bridge.interaction_density_hint);
+    hope_bridge.hitbox_active_ratio_hint = hope_parse_json_float(contract_text, "\"bridgeHitboxActiveRatioHint\"", hope_bridge.hitbox_active_ratio_hint);
+    hope_bridge.contact_accuracy_hint = hope_parse_json_float(contract_text, "\"bridgeContactAccuracyHint\"", hope_bridge.contact_accuracy_hint);
+    hope_bridge.vfx_load_hint = hope_parse_json_float(contract_text, "\"bridgeVfxLoadHint\"", hope_bridge.vfx_load_hint);
+    hope_bridge.anim_blend_ms_base = hope_parse_json_float(contract_text, "\"bridgeAnimBlendMsBase\"", hope_bridge.anim_blend_ms_base);
+
+    snprintf(hope_bridge_status, sizeof(hope_bridge_status), "%s / %s", hope_bridge.target_name, hope_bridge.scene_id);
+    hope_bridge_apply_runtime_bias();
+}
+
 static void plat_vsync(void) {
 #ifdef TARGET_3DS
     gspWaitForVBlank();
@@ -688,7 +954,7 @@ static void plat_delay_frames(u8 n) {
 }
 
 /* Decode 2bpp tile row into framebuffer */
-static void host_render_tile(u8 tx, u8 ty, const u8 *tile_data, u8 is_sprite, s16 ox, s16 oy, u8 flags) {
+static void host_render_tile(u8 tx, u8 ty, const u8 *tile_data, u8 is_sprite, s16 ox, s16 oy, u8 flags, u8 layer_tag) {
     s16 px_base = is_sprite ? ox : (s16)(tx * TILE_W);
     s16 py_base = is_sprite ? oy : (s16)(ty * TILE_H);
     for (int row = 0; row < 8; ++row) {
@@ -704,12 +970,13 @@ static void host_render_tile(u8 tx, u8 ty, const u8 *tile_data, u8 is_sprite, s1
             if (px >= 0 && px < SCREEN_W && py >= 0 && py < SCREEN_H) {
                 if (is_sprite && shade == 0) continue; /* transparent */
                 fb[py][px] = shade;
+                fb_layer[py][px] = layer_tag;
             }
         }
     }
 }
 
-static void host_render_sprite_shadow(const u8 *tile_data, s16 ox, s16 oy, u8 flags, s8 shadow_x, s8 shadow_y, u8 shade_floor) {
+static void host_render_sprite_shadow(const u8 *tile_data, s16 ox, s16 oy, u8 flags, s8 shadow_x, s8 shadow_y, u8 shade_floor, u8 layer_tag) {
     for (int row = 0; row < 8; ++row) {
         u8 sample_row = (flags & 0x40) ? (u8)(7 - row) : (u8)row;
         u8 lo = tile_data[sample_row * 2 + 0];
@@ -724,12 +991,15 @@ static void host_render_sprite_shadow(const u8 *tile_data, s16 ox, s16 oy, u8 fl
             px = (s16)(ox + col + shadow_x);
             py = (s16)(oy + row + shadow_y);
             if (px < 0 || px >= SCREEN_W || py < 0 || py >= SCREEN_H) continue;
-            if (fb[py][px] < shade_floor) fb[py][px] = shade_floor;
+            if (fb[py][px] < shade_floor) {
+                fb[py][px] = shade_floor;
+                fb_layer[py][px] = layer_tag;
+            }
         }
     }
 }
 
-static void host_render_sprite_outline(const u8 *tile_data, s16 ox, s16 oy, u8 flags) {
+static void host_render_sprite_outline(const u8 *tile_data, s16 ox, s16 oy, u8 flags, u8 layer_tag) {
     for (int row = 0; row < 8; ++row) {
         u8 sample_row = (flags & 0x40) ? (u8)(7 - row) : (u8)row;
         u8 lo = tile_data[sample_row * 2 + 0];
@@ -745,26 +1015,37 @@ static void host_render_sprite_outline(const u8 *tile_data, s16 ox, s16 oy, u8 f
                     s16 py = (s16)(oy + row + y_off);
                     if (x_off == 0 && y_off == 0) continue;
                     if (px < 0 || px >= SCREEN_W || py < 0 || py >= SCREEN_H) continue;
-                    if (fb[py][px] < 2) fb[py][px] = 3;
+                    if (fb[py][px] < 2) {
+                        fb[py][px] = 3;
+                        fb_layer[py][px] = layer_tag;
+                    }
                 }
             }
         }
     }
 }
 
+static u8 host_render_sprite_layer(u8 sprite_id) {
+    return (sprite_id >= 34) ? FB_LAYER_FX : FB_LAYER_ENTITY;
+}
+
 static void host_render_frame(void) {
     memset(fb, 0, sizeof(fb));
+    memset(fb_layer, 0, sizeof(fb_layer));
     /* Render BKG map */
     for (int row = 0; row < BKG_ROWS; ++row)
         for (int col = 0; col < BKG_COLS; ++col)
-            host_render_tile((u8)col, (u8)row, bkg_tiles[bkg_map[row][col]], 0, 0, 0, 0);
+            host_render_tile((u8)col, (u8)row, bkg_tiles[bkg_map[row][col]], 0, 0, 0, 0, FB_LAYER_BG);
     /* Render OBJ */
     for (int i = 0; i < 40; ++i)
         if (obj_table[i].active) {
-            host_render_sprite_shadow(spr_tiles[obj_table[i].tile], obj_table[i].x, obj_table[i].y, obj_table[i].flags, 1, 1, 2);
-            host_render_sprite_outline(spr_tiles[obj_table[i].tile], obj_table[i].x, obj_table[i].y, obj_table[i].flags);
+            u8 layer_tag = host_render_sprite_layer((u8)i);
+            if (layer_tag == FB_LAYER_ENTITY) {
+                host_render_sprite_shadow(spr_tiles[obj_table[i].tile], obj_table[i].x, obj_table[i].y, obj_table[i].flags, 1, 1, 2, layer_tag);
+                host_render_sprite_outline(spr_tiles[obj_table[i].tile], obj_table[i].x, obj_table[i].y, obj_table[i].flags, layer_tag);
+            }
             host_render_tile(0, 0, spr_tiles[obj_table[i].tile], 1,
-                             obj_table[i].x, obj_table[i].y, obj_table[i].flags);
+                             obj_table[i].x, obj_table[i].y, obj_table[i].flags, layer_tag);
         }
 #ifdef TARGET_3DS
     {
@@ -788,7 +1069,8 @@ static void host_render_frame(void) {
                 if (out_x < 0 || out_x >= CTR_TOP_W) continue;
                 {
                     size_t off = (size_t)(3 * (out_x * CTR_TOP_H + y_rot));
-                    u32 rgb = ctr_palette[fb[sy][sx] & 3];
+                    const u32 *palette = ctr_palette_for_layer(fb_layer[sy][sx]);
+                    u32 rgb = palette[fb[sy][sx] & 3];
                     left_fb[off + 0] = (u8)(rgb & 0xFF);
                     left_fb[off + 1] = (u8)((rgb >> 8) & 0xFF);
                     left_fb[off + 2] = (u8)((rgb >> 16) & 0xFF);
@@ -807,7 +1089,8 @@ static void host_render_frame(void) {
                     if (out_x < 0 || out_x >= CTR_TOP_W) continue;
                     {
                         size_t off = (size_t)(3 * (out_x * CTR_TOP_H + y_rot));
-                        u32 rgb = ctr_palette[fb[sy][sx] & 3];
+                        const u32 *palette = ctr_palette_for_layer(fb_layer[sy][sx]);
+                        u32 rgb = palette[fb[sy][sx] & 3];
                         right_fb[off + 0] = (u8)(rgb & 0xFF);
                         right_fb[off + 1] = (u8)((rgb >> 8) & 0xFF);
                         right_fb[off + 2] = (u8)((rgb >> 16) & 0xFF);
@@ -823,7 +1106,7 @@ static void host_render_frame(void) {
     u32 pixels[SCREEN_H * SCREEN_W];
     for (int y = 0; y < SCREEN_H; ++y)
         for (int x = 0; x < SCREEN_W; ++x)
-            pixels[y * SCREEN_W + x] = gb_palette[fb[y][x] & 3];
+            pixels[y * SCREEN_W + x] = host_palette_for_layer(fb_layer[y][x])[fb[y][x] & 3];
     SDL_UpdateTexture(sdl_texture, NULL, pixels, SCREEN_W * sizeof(u32));
     SDL_RenderClear(sdl_renderer);
     SDL_RenderCopy(sdl_renderer, sdl_texture, NULL, NULL);
@@ -1354,6 +1637,12 @@ static void ctr_profile_write_status(void) {
             "  \"stereoComfort\": %s,\n"
             "  \"forceFlat\": %s,\n"
             "  \"smoothing\": \"%s\",\n"
+            "  \"hopeBridgeLoaded\": %s,\n"
+            "  \"hopeBridgeStatus\": \"%s\",\n"
+            "  \"hopeBridgeSource\": \"%s\",\n"
+            "  \"hopeTarget\": \"%s\",\n"
+            "  \"hopeSceneId\": \"%s\",\n"
+            "  \"hopeSceneType\": \"%s\",\n"
             "  \"qtmStatus\": \"%s\",\n"
             "  \"micStatus\": \"%s\",\n"
             "  \"visualDisturbance\": %.3f,\n"
@@ -1361,6 +1650,11 @@ static void ctr_profile_write_status(void) {
             "  \"sinusPressure\": %.3f,\n"
             "  \"eyeStrain\": %.3f,\n"
             "  \"focusLoad\": %.3f,\n"
+            "  \"hopeClogRisk\": %.3f,\n"
+            "  \"hopeTheta\": %.3f,\n"
+            "  \"hopeRenderReactivity\": %.3f,\n"
+            "  \"hopeVolumetricBias\": %.3f,\n"
+            "  \"hopeHandheldBias\": %.3f,\n"
             "  \"gReference\": %.3f,\n"
             "  \"distanceCm\": %.2f,\n"
             "  \"tiltDeg\": %.2f,\n"
@@ -1380,6 +1674,12 @@ static void ctr_profile_write_status(void) {
             ctr_stereo_comfort ? "true" : "false",
             ctr_stereo_force_flat ? "true" : "false",
             ctr_smoothing_label(),
+            hope_bridge.loaded ? "true" : "false",
+            hope_bridge_status,
+            hope_bridge.source,
+            hope_bridge.target_name,
+            hope_bridge.scene_id,
+            hope_bridge.scene_type,
             ctr_qtm_status,
             ctr_mic_status,
             ctr_visual_disturbance,
@@ -1387,6 +1687,11 @@ static void ctr_profile_write_status(void) {
             ctr_sinus_pressure,
             ctr_eye_strain,
             ctr_focus_load,
+            hope_bridge.hope_clog_risk,
+            hope_bridge.hope_theta,
+            hope_bridge.render_reactivity,
+            hope_bridge.volumetric_bias,
+            hope_bridge.handheld_bias,
             ctr_audio_reference,
             ctr_qtm_distance_cm,
             ctr_qtm_tilt_deg,
@@ -1441,6 +1746,9 @@ static void ctr_update_strain_model(s16 focus_estimate) {
     sinus_raw += ctr_audio_disturbance * 0.35f;
     sinus_raw += fabsf(ctr_audio_band_a - ctr_audio_band_as) * 0.20f;
     sinus_raw += fabsf(ctr_audio_band_f - ctr_audio_band_b) * 0.12f;
+    sinus_raw += hope_bridge.hope_clog_risk * 0.20f;
+    sinus_raw += hope_bridge.volumetric_bias * 0.12f;
+    sinus_raw += hope_bridge.matter_fluid_turbulence * 0.10f;
     sinus_raw *= ctr_profile_sinus_bias;
     sinus_raw = ctr_clampf(sinus_raw, 0.0f, 1.0f);
     ctr_sinus_pressure += (sinus_raw - ctr_sinus_pressure) * 0.20f;
@@ -1498,6 +1806,9 @@ static void ctr_qtm_update(void) {
     }
     ctr_visual_disturbance = ctr_clampf((100.0f - (float)focus) / 75.0f, 0.0f, 1.0f);
     ctr_update_strain_model(focus);
+    focus -= (s16)(hope_bridge.hope_clog_risk * 7.0f);
+    focus -= (s16)(hope_bridge.volumetric_bias * 6.0f);
+    focus += (s16)(hope_bridge.render_reactivity * 4.0f);
     focus -= (s16)(ctr_audio_disturbance * 24.0f);
     focus -= (s16)(ctr_sinus_pressure * 18.0f);
     focus -= (s16)(ctr_eye_strain * 14.0f);
@@ -1566,7 +1877,17 @@ static void ctr_update_parallax(void) {
     float alpha;
     float left_target;
     float right_target;
-    float disturbance_mix = ctr_clampf(ctr_audio_disturbance * 0.4f + ctr_visual_disturbance * 0.25f + ctr_sinus_pressure * 0.20f + ctr_eye_strain * 0.15f, 0.0f, 1.0f);
+    float disturbance_mix = ctr_clampf(
+        ctr_audio_disturbance * 0.4f
+        + ctr_visual_disturbance * 0.25f
+        + ctr_sinus_pressure * 0.20f
+        + ctr_eye_strain * 0.15f
+        + hope_bridge.hope_clog_risk * 0.08f
+        + hope_bridge.volumetric_bias * 0.06f
+        - hope_bridge.render_reactivity * 0.05f,
+        0.0f,
+        1.0f
+    );
     if (ctr_qtm_tracking_live) {
         yaw_bias = ctr_qtm_tracking.dYaw * (5.5f - disturbance_mix * 2.0f);
         if (yaw_bias > 1.25f) yaw_bias = 1.25f;
@@ -1655,6 +1976,7 @@ static void ctr_draw_status_panel(void) {
     printf("Kaiju Gaiden 3DS\n");
     printf("L menu:    %s\n", ctr_options_open ? "open" : "closed");
     printf("Profile:   %s\n", ctr_profile_loaded ? ctr_profile_source : "defaults");
+    printf("HOPE:      %s\n", hope_bridge.loaded ? hope_bridge_status : "defaults");
     printf("Stereo:    %s\n", ctr_stereo_force_flat ? "forced mono" : "adaptive");
     printf("Preset:    %s\n", ctr_preset_label());
     printf("3D slider: %3d%%\n", (int)(ctr_3d_slider * 100.0f));
@@ -1666,6 +1988,10 @@ static void ctr_draw_status_panel(void) {
     printf("Audio:     %2d%% ref %2d%%\n", (int)(ctr_audio_disturbance * 100.0f), (int)(ctr_audio_reference * 100.0f));
     printf("Sinus:     %2d%%\n", (int)(ctr_sinus_pressure * 100.0f));
     printf("Eye strain:%2d%% load %2d%%\n", (int)(ctr_eye_strain * 100.0f), (int)(ctr_focus_load * 100.0f));
+        printf("Bridge:    react %2d%% vol %2d%% clog %2d%%\n",
+            (int)(hope_bridge.render_reactivity * 100.0f),
+            (int)(hope_bridge.volumetric_bias * 100.0f),
+            (int)(hope_bridge.hope_clog_risk * 100.0f));
     if (ctr_qtm_available) {
         printf("Track:     %s conf %.2f\n", ctr_qtm_tracking_live ? "live" : "soft", ctr_qtm_confidence);
         printf("Distance:  %2d cm\n", (int)(ctr_qtm_distance_cm + 0.5f));
@@ -1703,6 +2029,7 @@ static void host_init(void) {
     gfxSet3D(false);
     printf("\x1b[2J");
     ctr_profile_load();
+    hope_bridge_load();
     ctr_mic_init();
     ctr_qtm_init();
     ctr_profile_write_status();
@@ -1723,6 +2050,7 @@ static void host_init(void) {
     sdl_texture  = SDL_CreateTexture(sdl_renderer, SDL_PIXELFORMAT_ARGB8888,
                                      SDL_TEXTUREACCESS_STREAMING,
                                      SCREEN_W, SCREEN_H);
+    hope_bridge_load();
     host_audio_open_devices();
 #endif
     memset(fb,       0, sizeof(fb));
@@ -1919,9 +2247,9 @@ static const char *boss_name_table[CAMPAIGN_STAGE_COUNT] = {
     "GLACIER MAW",
     "VAULT SERPENT",
     "SHARD COLOSSUS",
-    "STORM HOWLER",
+    "LOGORA RAPTORMOTH",
     "BASALT TYRANT",
-    "BLOOM TITAN",
+    "GOOLLOKI MOONFROG",
     "DUST ORACLE",
     "NIGHT ABYSS",
     "CROWN BEHEMOTH"
@@ -1934,9 +2262,9 @@ static const char *boss_intro_table[CAMPAIGN_STAGE_COUNT] = {
     "ICE CUTS DEEP",
     "VAULT OPENS WIDE",
     "SHARDS SEEK BLOOD",
-    "STORM EATS STEEL",
+    "WINGS SHEAR RAIN",
     "GATE DEMANDS TOLL",
-    "BLOOM WANTS LUNG",
+    "STAR-EYES HARVEST",
     "DUST SEES ALL",
     "TIDE DRINKS LIGHT",
     "CROWN RULES RUIN"
@@ -1949,9 +2277,9 @@ static const char *boss_horror_genre_table[CAMPAIGN_STAGE_COUNT] = {
     "ARCTIC CANNIBAL",
     "CRYPT GOTHIC",
     "GLASS SLASHER",
-    "STORM LYCANTHROPE",
+    "TOKUSATSU SKY DREAD",
     "HELLGATE DEMON",
-    "SPORE ECO HORROR",
+    "LUNAR SWAMP FEVER",
     "OCCULT OMEN",
     "COSMIC ABYSS",
     "REGAL NECROMANCY"
@@ -1970,9 +2298,9 @@ static const char *boss_choice_prompt_a_table[CAMPAIGN_STAGE_COUNT] = {
     "THE LOST PACK",
     "THE CRYPT CHOIR",
     "MIRROR KILLER",
-    "MOON-SALT PACK",
+    "LOGORA NESTS LOW",
     "THE GATE TITHE",
-    "THE BLOOM CHOIR",
+    "GOOLLOKI WATCHES",
     "THE DUST EYE",
     "THE BLACK SURF",
     "THE BONE COURT"
@@ -1985,9 +2313,9 @@ static const char *boss_choice_prompt_b_table[CAMPAIGN_STAGE_COUNT] = {
     "STARVES IN WHITE",
     "KNOWS YOUR NAME",
     "WEARS THEIR FACES",
-    "CIRCLES THE PIERS",
+    "INSIDE THE STORM",
     "WANTS A HEART",
-    "DRINKS THE SICK",
+    "WITH STAR-RING EYES",
     "SEES HIDDEN SIN",
     "CALLS YOU INSIDE",
     "DEMANDS AN HEIR"
@@ -2000,9 +2328,9 @@ static const char *boss_choice_left_table[CAMPAIGN_STAGE_COUNT] = {
     "SHARE THE HEAT",
     "OPEN THE VAULT",
     "NAME THE DEAD",
-    "CURE THE BITE",
+    "CLIP THE CREST",
     "BAR THE GATE",
-    "CULL THE BLOOM",
+    "SCATTER THE GRUBS",
     "SPEAK THE SIN",
     "HEAR THE CALL",
     "BREAK THE THRONE"
@@ -2015,9 +2343,9 @@ static const char *boss_choice_right_table[CAMPAIGN_STAGE_COUNT] = {
     "KEEP THE HEAT",
     "CHAIN IT SHUT",
     "MASK THE DEAD",
-    "HUNT THE PACK",
+    "FEED THE WIND",
     "OFFER A HEART",
-    "SEED THE WARD",
+    "HARVEST THE SPAWN",
     "BLIND THE EYE",
     "NAIL THE SHORE",
     "TAKE THE CROWN"
@@ -2030,9 +2358,9 @@ static const char *boss_choice_left_result_table[CAMPAIGN_STAGE_COUNT] = {
     "THE COLD RELENTS",
     "THE DEAD WALK OUT",
     "THE FACES RETURN",
-    "THE CURSE CAN BREAK",
+    "THE SKY BOWS LOW",
     "THE GATE STARVES",
-    "THE SPORE LINE THINS",
+    "THE BOG BREATHES",
     "THE VEIL STAYS TORN",
     "THE TIDE HEARS",
     "THE COURT FALLS"
@@ -2045,9 +2373,9 @@ static const char *boss_choice_right_result_table[CAMPAIGN_STAGE_COUNT] = {
     "THE WEAK FREEZE",
     "THE DEAD STAY LOW",
     "THE MASK HOLDS",
-    "THE HUNT OWNS NIGHT",
+    "THE SQUALL BITES",
     "THE GATE REMEMBERS",
-    "THE GARDEN TAKES",
+    "THE FROG MOON SWELLS",
     "THE LIE STAYS WARM",
     "THE SHORE HOLDS",
     "THE CROWN FITS"
@@ -2097,9 +2425,9 @@ static const CampaignStageDesign campaign_stage_design_table[CAMPAIGN_STAGE_COUN
     { "FROST SHELF", "WHITEOUT PUSHBACK", "WOLFPACK RUSH", "FROST CYPHER",    "THAW SAFE PATHS",   "ICE SHEAR OPENS", "WOLVES TEST EDGE", 3, 3, 3, 3, 2, 3, 1, 3, 3, 0, 3, 2, 2, {1, 1, 1}, 2 },
     { "SUNKEN CRYPT", "CRYPT GATES SHIFT", "CRYPT CHOIR GUARD", "VAULT CYPHER",    "OPEN CRYPT WARDS",  "CRYPT AISLES BEND", "CHOIR HOLDS GATES", 1, 4, 3, 4, 2, 2, 0, 4, 4, 1, 1, 4, 3, {1, 1, 2}, 2 },
     { "GLASS FLOODPLAIN", "GLASS SHARDS FALL", "SHARD MIMIC PAIR", "GLASS CYPHER",    "CALM SHARD FLOW",   "SHARDS SKATE WIDE", "MIMICS SPLIT LINES", 2, 4, 3, 4, 2, 1, 2, 1, 5, 2, 2, 3, 2, {1, 2, 1}, 2 },
-    { "STORM REEF", "LIGHTNING TIDES", "HOWLER SALT PACK", "STORM CYPHER",    "GROUND STORM TIDE", "SURF SURGES HARD", "HOWLERS FOLD SIDES", 0, 4, 4, 4, 3, 3, 3, 3, 6, 0, 4, 4, 3, {2, 1, 2}, 3 },
+    { "REEF / STORM NEST", "LOGORA SHREDS SKY", "MOTH-RAPTOR PACK", "LOGORA CYPHER",    "SPLIT STORM CRESTS", "REEF GUSTS SHEAR", "WINGS FOLD SIDES", 0, 4, 4, 4, 3, 3, 3, 3, 6, 0, 4, 4, 3, {2, 1, 2}, 3 },
     { "BASALT HELLGATE", "BASALT RAISE WALL", "GATE TITHE BRUTES", "BASALT CYPHER",   "SEAL HELL GATES",  "VENTS CRACK FLOOR", "BRUTES WALL PATHS", 1, 4, 4, 5, 3, 0, 0, 4, 7, 3, 3, 5, 4, {2, 2, 2}, 3 },
-    { "SPORE GARDEN", "SPORES CHOKE LINE", "SPORE SWARM LUNG", "BLOOM CYPHER",    "THIN SPORE VEIL",   "BLOOM FOG DRIFTS", "LUNG SWARMS STALL", 2, 4, 4, 5, 3, 2, 2, 2, 8, 1, 4, 5, 3, {2, 2, 3}, 4 },
+    { "MOON BOG / BLOOM", "STAR-EYES CHOKE", "GRUB FROGS GATHER", "GOOLLOKI CYPHER",    "DIM STAR-RING EYES",   "POLLEN TIDES DRIFT", "GOOLLOKI HERDS LUNGS", 2, 4, 4, 5, 3, 2, 2, 2, 8, 1, 4, 5, 3, {2, 2, 3}, 4 },
     { "DUST ORRERY", "DUST VEIL PHASES", "OMEN EYE HARASS", "DUST CYPHER",     "LIFT DUST CURSE",   "RINGS DRIFT FALSE", "OMENS PEEL RANGE", 3, 5, 4, 5, 3, 1, 1, 1, 5, 2, 3, 3, 4, {2, 3, 2}, 4 },
     { "ABYSSAL SHORE", "BLACK SURF PULLS", "ABYSS DRONE TIDE", "ABYSS CYPHER",    "SOFTEN BLACK SURF", "BLACK TIDE DRAGS", "DRONES HEM WAKE", 0, 5, 5, 5, 3, 3, 3, 3, 6, 3, 4, 4, 4, {3, 3, 3}, 5 },
     { "CROWN NECROPOLIS", "CROWN SPIKES RISE", "BONE COURT ELITE", "CROWN CYPHER",    "BREAK BONE COURT", "SPIRES PRUNE SKY", "COURT LOCKS CHOKE", 1, 5, 5, 6, 3, 0, 0, 4, 8, 3, 2, 5, 5, {3, 4, 4}, 6 }
@@ -2115,10 +2443,10 @@ static const char *rei_intro_table[BOSS_ARCHETYPE_COUNT] = {
     "REI BREAKS GUARD",
     "REI STEPS INSIDE",
     "REI BENDS FORM",
-    "REI TAKES HEIGHT",
+    "REI HUNTS WINGS",
     "REI SWIMS CUTS",
     "REI SETS RHYTHM",
-    "REI BURNS OPEN"
+    "REI SALTS THE BOG"
 };
 
 static const u8 boss_tile_layout_db[BOSS_ARCHETYPE_COUNT][8] = {
@@ -2185,6 +2513,25 @@ typedef struct {
 } GenomeProfile;
 
 typedef struct {
+    s8 tile_x[4];
+    s8 tile_y[4];
+    u8 torso_surface;
+    u8 limb_span;
+    u8 head_size;
+    u8 contact_bias;
+} MinionVisualRig;
+
+typedef struct {
+    s8 tile_x[8];
+    s8 tile_y[8];
+    u8 silhouette_width;
+    u8 silhouette_height;
+    u8 foreleg_span;
+    u8 hindleg_span;
+    u8 contact_bias;
+} BossVisualRig;
+
+typedef struct {
     u8 back_tile;
     u8 mid_tile;
     u8 fore_tile;
@@ -2219,6 +2566,11 @@ typedef struct {
     u8 lane_bias;
     u8 prefab_bias[3];
 } EnvThemeSubclass;
+
+#define MINION_SILHOUETTE_STALKER 0
+#define MINION_SILHOUETTE_BRUTE   1
+#define MINION_SILHOUETTE_RAPTOR  2
+#define MINION_SILHOUETTE_CHORUS  3
 
 static const EnvPrefab env_prefab_db[ENV_PREFAB_COUNT] = {
     { TILE_CLIFF_A,  TILE_GROUND_L, TILE_CLIFF_B, TILE_GROUND_R, 3, 2, 1 },
@@ -2393,6 +2745,7 @@ typedef struct {
         u8  hp;
         u8  anim;
         u8  prefab;
+        u8  silhouette;
         u8  class_major;
         u8  class_mid;
         u8  class_minor;
@@ -2468,6 +2821,7 @@ typedef struct {
         u8 active;
         u8 timer;
         u8 prefab;
+        u8 silhouette;
         u8 lane;
         u8 side;
         u8 status;
@@ -2514,6 +2868,11 @@ typedef struct {
     u8   stage_hazard_active;
     u8   stage_hazard_lane;
     u8   stage_hazard_power;
+    u8   encounter_style_rank;
+    u8   encounter_pressure;
+    u8   encounter_crowd;
+    u8   encounter_momentum;
+    u8   encounter_finish_bias;
 } GameState;
 
 static GameState gs;
@@ -2815,6 +3174,34 @@ static const char *stage_hazard_prompt(void) {
     }
 }
 
+static u8 stage_lane_for_tile_col(u8 tile_col) {
+    if (tile_col < 7) return 0;
+    if (tile_col < 14) return 1;
+    return 2;
+}
+
+static u8 stage_hazard_overlay_tile(u8 row, u8 col, u8 base_tile) {
+    u8 pulse;
+    if (gs.stage_hazard_active == 0) return base_tile;
+    if (row < 6 || row >= 17) return base_tile;
+    if (stage_lane_for_tile_col(col) != gs.stage_hazard_lane) return base_tile;
+    pulse = (u8)((gs.anim_tick + row + col + gs.stage_hazard_power) & 0x03);
+    switch (gs.stage_theme & 0x03) {
+        case 0:
+            if (row < 11) return (pulse < 2) ? TILE_WATER_A : TILE_WATER_B;
+            return (pulse & 0x01) ? TILE_CLIFF_A : TILE_WATER_B;
+        case 1:
+            if (row < 10) return (pulse & 0x01) ? TILE_CLIFF_A : TILE_SKY_B;
+            return (pulse & 0x01) ? TILE_CLIFF_B : TILE_GROUND_R;
+        case 2:
+            if (row < 10) return (pulse & 0x01) ? TILE_GROUND_L : TILE_SKY_A;
+            return ((pulse + row) & 0x01) ? TILE_CLIFF_A : TILE_GROUND_R;
+        default:
+            if (row < 10) return (pulse & 0x01) ? TILE_SKY_A : TILE_SKY_B;
+            return (pulse & 0x01) ? TILE_WATER_A : TILE_CLIFF_B;
+    }
+}
+
 static void stage_hazard_reset(void) {
     gs.stage_hazard_active = 0;
     gs.stage_hazard_lane = (u8)(gs.stage_bg_seed % 3);
@@ -2883,12 +3270,36 @@ static const char *campaign_rei_intro(u8 boss_prefab) {
     return rei_intro_table[boss_prefab % BOSS_ARCHETYPE_COUNT];
 }
 
+static const char *campaign_boss_stage_stinger(u8 stage_index) {
+    switch (stage_index) {
+        case 6: return "LOGORA SKREES ABOVE THE BREAKWATER";
+        case 8: return "GOOLLOKI BLINKS THROUGH POLLEN FOG";
+        default: return campaign_boss_intro(stage_index);
+    }
+}
+
+static const char *campaign_rei_stage_reply(u8 stage_index) {
+    switch (stage_index) {
+        case 6: return "REI CLIPS THE WINGBEAT";
+        case 8: return "REI CUTS THE GRUB LINE";
+        default: return campaign_rei_intro(gs.boss_prefab);
+    }
+}
+
 static u8 duel_qte_button_for_style(u8 style) {
     switch (style & 0x03) {
         case 0: return BTN_A;
         case 1: return BTN_B;
         case 2: return BTN_SELECT;
         default: return BTN_A;
+    }
+}
+
+static u8 boss_motion_kind(void) {
+    switch (gs.campaign_stage) {
+        case 6: return 1;
+        case 8: return 2;
+        default: return 0;
     }
 }
 
@@ -3175,7 +3586,7 @@ static void audio_emit_narrative_tts(void) {
         plat_audio_tts(AUDIO_VOICE_BOSS, narrative_stage_line_a());
         plat_audio_tts(AUDIO_VOICE_CHORUS, narrative_stage_line_b());
         plat_audio_tts(AUDIO_VOICE_BOSS, narrative_stage_line_c());
-        plat_audio_tts(AUDIO_VOICE_BOSS, campaign_boss_intro(gs.campaign_stage));
+        plat_audio_tts(AUDIO_VOICE_BOSS, campaign_boss_stage_stinger(gs.campaign_stage));
     } else if (gs.narrative_page == 1) {
         plat_audio_tts(AUDIO_VOICE_CHORUS, narrative_choice_line_a());
         plat_audio_tts(AUDIO_VOICE_CHORUS, narrative_choice_line_b());
@@ -3184,14 +3595,15 @@ static void audio_emit_narrative_tts(void) {
     } else {
         plat_audio_tts(AUDIO_VOICE_REI, narrative_result_line_a());
         plat_audio_tts(AUDIO_VOICE_BOSS, narrative_result_line_b());
+        plat_audio_tts(AUDIO_VOICE_REI, campaign_rei_stage_reply(gs.campaign_stage));
     }
     audio_sync_profile();
 }
 
 static void audio_emit_stage_intro_tts(void) {
-    plat_audio_tts(AUDIO_VOICE_BOSS, campaign_boss_intro(gs.campaign_stage));
+    plat_audio_tts(AUDIO_VOICE_BOSS, campaign_boss_stage_stinger(gs.campaign_stage));
     plat_audio_tts(AUDIO_VOICE_CHORUS, campaign_stage_hazard_line(gs.campaign_stage));
-    plat_audio_tts(AUDIO_VOICE_REI, campaign_rei_intro(gs.boss_prefab));
+    plat_audio_tts(AUDIO_VOICE_REI, campaign_rei_stage_reply(gs.campaign_stage));
     plat_audio_tts(AUDIO_VOICE_SYSTEM, duel_mechanic_label(gs.stage_duel_mechanic));
     plat_audio_tts(AUDIO_VOICE_SYSTEM, campaign_stage_cypher_label(gs.campaign_stage));
     plat_audio_event(AUDIO_EVENT_PHASE, gs.campaign_stage);
@@ -3361,6 +3773,201 @@ static u8 stage_profile_lane_pressure(void) {
     return (u8)(design->route_bias + profile->lane_bias);
 }
 
+static u8 cosmetic_profile_sensor_bias(void) {
+#ifdef TARGET_3DS
+    u8 bias = (u8)(ctr_visual_disturbance * 3.0f
+                 + ctr_audio_disturbance * 2.0f
+                 + ctr_sinus_pressure * 2.0f
+                 + ctr_eye_strain
+                 + 0.5f);
+    if (bias > 5) bias = 5;
+    return bias;
+#else
+    return 0;
+#endif
+}
+
+static u8 cosmetic_profile_instability(void) {
+    s16 instability = (s16)campaign_adaptive_pressure(gs.campaign_stage);
+    instability += (s16)(gs.rei_form / 3u);
+    instability += (gs.rei_persona >= 4) ? 1 : 0;
+    instability += (gs.rei_style_pressure > gs.rei_style_precision) ? 1 : 0;
+    instability += (narrative_dominant_moral_index() >= 5) ? 1 : 0;
+    instability += cosmetic_profile_sensor_bias();
+    instability += (s16)(gs.encounter_pressure / 2u);
+    instability += (s16)(gs.encounter_crowd / 3u);
+    instability += (s16)(gs.encounter_finish_bias / 3u);
+    instability -= (gs.rei_style_adaptation > gs.rei_style_pressure) ? 1 : 0;
+    if (instability < 0) instability = 0;
+    if (instability > 7) instability = 7;
+    return (u8)instability;
+}
+
+static u8 cosmetic_profile_stage_flux(void) {
+    u8 flux = (u8)(campaign_adaptive_pressure(gs.campaign_stage)
+                 + (stage_profile_lane_pressure() / 2u)
+                 + (stage_profile_current_bias() / 3u)
+                 + (cosmetic_profile_sensor_bias() / 2u));
+    flux = (u8)(flux + (gs.encounter_momentum / 3u) + (gs.encounter_style_rank / 2u));
+    if (gs.rei_style_pressure > gs.rei_style_adaptation) flux++;
+    if (flux > 6) flux = 6;
+    return flux;
+}
+
+static s8 cosmetic_profile_rei_tilt(void) {
+    s8 tilt = (s8)((gs.rei_form >= 8) ? 1 : 0);
+    if (gs.rei_persona >= 3) tilt++;
+    if (narrative_dominant_moral_index() == 0) tilt--;
+    if ((gs.rei_cosmetic_mask & 0x0010u) != 0) tilt = (s8)(-tilt);
+    if (tilt < -2) tilt = -2;
+    if (tilt > 2) tilt = 2;
+    return tilt;
+}
+
+static s8 cosmetic_profile_swarm_sway(u8 minion_index) {
+    u8 flux = cosmetic_profile_stage_flux();
+    u8 instability = cosmetic_profile_instability();
+    s8 sway = (s8)((flux >= 3) ? 1 : 0);
+    if (instability >= 4 && ((minion_index + gs.anim_tick) & 0x02) != 0) sway++;
+    if (gs.campaign_stage == 6 && ((minion_index + gs.anim_tick) & 0x04) != 0) sway++;
+    if (gs.campaign_stage == 8 && (minion_index & 0x01) == 0) sway--;
+    if (sway < -2) sway = -2;
+    if (sway > 2) sway = 2;
+    return sway;
+}
+
+static s8 cosmetic_profile_portrait_bob(void) {
+    s8 bob = (s8)((cosmetic_profile_stage_flux() >= 4) ? 1 : 0);
+    if (cosmetic_profile_instability() >= 5 && (gs.anim_tick & 0x04) != 0) bob++;
+    return bob;
+}
+
+static u8 stage_spawn_silhouette(u8 seed, u8 lane, u8 side) {
+    u8 flux = cosmetic_profile_stage_flux();
+    u8 instability = cosmetic_profile_instability();
+    u8 pick = stage_mix8(seed, (u8)(33 + lane * 19 + side * 7 + gs.boss_prefab * 11 + gs.stage_boss_style * 13));
+    u8 silhouette = (u8)((pick + flux + instability + gs.campaign_stage) & 0x03);
+    if (gs.campaign_stage == 6) silhouette = (u8)((silhouette + 2) & 0x03);
+    if (gs.campaign_stage == 8) silhouette = (u8)((silhouette + 3) & 0x03);
+    return silhouette;
+}
+
+static void minion_apply_silhouette(u8 silhouette, u8 seed, GenomeProfile *genome, u8 *class_major, u8 *class_mid, u8 *class_minor) {
+    switch (silhouette & 0x03) {
+        case MINION_SILHOUETTE_BRUTE:
+            *class_major = (u8)((*class_major + 10 + (seed & 0x03)) % MINION_CLASS_MAJOR_COUNT);
+            *class_mid = (u8)((*class_mid + 4) % MINION_CLASS_MID_COUNT);
+            genome->shell = (u8)((genome->shell < 3) ? 3 : genome->shell);
+            genome->mobility = (u8)((genome->mobility > 1) ? (genome->mobility - 1) : 1);
+            break;
+        case MINION_SILHOUETTE_RAPTOR:
+            *class_major = (u8)((*class_major + 16 + (seed & 0x01)) % MINION_CLASS_MAJOR_COUNT);
+            *class_minor = (u8)((*class_minor + 3) % MINION_CLASS_MINOR_COUNT);
+            genome->mobility = (u8)((genome->mobility < 4) ? 4 : genome->mobility);
+            break;
+        case MINION_SILHOUETTE_CHORUS:
+            *class_mid = (u8)((*class_mid + 8 + (seed & 0x01)) % MINION_CLASS_MID_COUNT);
+            *class_minor = (u8)((*class_minor + 5) % MINION_CLASS_MINOR_COUNT);
+            genome->ferocity = (u8)((genome->ferocity < 2) ? 2 : genome->ferocity);
+            break;
+        default:
+            *class_major = (u8)((*class_major + (seed & 0x03)) % MINION_CLASS_MAJOR_COUNT);
+            genome->ferocity = (u8)((genome->ferocity < 3) ? 3 : genome->ferocity);
+            break;
+    }
+}
+
+static u8 subjective_contact_bias(const GenomeProfile *genome, u8 silhouette, s16 px, u8 py) {
+    u8 flux = cosmetic_profile_stage_flux();
+    u8 instability = cosmetic_profile_instability();
+    u8 horizontal = (u8)((px < (SCR_W / 2)) ? ((SCR_W / 2) - px) : (px - (SCR_W / 2)));
+    u8 bias = (u8)(flux + instability + genome->ferocity + genome->shell + (genome->mobility / 2u));
+    bias = (u8)(bias + ((horizontal < 20) ? 2 : (horizontal < 44) ? 1 : 0));
+    bias = (u8)(bias + ((py > 104) ? 1 : 0) + (silhouette & 0x03));
+    if (bias > 7) bias = 7;
+    return bias;
+}
+
+static u8 minion_subjective_contact_bias(u8 minion_index) {
+    return subjective_contact_bias(&gs.minions[minion_index].genome,
+                                   gs.minions[minion_index].silhouette,
+                                   gs.minions[minion_index].x,
+                                   gs.minions[minion_index].y);
+}
+
+static u8 boss_subjective_contact_bias(void) {
+    return subjective_contact_bias(&gs.boss_genome,
+                                   (u8)(4 + boss_motion_kind()),
+                                   gs.boss_x,
+                                   (u8)(SCR_H - 32));
+}
+
+static void minion_visual_rig(u8 minion_index, MinionVisualRig *rig) {
+    const u8 silhouette = gs.minions[minion_index].silhouette & 0x03;
+    const u8 contact = minion_subjective_contact_bias(minion_index);
+    const u8 torso_surface = (u8)(12 + ((gs.minions[minion_index].class_major * 3u
+                                      + gs.minions[minion_index].genome.shell * 5u
+                                      + silhouette * 7u
+                                      + cosmetic_profile_stage_flux()) % 32u));
+    const u8 limb_span = (u8)(9 + ((gs.minions[minion_index].class_mid
+                                 + gs.minions[minion_index].genome.mobility
+                                 + silhouette) % 3u));
+    s8 width_bias = (s8)((torso_surface >= 33) ? 2 : (torso_surface >= 23) ? 1 : 0);
+    s8 lean_bias = (s8)((torso_surface <= 17) ? 1 : 0);
+    s8 drive = (s8)((limb_span - 9u) + ((contact >= 5) ? 1 : 0));
+    memset(rig, 0, sizeof(*rig));
+    rig->torso_surface = torso_surface;
+    rig->limb_span = limb_span;
+    rig->head_size = 8;
+    rig->contact_bias = contact;
+    rig->tile_x[0] = (s8)(-width_bias - drive - (silhouette == MINION_SILHOUETTE_RAPTOR ? 1 : 0));
+    rig->tile_x[1] = (s8)(width_bias + drive + (silhouette == MINION_SILHOUETTE_CHORUS ? 1 : 0));
+    rig->tile_x[2] = (s8)(-width_bias + lean_bias - (silhouette == MINION_SILHOUETTE_BRUTE ? 1 : 0));
+    rig->tile_x[3] = (s8)(width_bias - lean_bias + (silhouette == MINION_SILHOUETTE_BRUTE ? 1 : 0));
+    rig->tile_y[0] = (s8)(-1 - (contact >= 4) - (silhouette == MINION_SILHOUETTE_STALKER ? 1 : 0));
+    rig->tile_y[1] = (s8)(-1 - (silhouette == MINION_SILHOUETTE_CHORUS ? 1 : 0));
+    rig->tile_y[2] = (s8)(1 + drive + (silhouette == MINION_SILHOUETTE_BRUTE ? 1 : 0));
+    rig->tile_y[3] = (s8)(1 + drive + (silhouette == MINION_SILHOUETTE_RAPTOR ? 1 : 0));
+}
+
+static void boss_visual_rig(BossVisualRig *rig) {
+    u8 flux = cosmetic_profile_stage_flux();
+    u8 instability = cosmetic_profile_instability();
+    u8 contact = boss_subjective_contact_bias();
+    u8 width = (u8)(13 + ((gs.boss_genome.ferocity * 5u
+                         + gs.boss_genome.shell * 7u
+                         + gs.boss_genome.mobility * 3u
+                         + gs.boss_subarchetype * 4u
+                         + flux) % 36u));
+    u8 foreleg = (u8)(9 + ((gs.boss_genome.mobility + gs.stage_boss_style + flux) % 9u));
+    u8 hindleg = (u8)(13 + ((gs.boss_genome.shell * 3u + gs.boss_phase * 5u + instability) % 18u));
+    s8 crown = (s8)((gs.boss_phase >= 2) ? 1 : 0);
+    s8 fore_drive = (s8)((foreleg - 9u) / 2u);
+    s8 hind_drive = (s8)((hindleg - 13u) / 3u);
+    memset(rig, 0, sizeof(*rig));
+    rig->silhouette_width = width;
+    rig->silhouette_height = 56;
+    rig->foreleg_span = foreleg;
+    rig->hindleg_span = hindleg;
+    rig->contact_bias = contact;
+    rig->tile_x[0] = (s8)(-2 - crown - fore_drive);
+    rig->tile_x[1] = (s8)(-1 - fore_drive);
+    rig->tile_x[2] = (s8)(1 + fore_drive);
+    rig->tile_x[3] = (s8)(2 + crown + fore_drive);
+    rig->tile_x[4] = (s8)(-3 - hind_drive - ((width >= 34) ? 1 : 0));
+    rig->tile_x[5] = (s8)(-1 - hind_drive / 2);
+    rig->tile_x[6] = (s8)(1 + hind_drive / 2);
+    rig->tile_x[7] = (s8)(3 + hind_drive + ((width >= 34) ? 1 : 0));
+    rig->tile_y[0] = (s8)(-2 - crown - (contact >= 5));
+    rig->tile_y[1] = (s8)(-3 - crown - (flux >= 4));
+    rig->tile_y[2] = (s8)(-3 - crown - (flux >= 4));
+    rig->tile_y[3] = (s8)(-2 - crown - (contact >= 5));
+    rig->tile_y[4] = (s8)(hind_drive + ((instability >= 4) ? 1 : 0));
+    rig->tile_y[5] = (s8)(1 + hind_drive);
+    rig->tile_y[6] = (s8)(1 + hind_drive);
+    rig->tile_y[7] = (s8)(hind_drive + ((instability >= 4) ? 1 : 0));
+}
+
 static u8 stage_ai_directive(void) {
     const CampaignStageDesign *design = campaign_stage_design(gs.campaign_stage);
     u8 moral = narrative_dominant_moral_index();
@@ -3453,6 +4060,7 @@ static void stage_prepare_spawn_protocol(void) {
         gs.spawn_slots[i].side   = (u8)(((mix >> 5) + boss_prefab->summon_bias + (current_bias > 5)) & 0x01);
         gs.spawn_slots[i].status = (u8)(1 + ((mix + density_score + current_bias) & 0x03));
         gs.spawn_slots[i].genome = stage_make_genome(mix, (u8)(130 + i));
+        gs.spawn_slots[i].silhouette = stage_spawn_silhouette(mix, gs.spawn_slots[i].lane, gs.spawn_slots[i].side);
         switch (directive) {
             case 0:
                 gs.spawn_slots[i].timer = (u8)(gs.spawn_slots[i].timer - ((i < 2) ? (u8)(6 + (cluster & 0x03)) : 0));
@@ -3479,6 +4087,14 @@ static void stage_prepare_spawn_protocol(void) {
                 gs.spawn_slots[i].side = (u8)(((mix >> 2) + gs.run_entropy + i) & 0x01);
                 gs.spawn_slots[i].status = (u8)(1 + ((mix + gs.run_serial + i) & 0x03));
                 break;
+        }
+        if (gs.spawn_slots[i].silhouette == MINION_SILHOUETTE_BRUTE) {
+            gs.spawn_slots[i].timer = (u8)(gs.spawn_slots[i].timer + 4);
+            gs.spawn_slots[i].status = (u8)(gs.spawn_slots[i].status + 1);
+        } else if (gs.spawn_slots[i].silhouette == MINION_SILHOUETTE_RAPTOR) {
+            if (gs.spawn_slots[i].timer > 6) gs.spawn_slots[i].timer = (u8)(gs.spawn_slots[i].timer - 3);
+        } else if (gs.spawn_slots[i].silhouette == MINION_SILHOUETTE_CHORUS) {
+            gs.spawn_slots[i].lane = (u8)((1 + i + profile->lane_bias) % 3);
         }
     }
 }
@@ -3591,6 +4207,7 @@ static u8 stage_object_covers_tile(u8 skip_index, u8 layer, s16 col, s16 row) {
 }
 
 static u8 stage_object_tile_at(u8 col, u8 row, u8 layer, u8 base_tile) {
+    u8 flux = cosmetic_profile_stage_flux();
     for (u8 i = 0; i < gs.stage_object_count; ++i) {
         const EnvPrefab *prefab;
         u8 exposed_left;
@@ -3611,7 +4228,9 @@ static u8 stage_object_tile_at(u8 col, u8 row, u8 layer, u8 base_tile) {
         exposed_down = (u8)(ly + 1 == gs.stage_objects[i].h && !stage_object_covers_tile(i, layer, col, (s16)row + 1));
         if (layer == 2) {
             if (exposed_up || exposed_left || exposed_right) return prefab->accent_tile;
+            if ((gs.stage_objects[i].status & 0x01) != 0 && (lx == 0 || lx + 1 == gs.stage_objects[i].w)) return prefab->back_tile;
             if (exposed_down && ((gs.anim_tick + lx + gs.stage_objects[i].genome.ferocity) & 0x01) == 0) return prefab->accent_tile;
+            if (flux >= 4 && ((lx + ly + gs.stage_objects[i].genome.mobility) & 0x01) == 0) return prefab->mid_tile;
             if (((lx + gs.stage_objects[i].genome.mobility + (gs.anim_tick >> (2 + (gs.stage_objects[i].status & 0x01)))) & 0x01) == 0) return prefab->fore_tile;
             return prefab->accent_tile;
         }
@@ -3625,6 +4244,7 @@ static u8 stage_object_tile_at(u8 col, u8 row, u8 layer, u8 base_tile) {
             if ((gs.stage_objects[i].status & 0x01) != 0 && ((gs.anim_tick + ly) & 0x01) == 0) return prefab->mid_tile;
             return prefab->accent_tile;
         }
+        if ((gs.stage_objects[i].genome.mobility >= 3 || flux >= 4) && ((lx + ly + gs.stage_objects[i].status) & 0x01) == 0) return prefab->fore_tile;
         if ((gs.stage_objects[i].status & 0x01) != 0 && ((lx + ly + gs.stage_objects[i].genome.shell) & 0x01) == 0) return prefab->mid_tile;
         return base_tile;
     }
@@ -3654,6 +4274,8 @@ static void bg_draw_beach_rows(u8 row_start, u8 row_end) {
     s8 bg_x = gs.camera_bg_x;
     u8 subclass = stage_theme_subclass();
     u8 water_tile = ((gs.anim_tick >> 3) & 1) ? TILE_WATER_A : TILE_WATER_B;
+    u8 instability = cosmetic_profile_instability();
+    u8 flux = cosmetic_profile_stage_flux();
     u8 density_score = stage_profile_density_score();
     u8 sightline_score = stage_profile_sightline_score();
     u8 current_bias = stage_profile_current_bias();
@@ -3691,6 +4313,19 @@ static void bg_draw_beach_rows(u8 row_start, u8 row_end) {
                     else t = (((col + gs.stage_bg_seed + subclass) & 1) != 0) ? water_tile : TILE_CLIFF_B;
                     break;
             }
+            if (flux >= 3 && row + 1 >= water_start && row <= ridge_line + 1) {
+                u8 shimmer = (u8)((row * 3 + col + gs.anim_tick + instability + profile->ridge_bias) & 0x07);
+                if (t == TILE_GROUND_L && shimmer == 0) t = TILE_CLIFF_A;
+                else if (t == TILE_GROUND_R && shimmer == 1) t = TILE_CLIFF_B;
+                else if ((t == TILE_CLIFF_A || t == TILE_CLIFF_B) && shimmer == 2 && flux >= 5) t = water_tile;
+            }
+            if (instability >= 4 && row < water_start && ((col + gs.anim_tick + subclass + flux) & 0x07) == 0) {
+                t = ((row + instability) & 0x01) ? TILE_CLIFF_A : water_tile;
+            }
+            if (flux >= 5 && row >= ridge_line && ((col + row + gs.anim_tick + instability) & 0x0F) == 0) {
+                t = (t == TILE_CLIFF_B) ? TILE_CLIFF_A : TILE_CLIFF_B;
+            }
+            t = stage_hazard_overlay_tile(row, col, t);
             t = stage_object_tile_at(col, row, 0, t);
             t = stage_object_tile_at(col, row, 1, t);
             t = stage_object_tile_at(col, row, 2, t);
@@ -3778,6 +4413,93 @@ static u8 combat_pending_spawns(void) {
     for (u8 i = 0; i < gs.stage_spawn_count; ++i)
         if (gs.spawn_slots[i].active) count++;
     return count;
+}
+
+static void encounter_style_director_reset(void) {
+    gs.encounter_style_rank = 0;
+    gs.encounter_pressure = 0;
+    gs.encounter_crowd = 0;
+    gs.encounter_momentum = 0;
+    gs.encounter_finish_bias = 0;
+}
+
+static void encounter_style_director_update(void) {
+    u8 pressure = campaign_adaptive_pressure(gs.campaign_stage);
+    u8 crowd = combat_minions_alive();
+    u8 momentum = 0;
+    u8 finish = 0;
+    u8 style_score;
+
+    if (gs.boss_awake) {
+        pressure = (u8)(pressure + gs.boss_phase + gs.boss_threat);
+        if (gs.boss_windup > 0) pressure++;
+    }
+    if (gs.stage_hazard_active > 0) pressure = (u8)(pressure + 2 + gs.stage_hazard_power);
+    if (gs.player_hp <= 2) pressure += 2;
+    if (gs.hit_stun > 0) pressure++;
+    if (pressure > 9) pressure = 9;
+
+    crowd = (u8)(crowd + combat_pending_spawns());
+    if (gs.stage_wave_goal > 3) crowd++;
+    if (crowd > 9) crowd = 9;
+
+    momentum = (u8)(gs.combo_count * 2u + (gs.beat_perfect ? 2u : 0u));
+    momentum = (u8)(momentum + (u8)(gs.dodge_read_total > 6 ? 6 : gs.dodge_read_total));
+    if (gs.nanocell_boost_timer > 0) momentum += 2;
+    if (gs.duel_first_strike_timer > 0) momentum++;
+    if (gs.attack_timer > 0 && gs.attack_queued == 0) momentum++;
+    if (gs.hit_stun > 0 && momentum > 0) momentum--;
+    if (momentum > 9) momentum = 9;
+
+    if (gs.boss_awake) {
+        u8 boss_max = (gs.boss_phase == 1) ? gs.stage_boss_hp_p1
+                    : (gs.boss_phase == 2) ? gs.stage_boss_hp_p2 : gs.stage_boss_hp_p3;
+        if (gs.boss_phase >= 3) finish += 2;
+        if (gs.boss_hp <= (u8)(boss_max / 2u)) finish += 2;
+        if (gs.boss_stun > 0) finish += 2;
+        if (gs.combo_count >= (PLAYER_FINISHER_COMBO - 1)) finish += 2;
+        if (gs.nanocell_boost_timer > 0) finish += 1;
+    }
+    if (finish > 9) finish = 9;
+
+    style_score = (u8)(momentum + finish + (gs.rei_form / 2u) + (gs.rei_style_adaptation > gs.rei_style_pressure));
+    style_score = (u8)(style_score + (narrative_dominant_moral_index() != 0));
+    style_score = (u8)(style_score + (pressure / 2u));
+    if (crowd >= 6 && style_score > 0) style_score--;
+
+    gs.encounter_pressure = pressure;
+    gs.encounter_crowd = crowd;
+    gs.encounter_momentum = momentum;
+    gs.encounter_finish_bias = finish;
+    if (style_score >= 14) gs.encounter_style_rank = 4;
+    else if (style_score >= 11) gs.encounter_style_rank = 3;
+    else if (style_score >= 8) gs.encounter_style_rank = 2;
+    else if (style_score >= 5) gs.encounter_style_rank = 1;
+    else gs.encounter_style_rank = 0;
+}
+
+static const char *encounter_style_rank_label(void) {
+    switch (gs.encounter_style_rank) {
+        case 0: return "HUNT";
+        case 1: return "ASCENT";
+        case 2: return "APEX";
+        case 3: return "MYTHIC";
+        default: return "OMEGA";
+    }
+}
+
+static const char *encounter_director_prompt(void) {
+    if (gs.player_hp <= 1 && gs.nanocell_count > 0) return "SURGE OR BREAK";
+    if (gs.boss_stun > 0) return "CRACK THE CROWN";
+    if (gs.stage_hazard_active > 0) return stage_hazard_prompt();
+    if (gs.combo_count >= (PLAYER_FINISHER_COMBO - 1) && gs.boss_awake) return "ONE HIT TO FINISH";
+    if (gs.boss_windup > 0 && gs.boss_threat >= 2) return "CUT THE ANGLE";
+    if (combat_minions_alive() >= 3) return "CLEAR THE SWARM";
+    if (gs.encounter_style_rank >= 4) return "HOLD MYTHIC PRESSURE";
+    if (gs.encounter_pressure >= 6) return "BREATHE THEN CUT";
+    if (gs.encounter_momentum >= 6) return "KEEP THE COMBO HOT";
+    if (gs.encounter_finish_bias >= 4) return "PRESS THE LAST FORM";
+    return campaign_stage_pressure_line(gs.campaign_stage);
 }
 
 static u8 attack_hits_target(s16 player_center, u8 facing_left, s16 target_center, u8 forward_range, u8 rear_range) {
@@ -4026,11 +4748,20 @@ static u8 combat_camera_update(void) {
 
 static const char *boss_attack_label(u8 type) {
     switch (type) {
-        case BOSS_ATK_SWEEP: return "SWEEP";
-        case BOSS_ATK_SPIT:  return "SPIT";
-        case BOSS_ATK_SLAM:  return "SLAM";
-        case BOSS_ATK_TIDAL: return "TIDAL";
+        case BOSS_ATK_SWEEP: return (gs.stage_boss_style == 3) ? "GRAND SWEEP" : "REAPER SWEEP";
+        case BOSS_ATK_SPIT:  return (gs.boss_phase >= 2) ? "VENOM BURST" : "ACID SPIT";
+        case BOSS_ATK_SLAM:  return (gs.boss_phase >= 3) ? "CROWN SLAM" : "GRAVE SLAM";
+        case BOSS_ATK_TIDAL: return (gs.campaign_stage == 8) ? "BLOOM TIDE" : "VOID TIDE";
         default:             return "DUEL";
+    }
+}
+
+static const char *boss_banner_label(void) {
+    switch (gs.campaign_stage) {
+        case 6: return "LOGORA SPLITS SKY";
+        case 8: return "GOOLLOKI BLOOMS";
+        case 11: return "CROWN COURT RISES";
+        default: return "KAIJU TAKES STAGE";
     }
 }
 
@@ -4049,23 +4780,37 @@ static u8 boss_attack_threat(u8 type, u8 distance) {
 }
 
 static u8 boss_attack_windup_frames(u8 type) {
+    s16 frames;
     switch (type) {
-        case BOSS_ATK_SWEEP: return 16;
-        case BOSS_ATK_SPIT:  return 22;
-        case BOSS_ATK_SLAM:  return 26;
-        case BOSS_ATK_TIDAL: return 18;
-        default:             return 16;
+        case BOSS_ATK_SWEEP: frames = 16; break;
+        case BOSS_ATK_SPIT:  frames = 22; break;
+        case BOSS_ATK_SLAM:  frames = 26; break;
+        case BOSS_ATK_TIDAL: frames = 18; break;
+        default:             frames = 16; break;
     }
+    if (boss_motion_kind() == 1 && type == BOSS_ATK_SWEEP) frames -= 2;
+    if (boss_motion_kind() == 2 && type == BOSS_ATK_TIDAL) frames -= 2;
+    frames -= (s16)(cosmetic_profile_stage_flux() / 2u);
+    if (boss_subjective_contact_bias() >= 5) frames -= 1;
+    if (frames < 10) frames = 10;
+    return (u8)frames;
 }
 
 static u8 boss_attack_recover_frames(u8 type) {
+    s16 frames;
     switch (type) {
-        case BOSS_ATK_SWEEP: return 18;
-        case BOSS_ATK_SPIT:  return 14;
-        case BOSS_ATK_SLAM:  return 24;
-        case BOSS_ATK_TIDAL: return 20;
-        default:             return 16;
+        case BOSS_ATK_SWEEP: frames = 18; break;
+        case BOSS_ATK_SPIT:  frames = 14; break;
+        case BOSS_ATK_SLAM:  frames = 24; break;
+        case BOSS_ATK_TIDAL: frames = 20; break;
+        default:             frames = 16; break;
     }
+    if (boss_motion_kind() == 1 && type == BOSS_ATK_SPIT) frames += 2;
+    if (boss_motion_kind() == 2 && type == BOSS_ATK_SLAM) frames -= 2;
+    frames += (s16)(cosmetic_profile_instability() / 2u);
+    if (boss_subjective_contact_bias() >= 6 && frames > 12) frames -= 2;
+    if (frames < 10) frames = 10;
+    return (u8)frames;
 }
 
 static u8 boss_current_range(u8 type) {
@@ -4075,6 +4820,78 @@ static u8 boss_current_range(u8 type) {
         case BOSS_ATK_SLAM:  return BOSS_SLAM_RANGE;
         case BOSS_ATK_TIDAL: return BOSS_SPIT_RANGE;
         default:             return BOSS_SWEEP_RANGE;
+    }
+}
+
+static void boss_attack_pose_profile(s8 *upper_bias, s8 *lower_bias, s8 *spread_bias, s8 *twist_bias, s8 *jaw_bias, s8 *flare_bias) {
+    u8 flux = cosmetic_profile_stage_flux();
+    u8 instability = cosmetic_profile_instability();
+    u8 motion = boss_motion_kind();
+    *upper_bias = 0;
+    *lower_bias = 0;
+    *spread_bias = 0;
+    *twist_bias = 0;
+    *jaw_bias = 0;
+    *flare_bias = 0;
+    if (gs.boss_windup > 0) {
+        switch (gs.boss_atk_type) {
+            case BOSS_ATK_SWEEP:
+                *upper_bias = -1;
+                *spread_bias = (s8)(1 + (motion == 1));
+                *twist_bias = (s8)(1 + (flux >= 4));
+                *flare_bias = (s8)(1 + (motion == 1));
+                break;
+            case BOSS_ATK_SPIT:
+                *upper_bias = (s8)(-2 - (motion == 1));
+                *jaw_bias = (s8)(2 + (flux >= 4));
+                *twist_bias = (s8)((motion == 2) ? 1 : 0);
+                break;
+            case BOSS_ATK_SLAM:
+                *upper_bias = (s8)(-2 - (gs.boss_phase >= 3));
+                *lower_bias = (s8)(2 + (instability >= 4));
+                *spread_bias = 1;
+                break;
+            case BOSS_ATK_TIDAL:
+                *upper_bias = -1;
+                *lower_bias = 1;
+                *twist_bias = (s8)(((gs.anim_tick & 0x04) != 0) ? 1 : -1);
+                *jaw_bias = 1;
+                *flare_bias = (s8)(2 + (motion == 2));
+                break;
+            default:
+                break;
+        }
+    } else if (gs.boss_recover > 0) {
+        switch (gs.boss_atk_type) {
+            case BOSS_ATK_SWEEP:
+                *lower_bias = 1;
+                *spread_bias = -1;
+                *twist_bias = -1;
+                break;
+            case BOSS_ATK_SPIT:
+                *upper_bias = 1;
+                *lower_bias = 1;
+                *jaw_bias = -1;
+                break;
+            case BOSS_ATK_SLAM:
+                *upper_bias = 1;
+                *lower_bias = -1;
+                *twist_bias = (s8)((motion == 1) ? 1 : 0);
+                break;
+            case BOSS_ATK_TIDAL:
+                *upper_bias = 1;
+                *twist_bias = (s8)(((gs.anim_tick & 0x04) != 0) ? -1 : 1);
+                *flare_bias = -1;
+                break;
+            default:
+                break;
+        }
+    }
+    if (flux >= 5 && *flare_bias != 0) {
+        *flare_bias += (s8)((*flare_bias > 0) ? 1 : -1);
+    }
+    if (instability >= 5 && *jaw_bias == 0 && gs.boss_phase >= 3) {
+        *jaw_bias = 1;
     }
 }
 
@@ -4154,6 +4971,7 @@ static void hud_draw(void) {
     plat_set_bkg_tile(6, HUD_ROW, TILE_CLIFF_A);
     plat_set_bkg_tile(9, HUD_ROW, TILE_CLIFF_B);
     plat_set_bkg_tile(12, HUD_ROW, TILE_CLIFF_A);
+    plat_set_bkg_tile(18, HUD_ROW, TILE_CLIFF_B);
     bg_draw_text(7, HUD_ROW, "NC");
     bg_draw_text(13, HUD_ROW, "B");
 
@@ -4188,23 +5006,26 @@ static void hud_draw(void) {
     if (gs.phase == PHASE_COMBAT) {
         if (gs.banner_timer > 0) {
             switch (gs.banner_kind) {
-                case BANNER_BOSS_RISE:  bg_draw_text(0, 1, "LEVIATHAN RISES"); break;
-                case BANNER_WAVE_CLEAR: bg_draw_text(0, 1, "WAVE BROKEN"); break;
-                case BANNER_DODGE:      bg_draw_text(0, 1, "DODGE CLEAN"); break;
-                case BANNER_PERFECT:    bg_draw_text(0, 1, "PERFECT STRIKE"); break;
-                case BANNER_FINISHER:   bg_draw_text(0, 1, "FINISHER WINDOW"); break;
-                case BANNER_BOSS_STUN:  bg_draw_text(0, 1, "BOSS STUNNED"); break;
-                case BANNER_SURGE:      bg_draw_text(0, 1, "NANOCELL SURGE"); break;
-                case BANNER_FIRST:      bg_draw_text(0, 1, "FIRST STRIKE"); break;
-                case BANNER_HAZARD:     bg_draw_text(0, 1, "STAGE HAZARD"); break;
-                default:                bg_draw_text(0, 1, "DUEL LIVE"); break;
+                case BANNER_BOSS_RISE:  bg_draw_text_centered(1, boss_banner_label()); break;
+                case BANNER_WAVE_CLEAR: bg_draw_text_centered(1, "WAVE BROKEN"); break;
+                case BANNER_DODGE:      bg_draw_text_centered(1, "DODGE CLEAN"); break;
+                case BANNER_PERFECT:    bg_draw_text_centered(1, "PERFECT STRIKE"); break;
+                case BANNER_FINISHER:   bg_draw_text_centered(1, "FINISHER WINDOW"); break;
+                case BANNER_BOSS_STUN:  bg_draw_text_centered(1, "BOSS STUNNED"); break;
+                case BANNER_SURGE:      bg_draw_text_centered(1, "NANOCELL SURGE"); break;
+                case BANNER_FIRST:      bg_draw_text_centered(1, "FIRST STRIKE"); break;
+                case BANNER_HAZARD:     bg_draw_text_centered(1, "STAGE HAZARD"); break;
+                default:                bg_draw_text_centered(1, "DUEL LIVE"); break;
             }
-            if (gs.banner_kind == BANNER_BOSS_STUN) bg_draw_text(0, 2, "A PRESS ADVANTAGE");
-            else if (gs.banner_kind == BANNER_DODGE) bg_draw_text(0, 2, "A COUNTER NOW");
-            else if (gs.banner_kind == BANNER_SURGE) bg_draw_text(0, 2, "A PRESS / B CUT IN");
-            else if (gs.banner_kind == BANNER_FIRST) bg_draw_text(0, 2, "CENTER WON TAKE SPACE");
-            else if (gs.banner_kind == BANNER_HAZARD) bg_draw_text(0, 2, stage_hazard_prompt());
-            else bg_draw_text(0, 2, "KEEP CENTER LINE");
+            if (gs.banner_kind == BANNER_BOSS_STUN) bg_draw_text_centered(2, "A PRESS ADVANTAGE");
+            else if (gs.banner_kind == BANNER_DODGE) bg_draw_text_centered(2, "A COUNTER NOW");
+            else if (gs.banner_kind == BANNER_SURGE) bg_draw_text_centered(2, "A PRESS / B CUT IN");
+            else if (gs.banner_kind == BANNER_FIRST) bg_draw_text_centered(2, "CENTER WON TAKE SPACE");
+            else if (gs.banner_kind == BANNER_HAZARD) bg_draw_text_centered(2, stage_hazard_prompt());
+            else bg_draw_text_centered(2, "KEEP CENTER LINE");
+        } else if (gs.stage_hazard_active > 0) {
+            bg_draw_text_centered(1, "HAZARD LANE LIVE");
+            bg_draw_text_centered(2, stage_hazard_prompt());
         } else if (gs.combo_timer > 0 || gs.dodge_read_total > 0) {
             bg_draw_text(0, 1, "FLOW READ TICK");
             bg_draw_text(0, 2, "TH");
@@ -4213,29 +5034,29 @@ static void hud_draw(void) {
             bg_draw_number_2(7, 2, gs.combo_count);
             bg_draw_text(10, 2, "RD");
             bg_draw_number_2(12, 2, (u8)(gs.dodge_read_total % 100));
-            bg_draw_text(15, 2, "AP");
-            bg_draw_number_2(17, 2, adaptive_pressure);
+            bg_draw_text(15, 2, (gs.stage_hazard_timer < 100) ? "HZ" : "AP");
+            bg_draw_number_2(17, 2, (gs.stage_hazard_timer < 100) ? gs.stage_hazard_timer : adaptive_pressure);
         } else if (gs.duel_first_strike_timer > 0) {
-            bg_draw_text(0, 1, "DUEL DROP");
-            bg_draw_text(0, 2, "A CLAIM FIRST HIT");
+            bg_draw_text_centered(1, "DUEL DROP");
+            bg_draw_text_centered(2, "A CLAIM FIRST HIT");
         } else if (gs.boss_windup > 0) {
-            bg_draw_text(0, 1, boss_attack_label(gs.boss_atk_type));
-            if (gs.boss_threat >= 2) bg_draw_text(0, 2, "B DODGE NOW");
-            else if (gs.boss_threat == 1) bg_draw_text(0, 2, "EDGE BAIT / STEP");
-            else bg_draw_text(0, 2, "A PUNISH OPEN");
+            bg_draw_text_centered(1, boss_attack_label(gs.boss_atk_type));
+            if (gs.boss_threat >= 2) bg_draw_text_centered(2, "B DODGE NOW");
+            else if (gs.boss_threat == 1) bg_draw_text_centered(2, "EDGE BAIT / STEP");
+            else bg_draw_text_centered(2, "A PUNISH OPEN");
         } else if (gs.boss_stun > 0) {
-            bg_draw_text(0, 1, "STUN");
-            bg_draw_text(0, 2, "A PRESS ADVANTAGE");
+            bg_draw_text_centered(1, "STUN");
+            bg_draw_text_centered(2, "A PRESS ADVANTAGE");
         } else if (gs.dodge_timer > 0) {
-            bg_draw_text(0, 1, "DODGE");
-            bg_draw_text(0, 2, "A COUNTER WINDOW");
+            bg_draw_text_centered(1, "DODGE");
+            bg_draw_text_centered(2, "A COUNTER WINDOW");
         } else if (gs.perfect_flash_timer > 0) {
-            bg_draw_text(0, 1, "PERFECT");
-            bg_draw_text(0, 2, "A CHAIN THE COMBO");
+            bg_draw_text_centered(1, "PERFECT");
+            bg_draw_text_centered(2, "A CHAIN THE COMBO");
         } else if (gs.nanocell_boost_timer > 0) {
-            bg_draw_text(0, 1, "POWER");
+            bg_draw_text_centered(1, "POWER SURGE");
             bg_draw_number_2(6, 1, (u8)(gs.nanocell_boost_timer / 10));
-            bg_draw_text(0, 2, "A PRESS / B CUT IN");
+            bg_draw_text_centered(2, "A PRESS / B CUT IN");
         } else {
             bg_draw_text(0, 1, "PHASE");
             plat_set_bkg_tile(6, 1, TILE_FONT_0 + gs.boss_phase);
@@ -4243,27 +5064,20 @@ static void hud_draw(void) {
             bg_draw_number_2(12, 1, combat_pending_spawns());
             bg_draw_text(14, 1, "F");
             bg_draw_number_2(15, 1, (u8)(gs.rei_form + 1));
-            plat_set_bkg_tile(17, 1, TILE_FONT_0 + (gs.combo_count % 10));
+            bg_draw_text(17, 1, "S");
+            plat_set_bkg_tile(18, 1, TILE_FONT_0 + (gs.encounter_style_rank % 10));
+            plat_set_bkg_tile(19, 1, TILE_FONT_0 + (gs.combo_count % 10));
             if (gs.player_hp <= 2) {
                 bg_draw_text(0, 2, (gs.nanocell_count > 0) ? "LOW HP SEL SURGE" : "LOW HP BAIT CLEAN");
             } else if (attack_hits_target((s16)(gs.player_x * TILE_W + 8), gs.player_facing, (s16)(gs.boss_x + 16), PLAYER_ATTACK_FRONT + 4, PLAYER_ATTACK_REAR)) {
-                bg_draw_text(0, 2, "A BOSS IN RANGE");
+                bg_draw_text_centered(2, "A BOSS IN RANGE");
             } else if (combat_minions_alive() > 0) {
-                bg_draw_text(0, 2, "CLEAR ADDS KEEP SPACE");
+                bg_draw_text_centered(2, "CLEAR ADDS KEEP SPACE");
             } else if (gs.nanocell_count > 0 && boss_distance <= BOSS_SPIT_RANGE) {
-                bg_draw_text(0, 2, "SET ANGLE / SEL SURGE");
+                bg_draw_text_centered(2, "SET ANGLE / SEL SURGE");
             } else {
-                switch ((gs.anim_tick >> 5) % 3) {
-                    case 0:
-                        bg_draw_text(0, 2, campaign_stage_hazard_line(gs.campaign_stage));
-                        break;
-                    case 1:
-                        bg_draw_text(0, 2, campaign_stage_terrain_line(gs.campaign_stage));
-                        break;
-                    default:
-                        bg_draw_text(0, 2, campaign_stage_pressure_line(gs.campaign_stage));
-                        break;
-                }
+                if ((gs.anim_tick & 0x20) == 0) bg_draw_text_centered(2, encounter_director_prompt());
+                else bg_draw_text_centered(2, encounter_style_rank_label());
             }
         }
     }
@@ -4290,8 +5104,11 @@ static void hud_draw(void) {
  * Base tile set selected by animation state.                           */
 static void spr_draw_rei(void) {
     u8 base_tile = SPR_REI_IDLE;
+    u8 instability = cosmetic_profile_instability();
+    u8 flux = cosmetic_profile_stage_flux();
     s8 form_x = 0;
     s8 form_y = 0;
+    s8 profile_tilt = cosmetic_profile_rei_tilt();
     s8 row_x_offset[3] = {0, 0, 0};
     s8 row_y_offset[3] = {0, 0, 0};
     s8 idle_pulse = 0;
@@ -4318,10 +5135,15 @@ static void spr_draw_rei(void) {
     if (gs.rei_form >= 8) form_x += 1;
     if (gs.rei_form >= 10 && (gs.anim_tick & 0x02)) form_y--;
     if (gs.rei_persona == 5 && gs.player_anim > 0) form_x += gs.player_facing ? -1 : 1;
+    form_x += profile_tilt;
+    if (instability >= 4 && gs.player_anim == 0) form_y--;
+    if (flux >= 5 && (gs.anim_tick & 0x04)) form_x += (s8)(gs.player_facing ? -1 : 1);
 
     idle_pulse = (s8)((((gs.anim_tick >> 2) + gs.run_serial) & 0x03) - 1);
     idle_sway = (s8)((((gs.anim_tick >> 3) + gs.rei_persona) & 0x03) - 1);
     run_phase = (s8)(((gs.anim_tick >> 1) & 0x03) - 1);
+    idle_sway += profile_tilt;
+    if (instability >= 5 && gs.attack_timer == 0) idle_pulse--;
 
     if (gs.attack_timer == 0 && gs.player_anim == 0 && gs.hit_stun == 0 && gs.dodge_timer == 0) {
         row_y_offset[0] = (s8)(-1 + (idle_pulse > 0 ? 0 : idle_pulse));
@@ -4353,6 +5175,18 @@ static void spr_draw_rei(void) {
         row_y_offset[0] -= 1;
         row_y_offset[2] += 1;
     }
+    if (flux >= 3) {
+        row_x_offset[0] += profile_tilt;
+        row_x_offset[2] -= profile_tilt;
+    }
+    if (instability >= 4) {
+        row_y_offset[0]--;
+        row_y_offset[2]++;
+    }
+    if (flux >= 5 && gs.attack_timer > 0) {
+        row_x_offset[1] += (s8)(gs.player_facing ? -1 : 1);
+        row_y_offset[1]--;
+    }
 
     /* 6 tiles: tile row 0 = head pair, row 1 = torso pair, row 2 = legs */
     for (u8 row = 0; row < 3; ++row) {
@@ -4369,12 +5203,24 @@ static void spr_draw_boss(void) {
     if (gs.boss_phase == 0) return;
     u8 base_tile = (gs.boss_phase == 1) ? SPR_BOSS_A
                  : (gs.boss_phase == 2) ? SPR_BOSS_B : SPR_BOSS_C;
+    u8 instability = cosmetic_profile_instability();
+    u8 flux = cosmetic_profile_stage_flux();
+    BossVisualRig rig;
     s16 bx = gs.boss_x;
     s16 by = (s16)(SCR_H - 16 - 32);  /* boss stands near ground, two tile rows tall */
     s8 breath = 0;
     s8 spine_sway = 0;
     s8 tide_pull = 0;
     s8 jaw_drop = 0;
+    s8 upper_attack_bias = 0;
+    s8 lower_attack_bias = 0;
+    s8 attack_spread = 0;
+    s8 attack_twist = 0;
+    s8 attack_jaw = 0;
+    s8 attack_flare = 0;
+    u8 motion_kind = boss_motion_kind();
+    boss_visual_rig(&rig);
+    boss_attack_pose_profile(&upper_attack_bias, &lower_attack_bias, &attack_spread, &attack_twist, &attack_jaw, &attack_flare);
     if (!gs.boss_awake) {
         by += 4;
         if (gs.anim_tick & 0x04) return;
@@ -4391,6 +5237,12 @@ static void spr_draw_boss(void) {
     spine_sway = (s8)((((gs.anim_tick >> 2) + gs.boss_phase + gs.boss_subarchetype) & 0x03) - 1);
     tide_pull = (s8)((gs.boss_phase >= 2) ? ((((gs.anim_tick >> 4) + gs.stage_boss_style) & 0x01) ? 1 : -1) : 0);
     jaw_drop = (s8)((gs.boss_windup > 0 || gs.boss_phase >= 3) ? 1 : 0);
+    bx += (s16)((rig.silhouette_width >= 32) ? -1 : 0);
+    by -= (s16)((rig.silhouette_height >= 56) ? 1 : 0);
+    if (flux >= 3 && gs.boss_awake) bx += (s16)(((gs.anim_tick >> 2) & 0x01) ? 1 : -1);
+    if (instability >= 4) breath++;
+    if (flux >= 4) spine_sway += (s8)(((gs.anim_tick >> 3) & 0x01) ? 1 : -1);
+    if (flux >= 5 && gs.boss_phase >= 2) jaw_drop++;
     bx = camera_apply_x(bx);
     by = camera_apply_y(by);
     u8 id_base = 26;
@@ -4398,27 +5250,68 @@ static void spr_draw_boss(void) {
         for (u8 col = 0; col < 4; ++col)
             {
             u8 slot = (u8)(row * 4 + col);
+            u8 is_outer = (u8)((col == 0) || (col == 3));
+            u8 is_inner = (u8)((col == 1) || (col == 2));
             s8 tile_breath = (s8)((row == 0) ? (-breath - jaw_drop) : (breath + jaw_drop));
             s8 tile_sway = (s8)((row == 0) ? (spine_sway * (s8)(col >= 2 ? 1 : -1)) : (spine_sway * (s8)(col < 2 ? -1 : 1)));
+            s8 style_x = 0;
+            s8 style_y = 0;
+            s8 attack_x = 0;
+            s8 attack_y = 0;
             tile_sway += (s8)(tide_pull * (s8)(col - 1));
+            if (flux >= 3 && motion_kind == 0) {
+                style_x = (s8)((col < 2 ? -1 : 1) * (1 + (instability >= 5 && (row == 0))));
+                style_y = (s8)((row == 0) ? -1 : 1);
+            }
+            if (motion_kind == 1) {
+                style_x = (s8)(((col == 0 || col == 3) ? 2 : 0) * ((col < 2) ? -1 : 1));
+                if ((gs.anim_tick & 0x04) != 0) style_x = (s8)(style_x + ((col < 2) ? -1 : 1));
+                style_y = (s8)((row == 0) ? (-2 - ((col == 1 || col == 2) ? 1 : 0)) : (col == 1 || col == 2 ? -1 : 1));
+                if (gs.boss_windup > 0) {
+                    style_x = (s8)(style_x * 2);
+                    style_y = (s8)(style_y - 1);
+                }
+            } else if (motion_kind == 2) {
+                style_y = (s8)((row == 0) ? (-1 - ((gs.anim_tick & 0x08) ? 1 : 0)) : (2 + ((gs.anim_tick & 0x08) ? -1 : 1)));
+                style_x = (s8)((col == 0 || col == 3) ? ((gs.anim_tick & 0x04) ? 1 : -1) : 0);
+                if (gs.boss_windup > 0) {
+                    style_y = (s8)(style_y + 2);
+                    style_x = (s8)(style_x + (col < 2 ? -1 : 1));
+                }
+            }
+            if (flux >= 4 && row == 0 && (col == 1 || col == 2)) style_y--;
+            if (instability >= 5 && row == 1) style_y++;
+            attack_x += (s8)((col < 2) ? -attack_spread : attack_spread);
+            attack_x += (s8)((row == 0) ? ((col < 2) ? -attack_twist : attack_twist)
+                                          : ((col < 2) ? attack_twist : -attack_twist));
+            if (is_outer) attack_x += (s8)((col == 0) ? -attack_flare : attack_flare);
+            attack_y += (s8)((row == 0) ? upper_attack_bias : lower_attack_bias);
+            if (row == 0 && is_inner) attack_y += attack_jaw;
             plat_set_sprite(id_base + row * 4 + col,
-                            bx + col * TILE_W + boss_tile_offset_x(slot) + tile_sway,
-                            (u8)(by + row * TILE_H + boss_tile_offset_y(slot) + tile_breath),
+                            bx + col * TILE_W + boss_tile_offset_x(slot) + rig.tile_x[slot] + tile_sway + style_x + attack_x,
+                            (u8)(by + row * TILE_H + boss_tile_offset_y(slot) + rig.tile_y[slot] + tile_breath + style_y + attack_y),
                             base_tile + boss_tile_index(slot), boss_tile_flags(slot));
             }
 }
 
 /* Minions — each is 2×2 tiles, 4 sprite slots each */
 static void spr_draw_minions(void) {
+    u8 instability = cosmetic_profile_instability();
+    u8 flux = cosmetic_profile_stage_flux();
+    u8 motion_kind = boss_motion_kind();
     for (u8 i = 0; i < MINION_MAX; ++i) {
         u8 flags = 0;
         s8 head_bob = 0;
         s8 body_sway = 0;
         s8 claw_spread = 0;
+        s8 profile_sway = 0;
+        s8 profile_lift = 0;
+        MinionVisualRig rig;
         if (!gs.minions[i].active) continue;
         u8 id_base = 6 + i * 4;
         s16 mx = gs.minions[i].x;
         u8  my = gs.minions[i].y;
+        minion_visual_rig(i, &rig);
         if (gs.minions[i].attack_windup > 0) {
             mx += (gs.minions[i].vx >= 0) ? 1 : -1;
             if (my > 1) my -= 2;
@@ -4433,31 +5326,72 @@ static void spr_draw_minions(void) {
         body_sway = (s8)((((gs.minions[i].anim >> 2) + gs.minions[i].class_major) & 0x03) - 1);
         if (gs.minions[i].vx < 0) body_sway = (s8)-body_sway;
         claw_spread = (s8)((gs.minions[i].attack_windup > 0) ? 1 : (((gs.minions[i].anim >> 3) & 0x01) ? 1 : 0));
+        profile_sway = cosmetic_profile_swarm_sway(i);
+        if (rig.contact_bias >= 5) claw_spread++;
+        if (motion_kind == 1) {
+            profile_lift = (s8)(((i + gs.anim_tick) & 0x02) ? -1 : 0);
+            if (flux >= 4) profile_sway += (s8)((i & 0x01) ? 1 : -1);
+        } else if (motion_kind == 2) {
+            profile_lift = (s8)((((gs.anim_tick >> 2) + i) & 0x01) ? 1 : 0);
+            if (instability >= 4) claw_spread++;
+        }
+        if (flux >= 5 && gs.minions[i].attack_windup > 0) profile_lift--;
+        if (instability >= 5 && gs.minions[i].attack_recover > 0) profile_lift++;
         if (((gs.minions[i].class_major + gs.minions[i].class_minor) & 0x01) != 0) flags ^= 0x20;
-        plat_set_sprite(id_base+0, mx + body_sway - claw_spread, my - head_bob,           SPR_MINION+0 + (gs.minions[i].class_minor & 0x01), flags);
-        plat_set_sprite(id_base+1, mx+TILE_W + body_sway + claw_spread, my - head_bob,     SPR_MINION+1, flags);
-        plat_set_sprite(id_base+2, mx - body_sway - claw_spread, my+TILE_H + (head_bob > 0 ? 0 : 1), SPR_MINION+2, flags);
-        plat_set_sprite(id_base+3, mx+TILE_W - body_sway + claw_spread, my+TILE_H + (head_bob > 0 ? 0 : 1), SPR_MINION+3 - (gs.minions[i].class_mid & 0x01), flags);
+        plat_set_sprite(id_base+0,
+                        mx + body_sway + profile_sway - claw_spread + rig.tile_x[0],
+                        my - head_bob + profile_lift + rig.tile_y[0],
+                        SPR_MINION+0 + (gs.minions[i].class_minor & 0x01), flags);
+        plat_set_sprite(id_base+1,
+                        mx+TILE_W + body_sway + profile_sway + claw_spread + rig.tile_x[1],
+                        my - head_bob - profile_lift + rig.tile_y[1],
+                        SPR_MINION+1, flags);
+        plat_set_sprite(id_base+2,
+                        mx - body_sway - profile_sway - claw_spread + rig.tile_x[2],
+                        my+TILE_H + (head_bob > 0 ? 0 : 1) + profile_lift + rig.tile_y[2],
+                        SPR_MINION+2, flags);
+        plat_set_sprite(id_base+3,
+                        mx+TILE_W - body_sway - profile_sway + claw_spread + rig.tile_x[3],
+                        my+TILE_H + (head_bob > 0 ? 0 : 1) - profile_lift + rig.tile_y[3],
+                        SPR_MINION+3 - (gs.minions[i].class_mid & 0x01), flags);
     }
 }
 
 static void spr_draw_narrative_portraits(void) {
     u8 rei_flip = (gs.rei_persona & 0x01) ? 0x20 : 0x00;
     u8 boss_base = (gs.boss_phase <= 1) ? SPR_BOSS_A : (gs.boss_phase == 2) ? SPR_BOSS_B : SPR_BOSS_C;
-    s16 rei_bx = 8;
-    s16 rei_by = 36;
-    s16 boss_bx = 112;
-    s16 boss_by = 24;
+    u8 motion_kind = boss_motion_kind();
+    s8 rei_tilt = cosmetic_profile_rei_tilt();
+    s8 portrait_bob = cosmetic_profile_portrait_bob();
+    u8 instability = cosmetic_profile_instability();
+    u8 flux = cosmetic_profile_stage_flux();
+    s16 rei_bx = (s16)(8 + rei_tilt);
+    s16 rei_by = (s16)(36 - portrait_bob);
+    s16 boss_bx = (s16)(112 + ((flux >= 4) ? 1 : 0));
+    s16 boss_by = (s16)(24 - ((instability >= 4) ? 1 : 0));
     for (u8 row = 0; row < 3; ++row) {
-        plat_set_sprite(row * 2, rei_bx, (u8)(rei_by + row * 8), SPR_REI_IDLE + row * 2, rei_flip);
-        plat_set_sprite(row * 2 + 1, rei_bx + TILE_W, (u8)(rei_by + row * 8), SPR_REI_IDLE + row * 2 + 1, rei_flip);
+        s8 row_shift = (s8)((flux >= 3 && row == 0) ? rei_tilt : 0);
+        s8 row_bob = (s8)((instability >= 5 && row == 1) ? -1 : 0);
+        plat_set_sprite(row * 2, rei_bx + row_shift, (u8)(rei_by + row * 8 + row_bob), SPR_REI_IDLE + row * 2, rei_flip);
+        plat_set_sprite(row * 2 + 1, rei_bx + TILE_W + row_shift, (u8)(rei_by + row * 8 - row_bob), SPR_REI_IDLE + row * 2 + 1, rei_flip);
     }
     for (u8 row = 0; row < 2; ++row) {
         for (u8 col = 0; col < 4; ++col) {
             u8 slot = (u8)(row * 4 + col);
+            s8 style_x = 0;
+            s8 style_y = 0;
+            if (motion_kind == 1) {
+                style_x = (s8)(((col == 0 || col == 3) ? 1 : 0) * ((col < 2) ? -1 : 1));
+                style_y = (s8)((row == 0) ? -1 : 0);
+            } else if (motion_kind == 2) {
+                style_x = (s8)((col == 0 || col == 3) ? ((col < 2) ? -1 : 1) : 0);
+                style_y = (s8)((row == 0) ? -1 : 1);
+            }
+            if (flux >= 4 && row == 0) style_y--;
+            if (instability >= 5 && row == 1) style_y++;
             plat_set_sprite(26 + slot,
-                            boss_bx + col * TILE_W + boss_tile_offset_x(slot),
-                            (u8)(boss_by + row * TILE_H + boss_tile_offset_y(slot)),
+                            boss_bx + col * TILE_W + boss_tile_offset_x(slot) + style_x,
+                            (u8)(boss_by + row * TILE_H + boss_tile_offset_y(slot) + style_y),
                             boss_base + boss_tile_index(slot), boss_tile_flags(slot));
         }
     }
@@ -4465,41 +5399,55 @@ static void spr_draw_narrative_portraits(void) {
 
 /* FX sprites */
 static void spr_draw_fx(void) {
+    u8 flux = cosmetic_profile_stage_flux();
+    u8 instability = cosmetic_profile_instability();
     if (gs.fx_hit_timer > 0) {
         s16 fx_hit_x = camera_apply_x(gs.fx_hit_x);
         s16 fx_hit_y = camera_apply_y(gs.fx_hit_y);
+        if (flux >= 4) fx_hit_x += (s16)(((gs.anim_tick >> 1) & 0x01) ? 1 : -1);
+        if (instability >= 5) fx_hit_y -= 1;
         plat_set_sprite(34, fx_hit_x,          fx_hit_y,   SPR_FX_HIT+0, 0);
         plat_set_sprite(35, fx_hit_x+TILE_W,   fx_hit_y,   SPR_FX_HIT+1, 0);
     }
     if (gs.fx_nano_timer > 0) {
         s16 fx_nano_x = camera_apply_x(gs.fx_nano_x);
         s16 fx_nano_y = camera_apply_y(gs.fx_nano_y);
+        if (flux >= 3) fx_nano_y -= (s16)((gs.anim_tick & 0x02) ? 1 : 0);
+        if (instability >= 4) fx_nano_x += (s16)(((gs.anim_tick >> 1) & 0x01) ? 1 : -1);
         plat_set_sprite(36, fx_nano_x,          fx_nano_y,  SPR_FX_NANO+0, 0);
         plat_set_sprite(37, fx_nano_x+TILE_W,   fx_nano_y,  SPR_FX_NANO+1, 0);
     }
 }
 
 static void narrative_draw(void) {
-    bg_fill(TILE_BLANK);
-    bg_draw_text(0, 1, campaign_stage_name(gs.campaign_stage));
-    bg_draw_text(0, 2, narrative_path_line());
+    bg_draw_beach();
+    bg_fill_rect(0, 1, BKG_COLS, 15, TILE_BLANK);
+    bg_draw_panel(1, 1, 18, 5, TILE_BLANK, TILE_CLIFF_A, TILE_CLIFF_B);
+    bg_draw_panel(0, 8, BKG_COLS, 8, TILE_BLANK, TILE_GROUND_L, TILE_GROUND_R);
+    bg_draw_text_centered(1, campaign_stage_name(gs.campaign_stage));
+    bg_draw_text_centered(2, campaign_stage_cypher_label(gs.campaign_stage));
+    bg_draw_text_centered(3, narrative_path_line());
+    bg_draw_text_centered(4, campaign_boss_horror_genre(gs.campaign_stage));
     if (gs.narrative_page == 0) {
+        bg_draw_text_centered(9, campaign_stage_ecosystem(gs.campaign_stage));
         bg_draw_text(0, 10, narrative_stage_line_a());
         bg_draw_text(0, 11, narrative_stage_line_b());
         bg_draw_text(0, 12, narrative_stage_line_c());
-        bg_draw_text(0, 13, duel_mechanic_label(gs.stage_duel_mechanic));
-        bg_draw_text(0, 15, "A NEXT B SKIP");
+        bg_draw_text_centered(13, duel_mechanic_label(gs.stage_duel_mechanic));
+        bg_draw_text_centered(15, "A NEXT B SKIP");
     } else if (gs.narrative_page == 1) {
+        bg_draw_text_centered(9, campaign_stage_pressure_line(gs.campaign_stage));
         bg_draw_text(0, 9, narrative_choice_line_a());
         bg_draw_text(0, 10, narrative_choice_line_b());
         bg_draw_text(0, 12, narrative_choice_option(0));
         bg_draw_text(0, 13, narrative_choice_option(1));
-        bg_draw_text(0, 15, "L R PICK A LOCK");
+        bg_draw_text_centered(15, "L R PICK A LOCK");
     } else {
+        bg_draw_text_centered(9, campaign_stage_cypher_effect(gs.campaign_stage));
         bg_draw_text(0, 10, narrative_result_line_a());
         bg_draw_text(0, 12, narrative_result_line_b());
-        bg_draw_text(0, 13, narrative_path_line());
-        bg_draw_text(0, 15, "A DUEL B SKIP");
+        bg_draw_text_centered(13, narrative_path_line());
+        bg_draw_text_centered(15, "A DUEL B SKIP");
     }
     spr_hide_all();
     spr_draw_narrative_portraits();
@@ -4514,7 +5462,6 @@ static void narrative_init(void) {
     gs.audio_last_choice_cursor = 0xFF;
     narrative_seed_choice();
     narrative_draw();
-        bg_draw_text(0, 13, campaign_stage_cypher_label(gs.campaign_stage));
 }
 
 static int narrative_update(void) {
@@ -4567,6 +5514,41 @@ static void spr_draw_cinematic(void) {
                             92 + (2-col) * TILE_W, (u8)(by_pos + row * TILE_H),
                             SPR_CINEMATIC_B + row*3+col, 0x20);
         }
+}
+
+static const char *cinematic_cut_caption(u8 cut_frame) {
+    switch (cut_frame) {
+        case 0: return "SEA WALL TREMBLES";
+        case 1: return "A FIN BREAKS DAWN";
+        case 2: return "REI TAKES SHORE";
+        case 3: return "EYES LOCK IN SALT";
+        case 4: return "CLAW MEETS SPRAY";
+        case 5: return "BLADE THROUGHS FOAM";
+        case 6: return "KAIJU IMPACT";
+        default: return "THE DUEL BEGINS";
+    }
+}
+
+static const char *cinematic_cut_subtitle(u8 cut_frame) {
+    switch (cut_frame) {
+        case 0: return "MONSTER MOVIE DAWN";
+        case 1: return "HARBOR LEVIATHAN";
+        case 2: return "REI STANDS TIDEWARD";
+        case 3: return "TWO TITANS MEASURE";
+        case 4: return "THE SURF TAKES SIDES";
+        case 5: return "STEEL RHYTHM ANSWERS";
+        case 6: return "FOAM HIDES THE SKY";
+        default: return "PRESSURE CHOOSES FORM";
+    }
+}
+
+static void cinematic_draw_backdrop(void) {
+    bg_draw_beach();
+    bg_fill_rect(0, 14, BKG_COLS, 4, TILE_BLANK);
+    bg_draw_panel(0, 14, BKG_COLS, 4, TILE_BLANK, TILE_CLIFF_A, TILE_CLIFF_B);
+    bg_draw_text_centered(14, cinematic_cut_caption(gs.cut_frame));
+    bg_draw_text_centered(15, cinematic_cut_subtitle(gs.cut_frame));
+    bg_draw_text_centered(16, "B HOLD TO SKIP");
 }
 
 /* Hide all sprites (move off-screen) */
@@ -4641,7 +5623,7 @@ static void cinematic_init(void) {
     gs.cut_frame = 0;
     gs.cut_timer = 0;
     gs.skip_b_hold = 0;
-    bg_draw_beach();
+    cinematic_draw_backdrop();
     spr_draw_cinematic();
 }
 
@@ -4660,11 +5642,11 @@ static int cinematic_update(void) {
         gs.cut_timer = 0;
         gs.cut_frame++;
         /* Redraw background with slight variation to simulate camera cut */
-        bg_draw_beach();
+        cinematic_draw_backdrop();
         if (gs.cut_frame >= CUT_COUNT) return 1;
     }
     /* Animate water tiles on beat */
-    if ((gs.anim_tick % 8) == 0) bg_draw_beach();
+    if ((gs.anim_tick % 8) == 0) cinematic_draw_backdrop();
 
     spr_draw_cinematic();
     return 0;
@@ -4682,7 +5664,7 @@ static void title_draw_progress(void) {
     if (next_stage < CAMPAIGN_STAGE_COUNT) {
         bg_draw_text_centered(13, campaign_stage_name(next_stage));
         bg_draw_text_centered(14, campaign_boss_name(next_stage));
-        bg_draw_text_centered(15, campaign_stage_cypher_label(next_stage));
+        bg_draw_text_centered(15, campaign_boss_horror_genre(next_stage));
     } else {
         bg_draw_text_centered(13, "CYCLE COMPLETE");
         bg_draw_text_centered(14, "ALL CYPHERS WON");
@@ -4731,19 +5713,28 @@ static int title_update(void) {
 }
 
 static void password_draw(void) {
-    bg_fill(TILE_BLANK);
+    u8 next_stage = campaign_next_stage_index(gs.cleared_bosses);
+    bg_draw_beach();
+    bg_fill_rect(0, 1, BKG_COLS, 16, TILE_BLANK);
+    bg_draw_panel(1, 1, 18, 4, TILE_BLANK, TILE_CLIFF_A, TILE_CLIFF_B);
+    bg_draw_panel(1, 6, 18, 5, TILE_BLANK, TILE_GROUND_L, TILE_GROUND_R);
+    bg_draw_panel(1, 12, 18, 4, TILE_BLANK, TILE_CLIFF_A, TILE_CLIFF_B);
     spr_hide_all();
-    bg_draw_text(6, 2, "PASSWORD");
-    bg_draw_text(2, 5, "EDIT 16 HEX");
+    bg_draw_text_centered(2, "PASSWORD VAULT");
+    bg_draw_text_centered(3, (next_stage < CAMPAIGN_STAGE_COUNT) ? campaign_stage_name(next_stage) : "FINAL LOOP");
+    bg_draw_text_centered(4, (next_stage < CAMPAIGN_STAGE_COUNT) ? campaign_boss_horror_genre(next_stage) : "VOID RECOLLECTION");
+    bg_draw_text_centered(6, "EDIT 16 HEX");
     for (u8 i = 0; i < PASSWORD_LEN; ++i)
         plat_set_bkg_tile(2 + i, 8, bg_char_to_tile(gs.password_buf[i]));
     for (u8 i = 0; i < PASSWORD_LEN; ++i)
         plat_set_bkg_tile(2 + i, 9, TILE_BLANK);
     plat_set_bkg_tile(2 + gs.password_index, 9, TILE_CLIFF_A);
-    bg_draw_text(2, 12, "UD CHANGE");
-    bg_draw_text(2, 13, "LR MOVE");
-    bg_draw_text(2, 14, "A APPLY");
-    bg_draw_text(2, 15, "B BACK");
+    bg_draw_text_centered(12, (next_stage < CAMPAIGN_STAGE_COUNT) ? campaign_boss_name(next_stage) : "VOID TYRANT");
+    bg_draw_text(2, 13, "UD CHANGE");
+    bg_draw_text(2, 14, "LR MOVE");
+    bg_draw_text(11, 13, "A APPLY");
+    bg_draw_text(11, 14, "B BACK");
+    bg_draw_text_centered(15, (next_stage < CAMPAIGN_STAGE_COUNT) ? campaign_stage_cypher_label(next_stage) : "ALL CYPHERS WON");
 }
 
 static void password_init(void) {
@@ -4806,6 +5797,7 @@ static void stage_intro_draw_card(u8 intro_beat) {
     bg_draw_text_centered(3, campaign_stage_name(gs.campaign_stage));
     bg_draw_text_centered(4, campaign_stage_ecosystem(gs.campaign_stage));
     bg_draw_text_centered(5, campaign_stage_cypher_label(gs.campaign_stage));
+    bg_draw_text_centered(6, campaign_boss_horror_genre(gs.campaign_stage));
     bg_draw_text_centered(8, campaign_boss_name(gs.campaign_stage));
     if (intro_beat == 0) {
         bg_draw_text_centered(9, campaign_stage_hazard_line(gs.campaign_stage));
@@ -4884,14 +5876,22 @@ static void minion_spawn_wave(void) {
     for (u8 i = 0; i < MINION_MAX && spawned < wave_size; ++i) {
         if (!gs.minions[i].active) {
             u8 prefab_index = stage_spawn_prefab_choice(gs.campaign_stage, (u8)(gs.wave + i + gs.stage_bg_seed));
+            u8 silhouette = stage_spawn_silhouette((u8)(gs.wave + i + gs.stage_bg_seed), (u8)((gs.wave + i) % 3), (u8)(i & 0x01));
             const MinionPrefab *prefab = &minion_prefab_db[prefab_index % MINION_PREFAB_COUNT];
             gs.minions[i].active = 1;
             gs.minions[i].prefab = prefab_index;
+            gs.minions[i].silhouette = silhouette;
             gs.minions[i].class_major = (u8)(stage_mix8(gs.stage_bg_seed, (u8)(170 + i + gs.wave)) % MINION_CLASS_MAJOR_COUNT);
             gs.minions[i].class_mid = (u8)(stage_mix8(gs.stage_bg_seed, (u8)(200 + i + gs.wave)) % MINION_CLASS_MID_COUNT);
             gs.minions[i].class_minor = (u8)(stage_mix8(gs.stage_bg_seed, (u8)(230 + i + gs.wave)) % MINION_CLASS_MINOR_COUNT);
             gs.minions[i].status = prefab->status_bias;
             gs.minions[i].genome = stage_make_genome(gs.stage_bg_seed, (u8)(150 + i + gs.wave));
+            minion_apply_silhouette(silhouette,
+                                    (u8)(gs.stage_bg_seed + i + gs.wave),
+                                    &gs.minions[i].genome,
+                                    &gs.minions[i].class_major,
+                                    &gs.minions[i].class_mid,
+                                    &gs.minions[i].class_minor);
             gs.minions[i].hp     = (u8)(gs.stage_minion_hp + prefab->hp_bonus + (gs.minions[i].genome.shell > 2));
             gs.minions[i].y      = (u8)(SCR_H - 32 - ((gs.wave + i) % 2) * 4);
             gs.minions[i].attack_windup = 0;
@@ -4924,11 +5924,18 @@ static void minion_spawn_from_protocol(u8 slot_index) {
         lane_y = (u8)(SCR_H - 32 - gs.spawn_slots[slot_index].lane * 4);
         gs.minions[i].active = 1;
         gs.minions[i].prefab = prefab_index;
+        gs.minions[i].silhouette = gs.spawn_slots[slot_index].silhouette;
         gs.minions[i].class_major = (u8)(stage_mix8(gs.stage_bg_seed, (u8)(240 + slot_index + i)) % MINION_CLASS_MAJOR_COUNT);
         gs.minions[i].class_mid = (u8)(stage_mix8(gs.stage_bg_seed, (u8)(20 + slot_index + i)) % MINION_CLASS_MID_COUNT);
         gs.minions[i].class_minor = (u8)(stage_mix8(gs.stage_bg_seed, (u8)(50 + slot_index + i)) % MINION_CLASS_MINOR_COUNT);
         gs.minions[i].status = gs.spawn_slots[slot_index].status;
         gs.minions[i].genome = gs.spawn_slots[slot_index].genome;
+        minion_apply_silhouette(gs.minions[i].silhouette,
+                    (u8)(slot_index + i + gs.stage_bg_seed),
+                    &gs.minions[i].genome,
+                    &gs.minions[i].class_major,
+                    &gs.minions[i].class_mid,
+                    &gs.minions[i].class_minor);
         gs.minions[i].hp = (u8)(gs.stage_minion_hp + prefab->hp_bonus + (gs.minions[i].genome.shell > 2));
         gs.minions[i].y = lane_y;
         gs.minions[i].anim = 0;
@@ -4967,17 +5974,24 @@ static void minion_update_all(void) {
         u8 step;
         u8 attack_range;
         u8 preferred_range;
+        u8 contact_bias;
         s16 player_px;
         s16 delta;
         if (!gs.minions[i].active) continue;
         prefab = &minion_prefab_db[gs.minions[i].prefab % MINION_PREFAB_COUNT];
         behavior = (u8)((directive + gs.minions[i].class_major + prefab->status_bias + gs.minions[i].status) % 5);
         step = (u8)(gs.stage_minion_speed + prefab->speed_bonus + (gs.minions[i].genome.mobility > 2) + (gs.minions[i].class_major % 3 == 0));
+        contact_bias = minion_subjective_contact_bias(i);
         if (step == 0) step = 1;
+        if (gs.minions[i].silhouette == MINION_SILHOUETTE_RAPTOR && step < 4) step++;
+        else if (gs.minions[i].silhouette == MINION_SILHOUETTE_BRUTE && step > 1) step--;
+        if (contact_bias >= 5 && gs.minions[i].silhouette != MINION_SILHOUETTE_BRUTE && step < 4) step++;
         attack_range = (u8)(MINION_ATTACK_RANGE + gs.minions[i].genome.ferocity * 2 + (gs.minions[i].class_mid % 3));
         if (behavior == 4) attack_range = (u8)(attack_range + 4);
         else if (behavior == 3 && attack_range > 2) attack_range = (u8)(attack_range - 2);
+        if (contact_bias >= 4) attack_range = (u8)(attack_range + 1 + (gs.minions[i].silhouette == MINION_SILHOUETTE_RAPTOR));
         preferred_range = (u8)(attack_range + 6 + ((gs.minions[i].class_minor + behavior) & 0x03) * 3);
+        if (gs.minions[i].silhouette == MINION_SILHOUETTE_CHORUS) preferred_range = (u8)(preferred_range + 4);
         gs.minions[i].anim++;
         player_px = (s16)(gs.player_x * TILE_W);
         delta = player_px - gs.minions[i].x;
@@ -4986,12 +6000,14 @@ static void minion_update_all(void) {
 
         if (gs.minions[i].attack_recover > 0) {
             gs.minions[i].attack_recover--;
+            if (contact_bias >= 6 && gs.minions[i].attack_recover > 1) gs.minions[i].attack_recover--;
             if ((behavior == 1 || behavior == 4) && abs_distance_u8(gs.minions[i].x, player_px) < preferred_range && gs.minions[i].attack_recover > 6) {
                 s16 retreat_x = (s16)(gs.minions[i].x - gs.minions[i].vx * step);
                 if (retreat_x >= 0 && retreat_x <= SCR_W - 16 && !stage_column_blocked((u8)(retreat_x / TILE_W))) gs.minions[i].x = retreat_x;
             }
         } else if (gs.minions[i].attack_windup > 0) {
             gs.minions[i].attack_windup--;
+            if (contact_bias >= 6 && gs.minions[i].attack_windup > 1 && ((gs.anim_tick + i) & 0x01) == 0) gs.minions[i].attack_windup--;
             if (behavior == 3 && gs.minions[i].attack_windup > 2 && abs_distance_u8(gs.minions[i].x, player_px) > attack_range) {
                 s16 surge_x = (s16)(gs.minions[i].x + gs.minions[i].vx * (step + 1));
                 if (surge_x >= 0 && surge_x <= SCR_W - 16 && !stage_column_blocked((u8)(surge_x / TILE_W))) gs.minions[i].x = surge_x;
@@ -4999,18 +6015,21 @@ static void minion_update_all(void) {
             if (gs.minions[i].attack_windup == 0) {
                 if (abs_distance_u8(gs.minions[i].x, player_px) <= attack_range && gs.hit_stun == 0 && gs.dodge_timer == 0) {
                     if (gs.player_hp > 0) gs.player_hp--;
-                    gs.hit_stun = 36;
+                    gs.hit_stun = (u8)(36 + contact_bias + ((gs.minions[i].silhouette == MINION_SILHOUETTE_BRUTE) ? 4 : 0));
                     gs.fx_hit_x = (u8)player_px;
                     gs.fx_hit_y = (u8)(SCR_H - 28);
                     gs.fx_hit_timer = 8;
                 }
-                gs.minions[i].attack_recover = MINION_RECOVER_FRAMES;
+                gs.minions[i].attack_recover = (u8)(MINION_RECOVER_FRAMES + ((gs.minions[i].silhouette == MINION_SILHOUETTE_BRUTE) ? 3 : 0));
             }
         } else {
             if (abs_distance_u8(gs.minions[i].x, player_px) <= attack_range) {
                 gs.minions[i].attack_windup = (u8)(MINION_WINDUP_FRAMES - ((prefab->windup_bias > 3) ? 3 : prefab->windup_bias) - (gs.minions[i].class_minor % 2));
                 if (behavior == 3 && gs.minions[i].attack_windup > 2) gs.minions[i].attack_windup = (u8)(gs.minions[i].attack_windup - 2);
                 else if (behavior == 1) gs.minions[i].attack_windup = (u8)(gs.minions[i].attack_windup + 1);
+                if (gs.minions[i].silhouette == MINION_SILHOUETTE_RAPTOR && gs.minions[i].attack_windup > 2) gs.minions[i].attack_windup = (u8)(gs.minions[i].attack_windup - 2);
+                if (gs.minions[i].silhouette == MINION_SILHOUETTE_BRUTE) gs.minions[i].attack_windup = (u8)(gs.minions[i].attack_windup + 2);
+                if (contact_bias >= 5 && gs.minions[i].attack_windup > 1) gs.minions[i].attack_windup--;
                 if (gs.minions[i].attack_windup < 6) gs.minions[i].attack_windup = 6;
             } else {
                 s16 next_x = (s16)(gs.minions[i].x + gs.minions[i].vx * step);
@@ -5045,12 +6064,18 @@ static void minion_update_all(void) {
 static void player_attack_minions(u8 radius) {
     s16 px = (s16)(gs.player_x * TILE_W + 8);
     for (u8 i = 0; i < MINION_MAX; ++i) {
+        u8 contact_bias;
+        u8 damage;
+        s16 knockback;
         if (!gs.minions[i].active) continue;
         s16 target_x = gs.minions[i].x + 8;
         if (attack_hits_target(px, gs.player_facing, target_x, radius, PLAYER_ATTACK_REAR)) {
+            contact_bias = minion_subjective_contact_bias(i);
+            damage = (u8)(gs.attack_dmg + ((contact_bias >= 6 && gs.beat_perfect) ? 1 : 0));
+            knockback = (s16)(6 + (contact_bias / 2u) + ((gs.minions[i].silhouette == MINION_SILHOUETTE_BRUTE) ? 2 : 0));
             gs.minions[i].attack_windup = 0;
             gs.minions[i].attack_recover = MINION_RECOVER_FRAMES;
-            if (gs.minions[i].hp <= gs.attack_dmg) {
+            if (gs.minions[i].hp <= damage) {
                 gs.minions[i].active = 0;
                 /* Drop NanoCell */
                 if (gs.nanocell_count < NANOCELL_MAX) {
@@ -5060,8 +6085,8 @@ static void player_attack_minions(u8 radius) {
                     gs.fx_nano_timer = 12;
                 }
             } else {
-                gs.minions[i].hp -= gs.attack_dmg;
-                gs.minions[i].x += gs.player_facing ? -6 : 6;
+                gs.minions[i].hp = (u8)(gs.minions[i].hp - damage);
+                gs.minions[i].x += gs.player_facing ? (s16)(-knockback) : knockback;
                 if (gs.minions[i].x < 0) gs.minions[i].x = 0;
                 if (gs.minions[i].x > SCR_W - 16) gs.minions[i].x = SCR_W - 16;
             }
@@ -5114,6 +6139,7 @@ static void boss_init(void) {
 static int boss_take_damage(u8 dmg) {
     if (!gs.boss_awake) return 0;
     if (gs.boss_stun == 0 && gs.boss_hp > 0) {
+        if (gs.beat_perfect && boss_subjective_contact_bias() >= 5) dmg++;
         if (gs.boss_hp <= dmg) {
             gs.boss_hp = 0;
             /* Advance phase or signal death */
@@ -5153,11 +6179,13 @@ static int boss_take_damage(u8 dmg) {
 
 /* Boss logic: choose and execute attacks, move toward player */
 static void boss_update(void) {
+    u8 contact_bias;
     if (gs.boss_phase == 0 || !gs.boss_awake) return;
     if (gs.boss_intro_lock > 0) {
         gs.boss_intro_lock--;
         return;
     }
+    contact_bias = boss_subjective_contact_bias();
 
     /* Stun countdown */
     if (gs.boss_stun > 0) { gs.boss_stun--; return; }
@@ -5181,7 +6209,7 @@ static void boss_update(void) {
             case BOSS_ATK_SWEEP:
                 if (dist_now < BOSS_SWEEP_RANGE && gs.hit_stun == 0 && gs.dodge_timer == 0) {
                     if (gs.player_hp > 0) gs.player_hp--;
-                    gs.hit_stun = 30;
+                    gs.hit_stun = (u8)(30 + contact_bias);
                     gs.fx_hit_x  = (u8)px_now;
                     gs.fx_hit_y  = (u8)(SCR_H - 32);
                     gs.fx_hit_timer = 8;
@@ -5192,7 +6220,7 @@ static void boss_update(void) {
             case BOSS_ATK_SPIT:
                 if (dist_now < BOSS_SPIT_RANGE && gs.hit_stun == 0 && gs.dodge_timer == 0) {
                     if (gs.player_hp > 0) gs.player_hp--;
-                    gs.hit_stun = 25;
+                    gs.hit_stun = (u8)(25 + (contact_bias / 2u));
                     gs.fx_hit_x  = (u8)px_now;
                     gs.fx_hit_y  = (u8)(SCR_H - 40);
                     gs.fx_hit_timer = 8;
@@ -5203,7 +6231,7 @@ static void boss_update(void) {
             case BOSS_ATK_SLAM:
                 if (dist_now < BOSS_SLAM_RANGE && gs.hit_stun == 0 && gs.dodge_timer == 0) {
                     gs.player_hp = (gs.player_hp >= 2) ? gs.player_hp - 2 : 0;
-                    gs.hit_stun = 40;
+                    gs.hit_stun = (u8)(40 + contact_bias + (cosmetic_profile_stage_flux() >= 5 ? 3 : 0));
                     gs.fx_hit_x = (u8)px_now;
                     gs.fx_hit_y = (u8)(SCR_H - 28);
                     gs.fx_hit_timer = 10;
@@ -5212,11 +6240,11 @@ static void boss_update(void) {
                 break;
 
             case BOSS_ATK_TIDAL:
-                if (gs.boss_x > px_now && gs.player_x < 18) gs.player_x++;
-                else if (gs.boss_x <= px_now && gs.player_x > 0) gs.player_x--;
+                if (gs.boss_x > px_now && gs.player_x < 18) gs.player_x += (contact_bias >= 5) ? 2 : 1;
+                else if (gs.boss_x <= px_now && gs.player_x > 0) gs.player_x -= (contact_bias >= 5) ? 2 : 1;
                 if (gs.nanocell_boost_timer == 0 && gs.hit_stun == 0 && gs.dodge_timer == 0 && dist_now < BOSS_SPIT_RANGE) {
                     if (gs.player_hp > 0) gs.player_hp--;
-                    gs.hit_stun = 18;
+                    gs.hit_stun = (u8)(18 + (contact_bias / 2u));
                     camera_punch(2, 5);
                 }
                 break;
@@ -5232,7 +6260,7 @@ static void boss_update(void) {
 
     /* Slow drift toward player */
     s16 px = (s16)(gs.player_x * TILE_W);
-    s16 boss_step = (s16)(1 + ((gs.stage_boss_style == 2) ? 1 : 0) + (gs.boss_genome.mobility > 2));
+    s16 boss_step = (s16)(1 + ((gs.stage_boss_style == 2) ? 1 : 0) + (gs.boss_genome.mobility > 2) + (contact_bias >= 5));
     if (gs.boss_x > px + 30 && !stage_column_blocked((u8)((gs.boss_x - boss_step) / TILE_W))) gs.boss_x -= boss_step;
     if (gs.boss_x < px - 10 && !stage_column_blocked((u8)((gs.boss_x + boss_step) / TILE_W))) gs.boss_x += boss_step;
 
@@ -5544,24 +6572,31 @@ static void cypher_init(void) {
     password_encode(gs.password_buf, gs.cleared_bosses, gs.cyphers);
     next_stage = campaign_next_stage_index(gs.cleared_bosses);
     spr_hide_all();
-    bg_fill(TILE_BLANK);
-    bg_draw_text(6, 4, "CYPHER");
-    bg_draw_text_centered(5, campaign_stage_cypher_label(gs.campaign_stage));
+    bg_draw_beach();
+    bg_fill_rect(0, 1, BKG_COLS, 16, TILE_BLANK);
+    bg_draw_panel(1, 1, 18, 4, TILE_BLANK, TILE_CLIFF_A, TILE_CLIFF_B);
+    bg_draw_panel(1, 6, 18, 4, TILE_BLANK, TILE_GROUND_L, TILE_GROUND_R);
+    bg_draw_panel(1, 11, 18, 5, TILE_BLANK, TILE_CLIFF_A, TILE_CLIFF_B);
+    bg_draw_text_centered(1, "CYPHER SECURED");
+    bg_draw_text_centered(2, campaign_stage_cypher_label(gs.campaign_stage));
+    bg_draw_text_centered(3, campaign_boss_horror_genre(gs.campaign_stage));
     bg_draw_text_centered(6, campaign_stage_cypher_effect(gs.campaign_stage));
     bg_draw_text_centered(7, campaign_stage_terrain_line(gs.campaign_stage));
     bg_draw_text_centered(8, campaign_stage_name(gs.campaign_stage));
-    bg_draw_text(4, 10, "SAVE CODE");
-    bg_draw_text(2, 11, gs.password_buf);
-    bg_draw_text(0, 13, "REI FORM");
-    bg_draw_number_2(9, 13, (u8)(gs.rei_form + 1));
-    bg_draw_text(12, 13, "GP");
-    bg_draw_number_2(15, 13, (u8)(gs.rei_growth_points % 100));
+    bg_draw_text(2, 11, "SAVE CODE");
+    bg_draw_text(2, 12, gs.password_buf);
+    bg_draw_text(2, 13, "REI FORM");
+    bg_draw_number_2(11, 13, (u8)(gs.rei_form + 1));
+    bg_draw_text(14, 13, "GP");
+    bg_draw_number_2(17, 13, (u8)(gs.rei_growth_points % 100));
     if (next_stage < CAMPAIGN_STAGE_COUNT) {
         bg_draw_text_centered(14, campaign_stage_name(next_stage));
         bg_draw_text_centered(15, campaign_boss_name(next_stage));
+        bg_draw_text_centered(16, campaign_boss_horror_genre(next_stage));
     } else {
         bg_draw_text_centered(14, "A CYCLE COMPLETE");
         bg_draw_text_centered(15, "VOID TYRANT WAITS");
+        bg_draw_text_centered(16, "ALL CYPHERS WON");
     }
     plat_audio_event(AUDIO_EVENT_VICTORY, gs.campaign_stage);
     plat_audio_tts(AUDIO_VOICE_SYSTEM, "CYPHER SECURED");
@@ -5586,9 +6621,16 @@ static void gameover_init(void) {
     camera_reset();
     gs.phase_timer = 0;
     spr_hide_all();
-    bg_fill(TILE_BLANK);
-    bg_draw_text(5, 8, "GAME OVER");
-    bg_draw_text(3, 12, "PRESS A OR START");
+    bg_draw_beach();
+    bg_fill_rect(0, 2, BKG_COLS, 13, TILE_BLANK);
+    bg_draw_panel(2, 2, 16, 5, TILE_BLANK, TILE_CLIFF_A, TILE_CLIFF_B);
+    bg_draw_panel(1, 9, 18, 5, TILE_BLANK, TILE_GROUND_L, TILE_GROUND_R);
+    bg_draw_text_centered(3, "REI FALLS SILENT");
+    bg_draw_text_centered(4, campaign_boss_name(gs.campaign_stage));
+    bg_draw_text_centered(5, campaign_boss_horror_genre(gs.campaign_stage));
+    bg_draw_text_centered(9, campaign_boss_intro(gs.campaign_stage));
+    bg_draw_text_centered(10, campaign_stage_pressure_line(gs.campaign_stage));
+    bg_draw_text_centered(12, "PRESS A OR START");
     plat_audio_event(AUDIO_EVENT_DEFEAT, gs.campaign_stage);
     plat_audio_tts(AUDIO_VOICE_SYSTEM, "GAME OVER");
     audio_sync_profile();

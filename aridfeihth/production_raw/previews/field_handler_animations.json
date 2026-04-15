@@ -1,0 +1,313 @@
+{
+  "sheet": "aridfeihth/production_raw/actors/field_handler_sheet.png",
+  "frame_size": [
+    64,
+    64
+  ],
+  "preview_size": [
+    128,
+    128
+  ],
+  "timing_rule": {
+    "hold_repeats": 2,
+    "move_repeats": 1,
+    "frame_duration_ms": 70,
+    "ratio": "2:1 hold-to-move playback frames"
+  },
+  "animations": {
+    "idle": {
+      "preview": "aridfeihth/production_raw/previews/field_handler_idle.gif",
+      "loop": true,
+      "playback_frames": [
+        {
+          "row": 0,
+          "col": 0,
+          "phase": "move",
+          "duration_ms": 70
+        },
+        {
+          "row": 0,
+          "col": 1,
+          "phase": "move",
+          "duration_ms": 70
+        },
+        {
+          "row": 0,
+          "col": 2,
+          "phase": "move",
+          "duration_ms": 70
+        },
+        {
+          "row": 0,
+          "col": 3,
+          "phase": "move",
+          "duration_ms": 70
+        }
+      ]
+    },
+    "walk": {
+      "preview": "aridfeihth/production_raw/previews/field_handler_walk.gif",
+      "loop": true,
+      "playback_frames": [
+        {
+          "row": 1,
+          "col": 0,
+          "phase": "move",
+          "duration_ms": 70
+        },
+        {
+          "row": 1,
+          "col": 1,
+          "phase": "move",
+          "duration_ms": 70
+        },
+        {
+          "row": 1,
+          "col": 2,
+          "phase": "move",
+          "duration_ms": 70
+        },
+        {
+          "row": 1,
+          "col": 3,
+          "phase": "move",
+          "duration_ms": 70
+        }
+      ]
+    },
+    "run": {
+      "preview": "aridfeihth/production_raw/previews/field_handler_run.gif",
+      "loop": true,
+      "playback_frames": [
+        {
+          "row": 2,
+          "col": 0,
+          "phase": "move",
+          "duration_ms": 70
+        },
+        {
+          "row": 2,
+          "col": 1,
+          "phase": "move",
+          "duration_ms": 70
+        },
+        {
+          "row": 2,
+          "col": 2,
+          "phase": "move",
+          "duration_ms": 70
+        },
+        {
+          "row": 2,
+          "col": 3,
+          "phase": "move",
+          "duration_ms": 70
+        }
+      ]
+    },
+    "combo_1": {
+      "preview": "aridfeihth/production_raw/previews/field_handler_combo_1.gif",
+      "loop": true,
+      "playback_frames": [
+        {
+          "row": 3,
+          "col": 0,
+          "phase": "hold",
+          "duration_ms": 70
+        },
+        {
+          "row": 3,
+          "col": 0,
+          "phase": "hold",
+          "duration_ms": 70
+        },
+        {
+          "row": 3,
+          "col": 1,
+          "phase": "hold",
+          "duration_ms": 70
+        },
+        {
+          "row": 3,
+          "col": 1,
+          "phase": "hold",
+          "duration_ms": 70
+        },
+        {
+          "row": 3,
+          "col": 2,
+          "phase": "move",
+          "duration_ms": 70
+        },
+        {
+          "row": 3,
+          "col": 3,
+          "phase": "move",
+          "duration_ms": 70
+        },
+        {
+          "row": 4,
+          "col": 0,
+          "phase": "hold",
+          "duration_ms": 70
+        },
+        {
+          "row": 4,
+          "col": 0,
+          "phase": "hold",
+          "duration_ms": 70
+        },
+        {
+          "row": 4,
+          "col": 1,
+          "phase": "hold",
+          "duration_ms": 70
+        },
+        {
+          "row": 4,
+          "col": 1,
+          "phase": "hold",
+          "duration_ms": 70
+        },
+        {
+          "row": 4,
+          "col": 2,
+          "phase": "move",
+          "duration_ms": 70
+        },
+        {
+          "row": 4,
+          "col": 3,
+          "phase": "move",
+          "duration_ms": 70
+        }
+      ]
+    },
+    "combo_2": {
+      "preview": "aridfeihth/production_raw/previews/field_handler_combo_2.gif",
+      "loop": true,
+      "playback_frames": [
+        {
+          "row": 5,
+          "col": 0,
+          "phase": "hold",
+          "duration_ms": 70
+        },
+        {
+          "row": 5,
+          "col": 0,
+          "phase": "hold",
+          "duration_ms": 70
+        },
+        {
+          "row": 5,
+          "col": 1,
+          "phase": "move",
+          "duration_ms": 70
+        },
+        {
+          "row": 5,
+          "col": 2,
+          "phase": "hold",
+          "duration_ms": 70
+        },
+        {
+          "row": 5,
+          "col": 2,
+          "phase": "hold",
+          "duration_ms": 70
+        },
+        {
+          "row": 5,
+          "col": 3,
+          "phase": "move",
+          "duration_ms": 70
+        }
+      ]
+    },
+    "combo_3": {
+      "preview": "aridfeihth/production_raw/previews/field_handler_combo_3.gif",
+      "loop": true,
+      "playback_frames": [
+        {
+          "row": 6,
+          "col": 0,
+          "phase": "hold",
+          "duration_ms": 70
+        },
+        {
+          "row": 6,
+          "col": 0,
+          "phase": "hold",
+          "duration_ms": 70
+        },
+        {
+          "row": 6,
+          "col": 1,
+          "phase": "move",
+          "duration_ms": 70
+        },
+        {
+          "row": 6,
+          "col": 2,
+          "phase": "hold",
+          "duration_ms": 70
+        },
+        {
+          "row": 6,
+          "col": 2,
+          "phase": "hold",
+          "duration_ms": 70
+        },
+        {
+          "row": 6,
+          "col": 3,
+          "phase": "move",
+          "duration_ms": 70
+        }
+      ]
+    },
+    "jump": {
+      "preview": "aridfeihth/production_raw/previews/field_handler_jump.gif",
+      "loop": true,
+      "playback_frames": [
+        {
+          "row": 7,
+          "col": 0,
+          "phase": "hold",
+          "duration_ms": 70
+        },
+        {
+          "row": 7,
+          "col": 0,
+          "phase": "hold",
+          "duration_ms": 70
+        },
+        {
+          "row": 7,
+          "col": 1,
+          "phase": "move",
+          "duration_ms": 70
+        },
+        {
+          "row": 7,
+          "col": 2,
+          "phase": "move",
+          "duration_ms": 70
+        },
+        {
+          "row": 7,
+          "col": 3,
+          "phase": "hold",
+          "duration_ms": 70
+        },
+        {
+          "row": 7,
+          "col": 3,
+          "phase": "hold",
+          "duration_ms": 70
+        }
+      ]
+    }
+  }
+}

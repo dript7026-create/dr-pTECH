@@ -1,11 +1,12 @@
 {
   "name": "aridfeihth_illusioncanvas_vertical_slice",
-  "version": "2026-03-13.vertical-slice",
+  "version": "2026-03-13.production-v2",
   "intent": "Dedicated IllusionCanvasInteractive production manifest for the aridfeihth vertical slice. This keeps the project on its own asset-program path instead of inheriting the broader Bango clip-blend-id stream.",
   "assets": [
     {
       "name": "latchspire_refuge_backdrop",
       "category": "environment_set",
+      "resolution": [640, 360],
       "out": "aridfeihth/production_raw/spaces/latchspire_refuge_backdrop.png",
       "generation_mode": "packed_master",
       "pipeline_targets": ["illusioncanvas"],
@@ -14,6 +15,7 @@
     {
       "name": "choir_stair_backdrop",
       "category": "environment_set",
+      "resolution": [640, 360],
       "out": "aridfeihth/production_raw/spaces/choir_stair_backdrop.png",
       "generation_mode": "packed_master",
       "pipeline_targets": ["illusioncanvas"],
@@ -22,6 +24,7 @@
     {
       "name": "glasswind_causeway_backdrop",
       "category": "environment_set",
+      "resolution": [640, 360],
       "out": "aridfeihth/production_raw/spaces/glasswind_causeway_backdrop.png",
       "generation_mode": "packed_master",
       "pipeline_targets": ["illusioncanvas"],
@@ -30,6 +33,7 @@
     {
       "name": "ember_nave_backdrop",
       "category": "environment_set",
+      "resolution": [640, 360],
       "out": "aridfeihth/production_raw/spaces/ember_nave_backdrop.png",
       "generation_mode": "packed_master",
       "pipeline_targets": ["illusioncanvas"],
@@ -38,14 +42,37 @@
     {
       "name": "field_handler_sheet",
       "category": "character_sheet",
+      "resolution": [256, 512],
       "out": "aridfeihth/production_raw/actors/field_handler_sheet.png",
       "generation_mode": "packed_master",
       "pipeline_targets": ["illusioncanvas"],
       "protocol": {"layout": "sideview_actor_sheet", "derived_outputs": ["collision_preview", "idle_pose_strip"]}
     },
     {
+      "name": "field_handler_animation_pack",
+      "category": "animation_pack",
+      "out": "aridfeihth/production_raw/previews/field_handler_animations.json",
+      "generation_mode": "metadata",
+      "pipeline_targets": ["illusioncanvas"],
+      "protocol": {
+        "layout": "sprite_animation_timing_pack",
+        "sheet_asset_id": "field_handler_sheet",
+        "preview_outputs": [
+          "aridfeihth/production_raw/previews/field_handler_idle.gif",
+          "aridfeihth/production_raw/previews/field_handler_walk.gif",
+          "aridfeihth/production_raw/previews/field_handler_run.gif",
+          "aridfeihth/production_raw/previews/field_handler_combo_1.gif",
+          "aridfeihth/production_raw/previews/field_handler_combo_2.gif",
+          "aridfeihth/production_raw/previews/field_handler_combo_3.gif",
+          "aridfeihth/production_raw/previews/field_handler_jump.gif"
+        ],
+        "derived_outputs": ["gif_preview_set", "runtime_timing_metadata"]
+      }
+    },
+    {
       "name": "mirror_newt_sheet",
       "category": "character_sheet",
+      "resolution": [128, 128],
       "out": "aridfeihth/production_raw/actors/mirror_newt_sheet.png",
       "generation_mode": "packed_master",
       "pipeline_targets": ["illusioncanvas"],
@@ -54,6 +81,7 @@
     {
       "name": "latch_spider_sheet",
       "category": "character_sheet",
+      "resolution": [128, 128],
       "out": "aridfeihth/production_raw/actors/latch_spider_sheet.png",
       "generation_mode": "packed_master",
       "pipeline_targets": ["illusioncanvas"],
@@ -62,6 +90,7 @@
     {
       "name": "salt_ram_sheet",
       "category": "character_sheet",
+      "resolution": [128, 128],
       "out": "aridfeihth/production_raw/actors/salt_ram_sheet.png",
       "generation_mode": "packed_master",
       "pipeline_targets": ["illusioncanvas"],
@@ -70,6 +99,7 @@
     {
       "name": "bond_weave_fx",
       "category": "combat_fx",
+      "resolution": [256, 64],
       "out": "aridfeihth/production_raw/effects/bond_weave_fx.png",
       "generation_mode": "packed_master",
       "pipeline_targets": ["illusioncanvas"],
@@ -78,10 +108,22 @@
     {
       "name": "aridfeihth_hud_pack",
       "category": "hud_pack",
+      "resolution": [320, 80],
       "out": "aridfeihth/production_raw/interface/aridfeihth_hud_pack.png",
       "generation_mode": "packed_master",
       "pipeline_targets": ["illusioncanvas"],
       "protocol": {"layout": "hud_pack", "derived_outputs": ["bond_meter_overlay", "milestone_frame"]}
+    },
+    {
+      "name": "aridfeihth_theme_loop",
+      "category": "audio",
+      "format": "wav",
+      "sample_rate": 22050,
+      "duration_seconds": 8,
+      "out": "aridfeihth/production_raw/audio/aridfeihth_theme_loop.wav",
+      "generation_mode": "synthesis",
+      "pipeline_targets": ["illusioncanvas"],
+      "protocol": {"layout": "loop", "scale": "hijaz", "derived_outputs": ["ogg_compressed"]}
     }
   ]
 }

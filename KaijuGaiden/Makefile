@@ -68,3 +68,7 @@ build/xinput_wrapper.dll: src/xinput_wrapper.c src/xinput_wrapper.h
 xinput-wrap: build/xinput_wrapper.dll
 	@echo Built xinput wrapper
 
+.PHONY: windows_xbox_host
+windows_xbox_host:
+	powershell -ExecutionPolicy Bypass -File tools/build_windows_xbox_host.ps1
+

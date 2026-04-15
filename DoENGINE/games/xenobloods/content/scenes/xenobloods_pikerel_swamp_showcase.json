@@ -1,0 +1,1325 @@
+{
+  "showcase_name": "XenoBloods Pikerel Village And Swamp Showcase",
+  "scene_version": "2026-03-31.xenobloods-preview",
+  "camera": {
+    "orbit": 0.44,
+    "elevation": 0.16,
+    "focus_z": 18.5
+  },
+  "asset_loaders": [
+    "builtin",
+    "obj",
+    "billboard"
+  ],
+  "script_capabilities": [
+    "spin",
+    "bob",
+    "pulse",
+    "drift",
+    "sway",
+    "channel_follow",
+    "threshold_gate",
+    "accent_burst"
+  ],
+  "concept_translation": {
+    "project": "XenoBloods",
+    "biomes": [
+      "pikerel_village",
+      "swamp_lagoon",
+      "sewer_preview"
+    ],
+    "notes": [
+      "Village built from basket-house variants, docks, shrine posts, and walkway spans.",
+      "Swamp blockout includes island terrain, lagoon plane, reed clusters, and mangrove roots.",
+      "Sewer tunnel sits as a future biome preview deeper in scene space.",
+      "Lifecycle and encounter billboards are packaged with the scene so standalone DoENGINE saves can surface Landborne, Gourd Infant, Etheric Current, and Lahgroid boss states."
+    ]
+  },
+  "pipeline": {
+    "variant_house_count": 6,
+    "support_mesh_count": 8,
+    "doengine_target": "DoENGINE",
+    "packaged_models_dir": "DoENGINE/games/xenobloods/content/models",
+    "packaged_billboards_dir": "DoENGINE/games/xenobloods/content/billboards",
+    "standalone_game_package": "DoENGINE/games/xenobloods/xenobloods_doengine_game.json"
+  },
+  "scene_entries": [
+    {
+      "id": "lagoon_water",
+      "kind": "mesh",
+      "loader": "obj",
+      "mesh": "../models/xenobloods_lagoon_water_plane.obj",
+      "position": [
+        0.0,
+        -1.2,
+        18.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": 1.0,
+      "material": "jade",
+      "label": "Pikerel Lagoon",
+      "scripts": [
+        {
+          "type": "drift",
+          "amplitude_x": 0.14,
+          "amplitude_z": 0.06,
+          "speed": 0.18
+        }
+      ],
+      "metadata": {
+        "role": "water-plane",
+        "binding_id": "pikerel_lagoon"
+      }
+    },
+    {
+      "id": "swamp_island_core",
+      "kind": "mesh",
+      "loader": "obj",
+      "mesh": "../models/xenobloods_swamp_island.obj",
+      "position": [
+        0.0,
+        -1.05,
+        17.8
+      ],
+      "rotation": [
+        0.0,
+        0.1,
+        0.0
+      ],
+      "scale": 1.0,
+      "material": "stone",
+      "label": "Swamp Island Core",
+      "scripts": [
+        {
+          "type": "bob",
+          "amplitude": 0.06,
+          "speed": 0.33
+        }
+      ],
+      "metadata": {
+        "role": "terrain-core",
+        "binding_id": "swamp_island_core"
+      }
+    },
+    {
+      "id": "sewer_preview",
+      "kind": "mesh",
+      "loader": "obj",
+      "mesh": "../models/xenobloods_sewer_tunnel_blockout.obj",
+      "position": [
+        0.0,
+        -0.7,
+        33.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": 0.85,
+      "material": "shadow",
+      "label": "Sewer Tunnel Blockout",
+      "scripts": [],
+      "metadata": {
+        "role": "future-biome-preview",
+        "binding_id": "sewer_preview_gate",
+        "unlock_flag": "sewer_unlocked"
+      }
+    },
+    {
+      "id": "house_01",
+      "kind": "mesh",
+      "loader": "obj",
+      "mesh": "../models/pikerel_basket_house_01.obj",
+      "position": [
+        -8.8,
+        0.0,
+        12.6
+      ],
+      "rotation": [
+        0.0,
+        0.18,
+        0.0
+      ],
+      "scale": 1.0,
+      "material": "stone",
+      "label": "Pikerel Basket House 1",
+      "scripts": [
+        {
+          "type": "bob",
+          "amplitude": 0.043000000000000003,
+          "speed": 0.23
+        }
+      ],
+      "metadata": {
+        "role": "village-house",
+        "binding_id": "village_house_01",
+        "district": "pikerel_village"
+      }
+    },
+    {
+      "id": "house_02",
+      "kind": "mesh",
+      "loader": "obj",
+      "mesh": "../models/pikerel_basket_house_02.obj",
+      "position": [
+        -4.8,
+        0.0,
+        11.4
+      ],
+      "rotation": [
+        0.0,
+        -0.08,
+        0.0
+      ],
+      "scale": 1.0,
+      "material": "stone",
+      "label": "Pikerel Basket House 2",
+      "scripts": [
+        {
+          "type": "bob",
+          "amplitude": 0.046,
+          "speed": 0.26
+        }
+      ],
+      "metadata": {
+        "role": "village-house",
+        "binding_id": "village_house_02",
+        "district": "pikerel_village"
+      }
+    },
+    {
+      "id": "house_03",
+      "kind": "mesh",
+      "loader": "obj",
+      "mesh": "../models/pikerel_basket_house_03.obj",
+      "position": [
+        -1.2,
+        0.0,
+        10.7
+      ],
+      "rotation": [
+        0.0,
+        0.02,
+        0.0
+      ],
+      "scale": 1.0,
+      "material": "stone",
+      "label": "Pikerel Basket House 3",
+      "scripts": [
+        {
+          "type": "bob",
+          "amplitude": 0.049,
+          "speed": 0.29000000000000004
+        }
+      ],
+      "metadata": {
+        "role": "village-house",
+        "binding_id": "village_house_03",
+        "district": "pikerel_village"
+      }
+    },
+    {
+      "id": "house_04",
+      "kind": "mesh",
+      "loader": "obj",
+      "mesh": "../models/pikerel_basket_house_04.obj",
+      "position": [
+        2.6,
+        0.0,
+        11.2
+      ],
+      "rotation": [
+        0.0,
+        -0.16,
+        0.0
+      ],
+      "scale": 1.0,
+      "material": "stone",
+      "label": "Pikerel Basket House 4",
+      "scripts": [
+        {
+          "type": "bob",
+          "amplitude": 0.052000000000000005,
+          "speed": 0.32
+        }
+      ],
+      "metadata": {
+        "role": "village-house",
+        "binding_id": "village_house_04",
+        "district": "pikerel_village"
+      }
+    },
+    {
+      "id": "house_05",
+      "kind": "mesh",
+      "loader": "obj",
+      "mesh": "../models/pikerel_basket_house_05.obj",
+      "position": [
+        6.3,
+        0.0,
+        12.3
+      ],
+      "rotation": [
+        0.0,
+        0.14,
+        0.0
+      ],
+      "scale": 1.0,
+      "material": "stone",
+      "label": "Pikerel Basket House 5",
+      "scripts": [
+        {
+          "type": "bob",
+          "amplitude": 0.055,
+          "speed": 0.35
+        }
+      ],
+      "metadata": {
+        "role": "village-house",
+        "binding_id": "village_house_05",
+        "district": "pikerel_village"
+      }
+    },
+    {
+      "id": "house_06",
+      "kind": "mesh",
+      "loader": "obj",
+      "mesh": "../models/pikerel_basket_house_06.obj",
+      "position": [
+        9.6,
+        0.0,
+        13.4
+      ],
+      "rotation": [
+        0.0,
+        -0.22,
+        0.0
+      ],
+      "scale": 1.0,
+      "material": "stone",
+      "label": "Pikerel Basket House 6",
+      "scripts": [
+        {
+          "type": "bob",
+          "amplitude": 0.058,
+          "speed": 0.38
+        }
+      ],
+      "metadata": {
+        "role": "village-house",
+        "binding_id": "village_house_06",
+        "district": "pikerel_village"
+      }
+    },
+    {
+      "id": "walkway_1_1",
+      "kind": "mesh",
+      "loader": "obj",
+      "mesh": "../models/pikerel_walkway_segment.obj",
+      "position": [
+        -6.4,
+        -0.58,
+        10.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": 1.0,
+      "material": "basket_trim",
+      "label": "Walkway Segment",
+      "scripts": [],
+      "metadata": {
+        "role": "walkway",
+        "binding_id": "walkway_1_1"
+      }
+    },
+    {
+      "id": "walkway_1_2",
+      "kind": "mesh",
+      "loader": "obj",
+      "mesh": "../models/pikerel_walkway_segment.obj",
+      "position": [
+        -1.6,
+        -0.58,
+        10.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": 1.0,
+      "material": "basket_trim",
+      "label": "Walkway Segment",
+      "scripts": [],
+      "metadata": {
+        "role": "walkway",
+        "binding_id": "walkway_1_2"
+      }
+    },
+    {
+      "id": "walkway_1_3",
+      "kind": "mesh",
+      "loader": "obj",
+      "mesh": "../models/pikerel_walkway_segment.obj",
+      "position": [
+        3.2,
+        -0.58,
+        10.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": 1.0,
+      "material": "basket_trim",
+      "label": "Walkway Segment",
+      "scripts": [],
+      "metadata": {
+        "role": "walkway",
+        "binding_id": "walkway_1_3"
+      }
+    },
+    {
+      "id": "walkway_1_4",
+      "kind": "mesh",
+      "loader": "obj",
+      "mesh": "../models/pikerel_walkway_segment.obj",
+      "position": [
+        8.0,
+        -0.58,
+        10.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": 1.0,
+      "material": "basket_trim",
+      "label": "Walkway Segment",
+      "scripts": [],
+      "metadata": {
+        "role": "walkway",
+        "binding_id": "walkway_1_4"
+      }
+    },
+    {
+      "id": "walkway_2_1",
+      "kind": "mesh",
+      "loader": "obj",
+      "mesh": "../models/pikerel_walkway_segment.obj",
+      "position": [
+        -6.4,
+        -0.58,
+        11.8
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": 1.0,
+      "material": "basket_trim",
+      "label": "Walkway Segment",
+      "scripts": [],
+      "metadata": {
+        "role": "walkway",
+        "binding_id": "walkway_2_1"
+      }
+    },
+    {
+      "id": "walkway_2_2",
+      "kind": "mesh",
+      "loader": "obj",
+      "mesh": "../models/pikerel_walkway_segment.obj",
+      "position": [
+        -1.6,
+        -0.58,
+        11.8
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": 1.0,
+      "material": "basket_trim",
+      "label": "Walkway Segment",
+      "scripts": [],
+      "metadata": {
+        "role": "walkway",
+        "binding_id": "walkway_2_2"
+      }
+    },
+    {
+      "id": "walkway_2_3",
+      "kind": "mesh",
+      "loader": "obj",
+      "mesh": "../models/pikerel_walkway_segment.obj",
+      "position": [
+        3.2,
+        -0.58,
+        11.8
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": 1.0,
+      "material": "basket_trim",
+      "label": "Walkway Segment",
+      "scripts": [],
+      "metadata": {
+        "role": "walkway",
+        "binding_id": "walkway_2_3"
+      }
+    },
+    {
+      "id": "walkway_2_4",
+      "kind": "mesh",
+      "loader": "obj",
+      "mesh": "../models/pikerel_walkway_segment.obj",
+      "position": [
+        8.0,
+        -0.58,
+        11.8
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": 1.0,
+      "material": "basket_trim",
+      "label": "Walkway Segment",
+      "scripts": [],
+      "metadata": {
+        "role": "walkway",
+        "binding_id": "walkway_2_4"
+      }
+    },
+    {
+      "id": "walkway_3_1",
+      "kind": "mesh",
+      "loader": "obj",
+      "mesh": "../models/pikerel_walkway_segment.obj",
+      "position": [
+        -6.4,
+        -0.58,
+        13.6
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": 1.0,
+      "material": "basket_trim",
+      "label": "Walkway Segment",
+      "scripts": [],
+      "metadata": {
+        "role": "walkway",
+        "binding_id": "walkway_3_1"
+      }
+    },
+    {
+      "id": "walkway_3_2",
+      "kind": "mesh",
+      "loader": "obj",
+      "mesh": "../models/pikerel_walkway_segment.obj",
+      "position": [
+        -1.6,
+        -0.58,
+        13.6
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": 1.0,
+      "material": "basket_trim",
+      "label": "Walkway Segment",
+      "scripts": [],
+      "metadata": {
+        "role": "walkway",
+        "binding_id": "walkway_3_2"
+      }
+    },
+    {
+      "id": "walkway_3_3",
+      "kind": "mesh",
+      "loader": "obj",
+      "mesh": "../models/pikerel_walkway_segment.obj",
+      "position": [
+        3.2,
+        -0.58,
+        13.6
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": 1.0,
+      "material": "basket_trim",
+      "label": "Walkway Segment",
+      "scripts": [],
+      "metadata": {
+        "role": "walkway",
+        "binding_id": "walkway_3_3"
+      }
+    },
+    {
+      "id": "walkway_3_4",
+      "kind": "mesh",
+      "loader": "obj",
+      "mesh": "../models/pikerel_walkway_segment.obj",
+      "position": [
+        8.0,
+        -0.58,
+        13.6
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": 1.0,
+      "material": "basket_trim",
+      "label": "Walkway Segment",
+      "scripts": [],
+      "metadata": {
+        "role": "walkway",
+        "binding_id": "walkway_3_4"
+      }
+    },
+    {
+      "id": "walkway_4_1",
+      "kind": "mesh",
+      "loader": "obj",
+      "mesh": "../models/pikerel_walkway_segment.obj",
+      "position": [
+        -6.4,
+        -0.58,
+        15.4
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": 1.0,
+      "material": "basket_trim",
+      "label": "Walkway Segment",
+      "scripts": [],
+      "metadata": {
+        "role": "walkway",
+        "binding_id": "walkway_4_1"
+      }
+    },
+    {
+      "id": "walkway_4_2",
+      "kind": "mesh",
+      "loader": "obj",
+      "mesh": "../models/pikerel_walkway_segment.obj",
+      "position": [
+        -1.6,
+        -0.58,
+        15.4
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": 1.0,
+      "material": "basket_trim",
+      "label": "Walkway Segment",
+      "scripts": [],
+      "metadata": {
+        "role": "walkway",
+        "binding_id": "walkway_4_2"
+      }
+    },
+    {
+      "id": "walkway_4_3",
+      "kind": "mesh",
+      "loader": "obj",
+      "mesh": "../models/pikerel_walkway_segment.obj",
+      "position": [
+        3.2,
+        -0.58,
+        15.4
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": 1.0,
+      "material": "basket_trim",
+      "label": "Walkway Segment",
+      "scripts": [],
+      "metadata": {
+        "role": "walkway",
+        "binding_id": "walkway_4_3"
+      }
+    },
+    {
+      "id": "walkway_4_4",
+      "kind": "mesh",
+      "loader": "obj",
+      "mesh": "../models/pikerel_walkway_segment.obj",
+      "position": [
+        8.0,
+        -0.58,
+        15.4
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": 1.0,
+      "material": "basket_trim",
+      "label": "Walkway Segment",
+      "scripts": [],
+      "metadata": {
+        "role": "walkway",
+        "binding_id": "walkway_4_4"
+      }
+    },
+    {
+      "id": "shrine_post_1",
+      "kind": "mesh",
+      "loader": "obj",
+      "mesh": "../models/pikerel_shrine_post.obj",
+      "position": [
+        -10.6,
+        0.0,
+        14.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": 1.0,
+      "material": "bone",
+      "label": "Soul Shrine Post",
+      "scripts": [
+        {
+          "type": "pulse",
+          "amplitude": 0.04,
+          "speed": 0.7
+        }
+      ],
+      "metadata": {
+        "role": "shrine-marker",
+        "binding_id": "soul_shrine_01",
+        "plane_target": "up"
+      }
+    },
+    {
+      "id": "shrine_post_2",
+      "kind": "mesh",
+      "loader": "obj",
+      "mesh": "../models/pikerel_shrine_post.obj",
+      "position": [
+        10.9,
+        0.0,
+        15.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": 1.0,
+      "material": "bone",
+      "label": "Soul Shrine Post",
+      "scripts": [
+        {
+          "type": "pulse",
+          "amplitude": 0.04,
+          "speed": 0.7
+        }
+      ],
+      "metadata": {
+        "role": "shrine-marker",
+        "binding_id": "soul_shrine_02",
+        "plane_target": "low"
+      }
+    },
+    {
+      "id": "shrine_post_3",
+      "kind": "mesh",
+      "loader": "obj",
+      "mesh": "../models/pikerel_shrine_post.obj",
+      "position": [
+        0.0,
+        0.0,
+        8.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": 1.0,
+      "material": "bone",
+      "label": "Soul Shrine Post",
+      "scripts": [
+        {
+          "type": "pulse",
+          "amplitude": 0.04,
+          "speed": 0.7
+        }
+      ],
+      "metadata": {
+        "role": "shrine-marker",
+        "binding_id": "soul_shrine_03",
+        "plane_target": "land"
+      }
+    },
+    {
+      "id": "reed_cluster_1",
+      "kind": "mesh",
+      "loader": "obj",
+      "mesh": "../models/pikerel_reed_cluster.obj",
+      "position": [
+        -13.0,
+        -0.95,
+        21.2
+      ],
+      "rotation": [
+        0.0,
+        0.15,
+        0.0
+      ],
+      "scale": 1.1,
+      "material": "jade",
+      "label": "Swamp Reeds",
+      "scripts": [
+        {
+          "type": "sway",
+          "amplitude": 0.08,
+          "speed": 0.51
+        }
+      ],
+      "metadata": {
+        "role": "foliage",
+        "binding_id": "reed_cluster_01"
+      }
+    },
+    {
+      "id": "reed_cluster_2",
+      "kind": "mesh",
+      "loader": "obj",
+      "mesh": "../models/pikerel_reed_cluster.obj",
+      "position": [
+        -9.5,
+        -0.95,
+        19.4
+      ],
+      "rotation": [
+        0.0,
+        0.3,
+        0.0
+      ],
+      "scale": 1.2,
+      "material": "jade",
+      "label": "Swamp Reeds",
+      "scripts": [
+        {
+          "type": "sway",
+          "amplitude": 0.08,
+          "speed": 0.54
+        }
+      ],
+      "metadata": {
+        "role": "foliage",
+        "binding_id": "reed_cluster_02"
+      }
+    },
+    {
+      "id": "reed_cluster_3",
+      "kind": "mesh",
+      "loader": "obj",
+      "mesh": "../models/pikerel_reed_cluster.obj",
+      "position": [
+        -6.0,
+        -0.95,
+        21.2
+      ],
+      "rotation": [
+        0.0,
+        0.44999999999999996,
+        0.0
+      ],
+      "scale": 1.0,
+      "material": "jade",
+      "label": "Swamp Reeds",
+      "scripts": [
+        {
+          "type": "sway",
+          "amplitude": 0.08,
+          "speed": 0.57
+        }
+      ],
+      "metadata": {
+        "role": "foliage",
+        "binding_id": "reed_cluster_03"
+      }
+    },
+    {
+      "id": "reed_cluster_4",
+      "kind": "mesh",
+      "loader": "obj",
+      "mesh": "../models/pikerel_reed_cluster.obj",
+      "position": [
+        5.0,
+        -0.95,
+        19.4
+      ],
+      "rotation": [
+        0.0,
+        0.6,
+        0.0
+      ],
+      "scale": 1.1,
+      "material": "jade",
+      "label": "Swamp Reeds",
+      "scripts": [
+        {
+          "type": "sway",
+          "amplitude": 0.08,
+          "speed": 0.6
+        }
+      ],
+      "metadata": {
+        "role": "foliage",
+        "binding_id": "reed_cluster_04"
+      }
+    },
+    {
+      "id": "reed_cluster_5",
+      "kind": "mesh",
+      "loader": "obj",
+      "mesh": "../models/pikerel_reed_cluster.obj",
+      "position": [
+        9.2,
+        -0.95,
+        21.2
+      ],
+      "rotation": [
+        0.0,
+        0.75,
+        0.0
+      ],
+      "scale": 1.2,
+      "material": "jade",
+      "label": "Swamp Reeds",
+      "scripts": [
+        {
+          "type": "sway",
+          "amplitude": 0.08,
+          "speed": 0.63
+        }
+      ],
+      "metadata": {
+        "role": "foliage",
+        "binding_id": "reed_cluster_05"
+      }
+    },
+    {
+      "id": "reed_cluster_6",
+      "kind": "mesh",
+      "loader": "obj",
+      "mesh": "../models/pikerel_reed_cluster.obj",
+      "position": [
+        13.0,
+        -0.95,
+        19.4
+      ],
+      "rotation": [
+        0.0,
+        0.8999999999999999,
+        0.0
+      ],
+      "scale": 1.0,
+      "material": "jade",
+      "label": "Swamp Reeds",
+      "scripts": [
+        {
+          "type": "sway",
+          "amplitude": 0.08,
+          "speed": 0.6599999999999999
+        }
+      ],
+      "metadata": {
+        "role": "foliage",
+        "binding_id": "reed_cluster_06"
+      }
+    },
+    {
+      "id": "dock_platform_1",
+      "kind": "mesh",
+      "loader": "obj",
+      "mesh": "../models/pikerel_dock_platform.obj",
+      "position": [
+        -7.8,
+        -0.9,
+        23.7
+      ],
+      "rotation": [
+        0.0,
+        0.06,
+        0.0
+      ],
+      "scale": 1.0,
+      "material": "basket_trim",
+      "label": "Lagoon Dock",
+      "scripts": [],
+      "metadata": {
+        "role": "dock",
+        "binding_id": "lagoon_dock_01",
+        "route_hint": "lagoon_crossing"
+      }
+    },
+    {
+      "id": "dock_platform_2",
+      "kind": "mesh",
+      "loader": "obj",
+      "mesh": "../models/pikerel_dock_platform.obj",
+      "position": [
+        7.8,
+        -0.9,
+        24.9
+      ],
+      "rotation": [
+        0.0,
+        0.12,
+        0.0
+      ],
+      "scale": 1.0,
+      "material": "basket_trim",
+      "label": "Lagoon Dock",
+      "scripts": [],
+      "metadata": {
+        "role": "dock",
+        "binding_id": "lagoon_dock_02",
+        "route_hint": "lagoon_crossing"
+      }
+    },
+    {
+      "id": "mangrove_cluster_1",
+      "kind": "mesh",
+      "loader": "obj",
+      "mesh": "../models/xenobloods_mangrove_root_cluster.obj",
+      "position": [
+        -15.0,
+        -1.0,
+        22.0
+      ],
+      "rotation": [
+        0.0,
+        0.22,
+        0.0
+      ],
+      "scale": 1.12,
+      "material": "stone",
+      "label": "Mangrove Root Cluster",
+      "scripts": [
+        {
+          "type": "sway",
+          "amplitude": 0.05,
+          "speed": 0.4
+        }
+      ],
+      "metadata": {
+        "role": "tree-root",
+        "binding_id": "mangrove_cluster_01"
+      }
+    },
+    {
+      "id": "mangrove_cluster_2",
+      "kind": "mesh",
+      "loader": "obj",
+      "mesh": "../models/xenobloods_mangrove_root_cluster.obj",
+      "position": [
+        -11.4,
+        -1.0,
+        23.0
+      ],
+      "rotation": [
+        0.0,
+        0.44,
+        0.0
+      ],
+      "scale": 1.0,
+      "material": "stone",
+      "label": "Mangrove Root Cluster",
+      "scripts": [
+        {
+          "type": "sway",
+          "amplitude": 0.05,
+          "speed": 0.4
+        }
+      ],
+      "metadata": {
+        "role": "tree-root",
+        "binding_id": "mangrove_cluster_02"
+      }
+    },
+    {
+      "id": "mangrove_cluster_3",
+      "kind": "mesh",
+      "loader": "obj",
+      "mesh": "../models/xenobloods_mangrove_root_cluster.obj",
+      "position": [
+        11.7,
+        -1.0,
+        24.0
+      ],
+      "rotation": [
+        0.0,
+        0.66,
+        0.0
+      ],
+      "scale": 1.12,
+      "material": "stone",
+      "label": "Mangrove Root Cluster",
+      "scripts": [
+        {
+          "type": "sway",
+          "amplitude": 0.05,
+          "speed": 0.4
+        }
+      ],
+      "metadata": {
+        "role": "tree-root",
+        "binding_id": "mangrove_cluster_03"
+      }
+    },
+    {
+      "id": "mangrove_cluster_4",
+      "kind": "mesh",
+      "loader": "obj",
+      "mesh": "../models/xenobloods_mangrove_root_cluster.obj",
+      "position": [
+        15.2,
+        -1.0,
+        25.0
+      ],
+      "rotation": [
+        0.0,
+        0.88,
+        0.0
+      ],
+      "scale": 1.0,
+      "material": "stone",
+      "label": "Mangrove Root Cluster",
+      "scripts": [
+        {
+          "type": "sway",
+          "amplitude": 0.05,
+          "speed": 0.4
+        }
+      ],
+      "metadata": {
+        "role": "tree-root",
+        "binding_id": "mangrove_cluster_04"
+      }
+    },
+    {
+      "id": "player_life_landborne",
+      "kind": "billboard",
+      "image_path": "../billboards/ishtasha_landborne.png",
+      "position": [
+        -9.8,
+        1.1,
+        8.6
+      ],
+      "width": 360,
+      "height": 360,
+      "label": "Ishtasha: Landborne",
+      "scripts": [
+        {
+          "type": "channel_follow",
+          "channel": "life_state_landborne",
+          "y_amplitude": 0.16,
+          "scale_amplitude": 0.2,
+          "speed": 0.72
+        }
+      ],
+      "metadata": {
+        "role": "player-life-state",
+        "binding_id": "player_life_landborne",
+        "life_form": "landborne"
+      }
+    },
+    {
+      "id": "player_life_gourd_infant",
+      "kind": "billboard",
+      "image_path": "../billboards/ishtasha_gourd_infant.png",
+      "position": [
+        0.0,
+        1.0,
+        7.8
+      ],
+      "width": 340,
+      "height": 340,
+      "label": "Ishtasha: Gourd Infant",
+      "scripts": [
+        {
+          "type": "channel_follow",
+          "channel": "life_state_gourd_infant",
+          "y_amplitude": 0.16,
+          "scale_amplitude": 0.2,
+          "speed": 0.72
+        }
+      ],
+      "metadata": {
+        "role": "player-life-state",
+        "binding_id": "player_life_gourd_infant",
+        "life_form": "gourd_infant"
+      }
+    },
+    {
+      "id": "player_life_etheric_current",
+      "kind": "billboard",
+      "image_path": "../billboards/ishtasha_etheric_current.png",
+      "position": [
+        9.8,
+        1.2,
+        8.6
+      ],
+      "width": 340,
+      "height": 340,
+      "label": "Ishtasha: Etheric Current",
+      "scripts": [
+        {
+          "type": "channel_follow",
+          "channel": "life_state_etheric_current",
+          "y_amplitude": 0.18,
+          "scale_amplitude": 0.2,
+          "speed": 0.78
+        }
+      ],
+      "metadata": {
+        "role": "player-life-state",
+        "binding_id": "player_life_etheric_current",
+        "life_form": "etheric_current"
+      }
+    },
+    {
+      "id": "encounter_scarab_child",
+      "kind": "billboard",
+      "image_path": "../billboards/scarab_child_preview.gif",
+      "position": [
+        -6.4,
+        1.1,
+        23.4
+      ],
+      "width": 260,
+      "height": 240,
+      "label": "Scarab Child Acolyte",
+      "scripts": [
+        {
+          "type": "channel_follow",
+          "channel": "encounter_focus_scarab",
+          "y_amplitude": 0.14,
+          "scale_amplitude": 0.18,
+          "speed": 0.66
+        }
+      ],
+      "metadata": {
+        "role": "encounter-preview",
+        "binding_id": "encounter_scarab_child",
+        "actor_id": "scarab_child_acolyte"
+      }
+    },
+    {
+      "id": "encounter_lattice_ward",
+      "kind": "billboard",
+      "image_path": "../billboards/lattice_ward_preview.gif",
+      "position": [
+        6.6,
+        1.2,
+        23.9
+      ],
+      "width": 260,
+      "height": 240,
+      "label": "Lattice Ward",
+      "scripts": [
+        {
+          "type": "channel_follow",
+          "channel": "encounter_focus_lattice",
+          "y_amplitude": 0.14,
+          "scale_amplitude": 0.18,
+          "speed": 0.66
+        }
+      ],
+      "metadata": {
+        "role": "encounter-preview",
+        "binding_id": "encounter_lattice_ward",
+        "actor_id": "lattice_ward"
+      }
+    },
+    {
+      "id": "boss_lahgroid",
+      "kind": "billboard",
+      "image_path": "../billboards/lahgroid_boss_preview.gif",
+      "position": [
+        0.0,
+        1.9,
+        29.4
+      ],
+      "width": 380,
+      "height": 360,
+      "label": "Lahgroid Hierophant",
+      "scripts": [
+        {
+          "type": "channel_follow",
+          "channel": "boss_focus",
+          "y_amplitude": 0.18,
+          "scale_amplitude": 0.22,
+          "speed": 0.6
+        },
+        {
+          "type": "threshold_gate",
+          "threshold": "boss_intro",
+          "y_amplitude": 0.2,
+          "scale_amplitude": 0.12,
+          "speed": 0.72
+        },
+        {
+          "type": "accent_burst",
+          "channel": "boss_pressure",
+          "scale_amplitude": 0.18,
+          "y_amplitude": 0.2,
+          "curve": 6.0,
+          "speed": 1.08
+        }
+      ],
+      "metadata": {
+        "role": "boss-preview",
+        "binding_id": "boss_lahgroid",
+        "actor_id": "lahgroid_hierophant",
+        "threshold": "boss_intro"
+      }
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "game_id": "toadstoolmin-bubble-swingpush",
+  "title": "toadstoolmin bubble SWINGPUSH",
+  "pipeline_target": "dodogame",
+  "render_mode": "full3d-pseudo3d-hybrid",
+  "primary_source": "src/toadstoolmin_bubble_swingpush.c",
+  "source_language": "c",
+  "gameplay_premise": "A controller-first action prototype built around bubble lift, swing timing, and push-driven traversal.",
+  "ingest_role": "Fresh DoENGINE game branch meant to be lifted into the DODO pipeline as a new playable title seed.",
+  "controller_profile_id": "bango-xinput-full",
+  "supports": [
+    "DODO pipeline source-ingest seed",
+    "C gameplay entrypoint stub",
+    "bubble swing and push movement loop",
+    "future PlayNOW staging"
+  ]
+}

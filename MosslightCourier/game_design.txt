@@ -1,0 +1,78 @@
+Mosslight Courier
+=================
+
+Genre
+- Top-down 2D collection-and-escape game.
+- Single-player, keyboard controlled.
+- Built as a lightweight Windows desktop game in C using Win32 + GDI.
+
+Core Premise
+- You are the Mosslight Courier, a small marsh runner carrying a satchel lamp through three dangerous garden districts at dusk.
+- Each district contains scattered mosslight seeds that must be gathered before the exit gate will open.
+- Garden pests patrol each map. If they touch you, you lose a heart and are sent back to the stage start.
+- Clear all three districts to complete the game.
+
+Target Runtime
+- Internal resolution: 320 x 192 pixels.
+- Presentation scale: integer-scaled to a desktop window.
+- Intended visual style: clean, readable pixel art with strong silhouettes and simple animation.
+
+Controls
+- Move: Arrow keys or WASD.
+- Start / confirm: Enter.
+- Return to title after losing or winning: Enter.
+- Quit: Escape.
+
+Game Loop
+1. Title screen.
+2. Start stage.
+3. Explore map, collect every mosslight seed.
+4. Avoid enemies while learning route shortcuts.
+5. Exit gate opens after all seeds are collected.
+6. Reach gate to clear stage.
+7. Repeat for three stages, then show win screen.
+
+Player Rules
+- Starts with 3 hearts for the whole run.
+- Collecting all seeds in a stage opens that stage's gate.
+- Contact with an enemy removes 1 heart.
+- After a hit, the player returns to the stage spawn point with a short invulnerability window.
+- If hearts reach 0, the game enters a game-over state.
+
+Stage Structure
+- Stage count: 3.
+- Map size: 20 x 12 tiles.
+- Tile size: 16 x 16 pixels.
+- Stage 1 teaches routing and single patrol timing.
+- Stage 2 introduces denser lane control and mixed enemy spacing.
+- Stage 3 asks for cleaner pathing and tighter recovery from mistakes.
+
+Enemy Roles
+- Briar Beetle:
+  - 24 x 24 sprite.
+  - Patrols along a lane and reverses at walls.
+  - Main role: route denial.
+- Spore Wisp:
+  - 16 x 16 sprite.
+  - Drifts at range, leans toward the player when nearby.
+  - Main role: soft pressure and corner disruption.
+
+Visual Priorities
+- Every important object should read instantly at small size.
+- Seeds should glow clearly against the ground.
+- Gate closed/open states should be impossible to confuse.
+- The player should remain readable over any backdrop.
+
+Code Structure
+- src/mosslight_courier.c: full game source.
+- build.ps1: gcc build script for Windows.
+- assets_requirements.txt: exact asset contract, filenames, sizes, and frame layout.
+
+Implementation Notes
+- The code loads BMP assets from the local assets folder.
+- Missing art falls back to simple placeholder rendering so the game remains playable during asset production.
+- Sprite transparency uses pure magenta RGB(255, 0, 255) as the color key.
+
+Asset Creation Challenge
+- The code is intentionally wired around a small but precise set of assets.
+- You can improve the full presentation by replacing each placeholder with your own BMP art while keeping the listed dimensions and sheet layouts exactly.

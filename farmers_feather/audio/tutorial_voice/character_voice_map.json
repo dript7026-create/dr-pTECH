@@ -1,0 +1,36 @@
+{
+  "project": "Farmer's Feather tutorial voice map",
+  "generated_for": "Windows System.Speech",
+  "profiles": [
+    {
+      "id": "feather_bearer",
+      "display_name": "Feather Bearer",
+      "role": "player_character",
+      "voice": "Microsoft David Desktop",
+      "rate": -1,
+      "volume": 100,
+      "objective_icon": "TILE_FEATHER",
+      "world_anchor": "start_path"
+    },
+    {
+      "id": "hearth_guide",
+      "display_name": "Iona Hearth-Guide",
+      "role": "settlement_keeper",
+      "voice": "Microsoft Zira Desktop",
+      "rate": -2,
+      "volume": 100,
+      "objective_icon": "TILE_HUT",
+      "world_anchor": "tutorial_settlement"
+    },
+    {
+      "id": "rim_echo",
+      "display_name": "Rim Echo",
+      "role": "lore_narrator",
+      "voice": "Microsoft David Desktop",
+      "rate": -3,
+      "volume": 95,
+      "objective_icon": "TILE_CRATER",
+      "world_anchor": "combat_circle"
+    }
+  ]
+}

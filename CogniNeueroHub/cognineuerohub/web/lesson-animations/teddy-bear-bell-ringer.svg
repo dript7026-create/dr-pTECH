@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img" aria-labelledby="title desc">
+  <title>Teddy Bear Bell Ringer</title>
+  <desc>A teddy bear holding a small bell for market-themed lessons.</desc>
+  <defs>
+    <linearGradient id="mist" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#fff7ef"/>
+      <stop offset="100%" stop-color="#edf2eb"/>
+    </linearGradient>
+  </defs>
+  <rect width="240" height="240" rx="36" fill="url(#mist)"/>
+  <ellipse cx="122" cy="197" rx="75" ry="15" fill="#dde7dc"/>
+  <g transform="translate(0 5)">
+    <circle cx="81" cy="67" r="23" fill="#a7754f"/>
+    <circle cx="159" cy="67" r="23" fill="#a7754f"/>
+    <circle cx="81" cy="67" r="11" fill="#edd8c2"/>
+    <circle cx="159" cy="67" r="11" fill="#edd8c2"/>
+    <circle cx="120" cy="90" r="55" fill="#a7754f"/>
+    <ellipse cx="120" cy="105" rx="25" ry="20" fill="#edd8c2"/>
+    <circle cx="100" cy="90" r="5" fill="#382c26"/>
+    <circle cx="140" cy="90" r="5" fill="#382c26"/>
+    <ellipse cx="120" cy="101" rx="7" ry="6" fill="#382c26"/>
+    <path d="M109 114c4 5 18 5 22 0" fill="none" stroke="#6f4a34" stroke-linecap="round" stroke-width="4"/>
+    <path d="M82 142c12-16 25-24 38-24 14 0 27 8 38 24v34H82z" fill="#a7754f"/>
+    <rect x="88" y="131" width="64" height="18" rx="9" fill="#d0aa57" opacity="0.72"/>
+    <path d="M88 145c-11 10-17 24-18 40" fill="none" stroke="#6f4a34" stroke-linecap="round" stroke-width="10"/>
+    <path d="M152 145c11 10 17 24 18 40" fill="none" stroke="#6f4a34" stroke-linecap="round" stroke-width="10"/>
+    <path d="M103 175c-2 14-7 21-19 26" fill="none" stroke="#6f4a34" stroke-linecap="round" stroke-width="12"/>
+    <path d="M137 175c2 14 7 21 19 26" fill="none" stroke="#6f4a34" stroke-linecap="round" stroke-width="12"/>
+    <path d="M160 124c14 2 24 11 30 24" fill="none" stroke="#6f4a34" stroke-linecap="round" stroke-width="10"/>
+    <path d="M191 149c0-12 8-19 17-19s17 7 17 19c0 10-8 18-17 18s-17-8-17-18z" fill="#d0aa57" transform="translate(-10 0)"/>
+    <circle cx="198" cy="164" r="4" fill="#6f4a34"/>
+  </g>
+</svg>

@@ -1,0 +1,162 @@
+{
+  "_notes": {
+    "format": "Each job describes a reference motion-preview animation for use during asset generation and in-game choreography planning. out_dir receives frame PNGs + a manifest.json.",
+    "fps": 24
+  },
+  "jobs": [
+
+    {
+      "name": "sparkle-tier0-idle",
+      "character": "Sparkle BlueNoMid",
+      "animation": "idle base loop",
+      "prompt": "Sparkle idle animation in BlueNoMid Base outfit: subtle body bob up and down with floating head drifting slightly, detached hands resting at sides, feet hovering just below the torso, minimal lateral sway, slow 2-second loop",
+      "frames": 48,
+      "out_dir": "generated/jumpclip/sparkle-tier0-idle"
+    },
+    {
+      "name": "sparkle-tier1-sash-pulse",
+      "character": "Sparkle BlueNoMid",
+      "animation": "Pulse Sash combat dance loop",
+      "prompt": "Sparkle dancing with Pulse Sash: sash stripe flares in time with a kick beat, left hand snapping upward on Head Flick beats, torso twisting on Torso Pulse beats, 2-second loop at 142 BPM",
+      "frames": 48,
+      "out_dir": "generated/jumpclip/sparkle-tier1-sash-pulse"
+    },
+    {
+      "name": "sparkle-tier2-skirt-spin",
+      "character": "Sparkle BlueNoMid",
+      "animation": "Prism Skirt runway spin",
+      "prompt": "Sparkle spinning with Prism Skirt fanning out in a visible-spectrum petal spread, each skirt panel a distinct spectral colour, detached hands arcing wide during spin, feet kicked outward, 1-second spin loop",
+      "frames": 24,
+      "out_dir": "generated/jumpclip/sparkle-tier2-skirt-spin"
+    },
+    {
+      "name": "sparkle-tier3-halo-rig-cable-flow",
+      "character": "Sparkle BlueNoMid",
+      "animation": "Halo Rig cable-flow combat loop",
+      "prompt": "Sparkle with Halo Rig: shoulder-cables flowing dynamically with hand motion, halo ring slightly tilting back and forth above the head, hands extending laterally trailing ribbon cables, ribbon tips snap on beat hits, 2-second combat loop",
+      "frames": 48,
+      "out_dir": "generated/jumpclip/sparkle-tier3-halo-rig-cable-flow"
+    },
+    {
+      "name": "sparkle-tier4-light-envisioned-transform",
+      "character": "Sparkle BlueNoMid",
+      "animation": "Light Envisioned transformation sequence",
+      "prompt": "Sparkle transforming into Light Envisioned form: crown-halo erupts upward from the head, five spectral ribbon-blades fan outward from the torso in sequence, radiance crescendos brighter each frame until fully bloomed, one-shot 48-frame sequence",
+      "frames": 48,
+      "out_dir": "generated/jumpclip/sparkle-tier4-light-envisioned-transform"
+    },
+    {
+      "name": "sparkle-poselock-hold",
+      "character": "Sparkle BlueNoMid",
+      "animation": "pose-lock held angle anticipation",
+      "prompt": "Sparkle locked in pose-hold anticipation: target ring orbits around the torso, body frozen at a fixed silhouette angle with slight trembling vibration, finisher bloom glow building outward from the torso, 1-second hold loop",
+      "frames": 24,
+      "out_dir": "generated/jumpclip/sparkle-poselock-hold"
+    },
+    {
+      "name": "sparkle-poselock-success",
+      "character": "Sparkle BlueNoMid",
+      "animation": "pose-lock success obliteration burst",
+      "prompt": "Sparkle pose-lock success obliteration: body flash-expands to full radiance, spectral collapse burst explodes outward in a ring, ribbon streaks shoot off in five directions, then Sparkle snaps back to idle glowing brightly, one-shot 36-frame sequence",
+      "frames": 36,
+      "out_dir": "generated/jumpclip/sparkle-poselock-success"
+    },
+    {
+      "name": "sparkle-poselock-fail",
+      "character": "Sparkle BlueNoMid",
+      "animation": "pose-lock failure tail backlash recoil",
+      "prompt": "Sparkle recoils from a failed pose-lock: body snaps backward, cold-blue light drains away, hands recoil inward, a harsh backward streak flashes through the silhouette, settles back into idle in 24 frames",
+      "frames": 24,
+      "out_dir": "generated/jumpclip/sparkle-poselock-fail"
+    },
+
+    {
+      "name": "litemite-archetype0-prism-bloom-idle",
+      "character": "LiteMite Prism Bloom",
+      "animation": "slow rotation idle",
+      "prompt": "Prism Bloom LiteMite idle: six-point rainbow burst slowly rotating, tail drifting leftward in a lazy sine wave, swarm motes circling in two-orbit rings, golden warm glow pulsing softly, 3-second loop",
+      "frames": 72,
+      "out_dir": "generated/jumpclip/litemite-archetype0-prism-bloom-idle"
+    },
+    {
+      "name": "litemite-archetype0-prism-bloom-telegraph",
+      "character": "LiteMite Prism Bloom",
+      "animation": "lane telegraph pulse",
+      "prompt": "Prism Bloom telegraphing a lane: one burst tip brightens dramatically and fires a spectral beam toward a lane marker at the bottom of the field, then dims back, 0.5-second sequence on repeat",
+      "frames": 12,
+      "out_dir": "generated/jumpclip/litemite-archetype0-prism-bloom-telegraph"
+    },
+    {
+      "name": "litemite-archetype1-glue-braid-idle",
+      "character": "LiteMite Glue Braid",
+      "animation": "sticky slow drift",
+      "prompt": "Glue Braid LiteMite idle: three viscous amber blobs slowly oozing and re-merging, ribbon weft threads between them stretching and snapping back, tail draped in a reverse S-curve swaying almost imperceptibly, 4-second loop",
+      "frames": 96,
+      "out_dir": "generated/jumpclip/litemite-archetype1-glue-braid-idle"
+    },
+    {
+      "name": "litemite-archetype1-glue-braid-snare-snap",
+      "character": "LiteMite Glue Braid",
+      "animation": "snare snap stall",
+      "prompt": "Glue Braid reacts to a snare hit: the three blobs slam together in a single blob then rebounce apart, sending a sticky shock ring outward before resuming drift, 0.5-second impulse",
+      "frames": 12,
+      "out_dir": "generated/jumpclip/litemite-archetype1-glue-braid-snare-snap"
+    },
+    {
+      "name": "litemite-archetype2-ember-choir-orbit",
+      "character": "LiteMite Ember Choir",
+      "animation": "trefoil orbit loop",
+      "prompt": "Ember Choir LiteMite: three molten amber-pink petals orbiting a pale-violet center in a trefoil pattern, each trailing visible-spectrum ember dust wisps, center pulsing with a slow heartbeat glow, 2-second orbit loop",
+      "frames": 48,
+      "out_dir": "generated/jumpclip/litemite-archetype2-ember-choir-orbit"
+    },
+    {
+      "name": "litemite-archetype2-ember-choir-scatter",
+      "character": "LiteMite Ember Choir",
+      "animation": "scatter mote burst",
+      "prompt": "Ember Choir scatters: three petals fly outward in a triangle, each sprays a fan of ember motes, then they curve and snap back to orbit in 1 second, combat telegraph animation",
+      "frames": 24,
+      "out_dir": "generated/jumpclip/litemite-archetype2-ember-choir-scatter"
+    },
+    {
+      "name": "litemite-archetype3-halo-scythe-sweep",
+      "character": "LiteMite Halo Scythe",
+      "animation": "scythe arc sweep",
+      "prompt": "Halo Scythe LiteMite: the offset halo sweeps a full arc around the main ring like a clock hand moving counterclockwise, inner burst flares on the sweep endpoint, crimson slash tail follows the arc, 1-second loop",
+      "frames": 24,
+      "out_dir": "generated/jumpclip/litemite-archetype3-halo-scythe-sweep"
+    },
+    {
+      "name": "litemite-archetype3-halo-scythe-lock-warning",
+      "character": "LiteMite Halo Scythe",
+      "animation": "lock-ready warning flash",
+      "prompt": "Halo Scythe near defeat warning: entire form brightens to full silver-blue, outer ring pulses rapidly three times, then a pause — warning that pose-lock is now possible, 1-second sequence",
+      "frames": 24,
+      "out_dir": "generated/jumpclip/litemite-archetype3-halo-scythe-lock-warning"
+    },
+    {
+      "name": "litemite-archetype4-luster-knot-idle",
+      "character": "LiteMite Luster Knot",
+      "animation": "knot pulse loop",
+      "prompt": "Luster Knot LiteMite idle: three deep-violet spheres slowly breathing in and out, five satellite motes orbiting in a loose pentagon, five-pointed golden outer burst blades slowly rotating counterclockwise, tail knotted in a figure-8 undulation, 3-second loop",
+      "frames": 72,
+      "out_dir": "generated/jumpclip/litemite-archetype4-luster-knot-idle"
+    },
+    {
+      "name": "litemite-archetype4-luster-knot-final-phase",
+      "character": "LiteMite Luster Knot",
+      "animation": "final phase eruption",
+      "prompt": "Luster Knot entering final phase: all three spheres crack open revealing a golden core, satellite motes accelerate their orbit, burst blades lock into an aggressive spread and stop rotating — imposing and dangerous, 1.5-second one-shot",
+      "frames": 36,
+      "out_dir": "generated/jumpclip/litemite-archetype4-luster-knot-final-phase"
+    },
+    {
+      "name": "litemite-defeat-universal",
+      "character": "LiteMite (any archetype)",
+      "animation": "defeat explosion universal",
+      "prompt": "Universal LiteMite defeat: the enemy form flashes white, then a warm ring expands rapidly outward carrying spectral debris, leaving only dark void with floating ember motes that slowly fade to nothing, one-shot 36-frame sequence",
+      "frames": 36,
+      "out_dir": "generated/jumpclip/litemite-defeat-universal"
+    }
+  ]
+}

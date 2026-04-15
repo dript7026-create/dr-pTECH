@@ -1,0 +1,20 @@
+{
+  "enabled": true,
+  "device": "Xbox Series Controller",
+  "api": "xinput",
+  "move": "left_stick",
+  "aim": "right_stick",
+  "shoot": "right_trigger",
+  "parry": "left_shoulder",
+  "melee": "right_shoulder",
+  "dodge": "b",
+  "jump": "a",
+  "reload": "x",
+  "swap_mode": "y",
+  "sprint": "left_trigger",
+  "pause": "menu",
+  "deadzone": {
+    "left_stick": 0.1,
+    "right_stick": 0.08
+  }
+}

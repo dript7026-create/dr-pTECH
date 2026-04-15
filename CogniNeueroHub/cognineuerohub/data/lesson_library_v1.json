@@ -1,0 +1,411 @@
+{
+  "library_id": "lesson-library-v1",
+  "title": "Quiet Seminar Library",
+  "note": "Curated classroom lesson seeds for steady, inspectable simulation runs, now with local animation picks and author-defined custom games.",
+  "lessons": [
+    {
+      "lesson_id": "medieval-bavaria-v1",
+      "title": "Medieval Bavaria: duchies, monasteries, and the Wittelsbach rise",
+      "subject": "history",
+      "region": "Bavaria",
+      "era": "900-1300 CE",
+      "eras": [
+        "Ottonian consolidation",
+        "Investiture Conflict",
+        "Hohenstaufen realignment",
+        "Early Wittelsbach ascendancy"
+      ],
+      "essential_question": "How did political power, monastic culture, and imperial ties shape medieval Bavaria?",
+      "objectives": [
+        "Explain how the stem duchy of Bavaria fit into the Holy Roman Empire.",
+        "Trace the political significance of the Ottonians, Welfs, and Wittelsbachs.",
+        "Connect monastic reform and trade routes to regional power."
+      ],
+      "objective_weights": [
+        {"knowledge": 0.34, "reflection": 0.2, "coherence": 0.16, "calm": 0.12, "inquiry": 0.18},
+        {"knowledge": 0.3, "reflection": 0.2, "coherence": 0.22, "calm": 0.1, "inquiry": 0.18},
+        {"knowledge": 0.24, "reflection": 0.24, "coherence": 0.24, "calm": 0.12, "inquiry": 0.16}
+      ],
+      "vocabulary": [
+        "duchy",
+        "investiture",
+        "Wittelsbach",
+        "monastery",
+        "Holy Roman Empire"
+      ],
+      "key_figures": [
+        "Henry the Lion",
+        "Otto I",
+        "Otto of Wittelsbach",
+        "Otto of Freising"
+      ],
+      "source_excerpt": "Classroom excerpt adapted from medieval Bavarian chronicle themes: regional order rested on a fragile braid of ducal loyalty, episcopal influence, monastic reform, and routes that moved salt, silver, texts, and pilgrims through the Alpine edge.",
+      "source_attribution": "Synthetic teaching excerpt based on chronicler motifs from Ottonian and twelfth-century Bavaria.",
+      "teaching_notes": [
+        "Begin with a slow map-reading warmup so students place Bavaria within the Holy Roman Empire before naming dynasties.",
+        "Pause after the Investiture Conflict to distinguish imperial authority from local ducal power.",
+        "Close by asking how monasteries and trade routes stabilized both culture and political memory."
+      ],
+      "phases": [
+        {
+          "title": "Orient the map",
+          "purpose": "Locate Bavaria in relation to imperial power and neighboring routes.",
+          "facilitator_move": "Project a map and ask students to notice what routes and borders imply before naming rulers.",
+          "learner_signal": "Students describe position, movement, and exposure rather than reciting facts."
+        },
+        {
+          "title": "Trace conflict and dynasty",
+          "purpose": "Connect imperial tension to local political change.",
+          "facilitator_move": "Slowly compare the Ottonians, Welfs, and Wittelsbachs through a cause-and-effect discussion.",
+          "learner_signal": "Students explain why a conflict could reshape who governed Bavaria."
+        },
+        {
+          "title": "Synthesize institutions",
+          "purpose": "Blend monastic, political, and commercial forces into one interpretation.",
+          "facilitator_move": "Ask for a written explanation that links abbeys, roads, and ducal legitimacy.",
+          "learner_signal": "Students move from isolated details to a coherent system view."
+        }
+      ],
+      "concept_threads": [
+        {
+          "label": "Imperial belonging",
+          "question": "How did Bavaria belong to something larger than itself?",
+          "significance": "This thread anchors the duchy inside the Holy Roman Empire rather than treating it as isolated."
+        },
+        {
+          "label": "Institutional memory",
+          "question": "Why did monasteries matter beyond religion?",
+          "significance": "Monasteries stabilized literacy, landholding, and elite networks."
+        },
+        {
+          "label": "Routes and rule",
+          "question": "How did movement of people and goods reinforce authority?",
+          "significance": "Trade and travel made power visible, taxable, and repeatable."
+        }
+      ],
+      "discussion_prompts": [
+        "Why might monasteries matter politically as well as spiritually in medieval Bavaria?",
+        "How did imperial struggles change the power of Bavarian rulers?",
+        "What does trade reveal about the relationship between geography and authority?"
+      ],
+      "response_prompt": "In 3 to 5 sentences, explain how ducal power, monastic institutions, and imperial politics interacted in medieval Bavaria.",
+      "response_keywords": [
+        "bavaria",
+        "holy roman empire",
+        "wittelsbach",
+        "monastery",
+        "investiture",
+        "trade"
+      ],
+      "animation_ids": [
+        "teddy-bear-scribe",
+        "fawn-route-guide"
+      ],
+      "response_rubric": [
+        {"key": "claim", "label": "Claim Clarity", "weight": 0.2, "guidance": "Open with a precise historical claim."},
+        {"key": "evidence", "label": "Evidence Use", "weight": 0.28, "guidance": "Name institutions, dynasties, or terms from the lesson."},
+        {"key": "causality", "label": "Causal Reasoning", "weight": 0.22, "guidance": "Explain how conflict, religion, and commerce shaped one another."},
+        {"key": "calm", "label": "Calm Framing", "weight": 0.12, "guidance": "Keep the explanation measured and coherent."},
+        {"key": "inquiry", "label": "Inquiry Posture", "weight": 0.18, "guidance": "Show reflective synthesis rather than listing."}
+      ],
+      "activities": [
+        {
+          "activity_id": "quiet-timeline",
+          "type": "timeline_order",
+          "title": "Quiet Timeline",
+          "description": "Place the major phases into a chronological arc before interpreting them.",
+          "prompt": "Place these historical phases into a steady chronological flow.",
+          "success_message": "The timeline settles into order. The political arc is becoming clearer.",
+          "difficulty": "steady",
+          "items": [
+            {"id": "ottonian", "label": "Ottonian consolidation"},
+            {"id": "investiture", "label": "Investiture Conflict"},
+            {"id": "hohenstaufen", "label": "Hohenstaufen realignment"},
+            {"id": "wittelsbach", "label": "Early Wittelsbach ascendancy"}
+          ]
+        },
+        {
+          "activity_id": "power-checkpoint",
+          "type": "multiple_choice",
+          "title": "Power Checkpoint",
+          "description": "Test whether the learner can identify the institutional hinge in the lesson.",
+          "prompt": "Which institution most directly preserved literacy, landholding, and elite memory in medieval Bavaria?",
+          "difficulty": "gentle",
+          "choices": [
+            "Monasteries and abbeys",
+            "Mercenary bands",
+            "Village festivals",
+            "Shipyards on the Baltic"
+          ],
+          "answer_index": 0,
+          "explanation": "Monasteries shaped literacy, record-keeping, land management, and elite networks.",
+          "success_message": "The institutional layer comes into focus."
+        },
+        {
+          "activity_id": "source-evidence",
+          "type": "evidence_select",
+          "title": "Source Evidence Weave",
+          "description": "Select the excerpt details that most directly support the lesson's central explanation of power.",
+          "prompt": "Choose the cards that directly support the claim that imperial ties, monasteries, and trade shaped medieval Bavaria.",
+          "difficulty": "reflective",
+          "explanation": "The strongest evidence cards show imperial structure, monastic institutions, and routes of movement working together rather than in isolation.",
+          "success_message": "The evidence weave holds. The lesson now reads as a system rather than a list.",
+          "items": [
+            {"id": "imperial", "label": "Ducal loyalty tied Bavaria to the Holy Roman Empire.", "role": "support"},
+            {"id": "monastic", "label": "Monastic reform helped preserve literacy, landholding, and political memory.", "role": "support"},
+            {"id": "routes", "label": "Trade routes moved goods, texts, and pilgrims through the region.", "role": "support"},
+            {"id": "baltic", "label": "Baltic shipyards governed Bavarian mountain villages directly.", "role": "distractor"},
+            {"id": "festivals", "label": "Harvest festivals alone determined ducal succession.", "role": "distractor"}
+          ]
+        },
+        {
+          "activity_id": "forest-charter-parade",
+          "type": "custom_game",
+          "title": "Forest Charter Parade",
+          "description": "A lesson-authored sequencing game where the seminar mascots carry the institutional story one link at a time.",
+          "prompt": "Guide the teddy scribe and the young deer route-guide through the order that turns regional memory into stable rule.",
+          "difficulty": "reflective",
+          "animation_ids": [
+            "teddy-bear-scribe",
+            "fawn-route-guide"
+          ],
+          "success_message": "The parade settles into order. Institution, route, and ducal authority now read as one civic chain.",
+          "config": {
+            "game_type": "sequence_builder",
+            "support_text": "Start with the memory-keeping institution, then move outward toward circulation and recognized authority.",
+            "completion_message": "The custom game confirms that monasteries, routes, and ducal legitimacy formed a linked system.",
+            "tokens": [
+              {"id": "monastery", "label": "Monastery", "hint": "Preserves memory and literacy."},
+              {"id": "route", "label": "Trade Route", "hint": "Moves people, texts, and goods."},
+              {"id": "ducal", "label": "Ducal Legitimacy", "hint": "Turns stable networks into visible rule."}
+            ],
+            "correct_order": [
+              "monastery",
+              "route",
+              "ducal"
+            ]
+          }
+        }
+      ],
+      "puzzle": {
+        "type": "timeline_order",
+        "title": "Quiet Timeline",
+        "prompt": "Place these historical phases into a steady chronological flow.",
+        "success_message": "The timeline settles into order. The political arc is becoming clearer.",
+        "items": [
+          {"id": "ottonian", "label": "Ottonian consolidation"},
+          {"id": "investiture", "label": "Investiture Conflict"},
+          {"id": "hohenstaufen", "label": "Hohenstaufen realignment"},
+          {"id": "wittelsbach", "label": "Early Wittelsbach ascendancy"}
+        ]
+      },
+      "recommended_directive": {
+        "curiosity_bias": 0.81,
+        "equity_bias": 0.77,
+        "challenge_bias": 0.63,
+        "reflection_bias": 0.88
+      }
+    },
+    {
+      "lesson_id": "bavaria-towns-trade-v1",
+      "title": "Medieval Bavaria: towns, salt, and Alpine routes",
+      "subject": "history",
+      "region": "Bavaria",
+      "era": "1050-1350 CE",
+      "eras": [
+        "River corridor growth",
+        "Salt-road expansion",
+        "Urban chartering",
+        "Late medieval consolidation"
+      ],
+      "essential_question": "How did commerce and geography shape daily life and authority in medieval Bavaria?",
+      "objectives": [
+        "Describe how salt and river trade affected Bavarian towns.",
+        "Explain why Alpine and Danube routes mattered to political power.",
+        "Compare urban growth with monastic and ducal influence."
+      ],
+      "objective_weights": [
+        {"knowledge": 0.28, "reflection": 0.2, "coherence": 0.18, "calm": 0.12, "inquiry": 0.22},
+        {"knowledge": 0.3, "reflection": 0.18, "coherence": 0.18, "calm": 0.1, "inquiry": 0.24},
+        {"knowledge": 0.24, "reflection": 0.24, "coherence": 0.24, "calm": 0.14, "inquiry": 0.14}
+      ],
+      "vocabulary": [
+        "salt road",
+        "Danube",
+        "charter",
+        "market town",
+        "Alpine pass"
+      ],
+      "key_figures": [
+        "Bavarian dukes",
+        "merchant guilds",
+        "monastic houses",
+        "river toll keepers"
+      ],
+      "source_excerpt": "A teaching fragment for seminar use: towns grew where goods could pause, be taxed, protected, and rerouted; power followed not only castles and abbeys but roads, ferries, pack trains, and river docks.",
+      "source_attribution": "Synthetic teaching excerpt inspired by medieval Bavarian trade geography.",
+      "teaching_notes": [
+        "Use a quiet compare-and-contrast activity between monastery, market town, and ducal seat.",
+        "Have students trace one good, such as salt, from extraction to market to taxation.",
+        "Invite students to discuss how geography quietly structures power before naming specific rulers."
+      ],
+      "phases": [
+        {
+          "title": "Follow a good",
+          "purpose": "Turn commerce into a human-scale story of movement and control.",
+          "facilitator_move": "Ask students to narrate one shipment of salt across a route.",
+          "learner_signal": "Students see trade as a chain of places, permissions, and risks."
+        },
+        {
+          "title": "Name the chokepoints",
+          "purpose": "Show how geography becomes authority.",
+          "facilitator_move": "Pause over ferries, river crossings, and passes as leverage points.",
+          "learner_signal": "Students infer why routes could matter as much as city walls."
+        },
+        {
+          "title": "Compare civic forms",
+          "purpose": "Distinguish market, monastic, and ducal centers.",
+          "facilitator_move": "Run a sorting or matching exercise before discussion.",
+          "learner_signal": "Students compare institutions by function instead of appearance."
+        }
+      ],
+      "concept_threads": [
+        {
+          "label": "Mobility",
+          "question": "What moves through Bavaria, and who gains from that movement?",
+          "significance": "Trade routes organize both wealth and hierarchy."
+        },
+        {
+          "label": "Civic permission",
+          "question": "Why do charters and tolls matter?",
+          "significance": "Authority depends on the right to regulate exchange."
+        },
+        {
+          "label": "Geographic leverage",
+          "question": "How does terrain quietly shape political power?",
+          "significance": "Rivers, passes, and crossings act as hidden political engines."
+        }
+      ],
+      "discussion_prompts": [
+        "Why would controlling a route matter as much as controlling a city?",
+        "How did economic life reinforce political hierarchy?",
+        "What makes a market town different from a religious center?"
+      ],
+      "response_prompt": "Explain how trade routes and town growth helped organize power in medieval Bavaria.",
+      "response_keywords": [
+        "bavaria",
+        "salt",
+        "danube",
+        "town",
+        "trade",
+        "route"
+      ],
+      "animation_ids": [
+        "fawn-route-guide",
+        "teddy-bear-bell-ringer"
+      ],
+      "response_rubric": [
+        {"key": "claim", "label": "Claim Clarity", "weight": 0.18, "guidance": "State how geography and commerce shaped authority."},
+        {"key": "evidence", "label": "Evidence Use", "weight": 0.3, "guidance": "Use concrete route, town, or toll details."},
+        {"key": "causality", "label": "Causal Reasoning", "weight": 0.24, "guidance": "Explain how movement and control reinforced one another."},
+        {"key": "calm", "label": "Calm Framing", "weight": 0.1, "guidance": "Keep the response ordered and measured."},
+        {"key": "inquiry", "label": "Inquiry Posture", "weight": 0.18, "guidance": "Compare institutions rather than merely naming them."}
+      ],
+      "activities": [
+        {
+          "activity_id": "route-role",
+          "type": "match_pairs",
+          "title": "Route and Role",
+          "description": "Match civic elements to the function they performed inside the trade network.",
+          "prompt": "Match each civic element to its historical function.",
+          "difficulty": "steady",
+          "success_message": "The network aligns. Trade, rule, and daily life sit in relation.",
+          "pairs": [
+            {"left": "Salt road", "right": "Moves valuable goods inland"},
+            {"left": "Market charter", "right": "Authorizes regular exchange"},
+            {"left": "Danube crossing", "right": "Connects towns through transport and tolls"}
+          ]
+        },
+        {
+          "activity_id": "route-reasoning",
+          "type": "multiple_choice",
+          "title": "Route Reasoning",
+          "description": "Check whether the learner recognizes why chokepoints matter.",
+          "prompt": "Why could a river crossing become politically important in medieval Bavaria?",
+          "difficulty": "gentle",
+          "choices": [
+            "It let rulers tax, protect, and regulate movement",
+            "It removed the need for markets",
+            "It prevented monasteries from owning land",
+            "It ended all local rivalries"
+          ],
+          "answer_index": 0,
+          "explanation": "Control of crossings made transport predictable, taxable, and politically valuable.",
+          "success_message": "The geographic logic of authority is now visible."
+        },
+        {
+          "activity_id": "trade-evidence",
+          "type": "evidence_select",
+          "title": "Trade Evidence Weave",
+          "description": "Choose the evidence cards that best support the lesson's claim about routes and authority.",
+          "prompt": "Select the details that most directly show how trade routes and geography organized power in medieval Bavaria.",
+          "difficulty": "reflective",
+          "explanation": "The best evidence names movement, chokepoints, and formal permission because those made commerce politically useful.",
+          "success_message": "The route logic settles into place. Geography and authority now reinforce one another.",
+          "items": [
+            {"id": "tolls", "label": "Crossings and ferries allowed rulers to tax and regulate movement.", "role": "support"},
+            {"id": "charters", "label": "Market charters made exchange predictable and authorized.", "role": "support"},
+            {"id": "routes", "label": "Salt roads and river routes linked towns into repeatable networks of power.", "role": "support"},
+            {"id": "isolation", "label": "Trade eliminated the need for any local authority.", "role": "distractor"},
+            {"id": "monopoly", "label": "One monastery personally controlled every Bavarian route at once.", "role": "distractor"}
+          ]
+        },
+        {
+          "activity_id": "market-lantern-weave",
+          "type": "custom_game",
+          "title": "Market Lantern Weave",
+          "description": "A custom lesson game that asks learners to build the route logic of political power from authored clue cards.",
+          "prompt": "Set the lantern cards into the order that best explains how movement became authority.",
+          "difficulty": "steady",
+          "animation_ids": [
+            "fawn-route-guide",
+            "teddy-bear-bell-ringer"
+          ],
+          "success_message": "The lantern path is complete. Trade, charter, and toll logic now reinforce one another.",
+          "config": {
+            "game_type": "sequence_builder",
+            "support_text": "Think in terms of movement first, then permission, then the revenue and leverage that follow.",
+            "completion_message": "This custom path shows how roads and river crossings became repeatable engines of civic power.",
+            "tokens": [
+              {"id": "movement", "label": "Movement", "hint": "Goods and people start to flow."},
+              {"id": "charter", "label": "Charter or Toll Right", "hint": "Exchange becomes regulated."},
+              {"id": "authority", "label": "Political Leverage", "hint": "Power can now protect and tax the route."}
+            ],
+            "correct_order": [
+              "movement",
+              "charter",
+              "authority"
+            ]
+          }
+        }
+      ],
+      "puzzle": {
+        "type": "match_pairs",
+        "title": "Route and Role",
+        "prompt": "Match each civic element to its historical function.",
+        "success_message": "The network aligns. Trade, rule, and daily life sit in relation.",
+        "pairs": [
+          {"left": "Salt road", "right": "Moves valuable goods inland"},
+          {"left": "Market charter", "right": "Authorizes regular exchange"},
+          {"left": "Danube crossing", "right": "Connects towns through transport and tolls"}
+        ]
+      },
+      "recommended_directive": {
+        "curiosity_bias": 0.84,
+        "equity_bias": 0.76,
+        "challenge_bias": 0.61,
+        "reflection_bias": 0.85
+      }
+    }
+  ]
+}

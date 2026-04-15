@@ -1,0 +1,23 @@
+{
+  "game_id": "xenobloods",
+  "title": "XenoBloods: Pikerel Village",
+  "pipeline_target": "dodogame",
+  "render_mode": "full3d-pseudo3d-hybrid",
+  "game_package_manifest": "xenobloods_doengine_game.json",
+  "scene_manifest": "content/scenes/xenobloods_pikerel_swamp_showcase.json",
+  "primary_source": "scripts/doengine_xenobloods_bridge.py",
+  "source_language": "python",
+  "gameplay_bridge": "scripts/doengine_xenobloods_bridge.py",
+  "default_save_path": "saves/default_save.json",
+  "gameplay_premise": "A swamp-village entry slice that binds XenoBloods systemic state to authored DoENGINE objects and scene packages.",
+  "ingest_role": "Standalone DoENGINE package for Xenobloods with load/save support and object gameplay bindings.",
+  "controller_profile_id": "bango-xinput-full",
+  "supports": [
+    "Standalone DoENGINE package",
+    "Scene-manifest driven 3D world slice",
+    "Saveable object and gameplay state",
+    "Python gameplay bridge",
+    "Bridge-authored checkpoint exports and preview rendering",
+    "Shared registry support across all DoENGINE game projects"
+  ]
+}

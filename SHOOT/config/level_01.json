@@ -1,0 +1,380 @@
+{
+  "level_id": "level_01",
+  "gating": [
+    {
+      "from": "room_01",
+      "to": "room_02",
+      "requirement": {
+        "type": "enemy_clear_threshold",
+        "count": 7,
+        "gate": "security_shutter"
+      }
+    },
+    {
+      "from": "room_02",
+      "to": "room_03",
+      "requirement": {
+        "type": "pickup_and_enemy_clear",
+        "count": 8,
+        "required_pickup": "piercing_slugs",
+        "gate": "atrium_bulkhead"
+      }
+    }
+  ],
+  "rooms": [
+    {
+      "id": "room_01",
+      "model": "room_hangar",
+      "size": {
+        "width": 64,
+        "length": 64,
+        "height": 14
+      },
+      "role": "combat",
+      "flow_note": "security hangar with staggered cover and first gate shutter",
+      "pickups": [
+        {
+          "pickup_id": "pickup_01",
+          "type": "overcharge_rounds",
+          "position": {
+            "x": -10.0,
+            "y": 0.0,
+            "z": 12.0
+          }
+        }
+      ],
+      "enemies": [
+        {
+          "spawn_id": "e_00",
+          "room": "room_01",
+          "enemy_type": "lizard_enemy_a",
+          "variant_model": "lizard_enemy_a",
+          "weapon_type": "shock_pike",
+          "ai_profile": "brute_bait_flank",
+          "taunt_style": "predatory_dance",
+          "outfit_variant": "loadout_1",
+          "marking": "jaw_scar",
+          "position": {
+            "x": -16.0,
+            "y": 0.0,
+            "z": -8.0
+          },
+          "hitpoints": 8
+        },
+        {
+          "spawn_id": "e_01",
+          "room": "room_01",
+          "enemy_type": "lizard_enemy_a",
+          "variant_model": "lizard_enemy_a_raider",
+          "weapon_type": "scrap_shotgun",
+          "ai_profile": "brute_bait_flank",
+          "taunt_style": "predatory_dance",
+          "outfit_variant": "loadout_2",
+          "marking": "shoulder_stripe",
+          "position": {
+            "x": -8.0,
+            "y": 0.0,
+            "z": -10.0
+          },
+          "hitpoints": 8
+        },
+        {
+          "spawn_id": "e_02",
+          "room": "room_01",
+          "enemy_type": "lizard_enemy_a",
+          "variant_model": "lizard_enemy_a_scarred",
+          "weapon_type": "arc_pistol",
+          "ai_profile": "brute_bait_flank",
+          "taunt_style": "predatory_dance",
+          "outfit_variant": "loadout_3",
+          "marking": "neck_brand",
+          "position": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": -4.0
+          },
+          "hitpoints": 8
+        },
+        {
+          "spawn_id": "e_03",
+          "room": "room_01",
+          "enemy_type": "lizard_enemy_b",
+          "variant_model": "lizard_enemy_b",
+          "weapon_type": "raptor_claws",
+          "ai_profile": "raptor_skirt_deek",
+          "taunt_style": "predatory_dance",
+          "outfit_variant": "loadout_4",
+          "marking": "tail_wrap",
+          "position": {
+            "x": 10.0,
+            "y": 0.0,
+            "z": -2.0
+          },
+          "hitpoints": 8
+        },
+        {
+          "spawn_id": "e_04",
+          "room": "room_01",
+          "enemy_type": "lizard_enemy_b",
+          "variant_model": "lizard_enemy_b_guard",
+          "weapon_type": "raptor_claws",
+          "ai_profile": "raptor_skirt_deek",
+          "taunt_style": "predatory_dance",
+          "outfit_variant": "loadout_5",
+          "marking": "split_fin",
+          "position": {
+            "x": 16.0,
+            "y": 0.0,
+            "z": 6.0
+          },
+          "hitpoints": 8
+        },
+        {
+          "spawn_id": "e_05",
+          "room": "room_01",
+          "enemy_type": "lizard_enemy_b",
+          "variant_model": "lizard_enemy_b_marksman",
+          "weapon_type": "raptor_claws",
+          "ai_profile": "raptor_skirt_deek",
+          "taunt_style": "predatory_dance",
+          "outfit_variant": "loadout_1",
+          "marking": "jaw_scar",
+          "position": {
+            "x": -10.0,
+            "y": 0.0,
+            "z": 10.0
+          },
+          "hitpoints": 8
+        },
+        {
+          "spawn_id": "e_06",
+          "room": "room_01",
+          "enemy_type": "lizard_enemy_a",
+          "variant_model": "lizard_enemy_a",
+          "weapon_type": "arc_pistol",
+          "ai_profile": "brute_bait_flank",
+          "taunt_style": "predatory_dance",
+          "outfit_variant": "loadout_2",
+          "marking": "shoulder_stripe",
+          "position": {
+            "x": 8.0,
+            "y": 0.0,
+            "z": 14.0
+          },
+          "hitpoints": 8
+        }
+      ]
+    },
+    {
+      "id": "room_02",
+      "model": "room_office_wing",
+      "size": {
+        "width": 68,
+        "length": 60,
+        "height": 14
+      },
+      "role": "combat",
+      "flow_note": "wide office wing with flanking lanes and boss access bulkhead",
+      "pickups": [
+        {
+          "pickup_id": "pickup_02",
+          "type": "spread_burst",
+          "position": {
+            "x": 8.0,
+            "y": 0.0,
+            "z": -6.0
+          }
+        },
+        {
+          "pickup_id": "pickup_03",
+          "type": "piercing_slugs",
+          "position": {
+            "x": -4.0,
+            "y": 0.0,
+            "z": 16.0
+          }
+        }
+      ],
+      "enemies": [
+        {
+          "spawn_id": "e_07",
+          "room": "room_02",
+          "enemy_type": "lizard_enemy_a",
+          "variant_model": "lizard_enemy_a_raider",
+          "weapon_type": "bolas_launcher",
+          "ai_profile": "brute_bait_flank",
+          "taunt_style": "predatory_dance",
+          "outfit_variant": "loadout_3",
+          "marking": "neck_brand",
+          "position": {
+            "x": -18.0,
+            "y": 0.0,
+            "z": -10.0
+          },
+          "hitpoints": 8
+        },
+        {
+          "spawn_id": "e_08",
+          "room": "room_02",
+          "enemy_type": "lizard_enemy_a",
+          "variant_model": "lizard_enemy_a_scarred",
+          "weapon_type": "shock_pike",
+          "ai_profile": "brute_bait_flank",
+          "taunt_style": "predatory_dance",
+          "outfit_variant": "loadout_4",
+          "marking": "tail_wrap",
+          "position": {
+            "x": -6.0,
+            "y": 0.0,
+            "z": -8.0
+          },
+          "hitpoints": 8
+        },
+        {
+          "spawn_id": "e_09",
+          "room": "room_02",
+          "enemy_type": "lizard_enemy_b",
+          "variant_model": "lizard_enemy_b",
+          "weapon_type": "raptor_claws",
+          "ai_profile": "raptor_skirt_deek",
+          "taunt_style": "predatory_dance",
+          "outfit_variant": "loadout_5",
+          "marking": "split_fin",
+          "position": {
+            "x": 6.0,
+            "y": 0.0,
+            "z": -4.0
+          },
+          "hitpoints": 8
+        },
+        {
+          "spawn_id": "e_10",
+          "room": "room_02",
+          "enemy_type": "lizard_enemy_b",
+          "variant_model": "lizard_enemy_b_guard",
+          "weapon_type": "raptor_claws",
+          "ai_profile": "raptor_skirt_deek",
+          "taunt_style": "predatory_dance",
+          "outfit_variant": "loadout_1",
+          "marking": "jaw_scar",
+          "position": {
+            "x": 16.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "hitpoints": 8
+        },
+        {
+          "spawn_id": "e_11",
+          "room": "room_02",
+          "enemy_type": "lizard_enemy_b",
+          "variant_model": "lizard_enemy_b_marksman",
+          "weapon_type": "raptor_claws",
+          "ai_profile": "raptor_skirt_deek",
+          "taunt_style": "predatory_dance",
+          "outfit_variant": "loadout_2",
+          "marking": "shoulder_stripe",
+          "position": {
+            "x": -12.0,
+            "y": 0.0,
+            "z": 6.0
+          },
+          "hitpoints": 8
+        },
+        {
+          "spawn_id": "e_12",
+          "room": "room_02",
+          "enemy_type": "lizard_enemy_a",
+          "variant_model": "lizard_enemy_a",
+          "weapon_type": "shock_pike",
+          "ai_profile": "brute_bait_flank",
+          "taunt_style": "predatory_dance",
+          "outfit_variant": "loadout_3",
+          "marking": "neck_brand",
+          "position": {
+            "x": -2.0,
+            "y": 0.0,
+            "z": 10.0
+          },
+          "hitpoints": 8
+        },
+        {
+          "spawn_id": "e_13",
+          "room": "room_02",
+          "enemy_type": "lizard_enemy_a",
+          "variant_model": "lizard_enemy_a_raider",
+          "weapon_type": "scrap_shotgun",
+          "ai_profile": "brute_bait_flank",
+          "taunt_style": "predatory_dance",
+          "outfit_variant": "loadout_4",
+          "marking": "tail_wrap",
+          "position": {
+            "x": 10.0,
+            "y": 0.0,
+            "z": 14.0
+          },
+          "hitpoints": 8
+        },
+        {
+          "spawn_id": "e_14",
+          "room": "room_02",
+          "enemy_type": "lizard_enemy_a",
+          "variant_model": "lizard_enemy_a_scarred",
+          "weapon_type": "arc_pistol",
+          "ai_profile": "brute_bait_flank",
+          "taunt_style": "predatory_dance",
+          "outfit_variant": "loadout_5",
+          "marking": "split_fin",
+          "position": {
+            "x": 18.0,
+            "y": 0.0,
+            "z": 18.0
+          },
+          "hitpoints": 8
+        }
+      ]
+    },
+    {
+      "id": "room_03",
+      "model": "room_boss_atrium",
+      "size": {
+        "width": 72,
+        "length": 72,
+        "height": 16
+      },
+      "role": "boss",
+      "flow_note": "large atrium for furniture throws, leaps, and weapon cycling",
+      "pickups": [],
+      "enemies": [
+        {
+          "spawn_id": "boss_00",
+          "room": "room_03",
+          "enemy_type": "ape_robot_boss",
+          "variant_model": "ape_robot_boss",
+          "weapon_cycle": [
+            "furnace_cannon",
+            "arc_maul",
+            "missile_fist"
+          ],
+          "movement_profile": "arena_leap_furniture_throw",
+          "position": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "hitpoints": 32
+        }
+      ]
+    }
+  ],
+  "transitions": [
+    {
+      "from": "room_01",
+      "to": "room_02"
+    },
+    {
+      "from": "room_02",
+      "to": "room_03"
+    }
+  ]
+}

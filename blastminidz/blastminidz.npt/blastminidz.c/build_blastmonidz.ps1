@@ -31,7 +31,7 @@ $buildArgs = @(
     '-O2'
 ) + $sources + @(
     '-o', 'blastmonidz_host.exe',
-    '-lgdi32', '-luser32', '-lmsimg32', '-lole32', '-lwindowscodecs', '-luuid'
+    '-lgdi32', '-luser32', '-lmsimg32', '-lole32', '-lwindowscodecs', '-luuid', '-lwinmm'
 )
 
 & $gcc @buildArgs

@@ -1,0 +1,452 @@
+{
+  "project": "SHOOT",
+  "render_style": {
+    "presentation": "enhanced_photoreal_anthropomorphic_3d",
+    "projectile_trails": true,
+    "camera": "over_the_shoulder",
+    "movement": "omnidirectional",
+    "material_response": "chrome_specular_scaled_skin_and_fur_microdetail",
+    "texture_resolution": 320
+  },
+  "audio": {
+    "music_enabled": true,
+    "sfx_enabled": true,
+    "music_profile": "industrial_predator_pulse",
+    "sfx_profile": "metal_clang_hiss_dash_shot"
+  },
+  "character_design": {
+    "player_robot": {
+      "silhouette": "slender_android",
+      "features": [
+        "chrome plating",
+        "wire bundles from shoulders",
+        "skeletal limb tubing",
+        "defined abdomen and chest armor",
+        "articulated neck and faceplate",
+        "electro-fluid chest core",
+        "hovering keen-eyed head"
+      ]
+    },
+    "boss": {
+      "silhouette": "gorilla_steampunk_cyborg",
+      "behavior": [
+        "arena_leaps",
+        "furniture_throws",
+        "weapon_cycle"
+      ]
+    }
+  },
+  "enemy_archetypes": [
+    {
+      "id": "lizard_brute",
+      "traits": [
+        "bulky",
+        "armored",
+        "slow",
+        "weapon_user",
+        "bait",
+        "flank",
+        "taunt_dance"
+      ]
+    },
+    {
+      "id": "lizard_raptor",
+      "traits": [
+        "swift",
+        "reverse_jointed",
+        "claw_attacker",
+        "snouted",
+        "skirt_feint",
+        "deek",
+        "taunt_dance"
+      ]
+    }
+  ],
+  "source_reference": {
+    "xenobloods_manifest": "xenobloods/docs/XENOBLOODS_GRAPHICS_MANIFEST.md",
+    "xenobloods_templates": "xenobloods/examples/xenobloods_preview_roster.json",
+    "style_transfer": [
+      "silhouette_emphasis",
+      "texture_detail",
+      "enemy_family_boss_weighting",
+      "asymmetrical_character_detail"
+    ]
+  },
+  "mode": "third_person_over_the_shoulder",
+  "dialogue": false,
+  "onscreen_text": false,
+  "controller_support": {
+    "enabled": true,
+    "preferred_device": "xbox_series",
+    "xbox_series": {
+      "enabled": true,
+      "device": "Xbox Series Controller",
+      "api": "xinput",
+      "move": "left_stick",
+      "aim": "right_stick",
+      "shoot": "right_trigger",
+      "parry": "left_shoulder",
+      "melee": "right_shoulder",
+      "dodge": "b",
+      "jump": "a",
+      "reload": "x",
+      "swap_mode": "y",
+      "sprint": "left_trigger",
+      "pause": "menu",
+      "deadzone": {
+        "left_stick": 0.1,
+        "right_stick": 0.08
+      }
+    }
+  },
+  "weapon": {
+    "id": "rifle",
+    "ammo": "infinite",
+    "damage_per_shot": 1
+  },
+  "ammo_upgrades": [
+    {
+      "id": "overcharge_rounds",
+      "model": "pickup_overcharge",
+      "collectible": true,
+      "temporary_seconds": 18,
+      "effect": "+2 damage per shot"
+    },
+    {
+      "id": "spread_burst",
+      "model": "pickup_spread",
+      "collectible": true,
+      "temporary_seconds": 14,
+      "effect": "triple spread volley"
+    },
+    {
+      "id": "piercing_slugs",
+      "model": "pickup_piercing",
+      "collectible": true,
+      "temporary_seconds": 20,
+      "effect": "pierces multiple enemies"
+    }
+  ],
+  "temporary_ammo_upgrades": [
+    {
+      "id": "overcharge_rounds",
+      "model": "pickup_overcharge",
+      "collectible": true,
+      "duration_seconds": 18,
+      "effect": "+2 damage per shot"
+    },
+    {
+      "id": "spread_burst",
+      "model": "pickup_spread",
+      "collectible": true,
+      "duration_seconds": 14,
+      "effect": "triple spread volley"
+    },
+    {
+      "id": "piercing_slugs",
+      "model": "pickup_piercing",
+      "collectible": true,
+      "duration_seconds": 20,
+      "effect": "pierces multiple enemies"
+    }
+  ],
+  "enemy_weapon_types": [
+    {
+      "id": "shock_pike",
+      "model": "enemy_shock_pike",
+      "class": "melee_lunge",
+      "boss_exclusive": false
+    },
+    {
+      "id": "scrap_shotgun",
+      "model": "enemy_scrap_shotgun",
+      "class": "close_burst",
+      "boss_exclusive": false
+    },
+    {
+      "id": "arc_pistol",
+      "model": "enemy_arc_pistol",
+      "class": "midrange_sidearm",
+      "boss_exclusive": false
+    },
+    {
+      "id": "bolas_launcher",
+      "model": "enemy_bolas_launcher",
+      "class": "snare_ranged",
+      "boss_exclusive": false
+    },
+    {
+      "id": "raptor_claws",
+      "model": "enemy_raptor_claws",
+      "class": "close_rake",
+      "boss_exclusive": false
+    }
+  ],
+  "boss_weapon_types": [
+    {
+      "id": "furnace_cannon",
+      "model": "boss_furnace_cannon",
+      "class": "area_blast",
+      "boss_exclusive": true
+    },
+    {
+      "id": "arc_maul",
+      "model": "boss_arc_maul",
+      "class": "shock_slam",
+      "boss_exclusive": true
+    },
+    {
+      "id": "missile_fist",
+      "model": "boss_missile_fist",
+      "class": "tracking_strike",
+      "boss_exclusive": true
+    }
+  ],
+  "player": {
+    "model": "robot_player",
+    "hitpoints": 3
+  },
+  "enemy_defaults": {
+    "lizard_enemy_a": {
+      "hitpoints": 8
+    },
+    "lizard_enemy_b": {
+      "hitpoints": 8
+    },
+    "ape_robot_boss": {
+      "hitpoints": 32
+    }
+  },
+  "enemy_variants": [
+    {
+      "id": "lizard_enemy_a_raider",
+      "base": "lizard_enemy_a",
+      "details": [
+        "jaw_scar",
+        "single_spike_pauldron",
+        "amber_wraps"
+      ]
+    },
+    {
+      "id": "lizard_enemy_a_scarred",
+      "base": "lizard_enemy_a",
+      "details": [
+        "rib_plate",
+        "tail_ring",
+        "crest_notch"
+      ]
+    },
+    {
+      "id": "lizard_enemy_b_guard",
+      "base": "lizard_enemy_b",
+      "details": [
+        "visor_mark",
+        "left_knee_pad",
+        "bandolier"
+      ]
+    },
+    {
+      "id": "lizard_enemy_b_marksman",
+      "base": "lizard_enemy_b",
+      "details": [
+        "eye_stripe",
+        "backpack_cell",
+        "split_fin"
+      ]
+    }
+  ],
+  "models": [
+    {
+      "id": "robot_player",
+      "obj": "assets/models/robot_player.obj",
+      "mtl": "assets/materials/robot_player.mtl",
+      "texture": "assets/textures/metal_robot_marked.ppm",
+      "polygons": 900,
+      "polygon_budget": 1000
+    },
+    {
+      "id": "lizard_enemy_a",
+      "obj": "assets/models/lizard_enemy_a.obj",
+      "mtl": "assets/materials/lizard_enemy_a.mtl",
+      "texture": "assets/textures/scales_lizard_emerald.ppm",
+      "polygons": 456,
+      "polygon_budget": 1000
+    },
+    {
+      "id": "lizard_enemy_a_raider",
+      "obj": "assets/models/lizard_enemy_a_raider.obj",
+      "mtl": "assets/materials/lizard_enemy_a_raider.mtl",
+      "texture": "assets/textures/scales_lizard_amber.ppm",
+      "polygons": 456,
+      "polygon_budget": 1000
+    },
+    {
+      "id": "lizard_enemy_a_scarred",
+      "obj": "assets/models/lizard_enemy_a_scarred.obj",
+      "mtl": "assets/materials/lizard_enemy_a_scarred.mtl",
+      "texture": "assets/textures/scales_lizard_emerald.ppm",
+      "polygons": 456,
+      "polygon_budget": 1000
+    },
+    {
+      "id": "lizard_enemy_b",
+      "obj": "assets/models/lizard_enemy_b.obj",
+      "mtl": "assets/materials/lizard_enemy_b.mtl",
+      "texture": "assets/textures/scales_lizard_amber.ppm",
+      "polygons": 456,
+      "polygon_budget": 1000
+    },
+    {
+      "id": "lizard_enemy_b_guard",
+      "obj": "assets/models/lizard_enemy_b_guard.obj",
+      "mtl": "assets/materials/lizard_enemy_b_guard.mtl",
+      "texture": "assets/textures/scales_lizard_amber.ppm",
+      "polygons": 456,
+      "polygon_budget": 1000
+    },
+    {
+      "id": "lizard_enemy_b_marksman",
+      "obj": "assets/models/lizard_enemy_b_marksman.obj",
+      "mtl": "assets/materials/lizard_enemy_b_marksman.mtl",
+      "texture": "assets/textures/scales_lizard_emerald.ppm",
+      "polygons": 456,
+      "polygon_budget": 1000
+    },
+    {
+      "id": "ape_robot_boss",
+      "obj": "assets/models/ape_robot_boss.obj",
+      "mtl": "assets/materials/ape_robot_boss.mtl",
+      "texture": "assets/textures/fur_ape_boss.ppm",
+      "polygons": 546,
+      "polygon_budget": 1000
+    },
+    {
+      "id": "rifle",
+      "obj": "assets/models/rifle.obj",
+      "mtl": "assets/materials/rifle.mtl",
+      "texture": "assets/textures/metal_robot.ppm",
+      "polygons": 30,
+      "polygon_budget": 1000
+    },
+    {
+      "id": "enemy_shock_pike",
+      "obj": "assets/models/enemy_shock_pike.obj",
+      "mtl": "assets/materials/enemy_shock_pike.mtl",
+      "texture": "assets/textures/metal_robot.ppm",
+      "polygons": 24,
+      "polygon_budget": 1000
+    },
+    {
+      "id": "enemy_scrap_shotgun",
+      "obj": "assets/models/enemy_scrap_shotgun.obj",
+      "mtl": "assets/materials/enemy_scrap_shotgun.mtl",
+      "texture": "assets/textures/metal_robot.ppm",
+      "polygons": 24,
+      "polygon_budget": 1000
+    },
+    {
+      "id": "enemy_arc_pistol",
+      "obj": "assets/models/enemy_arc_pistol.obj",
+      "mtl": "assets/materials/enemy_arc_pistol.mtl",
+      "texture": "assets/textures/metal_robot.ppm",
+      "polygons": 24,
+      "polygon_budget": 1000
+    },
+    {
+      "id": "enemy_raptor_claws",
+      "obj": "assets/models/enemy_raptor_claws.obj",
+      "mtl": "assets/materials/enemy_raptor_claws.mtl",
+      "texture": "assets/textures/metal_robot.ppm",
+      "polygons": 42,
+      "polygon_budget": 1000
+    },
+    {
+      "id": "enemy_bolas_launcher",
+      "obj": "assets/models/enemy_bolas_launcher.obj",
+      "mtl": "assets/materials/enemy_bolas_launcher.mtl",
+      "texture": "assets/textures/metal_robot.ppm",
+      "polygons": 30,
+      "polygon_budget": 1000
+    },
+    {
+      "id": "boss_furnace_cannon",
+      "obj": "assets/models/boss_furnace_cannon.obj",
+      "mtl": "assets/materials/boss_furnace_cannon.mtl",
+      "texture": "assets/textures/metal_robot_marked.ppm",
+      "polygons": 24,
+      "polygon_budget": 1000
+    },
+    {
+      "id": "boss_arc_maul",
+      "obj": "assets/models/boss_arc_maul.obj",
+      "mtl": "assets/materials/boss_arc_maul.mtl",
+      "texture": "assets/textures/metal_robot_marked.ppm",
+      "polygons": 24,
+      "polygon_budget": 1000
+    },
+    {
+      "id": "boss_missile_fist",
+      "obj": "assets/models/boss_missile_fist.obj",
+      "mtl": "assets/materials/boss_missile_fist.mtl",
+      "texture": "assets/textures/metal_robot_marked.ppm",
+      "polygons": 24,
+      "polygon_budget": 1000
+    },
+    {
+      "id": "pickup_overcharge",
+      "obj": "assets/models/pickup_overcharge.obj",
+      "mtl": "assets/materials/pickup_overcharge.mtl",
+      "texture": "assets/textures/ammo_pickup_glow.ppm",
+      "polygons": 18,
+      "polygon_budget": 1000
+    },
+    {
+      "id": "pickup_spread",
+      "obj": "assets/models/pickup_spread.obj",
+      "mtl": "assets/materials/pickup_spread.mtl",
+      "texture": "assets/textures/ammo_pickup_glow.ppm",
+      "polygons": 24,
+      "polygon_budget": 1000
+    },
+    {
+      "id": "pickup_piercing",
+      "obj": "assets/models/pickup_piercing.obj",
+      "mtl": "assets/materials/pickup_piercing.mtl",
+      "texture": "assets/textures/ammo_pickup_glow.ppm",
+      "polygons": 24,
+      "polygon_budget": 1000
+    },
+    {
+      "id": "room_hangar",
+      "obj": "assets/models/room_hangar.obj",
+      "mtl": "assets/materials/room_hangar.mtl",
+      "texture": "assets/textures/office_wallpaper.ppm",
+      "polygons": 48,
+      "polygon_budget": 1000
+    },
+    {
+      "id": "room_office_wing",
+      "obj": "assets/models/room_office_wing.obj",
+      "mtl": "assets/materials/room_office_wing.mtl",
+      "texture": "assets/textures/office_wallpaper.ppm",
+      "polygons": 48,
+      "polygon_budget": 1000
+    },
+    {
+      "id": "room_boss_atrium",
+      "obj": "assets/models/room_boss_atrium.obj",
+      "mtl": "assets/materials/room_boss_atrium.mtl",
+      "texture": "assets/textures/office_wallpaper.ppm",
+      "polygons": 48,
+      "polygon_budget": 1000
+    },
+    {
+      "id": "furniture_set",
+      "obj": "assets/models/furniture_set.obj",
+      "mtl": "assets/materials/furniture_set.mtl",
+      "texture": "assets/textures/office_furniture.ppm",
+      "polygons": 48,
+      "polygon_budget": 1000
+    }
+  ]
+}

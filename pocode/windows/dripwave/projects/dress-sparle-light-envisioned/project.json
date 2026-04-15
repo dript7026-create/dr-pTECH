@@ -1,0 +1,17 @@
+{
+  "name": "Dress SparLE: Light Envisioned",
+  "slug": "dress-sparle-light-envisioned",
+  "output_mode": "swf-and-farim",
+  "runtime_profile": "avm2",
+  "game_prompt": "Combat dance rhythmbattle dress-up game where Sparkle, a BlueNoMid with only a torso, floating head, hands, and feet, battles LiteMites with procedural dubstep, clothing transformations, and locked finishing poses that obliterate light-tail syncrosequences.",
+  "code_prompt": "Implement a playable ActionScript 3 prototype with rhythm lanes, adaptive beat windows, procedural dubstep synthesis hooks, dress-up state changes, pose locking, light-tail enemies, visible-spectrum disruption cues, and a dynamically adaptive framebuffer-style background.",
+  "outputs": {
+    "swf": "bin/dress-sparle-light-envisioned.swf",
+    "farim": "bin/dress-sparle-light-envisioned.farim"
+  },
+  "generation": {
+    "recraft_manifest": "generation/recraft_manifest.json",
+    "audio_manifest": "generation/audio_manifest.json",
+    "jumpclip_runs": "generation/jumpclip_runs.json"
+  }
+}

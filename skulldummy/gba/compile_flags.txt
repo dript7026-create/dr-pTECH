@@ -1,0 +1,5 @@
+-O2
+-Wall
+-fno-strict-aliasing
+-IC:/devkitPro/libgba/include
+-Ibuild/gba_assets

@@ -8,6 +8,7 @@ from typing import Dict, Iterable, List
 from .adapters import ExperientialAdapter, Mutation, apply_demo_preset, demo_adapters
 from .coherency import CoherencySignal, compute_field
 from .consensus import ConsensusFrame, build_consensus_frame
+from .kaijugaiden import build_kaijugaiden_adapter
 
 
 @dataclass
@@ -48,8 +49,21 @@ class ExperientialGenesis:
         return path
 
 
-def build_demo_hypermanager(preset: str = "default") -> ExperientialGenesis:
+def build_demo_hypermanager(
+    preset: str = "default",
+    include_kaijugaiden: bool = False,
+    kaijugaiden_scene_id: str = "harbor_boss_duel",
+    kaijugaiden_scene_type: str = "boss-rush",
+) -> ExperientialGenesis:
     manager = ExperientialGenesis()
     for adapter in apply_demo_preset(demo_adapters(), preset):
         manager.register(adapter)
+    if include_kaijugaiden:
+        manager.register(
+            build_kaijugaiden_adapter(
+                preset=preset,
+                scene_id=kaijugaiden_scene_id,
+                scene_type=kaijugaiden_scene_type,
+            )
+        )
     return manager

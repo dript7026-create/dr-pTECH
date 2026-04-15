@@ -28,7 +28,7 @@ The Android app is still a scaffold rather than a finished game loop. The curren
 The player gives Pocode two inputs:
 
 - a software idea they want to build
-- the programming language they want to build it in
+- the programming language they want to build it
 
 Pocode then generates a lesson plan that breaks the target project into playable learning loops. Each loop teaches one concrete piece of the target software and gates progress through matching, identification, assembly, and short writing challenges.
 

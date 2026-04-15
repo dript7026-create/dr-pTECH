@@ -1,0 +1,330 @@
+{
+  "_notes": {
+    "runtime_profile": "avm2 — all prefabs target AVM2/AS3 Flash runtime via dripwave",
+    "archetypes": ["Prism Bloom (0)", "Glue Braid (1)", "Ember Choir (2)", "Halo Scythe (3)", "Luster Knot (4)"],
+    "outfit_tiers": ["BlueNoMid Base (0)", "Pulse Sash (1)", "Prism Skirt (2)", "Halo Rig (3)", "Light Envisioned (4)"],
+    "cue_forms": ["Head Flick (0)", "Torso Pulse (1)", "Hand Halo (2)", "Foot Spark (3)"]
+  },
+  "prefabs": [
+
+    {
+      "id": "sparkle-tier0-bluenomid-base",
+      "name": "Sparkle — BlueNoMid Base",
+      "role": "actor",
+      "asset_kind": "actor",
+      "runtime_profile": "avm2",
+      "outfit_tier": 0,
+      "dress_charge_threshold": 0,
+      "prompt": "Sparkle BlueNoMid heroine in base form: only cobalt torso, floating head, detached hands and feet, minimal luminous cobalt-and-pale-cyan palette, no accessories",
+      "generated_outputs": [
+        "assets/visual/sparkle-tier0-bluenomid-base.png",
+        "generated/jumpclip/sparkle-tier0-idle"
+      ]
+    },
+    {
+      "id": "sparkle-tier1-pulse-sash",
+      "name": "Sparkle — Pulse Sash",
+      "role": "actor",
+      "asset_kind": "actor",
+      "runtime_profile": "avm2",
+      "outfit_tier": 1,
+      "dress_charge_threshold": 20,
+      "prompt": "Sparkle BlueNoMid with Pulse Sash: diagonal electric-blue-white chest sash added over cobalt torso, hand snap motion on Head Flick, sash flares on kick beats",
+      "generated_outputs": [
+        "assets/visual/sparkle-tier1-pulse-sash.png",
+        "generated/jumpclip/sparkle-tier1-sash-pulse",
+        "assets/audio/outfit-tier-unlock-1.mp3"
+      ]
+    },
+    {
+      "id": "sparkle-tier2-prism-skirt",
+      "name": "Sparkle — Prism Skirt",
+      "role": "actor",
+      "asset_kind": "actor",
+      "runtime_profile": "avm2",
+      "outfit_tier": 2,
+      "dress_charge_threshold": 40,
+      "prompt": "Sparkle BlueNoMid with Prism Skirt: wide diamond-cut skirt fanning in visible-spectrum gradient panels from waist to knee, detached hands arc wide during spins, pulse sash still visible above skirt",
+      "generated_outputs": [
+        "assets/visual/sparkle-tier2-prism-skirt.png",
+        "generated/jumpclip/sparkle-tier2-skirt-spin",
+        "assets/audio/outfit-tier-unlock-2.mp3"
+      ]
+    },
+    {
+      "id": "sparkle-tier3-halo-rig",
+      "name": "Sparkle — Halo Rig",
+      "role": "actor",
+      "asset_kind": "actor",
+      "runtime_profile": "avm2",
+      "outfit_tier": 3,
+      "dress_charge_threshold": 60,
+      "prompt": "Sparkle BlueNoMid with Halo Rig: shoulder-mounted halo ring, dual ribbon-cables flowing to detached hands, prism skirt and pulse sash visible, cables snap on beat hits",
+      "generated_outputs": [
+        "assets/visual/sparkle-tier3-halo-rig.png",
+        "generated/jumpclip/sparkle-tier3-halo-rig-cable-flow",
+        "assets/audio/outfit-tier-unlock-3.mp3"
+      ]
+    },
+    {
+      "id": "sparkle-tier4-light-envisioned",
+      "name": "Sparkle — Light Envisioned",
+      "role": "actor",
+      "asset_kind": "actor",
+      "runtime_profile": "avm2",
+      "outfit_tier": 4,
+      "dress_charge_threshold": 80,
+      "prompt": "Sparkle BlueNoMid in full Light Envisioned transformation: crown-halo above head, five spectral ribbon-blades radiating from torso, full radiance luminance, all prior tiers visible beneath the transformation",
+      "generated_outputs": [
+        "assets/visual/sparkle-tier4-light-envisioned.png",
+        "generated/jumpclip/sparkle-tier4-light-envisioned-transform",
+        "assets/audio/outfit-tier-unlock-4.mp3"
+      ]
+    },
+
+    {
+      "id": "litemite-archetype0-prism-bloom",
+      "name": "LiteMite — Prism Bloom",
+      "role": "actor",
+      "asset_kind": "actor",
+      "runtime_profile": "avm2",
+      "archetype_index": 0,
+      "encounter_title": "Prism Tail",
+      "core_color": "0xFFDD88",
+      "accent_color": "0xFFF0C4",
+      "tail_segments": 8,
+      "swarm_count": 4,
+      "orbit_speed": 1.4,
+      "combat_pattern": "slow rotation, six-pointed burst tips telegraph lane hits one-at-a-time, steady predictable rhythm",
+      "prompt": "LiteMite boss Prism Bloom: slow-rotating six-pointed prism burst, golden-warm core, spectral shimmer tips, 8-segment syncrosequence tail drifting leftward, swarm of 4 circling motes, dark background Flash sprite",
+      "generated_outputs": [
+        "assets/visual/litemite-archetype0-prism-bloom.png",
+        "generated/jumpclip/litemite-archetype0-prism-bloom-idle",
+        "generated/jumpclip/litemite-archetype0-prism-bloom-telegraph",
+        "assets/audio/encounter-intro-prism-bloom.mp3"
+      ]
+    },
+    {
+      "id": "litemite-archetype1-glue-braid",
+      "name": "LiteMite — Glue Braid",
+      "role": "actor",
+      "asset_kind": "actor",
+      "runtime_profile": "avm2",
+      "archetype_index": 1,
+      "encounter_title": "Glue Stall",
+      "core_color": "0xE8B048",
+      "accent_color": "0x9CF0FF",
+      "tail_segments": 6,
+      "swarm_count": 2,
+      "orbit_speed": 0.7,
+      "combat_pattern": "slow off-beat stall rhythm, ribbon weft snaps on every other snare, stickiest most disruptive of all archetypes",
+      "prompt": "LiteMite boss Glue Braid: three viscous amber blobs in a braid with electric-blue-white ribbon wefts, slow sticky drift, tail in reverse S-curve, Flash enemy sprite",
+      "generated_outputs": [
+        "assets/visual/litemite-archetype1-glue-braid.png",
+        "generated/jumpclip/litemite-archetype1-glue-braid-idle",
+        "generated/jumpclip/litemite-archetype1-glue-braid-snare-snap",
+        "assets/audio/encounter-intro-glue-stall.mp3"
+      ]
+    },
+    {
+      "id": "litemite-archetype2-ember-choir",
+      "name": "LiteMite — Ember Choir",
+      "role": "actor",
+      "asset_kind": "actor",
+      "runtime_profile": "avm2",
+      "archetype_index": 2,
+      "encounter_title": "Spectrum Mote",
+      "core_color": "0xFF9044",
+      "accent_color": "0xDDB8FF",
+      "tail_segments": 5,
+      "swarm_count": 3,
+      "orbit_speed": 1.8,
+      "combat_pattern": "trefoil orbit scatters motes across three lanes simultaneously, requires multi-lane response timing",
+      "prompt": "LiteMite boss Ember Choir: trio of molten amber-pink petals orbiting a pale-violet center in trefoil, each trailing ember dust wisps, Flash enemy sprite",
+      "generated_outputs": [
+        "assets/visual/litemite-archetype2-ember-choir.png",
+        "generated/jumpclip/litemite-archetype2-ember-choir-orbit",
+        "generated/jumpclip/litemite-archetype2-ember-choir-scatter",
+        "assets/audio/encounter-intro-spectrum-mote.mp3"
+      ]
+    },
+    {
+      "id": "litemite-archetype3-halo-scythe",
+      "name": "LiteMite — Halo Scythe",
+      "role": "actor",
+      "asset_kind": "actor",
+      "runtime_profile": "avm2",
+      "archetype_index": 3,
+      "encounter_title": "Ember Roll",
+      "core_color": "0xA8D4FF",
+      "accent_color": "0xFF3A3A",
+      "tail_segments": 9,
+      "swarm_count": 1,
+      "orbit_speed": 2.6,
+      "combat_pattern": "scythe arc sweep telegraphs one lane hard then immediately crosses to the opposite lane — punishes linear tracking, rewards pattern anticipation",
+      "prompt": "LiteMite boss Halo Scythe: icy silver-blue ring with four-point burst, offset halo sweeping like a scythe, crimson accent slash, rigid scythe-tooth tail segments, Flash enemy sprite",
+      "generated_outputs": [
+        "assets/visual/litemite-archetype3-halo-scythe.png",
+        "generated/jumpclip/litemite-archetype3-halo-scythe-sweep",
+        "generated/jumpclip/litemite-archetype3-halo-scythe-lock-warning",
+        "assets/audio/encounter-intro-ember-roll.mp3"
+      ]
+    },
+    {
+      "id": "litemite-archetype4-luster-knot",
+      "name": "LiteMite — Luster Knot",
+      "role": "actor",
+      "asset_kind": "actor",
+      "runtime_profile": "avm2",
+      "archetype_index": 4,
+      "encounter_title": "Luster Knot",
+      "core_color": "0x7C3ED8",
+      "accent_color": "0xFFD044",
+      "tail_segments": 10,
+      "swarm_count": 5,
+      "orbit_speed": 2.2,
+      "combat_pattern": "five motes each telegraph a different lane in rapid sequence, final boss — demands the player hold all four lanes in a rolling window while maintaining combo",
+      "prompt": "LiteMite boss Luster Knot: three deep-violet spheres in a triangular knot framed by a five-pointed golden burst, five satellite motes orbiting, tail knotted in a figure-8, Flash enemy sprite",
+      "generated_outputs": [
+        "assets/visual/litemite-archetype4-luster-knot.png",
+        "generated/jumpclip/litemite-archetype4-luster-knot-idle",
+        "generated/jumpclip/litemite-archetype4-luster-knot-final-phase",
+        "assets/audio/encounter-intro-luster-knot.mp3"
+      ]
+    },
+
+    {
+      "id": "dance-cue-head-flick",
+      "name": "Dance Cue — Head Flick",
+      "role": "trigger",
+      "asset_kind": "trigger",
+      "runtime_profile": "avm2",
+      "cue_form": 0,
+      "lane_index": 0,
+      "lane_name": "Head Flick",
+      "key": "A",
+      "prompt": "Rhythm cue silhouette for Head Flick lane: luminous teardrop rounded top snapping upward, cobalt glow, motion blur streak, rhythm-game button art transparent background",
+      "generated_outputs": [
+        "assets/visual/cue-head-flick.png",
+        "assets/audio/lane-hit-head-flick.mp3",
+        "assets/audio/lane-miss-buzz.mp3"
+      ]
+    },
+    {
+      "id": "dance-cue-torso-pulse",
+      "name": "Dance Cue — Torso Pulse",
+      "role": "trigger",
+      "asset_kind": "trigger",
+      "runtime_profile": "avm2",
+      "cue_form": 1,
+      "lane_index": 1,
+      "lane_name": "Torso Pulse",
+      "key": "S",
+      "prompt": "Rhythm cue silhouette for Torso Pulse lane: thick luminous diamond with shockwave ring, hot spectral orange-pink core, pulsing rhythm-game button art transparent background",
+      "generated_outputs": [
+        "assets/visual/cue-torso-pulse.png",
+        "assets/audio/lane-hit-torso-pulse.mp3"
+      ]
+    },
+    {
+      "id": "dance-cue-hand-halo",
+      "name": "Dance Cue — Hand Halo",
+      "role": "trigger",
+      "asset_kind": "trigger",
+      "runtime_profile": "avm2",
+      "cue_form": 2,
+      "lane_index": 2,
+      "lane_name": "Hand Halo",
+      "key": "K",
+      "prompt": "Rhythm cue silhouette for Hand Halo lane: glowing hollow ring, thin inner arc and thick outer arc, pale-gold spectral hue, spinning halo, rhythm-game button art transparent background",
+      "generated_outputs": [
+        "assets/visual/cue-hand-halo.png",
+        "assets/audio/lane-hit-hand-halo.mp3"
+      ]
+    },
+    {
+      "id": "dance-cue-foot-spark",
+      "name": "Dance Cue — Foot Spark",
+      "role": "trigger",
+      "asset_kind": "trigger",
+      "runtime_profile": "avm2",
+      "cue_form": 3,
+      "lane_index": 3,
+      "lane_name": "Foot Spark",
+      "key": "L",
+      "prompt": "Rhythm cue silhouette for Foot Spark lane: sharp downward lightning bolt with four-point starburst at tip, electric yellow-white with green fringe, rhythm-game button art transparent background",
+      "generated_outputs": [
+        "assets/visual/cue-foot-spark.png",
+        "assets/audio/lane-hit-foot-spark.mp3"
+      ]
+    },
+
+    {
+      "id": "poselock-system",
+      "name": "Pose Lock System",
+      "role": "trigger",
+      "asset_kind": "trigger",
+      "runtime_profile": "avm2",
+      "prompt": "Pose-lock finisher system assets: target ring orbit, angle indicator, success obliteration burst, fail tail backlash recoil",
+      "generated_outputs": [
+        "assets/visual/fx-poselock-target-ring.png",
+        "assets/visual/fx-poselock-success-burst.png",
+        "assets/visual/fx-poselock-fail-backlash.png",
+        "assets/audio/pose-lock-stinger-success.mp3",
+        "assets/audio/pose-lock-stinger-fail.mp3",
+        "generated/jumpclip/sparkle-poselock-hold",
+        "generated/jumpclip/sparkle-poselock-success",
+        "generated/jumpclip/sparkle-poselock-fail"
+      ]
+    },
+    {
+      "id": "enemy-defeat-explosion",
+      "name": "Enemy Defeat Explosion",
+      "role": "trigger",
+      "asset_kind": "trigger",
+      "runtime_profile": "avm2",
+      "prompt": "LiteMite defeat explosion ring: warm white-gold expanding ring, spectral debris petals, light-mote sparks, hollow interior, rhythm-game defeat VFX",
+      "generated_outputs": [
+        "assets/visual/fx-enemy-defeat-explosion.png",
+        "assets/audio/litemite-defeat-explosion.mp3",
+        "generated/jumpclip/litemite-defeat-universal"
+      ]
+    },
+
+    {
+      "id": "spectrum-runway",
+      "name": "Spectrum Runway Stage",
+      "role": "environment",
+      "asset_kind": "environment",
+      "runtime_profile": "avm2",
+      "prompt": "Combat dance runway inside a visible-spectrum storm: perspective-foreshortened dance floor, luminous lane rails in cobalt cyan amber gold, emberence haze mid-field, disruption ripple near strike line, Flash-game background plate 1920x1080",
+      "generated_outputs": [
+        "assets/visual/runway-spectrum-stage.png",
+        "assets/visual/runway-lanehold-glow.png"
+      ]
+    },
+
+    {
+      "id": "dubstep-pressure-bed",
+      "name": "Dubstep Pressure Bed",
+      "role": "trigger",
+      "asset_kind": "audio",
+      "runtime_profile": "avm2",
+      "prompt": "Procedural dubstep reference bed 142 BPM: hard sidechain kick, wobble bass filter-sweep, clipped LFO hats, sub drop every 8 bars, battle tension for rhythm dress-up combat prototype",
+      "generated_outputs": [
+        "assets/audio/dubstep-pressure-bed.mp3"
+      ]
+    },
+    {
+      "id": "litemite-warning-hiss",
+      "name": "LiteMite Warning Hiss",
+      "role": "trigger",
+      "asset_kind": "audio",
+      "runtime_profile": "avm2",
+      "prompt": "LiteMite spawn warning hiss: light motes condensing, static pressure building, emberence crackle and pop as enemy materialises",
+      "generated_outputs": [
+        "assets/audio/litemite-warning-hiss.mp3"
+      ]
+    }
+  ]
+}

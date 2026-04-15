@@ -27,6 +27,16 @@ from .simulation import simulate_match
 from .sports import get_sport_config, normalize_sport
 
 
+def _dirkodds_subprocess_command(*args: str) -> tuple[list[str], str | None, dict[str, str] | None]:
+    if getattr(sys, "frozen", False):
+        return [sys.executable, *args], None, None
+
+    env = os.environ.copy()
+    project_root = str(Path(__file__).resolve().parent.parent)
+    env["PYTHONPATH"] = project_root if not env.get("PYTHONPATH") else project_root + os.pathsep + env["PYTHONPATH"]
+    return [sys.executable, "-m", "football_predictor.main", *args], project_root, env
+
+
 class MainWindow(QtWidgets.QWidget):
     def __init__(self):
         super().__init__()
@@ -467,12 +477,10 @@ class MainWindow(QtWidgets.QWidget):
         safe_name = f"dirkodds_live_render_{sport}_{home_team}_{away_team}".replace(" ", "_").replace("/", "-")
         report_path = temp_dir / f"{safe_name}.json"
         report_path.write_text(json.dumps(report, indent=2, default=str) + "\n", encoding="utf-8")
-        env = os.environ.copy()
-        project_root = str(Path(__file__).resolve().parent.parent)
-        env["PYTHONPATH"] = project_root if not env.get("PYTHONPATH") else project_root + os.pathsep + env["PYTHONPATH"]
+        command, cwd, env = _dirkodds_subprocess_command("--live-render-report", str(report_path))
         self._live_render_process = subprocess.Popen(
-            [sys.executable, "-m", "football_predictor.live_render", "--report", str(report_path)],
-            cwd=project_root,
+            command,
+            cwd=cwd,
             env=env,
         )
 

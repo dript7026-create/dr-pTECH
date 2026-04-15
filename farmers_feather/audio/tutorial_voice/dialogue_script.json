@@ -1,0 +1,61 @@
+{
+  "project": "Farmer's Feather tutorial dialogue",
+  "cues": [
+    {
+      "id": "tutorial_00_wake",
+      "stage": "wake_ashore",
+      "speaker": "rim_echo",
+      "prompt_icon": "TILE_RAFT",
+      "text": "You wake where the surf leaves you. Step off the wreck raft and follow the dry sand inland."
+    },
+    {
+      "id": "tutorial_01_gear",
+      "stage": "gear_pickup",
+      "speaker": "hearth_guide",
+      "prompt_icon": "TILE_RAKE",
+      "text": "Take the wreck rake first, then grab your bathing suit from the tide line. Do not face the hunger bare-handed."
+    },
+    {
+      "id": "tutorial_02_combat",
+      "stage": "combat_test",
+      "speaker": "hearth_guide",
+      "prompt_icon": "TILE_CRATER",
+      "text": "A hungry kin rushes the circle ahead. Break its charge, then strike while it reels."
+    },
+    {
+      "id": "tutorial_03_till",
+      "stage": "farm_till",
+      "speaker": "hearth_guide",
+      "prompt_icon": "TILE_SOIL",
+      "text": "Turn the dark patch with your rake. A field only answers hands that open it."
+    },
+    {
+      "id": "tutorial_04_seed",
+      "stage": "farm_seed",
+      "speaker": "feather_bearer",
+      "prompt_icon": "TILE_CROP",
+      "text": "Seed to soil, breath to loam. If the grain remembers me, the hunger keeps its distance."
+    },
+    {
+      "id": "tutorial_05_harvest",
+      "stage": "farm_harvest",
+      "speaker": "hearth_guide",
+      "prompt_icon": "TILE_RIPE",
+      "text": "Cut the ripe heads and gather them close. Food is the first wall any settlement raises."
+    },
+    {
+      "id": "tutorial_06_settlement",
+      "stage": "settlement_build",
+      "speaker": "hearth_guide",
+      "prompt_icon": "TILE_HUT",
+      "text": "Raise the first hearth on the marked site. Three arms of wood are enough to begin a village."
+    },
+    {
+      "id": "tutorial_07_lore",
+      "stage": "settlement_rest",
+      "speaker": "rim_echo",
+      "prompt_icon": "TILE_SHRINE",
+      "text": "Every shelter on the disc is a promise against the famine wind. Rest here, and the wider path will answer you."
+    }
+  ]
+}

@@ -3,6 +3,6 @@
     <gradient
         android:angle="315"
         android:startColor="@color/dirkodds_launcher_bg"
-        android:centerColor="#0F1733"
-        android:endColor="#160E2E" />
+        android:centerColor="#101C3D"
+        android:endColor="#1A1232" />
 </shape>

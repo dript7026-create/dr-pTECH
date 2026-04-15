@@ -1,0 +1,96 @@
+{
+  "references": [
+    {
+      "provider": "local",
+      "identifier": "xb_landborne_portrait",
+      "title": "XenoBloods Landborne Portrait",
+      "image_url": null,
+      "source_url": null,
+      "license_name": "Workspace Internal",
+      "creator": "drIpTECH workspace",
+      "tags": ["xenobloods", "landborne", "portrait", "blood", "ritual", "silhouette"],
+      "width": null,
+      "height": null,
+      "local_path": "assets/generated/portrait_landborne.png"
+    },
+    {
+      "provider": "local",
+      "identifier": "xb_gourd_portrait",
+      "title": "XenoBloods Gourd Infant Portrait",
+      "image_url": null,
+      "source_url": null,
+      "license_name": "Workspace Internal",
+      "creator": "drIpTECH workspace",
+      "tags": ["xenobloods", "gourd-infant", "portrait", "egg", "birth", "ritual"],
+      "width": null,
+      "height": null,
+      "local_path": "assets/generated/portrait_gourd_infant.png"
+    },
+    {
+      "provider": "local",
+      "identifier": "xb_etheric_portrait",
+      "title": "XenoBloods Etheric Portrait",
+      "image_url": null,
+      "source_url": null,
+      "license_name": "Workspace Internal",
+      "creator": "drIpTECH workspace",
+      "tags": ["xenobloods", "etheric", "portrait", "energy", "rings", "plane-state"],
+      "width": null,
+      "height": null,
+      "local_path": "assets/generated/portrait_etheric.png"
+    },
+    {
+      "provider": "local",
+      "identifier": "xb_land_background",
+      "title": "XenoBloods Land Background",
+      "image_url": null,
+      "source_url": null,
+      "license_name": "Workspace Internal",
+      "creator": "drIpTECH workspace",
+      "tags": ["xenobloods", "land", "background", "veins", "palette", "blood-economy"],
+      "width": null,
+      "height": null,
+      "local_path": "assets/generated/bg_land.png"
+    },
+    {
+      "provider": "local",
+      "identifier": "xb_low_background",
+      "title": "XenoBloods Low Background",
+      "image_url": null,
+      "source_url": null,
+      "license_name": "Workspace Internal",
+      "creator": "drIpTECH workspace",
+      "tags": ["xenobloods", "low", "background", "silt", "mourning", "atmosphere"],
+      "width": null,
+      "height": null,
+      "local_path": "assets/generated/bg_low.png"
+    },
+    {
+      "provider": "local",
+      "identifier": "arid_field_handler",
+      "title": "Aridfeihth Field Handler Sheet",
+      "image_url": null,
+      "source_url": null,
+      "license_name": "Workspace Internal",
+      "creator": "drIpTECH workspace",
+      "tags": ["humanoid", "sprite-sheet", "cloak", "run-cycle", "silhouette", "pose-cadence"],
+      "width": null,
+      "height": null,
+      "local_path": "../aridfeihth/production_raw/actors/field_handler_sheet.png"
+    },
+    {
+      "provider": "local",
+      "identifier": "arid_latch_spider",
+      "title": "Aridfeihth Latch Spider Sheet",
+      "image_url": null,
+      "source_url": null,
+      "license_name": "Workspace Internal",
+      "creator": "drIpTECH workspace",
+      "tags": ["creature", "sprite-sheet", "multi-leg", "enemy", "silhouette", "animation-cadence"],
+      "width": null,
+      "height": null,
+      "local_path": "../aridfeihth/production_raw/actors/latch_spider_sheet.png"
+    }
+  ],
+  "count": 7
+}

@@ -45,6 +45,8 @@ Each tick performs five stages:
 python subdriptech/ExperientialGenesis/run_experiential_genesis.py
 python subdriptech/ExperientialGenesis/run_experiential_genesis.py --preset storm --ticks 5 --show-snapshots
 python subdriptech/ExperientialGenesis/run_experiential_genesis.py --history-out subdriptech/ExperientialGenesis/state/eg_history.jsonl
+python subdriptech/ExperientialGenesis/run_experiential_genesis.py --include-kaijugaiden --scene-id thunder_reef_duel --ticks 4
+python subdriptech/ExperientialGenesis/run_experiential_genesis.py --include-kaijugaiden --preset storm --contract-out KaijuGaiden/runtime/hope_runtime_contract.json --scene-id thunder_reef_duel --scene-type boss-rush
 ```
 
 ## Control Surface
@@ -53,6 +55,25 @@ python subdriptech/ExperientialGenesis/run_experiential_genesis.py --history-out
 - `--preset`: `default`, `storm`, or `calm`
 - `--show-snapshots`: print adapter metrics after each tick
 - `--history-out`: write consensus history as JSONL for replay or inspection
+- `--include-kaijugaiden`: register the KaijuGaiden runtime adapter
+- `--contract-out`: export a KaijuGaiden HOPE runtime contract JSON that `kaijugaiden.c` can load through its existing bridge path
+- `--scene-id`: set the exported KaijuGaiden runtime scene id
+- `--scene-type`: set the exported KaijuGaiden runtime scene type
+
+## KaijuGaiden Bridge
+
+When the KaijuGaiden adapter is enabled, EG can emit a deterministic runtime contract into `KaijuGaiden/runtime/hope_runtime_contract.json`.
+That contract now includes a timeline projection layer with project-progress, predictive-vision, derivative-final-state, and refinement-depth seeds that KaijuGaiden can turn into live playback and combat adaptation.
+
+That contract is designed to be consumed directly by `KaijuGaiden/kaijugaiden.c`, where it can influence:
+
+- boss movement pressure and spacing
+- silhouette hit activation density
+- debris, after-image, and healing FX behavior
+- environment-driven regeneration through moisture and air-chemistry relations
+- toxicant and insolvent-impurity contamination across encounter ecology
+- atmospheric corrosives, irritants, respiratory burden, hemoneural stress, plasmic instability, and matter-tension stasis
+- audio and render reactivity
 
 ## Next Expansion
 

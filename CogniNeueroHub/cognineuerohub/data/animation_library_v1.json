@@ -1,0 +1,37 @@
+{
+  "library_id": "lesson-animation-library-v1",
+  "title": "Quiet Animation Library",
+  "note": "Local SVG animation companions for lesson authors who want calm, child-friendly motion accents and custom-game mascots.",
+  "animations": [
+    {
+      "animation_id": "teddy-bear-scribe",
+      "title": "Teddy Bear Scribe",
+      "theme": "gentle memory",
+      "description": "A warm teddy bear with a satchel and notebook, meant for literacy, note-taking, and memory-driven lesson beats.",
+      "motion": "steady bob",
+      "asset_path": "/lesson-animations/teddy-bear-scribe.svg",
+      "palette": ["#b6885c", "#e8d6bc", "#7f5c45", "#d8b777"],
+      "tags": ["teddy", "scribe", "calm", "lesson mascot"]
+    },
+    {
+      "animation_id": "fawn-route-guide",
+      "title": "Fawn Route Guide",
+      "theme": "curious travel",
+      "description": "A small baby deer posed as a route guide, useful for map work, movement, and geography-centered lesson transitions.",
+      "motion": "light drift",
+      "asset_path": "/lesson-animations/fawn-route-guide.svg",
+      "palette": ["#c79663", "#f2e2c6", "#8f6847", "#fff7ea"],
+      "tags": ["fawn", "route", "map", "movement"]
+    },
+    {
+      "animation_id": "teddy-bear-bell-ringer",
+      "title": "Teddy Bear Bell Ringer",
+      "theme": "market rhythm",
+      "description": "A second teddy bear variant carrying a small bell for market-charter or town-square moments in authored activities.",
+      "motion": "soft sway",
+      "asset_path": "/lesson-animations/teddy-bear-bell-ringer.svg",
+      "palette": ["#a7754f", "#edd8c2", "#6f4a34", "#d0aa57"],
+      "tags": ["teddy", "market", "bell", "civic rhythm"]
+    }
+  ]
+}

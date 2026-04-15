@@ -1,0 +1,132 @@
+{
+  "generator": "AIASMR-XenoBloods-DreadWeave",
+  "version": 1,
+  "leitmotifs": {
+    "ishtasha": {
+      "title": "ishtasha",
+      "root": "C",
+      "mode": "phrygian",
+      "mood": "bass-heavy botanical dread with ritual reed pressure and hanging organ bloom",
+      "degrees": [0, 1, 3, 5, 3, 1, 0]
+    },
+    "lahgroid": {
+      "title": "lahgroid",
+      "root": "C",
+      "mode": "phrygian-dominant",
+      "mood": "hierophant menace with low bowed body and hostile ceremonial overtones",
+      "degrees": [0, 1, 4, 5, 4, 1, 0]
+    }
+  },
+  "passes": [
+    {
+      "id": "pass-01-bed",
+      "prompt": "Establish a dark bassy and foreboding bed with weight centered below the mids and a ritual organ haze above it.",
+      "goal": "foundation"
+    },
+    {
+      "id": "pass-02-eyecontact",
+      "prompt": "Give eye contact a held anticipatory line-of-sight sting that pauses before collision instead of resolving immediately.",
+      "goal": "encounter start"
+    },
+    {
+      "id": "pass-03-qte-family",
+      "prompt": "Differentiate prompt, lane, timing, and resolution audibly across the whole QTE space while keeping the palette dark and low.",
+      "goal": "combat nuance"
+    }
+  ],
+  "music_tracks": [
+    {
+      "id": "title_dread_bed",
+      "primary_motif": "ishtasha",
+      "secondary_motif": null,
+      "energy": 0.34,
+      "darkness": 0.78,
+      "tempo": 68,
+      "emphasis": 0.9,
+      "loop_patterns": 8
+    },
+    {
+      "id": "eyecontact_dread_bed",
+      "primary_motif": "ishtasha",
+      "secondary_motif": "lahgroid",
+      "energy": 0.48,
+      "darkness": 0.88,
+      "tempo": 72,
+      "emphasis": 0.94,
+      "loop_patterns": 6
+    },
+    {
+      "id": "battle_undertow",
+      "primary_motif": "ishtasha",
+      "secondary_motif": "lahgroid",
+      "energy": 0.66,
+      "darkness": 0.9,
+      "tempo": 84,
+      "emphasis": 1.02,
+      "loop_patterns": 6
+    },
+    {
+      "id": "boss_hierophant_dread",
+      "primary_motif": "lahgroid",
+      "secondary_motif": "ishtasha",
+      "energy": 0.72,
+      "darkness": 0.94,
+      "tempo": 88,
+      "emphasis": 1.08,
+      "loop_patterns": 6
+    }
+  ],
+  "base_sfx": [
+    {
+      "id": "eyecontact_lock",
+      "type": "eyecontact",
+      "waveform": "organ",
+      "pitch": 104,
+      "duration": 0.22,
+      "drive": 0.14
+    },
+    {
+      "id": "eyecontact_meet",
+      "type": "eyecontact",
+      "waveform": "reed",
+      "pitch": 156,
+      "duration": 0.24,
+      "drive": 0.18
+    },
+    {
+      "id": "gate_locked",
+      "type": "world",
+      "waveform": "bowed",
+      "pitch": 76,
+      "duration": 0.28,
+      "drive": 0.26
+    }
+  ],
+  "combat_matrix": {
+    "actions": ["attack", "parry", "block", "dodge"],
+    "lanes": ["foreground", "midground", "background"],
+    "timing_buckets": ["early", "center", "late"],
+    "qualities": ["success", "partial", "fail"],
+    "action_profiles": {
+      "attack": {"waveform": "reed", "pitch": 196, "drive_offset": 0.1},
+      "parry": {"waveform": "organ", "pitch": 228, "drive_offset": 0.06},
+      "block": {"waveform": "bowed", "pitch": 142, "drive_offset": 0.08},
+      "dodge": {"waveform": "felt", "pitch": 248, "drive_offset": 0.04}
+    },
+    "lane_profiles": {
+      "foreground": {"pitch_offset": -18, "duration_offset": 0.04},
+      "midground": {"pitch_offset": 0, "duration_offset": 0.0},
+      "background": {"pitch_offset": 24, "duration_offset": -0.02}
+    },
+    "quality_profiles": {
+      "success": {"waveform": "mallet", "pitch_offset": 24, "duration_offset": 0.02, "drive_offset": 0.06},
+      "partial": {"waveform": "warm", "pitch_offset": 0, "duration_offset": 0.0, "drive_offset": 0.02},
+      "fail": {"waveform": "bowed", "pitch_offset": -28, "duration_offset": 0.06, "drive_offset": 0.1}
+    },
+    "timing_profiles": {
+      "early": {"pitch_offset": -8, "duration_offset": -0.01},
+      "center": {"pitch_offset": 8, "duration_offset": 0.0},
+      "late": {"pitch_offset": -16, "duration_offset": 0.03}
+    }
+  }
+}

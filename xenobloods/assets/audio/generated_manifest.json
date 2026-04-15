@@ -1,0 +1,806 @@
+{
+  "generator": "AIASMR-XenoBloods-DreadWeave",
+  "version": 1,
+  "passes": [
+    {
+      "id": "pass-01-bed",
+      "prompt": "Establish a dark bassy and foreboding bed with weight centered below the mids and a ritual organ haze above it.",
+      "goal": "foundation"
+    },
+    {
+      "id": "pass-02-eyecontact",
+      "prompt": "Give eye contact a held anticipatory line-of-sight sting that pauses before collision instead of resolving immediately.",
+      "goal": "encounter start"
+    },
+    {
+      "id": "pass-03-qte-family",
+      "prompt": "Differentiate prompt, lane, timing, and resolution audibly across the whole QTE space while keeping the palette dark and low.",
+      "goal": "combat nuance"
+    }
+  ],
+  "music": [
+    {
+      "id": "title_dread_bed",
+      "path": "xenobloods\\assets\\audio\\music\\title_dread_bed.wav",
+      "frames": 622588
+    },
+    {
+      "id": "eyecontact_dread_bed",
+      "path": "xenobloods\\assets\\audio\\music\\eyecontact_dread_bed.wav",
+      "frames": 441000
+    },
+    {
+      "id": "battle_undertow",
+      "path": "xenobloods\\assets\\audio\\music\\battle_undertow.wav",
+      "frames": 378000
+    },
+    {
+      "id": "boss_hierophant_dread",
+      "path": "xenobloods\\assets\\audio\\music\\boss_hierophant_dread.wav",
+      "frames": 360818
+    },
+    {
+      "id": "birth_brass_horror",
+      "path": "xenobloods\\assets\\audio\\music\\birth_brass_horror.wav",
+      "frames": 529200
+    }
+  ],
+  "sfx": [
+    {
+      "id": "eyecontact_lock",
+      "path": "xenobloods\\assets\\audio\\sfx\\eyecontact_lock.wav",
+      "frames": 4851,
+      "type": "eyecontact"
+    },
+    {
+      "id": "eyecontact_meet",
+      "path": "xenobloods\\assets\\audio\\sfx\\eyecontact_meet.wav",
+      "frames": 5292,
+      "type": "eyecontact"
+    },
+    {
+      "id": "gate_locked",
+      "path": "xenobloods\\assets\\audio\\sfx\\gate_locked.wav",
+      "frames": 6174,
+      "type": "world"
+    },
+    {
+      "id": "prompt_attack_foreground",
+      "path": "xenobloods\\assets\\audio\\sfx\\prompt_attack_foreground.wav",
+      "frames": 4410,
+      "type": "prompt"
+    },
+    {
+      "id": "resolve_attack_foreground_success_early",
+      "path": "xenobloods\\assets\\audio\\sfx\\resolve_attack_foreground_success_early.wav",
+      "frames": 5071,
+      "type": "resolve"
+    },
+    {
+      "id": "resolve_attack_foreground_success_center",
+      "path": "xenobloods\\assets\\audio\\sfx\\resolve_attack_foreground_success_center.wav",
+      "frames": 5292,
+      "type": "resolve"
+    },
+    {
+      "id": "resolve_attack_foreground_success_late",
+      "path": "xenobloods\\assets\\audio\\sfx\\resolve_attack_foreground_success_late.wav",
+      "frames": 5953,
+      "type": "resolve"
+    },
+    {
+      "id": "resolve_attack_foreground_partial_early",
+      "path": "xenobloods\\assets\\audio\\sfx\\resolve_attack_foreground_partial_early.wav",
+      "frames": 4630,
+      "type": "resolve"
+    },
+    {
+      "id": "resolve_attack_foreground_partial_center",
+      "path": "xenobloods\\assets\\audio\\sfx\\resolve_attack_foreground_partial_center.wav",
+      "frames": 4851,
+      "type": "resolve"
+    },
+    {
+      "id": "resolve_attack_foreground_partial_late",
+      "path": "xenobloods\\assets\\audio\\sfx\\resolve_attack_foreground_partial_late.wav",
+      "frames": 5512,
+      "type": "resolve"
+    },
+    {
+      "id": "resolve_attack_foreground_fail_early",
+      "path": "xenobloods\\assets\\audio\\sfx\\resolve_attack_foreground_fail_early.wav",
+      "frames": 5953,
+      "type": "resolve"
+    },
+    {
+      "id": "resolve_attack_foreground_fail_center",
+      "path": "xenobloods\\assets\\audio\\sfx\\resolve_attack_foreground_fail_center.wav",
+      "frames": 6174,
+      "type": "resolve"
+    },
+    {
+      "id": "resolve_attack_foreground_fail_late",
+      "path": "xenobloods\\assets\\audio\\sfx\\resolve_attack_foreground_fail_late.wav",
+      "frames": 6835,
+      "type": "resolve"
+    },
+    {
+      "id": "prompt_attack_midground",
+      "path": "xenobloods\\assets\\audio\\sfx\\prompt_attack_midground.wav",
+      "frames": 3528,
+      "type": "prompt"
+    },
+    {
+      "id": "resolve_attack_midground_success_early",
+      "path": "xenobloods\\assets\\audio\\sfx\\resolve_attack_midground_success_early.wav",
+      "frames": 4189,
+      "type": "resolve"
+    },
+    {
+      "id": "resolve_attack_midground_success_center",
+      "path": "xenobloods\\assets\\audio\\sfx\\resolve_attack_midground_success_center.wav",
+      "frames": 4410,
+      "type": "resolve"
+    },
+    {
+      "id": "resolve_attack_midground_success_late",
+      "path": "xenobloods\\assets\\audio\\sfx\\resolve_attack_midground_success_late.wav",
+      "frames": 5071,
+      "type": "resolve"
+    },
+    {
+      "id": "resolve_attack_midground_partial_early",
+      "path": "xenobloods\\assets\\audio\\sfx\\resolve_attack_midground_partial_early.wav",
+      "frames": 3748,
+      "type": "resolve"
+    },
+    {
+      "id": "resolve_attack_midground_partial_center",
+      "path": "xenobloods\\assets\\audio\\sfx\\resolve_attack_midground_partial_center.wav",
+      "frames": 3969,
+      "type": "resolve"
+    },
+    {
+      "id": "resolve_attack_midground_partial_late",
+      "path": "xenobloods\\assets\\audio\\sfx\\resolve_attack_midground_partial_late.wav",
+      "frames": 4630,
+      "type": "resolve"
+    },
+    {
+      "id": "resolve_attack_midground_fail_early",
+      "path": "xenobloods\\assets\\audio\\sfx\\resolve_attack_midground_fail_early.wav",
+      "frames": 5071,
+      "type": "resolve"
+    },
+    {
+      "id": "resolve_attack_midground_fail_center",
+      "path": "xenobloods\\assets\\audio\\sfx\\resolve_attack_midground_fail_center.wav",
+      "frames": 5292,
+      "type": "resolve"
+    },
+    {
+      "id": "resolve_attack_midground_fail_late",
+      "path": "xenobloods\\assets\\audio\\sfx\\resolve_attack_midground_fail_late.wav",
+      "frames": 5953,
+      "type": "resolve"
+    },
+    {
+      "id": "prompt_attack_background",
+      "path": "xenobloods\\assets\\audio\\sfx\\prompt_attack_background.wav",
+      "frames": 3087,
+      "type": "prompt"
+    },
+    {
+      "id": "resolve_attack_background_success_early",
+      "path": "xenobloods\\assets\\audio\\sfx\\resolve_attack_background_success_early.wav",
+      "frames": 3748,
+      "type": "resolve"
+    },
+    {
+      "id": "resolve_attack_background_success_center",
+      "path": "xenobloods\\assets\\audio\\sfx\\resolve_attack_background_success_center.wav",
+      "frames": 3969,
+      "type": "resolve"
+    },
+    {
+      "id": "resolve_attack_background_success_late",
+      "path": "xenobloods\\assets\\audio\\sfx\\resolve_attack_background_success_late.wav",
+      "frames": 4630,
+      "type": "resolve"
+    },
+    {
+      "id": "resolve_attack_background_partial_early",
+      "path": "xenobloods\\assets\\audio\\sfx\\resolve_attack_background_partial_early.wav",
+      "frames": 3307,
+      "type": "resolve"
+    },
+    {
+      "id": "resolve_attack_background_partial_center",
+      "path": "xenobloods\\assets\\audio\\sfx\\resolve_attack_background_partial_center.wav",
+      "frames": 3528,
+      "type": "resolve"
+    },
+    {
+      "id": "resolve_attack_background_partial_late",
+      "path": "xenobloods\\assets\\audio\\sfx\\resolve_attack_background_partial_late.wav",
+      "frames": 4189,
+      "type": "resolve"
+    },
+    {
+      "id": "resolve_attack_background_fail_early",
+      "path": "xenobloods\\assets\\audio\\sfx\\resolve_attack_background_fail_early.wav",
+      "frames": 4630,
+      "type": "resolve"
+    },
+    {
+      "id": "resolve_attack_background_fail_center",
+      "path": "xenobloods\\assets\\audio\\sfx\\resolve_attack_background_fail_center.wav",
+      "frames": 4851,
+      "type": "resolve"
+    },
+    {
+      "id": "resolve_attack_background_fail_late",
+      "path": "xenobloods\\assets\\audio\\sfx\\resolve_attack_background_fail_late.wav",
+      "frames": 5512,
+      "type": "resolve"
+    },
+    {
+      "id": "prompt_parry_foreground",
+      "path": "xenobloods\\assets\\audio\\sfx\\prompt_parry_foreground.wav",
+      "frames": 4410,
+      "type": "prompt"
+    },
+    {
+      "id": "resolve_parry_foreground_success_early",
+      "path": "xenobloods\\assets\\audio\\sfx\\resolve_parry_foreground_success_early.wav",
+      "frames": 5071,
+      "type": "resolve"
+    },
+    {
+      "id": "resolve_parry_foreground_success_center",
+      "path": "xenobloods\\assets\\audio\\sfx\\resolve_parry_foreground_success_center.wav",
+      "frames": 5292,
+      "type": "resolve"
+    },
+    {
+      "id": "resolve_parry_foreground_success_late",
+      "path": "xenobloods\\assets\\audio\\sfx\\resolve_parry_foreground_success_late.wav",
+      "frames": 5953,
+      "type": "resolve"
+    },
+    {
+      "id": "resolve_parry_foreground_partial_early",
+      "path": "xenobloods\\assets\\audio\\sfx\\resolve_parry_foreground_partial_early.wav",
+      "frames": 4630,
+      "type": "resolve"
+    },
+    {
+      "id": "resolve_parry_foreground_partial_center",
+      "path": "xenobloods\\assets\\audio\\sfx\\resolve_parry_foreground_partial_center.wav",
+      "frames": 4851,
+      "type": "resolve"
+    },
+    {
+      "id": "resolve_parry_foreground_partial_late",
+      "path": "xenobloods\\assets\\audio\\sfx\\resolve_parry_foreground_partial_late.wav",
+      "frames": 5512,
+      "type": "resolve"
+    },
+    {
+      "id": "resolve_parry_foreground_fail_early",
+      "path": "xenobloods\\assets\\audio\\sfx\\resolve_parry_foreground_fail_early.wav",
+      "frames": 5953,
+      "type": "resolve"
+    },
+    {
+      "id": "resolve_parry_foreground_fail_center",
+      "path": "xenobloods\\assets\\audio\\sfx\\resolve_parry_foreground_fail_center.wav",
+      "frames": 6174,
+      "type": "resolve"
+    },
+    {
+      "id": "resolve_parry_foreground_fail_late",
+      "path": "xenobloods\\assets\\audio\\sfx\\resolve_parry_foreground_fail_late.wav",
+      "frames": 6835,
+      "type": "resolve"
+    },
+    {
+      "id": "prompt_parry_midground",
+      "path": "xenobloods\\assets\\audio\\sfx\\prompt_parry_midground.wav",
+      "frames": 3528,
+      "type": "prompt"
+    },
+    {
+      "id": "resolve_parry_midground_success_early",
+      "path": "xenobloods\\assets\\audio\\sfx\\resolve_parry_midground_success_early.wav",
+      "frames": 4189,
+      "type": "resolve"
+    },
+    {
+      "id": "resolve_parry_midground_success_center",
+      "path": "xenobloods\\assets\\audio\\sfx\\resolve_parry_midground_success_center.wav",
+      "frames": 4410,
+      "type": "resolve"
+    },
+    {
+      "id": "resolve_parry_midground_success_late",
+      "path": "xenobloods\\assets\\audio\\sfx\\resolve_parry_midground_success_late.wav",
+      "frames": 5071,
+      "type": "resolve"
+    },
+    {
+      "id": "resolve_parry_midground_partial_early",
+      "path": "xenobloods\\assets\\audio\\sfx\\resolve_parry_midground_partial_early.wav",
+      "frames": 3748,
+      "type": "resolve"
+    },
+    {
+      "id": "resolve_parry_midground_partial_center",
+      "path": "xenobloods\\assets\\audio\\sfx\\resolve_parry_midground_partial_center.wav",
+      "frames": 3969,
+      "type": "resolve"
+    },
+    {
+      "id": "resolve_parry_midground_partial_late",
+      "path": "xenobloods\\assets\\audio\\sfx\\resolve_parry_midground_partial_late.wav",
+      "frames": 4630,
+      "type": "resolve"
+    },
+    {
+      "id": "resolve_parry_midground_fail_early",
+      "path": "xenobloods\\assets\\audio\\sfx\\resolve_parry_midground_fail_early.wav",
+      "frames": 5071,
+      "type": "resolve"
+    },
+    {
+      "id": "resolve_parry_midground_fail_center",
+      "path": "xenobloods\\assets\\audio\\sfx\\resolve_parry_midground_fail_center.wav",
+      "frames": 5292,
+      "type": "resolve"
+    },
+    {
+      "id": "resolve_parry_midground_fail_late",
+      "path": "xenobloods\\assets\\audio\\sfx\\resolve_parry_midground_fail_late.wav",
+      "frames": 5953,
+      "type": "resolve"
+    },
+    {
+      "id": "prompt_parry_background",
+      "path": "xenobloods\\assets\\audio\\sfx\\prompt_parry_background.wav",
+      "frames": 3087,
+      "type": "prompt"
+    },
+    {
+      "id": "resolve_parry_background_success_early",
+      "path": "xenobloods\\assets\\audio\\sfx\\resolve_parry_background_success_early.wav",
+      "frames": 3748,
+      "type": "resolve"
+    },
+    {
+      "id": "resolve_parry_background_success_center",
+      "path": "xenobloods\\assets\\audio\\sfx\\resolve_parry_background_success_center.wav",
+      "frames": 3969,
+      "type": "resolve"
+    },
+    {
+      "id": "resolve_parry_background_success_late",
+      "path": "xenobloods\\assets\\audio\\sfx\\resolve_parry_background_success_late.wav",
+      "frames": 4630,
+      "type": "resolve"
+    },
+    {
+      "id": "resolve_parry_background_partial_early",
+      "path": "xenobloods\\assets\\audio\\sfx\\resolve_parry_background_partial_early.wav",
+      "frames": 3307,
+      "type": "resolve"
+    },
+    {
+      "id": "resolve_parry_background_partial_center",
+      "path": "xenobloods\\assets\\audio\\sfx\\resolve_parry_background_partial_center.wav",
+      "frames": 3528,
+      "type": "resolve"
+    },
+    {
+      "id": "resolve_parry_background_partial_late",
+      "path": "xenobloods\\assets\\audio\\sfx\\resolve_parry_background_partial_late.wav",
+      "frames": 4189,
+      "type": "resolve"
+    },
+    {
+      "id": "resolve_parry_background_fail_early",
+      "path": "xenobloods\\assets\\audio\\sfx\\resolve_parry_background_fail_early.wav",
+      "frames": 4630,
+      "type": "resolve"
+    },
+    {
+      "id": "resolve_parry_background_fail_center",
+      "path": "xenobloods\\assets\\audio\\sfx\\resolve_parry_background_fail_center.wav",
+      "frames": 4851,
+      "type": "resolve"
+    },
+    {
+      "id": "resolve_parry_background_fail_late",
+      "path": "xenobloods\\assets\\audio\\sfx\\resolve_parry_background_fail_late.wav",
+      "frames": 5512,
+      "type": "resolve"
+    },
+    {
+      "id": "prompt_block_foreground",
+      "path": "xenobloods\\assets\\audio\\sfx\\prompt_block_foreground.wav",
+      "frames": 4410,
+      "type": "prompt"
+    },
+    {
+      "id": "resolve_block_foreground_success_early",
+      "path": "xenobloods\\assets\\audio\\sfx\\resolve_block_foreground_success_early.wav",
+      "frames": 5071,
+      "type": "resolve"
+    },
+    {
+      "id": "resolve_block_foreground_success_center",
+      "path": "xenobloods\\assets\\audio\\sfx\\resolve_block_foreground_success_center.wav",
+      "frames": 5292,
+      "type": "resolve"
+    },
+    {
+      "id": "resolve_block_foreground_success_late",
+      "path": "xenobloods\\assets\\audio\\sfx\\resolve_block_foreground_success_late.wav",
+      "frames": 5953,
+      "type": "resolve"
+    },
+    {
+      "id": "resolve_block_foreground_partial_early",
+      "path": "xenobloods\\assets\\audio\\sfx\\resolve_block_foreground_partial_early.wav",
+      "frames": 4630,
+      "type": "resolve"
+    },
+    {
+      "id": "resolve_block_foreground_partial_center",
+      "path": "xenobloods\\assets\\audio\\sfx\\resolve_block_foreground_partial_center.wav",
+      "frames": 4851,
+      "type": "resolve"
+    },
+    {
+      "id": "resolve_block_foreground_partial_late",
+      "path": "xenobloods\\assets\\audio\\sfx\\resolve_block_foreground_partial_late.wav",
+      "frames": 5512,
+      "type": "resolve"
+    },
+    {
+      "id": "resolve_block_foreground_fail_early",
+      "path": "xenobloods\\assets\\audio\\sfx\\resolve_block_foreground_fail_early.wav",
+      "frames": 5953,
+      "type": "resolve"
+    },
+    {
+      "id": "resolve_block_foreground_fail_center",
+      "path": "xenobloods\\assets\\audio\\sfx\\resolve_block_foreground_fail_center.wav",
+      "frames": 6174,
+      "type": "resolve"
+    },
+    {
+      "id": "resolve_block_foreground_fail_late",
+      "path": "xenobloods\\assets\\audio\\sfx\\resolve_block_foreground_fail_late.wav",
+      "frames": 6835,
+      "type": "resolve"
+    },
+    {
+      "id": "prompt_block_midground",
+      "path": "xenobloods\\assets\\audio\\sfx\\prompt_block_midground.wav",
+      "frames": 3528,
+      "type": "prompt"
+    },
+    {
+      "id": "resolve_block_midground_success_early",
+      "path": "xenobloods\\assets\\audio\\sfx\\resolve_block_midground_success_early.wav",
+      "frames": 4189,
+      "type": "resolve"
+    },
+    {
+      "id": "resolve_block_midground_success_center",
+      "path": "xenobloods\\assets\\audio\\sfx\\resolve_block_midground_success_center.wav",
+      "frames": 4410,
+      "type": "resolve"
+    },
+    {
+      "id": "resolve_block_midground_success_late",
+      "path": "xenobloods\\assets\\audio\\sfx\\resolve_block_midground_success_late.wav",
+      "frames": 5071,
+      "type": "resolve"
+    },
+    {
+      "id": "resolve_block_midground_partial_early",
+      "path": "xenobloods\\assets\\audio\\sfx\\resolve_block_midground_partial_early.wav",
+      "frames": 3748,
+      "type": "resolve"
+    },
+    {
+      "id": "resolve_block_midground_partial_center",
+      "path": "xenobloods\\assets\\audio\\sfx\\resolve_block_midground_partial_center.wav",
+      "frames": 3969,
+      "type": "resolve"
+    },
+    {
+      "id": "resolve_block_midground_partial_late",
+      "path": "xenobloods\\assets\\audio\\sfx\\resolve_block_midground_partial_late.wav",
+      "frames": 4630,
+      "type": "resolve"
+    },
+    {
+      "id": "resolve_block_midground_fail_early",
+      "path": "xenobloods\\assets\\audio\\sfx\\resolve_block_midground_fail_early.wav",
+      "frames": 5071,
+      "type": "resolve"
+    },
+    {
+      "id": "resolve_block_midground_fail_center",
+      "path": "xenobloods\\assets\\audio\\sfx\\resolve_block_midground_fail_center.wav",
+      "frames": 5292,
+      "type": "resolve"
+    },
+    {
+      "id": "resolve_block_midground_fail_late",
+      "path": "xenobloods\\assets\\audio\\sfx\\resolve_block_midground_fail_late.wav",
+      "frames": 5953,
+      "type": "resolve"
+    },
+    {
+      "id": "prompt_block_background",
+      "path": "xenobloods\\assets\\audio\\sfx\\prompt_block_background.wav",
+      "frames": 3087,
+      "type": "prompt"
+    },
+    {
+      "id": "resolve_block_background_success_early",
+      "path": "xenobloods\\assets\\audio\\sfx\\resolve_block_background_success_early.wav",
+      "frames": 3748,
+      "type": "resolve"
+    },
+    {
+      "id": "resolve_block_background_success_center",
+      "path": "xenobloods\\assets\\audio\\sfx\\resolve_block_background_success_center.wav",
+      "frames": 3969,
+      "type": "resolve"
+    },
+    {
+      "id": "resolve_block_background_success_late",
+      "path": "xenobloods\\assets\\audio\\sfx\\resolve_block_background_success_late.wav",
+      "frames": 4630,
+      "type": "resolve"
+    },
+    {
+      "id": "resolve_block_background_partial_early",
+      "path": "xenobloods\\assets\\audio\\sfx\\resolve_block_background_partial_early.wav",
+      "frames": 3307,
+      "type": "resolve"
+    },
+    {
+      "id": "resolve_block_background_partial_center",
+      "path": "xenobloods\\assets\\audio\\sfx\\resolve_block_background_partial_center.wav",
+      "frames": 3528,
+      "type": "resolve"
+    },
+    {
+      "id": "resolve_block_background_partial_late",
+      "path": "xenobloods\\assets\\audio\\sfx\\resolve_block_background_partial_late.wav",
+      "frames": 4189,
+      "type": "resolve"
+    },
+    {
+      "id": "resolve_block_background_fail_early",
+      "path": "xenobloods\\assets\\audio\\sfx\\resolve_block_background_fail_early.wav",
+      "frames": 4630,
+      "type": "resolve"
+    },
+    {
+      "id": "resolve_block_background_fail_center",
+      "path": "xenobloods\\assets\\audio\\sfx\\resolve_block_background_fail_center.wav",
+      "frames": 4851,
+      "type": "resolve"
+    },
+    {
+      "id": "resolve_block_background_fail_late",
+      "path": "xenobloods\\assets\\audio\\sfx\\resolve_block_background_fail_late.wav",
+      "frames": 5512,
+      "type": "resolve"
+    },
+    {
+      "id": "prompt_dodge_foreground",
+      "path": "xenobloods\\assets\\audio\\sfx\\prompt_dodge_foreground.wav",
+      "frames": 4410,
+      "type": "prompt"
+    },
+    {
+      "id": "resolve_dodge_foreground_success_early",
+      "path": "xenobloods\\assets\\audio\\sfx\\resolve_dodge_foreground_success_early.wav",
+      "frames": 5071,
+      "type": "resolve"
+    },
+    {
+      "id": "resolve_dodge_foreground_success_center",
+      "path": "xenobloods\\assets\\audio\\sfx\\resolve_dodge_foreground_success_center.wav",
+      "frames": 5292,
+      "type": "resolve"
+    },
+    {
+      "id": "resolve_dodge_foreground_success_late",
+      "path": "xenobloods\\assets\\audio\\sfx\\resolve_dodge_foreground_success_late.wav",
+      "frames": 5953,
+      "type": "resolve"
+    },
+    {
+      "id": "resolve_dodge_foreground_partial_early",
+      "path": "xenobloods\\assets\\audio\\sfx\\resolve_dodge_foreground_partial_early.wav",
+      "frames": 4630,
+      "type": "resolve"
+    },
+    {
+      "id": "resolve_dodge_foreground_partial_center",
+      "path": "xenobloods\\assets\\audio\\sfx\\resolve_dodge_foreground_partial_center.wav",
+      "frames": 4851,
+      "type": "resolve"
+    },
+    {
+      "id": "resolve_dodge_foreground_partial_late",
+      "path": "xenobloods\\assets\\audio\\sfx\\resolve_dodge_foreground_partial_late.wav",
+      "frames": 5512,
+      "type": "resolve"
+    },
+    {
+      "id": "resolve_dodge_foreground_fail_early",
+      "path": "xenobloods\\assets\\audio\\sfx\\resolve_dodge_foreground_fail_early.wav",
+      "frames": 5953,
+      "type": "resolve"
+    },
+    {
+      "id": "resolve_dodge_foreground_fail_center",
+      "path": "xenobloods\\assets\\audio\\sfx\\resolve_dodge_foreground_fail_center.wav",
+      "frames": 6174,
+      "type": "resolve"
+    },
+    {
+      "id": "resolve_dodge_foreground_fail_late",
+      "path": "xenobloods\\assets\\audio\\sfx\\resolve_dodge_foreground_fail_late.wav",
+      "frames": 6835,
+      "type": "resolve"
+    },
+    {
+      "id": "prompt_dodge_midground",
+      "path": "xenobloods\\assets\\audio\\sfx\\prompt_dodge_midground.wav",
+      "frames": 3528,
+      "type": "prompt"
+    },
+    {
+      "id": "resolve_dodge_midground_success_early",
+      "path": "xenobloods\\assets\\audio\\sfx\\resolve_dodge_midground_success_early.wav",
+      "frames": 4189,
+      "type": "resolve"
+    },
+    {
+      "id": "resolve_dodge_midground_success_center",
+      "path": "xenobloods\\assets\\audio\\sfx\\resolve_dodge_midground_success_center.wav",
+      "frames": 4410,
+      "type": "resolve"
+    },
+    {
+      "id": "resolve_dodge_midground_success_late",
+      "path": "xenobloods\\assets\\audio\\sfx\\resolve_dodge_midground_success_late.wav",
+      "frames": 5071,
+      "type": "resolve"
+    },
+    {
+      "id": "resolve_dodge_midground_partial_early",
+      "path": "xenobloods\\assets\\audio\\sfx\\resolve_dodge_midground_partial_early.wav",
+      "frames": 3748,
+      "type": "resolve"
+    },
+    {
+      "id": "resolve_dodge_midground_partial_center",
+      "path": "xenobloods\\assets\\audio\\sfx\\resolve_dodge_midground_partial_center.wav",
+      "frames": 3969,
+      "type": "resolve"
+    },
+    {
+      "id": "resolve_dodge_midground_partial_late",
+      "path": "xenobloods\\assets\\audio\\sfx\\resolve_dodge_midground_partial_late.wav",
+      "frames": 4630,
+      "type": "resolve"
+    },
+    {
+      "id": "resolve_dodge_midground_fail_early",
+      "path": "xenobloods\\assets\\audio\\sfx\\resolve_dodge_midground_fail_early.wav",
+      "frames": 5071,
+      "type": "resolve"
+    },
+    {
+      "id": "resolve_dodge_midground_fail_center",
+      "path": "xenobloods\\assets\\audio\\sfx\\resolve_dodge_midground_fail_center.wav",
+      "frames": 5292,
+      "type": "resolve"
+    },
+    {
+      "id": "resolve_dodge_midground_fail_late",
+      "path": "xenobloods\\assets\\audio\\sfx\\resolve_dodge_midground_fail_late.wav",
+      "frames": 5953,
+      "type": "resolve"
+    },
+    {
+      "id": "prompt_dodge_background",
+      "path": "xenobloods\\assets\\audio\\sfx\\prompt_dodge_background.wav",
+      "frames": 3087,
+      "type": "prompt"
+    },
+    {
+      "id": "resolve_dodge_background_success_early",
+      "path": "xenobloods\\assets\\audio\\sfx\\resolve_dodge_background_success_early.wav",
+      "frames": 3748,
+      "type": "resolve"
+    },
+    {
+      "id": "resolve_dodge_background_success_center",
+      "path": "xenobloods\\assets\\audio\\sfx\\resolve_dodge_background_success_center.wav",
+      "frames": 3969,
+      "type": "resolve"
+    },
+    {
+      "id": "resolve_dodge_background_success_late",
+      "path": "xenobloods\\assets\\audio\\sfx\\resolve_dodge_background_success_late.wav",
+      "frames": 4630,
+      "type": "resolve"
+    },
+    {
+      "id": "resolve_dodge_background_partial_early",
+      "path": "xenobloods\\assets\\audio\\sfx\\resolve_dodge_background_partial_early.wav",
+      "frames": 3307,
+      "type": "resolve"
+    },
+    {
+      "id": "resolve_dodge_background_partial_center",
+      "path": "xenobloods\\assets\\audio\\sfx\\resolve_dodge_background_partial_center.wav",
+      "frames": 3528,
+      "type": "resolve"
+    },
+    {
+      "id": "resolve_dodge_background_partial_late",
+      "path": "xenobloods\\assets\\audio\\sfx\\resolve_dodge_background_partial_late.wav",
+      "frames": 4189,
+      "type": "resolve"
+    },
+    {
+      "id": "resolve_dodge_background_fail_early",
+      "path": "xenobloods\\assets\\audio\\sfx\\resolve_dodge_background_fail_early.wav",
+      "frames": 4630,
+      "type": "resolve"
+    },
+    {
+      "id": "resolve_dodge_background_fail_center",
+      "path": "xenobloods\\assets\\audio\\sfx\\resolve_dodge_background_fail_center.wav",
+      "frames": 4851,
+      "type": "resolve"
+    },
+    {
+      "id": "resolve_dodge_background_fail_late",
+      "path": "xenobloods\\assets\\audio\\sfx\\resolve_dodge_background_fail_late.wav",
+      "frames": 5512,
+      "type": "resolve"
+    },
+    {
+      "id": "birth_stage",
+      "path": "xenobloods\\assets\\audio\\sfx\\birth_stage.wav",
+      "frames": 34398,
+      "type": "birth"
+    },
+    {
+      "id": "birth_fail",
+      "path": "xenobloods\\assets\\audio\\sfx\\birth_fail.wav",
+      "frames": 27342,
+      "type": "birth"
+    },
+    {
+      "id": "birth_complete",
+      "path": "xenobloods\\assets\\audio\\sfx\\birth_complete.wav",
+      "frames": 52038,
+      "type": "birth"
+    }
+  ]
+}

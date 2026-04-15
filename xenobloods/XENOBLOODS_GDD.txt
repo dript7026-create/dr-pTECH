@@ -1,0 +1,156 @@
+XenoBloods Game Design Document
+
+High Concept
+
+XenoBloods is a single-player real-time action game for PC built around blood economy, metaphysical rebirth, and adaptive combat pressure.
+
+The player lives across three planes of existence:
+- Up: the radiant upper dominion beneath Gramatos, where the tetrarchs reside
+- Land: mortal embodied life, where blood, flesh, memory, and ambition are fully bound together
+- Low: the underworld of sorrow, confusion, grief, and collapsed identity
+
+Between them lies the ether, a navigable state of pure energy reached through death or at soul shrines.
+
+The player's lifecycle is not a simple respawn loop. Every death and every deliberate soul-shrine crossing re-enters the rebirth chain. To return to Land, the player first manifests as an infant sealed in an amniotic gourd and must struggle free into full embodied life again.
+
+Product Pillars
+1. Real-time action that feels brutally intense but legible.
+2. Blood as the center of economy, growth, stamina, healing, and cognition.
+3. Three-plane metaphysics that matter mechanically, not only in lore.
+4. Rebirth that is playable, risky, and emotionally charged.
+5. Adaptive enemy pressure that studies weakness patterns without cheating.
+6. High-end CGI presentation that remains within plausible production limits.
+
+World Cosmology
+
+Up
+- seat of law, mandate, and elevated design
+- ruled by the tetrarchs under Gramatos
+- strong signal clarity, precise enemies, cognition taxes
+
+Land
+- embodied life
+- blood functions as currency, health reserve, stamina charge, acuity fuel, and growth medium
+
+Low
+- underworld of sorrow and confusion
+- identity degrades if not reinforced
+- grief, confusion, and loss of footing dominate
+
+Ether
+- transit state of pure energy, prayer, memory, and direction
+- reached through death, shrines, and high-order gates
+
+Three Life-Form Lifecycle
+
+Form 1: Gourd Infant
+- larval rebirth form
+- triggered by death or entering Land from ether
+- sealed in an amniotic gourd
+- must build rupture pressure and hatch into embodied life
+
+Form 2: Landborne Vessel
+- standard living form
+- full combat toolkit
+- full blood metabolism
+- the main exploration and combat body
+
+Form 3: Etheric Current
+- pure-energy form
+- used for death transit, shrine routing, and metaphysical navigation
+- no standard weapon use
+
+Player Economy
+
+Blood uses
+- buy goods and rites
+- fuel stamina recovery
+- restore health
+- sharpen mental acuity
+- unlock blood growth upgrades
+- empower weapon arts and ritual actions
+
+Amniotic gourds
+- collect spilled blood
+- preserve blood outside the body
+- incubate rebirth after death or shrine descent into Land
+- carry special essence strains
+
+Core Loop
+1. Explore a hostile region of Land, Up, or Low.
+2. Fight enemies and collect blood.
+3. Spend blood on survival, growth, and equipment.
+4. Reach a soul shrine or major anchor.
+5. Choose to remain embodied, traverse planes, or bank blood in gourds.
+6. Adapt to enemy paradigm shifts and new pressure patterns.
+7. Survive boss gates and advance the world-state.
+
+Combat Design
+
+Weapon families
+- blood blades
+- verdict polearms
+- gourd hammers
+- ether bows
+- Sibeline wands
+
+Blood actions
+- blood burn
+- blood veil
+- blood mark
+- blood reclaim
+
+Soul Shrines
+- checkpoint
+- plane transfer
+- rebirth initiation
+- blood banking
+- memory review
+- adaptive routing node
+
+Enemy Paradigm Schisms
+- Rendline: close-range aggression and anti-hesitation pursuit
+- Lattice: formations, linked defense, denial geometry
+- Mirecast: delayed hazards, curse pressure, anti-positioning
+- Idolwrought: posture warfare, false vulnerability, heavy commitment
+- Mirrorblood: rival duelists that answer repeated player habits
+
+Adaptive Enemy Patterning
+- authored behavior trees and action graphs
+- utility scoring per action
+- short-horizon memory inside fights
+- longer-profile tags across the campaign
+- director-controlled outfit and squad variation within strict limits
+
+Campaign Structure
+1. Gourdwake Breach
+2. Veinmarket Mile
+3. Flood Archive of Lillypads
+4. Token Tong Causeway
+5. Alibaba Furnace Ward
+6. Opal Nervure Vault
+7. Gramatos Underscript
+8. Sorrow Delta
+9. Tetrarch Fracture
+10. Oshin Ishtasha Tribunal
+
+Growth Tracks
+- blood density
+- stamina refinement
+- acuity clarity
+- gourd resilience
+- ether control
+- weapon specialization
+
+Vertical Slice Requirements
+1. one Land district
+2. one soul shrine
+3. one rebirth sequence
+4. one Up incursion room
+5. one Low corruption room
+6. two enemy schism families
+7. one mini-boss
+8. complete blood and gourd loops
+
+Success Condition
+XenoBloods succeeds when the player feels that blood matters every second, death changes state instead of simply resetting position, every plane has different metaphysical and combat logic, soul shrines are sacred and strategic, enemies become smarter in authored ways that still feel fair, and the campaign feels like one cohesive blood-and-soul ecology.

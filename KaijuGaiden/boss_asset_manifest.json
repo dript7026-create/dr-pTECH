@@ -1,0 +1,181 @@
+{
+  "schema": "kaijugaiden.boss-assets.v1",
+  "designDocs": {
+    "bossProfiles": "KaijuGaiden/BOSS_DESIGN_PROFILES.md",
+    "spritePromptSheets": "KaijuGaiden/BOSS_SPRITE_PROMPT_SHEETS.md",
+    "minionEcologyProfiles": "KaijuGaiden/BOSS_MINION_ECOLOGY_PROFILES.md"
+  },
+  "sharedDeliverables": {
+    "turnaroundPanels": [
+      "front_three_quarter",
+      "side_profile",
+      "rear_silhouette",
+      "attack_extension",
+      "damaged_phase_overlay"
+    ],
+    "sheetRules": [
+      "preserve_head_and_shoulder_readability_at_32x16_space",
+      "tie_material_language_to_biome_and_one_secondary_mutation",
+      "ship_three_minion_reads_per_boss_pressure_harass_support",
+      "align_motion_and_audio motifs with encounter identity"
+    ]
+  },
+  "bosses": [
+    {
+      "name": "HARBOR LEVIATHAN",
+      "stage": "HARBOR SHORE",
+      "prefab": 0,
+      "subarchetype": 0,
+      "minionFamily": "reef spitters",
+      "movementPattern": "tidal_anchor_stalk",
+      "audioMotif": "abyssal_brass_undertow",
+      "contaminationSignature": "salt_bloom_toxicant_oilfilm_respiratory_drag",
+      "minionSheets": ["reef_spitter", "drowned_scavenger", "hook_jaw_tide_feeder"],
+      "requiredAssets": ["phase1", "phase2", "phase3", "portrait", "intro-cinematic", "hit-fx"],
+      "status": "implemented-runtime-identity / pending-dedicated-art"
+    },
+    {
+      "name": "CINDER WYRM",
+      "stage": "ASH BARROWS",
+      "prefab": 1,
+      "subarchetype": 1,
+      "minionFamily": "coal-hounds",
+      "movementPattern": "coil_feint_pyre_rear",
+      "audioMotif": "funeral_brass_ember_tremolo",
+      "contaminationSignature": "soot_toxicant_ember_irritant_fluid_collapse",
+      "minionSheets": ["coal_hound", "ash_skink", "pyre_carrion_strider"],
+      "requiredAssets": ["phase1", "phase2", "phase3", "portrait", "embers-fx"],
+      "status": "planned"
+    },
+    {
+      "name": "ROOT BASTION",
+      "stage": "MANGROVE TEETH",
+      "prefab": 2,
+      "subarchetype": 2,
+      "minionFamily": "root den lurkers",
+      "movementPattern": "fortress_brace_bulldoze",
+      "audioMotif": "muffled_horn_root_tremolo",
+      "contaminationSignature": "fungal_spore_tannic_irritant_root_stasis",
+      "minionSheets": ["root_den_lurker", "bark_boar", "fungal_offshoot_sentry"],
+      "requiredAssets": ["phase1", "phase2", "phase3", "portrait", "root-fx"],
+      "status": "planned"
+    },
+    {
+      "name": "GLACIER MAW",
+      "stage": "FROST BREAKER",
+      "prefab": 3,
+      "subarchetype": 0,
+      "minionFamily": "frost wolves",
+      "movementPattern": "starvation_stalk_pounce",
+      "audioMotif": "frozen_warning_brass_quiet_trills",
+      "contaminationSignature": "frost_insolvent_bloodthin_breath_brittle_plasmics",
+      "minionSheets": ["frost_wolf", "seal_scavenger", "whiteout_gnasher"],
+      "requiredAssets": ["phase1", "phase2", "phase3", "portrait", "snow-fx"],
+      "status": "planned"
+    },
+    {
+      "name": "VAULT SERPENT",
+      "stage": "SUNKEN VAULT",
+      "prefab": 4,
+      "subarchetype": 1,
+      "minionFamily": "crypt choir blinders",
+      "movementPattern": "ritual_sway_coil_cross",
+      "audioMotif": "sepulchral_processional_brass",
+      "contaminationSignature": "mildew_corrosive_reliquary_dust_stagnant_coil_stasis",
+      "minionSheets": ["crypt_choir_blinder", "bone_eel", "reliquary_leech"],
+      "requiredAssets": ["phase1", "phase2", "phase3", "portrait", "crypt-fx"],
+      "status": "planned"
+    },
+    {
+      "name": "SHARD COLOSSUS",
+      "stage": "GLASS DELTA",
+      "prefab": 5,
+      "subarchetype": 2,
+      "minionFamily": "shard mimics",
+      "movementPattern": "diagonal_skate_split_cut",
+      "audioMotif": "slasher_brass_glass_trill",
+      "contaminationSignature": "silica_aerosol_neural_scatter_fracture_plasmics",
+      "minionSheets": ["shard_mimic", "cutglass_calf", "reflective_tendon_skater"],
+      "requiredAssets": ["phase1", "phase2", "phase3", "portrait", "glass-fx"],
+      "status": "planned"
+    },
+    {
+      "name": "LOGORA RAPTORMOTH",
+      "stage": "THUNDER REEF",
+      "prefab": 6,
+      "subarchetype": 0,
+      "minionFamily": "nest raptors",
+      "movementPattern": "wingbeat_hover_rake",
+      "audioMotif": "bombastic_storm_brass_fanfare",
+      "contaminationSignature": "ozone_reef_mist_storm_pollen_charged_plasmics",
+      "minionSheets": ["nest_raptor", "storm_glider", "crest_moth_scavenger"],
+      "requiredAssets": ["phase1", "phase2", "phase3", "portrait", "storm-fx"],
+      "status": "runtime-identity-strong / pending-dedicated-art"
+    },
+    {
+      "name": "BASALT TYRANT",
+      "stage": "BASALT GATE",
+      "prefab": 7,
+      "subarchetype": 3,
+      "minionFamily": "toll brutes",
+      "movementPattern": "gate_hold_hammer_drop",
+      "audioMotif": "infernal_brass_furnace_drone",
+      "contaminationSignature": "sulfur_corrosive_slag_burden_kiln_stasis",
+      "minionSheets": ["toll_brute", "vent_toad", "slag_backed_tunnel_ape"],
+      "requiredAssets": ["phase1", "phase2", "phase3", "portrait", "lava-fx"],
+      "status": "planned"
+    },
+    {
+      "name": "GOOLLOKI MOONFROG",
+      "stage": "BLOOM PIT",
+      "prefab": 8,
+      "subarchetype": 1,
+      "minionFamily": "grub frogs",
+      "movementPattern": "crouch_herd_jump_burst",
+      "audioMotif": "bog_breath_brass_quiet_trills",
+      "contaminationSignature": "pollen_slime_toxicant_gland_breath_moonfever_drift",
+      "minionSheets": ["grub_frog", "bloom_tadpole_hunter", "gland_spore_toadlet"],
+      "requiredAssets": ["phase1", "phase2", "phase3", "portrait", "pollen-fx"],
+      "status": "runtime-identity-strong / pending-dedicated-art"
+    },
+    {
+      "name": "DUST ORACLE",
+      "stage": "DUST HALO",
+      "prefab": 5,
+      "subarchetype": 2,
+      "minionFamily": "omen eyes",
+      "movementPattern": "omen_pivot_false_stillness",
+      "audioMotif": "prophetic_brass_dry_trills",
+      "contaminationSignature": "ritual_dust_inhalant_corrosive_grit_neural_static",
+      "minionSheets": ["omen_eye", "sand_augur", "veil_wing_scavenger"],
+      "requiredAssets": ["phase1", "phase2", "phase3", "portrait", "dust-fx"],
+      "status": "planned"
+    },
+    {
+      "name": "NIGHT ABYSS",
+      "stage": "BLACK TIDE",
+      "prefab": 6,
+      "subarchetype": 3,
+      "minionFamily": "abyss drones",
+      "movementPattern": "undertow_drift_engulf",
+      "audioMotif": "cathedral_abyss_brass",
+      "contaminationSignature": "blacksurf_oil_toxicant_pressure_burden_abyssal_diffusion",
+      "minionSheets": ["abyss_drone", "lurefish_parasite", "surf_leech"],
+      "requiredAssets": ["phase1", "phase2", "phase3", "portrait", "surf-fx"],
+      "status": "planned"
+    },
+    {
+      "name": "CROWN BEHEMOTH",
+      "stage": "CROWN CRATER",
+      "prefab": 8,
+      "subarchetype": 3,
+      "minionFamily": "bone court elites",
+      "movementPattern": "sovereign_pace_center_claim",
+      "audioMotif": "regal_necromantic_fanfare",
+      "contaminationSignature": "gravegold_corrosive_embalming_vapor_royal_bone_stasis",
+      "minionSheets": ["bone_court_elite", "embalmed_hound", "ossuary_page"],
+      "requiredAssets": ["phase1", "phase2", "phase3", "portrait", "regalia-fx"],
+      "status": "planned"
+    }
+  ]
+}

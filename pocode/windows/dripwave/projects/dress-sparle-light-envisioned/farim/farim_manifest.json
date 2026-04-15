@@ -1,0 +1,9 @@
+{
+  "package_name": "Dress SparLE: Light Envisioned",
+  "entry_swf": "dress-sparle-light-envisioned.swf",
+  "runtime_profile": "avm2",
+  "prefab_manifest": "../prefabs.json",
+  "description": "Combat dance rhythmbattle dress-up game prototype starring Sparkle the BlueNoMid against LiteMite light swarms.",
+  "core_loop": "Catch rhythm seams, build the outfit, then lock a finishing pose to collapse the syncrosequence tail.",
+  "framebuffer_mode": "adaptive visible-spectrum disruption"
+}

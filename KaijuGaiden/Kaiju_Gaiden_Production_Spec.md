@@ -261,6 +261,7 @@ Current gap:
 
 - Harbor Leviathan exists as a bespoke boss
 - future bosses are not yet formalized in code as content-driven entries
+- explicit visual identity briefs are now tracked in `BOSS_DESIGN_PROFILES.md`, but the runtime still needs those briefs converted into dedicated asset banks and per-boss content data
 
 Needed implementation:
 

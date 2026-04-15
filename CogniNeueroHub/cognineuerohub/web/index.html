@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CogniNeueroHub</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <div class="backdrop"></div>
+  <main class="shell">
+    <section class="hero hero-grid">
+      <div>
+        <p class="eyebrow">CogniNeueroHub</p>
+        <h1>Live cognitive-development hubs for classroom simulation.</h1>
+        <p class="lede">This version now uses a canonical ArtiSapiens cohort dataset, integrates NeoWakeUP-generated visual assets, and supports quiet, lesson-shaped seminar runs through a calm browser dashboard.</p>
+        <div id="dataset-card" class="dataset-card card">
+          <span>Canonical Dataset</span>
+          <strong id="dataset-title">Loading dataset...</strong>
+          <p id="dataset-note"></p>
+        </div>
+      </div>
+      <div class="hero-visual card">
+        <img id="planet-core" alt="CogniNeueroHub planetary core asset">
+        <div class="glyph-stack">
+          <img id="glyph-upper" alt="Uppercase glyph reference">
+          <img id="glyph-symbols" alt="Symbol glyph reference">
+        </div>
+      </div>
+    </section>
+
+    <section class="controls card">
+      <div>
+        <label for="lesson-select">Lesson</label>
+        <select id="lesson-select"></select>
+      </div>
+      <div>
+        <label for="steps">Step count</label>
+        <input id="steps" type="number" min="1" max="120" value="6">
+      </div>
+      <div>
+        <label for="curiosity">Curiosity</label>
+        <input id="curiosity" type="range" min="0" max="1" step="0.01" value="0.72">
+      </div>
+      <div>
+        <label for="equity">Equity</label>
+        <input id="equity" type="range" min="0" max="1" step="0.01" value="0.78">
+      </div>
+      <div>
+        <label for="challenge">Challenge</label>
+        <input id="challenge" type="range" min="0" max="1" step="0.01" value="0.66">
+      </div>
+      <div>
+        <label for="reflection">Reflection</label>
+        <input id="reflection" type="range" min="0" max="1" step="0.01" value="0.81">
+      </div>
+      <div class="button-row control-actions">
+        <button id="load-lesson">Load Lesson</button>
+        <button id="step-once">Step</button>
+        <button id="toggle-auto">Auto run</button>
+        <button id="reset">Reset</button>
+      </div>
+      <div class="live-pace-card item">
+        <strong id="live-pace-meter">AI pace meter awaiting live data.</strong>
+        <div id="live-pace-meter-sub">The AI will surface pace, step count, and interval once lesson flow is active.</div>
+        <svg id="live-pace-sparkline" class="live-pace-sparkline" viewBox="0 0 180 46" preserveAspectRatio="none" aria-label="Live pace history sparkline">
+          <path id="live-pace-sparkline-fill" d=""></path>
+          <path id="live-pace-sparkline-path" d=""></path>
+        </svg>
+      </div>
+    </section>
+
+    <section class="dashboard">
+      <article class="card course-studio">
+        <div class="course-studio-header">
+          <div>
+            <div class="panel-title">Course Guidance Dock</div>
+            <p class="dock-note">Profiles, politeness, and pacing are compacted here so the lesson surface stays open.</p>
+          </div>
+          <div id="course-status" class="item response-analysis">Course setup has not been saved yet.</div>
+        </div>
+        <div class="studio-dock">
+          <details class="dock-section" open>
+            <summary>Course setup and protocol</summary>
+            <div class="field-grid">
+              <div>
+                <label for="course-title-input">Course title</label>
+                <input id="course-title-input" type="text" placeholder="Bavaria Seminar Spring">
+              </div>
+              <div>
+                <label for="course-educator-input">Educator</label>
+                <input id="course-educator-input" type="text" placeholder="Dr. Rowan">
+              </div>
+            </div>
+            <label for="course-notes-input">Course notes</label>
+            <textarea id="course-notes-input" rows="3" placeholder="How the educator wants to shape student profiles at the start of the course."></textarea>
+            <div class="panel-title lesson-subtitle">God Conductor</div>
+            <div class="field-grid compact-grid">
+              <div>
+                <label for="god-name-input">Conductor name</label>
+                <input id="god-name-input" type="text" placeholder="GodAI Seminar Voice">
+              </div>
+              <div>
+                <label for="god-tone-input">Tone</label>
+                <input id="god-tone-input" type="text" placeholder="steady mercy">
+              </div>
+              <div>
+                <label for="god-mercy-input">Mercy bias</label>
+                <input id="god-mercy-input" type="number" min="0" max="1" step="0.01" value="0.78">
+              </div>
+              <div>
+                <label for="god-challenge-input">Challenge bias</label>
+                <input id="god-challenge-input" type="number" min="0" max="1" step="0.01" value="0.62">
+              </div>
+              <div>
+                <label for="god-wonder-input">Wonder bias</label>
+                <input id="god-wonder-input" type="number" min="0" max="1" step="0.01" value="0.81">
+              </div>
+            </div>
+            <div class="panel-title lesson-subtitle">Politeness Protocol</div>
+            <div class="field-grid compact-grid">
+              <div>
+                <label for="protocol-greeting-input">Greeting</label>
+                <input id="protocol-greeting-input" type="text" placeholder="Good to see you">
+              </div>
+              <div>
+                <label for="protocol-affirmation-input">Affirmation</label>
+                <input id="protocol-affirmation-input" type="text" placeholder="Thank you for your thoughtful work">
+              </div>
+              <div>
+                <label for="protocol-closing-input">Closing</label>
+                <input id="protocol-closing-input" type="text" placeholder="Take your time and proceed with care">
+              </div>
+              <div>
+                <label for="protocol-redirection-input">Redirection</label>
+                <input id="protocol-redirection-input" type="text" placeholder="Let us return to one anchor at a time">
+              </div>
+            </div>
+            <div class="button-row course-actions wrap-actions">
+              <button id="save-course-setup">Save Course Setup</button>
+              <button id="export-course-setup">Export Course</button>
+              <button id="import-course-setup">Import Course</button>
+              <input id="course-import-input" type="file" accept="application/json" hidden>
+            </div>
+          </details>
+
+          <details class="dock-section">
+            <summary>Student profile and voice</summary>
+            <div class="field-grid">
+              <div>
+                <label for="student-select">Active student</label>
+                <select id="student-select"></select>
+              </div>
+              <div>
+                <label for="student-name-input">Student name</label>
+                <input id="student-name-input" type="text" placeholder="Ada L.">
+              </div>
+              <div>
+                <label for="student-archetype-input">Archetype</label>
+                <input id="student-archetype-input" type="text" placeholder="careful synthesizer">
+              </div>
+              <div>
+                <label for="student-spiritual-frame-input">Spiritual frame</label>
+                <input id="student-spiritual-frame-input" type="text" placeholder="reflective">
+              </div>
+            </div>
+            <div class="field-grid">
+              <div>
+                <label for="student-strengths-input">Strengths</label>
+                <input id="student-strengths-input" type="text" placeholder="pattern recognition, measured writing">
+              </div>
+              <div>
+                <label for="student-supports-input">Support needs</label>
+                <input id="student-supports-input" type="text" placeholder="clear sequencing, spoken recap">
+              </div>
+              <div>
+                <label for="student-interests-input">Interests</label>
+                <input id="student-interests-input" type="text" placeholder="maps, monastic history">
+              </div>
+              <div>
+                <label for="student-modalities-input">Preferred modalities</label>
+                <input id="student-modalities-input" type="text" placeholder="discussion, short writing">
+              </div>
+            </div>
+            <label for="student-notes-input">Profile notes</label>
+            <textarea id="student-notes-input" rows="3" placeholder="Short educator-facing notes about this learner."></textarea>
+            <div class="panel-title lesson-subtitle">Egosphere Signals</div>
+            <div class="field-grid compact-grid">
+              <div><label for="student-trust-input">Trust</label><input id="student-trust-input" type="number" min="0" max="1" step="0.01" value="0.5"></div>
+              <div><label for="student-fear-input">Fear</label><input id="student-fear-input" type="number" min="0" max="1" step="0.01" value="0.25"></div>
+              <div><label for="student-adaptability-input">Adaptability</label><input id="student-adaptability-input" type="number" min="0" max="1" step="0.01" value="0.5"></div>
+              <div><label for="student-reciprocity-input">Reciprocity</label><input id="student-reciprocity-input" type="number" min="0" max="1" step="0.01" value="0.5"></div>
+              <div><label for="student-resonance-input">Resonance</label><input id="student-resonance-input" type="number" min="0" max="1" step="0.01" value="0.5"></div>
+              <div><label for="student-dominance-input">Dominance</label><input id="student-dominance-input" type="number" min="0" max="1" step="0.01" value="0.0"></div>
+            </div>
+            <div class="panel-title lesson-subtitle">Speech Profile</div>
+            <div class="field-grid compact-grid">
+              <div><label for="student-voice-select">Voice</label><select id="student-voice-select"></select></div>
+              <div><label for="student-voice-input">Voice hint</label><input id="student-voice-input" type="text" placeholder="calm"></div>
+              <div><label for="student-rate-input">Rate</label><input id="student-rate-input" type="number" min="0.6" max="1.6" step="0.01" value="1.0"></div>
+              <div><label for="student-pitch-input">Pitch</label><input id="student-pitch-input" type="number" min="0.5" max="1.8" step="0.01" value="1.0"></div>
+              <div><label for="student-volume-input">Volume</label><input id="student-volume-input" type="number" min="0.2" max="1.0" step="0.01" value="1.0"></div>
+            </div>
+            <div class="button-row course-actions wrap-actions">
+              <button id="save-student-profile">Save Student Profile</button>
+            </div>
+          </details>
+
+          <details class="dock-section educator-hidden-dock">
+            <summary>Educator pace controls</summary>
+            <p class="dock-note">These controls stay tucked away by default. The educator sets the bounds; the AI resolves the final live pace from time-on-page and puzzle solving speed.</p>
+            <div class="field-grid compact-grid">
+              <div>
+                <label for="pace-auto-enable-input">AI live pacing</label>
+                <select id="pace-auto-enable-input">
+                  <option value="true">Enabled</option>
+                  <option value="false">Manual only</option>
+                </select>
+              </div>
+              <div>
+                <label for="pace-manual-input">Manual pace bias</label>
+                <input id="pace-manual-input" type="range" min="0" max="1" step="0.01" value="0.5">
+              </div>
+              <div>
+                <label for="pace-clarity-input">Manual clarity bias</label>
+                <input id="pace-clarity-input" type="range" min="0" max="1" step="0.01" value="0.72">
+              </div>
+              <div>
+                <label for="pace-ai-authority-input">AI authority</label>
+                <input id="pace-ai-authority-input" type="range" min="0" max="1" step="0.01" value="0.62">
+              </div>
+              <div>
+                <label for="pace-page-target-input">Target page minutes</label>
+                <input id="pace-page-target-input" type="number" min="1" max="30" step="0.5" value="6">
+              </div>
+              <div>
+                <label for="pace-puzzle-target-input">Target puzzle seconds</label>
+                <input id="pace-puzzle-target-input" type="number" min="20" max="600" step="5" value="90">
+              </div>
+            </div>
+          </details>
+
+          <details class="dock-section" open>
+            <summary>Lesson author studio</summary>
+            <p class="dock-note">Choose animation companions and build a local sequence game for the active lesson without hand-editing the JSON pack.</p>
+            <div class="field-grid">
+              <div>
+                <label for="author-lesson-title-input">Authored lesson title</label>
+                <input id="author-lesson-title-input" type="text" placeholder="Medieval Bavaria seminar variant">
+              </div>
+              <div>
+                <label for="author-game-activity-id-input">Custom game id</label>
+                <input id="author-game-activity-id-input" type="text" placeholder="author-studio-game">
+              </div>
+            </div>
+            <div class="panel-title lesson-subtitle">Animation selection</div>
+            <div id="author-animation-picker" class="author-animation-picker"></div>
+            <div class="field-grid">
+              <div>
+                <label for="author-game-title-input">Custom game title</label>
+                <input id="author-game-title-input" type="text" placeholder="Forest Charter Parade">
+              </div>
+              <div>
+                <label for="author-game-prompt-input">Custom game prompt</label>
+                <input id="author-game-prompt-input" type="text" placeholder="Guide the sequence one anchor at a time.">
+              </div>
+            </div>
+            <div class="field-grid">
+              <div>
+                <label for="author-game-support-input">Support text</label>
+                <textarea id="author-game-support-input" rows="3" placeholder="Start from the institution or route that makes the next link possible."></textarea>
+              </div>
+              <div>
+                <label for="author-game-completion-input">Completion message</label>
+                <textarea id="author-game-completion-input" rows="3" placeholder="The authored sequence is complete."></textarea>
+              </div>
+            </div>
+            <label for="author-game-tokens-input">Tokens</label>
+            <textarea id="author-game-tokens-input" rows="5" placeholder="memory | Monastic Memory | Preserves literacy and records.&#10;route | Route Network | Moves goods and people.&#10;rule | Visible Rule | Turns the network into authority."></textarea>
+            <div class="button-row course-actions wrap-actions">
+              <button id="apply-lesson-authoring">Apply To Active Lesson</button>
+              <button id="reset-lesson-authoring">Restore Base Lesson</button>
+              <button id="export-authored-lesson">Export Lesson JSON</button>
+            </div>
+            <div id="authoring-status" class="item response-analysis insight-card">Authoring studio is ready.</div>
+            <pre id="authoring-preview" class="authoring-preview"></pre>
+          </details>
+
+          <details class="dock-section" open>
+            <summary>Guidance rail</summary>
+            <div class="button-row course-actions wrap-actions">
+              <button id="generate-student-note">Generate Student Note</button>
+              <button id="speak-student-note">Speak Note</button>
+              <button id="stop-student-note">Stop Speech</button>
+            </div>
+            <div class="insight-grid">
+              <div id="student-note-output" class="item response-analysis insight-card">No personalized student note has been generated yet.</div>
+              <div id="educator-note-output" class="item response-analysis insight-card"></div>
+              <div id="god-guidance-output" class="item response-analysis insight-card"></div>
+              <div id="student-history-output" class="item response-analysis insight-card"></div>
+              <div id="pace-theory-output" class="item response-analysis insight-card"></div>
+              <div id="pace-compensation-output" class="item response-analysis insight-card"></div>
+              <div id="pace-visual-output" class="item response-analysis insight-card"></div>
+              <div id="pace-runtime-output" class="item response-analysis insight-card"></div>
+            </div>
+          </details>
+        </div>
+      </article>
+
+      <article class="card lesson-panel">
+        <div class="lesson-panel-header">
+          <div>
+            <div class="panel-title">Active Lesson</div>
+            <h2 id="lesson-title">Loading lesson...</h2>
+            <p id="lesson-meta" class="lesson-meta"></p>
+            <p id="lesson-question" class="lesson-question"></p>
+          </div>
+          <div class="lesson-overview">
+            <span>Lesson Readiness</span>
+            <strong id="mastery-overview">0.000</strong>
+            <span>Lesson Depth</span>
+            <strong id="lesson-depth">0.000</strong>
+            <p id="lesson-library-note" class="lesson-library-note"></p>
+          </div>
+        </div>
+        <div class="lesson-grid">
+          <div>
+            <div class="panel-title">Objectives</div>
+            <div id="lesson-objectives" class="stack small"></div>
+            <div class="panel-title lesson-subtitle">Teaching Notes</div>
+            <div id="lesson-notes" class="stack small"></div>
+            <div class="panel-title lesson-subtitle">Lesson Phases</div>
+            <div id="lesson-phases" class="stack small"></div>
+          </div>
+          <div>
+            <div class="panel-title">Vocabulary</div>
+            <div id="lesson-vocabulary" class="tag-list"></div>
+            <div class="panel-title lesson-subtitle">Key Figures</div>
+            <div id="lesson-figures" class="tag-list"></div>
+            <div class="panel-title lesson-subtitle">Animation Library Picks</div>
+            <div id="lesson-animations" class="lesson-animations"></div>
+            <div class="panel-title lesson-subtitle">Concept Threads</div>
+            <div id="lesson-threads" class="stack small"></div>
+            <div class="panel-title lesson-subtitle">Discussion Prompts</div>
+            <div id="lesson-prompts" class="stack small"></div>
+          </div>
+          <div>
+            <div class="panel-title">Source Excerpt</div>
+            <blockquote id="lesson-source" class="lesson-source"></blockquote>
+            <p id="lesson-source-attribution" class="lesson-source-attribution"></p>
+            <div class="panel-title lesson-subtitle">Historical Eras</div>
+            <div id="lesson-eras" class="tag-list"></div>
+            <div class="panel-title lesson-subtitle">Response Rubric</div>
+            <div id="lesson-rubric" class="stack small"></div>
+          </div>
+        </div>
+
+        <aside class="narrative-window card" aria-live="polite">
+          <div class="narrative-window-header">
+            <div>
+              <div class="panel-title">Narrative Sub Window</div>
+              <strong id="narrative-subject">Preparing lesson subject...</strong>
+            </div>
+            <div id="narrative-progress" class="narrative-progress">0 / 0</div>
+          </div>
+          <div id="narrative-stage" class="narrative-stage">A condensed subject narrative will appear once a lesson is active.</div>
+          <div id="narrative-body" class="narrative-body"></div>
+          <div id="narrative-context" class="narrative-context"></div>
+          <div class="button-row narrative-actions">
+            <button id="narrative-back">Back</button>
+            <button id="narrative-next">Next</button>
+            <button id="narrative-auto">Auto Popups</button>
+          </div>
+        </aside>
+      </article>
+
+      <article class="card seminar-tools">
+        <div class="seminar-column">
+          <div class="panel-title">Response Studio</div>
+          <p id="response-prompt" class="lesson-question"></p>
+          <textarea id="response-input" rows="6" placeholder="Compose a calm, evidence-linked response."></textarea>
+          <div class="button-row">
+            <button id="score-response">Review Response</button>
+          </div>
+          <div id="response-analysis" class="item response-analysis">
+            <strong>Response Reflection</strong>
+            <div id="response-score">Awaiting response.</div>
+            <div id="response-feedback"></div>
+            <div id="response-dimensions" class="stack small response-dimensions"></div>
+          </div>
+        </div>
+        <div class="seminar-column">
+          <div class="panel-title">Learning Studio</div>
+          <div id="activity-rail" class="activity-rail"></div>
+          <div id="puzzle-assist-output" class="item puzzle-assist-output">Puzzle pacing assist will appear once the lesson flow settles.</div>
+          <div id="puzzle-branch-output" class="item puzzle-branch-output">Puzzle branching will reflect the current pace mode once lesson flow is active.</div>
+          <h3 id="puzzle-title">Loading puzzle...</h3>
+          <p id="puzzle-prompt" class="lesson-question"></p>
+          <div id="puzzle-board" class="puzzle-board"></div>
+          <div class="button-row activity-nav">
+            <button id="previous-activity">Previous</button>
+            <button id="next-activity">Next</button>
+          </div>
+          <div id="puzzle-feedback" class="item puzzle-feedback">Choose a lesson to begin the puzzle.</div>
+        </div>
+      </article>
+
+      <article class="card stat-grid">
+        <div>
+          <span>Tick</span>
+          <strong id="tick">0</strong>
+        </div>
+        <div>
+          <span>Consensus</span>
+          <strong id="consensus">0.000</strong>
+        </div>
+        <div>
+          <span>Knowledge</span>
+          <strong id="knowledge">0.000</strong>
+        </div>
+        <div>
+          <span>Reflection</span>
+          <strong id="reflection-metric">0.000</strong>
+        </div>
+        <div>
+          <span>Coherence</span>
+          <strong id="coherence">0.000</strong>
+        </div>
+        <div>
+          <span>Friction</span>
+          <strong id="friction">0.000</strong>
+        </div>
+      </article>
+
+      <article class="card feed-card">
+        <div class="panel-title">Live simulation feed</div>
+        <div class="feed-stage">
+          <img id="stream-map" class="feed-layer feed-layer-stream" alt="Network stream asset">
+          <img id="node-sheet" class="feed-layer feed-layer-nodes" alt="Node sprite sheet">
+          <canvas id="feed" width="960" height="420"></canvas>
+          <div id="feed-focus-note" class="feed-focus-note"></div>
+        </div>
+      </article>
+
+      <article class="card two-column">
+        <div>
+          <div class="panel-title">Habitats</div>
+          <div id="habitats" class="stack"></div>
+        </div>
+        <div>
+          <div class="panel-title">ArtiSapiens Cohort</div>
+          <div id="cohort" class="stack small"></div>
+        </div>
+      </article>
+
+      <article class="card two-column two-column-bottom">
+        <div>
+          <div class="panel-title">Equation registry</div>
+          <div id="registry" class="stack small"></div>
+        </div>
+        <div>
+          <div class="panel-title">Integrated asset bank</div>
+          <div class="asset-strip">
+            <img id="avatar-sheet" alt="Avatar sheet">
+            <img id="signal-sheet" alt="Signal sheet">
+            <img id="glyph-lower" alt="Lowercase glyph reference">
+          </div>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <script src="/app.js"></script>
+</body>
+</html>

@@ -64,7 +64,7 @@ def main() -> int:
     expect(r"u8\s+attack_buffer;", source_text, "attack buffer field missing", failures)
     expect(r"u8\s+dodge_buffer;", source_text, "dodge buffer field missing", failures)
     expect(r"input_capture_frame\(\);", source_text, "per-frame input capture missing", failures)
-    expect(r"if \(gs\.input_pressed_mask & BTN_A\) gs\.attack_buffer = INPUT_BUFFER_FRAMES;", source_text, "attack input buffering missing", failures)
+    expect(r"if \(gs\.input_pressed_mask & BTN_A\) gs\.attack_buffer = (INPUT_BUFFER_FRAMES|combat_attack_buffer_frames\(\));", source_text, "attack input buffering missing", failures)
     expect(r"if \(gs\.input_pressed_mask & BTN_B\) gs\.dodge_buffer = INPUT_BUFFER_FRAMES;", source_text, "dodge input buffering missing", failures)
     expect(r"if \(gs\.dodge_buffer > 0 && gs\.hit_stun == 0 && gs\.attack_timer == 0\)", source_text, "buffered dodge execution missing", failures)
     expect(r"while \(edge_mask != 0\)", source_text, "input edge tracking loop missing", failures)

@@ -1,0 +1,238 @@
+{
+  "manifest_name": "dress-sparle-light-envisioned-visual-assets",
+  "manifest_version": 2,
+  "output_root": "..",
+  "_notes": {
+    "archetypes": ["Prism Bloom (0)", "Glue Braid (1)", "Ember Choir (2)", "Halo Scythe (3)", "Luster Knot (4)"],
+    "outfit_tiers": ["BlueNoMid Base (0)", "Pulse Sash (1)", "Prism Skirt (2)", "Halo Rig (3)", "Light Envisioned (4)"],
+    "cue_forms": ["Head Flick (0)", "Torso Pulse (1)", "Hand Halo (2)", "Foot Spark (3)"]
+  },
+  "assets": [
+
+    {
+      "name": "sparkle-tier0-bluenomid-base",
+      "prompt": "BlueNoMid heroine Sparkle in base outfit: only a cobalt torso, a small floating head, two detached hands and two detached feet, minimal luminous cobalt-and-pale-cyan palette, no skirt or accessories, readable rhythm-game silhouette, dark transparent background",
+      "negative_prompt": "clothing details, skirt, accessories, text, watermark, logo, blur, unreadable silhouette",
+      "out": "assets/visual/sparkle-tier0-bluenomid-base.png",
+      "w": 1024,
+      "h": 1024,
+      "model": "recraftv4",
+      "transparent_background": true
+    },
+    {
+      "name": "sparkle-tier1-pulse-sash",
+      "prompt": "BlueNoMid heroine Sparkle wearing a Pulse Sash: cobalt torso with a bright diagonal sash stripe in electric blue-white across the chest, floating head glowing faintly, detached hands and feet, rhythm battle stance, readable silhouette, dark transparent background",
+      "negative_prompt": "skirt, wings, crown, text, watermark, logo, blur",
+      "out": "assets/visual/sparkle-tier1-pulse-sash.png",
+      "w": 1024,
+      "h": 1024,
+      "model": "recraftv4",
+      "transparent_background": true
+    },
+    {
+      "name": "sparkle-tier2-prism-skirt",
+      "prompt": "BlueNoMid heroine Sparkle wearing a Prism Skirt: cobalt torso with a wide diamond-cut prism skirt that fans out in visible-spectrum gradient panels from waist to knee, floating head, detached hands and feet, vibrant colour-prism refraction, transparent background",
+      "negative_prompt": "halo, wings, crown, text, watermark, logo, blur",
+      "out": "assets/visual/sparkle-tier2-prism-skirt.png",
+      "w": 1024,
+      "h": 1024,
+      "model": "recraftv4",
+      "transparent_background": true
+    },
+    {
+      "name": "sparkle-tier3-halo-rig",
+      "prompt": "BlueNoMid heroine Sparkle in Halo Rig outfit: cobalt torso with a shoulder-mounted halo ring and flowing dual-ribbon cables streaming from each shoulder meeting the detached hands, prism skirt underneath, high-energy rhythm battle design, transparent background",
+      "negative_prompt": "crown, solid wings, text, watermark, logo, blur",
+      "out": "assets/visual/sparkle-tier3-halo-rig.png",
+      "w": 1024,
+      "h": 1024,
+      "model": "recraftv4",
+      "transparent_background": true
+    },
+    {
+      "name": "sparkle-tier4-light-envisioned",
+      "prompt": "BlueNoMid heroine Sparkle in full Light Envisioned transformation: cobalt torso fully radiant, a glowing crown-halo ring above the head, radial burst of five spectral blade-ribbons emanating from the center, halo rig and prism skirt both visible, intense visible-spectrum luminance, transparent background",
+      "negative_prompt": "text, watermark, logo, blur, dark, muted",
+      "out": "assets/visual/sparkle-tier4-light-envisioned.png",
+      "w": 1024,
+      "h": 1024,
+      "model": "recraftv4",
+      "transparent_background": true
+    },
+
+    {
+      "name": "litemite-archetype0-prism-bloom",
+      "prompt": "LiteMite boss Prism Bloom: a slow rotating six-pointed burst of rainbow prismatic light, warm golden core with spectral shimmer tips, rolling 8-segment syncrosequence tail draping leftward, high contrast dark background, Flash game sprite clarity",
+      "negative_prompt": "text, watermark, logo, blur, humanoid body",
+      "out": "assets/visual/litemite-archetype0-prism-bloom.png",
+      "w": 1024,
+      "h": 1024,
+      "model": "recraftv4",
+      "transparent_background": true
+    },
+    {
+      "name": "litemite-archetype1-glue-braid",
+      "prompt": "LiteMite boss Glue Braid: three viscous amber blobs interlocked in a braid pattern with electric-blue-white ribbon wefts threaded between them, slow sticky field distortion, tail draped in reverse S-curve, dark background, Flash game enemy sprite",
+      "negative_prompt": "text, watermark, logo, blur, humanoid body",
+      "out": "assets/visual/litemite-archetype1-glue-braid.png",
+      "w": 1024,
+      "h": 1024,
+      "model": "recraftv4",
+      "transparent_background": true
+    },
+    {
+      "name": "litemite-archetype2-ember-choir",
+      "prompt": "LiteMite boss Ember Choir: a trio of molten amber-pink petal-motes orbiting a shared pale-violet center in a trefoil pattern, each petal trailing a wisp of visible-spectrum ember dust, dark background, Flash game sprite clarity",
+      "negative_prompt": "text, watermark, logo, blur, humanoid body",
+      "out": "assets/visual/litemite-archetype2-ember-choir.png",
+      "w": 1024,
+      "h": 1024,
+      "model": "recraftv4",
+      "transparent_background": true
+    },
+    {
+      "name": "litemite-archetype3-halo-scythe",
+      "prompt": "LiteMite boss Halo Scythe: an icy silver-blue ring with a four-pointed inner burst, plus a smaller offset halo that sweeps like a scythe arc, vibrant crimson accent slash, tail segments rigid and angled like scythe teeth, dark background, Flash game sprite",
+      "negative_prompt": "text, watermark, logo, blur, humanoid body",
+      "out": "assets/visual/litemite-archetype3-halo-scythe.png",
+      "w": 1024,
+      "h": 1024,
+      "model": "recraftv4",
+      "transparent_background": true
+    },
+    {
+      "name": "litemite-archetype4-luster-knot",
+      "prompt": "LiteMite boss Luster Knot: three deep-violet spheres arranged in a triangular knot with a five-pointed golden outer burst blade framing them, swarm of five small satellite motes orbiting, dense luminous purple-gold palette, tail knotted in a figure-8 loop, dark background, Flash game sprite",
+      "negative_prompt": "text, watermark, logo, blur, humanoid body",
+      "out": "assets/visual/litemite-archetype4-luster-knot.png",
+      "w": 1024,
+      "h": 1024,
+      "model": "recraftv4",
+      "transparent_background": true
+    },
+
+    {
+      "name": "cue-sheet-head-flick",
+      "prompt": "Dance cue silhouette for Head Flick: a luminous teardrop shape with a rounded top that tapers to a snap tail, soft cobalt glow, motion blur streak pointing upward, rhythm-game button art, dark transparent background",
+      "negative_prompt": "text, watermark, logo, body, character, blur",
+      "out": "assets/visual/cue-head-flick.png",
+      "w": 256,
+      "h": 256,
+      "model": "recraftv4",
+      "transparent_background": true
+    },
+    {
+      "name": "cue-sheet-torso-pulse",
+      "prompt": "Dance cue silhouette for Torso Pulse: a thick luminous diamond with a shockwave ring expanding outward, hot spectral orange-pink core, pulsing rhythm-game button art, dark transparent background",
+      "negative_prompt": "text, watermark, logo, body, character",
+      "out": "assets/visual/cue-torso-pulse.png",
+      "w": 256,
+      "h": 256,
+      "model": "recraftv4",
+      "transparent_background": true
+    },
+    {
+      "name": "cue-sheet-hand-halo",
+      "prompt": "Dance cue silhouette for Hand Halo: a glowing ring with a hollow centre, thin inner arc and thick outer arc, pale-gold spectral hue, like a spinning halo, rhythm-game button art, dark transparent background",
+      "negative_prompt": "text, watermark, logo, body, character",
+      "out": "assets/visual/cue-hand-halo.png",
+      "w": 256,
+      "h": 256,
+      "model": "recraftv4",
+      "transparent_background": true
+    },
+    {
+      "name": "cue-sheet-foot-spark",
+      "prompt": "Dance cue silhouette for Foot Spark: a sharp downward-pointing lightning bolt with a four-point starburst at the tip, electric yellow-white with green fringe, rhythm-game button art, dark transparent background",
+      "negative_prompt": "text, watermark, logo, body, character",
+      "out": "assets/visual/cue-foot-spark.png",
+      "w": 256,
+      "h": 256,
+      "model": "recraftv4",
+      "transparent_background": true
+    },
+
+    {
+      "name": "runway-spectrum-stage",
+      "prompt": "Dress SparLE combat runway: a perspective-foreshortened dance floor receding into a dark visible-spectrum storm void, luminous lane rails in cobalt cyan amber and gold, emberence haze mid-field, disruption ripple near the strike line, Flash game background plate",
+      "negative_prompt": "text, watermark, logo, characters, bright sky, daytime",
+      "out": "assets/visual/runway-spectrum-stage.png",
+      "w": 1920,
+      "h": 1080,
+      "model": "recraftv4",
+      "transparent_background": false
+    },
+    {
+      "name": "runway-lanehold-glow",
+      "prompt": "Single dance lane in a held-note state: a bright luminous column of spectral light rising from the strike line to vanishing point, embers and bloom petals floating upward, hot-core bright centre fading outward, transparent background",
+      "negative_prompt": "text, watermark, logo, characters",
+      "out": "assets/visual/runway-lanehold-glow.png",
+      "w": 256,
+      "h": 1024,
+      "model": "recraftv4",
+      "transparent_background": true
+    },
+
+    {
+      "name": "fx-poselock-target-ring",
+      "prompt": "Pose-lock target ring VFX: a warm golden orbit circle with a small bright dot on the circumference, angle indicator line pointing to the dot from center, a subtle anticipation shimmer ring just outside it, flat UI-style Flash game overlay, transparent background",
+      "negative_prompt": "text, watermark, logo, characters, 3D",
+      "out": "assets/visual/fx-poselock-target-ring.png",
+      "w": 512,
+      "h": 512,
+      "model": "recraftv4",
+      "transparent_background": true
+    },
+    {
+      "name": "fx-poselock-success-burst",
+      "prompt": "Pose-lock success obliteration burst: an expanding ring of visible-spectrum light petals and ribbon streaks radiating from a central flash, golden warm core, outer fringe in cobalt and aqua, rhythm game win VFX, transparent background",
+      "negative_prompt": "text, watermark, logo, characters, dark",
+      "out": "assets/visual/fx-poselock-success-burst.png",
+      "w": 1024,
+      "h": 1024,
+      "model": "recraftv4",
+      "transparent_background": true
+    },
+    {
+      "name": "fx-poselock-fail-backlash",
+      "prompt": "Pose-lock failure tail backlash VFX: a light-tail recoiling violently backward, segments snapping away from the player, disrupted emberence pockets scattering, cold-blue desaturated streaks on dark background, Flash game failure feedback, transparent background",
+      "negative_prompt": "text, watermark, logo, characters, warm, success",
+      "out": "assets/visual/fx-poselock-fail-backlash.png",
+      "w": 1024,
+      "h": 1024,
+      "model": "recraftv4",
+      "transparent_background": true
+    },
+    {
+      "name": "fx-enemy-defeat-explosion",
+      "prompt": "LiteMite defeat explosion: a warm white-gold ring expanding rapidly with spectral debris petals and light-mote sparks flying outward, hollow interior revealing dark void, rhythm game defeat VFX, transparent background",
+      "negative_prompt": "text, watermark, logo, characters",
+      "out": "assets/visual/fx-enemy-defeat-explosion.png",
+      "w": 1024,
+      "h": 1024,
+      "model": "recraftv4",
+      "transparent_background": true
+    },
+
+    {
+      "name": "hud-score-panel",
+      "prompt": "Minimal rhythm game HUD panel: dark semi-transparent rectangle with rounded corners, electric-cyan score digits, combo multiplier badge, dress charge bar in visible-spectrum gradient, Flash game UI panel, dark background",
+      "negative_prompt": "text, watermark, logo, realistic, 3D, photography",
+      "out": "assets/visual/hud-score-panel.png",
+      "w": 512,
+      "h": 256,
+      "model": "recraftv4",
+      "transparent_background": true
+    },
+    {
+      "name": "hud-wardrobe-bar",
+      "prompt": "Dress charge wardrobe progress bar: five segmented outfit tier pips in a row, lowest pip cobalt, highest pip full spectrum radiance, active pip glowing outward, Flash game UI element, dark transparent background",
+      "negative_prompt": "text, watermark, logo, realistic, 3D, photography",
+      "out": "assets/visual/hud-wardrobe-bar.png",
+      "w": 512,
+      "h": 128,
+      "model": "recraftv4",
+      "transparent_background": true
+    }
+  ]
+}

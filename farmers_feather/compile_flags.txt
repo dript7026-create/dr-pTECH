@@ -1,0 +1,7 @@
+-x
+c
+-I./src
+-I.
+-I../.tools/gbdk/gbdk/include
+-I../.tools/gbdk/gbdk/include/gb
+-I../.tools/gbdk/gbdk/include/gbdk

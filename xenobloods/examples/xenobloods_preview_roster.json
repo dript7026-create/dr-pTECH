@@ -1,0 +1,103 @@
+{
+  "profile": "xenobloods_jumpclip_references.json",
+  "design_templates": {
+    "xenobloods-humanoid": {
+      "art_preset": "soulslike-action",
+      "style_family": "cel-shaded-2.5d",
+      "silhouette_emphasis": 1.48,
+      "texture_detail": 0.92,
+      "palette_limit": 48,
+      "outline_weight": 0.98,
+      "accessory_density": 0.94,
+      "tracing_bias": 0.9
+    },
+    "xenobloods-scarab-child": {
+      "art_preset": "soulslike-action",
+      "style_family": "hd2d",
+      "silhouette_emphasis": 1.44,
+      "texture_detail": 0.84,
+      "palette_limit": 42,
+      "outline_weight": 1.06,
+      "accessory_density": 0.8,
+      "tracing_bias": 0.72
+    },
+    "xenobloods-ward": {
+      "art_preset": "soulslike-action",
+      "style_family": "hd2d",
+      "silhouette_emphasis": 1.5,
+      "texture_detail": 0.86,
+      "palette_limit": 44,
+      "outline_weight": 1.0,
+      "accessory_density": 0.88,
+      "tracing_bias": 0.76
+    },
+    "xenobloods-boss": {
+      "art_preset": "soulslike-action",
+      "style_family": "cel-shaded-2.5d",
+      "silhouette_emphasis": 1.62,
+      "texture_detail": 0.96,
+      "palette_limit": 56,
+      "outline_weight": 0.94,
+      "accessory_density": 0.98,
+      "tracing_bias": 0.94
+    }
+  },
+  "motion_templates": {
+    "scout-run": {
+      "motion_silhouette_bias": 1.32,
+      "motion_squash_stretch": 0.18,
+      "motion_impact": 0.46,
+      "motion_lift": 1.12
+    },
+    "swarm-skitter": {
+      "motion_silhouette_bias": 1.24,
+      "motion_squash_stretch": 0.24,
+      "motion_impact": 0.58,
+      "motion_lift": 0.92
+    },
+    "hierophant-assault": {
+      "motion_silhouette_bias": 1.4,
+      "motion_squash_stretch": 0.22,
+      "motion_impact": 0.94,
+      "motion_lift": 1.18
+    }
+  },
+  "jobs": [
+    {
+      "name": "ishtasha-botanical-spider-preview",
+      "character": "Ishtasha, botanical spider scout",
+      "animation": "run cycle",
+      "prompt": "soulslike-action humanoid botanical spider scout with a human head beneath a ritual hood, seed-pod shoulder pauldrons, a cleaving hook weapon, eight distinct arachnid legs with spindly joints and fine hairs, thorned vine veins branching across the limbs, deep green grading into blood red along the body, scattered yellow leaves caught in the silhouette, subtle shadow and highlight gradation, readable humanoid torso and forbidding posture",
+      "grid_size": 12,
+      "design_template": "xenobloods-humanoid",
+      "motion_template": "scout-run"
+    },
+    {
+      "name": "scarab-child-basic-preview",
+      "character": "Scarab child acolyte",
+      "animation": "run cycle",
+      "prompt": "hooded scarab child acolyte in plague doctor mask and layered beetle-shell robes, hunched hostile posture, scarab carapace peeking through the cloth, subtle highlight gradation across shell plates, sharp beak mask, ritual satchel, dark shadowed eyes, readable childlike but menacing silhouette",
+      "grid_size": 12,
+      "design_template": "xenobloods-scarab-child",
+      "motion_template": "swarm-skitter"
+    },
+    {
+      "name": "lattice-ward-preview",
+      "character": "Lattice Ward",
+      "animation": "guard stance",
+      "prompt": "hooded scarab lattice ward in full plague doctor regalia, hooded robe with ribbed shell pauldrons, plague beak mask, layered chitin cloak, defensive stance, subtle red-brown to black shadow gradients, ritual ward sigils on the hem, readable silhouette for a mid-ranked enemy guardian",
+      "grid_size": 12,
+      "design_template": "xenobloods-ward",
+      "motion_template": "swarm-skitter"
+    },
+    {
+      "name": "lahgroid-boss-preview",
+      "character": "Lahgroid hierophant",
+      "animation": "attack combo",
+      "prompt": "soulslike-action Lahgroid hierophant boss, towering hooded scarab-serpent hierophant with plague-doctor ceremonial mask, chained lantern, cross-form relics, layered robe folds, hovering ritual drones, deep bass-heavy menace in the silhouette, rich red-black-green gradients, subtle metallic highlights, readable boss stance and attack posture",
+      "grid_size": 12,
+      "design_template": "xenobloods-boss",
+      "motion_template": "hierophant-assault"
+    }
+  ]
+}
