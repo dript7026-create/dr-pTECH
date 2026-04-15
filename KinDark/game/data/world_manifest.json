@@ -1,0 +1,111 @@
+{
+  "mapType": "single_contiguous_city",
+  "districts": [
+    {
+      "id": "vacancy_row",
+      "title": "Vacancy Row",
+      "direction": "boarded rental towers, divorce courts, pawn stores, radiator alleys"
+    },
+    {
+      "id": "floodcourt_mile",
+      "title": "Floodcourt Mile",
+      "direction": "rain-choked boulevards, submerged crosswalks, courthouse drains"
+    },
+    {
+      "id": "tin_saint_market",
+      "title": "Tin Saint Market",
+      "direction": "collapsed shopping arcades, shrine kiosks, neon awnings"
+    },
+    {
+      "id": "rookery_switch",
+      "title": "Rookery Switch",
+      "direction": "elevated train wrecks, bird-haunted signal gantries, soot balconies"
+    },
+    {
+      "id": "candlelung_towers",
+      "title": "Candlelung Towers",
+      "direction": "art deco residential stacks, dangling bridges, blackouts"
+    },
+    {
+      "id": "siltglass_sewers",
+      "title": "Siltglass Sewers",
+      "direction": "runoff tunnels, ritual pumps, fungal sluices"
+    },
+    {
+      "id": "mothline_works",
+      "title": "Mothline Works",
+      "direction": "abandoned textile automation lines, belt systems, lint storms"
+    },
+    {
+      "id": "choirburn_foundry",
+      "title": "Choirburn Foundry",
+      "direction": "steel halls, slag altars, derailed loaders, boiler cathedrals"
+    },
+    {
+      "id": "pilgrim_underpass",
+      "title": "Pilgrim Underpass",
+      "direction": "pilgrim camps, reliquary traffic, graffiti chapels"
+    },
+    {
+      "id": "spite_marina",
+      "title": "Spite Marina",
+      "direction": "dry docks, buckled marinas, salt-drenched motels"
+    },
+    {
+      "id": "split_reliquary",
+      "title": "Split Reliquary",
+      "direction": "museum vaults, broken exhibits, saint-tech archives"
+    },
+    {
+      "id": "ninth_station",
+      "title": "Ninth Station",
+      "direction": "final transit ring, cracked observatory roof, reality-fissure core"
+    }
+  ],
+  "institutions": [
+    "Municipal Fold Office",
+    "Night Warranty Syndicate",
+    "Bureau of Drainage and Apparitions",
+    "Ruin Appraisal Board",
+    "Last Family Court",
+    "Transit Choir Reserve",
+    "Civic Salvage Temperance League",
+    "Null Animal Containment Corps",
+    "The Red Ledger Newsroom",
+    "Bright Mercy Pawn Chain",
+    "Voltage Chapel Custodians",
+    "The Vacancy Mutual"
+  ],
+  "bosses": [
+    "The Receipts Bride",
+    "Switchyard Gorgon",
+    "The Choirburn Foreman",
+    "Auntie Sumpglass",
+    "The Floodcourt Collector",
+    "Motel Saint Ragpicker",
+    "The Velvet Ratifier",
+    "Maw of Platform Nine",
+    "Soot Lung Nickelback",
+    "The Spiral Dowser",
+    "Dockside Judge Marmoset",
+    "The Neon Dog Census",
+    "Tallow Ferryman",
+    "Rookery Magistrate",
+    "The Last Demonstrator",
+    "Relay Widow Harlequin",
+    "The Debtor Crocodile",
+    "Shiverpaste Conductor",
+    "The Felt Apostate",
+    "Saint Vacancy Prime",
+    "The Sewer Parliament",
+    "Mother Photoflash",
+    "The Locksmith of Teeth",
+    "King Cracked Halo"
+  ],
+  "tone": "light-hearted comic grimness with morally challenging urban cryptid horror",
+  "environmentConstruction": {
+    "geometry": "sprite_assembled_3d_shapes",
+    "textures": "artificially_generated_surface_photographs",
+    "detailDirection": "lush_extravagantly_expressionistic_dark_detail"
+  }
+}

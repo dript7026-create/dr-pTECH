@@ -1,0 +1,44 @@
+{
+  "graphics": {
+    "player_animation_prefabs": 288,
+    "player_story_comics": 864,
+    "npc_animation_prefabs": 29952,
+    "enemy_animation_prefabs": 24960,
+    "boss_animation_prefabs": 3456,
+    "interaction_vfx_prefabs": 18432,
+    "photo_texture_panels": 21600,
+    "sprite_mesh_cards": 6912,
+    "ui_controller_map_cards": 1536,
+    "title_cinematic_save_cards": 312,
+    "item_equipment_icons": 1555
+  },
+  "graphicsTarget": 109867,
+  "audio": {
+    "looping_songs": 200,
+    "combat_sfx": 512,
+    "traversal_sfx": 288,
+    "interaction_cues": 420,
+    "ambient_stingers": 240,
+    "narrative_barks": 192,
+    "menu_ui": 64,
+    "save_load_title": 24,
+    "boss_cues": 97
+  },
+  "audioTarget": 2037,
+  "loopingSongs": 200,
+  "plotArcCount": 12,
+  "districtCount": 12,
+  "bossCount": 24,
+  "notableNpcCount": 24,
+  "enemySpeciationCount": 12,
+  "tutorialSlice": {
+    "name": "Dark Arrival / TweenKin First Breach",
+    "beats": 5,
+    "playtimeMinutes": 45
+  },
+  "scantide": {
+    "mode": "saved_scantide_artifacts",
+    "passedGates": 8,
+    "failedGates": 1
+  }
+}

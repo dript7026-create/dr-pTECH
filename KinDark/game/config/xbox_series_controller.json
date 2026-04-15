@@ -1,0 +1,35 @@
+{
+  "profile": "xbox_series_default",
+  "movement": {
+    "axis": "left_stick",
+    "mode": "omnidirectional"
+  },
+  "aim": {
+    "axis": "right_stick",
+    "mode": "reticle_and_camera_bias"
+  },
+  "focus": {
+    "button": "LT",
+    "effect": "zoom_and_soft_lock"
+  },
+  "primaryAttack": {
+    "button": "RT"
+  },
+  "modifiers": [
+    {
+      "button": "LB",
+      "usage": "stance_or_power_modifier"
+    },
+    {
+      "button": "RB",
+      "usage": "stance_or_power_modifier"
+    }
+  ],
+  "actionCluster": [
+    "X",
+    "Y",
+    "B"
+  ],
+  "map": "View",
+  "menu": "Menu"
+}

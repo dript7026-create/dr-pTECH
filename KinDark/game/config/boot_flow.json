@@ -1,0 +1,19 @@
+{
+  "titleScreen": {
+    "logoText": "Kin Dark",
+    "style": "rusty blood-red sketch splatter",
+    "menuOptions": [
+      "Play Game"
+    ]
+  },
+  "saveBehavior": {
+    "noSave": "launch_new_game_tutorial_slice_immediately",
+    "existingSave": "continue_last_clean_quit_immediately"
+  },
+  "firstRunSequence": "Dark Arrival / TweenKin First Breach",
+  "interactionRule": {
+    "button": "A",
+    "mode": "adaptive_context_action",
+    "holdSeconds": 1.0
+  }
+}

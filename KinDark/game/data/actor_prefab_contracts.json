@@ -1,0 +1,565 @@
+{
+  "protagonists": [
+    {
+      "id": "moe",
+      "display_name": "Moe",
+      "role": "recently divorced vacuum cleaner salesman turned pistol-and-flashlight survivor",
+      "look": "solemn, balding, stubbled, wearing a stained ribbed undershirt, scraggly cut-off shorts, and brown loafers",
+      "combat_profile": "light sidearm gunplay, flashlight cone management, desperate close-range scrapping, and recoil-heavy finishers",
+      "traversal_profile": "door breaching, ledge vaulting, flashlight tracing, shove interactions, and grounded urban scrambling",
+      "asset_prefix": "graphics/players/moe",
+      "animations": [
+        {
+          "name": "idle",
+          "directions": [
+            "north",
+            "north_east",
+            "east",
+            "south_east",
+            "south",
+            "south_west",
+            "west",
+            "north_west"
+          ],
+          "prefab_pattern": "graphics/players/moe/idle/{direction}.png"
+        },
+        {
+          "name": "walk",
+          "directions": [
+            "north",
+            "north_east",
+            "east",
+            "south_east",
+            "south",
+            "south_west",
+            "west",
+            "north_west"
+          ],
+          "prefab_pattern": "graphics/players/moe/walk/{direction}.png"
+        },
+        {
+          "name": "run",
+          "directions": [
+            "north",
+            "north_east",
+            "east",
+            "south_east",
+            "south",
+            "south_west",
+            "west",
+            "north_west"
+          ],
+          "prefab_pattern": "graphics/players/moe/run/{direction}.png"
+        },
+        {
+          "name": "aim_reticle",
+          "directions": [
+            "north",
+            "north_east",
+            "east",
+            "south_east",
+            "south",
+            "south_west",
+            "west",
+            "north_west"
+          ],
+          "prefab_pattern": "graphics/players/moe/aim_reticle/{direction}.png"
+        },
+        {
+          "name": "flashlight_scan",
+          "directions": [
+            "north",
+            "north_east",
+            "east",
+            "south_east",
+            "south",
+            "south_west",
+            "west",
+            "north_west"
+          ],
+          "prefab_pattern": "graphics/players/moe/flashlight_scan/{direction}.png"
+        },
+        {
+          "name": "quickdraw",
+          "directions": [
+            "north",
+            "north_east",
+            "east",
+            "south_east",
+            "south",
+            "south_west",
+            "west",
+            "north_west"
+          ],
+          "prefab_pattern": "graphics/players/moe/quickdraw/{direction}.png"
+        },
+        {
+          "name": "pistol_fire",
+          "directions": [
+            "north",
+            "north_east",
+            "east",
+            "south_east",
+            "south",
+            "south_west",
+            "west",
+            "north_west"
+          ],
+          "prefab_pattern": "graphics/players/moe/pistol_fire/{direction}.png"
+        },
+        {
+          "name": "reload",
+          "directions": [
+            "north",
+            "north_east",
+            "east",
+            "south_east",
+            "south",
+            "south_west",
+            "west",
+            "north_west"
+          ],
+          "prefab_pattern": "graphics/players/moe/reload/{direction}.png"
+        },
+        {
+          "name": "dodge_roll",
+          "directions": [
+            "north",
+            "north_east",
+            "east",
+            "south_east",
+            "south",
+            "south_west",
+            "west",
+            "north_west"
+          ],
+          "prefab_pattern": "graphics/players/moe/dodge_roll/{direction}.png"
+        },
+        {
+          "name": "vault",
+          "directions": [
+            "north",
+            "north_east",
+            "east",
+            "south_east",
+            "south",
+            "south_west",
+            "west",
+            "north_west"
+          ],
+          "prefab_pattern": "graphics/players/moe/vault/{direction}.png"
+        },
+        {
+          "name": "inspect",
+          "directions": [
+            "north",
+            "north_east",
+            "east",
+            "south_east",
+            "south",
+            "south_west",
+            "west",
+            "north_west"
+          ],
+          "prefab_pattern": "graphics/players/moe/inspect/{direction}.png"
+        },
+        {
+          "name": "hold_interact",
+          "directions": [
+            "north",
+            "north_east",
+            "east",
+            "south_east",
+            "south",
+            "south_west",
+            "west",
+            "north_west"
+          ],
+          "prefab_pattern": "graphics/players/moe/hold_interact/{direction}.png"
+        }
+      ],
+      "signature_tools": [
+        "vacuum-salesman sample case",
+        "flashlight",
+        "pistol",
+        "receipt ledger"
+      ]
+    },
+    {
+      "id": "yil",
+      "display_name": "Yil",
+      "role": "gnome mechanic-magician who can rewrite broken infrastructure with ritual engineering",
+      "look": "small and sharp-eyed, dressed in a lavish robe, tri-cornered hat, broad mustache, curled leather boots, and a black belt with a spiral buckle",
+      "combat_profile": "rune-charged casts, turret sigils, reality hinge repairs, area denial glyphs, and burst-navigation spells",
+      "traversal_profile": "blink stepping, levitation rails, rune climbing, machinery bridging, and magical short-range glide control",
+      "asset_prefix": "graphics/players/yil",
+      "animations": [
+        {
+          "name": "idle",
+          "directions": [
+            "north",
+            "north_east",
+            "east",
+            "south_east",
+            "south",
+            "south_west",
+            "west",
+            "north_west"
+          ],
+          "prefab_pattern": "graphics/players/yil/idle/{direction}.png"
+        },
+        {
+          "name": "walk",
+          "directions": [
+            "north",
+            "north_east",
+            "east",
+            "south_east",
+            "south",
+            "south_west",
+            "west",
+            "north_west"
+          ],
+          "prefab_pattern": "graphics/players/yil/walk/{direction}.png"
+        },
+        {
+          "name": "run",
+          "directions": [
+            "north",
+            "north_east",
+            "east",
+            "south_east",
+            "south",
+            "south_west",
+            "west",
+            "north_west"
+          ],
+          "prefab_pattern": "graphics/players/yil/run/{direction}.png"
+        },
+        {
+          "name": "aim_spell",
+          "directions": [
+            "north",
+            "north_east",
+            "east",
+            "south_east",
+            "south",
+            "south_west",
+            "west",
+            "north_west"
+          ],
+          "prefab_pattern": "graphics/players/yil/aim_spell/{direction}.png"
+        },
+        {
+          "name": "wrench_cast",
+          "directions": [
+            "north",
+            "north_east",
+            "east",
+            "south_east",
+            "south",
+            "south_west",
+            "west",
+            "north_west"
+          ],
+          "prefab_pattern": "graphics/players/yil/wrench_cast/{direction}.png"
+        },
+        {
+          "name": "sigil_burst",
+          "directions": [
+            "north",
+            "north_east",
+            "east",
+            "south_east",
+            "south",
+            "south_west",
+            "west",
+            "north_west"
+          ],
+          "prefab_pattern": "graphics/players/yil/sigil_burst/{direction}.png"
+        },
+        {
+          "name": "ward_raise",
+          "directions": [
+            "north",
+            "north_east",
+            "east",
+            "south_east",
+            "south",
+            "south_west",
+            "west",
+            "north_west"
+          ],
+          "prefab_pattern": "graphics/players/yil/ward_raise/{direction}.png"
+        },
+        {
+          "name": "blink_step",
+          "directions": [
+            "north",
+            "north_east",
+            "east",
+            "south_east",
+            "south",
+            "south_west",
+            "west",
+            "north_west"
+          ],
+          "prefab_pattern": "graphics/players/yil/blink_step/{direction}.png"
+        },
+        {
+          "name": "glide_rune",
+          "directions": [
+            "north",
+            "north_east",
+            "east",
+            "south_east",
+            "south",
+            "south_west",
+            "west",
+            "north_west"
+          ],
+          "prefab_pattern": "graphics/players/yil/glide_rune/{direction}.png"
+        },
+        {
+          "name": "mechanic_climb",
+          "directions": [
+            "north",
+            "north_east",
+            "east",
+            "south_east",
+            "south",
+            "south_west",
+            "west",
+            "north_west"
+          ],
+          "prefab_pattern": "graphics/players/yil/mechanic_climb/{direction}.png"
+        },
+        {
+          "name": "inspect",
+          "directions": [
+            "north",
+            "north_east",
+            "east",
+            "south_east",
+            "south",
+            "south_west",
+            "west",
+            "north_west"
+          ],
+          "prefab_pattern": "graphics/players/yil/inspect/{direction}.png"
+        },
+        {
+          "name": "hold_interact",
+          "directions": [
+            "north",
+            "north_east",
+            "east",
+            "south_east",
+            "south",
+            "south_west",
+            "west",
+            "north_west"
+          ],
+          "prefab_pattern": "graphics/players/yil/hold_interact/{direction}.png"
+        }
+      ],
+      "signature_tools": [
+        "spiral wrench",
+        "glyph satchel",
+        "lantern capacitor",
+        "tricorn relay pins"
+      ]
+    },
+    {
+      "id": "lou",
+      "display_name": "Lou",
+      "role": "private investigator monkey who avoids direct combat and puppets threats through telepathic control",
+      "look": "wiry and observant, wearing a trench coat, sneakers, and a detective\u2019s shoulder holster full of notebooks and signal tags",
+      "combat_profile": "telepathic domination, enemy hijack chains, crowd steering, stealth disruption, and evidence-tagging misdirection",
+      "traversal_profile": "all-surface climbing, vent slipping, pipe swinging, perch hopping, and remote interaction through mind-thread focus",
+      "asset_prefix": "graphics/players/lou",
+      "animations": [
+        {
+          "name": "idle",
+          "directions": [
+            "north",
+            "north_east",
+            "east",
+            "south_east",
+            "south",
+            "south_west",
+            "west",
+            "north_west"
+          ],
+          "prefab_pattern": "graphics/players/lou/idle/{direction}.png"
+        },
+        {
+          "name": "walk",
+          "directions": [
+            "north",
+            "north_east",
+            "east",
+            "south_east",
+            "south",
+            "south_west",
+            "west",
+            "north_west"
+          ],
+          "prefab_pattern": "graphics/players/lou/walk/{direction}.png"
+        },
+        {
+          "name": "run",
+          "directions": [
+            "north",
+            "north_east",
+            "east",
+            "south_east",
+            "south",
+            "south_west",
+            "west",
+            "north_west"
+          ],
+          "prefab_pattern": "graphics/players/lou/run/{direction}.png"
+        },
+        {
+          "name": "aim_focus",
+          "directions": [
+            "north",
+            "north_east",
+            "east",
+            "south_east",
+            "south",
+            "south_west",
+            "west",
+            "north_west"
+          ],
+          "prefab_pattern": "graphics/players/lou/aim_focus/{direction}.png"
+        },
+        {
+          "name": "telepathic_mark",
+          "directions": [
+            "north",
+            "north_east",
+            "east",
+            "south_east",
+            "south",
+            "south_west",
+            "west",
+            "north_west"
+          ],
+          "prefab_pattern": "graphics/players/lou/telepathic_mark/{direction}.png"
+        },
+        {
+          "name": "mind_puppet",
+          "directions": [
+            "north",
+            "north_east",
+            "east",
+            "south_east",
+            "south",
+            "south_west",
+            "west",
+            "north_west"
+          ],
+          "prefab_pattern": "graphics/players/lou/mind_puppet/{direction}.png"
+        },
+        {
+          "name": "command_release",
+          "directions": [
+            "north",
+            "north_east",
+            "east",
+            "south_east",
+            "south",
+            "south_west",
+            "west",
+            "north_west"
+          ],
+          "prefab_pattern": "graphics/players/lou/command_release/{direction}.png"
+        },
+        {
+          "name": "wall_climb",
+          "directions": [
+            "north",
+            "north_east",
+            "east",
+            "south_east",
+            "south",
+            "south_west",
+            "west",
+            "north_west"
+          ],
+          "prefab_pattern": "graphics/players/lou/wall_climb/{direction}.png"
+        },
+        {
+          "name": "ceiling_traverse",
+          "directions": [
+            "north",
+            "north_east",
+            "east",
+            "south_east",
+            "south",
+            "south_west",
+            "west",
+            "north_west"
+          ],
+          "prefab_pattern": "graphics/players/lou/ceiling_traverse/{direction}.png"
+        },
+        {
+          "name": "perch_leap",
+          "directions": [
+            "north",
+            "north_east",
+            "east",
+            "south_east",
+            "south",
+            "south_west",
+            "west",
+            "north_west"
+          ],
+          "prefab_pattern": "graphics/players/lou/perch_leap/{direction}.png"
+        },
+        {
+          "name": "inspect",
+          "directions": [
+            "north",
+            "north_east",
+            "east",
+            "south_east",
+            "south",
+            "south_west",
+            "west",
+            "north_west"
+          ],
+          "prefab_pattern": "graphics/players/lou/inspect/{direction}.png"
+        },
+        {
+          "name": "hold_interact",
+          "directions": [
+            "north",
+            "north_east",
+            "east",
+            "south_east",
+            "south",
+            "south_west",
+            "west",
+            "north_west"
+          ],
+          "prefab_pattern": "graphics/players/lou/hold_interact/{direction}.png"
+        }
+      ],
+      "signature_tools": [
+        "telepathic lens",
+        "detective notebook",
+        "signal tags",
+        "grapnel cord"
+      ]
+    }
+  ],
+  "sharedActorRules": {
+    "rendering": "2d_high_definition_comicbook_fluid_motion_prefabs_in_simulated_3d_space",
+    "facing": "8_way_omnidirectional",
+    "cameraRelationship": "behind_player_body_with_reticle_bias",
+    "interactionVfxCoverage": true
+  }
+}

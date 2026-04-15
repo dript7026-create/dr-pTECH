@@ -1,0 +1,58 @@
+{
+  "projectName": "Kin Dark",
+  "seed": "KIN-DARK-FOUNDATION",
+  "projectType": "comic_noir_sprite_3d_action_rpg",
+  "designIntent": "three intertwined protagonist timelines on one giant urban nightmare map",
+  "playtimeHours": 300,
+  "storySummary": "generated/kin_dark_story_summary.json",
+  "tutorialSlice": "game/data/tutorial_slice.json",
+  "assetSummary": "generated/kin_dark_asset_summary.json",
+  "scantideBridge": "generated/kin_dark_scantide_bridge.json",
+  "graphicsManifest": "generated/kin_dark_graphics_manifest.jsonl",
+  "audioManifest": "generated/kin_dark_audio_manifest.jsonl",
+  "systems": {
+    "real_time": true,
+    "vfx_for_every_interaction": true,
+    "timeline_state_shared": true,
+    "prefab_actor_pipeline": true,
+    "photo_texture_environment": true,
+    "tutorial_slice": true
+  },
+  "camera": {
+    "mode": "behind_player",
+    "aim_driver": "right_stick_reticle",
+    "movement_driver": "left_stick",
+    "focus_lock_button": "LT",
+    "focus_lock_behavior": "zoom_and_soft_lock"
+  },
+  "input": {
+    "primary": "xbox_series_controller",
+    "mapping": {
+      "move": "left_stick",
+      "aim": "right_stick",
+      "focus_lock": "LT",
+      "primary_attack": "RT",
+      "action_cluster": [
+        "LB",
+        "RB",
+        "X",
+        "Y",
+        "B"
+      ],
+      "interact": "hold_A_1_second_when_available",
+      "map": "View",
+      "menu": "Menu"
+    }
+  },
+  "boot": {
+    "title_screen": {
+      "logo_style": "rusty blood-red sketch splatter",
+      "menu_options": [
+        "play_game"
+      ],
+      "no_save_behavior": "new_game_tutorial_slice",
+      "save_present_behavior": "continue_last_quit"
+    },
+    "new_game_sequence": "dark_arrival_tweenkin_first_breach"
+  }
+}
