@@ -6,9 +6,9 @@ import game_pipeline
 
 
 DEFAULT_TRANSLATION_PROFILE = {
-    "clipstudio": "depth_mapped_2d",
+    "art_export": "depth_mapped_2d",
     "blender": "sideways_depth_lift",
-    "idtech2": "forward_autofactor",
+    "engine": "forward_autofactor",
 }
 
 
@@ -27,8 +27,8 @@ def build_translation_profile(scene: dict) -> dict:
     return profile
 
 
-def build_clipstudio_authoring(scene: dict, translation_profile: dict) -> dict:
-    clip = dict(scene.get("bridges", {}).get("clipstudio", {}))
+def build_art_export_authoring(scene: dict, translation_profile: dict) -> dict:
+    clip = dict(scene.get("bridges", {}).get("art_export", {}))
     bindings = scene.get("bindings", {})
     depth_cards = []
     for card in scene.get("assets", {}).get("depth_cards", []):
@@ -64,7 +64,7 @@ def build_clipstudio_authoring(scene: dict, translation_profile: dict) -> dict:
         "hitboxes": bindings.get("hitboxes", []),
         "script_bindings": bindings.get("script_bindings", []),
         "depth_cards": depth_cards,
-        "translation_mode": translation_profile["clipstudio"],
+        "translation_mode": translation_profile["art_export"],
     }
 
 
@@ -83,18 +83,18 @@ def build_blender_authoring(scene: dict, translation_profile: dict) -> dict:
     }
 
 
-def build_idtech2_authoring(scene: dict, translation_profile: dict) -> dict:
-    idtech2 = dict(scene.get("bridges", {}).get("idtech2", {}))
-    if "module_name" not in idtech2 or "asset_root" not in idtech2 or "autofactor_prefix" not in idtech2:
-        raise ValueError("bridges.idtech2 must define module_name, asset_root, and autofactor_prefix")
+def build_engine_authoring(scene: dict, translation_profile: dict) -> dict:
+    engine = dict(scene.get("bridges", {}).get("engine", {}))
+    if "module_name" not in engine or "asset_root" not in engine or "autofactor_prefix" not in engine:
+        raise ValueError("bridges.engine must define module_name, asset_root, and autofactor_prefix")
     return {
-        "module_name": idtech2["module_name"],
-        "asset_root": idtech2["asset_root"],
-        "autofactor_prefix": idtech2["autofactor_prefix"],
-        "precache_groups": idtech2.get("precache_groups", []),
-        "system_dispatch": idtech2.get("system_dispatch", {}),
-        "bootstrap": idtech2.get("bootstrap", {}),
-        "translation_mode": translation_profile["idtech2"],
+        "module_name": engine["module_name"],
+        "asset_root": engine["asset_root"],
+        "autofactor_prefix": engine["autofactor_prefix"],
+        "precache_groups": engine.get("precache_groups", []),
+        "system_dispatch": engine.get("system_dispatch", {}),
+        "bootstrap": engine.get("bootstrap", {}),
+        "translation_mode": translation_profile["engine"],
     }
 
 
@@ -125,9 +125,9 @@ def build_assets(scene: dict) -> dict:
 
 def build_targets(scene: dict) -> dict:
     targets = dict(scene.get("targets", {}))
-    targets.setdefault("clipstudio_bundle", "clipstudio_bundle")
+    targets.setdefault("art_bundle", "art_bundle")
     targets.setdefault("blender_bundle", "blender_bundle")
-    targets.setdefault("idtech2_bundle", "idtech2_bundle")
+    targets.setdefault("engine_bundle", "engine_bundle")
     return targets
 
 
@@ -141,9 +141,9 @@ def transpile_scene(scene: dict) -> dict:
         "driptech_scene_version": scene.get("driptech_scene_version", "1.0"),
         "translation_profile": translation_profile,
         "authoring": {
-            "clipstudio": build_clipstudio_authoring(scene, translation_profile),
+            "art_export": build_art_export_authoring(scene, translation_profile),
             "blender": build_blender_authoring(scene, translation_profile),
-            "idtech2": build_idtech2_authoring(scene, translation_profile),
+            "engine": build_engine_authoring(scene, translation_profile),
         },
         "assets": build_assets(scene),
         "gameplay": {

@@ -1,0 +1,61 @@
+{
+  "project_name": "HopeOpenArms",
+  "seed": "HOPE-OPEN-ARMS-ALPHA",
+  "generation": {
+    "complexity_bias": 0.52
+  },
+  "authoring": {
+    "canvas": {
+      "width": 2048,
+      "height": 2048,
+      "layers": 20
+    },
+    "timeline_fps": 12
+  },
+  "world": {
+    "reality_cells": 14,
+    "recursion_depth": 4,
+    "causality_links": 18,
+    "cells": [
+      {
+        "name": "Open Arms Courtyard",
+        "scene_type": "sanctuary",
+        "scene_scale": 1.1,
+        "interaction_zones": 3,
+        "movement_speed": 0.72,
+        "event_density": 0.18,
+        "sanctuary_bias": 0.34
+      },
+      {
+        "name": "Star Forge Threshold",
+        "scene_type": "exploration",
+        "scene_scale": 1.6,
+        "interaction_zones": 6,
+        "movement_speed": 1.12,
+        "event_density": 0.36,
+        "recursion_bias": 1,
+        "sanctuary_bias": 0.08
+      },
+      {
+        "name": "Soul Bridge Walk",
+        "scene_type": "ritual_traverse",
+        "scene_scale": 1.25,
+        "interaction_zones": 4,
+        "movement_speed": 0.88,
+        "event_density": 0.24,
+        "sanctuary_bias": 0.22
+      }
+    ]
+  },
+  "family_hub": {
+    "name": "Open Arms Family Hub",
+    "bond_density": 0.82,
+    "soul_sync": 0.9,
+    "members": [
+      { "name": "Aster" },
+      { "name": "Mira" },
+      { "name": "Jonah" },
+      { "name": "June" }
+    ]
+  }
+}

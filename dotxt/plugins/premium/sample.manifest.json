@@ -1,0 +1,9 @@
+{
+  "id": "dotxt.premium.sample",
+  "name": "Sample Premium Plugin",
+  "tier": "premium",
+  "version": "0.1.0",
+  "entry": "sample_premium.dll",
+  "licenseRequired": true,
+  "sku": "DOTXT-PRO-PLUGIN-001"
+}

@@ -412,7 +412,7 @@ def build_game_project(components: list[dict]) -> dict:
             }
         },
         "authoring": {
-            "clipstudio": {
+            "art_export": {
                 "canvas": {"width": 4096, "height": 4096, "layers": 18},
                 "timeline_fps": 12,
                 "export_profile": {"color_mode": "rgba", "naming": "asset_id", "slice_method": "layer_group"},
@@ -478,7 +478,7 @@ def build_game_project(components: list[dict]) -> dict:
                     {"scene_id": "forest_of_oaths", "collection": "forest", "world_mesh": "knave_forest_mesh"},
                 ],
             },
-            "idtech2": {
+            "engine": {
                 "module_name": "g_knaveprototype",
                 "asset_root": "baseq2/knaveprototype",
                 "autofactor_prefix": "knaveproto",
@@ -521,7 +521,7 @@ def build_game_project(components: list[dict]) -> dict:
                 {"name": "knave_godai_system", "priority": 30, "lifecycle": ["init", "tick"]},
             ],
         },
-        "targets": {"clipstudio_bundle": "clipstudio_bundle", "blender_bundle": "blender_bundle", "idtech2_bundle": "idtech2_bundle"},
+        "targets": {"art_bundle": "art_bundle", "blender_bundle": "blender_bundle", "engine_bundle": "engine_bundle"},
     }
 
 

@@ -33,7 +33,7 @@ DODO_SHADER_MANIFEST = {
         'floor_curvature': 0.16,
     },
     'asset_loaders': ['builtin', 'obj', 'glb', 'billboard', 'scene-manifest'],
-    'script_capabilities': ['spin', 'bob', 'pulse', 'orbit'],
+    'script_capabilities': ['spin', 'bob', 'pulse', 'orbit', 'drift', 'sway', 'channel_follow', 'threshold_gate', 'accent_burst'],
 }
 
 
@@ -281,6 +281,92 @@ def spire_mesh(name: str = 'spire') -> Mesh:
     return Mesh(name=name, vertices=tuple(vertices), faces=tuple(faces))
 
 
+def deco_frame_mesh(name: str = 'deco_frame') -> Mesh:
+    vertices: list[Vec3] = []
+    faces: list[Face] = []
+    _append_box(vertices, faces, min_corner=(-1.9, -2.4, -0.42), max_corner=(-1.15, 2.7, 0.42), side_color=(120, 96, 72), top_color=(214, 194, 162), side_material='stone', top_material='bone')
+    _append_box(vertices, faces, min_corner=(1.15, -2.4, -0.42), max_corner=(1.9, 2.7, 0.42), side_color=(120, 96, 72), top_color=(214, 194, 162), side_material='stone', top_material='bone')
+    _append_box(vertices, faces, min_corner=(-1.9, 2.05, -0.54), max_corner=(1.9, 2.78, 0.54), side_color=(192, 150, 96), top_color=(236, 218, 186), side_material='amber', top_material='bone')
+    _append_box(vertices, faces, min_corner=(-1.56, 1.4, -0.32), max_corner=(1.56, 2.03, 0.32), side_color=(96, 129, 116), top_color=(220, 206, 172), side_material='jade', top_material='bone')
+    _append_box(vertices, faces, min_corner=(-0.34, -1.15, -0.26), max_corner=(0.34, 1.08, 0.26), side_color=(104, 132, 118), top_color=(232, 214, 180), side_material='jade', top_material='bone')
+    return Mesh(name=name, vertices=tuple(vertices), faces=tuple(faces))
+
+
+def neural_relay_mesh(name: str = 'neural_relay') -> Mesh:
+    vertices: list[Vec3] = []
+    faces: list[Face] = []
+    _append_box(vertices, faces, min_corner=(-0.55, -0.55, -0.55), max_corner=(0.55, 0.55, 0.55), side_color=(92, 128, 116), top_color=(224, 214, 186), side_material='jade', top_material='bone')
+    _append_box(vertices, faces, min_corner=(-2.2, -0.18, -0.18), max_corner=(-0.55, 0.18, 0.18), side_color=(92, 128, 116), top_color=(224, 214, 186), side_material='jade', top_material='bone')
+    _append_box(vertices, faces, min_corner=(0.55, -0.18, -0.18), max_corner=(2.2, 0.18, 0.18), side_color=(92, 128, 116), top_color=(224, 214, 186), side_material='jade', top_material='bone')
+    _append_box(vertices, faces, min_corner=(-0.18, -0.18, -2.2), max_corner=(0.18, 0.18, -0.55), side_color=(92, 128, 116), top_color=(224, 214, 186), side_material='jade', top_material='bone')
+    _append_box(vertices, faces, min_corner=(-0.18, -0.18, 0.55), max_corner=(0.18, 0.18, 2.2), side_color=(92, 128, 116), top_color=(224, 214, 186), side_material='jade', top_material='bone')
+    _append_box(vertices, faces, min_corner=(-0.18, 0.55, -0.18), max_corner=(0.18, 2.15, 0.18), side_color=(188, 144, 92), top_color=(238, 220, 190), side_material='amber', top_material='bone')
+    _append_box(vertices, faces, min_corner=(-0.92, 2.15, -0.92), max_corner=(0.92, 2.7, 0.92), side_color=(120, 96, 72), top_color=(226, 208, 178), side_material='stone', top_material='bone')
+    return Mesh(name=name, vertices=tuple(vertices), faces=tuple(faces))
+
+
+def ooze_pod_mesh(name: str = 'ooze_pod') -> Mesh:
+    vertices: list[Vec3] = []
+    faces: list[Face] = []
+    _append_box(vertices, faces, min_corner=(-0.95, -1.25, -0.95), max_corner=(0.95, -0.2, 0.95), side_color=(76, 118, 82), top_color=(142, 188, 136), bottom_color=(48, 74, 50), side_material='jade', top_material='jade', bottom_material='shadow')
+    _append_box(vertices, faces, min_corner=(-0.72, -0.2, -0.72), max_corner=(0.72, 0.92, 0.72), side_color=(98, 146, 96), top_color=(182, 228, 164), bottom_color=(54, 84, 56), side_material='jade', top_material='bone', bottom_material='shadow')
+    _append_box(vertices, faces, min_corner=(-0.26, 0.92, -0.26), max_corner=(0.26, 1.62, 0.26), side_color=(120, 176, 112), top_color=(214, 244, 196), bottom_color=(64, 98, 64), side_material='jade', top_material='bone', bottom_material='shadow')
+    _append_box(vertices, faces, min_corner=(-1.32, -0.6, -0.24), max_corner=(-0.82, 0.34, 0.24), side_color=(86, 132, 88), top_color=(174, 220, 156), bottom_color=(56, 84, 58), side_material='jade', top_material='bone', bottom_material='shadow')
+    _append_box(vertices, faces, min_corner=(0.82, -0.54, -0.22), max_corner=(1.28, 0.4, 0.22), side_color=(86, 132, 88), top_color=(174, 220, 156), bottom_color=(56, 84, 58), side_material='jade', top_material='bone', bottom_material='shadow')
+    return Mesh(name=name, vertices=tuple(vertices), faces=tuple(faces))
+
+
+def patoot_mesh(name: str = 'patoot') -> Mesh:
+    vertices: list[Vec3] = []
+    faces: list[Face] = []
+    _append_box(vertices, faces, min_corner=(-0.75, -0.62, -0.48), max_corner=(0.46, 0.18, 0.5), side_color=(86, 126, 94), top_color=(182, 210, 164), bottom_color=(48, 70, 56), side_material='jade', top_material='bone', bottom_material='shadow')
+    _append_box(vertices, faces, min_corner=(0.2, -0.12, -0.16), max_corner=(0.98, 0.84, 0.22), side_color=(96, 138, 106), top_color=(204, 228, 188), bottom_color=(58, 82, 64), side_material='jade', top_material='bone', bottom_material='shadow')
+    _append_box(vertices, faces, min_corner=(0.76, 0.32, -0.24), max_corner=(1.36, 0.92, 0.28), side_color=(108, 148, 118), top_color=(220, 236, 202), bottom_color=(66, 90, 72), side_material='jade', top_material='bone', bottom_material='shadow')
+    _append_box(vertices, faces, min_corner=(1.26, 0.46, -0.12), max_corner=(1.76, 0.72, 0.16), side_color=(182, 166, 128), top_color=(238, 230, 206), bottom_color=(88, 76, 54), side_material='amber', top_material='bone', bottom_material='shadow')
+    _append_box(vertices, faces, min_corner=(-1.2, -0.12, -0.12), max_corner=(-0.72, 0.18, 0.16), side_color=(92, 130, 104), top_color=(200, 224, 184), bottom_color=(52, 78, 62), side_material='jade', top_material='bone', bottom_material='shadow')
+    _append_box(vertices, faces, min_corner=(-1.66, -0.02, -0.08), max_corner=(-1.12, 0.12, 0.14), side_color=(104, 146, 118), top_color=(208, 232, 192), bottom_color=(58, 82, 66), side_material='jade', top_material='bone', bottom_material='shadow')
+    _append_box(vertices, faces, min_corner=(0.54, 0.88, -0.08), max_corner=(1.12, 1.28, 0.12), side_color=(126, 154, 128), top_color=(236, 224, 192), bottom_color=(66, 86, 70), side_material='stone', top_material='bone', bottom_material='shadow')
+    _append_box(vertices, faces, min_corner=(-0.28, -1.14, -0.12), max_corner=(-0.02, -0.22, 0.12), side_color=(122, 112, 86), top_color=(238, 218, 184), bottom_color=(68, 56, 42), side_material='amber', top_material='bone', bottom_material='shadow')
+    _append_box(vertices, faces, min_corner=(0.1, -1.18, -0.12), max_corner=(0.36, -0.24, 0.12), side_color=(122, 112, 86), top_color=(238, 218, 184), bottom_color=(68, 56, 42), side_material='amber', top_material='bone', bottom_material='shadow')
+    _append_box(vertices, faces, min_corner=(0.34, -1.3, -0.2), max_corner=(0.66, -1.08, 0.18), side_color=(212, 176, 110), top_color=(246, 230, 188), bottom_color=(86, 70, 48), side_material='amber', top_material='bone', bottom_material='shadow')
+    _append_box(vertices, faces, min_corner=(-0.84, -0.18, -0.72), max_corner=(-0.2, 0.06, 0.72), side_color=(76, 112, 90), top_color=(164, 196, 150), bottom_color=(44, 64, 50), side_material='jade', top_material='bone', bottom_material='shadow')
+    return Mesh(name=name, vertices=tuple(vertices), faces=tuple(faces))
+
+
+def tutorial_stage_mesh(name: str = 'tutorial_stage') -> Mesh:
+    vertices: list[Vec3] = []
+    faces: list[Face] = []
+    _append_box(vertices, faces, min_corner=(-4.2, -1.75, -4.4), max_corner=(4.2, -1.24, 4.4), side_color=(88, 72, 58), top_color=(146, 116, 84), bottom_color=(54, 42, 34), side_material='stone', top_material='amber', bottom_material='shadow')
+    _append_box(vertices, faces, min_corner=(-2.8, -1.24, -2.6), max_corner=(2.8, -0.96, 2.8), side_color=(96, 82, 62), top_color=(166, 136, 96), bottom_color=(56, 46, 36), side_material='stone', top_material='amber', bottom_material='shadow')
+    _append_box(vertices, faces, min_corner=(-3.8, -0.96, 2.72), max_corner=(3.8, -0.7, 3.12), side_color=(78, 108, 94), top_color=(164, 198, 164), bottom_color=(42, 62, 48), side_material='jade', top_material='bone', bottom_material='shadow')
+    _append_box(vertices, faces, min_corner=(-3.7, -0.96, -3.18), max_corner=(3.7, -0.72, -2.72), side_color=(78, 108, 94), top_color=(164, 198, 164), bottom_color=(42, 62, 48), side_material='jade', top_material='bone', bottom_material='shadow')
+    _append_box(vertices, faces, min_corner=(-3.66, -0.96, -3.18), max_corner=(-3.22, 0.2, 3.12), side_color=(118, 94, 72), top_color=(214, 194, 164), bottom_color=(60, 48, 38), side_material='stone', top_material='bone', bottom_material='shadow')
+    _append_box(vertices, faces, min_corner=(3.22, -0.96, -3.18), max_corner=(3.66, 0.2, 3.12), side_color=(118, 94, 72), top_color=(214, 194, 164), bottom_color=(60, 48, 38), side_material='stone', top_material='bone', bottom_material='shadow')
+    _append_box(vertices, faces, min_corner=(-0.82, -0.96, 2.9), max_corner=(0.82, 0.58, 3.34), side_color=(184, 146, 98), top_color=(238, 220, 188), bottom_color=(72, 58, 42), side_material='amber', top_material='bone', bottom_material='shadow')
+    return Mesh(name=name, vertices=tuple(vertices), faces=tuple(faces))
+
+
+def drone_mesh(name: str = 'drone') -> Mesh:
+    vertices: list[Vec3] = []
+    faces: list[Face] = []
+    _append_box(vertices, faces, min_corner=(-0.72, -0.18, -0.72), max_corner=(0.72, 0.18, 0.72), side_color=(90, 122, 112), top_color=(210, 222, 212), bottom_color=(52, 62, 58), side_material='jade', top_material='bone', bottom_material='shadow')
+    _append_box(vertices, faces, min_corner=(-0.22, -0.34, -0.94), max_corner=(0.22, 0.34, 0.94), side_color=(182, 142, 92), top_color=(236, 218, 184), bottom_color=(78, 62, 44), side_material='amber', top_material='bone', bottom_material='shadow')
+    _append_box(vertices, faces, min_corner=(-0.94, -0.34, -0.22), max_corner=(0.94, 0.34, 0.22), side_color=(182, 142, 92), top_color=(236, 218, 184), bottom_color=(78, 62, 44), side_material='amber', top_material='bone', bottom_material='shadow')
+    _append_box(vertices, faces, min_corner=(-0.18, 0.18, -0.18), max_corner=(0.18, 0.84, 0.18), side_color=(108, 150, 136), top_color=(236, 246, 220), bottom_color=(66, 78, 70), side_material='jade', top_material='bone', bottom_material='shadow')
+    _append_box(vertices, faces, min_corner=(-0.32, -0.12, 0.82), max_corner=(0.32, 0.12, 1.18), side_color=(216, 178, 112), top_color=(248, 232, 194), bottom_color=(90, 70, 50), side_material='amber', top_material='bone', bottom_material='shadow')
+    return Mesh(name=name, vertices=tuple(vertices), faces=tuple(faces))
+
+
+def pouch_fluid_mesh(name: str = 'pouch_fluid') -> Mesh:
+    vertices: list[Vec3] = []
+    faces: list[Face] = []
+    _append_box(vertices, faces, min_corner=(-0.38, -0.28, -0.32), max_corner=(0.34, 0.18, 0.28), side_color=(88, 136, 98), top_color=(188, 238, 180), bottom_color=(46, 72, 50), side_material='jade', top_material='bone', bottom_material='shadow')
+    _append_box(vertices, faces, min_corner=(-0.18, 0.12, -0.14), max_corner=(0.22, 0.48, 0.18), side_color=(116, 168, 120), top_color=(214, 248, 202), bottom_color=(58, 86, 60), side_material='jade', top_material='bone', bottom_material='shadow')
+    _append_box(vertices, faces, min_corner=(-0.52, -0.18, -0.14), max_corner=(-0.18, 0.14, 0.14), side_color=(96, 148, 106), top_color=(196, 236, 186), bottom_color=(48, 74, 52), side_material='jade', top_material='bone', bottom_material='shadow')
+    _append_box(vertices, faces, min_corner=(0.12, -0.22, -0.18), max_corner=(0.44, 0.12, 0.16), side_color=(96, 148, 106), top_color=(196, 236, 186), bottom_color=(48, 74, 52), side_material='jade', top_material='bone', bottom_material='shadow')
+    return Mesh(name=name, vertices=tuple(vertices), faces=tuple(faces))
+
+
 def load_obj_mesh(path: Path) -> Mesh:
     vertices: list[Vec3] = []
     faces: list[Face] = []
@@ -469,12 +555,20 @@ class DodoPseudo3DEngine:
             'arch': arch_mesh(),
             'shard': shard_mesh(),
             'spire': spire_mesh(),
+            'deco_frame': deco_frame_mesh(),
+            'neural_relay': neural_relay_mesh(),
+            'ooze_pod': ooze_pod_mesh(),
+            'patoot': patoot_mesh(),
+            'tutorial_stage': tutorial_stage_mesh(),
+            'drone': drone_mesh(),
+            'pouch_fluid': pouch_fluid_mesh(),
         }
         self.mesh_cache: dict[str, Mesh] = {}
         self.image_cache: dict[str, object] = {}
         self.light_direction = Vec3(-0.45, 0.82, -0.35).normalized()
         self.scene_manifest_path: Path | None = None
         self.scene_metadata: dict = {}
+        self.runtime_overrides: dict[str, object] = {}
         self.mesh_instances: list[MeshInstance] = []
         self.billboards: list[BillboardInstance] = []
         self.label_font = ImageFont.load_default() if ImageFont is not None else None
@@ -516,17 +610,71 @@ class DodoPseudo3DEngine:
             'scene_manifest': str(self.scene_manifest_path) if self.scene_manifest_path else None,
             'asset_loaders': DODO_SHADER_MANIFEST['asset_loaders'],
             'script_capabilities': DODO_SHADER_MANIFEST['script_capabilities'],
+            'scene_state_support': ['export_scene_state', 'apply_scene_state'],
             'shader_manifest': DODO_SHADER_MANIFEST,
             'scene_name': self.scene_metadata.get('showcase_name') or self.scene_metadata.get('name'),
         }
 
+    def set_runtime_overrides(self, overrides: dict[str, object] | None) -> None:
+        self.runtime_overrides = dict(overrides or {})
+
+    def export_scene_state(self) -> dict:
+        return {
+            'scene_manifest': str(self.scene_manifest_path) if self.scene_manifest_path else None,
+            'scene_name': self.scene_metadata.get('showcase_name') or self.scene_metadata.get('name'),
+            'runtime_overrides': dict(self.runtime_overrides),
+            'mesh_instances': [self._serialize_mesh_instance(instance) for instance in self.mesh_instances],
+            'billboards': [self._serialize_billboard(instance) for instance in self.billboards],
+        }
+
+    def apply_scene_state(self, state: dict | None) -> None:
+        if not isinstance(state, dict):
+            return
+        if isinstance(state.get('runtime_overrides'), dict):
+            self.set_runtime_overrides(state.get('runtime_overrides'))
+        mesh_instances = state.get('mesh_instances', [])
+        if isinstance(mesh_instances, list):
+            for entry in mesh_instances:
+                if not isinstance(entry, dict):
+                    continue
+                target = self._find_mesh_instance(str(entry.get('id', '')))
+                if target is None:
+                    continue
+                target.position = Vec3.from_value(entry.get('position'), default=target.position)
+                target.rotation = Vec3.from_value(entry.get('rotation'), default=target.rotation)
+                target.scale = float(entry.get('scale', target.scale))
+                target.material = str(entry.get('material', target.material))
+                target.label = str(entry.get('label', target.label))
+                if isinstance(entry.get('scripts'), list):
+                    target.scripts = list(entry.get('scripts', target.scripts))
+                if isinstance(entry.get('metadata'), dict):
+                    target.metadata = dict(entry.get('metadata', target.metadata))
+        billboards = state.get('billboards', [])
+        if isinstance(billboards, list):
+            for entry in billboards:
+                if not isinstance(entry, dict):
+                    continue
+                target = self._find_billboard(str(entry.get('id', '')))
+                if target is None:
+                    continue
+                target.position = Vec3.from_value(entry.get('position'), default=target.position)
+                width = int(entry.get('width', target.size[0]))
+                height = int(entry.get('height', target.size[1]))
+                target.size = (width, height)
+                image_path = entry.get('image_path', target.image_path)
+                target.image_path = str(image_path) if image_path else None
+                target.label = str(entry.get('label', target.label))
+                tint = entry.get('tint')
+                if isinstance(tint, (list, tuple)) and len(tint) == 3:
+                    target.tint = (int(tint[0]), int(tint[1]), int(tint[2]))
+                if isinstance(entry.get('scripts'), list):
+                    target.scripts = list(entry.get('scripts', target.scripts))
+                if isinstance(entry.get('metadata'), dict):
+                    target.metadata = dict(entry.get('metadata', target.metadata))
+
     def write_preview(self, output_path: Path, orbit: float = 0.5, elevation: float = 0.2, shader_mix: float = 0.85, time_s: float = 1.25, scene_manifest_path: Path | None = None) -> dict:
         if scene_manifest_path is not None and scene_manifest_path.exists():
             self.load_scene_manifest(scene_manifest_path)
-        orbit = self._coerce_preview_value(orbit, 0.5)
-        elevation = self._coerce_preview_value(elevation, 0.2)
-        shader_mix = self._coerce_preview_value(shader_mix, 0.85)
-        time_s = self._coerce_preview_value(time_s, 1.25)
         image, stats = self.render_preview(orbit=orbit, elevation=elevation, shader_mix=shader_mix, time_s=time_s)
         output_path.parent.mkdir(parents=True, exist_ok=True)
         image.save(output_path)
@@ -537,28 +685,17 @@ class DodoPseudo3DEngine:
     def render_preview(self, orbit: float, elevation: float, shader_mix: float, time_s: float):
         if Image is None or ImageDraw is None:
             raise RuntimeError('Pillow is required for the DODO pseudo-3D renderer.')
-        orbit = self._coerce_preview_value(orbit, 0.5)
-        elevation = self._coerce_preview_value(elevation, 0.2)
-        shader_mix = self._coerce_preview_value(shader_mix, 0.85)
-        time_s = self._coerce_preview_value(time_s, 1.25)
         image = Image.new('RGBA', (self.width, self.height), (18, 25, 22, 255))
         draw = ImageDraw.Draw(image, 'RGBA')
         self._draw_sky(draw, time_s, shader_mix)
         horizon = int(self.height * (0.38 - elevation * 0.05))
         self._draw_floor(draw, orbit, shader_mix, horizon)
-        stats = self._draw_scene(image, draw, orbit, elevation, shader_mix, time_s)
+        runtime_state = self._build_runtime_state(time_s)
+        stats = self._draw_scene(image, draw, orbit, elevation, shader_mix, time_s, runtime_state)
         self._apply_canvas_post(image, shader_mix, time_s)
         stats['passes'] = [entry['id'] for entry in DODO_SHADER_MANIFEST['passes']]
+        stats['runtime_state'] = runtime_state
         return image, stats
-
-    @staticmethod
-    def _coerce_preview_value(value: object, default: float) -> float:
-        try:
-            if value is None:
-                return default
-            return float(value)
-        except (TypeError, ValueError):
-            return default
 
     def _parse_mesh_instance(self, entry: dict, manifest_root: Path) -> MeshInstance:
         loader = str(entry.get('loader', 'builtin'))
@@ -594,6 +731,43 @@ class DodoPseudo3DEngine:
             scripts=list(entry.get('scripts', [])),
             metadata=dict(entry.get('metadata', {})),
         )
+
+    def _serialize_mesh_instance(self, instance: MeshInstance) -> dict:
+        return {
+            'id': instance.name,
+            'position': [instance.position.x, instance.position.y, instance.position.z],
+            'rotation': [instance.rotation.x, instance.rotation.y, instance.rotation.z],
+            'scale': instance.scale,
+            'material': instance.material,
+            'label': instance.label,
+            'scripts': list(instance.scripts),
+            'metadata': dict(instance.metadata),
+        }
+
+    def _serialize_billboard(self, instance: BillboardInstance) -> dict:
+        return {
+            'id': instance.name,
+            'position': [instance.position.x, instance.position.y, instance.position.z],
+            'width': instance.size[0],
+            'height': instance.size[1],
+            'image_path': instance.image_path,
+            'label': instance.label,
+            'tint': [instance.tint[0], instance.tint[1], instance.tint[2]],
+            'scripts': list(instance.scripts),
+            'metadata': dict(instance.metadata),
+        }
+
+    def _find_mesh_instance(self, instance_id: str) -> MeshInstance | None:
+        for instance in self.mesh_instances:
+            if instance.name == instance_id:
+                return instance
+        return None
+
+    def _find_billboard(self, instance_id: str) -> BillboardInstance | None:
+        for instance in self.billboards:
+            if instance.name == instance_id:
+                return instance
+        return None
 
     def _resolve_mesh(self, loader: str, mesh_name: str, manifest_root: Path) -> Mesh:
         if loader == 'builtin':
@@ -650,7 +824,7 @@ class DodoPseudo3DEngine:
                 draw.line((self.width * 0.5 + sway, row, self.width * 0.5 + sway + curve * 120, self.height), fill=guide, width=1)
                 draw.line((self.width * 0.5 + sway, row, self.width * 0.5 + sway - curve * 120, self.height), fill=guide, width=1)
 
-    def _draw_scene(self, image, draw, orbit: float, elevation: float, shader_mix: float, time_s: float) -> dict:
+    def _draw_scene(self, image, draw, orbit: float, elevation: float, shader_mix: float, time_s: float, runtime_state: dict) -> dict:
         camera_pos = self._camera_position(orbit, elevation)
         camera_yaw, camera_pitch = self._camera_rotation(orbit, elevation)
         focal = self.width * 0.9
@@ -660,7 +834,7 @@ class DodoPseudo3DEngine:
         billboard_count = 0
 
         for obj in self.mesh_instances:
-            position, rotation, scale = self._animate_transform(obj.position, obj.rotation, obj.scale, obj.scripts, time_s)
+            position, rotation, scale = self._animate_transform(obj.position, obj.rotation, obj.scale, obj.scripts, time_s, obj.metadata, runtime_state)
             world_vertices = [transform_vertex(vertex, position, rotation, scale) for vertex in obj.mesh.vertices]
             camera_vertices = [self._world_to_camera(vertex, camera_pos, camera_yaw, camera_pitch) for vertex in world_vertices]
             screen_vertices = [self._project(vertex, focal) for vertex in camera_vertices]
@@ -685,7 +859,7 @@ class DodoPseudo3DEngine:
                 faces_drawn += 1
 
         for billboard in self.billboards:
-            position, _rotation, scale = self._animate_transform(billboard.position, Vec3(0.0, 0.0, 0.0), 1.0, billboard.scripts, time_s)
+            position, _rotation, scale = self._animate_transform(billboard.position, Vec3(0.0, 0.0, 0.0), 1.0, billboard.scripts, time_s, billboard.metadata, runtime_state)
             camera_vertex = self._world_to_camera(position, camera_pos, camera_yaw, camera_pitch)
             screen_point = self._project(camera_vertex, focal)
             if screen_point is None or camera_vertex.z <= 0.25:
@@ -713,6 +887,34 @@ class DodoPseudo3DEngine:
             'elevation': round(elevation, 3),
             'shader_mix': round(shader_mix, 3),
         }
+
+    def _build_runtime_state(self, time_s: float) -> dict:
+        concept_translation = self.scene_metadata.get('concept_translation', {}) if isinstance(self.scene_metadata, dict) else {}
+        sequencer = concept_translation.get('erp_sequencer', {}) if isinstance(concept_translation, dict) else {}
+        thresholds = [str(item) for item in sequencer.get('thresholds', [])] if isinstance(sequencer, dict) else []
+        pressure_wave = 0.5 + 0.5 * math.sin(time_s * 0.52)
+        relay_resonance = 0.5 + 0.5 * math.sin(time_s * 1.28 + 0.45)
+        ooze_surge = 0.5 + 0.5 * math.sin(time_s * 1.74 - 0.25)
+        fracture_pulse = max(0.0, math.sin(time_s * 2.16 - 0.58))
+        stall_decay = 0.5 + 0.5 * math.sin(time_s * 0.34 + 1.15)
+        threshold_index = min(len(thresholds) - 1, int(pressure_wave * len(thresholds))) if thresholds else -1
+        active_threshold = thresholds[threshold_index] if 0 <= threshold_index < len(thresholds) else None
+        runtime_state = {
+            'time_s': round(time_s, 3),
+            'pressure_wave': round(pressure_wave, 4),
+            'relay_resonance': round(relay_resonance, 4),
+            'ooze_surge': round(ooze_surge, 4),
+            'fracture_pulse': round(fracture_pulse, 4),
+            'stall_decay': round(stall_decay, 4),
+            'thresholds': thresholds,
+            'active_threshold_index': threshold_index,
+            'active_threshold': active_threshold,
+            'patoot_attack_cue': sequencer.get('patoot_attack') if isinstance(sequencer, dict) else None,
+            'neural_map': sequencer.get('neural_map') if isinstance(sequencer, dict) else None,
+        }
+        if self.runtime_overrides:
+            runtime_state.update(self.runtime_overrides)
+        return runtime_state
 
     def _draw_billboard(self, image, billboard: BillboardInstance, screen_point: tuple[float, float], depth: float, scale: float) -> None:
         width = max(72, int((billboard.size[0] / max(1.0, depth)) * 1.6 * scale))
@@ -754,7 +956,7 @@ class DodoPseudo3DEngine:
         self.image_cache[cache_key] = card
         return card
 
-    def _animate_transform(self, position: Vec3, rotation: Vec3, scale: float, scripts: list[dict], time_s: float) -> tuple[Vec3, Vec3, float]:
+    def _animate_transform(self, position: Vec3, rotation: Vec3, scale: float, scripts: list[dict], time_s: float, metadata: dict, runtime_state: dict) -> tuple[Vec3, Vec3, float]:
         animated_position = position
         animated_rotation = rotation
         animated_scale = scale
@@ -781,6 +983,79 @@ class DodoPseudo3DEngine:
                 radius = float(script.get('radius', 0.65))
                 anchor = Vec3.from_value(script.get('anchor'), default=position)
                 animated_position = Vec3(anchor.x + math.cos(sample) * radius, animated_position.y, anchor.z + math.sin(sample) * radius)
+            elif script_type == 'drift':
+                amplitude_x = float(script.get('amplitude_x', 0.0))
+                amplitude_y = float(script.get('amplitude_y', 0.0))
+                amplitude_z = float(script.get('amplitude_z', 0.0))
+                animated_position = Vec3(
+                    animated_position.x + math.cos(sample) * amplitude_x,
+                    animated_position.y + math.sin(sample * 1.12) * amplitude_y,
+                    animated_position.z + math.sin(sample * 0.84) * amplitude_z,
+                )
+            elif script_type == 'sway':
+                amplitude_x = float(script.get('rotation_x', 0.0))
+                amplitude_y = float(script.get('rotation_y', 0.0))
+                amplitude_z = float(script.get('rotation_z', 0.0))
+                animated_rotation = Vec3(
+                    animated_rotation.x + math.sin(sample) * amplitude_x,
+                    animated_rotation.y + math.sin(sample * 0.85) * amplitude_y,
+                    animated_rotation.z + math.cos(sample) * amplitude_z,
+                )
+            elif script_type == 'channel_follow':
+                channel_name = str(script.get('channel', metadata.get('role', 'pressure_wave')))
+                channel_value = float(runtime_state.get(channel_name, 0.0))
+                centered = channel_value * 2.0 - 1.0
+                wave = math.sin(sample)
+                animated_position = Vec3(
+                    animated_position.x + centered * wave * float(script.get('x_amplitude', 0.0)),
+                    animated_position.y + centered * wave * float(script.get('y_amplitude', 0.0)),
+                    animated_position.z + centered * wave * float(script.get('z_amplitude', 0.0)),
+                )
+                animated_rotation = Vec3(
+                    animated_rotation.x + centered * wave * float(script.get('rotation_x', 0.0)),
+                    animated_rotation.y + centered * wave * float(script.get('rotation_y', 0.0)),
+                    animated_rotation.z + centered * wave * float(script.get('rotation_z', 0.0)),
+                )
+                animated_scale = animated_scale * (1.0 + channel_value * float(script.get('scale_amplitude', 0.0)))
+            elif script_type == 'threshold_gate':
+                threshold_name = str(script.get('threshold', metadata.get('threshold', '')))
+                thresholds = runtime_state.get('thresholds', []) if isinstance(runtime_state.get('thresholds'), list) else []
+                try:
+                    threshold_index = thresholds.index(threshold_name)
+                except ValueError:
+                    threshold_index = int(script.get('threshold_index', 0))
+                active_index = int(runtime_state.get('active_threshold_index', -1))
+                gate_strength = max(0.0, min(1.0, active_index - threshold_index + 1.0)) if active_index >= 0 else 0.0
+                gate_strength *= 0.7 + float(runtime_state.get('fracture_pulse', 0.0)) * 0.3
+                wave = math.sin(sample)
+                animated_position = Vec3(
+                    animated_position.x,
+                    animated_position.y + gate_strength * wave * float(script.get('y_amplitude', 0.0)),
+                    animated_position.z,
+                )
+                animated_rotation = Vec3(
+                    animated_rotation.x,
+                    animated_rotation.y + gate_strength * wave * float(script.get('rotation_y', 0.0)),
+                    animated_rotation.z + gate_strength * wave * float(script.get('rotation_z', 0.0)),
+                )
+                animated_scale = animated_scale * (1.0 + gate_strength * float(script.get('scale_amplitude', 0.0)))
+            elif script_type == 'accent_burst':
+                burst_window = max(0.0, math.sin(sample))
+                burst_strength = burst_window ** float(script.get('curve', 9.0))
+                channel_name = str(script.get('channel', ''))
+                if channel_name:
+                    burst_strength *= max(0.0, min(1.0, float(runtime_state.get(channel_name, 0.0))))
+                animated_position = Vec3(
+                    animated_position.x + burst_strength * float(script.get('x_amplitude', 0.0)),
+                    animated_position.y + burst_strength * float(script.get('y_amplitude', 0.0)),
+                    animated_position.z + burst_strength * float(script.get('z_amplitude', 0.0)),
+                )
+                animated_rotation = Vec3(
+                    animated_rotation.x + burst_strength * float(script.get('rotation_x', 0.0)),
+                    animated_rotation.y + burst_strength * float(script.get('rotation_y', 0.0)),
+                    animated_rotation.z + burst_strength * float(script.get('rotation_z', 0.0)),
+                )
+                animated_scale = animated_scale * (1.0 + burst_strength * float(script.get('scale_amplitude', 0.0)))
         return animated_position, animated_rotation, animated_scale
 
     def _world_to_camera(self, vertex: Vec3, camera_pos: Vec3, camera_yaw: float, camera_pitch: float) -> Vec3:

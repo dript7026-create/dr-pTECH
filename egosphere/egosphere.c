@@ -108,6 +108,83 @@ static void free_loaded_rivals(MindSphereRivalary *ms) {
     ms->tick = 0;
 }
 
+static double egosphere_clamp_unit(double value) {
+    if (value < 0.0) return 0.0;
+    if (value > 1.0) return 1.0;
+    return value;
+}
+
+static double egosphere_seed_scalar(unsigned int *state) {
+    *state = (*state * 1664525u) + 1013904223u;
+    return (double)((*state >> 8) & 0xFFFFu) / 65535.0;
+}
+
+void egosphere_seed_pseudosapien(PseudoSapien *guide, const char *label, double allegiance, unsigned int seed) {
+    unsigned int state = seed ? seed : 1u;
+    size_t i;
+    double total = 0.0;
+
+    if (!guide) return;
+    memset(guide, 0, sizeof(*guide));
+    if (label) {
+        strncpy(guide->label, label, sizeof(guide->label) - 1);
+        guide->label[sizeof(guide->label) - 1] = '\0';
+    }
+    guide->allegiance = (allegiance < -1.0) ? -1.0 : ((allegiance > 1.0) ? 1.0 : allegiance);
+    guide->vigilance = 0.35 + egosphere_seed_scalar(&state) * 0.45;
+    guide->agitation = 0.20 + egosphere_seed_scalar(&state) * 0.50;
+    guide->grace = 0.30 + egosphere_seed_scalar(&state) * 0.50;
+    guide->orbit_phase = egosphere_seed_scalar(&state);
+    guide->pressure = 0.25 + egosphere_seed_scalar(&state) * 0.35;
+    guide->dominance = 0.0;
+    for (i = 0; i < EGOSPHERE_PSEUDOSAPIEN_LIQUID_CHANNELS; ++i) {
+        guide->liquid_share[i] = 0.15 + egosphere_seed_scalar(&state) * 0.35;
+        total += guide->liquid_share[i];
+    }
+    if (total <= 0.0) total = 1.0;
+    for (i = 0; i < EGOSPHERE_PSEUDOSAPIEN_LIQUID_CHANNELS; ++i) {
+        guide->liquid_share[i] /= total;
+    }
+}
+
+void egosphere_drive_pseudosapien(PseudoSapien *guide, double bonded_force, double opposition_force, double predictive_vision, double fluidity, unsigned long tick) {
+    double alignment;
+    double pressure;
+    double dominance;
+    double motion;
+    double liquid_total = 0.0;
+    size_t i;
+
+    if (!guide) return;
+
+    alignment = bonded_force - opposition_force;
+    pressure = 0.24 + bonded_force * 0.42 + predictive_vision * 0.18 + fluidity * 0.08;
+    pressure -= opposition_force * 0.14;
+    pressure += guide->allegiance * 0.05;
+    guide->pressure = egosphere_clamp_unit(pressure);
+
+    dominance = alignment * 0.62 + guide->allegiance * 0.18 + fluidity * 0.10 - 0.05;
+    if (dominance < -1.0) dominance = -1.0;
+    if (dominance > 1.0) dominance = 1.0;
+    guide->dominance = dominance;
+
+    guide->vigilance = egosphere_clamp_unit(0.28 + predictive_vision * 0.42 + opposition_force * 0.18 + fabs(dominance) * 0.12);
+    guide->agitation = egosphere_clamp_unit(0.18 + opposition_force * 0.38 + fabs(alignment) * 0.20 + (tick & 7u) / 64.0);
+    guide->grace = egosphere_clamp_unit(0.22 + bonded_force * 0.30 + fluidity * 0.30 - guide->agitation * 0.10);
+    motion = 0.004 + guide->grace * 0.010 + guide->agitation * 0.008;
+    guide->orbit_phase += motion * (guide->allegiance >= 0.0 ? 1.0 : -1.0);
+    if (guide->orbit_phase < 0.0) guide->orbit_phase += 1.0;
+    if (guide->orbit_phase >= 1.0) guide->orbit_phase -= 1.0;
+
+    guide->liquid_share[0] = egosphere_clamp_unit(0.18 + bonded_force * 0.32 + fluidity * 0.18 - opposition_force * 0.08);
+    guide->liquid_share[1] = egosphere_clamp_unit(0.16 + predictive_vision * 0.34 + guide->vigilance * 0.12);
+    guide->liquid_share[2] = egosphere_clamp_unit(0.14 + opposition_force * 0.30 + (1.0 - fluidity) * 0.22 + guide->agitation * 0.12);
+    guide->liquid_share[3] = egosphere_clamp_unit(0.14 + guide->grace * 0.22 + fabs(dominance) * 0.18 + predictive_vision * 0.08);
+    for (i = 0; i < EGOSPHERE_PSEUDOSAPIEN_LIQUID_CHANNELS; ++i) liquid_total += guide->liquid_share[i];
+    if (liquid_total <= 0.0) liquid_total = 1.0;
+    for (i = 0; i < EGOSPHERE_PSEUDOSAPIEN_LIQUID_CHANNELS; ++i) guide->liquid_share[i] /= liquid_total;
+}
+
 void egosphere_init_agent(Agent *a, const char *name) {
     size_t n = strlen(name) + 1;
     a->name = (char*)malloc(n);

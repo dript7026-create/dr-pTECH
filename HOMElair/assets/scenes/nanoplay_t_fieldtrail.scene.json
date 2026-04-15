@@ -1,0 +1,71 @@
+{
+  "name": "nanoplay_t_fieldtrail",
+  "showcase_name": "NanoPlay_t Field Trail",
+  "camera": {
+    "orbit": 0.74,
+    "elevation": 0.12,
+    "focus_z": 10.6
+  },
+  "scene_entries": [
+    {
+      "kind": "mesh",
+      "id": "fieldtrail_terrain",
+      "label": "Field Trail Terrain",
+      "loader": "obj",
+      "mesh": "../meshes/homelair_terrain_basin.obj",
+      "position": [0.0, -0.7, 9.2],
+      "rotation": [0.0, -0.08, 0.0],
+      "scale": 0.98,
+      "material": "stone",
+      "material_profile": "../materials/terrain_material.json",
+      "metadata": {
+        "geometry_class": "landscape_mesh",
+        "depth_band": "midfield_occlusion"
+      }
+    },
+    {
+      "kind": "mesh",
+      "id": "fieldtrail_guardian",
+      "label": "Trail Guardian",
+      "loader": "obj",
+      "mesh": "../meshes/homelair_guardian_avatar.obj",
+      "position": [0.7, -0.05, 10.8],
+      "rotation": [0.0, -0.24, 0.0],
+      "scale": 1.0,
+      "material": "bone",
+      "material_profile": "../materials/guardian_material.json",
+      "scripts": [
+        {"type": "bob", "amplitude": 0.04, "speed": 1.0}
+      ],
+      "metadata": {
+        "geometry_class": "skeletal_mesh",
+        "rig_profile": "../rigs/humanoid_biped_v1.json",
+        "animation_set": "idle"
+      }
+    },
+    {
+      "kind": "mesh",
+      "id": "trail_spire",
+      "label": "Trail Spire",
+      "loader": "builtin",
+      "mesh": "spire",
+      "position": [-2.6, 0.15, 12.7],
+      "rotation": [0.0, 0.08, 0.0],
+      "scale": 1.05,
+      "material": "jade"
+    },
+    {
+      "kind": "billboard",
+      "id": "field_mist",
+      "label": "Field Mist",
+      "position": [0.0, 1.0, 18.8],
+      "width": 420,
+      "height": 220,
+      "tint": [138, 164, 148],
+      "metadata": {
+        "geometry_class": "billboard_fx",
+        "depth_band": "farfield_atmosphere"
+      }
+    }
+  ]
+}

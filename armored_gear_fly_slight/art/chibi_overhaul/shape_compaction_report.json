@@ -1,0 +1,385 @@
+{
+  "pass": "graphics_compaction",
+  "shape_cap": 1000,
+  "sprite_count": 29,
+  "all_compliant": true,
+  "sprites": [
+    {
+      "sprite_id": "feather_bearer/wake_ashore",
+      "source_actor": "feather_bearer",
+      "estimated_source_shapes": 510,
+      "compacted_shapes": 1000,
+      "breakdown": {
+        "primary_shapes": 140,
+        "secondary_shapes": 340,
+        "micro_shapes": 520
+      },
+      "shape_cap": 1000,
+      "compliant": true
+    },
+    {
+      "sprite_id": "feather_bearer/idle_north",
+      "source_actor": "feather_bearer",
+      "estimated_source_shapes": 451,
+      "compacted_shapes": 1000,
+      "breakdown": {
+        "primary_shapes": 140,
+        "secondary_shapes": 340,
+        "micro_shapes": 520
+      },
+      "shape_cap": 1000,
+      "compliant": true
+    },
+    {
+      "sprite_id": "feather_bearer/idle_south",
+      "source_actor": "feather_bearer",
+      "estimated_source_shapes": 451,
+      "compacted_shapes": 1000,
+      "breakdown": {
+        "primary_shapes": 140,
+        "secondary_shapes": 340,
+        "micro_shapes": 520
+      },
+      "shape_cap": 1000,
+      "compliant": true
+    },
+    {
+      "sprite_id": "feather_bearer/idle_west",
+      "source_actor": "feather_bearer",
+      "estimated_source_shapes": 451,
+      "compacted_shapes": 1000,
+      "breakdown": {
+        "primary_shapes": 140,
+        "secondary_shapes": 340,
+        "micro_shapes": 520
+      },
+      "shape_cap": 1000,
+      "compliant": true
+    },
+    {
+      "sprite_id": "feather_bearer/idle_east",
+      "source_actor": "feather_bearer",
+      "estimated_source_shapes": 451,
+      "compacted_shapes": 1000,
+      "breakdown": {
+        "primary_shapes": 140,
+        "secondary_shapes": 340,
+        "micro_shapes": 520
+      },
+      "shape_cap": 1000,
+      "compliant": true
+    },
+    {
+      "sprite_id": "feather_bearer/walk_north",
+      "source_actor": "feather_bearer",
+      "estimated_source_shapes": 509,
+      "compacted_shapes": 1000,
+      "breakdown": {
+        "primary_shapes": 140,
+        "secondary_shapes": 340,
+        "micro_shapes": 520
+      },
+      "shape_cap": 1000,
+      "compliant": true
+    },
+    {
+      "sprite_id": "feather_bearer/walk_south",
+      "source_actor": "feather_bearer",
+      "estimated_source_shapes": 509,
+      "compacted_shapes": 1000,
+      "breakdown": {
+        "primary_shapes": 140,
+        "secondary_shapes": 340,
+        "micro_shapes": 520
+      },
+      "shape_cap": 1000,
+      "compliant": true
+    },
+    {
+      "sprite_id": "feather_bearer/walk_west",
+      "source_actor": "feather_bearer",
+      "estimated_source_shapes": 509,
+      "compacted_shapes": 1000,
+      "breakdown": {
+        "primary_shapes": 140,
+        "secondary_shapes": 340,
+        "micro_shapes": 520
+      },
+      "shape_cap": 1000,
+      "compliant": true
+    },
+    {
+      "sprite_id": "feather_bearer/walk_east",
+      "source_actor": "feather_bearer",
+      "estimated_source_shapes": 509,
+      "compacted_shapes": 1000,
+      "breakdown": {
+        "primary_shapes": 140,
+        "secondary_shapes": 340,
+        "micro_shapes": 520
+      },
+      "shape_cap": 1000,
+      "compliant": true
+    },
+    {
+      "sprite_id": "feather_bearer/rake_combo_north",
+      "source_actor": "feather_bearer",
+      "estimated_source_shapes": 542,
+      "compacted_shapes": 1000,
+      "breakdown": {
+        "primary_shapes": 140,
+        "secondary_shapes": 340,
+        "micro_shapes": 520
+      },
+      "shape_cap": 1000,
+      "compliant": true
+    },
+    {
+      "sprite_id": "feather_bearer/rake_combo_south",
+      "source_actor": "feather_bearer",
+      "estimated_source_shapes": 542,
+      "compacted_shapes": 1000,
+      "breakdown": {
+        "primary_shapes": 140,
+        "secondary_shapes": 340,
+        "micro_shapes": 520
+      },
+      "shape_cap": 1000,
+      "compliant": true
+    },
+    {
+      "sprite_id": "feather_bearer/rake_combo_west",
+      "source_actor": "feather_bearer",
+      "estimated_source_shapes": 542,
+      "compacted_shapes": 1000,
+      "breakdown": {
+        "primary_shapes": 140,
+        "secondary_shapes": 340,
+        "micro_shapes": 520
+      },
+      "shape_cap": 1000,
+      "compliant": true
+    },
+    {
+      "sprite_id": "feather_bearer/rake_combo_east",
+      "source_actor": "feather_bearer",
+      "estimated_source_shapes": 542,
+      "compacted_shapes": 1000,
+      "breakdown": {
+        "primary_shapes": 140,
+        "secondary_shapes": 340,
+        "micro_shapes": 520
+      },
+      "shape_cap": 1000,
+      "compliant": true
+    },
+    {
+      "sprite_id": "feather_bearer/till_soil",
+      "source_actor": "feather_bearer",
+      "estimated_source_shapes": 475,
+      "compacted_shapes": 1000,
+      "breakdown": {
+        "primary_shapes": 140,
+        "secondary_shapes": 340,
+        "micro_shapes": 520
+      },
+      "shape_cap": 1000,
+      "compliant": true
+    },
+    {
+      "sprite_id": "feather_bearer/plant_seed",
+      "source_actor": "feather_bearer",
+      "estimated_source_shapes": 475,
+      "compacted_shapes": 1000,
+      "breakdown": {
+        "primary_shapes": 140,
+        "secondary_shapes": 340,
+        "micro_shapes": 520
+      },
+      "shape_cap": 1000,
+      "compliant": true
+    },
+    {
+      "sprite_id": "feather_bearer/harvest_bundle",
+      "source_actor": "feather_bearer",
+      "estimated_source_shapes": 475,
+      "compacted_shapes": 1000,
+      "breakdown": {
+        "primary_shapes": 140,
+        "secondary_shapes": 340,
+        "micro_shapes": 520
+      },
+      "shape_cap": 1000,
+      "compliant": true
+    },
+    {
+      "sprite_id": "feather_bearer/build_settlement",
+      "source_actor": "feather_bearer",
+      "estimated_source_shapes": 509,
+      "compacted_shapes": 1000,
+      "breakdown": {
+        "primary_shapes": 140,
+        "secondary_shapes": 340,
+        "micro_shapes": 520
+      },
+      "shape_cap": 1000,
+      "compliant": true
+    },
+    {
+      "sprite_id": "feather_bearer/rest_heal",
+      "source_actor": "feather_bearer",
+      "estimated_source_shapes": 474,
+      "compacted_shapes": 1000,
+      "breakdown": {
+        "primary_shapes": 140,
+        "secondary_shapes": 340,
+        "micro_shapes": 520
+      },
+      "shape_cap": 1000,
+      "compliant": true
+    },
+    {
+      "sprite_id": "feather_bearer/hurt_stagger",
+      "source_actor": "feather_bearer",
+      "estimated_source_shapes": 464,
+      "compacted_shapes": 1000,
+      "breakdown": {
+        "primary_shapes": 140,
+        "secondary_shapes": 340,
+        "micro_shapes": 520
+      },
+      "shape_cap": 1000,
+      "compliant": true
+    },
+    {
+      "sprite_id": "daemon_kin/perch",
+      "source_actor": "daemon_kin",
+      "estimated_source_shapes": 557,
+      "compacted_shapes": 1000,
+      "breakdown": {
+        "primary_shapes": 120,
+        "secondary_shapes": 350,
+        "micro_shapes": 530
+      },
+      "shape_cap": 1000,
+      "compliant": true
+    },
+    {
+      "sprite_id": "daemon_kin/roam",
+      "source_actor": "daemon_kin",
+      "estimated_source_shapes": 631,
+      "compacted_shapes": 1000,
+      "breakdown": {
+        "primary_shapes": 120,
+        "secondary_shapes": 350,
+        "micro_shapes": 530
+      },
+      "shape_cap": 1000,
+      "compliant": true
+    },
+    {
+      "sprite_id": "daemon_kin/windup",
+      "source_actor": "daemon_kin",
+      "estimated_source_shapes": 631,
+      "compacted_shapes": 1000,
+      "breakdown": {
+        "primary_shapes": 120,
+        "secondary_shapes": 350,
+        "micro_shapes": 530
+      },
+      "shape_cap": 1000,
+      "compliant": true
+    },
+    {
+      "sprite_id": "daemon_kin/lunge",
+      "source_actor": "daemon_kin",
+      "estimated_source_shapes": 631,
+      "compacted_shapes": 1000,
+      "breakdown": {
+        "primary_shapes": 120,
+        "secondary_shapes": 350,
+        "micro_shapes": 530
+      },
+      "shape_cap": 1000,
+      "compliant": true
+    },
+    {
+      "sprite_id": "daemon_kin/stagger",
+      "source_actor": "daemon_kin",
+      "estimated_source_shapes": 571,
+      "compacted_shapes": 1000,
+      "breakdown": {
+        "primary_shapes": 120,
+        "secondary_shapes": 350,
+        "micro_shapes": 530
+      },
+      "shape_cap": 1000,
+      "compliant": true
+    },
+    {
+      "sprite_id": "daemon_of_famine/perch_guard",
+      "source_actor": "daemon_of_famine",
+      "estimated_source_shapes": 572,
+      "compacted_shapes": 1000,
+      "breakdown": {
+        "primary_shapes": 110,
+        "secondary_shapes": 370,
+        "micro_shapes": 520
+      },
+      "shape_cap": 1000,
+      "compliant": true
+    },
+    {
+      "sprite_id": "daemon_of_famine/advance",
+      "source_actor": "daemon_of_famine",
+      "estimated_source_shapes": 646,
+      "compacted_shapes": 1000,
+      "breakdown": {
+        "primary_shapes": 110,
+        "secondary_shapes": 370,
+        "micro_shapes": 520
+      },
+      "shape_cap": 1000,
+      "compliant": true
+    },
+    {
+      "sprite_id": "daemon_of_famine/windup",
+      "source_actor": "daemon_of_famine",
+      "estimated_source_shapes": 688,
+      "compacted_shapes": 1000,
+      "breakdown": {
+        "primary_shapes": 110,
+        "secondary_shapes": 370,
+        "micro_shapes": 520
+      },
+      "shape_cap": 1000,
+      "compliant": true
+    },
+    {
+      "sprite_id": "daemon_of_famine/slam",
+      "source_actor": "daemon_of_famine",
+      "estimated_source_shapes": 688,
+      "compacted_shapes": 1000,
+      "breakdown": {
+        "primary_shapes": 110,
+        "secondary_shapes": 370,
+        "micro_shapes": 520
+      },
+      "shape_cap": 1000,
+      "compliant": true
+    },
+    {
+      "sprite_id": "daemon_of_famine/break_state",
+      "source_actor": "daemon_of_famine",
+      "estimated_source_shapes": 628,
+      "compacted_shapes": 1000,
+      "breakdown": {
+        "primary_shapes": 110,
+        "secondary_shapes": 370,
+        "micro_shapes": 520
+      },
+      "shape_cap": 1000,
+      "compliant": true
+    }
+  ]
+}

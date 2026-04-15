@@ -1,0 +1,85 @@
+{
+  "actor": "feather_bearer",
+  "density_rules": {
+    "detail_multiplier": "12x over the first-pass mockups",
+    "pixel_exchange_focus": [
+      "face",
+      "collar",
+      "glove cuffs",
+      "belt knots",
+      "tool head",
+      "hem edges"
+    ],
+    "silhouette_priority": [
+      "Eyes, hood or collar, hands, and tool head must remain readable in one glance.",
+      "New cloth folds come from trimming negative space out of sleeves and hems, not from widening the body core.",
+      "Apotropaic pins, knotwork, and feather tokens cluster at collar and belt instead of being spread evenly."
+    ]
+  },
+  "canvas": {
+    "width": 32,
+    "height": 32,
+    "body_core": [8, 8, 16, 16],
+    "attack_space": {
+      "north": [8, 0, 16, 8],
+      "south": [8, 24, 16, 8],
+      "west": [0, 8, 8, 16],
+      "east": [24, 8, 8, 16]
+    },
+    "notes": [
+      "Keep the face and torso entirely inside the 16x16 core for DMG readability.",
+      "Use the remaining space for telegraph arcs, oversized tools, sleeves, and cloth follow-through.",
+      "All attack arcs should begin in silhouette before overlapping the body core.",
+      "Collar, cuffs, and hems should carry small pilgrim-knot and storm-fray detail only where the contour can afford it."
+    ]
+  },
+  "starter_look": {
+    "body": "fully clothed chibi survivor silhouette with pilgrim-wrap layering and restrained protective knot trim",
+    "starter_weapon": "wreck_rake",
+    "starter_armor": "shore_wrap_bathing_suit"
+  },
+  "costume_detail_layers": [
+    "storm-frayed collar wrap",
+    "protective knot at the throat",
+    "belt token cluster",
+    "salt-stiff hem notches"
+  ],
+  "anchor_points": [
+    {"id": "head_crown", "xy": [16, 6]},
+    {"id": "head_left", "xy": [11, 9]},
+    {"id": "head_right", "xy": [21, 9]},
+    {"id": "torso_center", "xy": [16, 16]},
+    {"id": "belt_center", "xy": [16, 23]},
+    {"id": "shoulder_left", "xy": [10, 14]},
+    {"id": "shoulder_right", "xy": [22, 14]},
+    {"id": "elbow_left", "xy": [8, 19]},
+    {"id": "elbow_right", "xy": [24, 19]},
+    {"id": "hand_left", "xy": [6, 23]},
+    {"id": "hand_right", "xy": [26, 23]},
+    {"id": "hip_left", "xy": [12, 23]},
+    {"id": "hip_right", "xy": [20, 23]},
+    {"id": "knee_left", "xy": [12, 28]},
+    {"id": "knee_right", "xy": [20, 28]}
+  ],
+  "animation_sets": [
+    {"id": "wake_ashore", "frames": 4, "purpose": "crawl from raft to kneel"},
+    {"id": "idle_north", "frames": 2, "purpose": "north-facing idle loop"},
+    {"id": "idle_south", "frames": 2, "purpose": "south-facing idle loop"},
+    {"id": "idle_west", "frames": 2, "purpose": "west-facing idle loop"},
+    {"id": "idle_east", "frames": 2, "purpose": "east-facing idle loop"},
+    {"id": "walk_north", "frames": 4, "purpose": "north-facing travel"},
+    {"id": "walk_south", "frames": 4, "purpose": "south-facing travel"},
+    {"id": "walk_west", "frames": 4, "purpose": "west-facing travel"},
+    {"id": "walk_east", "frames": 4, "purpose": "east-facing travel"},
+    {"id": "rake_combo_north", "frames": 4, "purpose": "telegraphed attack arc north"},
+    {"id": "rake_combo_south", "frames": 4, "purpose": "telegraphed attack arc south"},
+    {"id": "rake_combo_west", "frames": 4, "purpose": "telegraphed attack arc west"},
+    {"id": "rake_combo_east", "frames": 4, "purpose": "telegraphed attack arc east"},
+    {"id": "till_soil", "frames": 3, "purpose": "downward tool strike"},
+    {"id": "plant_seed", "frames": 3, "purpose": "crouch and seed release"},
+    {"id": "harvest_bundle", "frames": 3, "purpose": "gather and lift crop"},
+    {"id": "build_settlement", "frames": 4, "purpose": "hammer and raise planks"},
+    {"id": "rest_heal", "frames": 3, "purpose": "sit and breathe"},
+    {"id": "hurt_stagger", "frames": 2, "purpose": "damage reaction"}
+  ]
+}

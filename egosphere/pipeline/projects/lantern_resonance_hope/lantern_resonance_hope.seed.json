@@ -1,0 +1,121 @@
+{
+  "project_name": "LanternResonanceHope",
+  "seed": "LANTERN-RESONANCE-HOPE-ALPHA",
+  "generation": {
+    "complexity_bias": 0.44
+  },
+  "authoring": {
+    "canvas": {
+      "width": 1600,
+      "height": 1600,
+      "layers": 18
+    },
+    "timeline_fps": 15
+  },
+  "platforms": {
+    "primary_target": "nanoplay_t",
+    "targets": [
+      {
+        "name": "nanoplay_t",
+        "input_latency_ms": 9.8,
+        "present_budget_ms": 16.67,
+        "render_scale": 0.92,
+        "handheld_bias": 0.98,
+        "sensor_channels": 4,
+        "volumetric_support": 0.74,
+        "causality_feedback": 0.83
+      },
+      {
+        "name": "n3ds",
+        "input_latency_ms": 13.4,
+        "present_budget_ms": 16.67,
+        "render_scale": 0.8,
+        "handheld_bias": 0.9,
+        "sensor_channels": 3,
+        "volumetric_support": 0.56,
+        "causality_feedback": 0.71
+      },
+      {
+        "name": "host",
+        "input_latency_ms": 7.2,
+        "present_budget_ms": 16.67,
+        "render_scale": 1.0,
+        "handheld_bias": 0.2,
+        "sensor_channels": 2,
+        "volumetric_support": 0.82,
+        "causality_feedback": 0.76
+      }
+    ]
+  },
+  "matter": {
+    "solid_density": 0.51,
+    "liquid_flow": 0.49,
+    "gas_diffusion": 0.58,
+    "fluid_turbulence": 0.31,
+    "reactive_volume": 56
+  },
+  "causality": {
+    "input_pressure": 0.57,
+    "entity_feedback": 0.63,
+    "render_reactivity": 0.72,
+    "affordance_span": 0.61
+  },
+  "world": {
+    "reality_cells": 12,
+    "recursion_depth": 3,
+    "causality_links": 16,
+    "cells": [
+      {
+        "name": "Lantern Resonance Port",
+        "scene_type": "signal_harbor",
+        "scene_scale": 1.05,
+        "interaction_zones": 4,
+        "movement_speed": 0.86,
+        "event_density": 0.24,
+        "sanctuary_bias": 0.18,
+        "liquid_flow": 0.56,
+        "gas_diffusion": 0.62,
+        "input_pressure": 0.59,
+        "render_reactivity": 0.69
+      },
+      {
+        "name": "Saffron Relay Canals",
+        "scene_type": "courier_run",
+        "scene_scale": 1.22,
+        "interaction_zones": 5,
+        "movement_speed": 1.02,
+        "event_density": 0.31,
+        "sanctuary_bias": 0.08,
+        "fluid_turbulence": 0.38,
+        "reactive_volume": 62,
+        "input_pressure": 0.64,
+        "entity_feedback": 0.66,
+        "affordance_span": 0.64
+      },
+      {
+        "name": "Glowhouse Shelter",
+        "scene_type": "sanctuary",
+        "scene_scale": 0.94,
+        "interaction_zones": 3,
+        "movement_speed": 0.72,
+        "event_density": 0.17,
+        "sanctuary_bias": 0.34,
+        "solid_density": 0.58,
+        "liquid_flow": 0.42,
+        "gas_diffusion": 0.46,
+        "render_reactivity": 0.75,
+        "affordance_span": 0.58
+      }
+    ]
+  },
+  "family_hub": {
+    "name": "Lantern Kinship Relay",
+    "bond_density": 0.8,
+    "soul_sync": 0.84,
+    "members": [
+      { "name": "Tamar" },
+      { "name": "Cinder" },
+      { "name": "Ibis" }
+    ]
+  }
+}

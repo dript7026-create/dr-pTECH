@@ -1,0 +1,87 @@
+{
+  "profile": "examples/sample_references.json",
+  "design_templates": {
+    "arcade-smallcraft": {
+      "art_preset": "space-shooter",
+      "style_family": "16bit",
+      "silhouette_emphasis": 1.6,
+      "texture_detail": 0.24,
+      "palette_limit": 12,
+      "outline_weight": 1.45,
+      "accessory_density": 0.18,
+      "tracing_bias": 0.05
+    },
+    "fallen-knight": {
+      "art_preset": "soulslike-action",
+      "style_family": "bitmap-traced",
+      "texture_detail": 0.84,
+      "accessory_density": 0.74,
+      "outline_weight": 1.02,
+      "tracing_bias": 0.82
+    }
+  },
+  "motion_templates": {
+    "strafe-flyby": {
+      "motion_silhouette_bias": 1.28,
+      "motion_squash_stretch": 0.16,
+      "motion_impact": 0.3,
+      "motion_lift": 0.6
+    },
+    "heavy-commit": {
+      "motion_silhouette_bias": 1.18,
+      "motion_squash_stretch": 0.32,
+      "motion_impact": 0.96,
+      "motion_lift": 1.18
+    }
+  },
+  "jobs": [
+    {
+      "name": "courier-run",
+      "character": "lantern courier",
+      "animation": "run cycle",
+      "prompt": "8bit gothic courier with readable silhouette",
+      "grid_size": 12,
+      "art_preset": "retro-arcade",
+      "motion_silhouette_bias": 1.2,
+      "motion_squash_stretch": 0.2,
+      "motion_lift": 1.1
+    },
+    {
+      "name": "space-shooter-strafe",
+      "character": "aegis interceptor",
+      "animation": "run cycle",
+      "prompt": "space shooter craft with readable silhouette and low detail",
+      "grid_size": 12,
+      "design_template": "arcade-smallcraft",
+      "motion_template": "strafe-flyby"
+    },
+    {
+      "name": "revenant-attack",
+      "character": "cathedral revenant",
+      "animation": "attack combo",
+      "prompt": "cel-shaded 2.5d bitmap traced duelist with cosmetic fine detail",
+      "grid_size": 12,
+      "art_preset": "cel-brawler",
+      "style_family": "cel-shaded-2.5d",
+      "texture_detail": 0.92,
+      "cel_shading": 1.0,
+      "silhouette_emphasis": 1.32,
+      "palette_limit": 28,
+      "outline_weight": 0.9,
+      "accessory_density": 0.78,
+      "tracing_bias": 0.86,
+      "motion_impact": 0.96,
+      "motion_squash_stretch": 0.3,
+      "motion_lift": 1.2
+    },
+    {
+      "name": "soulslike-lunge",
+      "character": "ashen penitent",
+      "animation": "attack combo",
+      "prompt": "souls-like fallen knight with dense ornament and readable silhouette",
+      "grid_size": 12,
+      "design_template": "fallen-knight",
+      "motion_template": "heavy-commit"
+    }
+  ]
+}

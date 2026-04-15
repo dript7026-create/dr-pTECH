@@ -1,4 +1,4 @@
-s"""CLI wrapper that converts a ClipConceptBook (.ccp) into a standard Recraft manifest JSON file."""
+sr"""CLI wrapper that converts a ClipConceptBook (.ccp) into a standard Recraft manifest JSON file."""
 
 from __future__ import annotations
 

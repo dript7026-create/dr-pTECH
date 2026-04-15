@@ -1,0 +1,35 @@
+{
+  "schema": "wavefold_geometry/v1",
+  "name": "homelair_guardian_avatar",
+  "encoding": "base64+zlib",
+  "position_step": 0.01,
+  "fold_step": 0.02,
+  "vertex_pack": {
+    "format": "<hhhh",
+    "count": 32,
+    "data": "eNodyyFrQmEchfEnrJiEN4hvkcVbLJr8AEv7EIYtLg3LWDSYxCLKYOU28YMsWm653+DCgsjCggjH/3nTD87DOWmhVm+aYH/CV1pddJLdhQtVvOBe0cO9Yop7xZou7PStjP0Nj+G/OtmD3DMr3DMz3DNPuGe21Bpx1rua4mf4HC5VFz/knviiKW5wT+ypizVj/PvTvHgL/XuI3V7lnhgyL/ZxTwxKTzxyB89lbeE="
+  },
+  "face_pack": {
+    "format": "<HHHBB",
+    "count": 34,
+    "data": "eNodzIkOgjAQANHhlltQQFDk///SdZq0LzvZFBJS/iclizehoNTSXpBTaWXP42aa2bPYKrV0zmMz0cRfb9Q02tCGNT2DDvaejlFHexebrbb2NrYGHZzvTMw68wgnFlZd7QtPNt3sL3YOPXiHOydf/dpPPlx62X+9iwUs"
+  },
+  "materials": [
+    {
+      "name": "bone",
+      "color": [
+        228,
+        210,
+        176
+      ]
+    }
+  ],
+  "wave_space": {
+    "axis": "y",
+    "amplitude": 0.24,
+    "frequency": 1.35,
+    "phase_bias": 0.0,
+    "inward_bias": 0.18,
+    "premium_feature": "wavefold.pro"
+  }
+}

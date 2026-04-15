@@ -1,0 +1,55 @@
+{
+  "schema": "homelair_rig_profile/v1",
+  "rig_id": "humanoid_biped_v1",
+  "label": "Humanoid Biped V1",
+  "bones": [
+    "root",
+    "pelvis",
+    "spine_low",
+    "spine_mid",
+    "spine_high",
+    "neck",
+    "head",
+    "clavicle_l",
+    "upperarm_l",
+    "lowerarm_l",
+    "hand_l",
+    "clavicle_r",
+    "upperarm_r",
+    "lowerarm_r",
+    "hand_r",
+    "thigh_l",
+    "calf_l",
+    "foot_l",
+    "thigh_r",
+    "calf_r",
+    "foot_r"
+  ],
+  "animation_sets": [
+    "idle",
+    "walk",
+    "run",
+    "attack",
+    "sanctuary_pose"
+  ],
+  "mesh_layers": [
+    {
+      "id": "body_surface",
+      "role": "primary_character_mesh",
+      "path": "../meshes/homelair_guardian_avatar.obj"
+    }
+  ],
+  "texture_layers": [
+    {
+      "id": "skin_albedo",
+      "role": "albedo",
+      "path": "../textures/guardian_skin_albedo.ppm"
+    },
+    {
+      "id": "cloth_albedo",
+      "role": "fabric",
+      "path": "../textures/guardian_cloth_albedo.ppm"
+    }
+  ],
+  "intended_use": "Full 3D character actors for HOMElair preview and later runtime ingestion."
+}

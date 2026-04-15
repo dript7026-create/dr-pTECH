@@ -1,0 +1,92 @@
+{
+  "name": "homeviuplay_depth_lair",
+  "showcase_name": "HomeViuPlay Depth Lair",
+  "camera": {
+    "orbit": 0.62,
+    "elevation": 0.2,
+    "focus_z": 12.0
+  },
+  "scene_entries": [
+    {
+      "kind": "mesh",
+      "id": "terrain_basin",
+      "label": "Terrain Basin",
+      "loader": "obj",
+      "mesh": "../meshes/homelair_terrain_basin.obj",
+      "position": [0.0, -0.4, 10.0],
+      "rotation": [0.0, 0.0, 0.0],
+      "scale": 1.2,
+      "material": "stone",
+      "metadata": {
+        "geometry_class": "landscape_mesh",
+        "depth_band": "midfield_occlusion"
+      }
+    },
+    {
+      "kind": "mesh",
+      "id": "guardian_avatar",
+      "label": "Guardian Avatar",
+      "loader": "obj",
+      "mesh": "../meshes/homelair_guardian_avatar.obj",
+      "position": [0.0, -0.1, 11.4],
+      "rotation": [0.0, 0.34, 0.0],
+      "scale": 1.2,
+      "material": "bone",
+      "scripts": [
+        {"type": "bob", "amplitude": 0.06, "speed": 1.1},
+        {"type": "spin", "speed": 0.1}
+      ],
+      "metadata": {
+        "geometry_class": "skeletal_mesh",
+        "rig_profile": "../rigs/humanoid_biped_v1.json",
+        "animation_set": "idle"
+      }
+    },
+    {
+      "kind": "mesh",
+      "id": "left_spire",
+      "label": "Left Spire",
+      "loader": "builtin",
+      "mesh": "spire",
+      "position": [-3.4, 0.3, 14.2],
+      "rotation": [0.0, 0.18, 0.0],
+      "scale": 1.3,
+      "material": "jade"
+    },
+    {
+      "kind": "mesh",
+      "id": "right_spire",
+      "label": "Right Spire",
+      "loader": "builtin",
+      "mesh": "spire",
+      "position": [3.4, 0.2, 14.8],
+      "rotation": [0.0, -0.22, 0.0],
+      "scale": 1.2,
+      "material": "jade"
+    },
+    {
+      "kind": "mesh",
+      "id": "threshold_arch",
+      "label": "Threshold Arch",
+      "loader": "builtin",
+      "mesh": "arch",
+      "position": [0.0, 0.4, 16.8],
+      "rotation": [0.0, 0.0, 0.0],
+      "scale": 1.6,
+      "material": "amber"
+    },
+    {
+      "kind": "billboard",
+      "id": "far_atmosphere",
+      "label": "Far Atmosphere",
+      "position": [0.0, 1.2, 23.5],
+      "width": 540,
+      "height": 260,
+      "tint": [126, 164, 154],
+      "metadata": {
+        "geometry_class": "billboard_fx",
+        "depth_band": "farfield_atmosphere"
+      }
+    }
+  ]
+}

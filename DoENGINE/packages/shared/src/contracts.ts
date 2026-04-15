@@ -165,7 +165,14 @@ export interface HybridGameProfile {
     gameId: string;
     label: string;
     renderMode: 'full3d-pseudo3d-hybrid';
+    gameProfileManifest?: string;
+    gamePackageManifest?: string;
     playnowManifest?: string;
+    primarySource?: string;
+    sourceLanguage?: 'c' | 'typescript' | 'python' | 'json';
+    sceneManifest?: string;
+    defaultSavePath?: string;
+    gameplayBridge?: string;
     tutorialSpec?: string;
     controllerProfileId: string;
     supports: string[];

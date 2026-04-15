@@ -54,6 +54,27 @@ class KinshipHubProfile:
 
 
 @dataclass(frozen=True)
+class MatterProfile:
+    solid_density: float
+    liquid_flow: float
+    gas_diffusion: float
+    fluid_turbulence: float
+    reactive_volume: int
+
+
+@dataclass(frozen=True)
+class PlatformTargetProfile:
+    name: str
+    input_latency_ms: float
+    present_budget_ms: float
+    render_scale: float
+    handheld_bias: float
+    sensor_channels: int
+    volumetric_support: float
+    causality_feedback: float
+
+
+@dataclass(frozen=True)
 class HopeConfig:
     frame_budget_ms: float = 16.67
     polynomial_factor: float = 2.9
@@ -85,6 +106,9 @@ class HopeFrameResult:
     mesh_plan: dict[str, float]
     physics_plan: dict[str, float]
     family_hub_signal: dict[str, float]
+    target_profile: dict[str, object]
+    matter_plan: dict[str, float]
+    causality_plan: dict[str, float]
     recommendations: list[str] = field(default_factory=list)
 
     def to_dict(self) -> dict[str, object]:
@@ -155,6 +179,56 @@ def _predictive_split(complexity_index: float, clog_risk: float, misalignment: f
     return predictive_share, adaptive_share
 
 
+def _matter_pressure(matter: MatterProfile | None) -> float:
+    if matter is None:
+        return 0.0
+    return _clamp(
+        matter.solid_density * 0.18
+        + matter.liquid_flow * 0.23
+        + matter.gas_diffusion * 0.16
+        + matter.fluid_turbulence * 0.21
+        + min(1.0, matter.reactive_volume / 128.0) * 0.22,
+        0.0,
+        1.0,
+    )
+
+
+def _target_signal(target: PlatformTargetProfile | None) -> dict[str, object]:
+    if target is None:
+        return {
+            "name": "universal_host",
+            "input_latency_ms": 8.0,
+            "present_budget_ms": 16.67,
+            "render_scale": 1.0,
+            "handheld_bias": 0.25,
+            "sensor_channels": 1,
+            "volumetric_support": 0.5,
+            "causality_feedback": 0.5,
+            "latency_pressure": 0.0,
+            "present_pressure": 0.0,
+            "sensor_pressure": 0.0,
+            "volumetric_pressure": 0.0,
+        }
+    latency_pressure = _clamp((target.input_latency_ms - 8.0) / 24.0, 0.0, 1.0)
+    present_pressure = _clamp((16.67 - target.present_budget_ms) / 10.0, 0.0, 1.0)
+    sensor_pressure = _clamp(target.sensor_channels / 6.0, 0.0, 1.0)
+    volumetric_pressure = _clamp(1.0 - target.volumetric_support, 0.0, 1.0)
+    return {
+        "name": target.name,
+        "input_latency_ms": round(target.input_latency_ms, 4),
+        "present_budget_ms": round(target.present_budget_ms, 4),
+        "render_scale": round(target.render_scale, 4),
+        "handheld_bias": round(target.handheld_bias, 4),
+        "sensor_channels": target.sensor_channels,
+        "volumetric_support": round(target.volumetric_support, 4),
+        "causality_feedback": round(target.causality_feedback, 4),
+        "latency_pressure": round(latency_pressure, 4),
+        "present_pressure": round(present_pressure, 4),
+        "sensor_pressure": round(sensor_pressure, 4),
+        "volumetric_pressure": round(volumetric_pressure, 4),
+    }
+
+
 def evaluate_hope_frame(
     mesh: MeshProfile,
     physics: PhysicsProfile,
@@ -163,6 +237,8 @@ def evaluate_hope_frame(
     kinship: KinshipHubProfile,
     *,
     config: HopeConfig | None = None,
+    matter: MatterProfile | None = None,
+    target: PlatformTargetProfile | None = None,
     adaptation_enabled: bool = True,
 ) -> HopeFrameResult:
     config = config or HopeConfig()
@@ -170,11 +246,16 @@ def evaluate_hope_frame(
     polynomial_budget_ms = config.polynomial_factor * pow(complexity_index, config.polynomial_power)
 
     family_signal = _family_hub_signal(kinship)
+    matter_pressure = _matter_pressure(matter)
+    target_signal = _target_signal(target)
     raw_frame_cost_ms = (
         config.base_cost_ms
         + complexity_index * 0.84 * config.godai_pressure
         + pipeline.frame_buffer_variance * 3.2
         + pipeline.present_jitter * 2.6
+        + matter_pressure * 2.1
+        + float(target_signal["latency_pressure"]) * 1.8
+        + float(target_signal["present_pressure"]) * 1.2
         - family_signal["resonance_relief"] * 1.35 * config.godai_mercy
     )
     overload_ms = max(0.0, raw_frame_cost_ms - polynomial_budget_ms)
@@ -183,6 +264,8 @@ def evaluate_hope_frame(
         + pipeline.upload_mb * 0.006
         + physics.contact_pairs * 0.0025
         + cosmic.recursion_depth * 0.06
+        + matter_pressure * 0.12
+        + float(target_signal["volumetric_pressure"]) * 0.08
         - family_signal["resonance_relief"] * 0.22,
         0.0,
         1.0,
@@ -191,6 +274,8 @@ def evaluate_hope_frame(
         pipeline.frame_buffer_variance * 0.72
         + pipeline.present_jitter * 0.58
         + mesh.material_count * 0.01
+        + float(target_signal["present_pressure"]) * 0.18
+        + float(target_signal["sensor_pressure"]) * 0.06
         - mesh.lod_levels * 0.06
         - family_signal["sanctuary_strength"] * 0.18,
         0.0,
@@ -202,6 +287,8 @@ def evaluate_hope_frame(
         (overload_ms / max(polynomial_budget_ms, 1.0)) * config.overload_weight
         + clog_risk * 0.44
         + misalignment * 0.33
+        + matter_pressure * 0.24
+        + float(target_signal["causality_feedback"]) * 0.08
         + (config.godai_novelty - 1.0) * 0.22
         - family_signal["sanctuary_strength"] * 0.28
     )
@@ -242,6 +329,19 @@ def evaluate_hope_frame(
         "interaction_gate": round(_clamp(1.0 - theta * 0.22 + config.godai_mercy * 0.04, 0.7, 1.05), 4),
         "movement_cushion": round(_clamp(family_signal["resonance_relief"] * 0.35 + theta * 0.2, 0.0, 0.65), 4),
     }
+    matter_plan = {
+        "matter_pressure": round(matter_pressure, 4),
+        "solid_retention": round(_clamp((matter.solid_density if matter else 0.42) * (1.0 - theta * 0.12), 0.0, 1.0), 4),
+        "liquid_responsiveness": round(_clamp((matter.liquid_flow if matter else 0.34) + family_signal["resonance_relief"] * 0.08 - clog_risk * 0.06, 0.0, 1.0), 4),
+        "gas_resonance": round(_clamp((matter.gas_diffusion if matter else 0.28) + predictive_share * 0.14 + float(target_signal["sensor_pressure"]) * 0.08, 0.0, 1.0), 4),
+        "fluid_turbulence": round(_clamp((matter.fluid_turbulence if matter else 0.22) + misalignment * 0.18 - theta * 0.05, 0.0, 1.0), 4),
+    }
+    causality_plan = {
+        "input_to_simulation": round(_clamp(1.0 - float(target_signal["latency_pressure"]) * 0.42 + predictive_share * 0.12 + family_signal["sanctuary_strength"] * 0.09, 0.0, 1.0), 4),
+        "simulation_to_render": round(_clamp(1.0 - misalignment * 0.52 - clog_risk * 0.18 + adaptive_share * 0.16 + float(target_signal["causality_feedback"]) * 0.1, 0.0, 1.0), 4),
+        "entity_affordance_feedback": round(_clamp(family_signal["sanctuary_strength"] * 0.24 + adaptive_share * 0.22 + (1.0 - clog_risk) * 0.16 + matter_plan["liquid_responsiveness"] * 0.18, 0.0, 1.0), 4),
+        "volumetric_reactivity": round(_clamp(matter_plan["matter_pressure"] * 0.44 + matter_plan["gas_resonance"] * 0.18 + float(target_signal["volumetric_support"]) * 0.28, 0.0, 1.0), 4),
+    }
 
     recommendations: list[str] = []
     if clog_risk >= 0.55:
@@ -254,6 +354,10 @@ def evaluate_hope_frame(
         recommendations.append("Use the kinship hub as a calm pocket that suppresses tail latency and stabilizes world recursion.")
     if cosmic.recursion_depth >= 4:
         recommendations.append("Throttle recursive world spawning through causality bands so cosmic generation stays legible to the renderer and physics stack.")
+    if matter_pressure >= 0.45:
+        recommendations.append("Bind solid, liquid, gas, and fluid layers through a shared volumetric clock so the world state can bend presentation without desynchronizing play.")
+    if float(target_signal["handheld_bias"]) >= 0.6:
+        recommendations.append("Favor handheld-safe response envelopes: shorter present queues, cleaner input affordances, and lower visual churn per frame.")
 
     return HopeFrameResult(
         scene_name=mesh.name,
@@ -273,6 +377,9 @@ def evaluate_hope_frame(
         mesh_plan=mesh_plan,
         physics_plan=physics_plan,
         family_hub_signal=family_signal,
+        target_profile=target_signal,
+        matter_plan=matter_plan,
+        causality_plan=causality_plan,
         recommendations=recommendations,
     )
 

@@ -1,0 +1,140 @@
+{
+  "project": {
+    "title": "Double-Blade EverGlades",
+    "short_code": "double_blade_everglades",
+    "genre": ["third_person_action", "co_op", "soulslike_progression", "precision_melee"],
+    "camera": "behind_full_body",
+    "world_shape": "diamond",
+    "world_area_sqft": 35687,
+    "playable_characters": 2,
+    "target_platforms": [
+      "pc",
+      "switch",
+      "switch2",
+      "xbox_series",
+      "ps5",
+      "ps6_class",
+      "rog_ally",
+      "steam_deck"
+    ]
+  },
+  "fiction": {
+    "village_name": "KanBarilNucelotosc Village",
+    "wondercrop_name": "KanBarilNucelotosc",
+    "villager_form": "genderless limbless horticultural villagers with expressive heads, hands, and feet extremities",
+    "inciting_crisis": "commodified overuse, smoke saturation, and crop hyper-growth produce hostile sentient botanical life",
+    "final_boss": "MandrakeMother"
+  },
+  "controller_contract": {
+    "sticks": {
+      "left": "left-hand placement and aim arc",
+      "right": "right-hand placement and aim arc"
+    },
+    "bumpers": {
+      "left": "left-hand slash",
+      "right": "right-hand slash"
+    },
+    "triggers": {
+      "alternate_forward": "walk forward by alternating left and right triggers",
+      "alternate_backstep": "move backward by double-tapping and alternating left and right triggers",
+      "hold_strafe": "holding either trigger plants stance for strafing"
+    },
+    "dpad": "auto-collected cull-drop items",
+    "face_buttons": "special skills",
+    "peripheral_buttons": "menu and map"
+  },
+  "catalog_targets": {
+    "blade_variants": 1064,
+    "skills": 13,
+    "items": 32,
+    "enemy_varieties": 230,
+    "rootknots": 11
+  },
+  "progression": {
+    "acts": [
+      {
+        "id": "act_01",
+        "name": "Withered Commons",
+        "theme": "collapsed horticultural village perimeter",
+        "distance_band": [0.0, 0.18],
+        "pressure": 0.18,
+        "mutation_complexity": 0.12,
+        "precision_demand": 0.2,
+        "new_skill_unlocks": ["shear_dash", "spore_lantern"],
+        "enemy_focus_families": ["vine_snare", "spore_mite", "bloom_hound"]
+      },
+      {
+        "id": "act_02",
+        "name": "Resin Walks",
+        "theme": "amber canals and choking lattice trails",
+        "distance_band": [0.18, 0.38],
+        "pressure": 0.34,
+        "mutation_complexity": 0.29,
+        "precision_demand": 0.32,
+        "new_skill_unlocks": ["cauter_bloom", "split_guard", "root_hook"],
+        "enemy_focus_families": ["tar_reed", "pollen_angler", "cane_crusher"]
+      },
+      {
+        "id": "act_03",
+        "name": "Smoke Loom",
+        "theme": "dense purple canopy and weaving hazard corridors",
+        "distance_band": [0.38, 0.61],
+        "pressure": 0.51,
+        "mutation_complexity": 0.47,
+        "precision_demand": 0.48,
+        "new_skill_unlocks": ["double_reap", "thistle_wake", "lung_bell"],
+        "enemy_focus_families": ["loom_worm", "fog_orchid", "lash_spindle"]
+      },
+      {
+        "id": "act_04",
+        "name": "Knotfall Basin",
+        "theme": "compressed route forks around elite root masses",
+        "distance_band": [0.61, 0.84],
+        "pressure": 0.73,
+        "mutation_complexity": 0.68,
+        "precision_demand": 0.71,
+        "new_skill_unlocks": ["graft_burst", "bramble_axis"],
+        "enemy_focus_families": ["knot_ram", "gob_smoker", "shard_tuber"]
+      },
+      {
+        "id": "act_05",
+        "name": "Mother Verge",
+        "theme": "terminal approach to the MandrakeMother bloom throne",
+        "distance_band": [0.84, 1.0],
+        "pressure": 0.92,
+        "mutation_complexity": 0.9,
+        "precision_demand": 0.94,
+        "new_skill_unlocks": ["grave_prune", "twin_hymn", "rootknot_overdrive"],
+        "enemy_focus_families": ["queenling", "mandrake_guard", "vein_colossus"]
+      }
+    ]
+  },
+  "item_pools": {
+    "healing": ["sap_patch", "brew_pulp", "calm_fiber", "bitter_bloom"],
+    "buff": ["focus_ash", "lung_salt", "steady_resin", "hush_leaf"],
+    "throwable": ["spore_capsule", "seed_shard", "resin_glob", "flare_bud"],
+    "utility": ["root_line", "smoke_filter", "knot_key", "wick_mesh"],
+    "rare": ["amber_heart", "violet_tar", "mother_pearl", "hollow_seed"],
+    "craft": ["fiber_twist", "barb_twine", "pulp_thread", "green_bone"],
+    "weapon_mod": ["split_edge", "echo_grain", "sap_channel", "thorn_socket"],
+    "growth": ["root_ink", "hymn_pith", "veil_sap", "cinder_moss"]
+  },
+  "blade_generation": {
+    "forms": [
+      "pruner", "sickle", "talon_knife", "split_machete", "vine_cleaver", "reed_sabre", "graft_axe", "spine_dao",
+      "curve_bill", "petal_chopper", "sap_scissor", "loom_blade", "harvest_hook", "thorn_gladius", "knot_falx", "bog_lance",
+      "reed_razor", "amber_halberd", "double_stem"
+    ],
+    "materials": ["copperwood", "amber_steel", "blackreed", "moon_sap", "brass_root", "bog_iron", "glass_seed", "grave_silver"],
+    "edge_profiles": ["flat", "serrated", "toothed", "forked", "barbed", "hollow", "spiral"]
+  },
+  "enemy_generation": {
+    "families": [
+      "vine_snare", "spore_mite", "bloom_hound", "tar_reed", "pollen_angler", "cane_crusher", "loom_worm", "fog_orchid", "lash_spindle", "knot_ram"
+    ],
+    "mutations": [
+      "feral", "armored", "toxic", "luminous", "burrowing", "howling", "scissorjaw", "tarblood", "splitstem", "haloed", "ashen",
+      "grafted", "veilstep", "needlehide", "caustic", "queenmarked", "rootbound", "crusher", "dripping", "smokevein", "bellflower", "rattlepod", "brutal"
+    ]
+  }
+}

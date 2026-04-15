@@ -53,18 +53,18 @@ def main() -> int:
     blender_ingest = OUT / "blender_bundle" / "blender_ingest.py"
     blender_report = run([sys.executable, str(blender_ingest), str(blender_bundle)])
 
-    id_manifest = json.loads((OUT / "idtech2_bundle" / "idtech2_manifest.json").read_text(encoding="utf-8"))
+    engine_manifest = json.loads((OUT / "engine_bundle" / "engine_manifest.json").read_text(encoding="utf-8"))
     report = {
         "build_output": json.loads(build_output),
         "pipeline_output": json.loads(pipeline_output),
         "png_assets_checked": len(png_reports),
         "png_transparency_failures": [item["path"] for item in png_reports if not item["has_transparency"]],
         "blender_report": json.loads(blender_report),
-        "idtech_summary": {
-            "asset_count": len(id_manifest["assets"]),
-            "precache_count": len(id_manifest["precache"]),
-            "system_count": len(id_manifest["systems"]),
-            "entity_count": len(id_manifest["entities"]),
+        "engine_summary": {
+            "asset_count": len(engine_manifest["assets"]),
+            "precache_count": len(engine_manifest["precache"]),
+            "system_count": len(engine_manifest["systems"]),
+            "entity_count": len(engine_manifest["entities"]),
         },
         "recraft_manifest": {
             "path": str(PROJECT_ROOT / "recraft_manifest.json"),

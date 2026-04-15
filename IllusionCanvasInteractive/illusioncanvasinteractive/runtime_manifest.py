@@ -7,6 +7,7 @@ from copy import deepcopy
 BUCKET_MAP = {
     "character_sheet": "actors",
     "animation_pack": "actors",
+    "audio": "audio",
     "environment_set": "spaces",
     "animated_environment_object": "spaces",
     "apiary_sheet": "spaces",
@@ -43,6 +44,7 @@ def build_illusioncanvas_runtime_manifest(source_manifest: dict) -> dict:
                 "source_path": asset["out"],
                 "generation_mode": asset.get("generation_mode", "packed_master"),
                 "derived_outputs": protocol.get("derived_outputs", []),
+                "protocol": deepcopy(protocol),
                 "hybrid_render_role": _render_role(asset["category"]),
                 "projection_profile": {
                     "layout": protocol.get("layout", "packed_reference_sheet"),

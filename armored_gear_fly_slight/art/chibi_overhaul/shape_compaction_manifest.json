@@ -1,0 +1,209 @@
+{
+  "project": "Armored Gear: Fly Slight",
+  "shape_cap": 1000,
+  "sprite_designs": [
+    {
+      "sprite_id": "feather_bearer/wake_ashore",
+      "target_shapes": 1000,
+      "primary_shapes": 140,
+      "secondary_shapes": 340,
+      "micro_shapes": 520
+    },
+    {
+      "sprite_id": "feather_bearer/idle_north",
+      "target_shapes": 1000,
+      "primary_shapes": 140,
+      "secondary_shapes": 340,
+      "micro_shapes": 520
+    },
+    {
+      "sprite_id": "feather_bearer/idle_south",
+      "target_shapes": 1000,
+      "primary_shapes": 140,
+      "secondary_shapes": 340,
+      "micro_shapes": 520
+    },
+    {
+      "sprite_id": "feather_bearer/idle_west",
+      "target_shapes": 1000,
+      "primary_shapes": 140,
+      "secondary_shapes": 340,
+      "micro_shapes": 520
+    },
+    {
+      "sprite_id": "feather_bearer/idle_east",
+      "target_shapes": 1000,
+      "primary_shapes": 140,
+      "secondary_shapes": 340,
+      "micro_shapes": 520
+    },
+    {
+      "sprite_id": "feather_bearer/walk_north",
+      "target_shapes": 1000,
+      "primary_shapes": 140,
+      "secondary_shapes": 340,
+      "micro_shapes": 520
+    },
+    {
+      "sprite_id": "feather_bearer/walk_south",
+      "target_shapes": 1000,
+      "primary_shapes": 140,
+      "secondary_shapes": 340,
+      "micro_shapes": 520
+    },
+    {
+      "sprite_id": "feather_bearer/walk_west",
+      "target_shapes": 1000,
+      "primary_shapes": 140,
+      "secondary_shapes": 340,
+      "micro_shapes": 520
+    },
+    {
+      "sprite_id": "feather_bearer/walk_east",
+      "target_shapes": 1000,
+      "primary_shapes": 140,
+      "secondary_shapes": 340,
+      "micro_shapes": 520
+    },
+    {
+      "sprite_id": "feather_bearer/rake_combo_north",
+      "target_shapes": 1000,
+      "primary_shapes": 140,
+      "secondary_shapes": 340,
+      "micro_shapes": 520
+    },
+    {
+      "sprite_id": "feather_bearer/rake_combo_south",
+      "target_shapes": 1000,
+      "primary_shapes": 140,
+      "secondary_shapes": 340,
+      "micro_shapes": 520
+    },
+    {
+      "sprite_id": "feather_bearer/rake_combo_west",
+      "target_shapes": 1000,
+      "primary_shapes": 140,
+      "secondary_shapes": 340,
+      "micro_shapes": 520
+    },
+    {
+      "sprite_id": "feather_bearer/rake_combo_east",
+      "target_shapes": 1000,
+      "primary_shapes": 140,
+      "secondary_shapes": 340,
+      "micro_shapes": 520
+    },
+    {
+      "sprite_id": "feather_bearer/till_soil",
+      "target_shapes": 1000,
+      "primary_shapes": 140,
+      "secondary_shapes": 340,
+      "micro_shapes": 520
+    },
+    {
+      "sprite_id": "feather_bearer/plant_seed",
+      "target_shapes": 1000,
+      "primary_shapes": 140,
+      "secondary_shapes": 340,
+      "micro_shapes": 520
+    },
+    {
+      "sprite_id": "feather_bearer/harvest_bundle",
+      "target_shapes": 1000,
+      "primary_shapes": 140,
+      "secondary_shapes": 340,
+      "micro_shapes": 520
+    },
+    {
+      "sprite_id": "feather_bearer/build_settlement",
+      "target_shapes": 1000,
+      "primary_shapes": 140,
+      "secondary_shapes": 340,
+      "micro_shapes": 520
+    },
+    {
+      "sprite_id": "feather_bearer/rest_heal",
+      "target_shapes": 1000,
+      "primary_shapes": 140,
+      "secondary_shapes": 340,
+      "micro_shapes": 520
+    },
+    {
+      "sprite_id": "feather_bearer/hurt_stagger",
+      "target_shapes": 1000,
+      "primary_shapes": 140,
+      "secondary_shapes": 340,
+      "micro_shapes": 520
+    },
+    {
+      "sprite_id": "daemon_kin/perch",
+      "target_shapes": 1000,
+      "primary_shapes": 120,
+      "secondary_shapes": 350,
+      "micro_shapes": 530
+    },
+    {
+      "sprite_id": "daemon_kin/roam",
+      "target_shapes": 1000,
+      "primary_shapes": 120,
+      "secondary_shapes": 350,
+      "micro_shapes": 530
+    },
+    {
+      "sprite_id": "daemon_kin/windup",
+      "target_shapes": 1000,
+      "primary_shapes": 120,
+      "secondary_shapes": 350,
+      "micro_shapes": 530
+    },
+    {
+      "sprite_id": "daemon_kin/lunge",
+      "target_shapes": 1000,
+      "primary_shapes": 120,
+      "secondary_shapes": 350,
+      "micro_shapes": 530
+    },
+    {
+      "sprite_id": "daemon_kin/stagger",
+      "target_shapes": 1000,
+      "primary_shapes": 120,
+      "secondary_shapes": 350,
+      "micro_shapes": 530
+    },
+    {
+      "sprite_id": "daemon_of_famine/perch_guard",
+      "target_shapes": 1000,
+      "primary_shapes": 110,
+      "secondary_shapes": 370,
+      "micro_shapes": 520
+    },
+    {
+      "sprite_id": "daemon_of_famine/advance",
+      "target_shapes": 1000,
+      "primary_shapes": 110,
+      "secondary_shapes": 370,
+      "micro_shapes": 520
+    },
+    {
+      "sprite_id": "daemon_of_famine/windup",
+      "target_shapes": 1000,
+      "primary_shapes": 110,
+      "secondary_shapes": 370,
+      "micro_shapes": 520
+    },
+    {
+      "sprite_id": "daemon_of_famine/slam",
+      "target_shapes": 1000,
+      "primary_shapes": 110,
+      "secondary_shapes": 370,
+      "micro_shapes": 520
+    },
+    {
+      "sprite_id": "daemon_of_famine/break_state",
+      "target_shapes": 1000,
+      "primary_shapes": 110,
+      "secondary_shapes": 370,
+      "micro_shapes": 520
+    }
+  ]
+}

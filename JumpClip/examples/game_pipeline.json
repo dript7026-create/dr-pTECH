@@ -1,0 +1,15 @@
+{
+  "pipeline_name": "generic-action-2d",
+  "engine": "custom",
+  "target_frame_size": 64,
+  "pixels_per_unit": 16,
+  "frame_duration_ms": 90,
+  "max_sheet_width": 512,
+  "pivot_x": 0.5,
+  "pivot_y": 1.0,
+  "emit_preview_gif": true,
+  "emit_frame_sequence": false,
+  "emit_visual_regression": true,
+  "visual_regression_columns": 4,
+  "emitters": ["generic", "unity", "godot", "aseprite"]
+}

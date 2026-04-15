@@ -1,0 +1,15 @@
+{
+  "capability_id": "replace-me",
+  "issued_to": "licensed-user-or-device",
+  "key_id": "homelair-main-2026",
+  "features": [
+    "wavefold.pro"
+  ],
+  "limits": {
+    "max_fold_amplitude": 0.24,
+    "fallback_fold_amplitude": 0.08,
+    "fallback_inward_bias": 0.05
+  },
+  "expires_utc": "2030-01-01T00:00:00Z",
+  "signature_b64": "SIGN_WITH_PRIVATE_KEY_OFF_REPO"
+}

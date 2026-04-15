@@ -1,0 +1,83 @@
+{
+  "name": "playhub_sanctuary_plaza",
+  "showcase_name": "PlayHub Sanctuary Plaza",
+  "camera": {
+    "orbit": 0.48,
+    "elevation": 0.16,
+    "focus_z": 13.0
+  },
+  "scene_entries": [
+    {
+      "kind": "mesh",
+      "id": "playhub_terrain",
+      "label": "Sanctuary Terrain",
+      "loader": "obj",
+      "mesh": "../meshes/homelair_terrain_basin.obj",
+      "position": [0.0, -0.55, 10.5],
+      "rotation": [0.0, 0.05, 0.0],
+      "scale": 1.45,
+      "material": "stone",
+      "material_profile": "../materials/terrain_material.json",
+      "metadata": {
+        "geometry_class": "landscape_mesh",
+        "depth_band": "midfield_occlusion"
+      }
+    },
+    {
+      "kind": "mesh",
+      "id": "playhub_guardian",
+      "label": "Plaza Guardian",
+      "loader": "wavefold",
+      "mesh": "../meshes/homelair_guardian_avatar.wavefold.json",
+      "position": [-1.2, 0.0, 12.2],
+      "rotation": [0.0, 0.28, 0.0],
+      "scale": 1.35,
+      "material": "bone",
+      "material_profile": "../materials/guardian_material.json",
+      "scripts": [
+        {"type": "bob", "amplitude": 0.05, "speed": 0.9}
+      ],
+      "metadata": {
+        "geometry_class": "skeletal_mesh",
+        "rig_profile": "../rigs/humanoid_biped_v1.json",
+        "animation_set": "sanctuary_pose",
+        "encoding_family": "wavefold_geometry"
+      }
+    },
+    {
+      "kind": "mesh",
+      "id": "west_arch",
+      "label": "West Arch",
+      "loader": "builtin",
+      "mesh": "arch",
+      "position": [-3.8, 0.3, 15.5],
+      "rotation": [0.0, 0.15, 0.0],
+      "scale": 1.7,
+      "material": "amber"
+    },
+    {
+      "kind": "mesh",
+      "id": "east_arch",
+      "label": "East Arch",
+      "loader": "builtin",
+      "mesh": "arch",
+      "position": [3.8, 0.25, 15.8],
+      "rotation": [0.0, -0.15, 0.0],
+      "scale": 1.7,
+      "material": "amber"
+    },
+    {
+      "kind": "billboard",
+      "id": "playhub_sky_band",
+      "label": "Social Atmosphere",
+      "position": [0.0, 1.5, 24.5],
+      "width": 600,
+      "height": 280,
+      "tint": [168, 178, 154],
+      "metadata": {
+        "geometry_class": "billboard_fx",
+        "depth_band": "farfield_atmosphere"
+      }
+    }
+  ]
+}

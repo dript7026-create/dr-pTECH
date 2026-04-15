@@ -10,7 +10,10 @@ from queue import Empty, Queue
 import tkinter as tk
 from tkinter import messagebox, ttk
 
-from validate_pipeline_core import ROOT, ValidationFailure, run_validation_suite
+try:
+    from validate_pipeline_core import ROOT, ValidationFailure, run_validation_suite
+except ImportError:
+    from egosphere.tools.validate_pipeline_core import ROOT, ValidationFailure, run_validation_suite
 
 
 def _open_path(path: Path) -> None:
@@ -39,6 +42,7 @@ class ValidatorApp:
         self.status_var = tk.StringVar(value="Ready")
         self.sample_var = tk.StringVar(value="Sample: idle")
         self.pertinence_var = tk.StringVar(value="Pertinence: idle")
+        self.hope_var = tk.StringVar(value="HOPE: idle")
         self.output_var = tk.StringVar(value=f"Output root: {(ROOT / 'pipeline' / 'out').as_posix()}")
 
         self._build_layout()
@@ -59,7 +63,7 @@ class ValidatorApp:
         suite_box = ttk.Combobox(
             toolbar,
             textvariable=self.suite_var,
-            values=("sample", "pertinence", "all"),
+            values=("sample", "pertinence", "hope", "all"),
             state="readonly",
             width=16,
         )
@@ -83,10 +87,12 @@ class ValidatorApp:
         metrics.columnconfigure(0, weight=1)
         metrics.columnconfigure(1, weight=1)
         metrics.columnconfigure(2, weight=1)
+        metrics.columnconfigure(3, weight=1)
 
         ttk.Label(metrics, textvariable=self.sample_var, relief="groove", padding=10).grid(row=0, column=0, sticky="ew", padx=(0, 8))
         ttk.Label(metrics, textvariable=self.pertinence_var, relief="groove", padding=10).grid(row=0, column=1, sticky="ew", padx=(0, 8))
-        ttk.Label(metrics, textvariable=self.output_var, relief="groove", padding=10).grid(row=0, column=2, sticky="ew")
+        ttk.Label(metrics, textvariable=self.hope_var, relief="groove", padding=10).grid(row=0, column=2, sticky="ew", padx=(0, 8))
+        ttk.Label(metrics, textvariable=self.output_var, relief="groove", padding=10).grid(row=0, column=3, sticky="ew")
 
         panes = ttk.Panedwindow(self.root, orient="horizontal")
         panes.grid(row=2, column=0, sticky="nsew", padx=12, pady=(0, 12))
@@ -126,6 +132,7 @@ class ValidatorApp:
     def _update_metrics(self, payload: dict) -> None:
         sample = next((item for item in payload.get("results", []) if item.get("project") == "sample"), None)
         pertinence = next((item for item in payload.get("results", []) if item.get("project") == "pertinence"), None)
+        hope = next((item for item in payload.get("results", []) if item.get("project") == "hope"), None)
 
         if sample is None:
             self.sample_var.set("Sample: not run")
@@ -145,6 +152,15 @@ class ValidatorApp:
                 "Pertinence: "
                 f"png {pertinence.get('png_assets_checked', 0)} | scenes {blender.get('scene_count', 0)} | "
                 f"assets {idtech.get('asset_count', 0)} | precache {idtech.get('precache_count', 0)}"
+            )
+
+        if hope is None:
+            self.hope_var.set("HOPE: not run")
+        else:
+            self.hope_var.set(
+                "HOPE: "
+                f"{hope.get('project_name', 'unknown')} | scenes {hope.get('scene_count', 0)} | "
+                f"ecology {hope.get('ecology_asset_count', 0)} | transitions {hope.get('runtime_transitions', 0)}"
             )
 
     def start_validation(self) -> None:
@@ -230,7 +246,7 @@ def launch_app(*, initial_suite: str = "sample", auto_run: bool = False) -> int:
 
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description="Launch the egosphere pipeline validation desktop app")
-    parser.add_argument("--suite", choices=["sample", "pertinence", "all"], default="sample")
+    parser.add_argument("--suite", choices=["sample", "pertinence", "hope", "all"], default="sample")
     parser.add_argument("--run", action="store_true", help="Start validation immediately after launch")
     args = parser.parse_args(argv)
     return launch_app(initial_suite=args.suite, auto_run=args.run)

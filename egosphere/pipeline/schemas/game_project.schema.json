@@ -97,9 +97,9 @@
     "seed": { "type": "string" },
     "authoring": {
       "type": "object",
-      "required": ["clipstudio", "blender", "idtech2"],
+      "required": ["art_export", "blender", "engine"],
       "properties": {
-        "clipstudio": {
+        "art_export": {
           "type": "object",
           "properties": {
             "canvas": {
@@ -133,7 +133,7 @@
             "scene_build": { "type": "array", "items": { "type": "object" } }
           }
         },
-        "idtech2": {
+        "engine": {
           "type": "object",
           "required": ["module_name", "asset_root", "autofactor_prefix"],
           "properties": {
@@ -167,11 +167,11 @@
     },
     "targets": {
       "type": "object",
-      "required": ["clipstudio_bundle", "blender_bundle", "idtech2_bundle"],
+      "required": ["art_bundle", "blender_bundle", "engine_bundle"],
       "properties": {
-        "clipstudio_bundle": { "type": "string" },
+        "art_bundle": { "type": "string" },
         "blender_bundle": { "type": "string" },
-        "idtech2_bundle": { "type": "string" }
+        "engine_bundle": { "type": "string" }
       }
     }
   }

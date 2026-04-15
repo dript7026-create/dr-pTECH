@@ -5,10 +5,10 @@
     "version": "1.0"
   },
   "metadata": {
-    "title": "Aridfeihth Tutorial Demo",
+    "title": "Aridfeihth Ash-Reliquary Demo",
     "project": "aridfeihth",
     "engine": "IllusionCanvasInteractive",
-    "experience_goal": "A tense side-view tutorial expedition that walks the player through rescue, tension control, boss-state resolution, persistence, and a hinted larger world beyond the first refuge loop."
+    "experience_goal": "A tense side-view pilgrimage through ash, oxidized brass, and wind-cut stone where rescue, pressure, and bond discipline all feed the same harsh frontier identity."
   },
   "integrations": {
     "egosphere": {
@@ -44,9 +44,9 @@
       "horizon": 0.56
     },
     "palette_notes": [
-      "dry cobalt sky",
-      "salt brass highlights",
-      "ember rust ground plane"
+      "ash-cobalt dusk over a weathered horizon",
+      "oxidized brass trims and reliquary glints",
+      "ember rust, kiln brown, and grave-grey ground planes"
     ]
   },
   "ui": {
@@ -68,14 +68,14 @@
     "milestones": [
       {
         "id": "refuge_reset",
-        "label": "Refuge reset complete",
+        "label": "Refuge hearth steadied",
         "criteria": {
           "rested_in_room": "latchspire_refuge"
         }
       },
       {
         "id": "mirror_newt_rescued",
-        "label": "Mirror Newt rescue gate",
+        "label": "Mirror Newt trust earned",
         "criteria": {
           "rescued_pet": "mirror_newt",
           "requires_previous": [
@@ -85,7 +85,7 @@
       },
       {
         "id": "latch_spider_rescued",
-        "label": "Latch Spider rescue gate",
+        "label": "Latch Spider anchored",
         "criteria": {
           "rescued_pet": "latch_spider",
           "requires_previous": [
@@ -95,7 +95,7 @@
       },
       {
         "id": "switchyard_stabilized",
-        "label": "Switchyard pressure gate cleared",
+        "label": "Switchyard pressure broken",
         "criteria": {
           "room_clear_in_room": "ossuary_switchyard",
           "requires_previous": [
@@ -105,7 +105,7 @@
       },
       {
         "id": "ember_nave_weave",
-        "label": "Boss weave gate resolved",
+        "label": "Ember sanction unwoven",
         "criteria": {
           "boss_defeated_in_room": "ember_nave",
           "requires_previous": [
@@ -115,7 +115,7 @@
       },
       {
         "id": "sanctum_return",
-        "label": "Post-boss return and persistence readiness",
+        "label": "Ash sanctum reclaimed",
         "criteria": {
           "entered_room": "tutorial_sanctum",
           "requires_previous": [
@@ -125,7 +125,7 @@
       },
       {
         "id": "reliquary_bazaar_reached",
-        "label": "Bazaar teaser route reached",
+        "label": "Reliquary market reached",
         "criteria": {
           "entered_room": "reliquary_bazaar",
           "requires_previous": [
@@ -135,7 +135,7 @@
       },
       {
         "id": "atlas_choir_reached",
-        "label": "Atlas overlook reached",
+        "label": "Atlas overlook opened",
         "criteria": {
           "entered_room": "atlas_choir",
           "requires_previous": [
@@ -159,30 +159,30 @@
         "name": "Latchspire Refuge",
         "safe_room": true,
         "danger": 0,
-        "objective": "Rest once, review the roster, then leave the refuge with a stable bond profile.",
-        "tutorial_tip": "Press R in the refuge to rest. Movement is on the arrow keys. Your first live route begins to the right.",
+        "objective": "Steady the refuge hearth, read the roster, and leave the tower with a bond profile fit for the ash corridor beyond.",
+        "tutorial_tip": "Press R to rest beneath the brass warding lamps. Movement is on the arrow keys, and the first wind-cut route begins at the lamp-dark threshold to the right.",
         "popup": {
           "template": "sanctuary_shell",
-          "title": "Refuge Briefing",
-          "text": "Latchspire Refuge is the tutorial anchor. Rest now, then step into the route with Glass Beak on Burst and Wind Kite on Chorus so the full system language starts immediately."
+          "title": "Refuge Litany",
+          "text": "Latchspire Refuge is a soot-stained tower reliquary, not a neutral menu room. Rest under the brass lamps, study the dark seams in the stone, then step out with Glass Beak on Burst and Wind Kite on Chorus so the wasteland grammar begins in full voice."
         },
         "palette": [
-          "#253651",
-          "#33556d",
-          "#f1ba6b"
+          "#4a3a34",
+          "#5a6678",
+          "#b8924f"
         ],
         "parallax": [
           {
             "label": "wind towers",
             "x": 18,
             "parallax": 0.28,
-            "color": "#384f68"
+            "color": "#645850"
           },
           {
             "label": "nursery lanterns",
             "x": 72,
             "parallax": 0.42,
-            "color": "#596d55"
+            "color": "#6c7480"
           }
         ],
         "layout": {
@@ -192,14 +192,14 @@
               "x1": 0,
               "x2": 100,
               "y": 0,
-              "color": "#46566b"
+              "color": "#6b6158"
             },
             {
               "id": "refuge_perch",
               "x1": 58,
               "x2": 88,
               "y": 3,
-              "color": "#6d7b57"
+              "color": "#7e6f5b"
             }
           ],
           "encounter_zones": [
@@ -208,7 +208,7 @@
               "x1": 82,
               "x2": 100,
               "pressure_bonus": 0.02,
-              "event": "The refuge threshold gives way to the live route."
+              "event": "The threshold opens from lampwarm safety into red dust and moving iron."
             }
           ]
         },
@@ -222,30 +222,30 @@
         "name": "Choir Stair",
         "safe_room": false,
         "danger": 1,
-        "objective": "Practice dodge timing and Chorus control while crossing the exposed stair lane.",
-        "tutorial_tip": "Press Space to dodge through pressure and C to toggle Wind Kite. Chorus safety costs bond tension over time.",
+        "objective": "Learn dodge timing and Chorus discipline while the broken stair throws grit, shadow, and bad footing across your path.",
+        "tutorial_tip": "Press Space to dodge through pressure and C to toggle Wind Kite. Chorus buys breathing room, but the ash wind and worn stair edges make wasted tension expensive.",
         "popup": {
           "template": "tutorial_tip_shell",
-          "title": "Pressure Lesson",
-          "text": "The Choir Stair introduces a controlled failure space. Wind Kite buys safety, but only if you feel the tension drain and turn Chorus off before it becomes waste."
+          "title": "Crosswind Lesson",
+          "text": "Choir Stair is where the pilgrimage first stops being clean. Wind Kite buys safety, but only if you feel the drain early, read the broken steps and hanging dark shapes correctly, and cut Chorus before the brass thread frays into waste."
         },
         "palette": [
-          "#1a2535",
-          "#4a6071",
-          "#cba36d"
+          "#3f342f",
+          "#586273",
+          "#ad8350"
         ],
         "parallax": [
           {
             "label": "bell braces",
             "x": 22,
             "parallax": 0.2,
-            "color": "#38485a"
+            "color": "#5d5048"
           },
           {
             "label": "stair lanterns",
             "x": 76,
             "parallax": 0.4,
-            "color": "#5f6a58"
+            "color": "#75767d"
           }
         ],
         "layout": {
@@ -255,21 +255,21 @@
               "x1": 0,
               "x2": 100,
               "y": 0,
-              "color": "#3c4a5f"
+              "color": "#66554d"
             },
             {
               "id": "choir_mid_step",
               "x1": 18,
               "x2": 42,
               "y": 2,
-              "color": "#52657a"
+              "color": "#79665c"
             },
             {
               "id": "choir_high_step",
               "x1": 48,
               "x2": 74,
               "y": 4,
-              "color": "#6f7c63"
+              "color": "#8c7568"
             }
           ],
           "hazards": [
@@ -280,8 +280,8 @@
               "y": 0,
               "damage": 4,
               "tension": 3,
-              "color": "#d88a5f",
-              "event": "Glass grit tears across the stair lane."
+              "color": "#b45e46",
+              "event": "Razor grit skates down the stair and scores the route line."
             }
           ],
           "encounter_zones": [
@@ -291,8 +291,8 @@
               "x2": 70,
               "pressure_bonus": 0.05,
               "tension_bonus": 0.15,
-              "color": "#4f425f",
-              "event": "A crosswind pocket opens the first real pressure lane."
+              "color": "#6a4d45",
+              "event": "A crosswind pocket turns the stair into the first true pressure lane."
             }
           ]
         },
@@ -316,30 +316,30 @@
         "name": "Glasswind Causeway",
         "safe_room": false,
         "danger": 2,
-        "objective": "Stabilize the bridge predators and rescue the Mirror Newt to open reflective routes.",
-        "tutorial_tip": "Use Z for melee and X for Glass Beak. Burst commands open posture faster than basic chip damage.",
+        "objective": "Break the bridge predators, then rescue Mirror Newt so the route can bend through cobalt reflections, riveted iron, and exposed wind instead of brute force.",
+        "tutorial_tip": "Use Z for melee and X for Glass Beak. Burst commands crack posture faster than chip damage, which matters once the causeway starts hunting back through the open span.",
         "popup": {
           "template": "dialogue_shell",
           "title": "Field Note: Mirror Newt",
-          "text": "Mirror Newt is the first explicit rescue reward. The room teaches that route expansion does not come from looting a monster. It comes from calming a living system and earning its trust."
+          "text": "Mirror Newt is the first companion the wasteland gives back on trust alone. The route does not widen because you harvested a corpse. It widens because you calmed a living intelligence on a violent span of rivets, cables, cobalt shards, and bad air."
         },
         "palette": [
-          "#1e3450",
-          "#486e81",
-          "#df8a58"
+          "#4a302d",
+          "#55657a",
+          "#b4573f"
         ],
         "parallax": [
           {
             "label": "shard sails",
             "x": 28,
             "parallax": 0.22,
-            "color": "#3f5879"
+            "color": "#6a4f45"
           },
           {
             "label": "bridge ribs",
             "x": 76,
             "parallax": 0.46,
-            "color": "#5d6475"
+            "color": "#73757a"
           }
         ],
         "layout": {
@@ -349,14 +349,14 @@
               "x1": 0,
               "x2": 100,
               "y": 0,
-              "color": "#4a6179"
+              "color": "#6a564c"
             },
             {
               "id": "causeway_span",
               "x1": 34,
               "x2": 64,
               "y": 3,
-              "color": "#738090"
+              "color": "#7b7d82"
             }
           ],
           "hazards": [
@@ -367,8 +367,8 @@
               "y": 0,
               "damage": 5,
               "tension": 4,
-              "color": "#cf745d",
-              "event": "The shattered bridge edge bites back."
+              "color": "#a74a3d",
+              "event": "The broken lip of the causeway chews at every careless step."
             }
           ],
           "encounter_zones": [
@@ -378,8 +378,8 @@
               "x2": 88,
               "pressure_bonus": 0.08,
               "tension_bonus": 0.2,
-              "color": "#5e495b",
-              "event": "The bridge predators lock onto the expedition line."
+              "color": "#7a5648",
+              "event": "Bridge predators lock onto the expedition line and force the march into open view."
             }
           ]
         },
@@ -419,30 +419,30 @@
         "name": "Mirror Cistern",
         "safe_room": false,
         "danger": 3,
-        "objective": "Read the mirrored attack lines, then free the Latch Spider from the water clocks.",
-        "tutorial_tip": "Reed Fin is a Crest pet. Its support is passive, so this room is about noticing what your build is already doing for you.",
+        "objective": "Read the mirrored kill-lines in the cistern and free Latch Spider from drowned clockwork before the chamber folds in on itself.",
+        "tutorial_tip": "Reed Fin is a Crest pet. This room is about noticing quiet protection while wet stone, red reflections, and cobalt glare try to convince you the pressure is larger than it is.",
         "popup": {
           "template": "codex_shell",
           "title": "Codex: Crest Reading",
-          "text": "Mirror Cistern exists to prove that not every pet verb is a button. Reed Fin improves recovery tempo quietly, and the player is expected to notice that passive help while juggling active pressure."
+          "text": "Mirror Cistern proves that some of the roster works like shelter rather than spectacle. Reed Fin buys recovery in the background, and the player is expected to feel that steadiness while wet stone, drowned machinery, and cobalt light keep lying about the room."
         },
         "palette": [
-          "#21354a",
-          "#386a6c",
-          "#b6dbd8"
+          "#43332e",
+          "#66707a",
+          "#b08969"
         ],
         "parallax": [
           {
             "label": "reflective ribs",
             "x": 24,
             "parallax": 0.26,
-            "color": "#42636b"
+            "color": "#6e5a50"
           },
           {
             "label": "water clocks",
             "x": 84,
             "parallax": 0.48,
-            "color": "#66858b"
+            "color": "#7c8188"
           }
         ],
         "layout": {
@@ -452,14 +452,14 @@
               "x1": 0,
               "x2": 100,
               "y": 0,
-              "color": "#43636b"
+              "color": "#63544d"
             },
             {
               "id": "cistern_clocklip",
               "x1": 54,
               "x2": 86,
               "y": 4,
-              "color": "#6f8f97"
+              "color": "#8a837c"
             }
           ],
           "encounter_zones": [
@@ -469,8 +469,8 @@
               "x2": 82,
               "pressure_bonus": 0.09,
               "tension_bonus": 0.16,
-              "color": "#486972",
-              "event": "Reflection lines multiply the danger until the room is read correctly."
+              "color": "#70584d",
+              "event": "Reflection lines multiply the danger until the chamber is read for what it is, not what it pretends to be."
             }
           ]
         },
@@ -510,30 +510,30 @@
         "name": "Scribe Gullet",
         "safe_room": true,
         "danger": 1,
-        "objective": "Take a second refuge-style pause, settle bond tension, then move into the switchyard assault.",
-        "tutorial_tip": "This is a mid-run calm pocket. Rest again if bond tension is spiking before the next combat gate.",
+        "objective": "Use the soot-quiet pocket to settle bond tension, then step from ledgers, cages, and braziers into the harsher iron logic of the switchyard.",
+        "tutorial_tip": "This is a mid-run calm pocket. Rest again if bond tension is spiking before the next hard gate starts speaking in sparks and locking rails.",
         "popup": {
           "template": "journal_shell",
-          "title": "Journal Insert",
-          "text": "The Scribe Gullet is a pacing intervention. It confirms that the route can breathe between rescues and that tension management is an authored rhythm rather than a background stat tax."
+          "title": "Ash Journal",
+          "text": "Scribe Gullet lets the route breathe without turning soft. Between cages, braziers, and ash-marked walls, its quiet proves that tension management is a rhythm authored into the pilgrimage, not a hidden tax running under the fiction."
         },
         "palette": [
-          "#222032",
-          "#4d5965",
-          "#a7bea2"
+          "#3b302d",
+          "#6b6664",
+          "#9a7f62"
         ],
         "parallax": [
           {
             "label": "scribe cages",
             "x": 24,
             "parallax": 0.24,
-            "color": "#4c5661"
+            "color": "#60534c"
           },
           {
             "label": "ink braziers",
             "x": 80,
             "parallax": 0.46,
-            "color": "#5d7a5c"
+            "color": "#7b7375"
           }
         ],
         "exits": {
@@ -547,30 +547,30 @@
         "name": "Ossuary Switchyard",
         "safe_room": false,
         "danger": 4,
-        "objective": "Break the switchyard bailiff and push the signal lane open into the ember nave.",
-        "tutorial_tip": "Clear-gated exits matter here. The way forward does not open until the active threat is actually neutralized.",
+        "objective": "Break the switchyard bailiff and wrench the signal lane open into the Ember Nave by force of presence, not momentum, while the rails keep spitting back.",
+        "tutorial_tip": "Clear-gated exits matter here. The iron lane does not yield until the active threat has been fully broken out of the room and the rails stop answering to it.",
         "popup": {
           "template": "quest_shell",
           "title": "Route Condition",
-          "text": "The Switchyard is the tutorial's hard gate. It teaches that route permission is spatial and stateful, not just inventory-based. If the local threat still owns the room, the route does not belong to you."
+          "text": "The Switchyard is where Aridfeihth stops negotiating. Route permission is spatial and stateful, not a checklist. If the local threat still owns the rails, sparks, and signal ribs, the corridor is not yours yet."
         },
         "palette": [
-          "#251f30",
-          "#5e5663",
-          "#d98f62"
+          "#352a28",
+          "#716968",
+          "#b45d48"
         ],
         "parallax": [
           {
             "label": "rail bones",
             "x": 18,
             "parallax": 0.2,
-            "color": "#5b5f78"
+            "color": "#69554f"
           },
           {
             "label": "signal pyres",
             "x": 68,
             "parallax": 0.44,
-            "color": "#8f5a48"
+            "color": "#7b7e86"
           }
         ],
         "layout": {
@@ -580,14 +580,14 @@
               "x1": 0,
               "x2": 100,
               "y": 0,
-              "color": "#524b58"
+              "color": "#5d514d"
             },
             {
               "id": "switchyard_signal_rib",
               "x1": 44,
               "x2": 70,
               "y": 3,
-              "color": "#74626a"
+              "color": "#80716b"
             }
           ],
           "hazards": [
@@ -598,8 +598,8 @@
               "y": 0,
               "damage": 5,
               "tension": 4,
-              "color": "#c66d58",
-              "event": "Bone rails spark underfoot."
+              "color": "#9d473c",
+              "event": "Bone rails spit sparks underfoot and punish hesitation."
             }
           ],
           "encounter_zones": [
@@ -609,8 +609,8 @@
               "x2": 88,
               "pressure_bonus": 0.1,
               "tension_bonus": 0.22,
-              "color": "#644352",
-              "event": "The switchyard clamps shut until the bailiff is actually broken."
+              "color": "#734f46",
+              "event": "The switchyard clamps shut until the bailiff is fully broken and the line stops answering to him."
             }
           ]
         },
@@ -637,30 +637,30 @@
         "name": "Ember Nave",
         "safe_room": false,
         "danger": 5,
-        "objective": "Root the nave sanctioner, sustain Wind Kite, then finish the fight with a full bond weave.",
-        "tutorial_tip": "Boss tutorial: lower posture, keep Wind Kite active, make sure the boss is rooted, then press V for Bond Weave.",
+        "objective": "Root the sanctioner in the ash-lit nave, sustain Wind Kite through the heat, and end the rite with a full bond weave in front of the altar.",
+        "tutorial_tip": "Lower posture, keep Wind Kite active, make sure the boss is rooted, then press V for Bond Weave when the brass window opens and the altar line is clear.",
         "popup": {
           "template": "death_shell",
           "title": "Boss Resolution",
-          "text": "Ember Nave is not solved by damage alone. The sanctioner only yields when the player uses the main room grammar correctly: posture break, rooted window, correct Chorus, then Bond Weave."
+          "text": "Ember Nave refuses brute damage as a complete answer. The sanctioner only yields when the room grammar is honored in sequence: posture broken, root secured, Chorus held, then Bond Weave through the opening while the pillars, gutters, and altar all stay under control."
         },
         "palette": [
-          "#2a2035",
-          "#734a4c",
-          "#ffb05e"
+          "#392826",
+          "#6c6668",
+          "#c66a48"
         ],
         "parallax": [
           {
             "label": "chain braziers",
             "x": 18,
             "parallax": 0.22,
-            "color": "#754a44"
+            "color": "#7a4a3e"
           },
           {
             "label": "ash vault",
             "x": 78,
             "parallax": 0.45,
-            "color": "#4e3d57"
+            "color": "#6f7077"
           }
         ],
         "layout": {
@@ -670,14 +670,14 @@
               "x1": 0,
               "x2": 100,
               "y": 0,
-              "color": "#56445a"
+              "color": "#5f4a45"
             },
             {
               "id": "nave_weave_altar",
               "x1": 52,
               "x2": 76,
               "y": 3,
-              "color": "#876057"
+              "color": "#8b796e"
             }
           ],
           "hazards": [
@@ -688,8 +688,8 @@
               "y": 0,
               "damage": 6,
               "tension": 5,
-              "color": "#e27a52",
-              "event": "Ember gutters flare along the nave floor."
+              "color": "#b84f38",
+              "event": "Ember gutters flare along the nave floor and force the weave to happen under heat."
             }
           ],
           "encounter_zones": [
@@ -699,8 +699,8 @@
               "x2": 88,
               "pressure_bonus": 0.12,
               "tension_bonus": 0.24,
-              "color": "#6c4350",
-              "event": "The sanction field demands a precise rooted weave window."
+              "color": "#825243",
+              "event": "The sanction field demands a precise rooted weave window and punishes every mistimed reach."
             }
           ]
         },
@@ -746,30 +746,30 @@
         "name": "Ram Gate",
         "safe_room": false,
         "danger": 2,
-        "objective": "Use the newly rescued Salt Ram route verb to breach the reliquary barricade and prove the post-boss key loop.",
-        "tutorial_tip": "This is the post-boss key test. The route only completes because the boss room gave you Salt Ram.",
+        "objective": "Use Salt Ram to break the reliquary barricade and prove that the boss reward changes stone, iron, and map state immediately, not abstractly.",
+        "tutorial_tip": "This is the post-boss key test. The corridor only yields because Salt Ram can answer stone and iron with impact the moment you arrive.",
         "popup": {
           "template": "choice_shell",
           "title": "Post-Boss Payoff",
-          "text": "Ram Gate proves that the boss reward is a spatial verb, not a badge. The tutorial is only complete once the player uses that new companion logic to alter the map immediately."
+          "text": "Ram Gate proves that victory is a spatial verb, not a badge pinned to the HUD. The loop only closes once Salt Ram changes the barricade, the corridor, and your immediate options in the same breath that the sanctioner falls."
         },
         "palette": [
-          "#23171f",
-          "#64505c",
-          "#d59e68"
+          "#362927",
+          "#6f696b",
+          "#b98a58"
         ],
         "parallax": [
           {
             "label": "gate ribs",
             "x": 28,
             "parallax": 0.18,
-            "color": "#5b4956"
+            "color": "#6b5149"
           },
           {
             "label": "breach sparks",
             "x": 76,
             "parallax": 0.42,
-            "color": "#8c6244"
+            "color": "#7e7f84"
           }
         ],
         "exits": {
@@ -795,30 +795,30 @@
         "name": "Tutorial Sanctum",
         "safe_room": true,
         "danger": 0,
-        "objective": "Demo complete. This refuge confirms the full introductory loop: rest, route, fight, rescue, key unlock, boss weave, and return to safety.",
-        "tutorial_tip": "You have seen the core loop. From here the next production pass can widen the map and deepen each system.",
+        "objective": "Reach shelter with the full opening rite intact: rest, route, fight, rescue, breach, weave, and return with the roster still coherent under calmer light.",
+        "tutorial_tip": "The core loop is established. From here the next pass can widen the map without changing the ash-reliquary identity, dark detail language, and cobalt-brass accents that already hold the route together.",
         "popup": {
           "template": "save_shell",
           "title": "Sanctum Record",
-          "text": "The Tutorial Sanctum is the close of the vertical slice. Save here to preserve the roster, the milestone chain, and the proof that Aridfeihth's opening loop already holds together as authored play."
+          "text": "Tutorial Sanctum closes the first rite in warmth rather than abstraction. Save here to preserve the roster, the milestones, and the proof that Aridfeihth already has a coherent opening world-feel instead of a disconnected tutorial shell pretending to be one."
         },
         "palette": [
-          "#273248",
-          "#5f6f74",
-          "#e1c183"
+          "#453732",
+          "#6f7480",
+          "#b89962"
         ],
         "parallax": [
           {
             "label": "thread altar",
             "x": 36,
             "parallax": 0.26,
-            "color": "#5c6b66"
+            "color": "#6f5c52"
           },
           {
             "label": "sanctum candles",
             "x": 78,
             "parallax": 0.44,
-            "color": "#8f7651"
+            "color": "#7b7c83"
           }
         ],
         "exits": {
@@ -832,30 +832,30 @@
         "name": "Reliquary Bazaar",
         "safe_room": true,
         "danger": 1,
-        "objective": "Step into the post-tutorial market lane and preview how later builds can extend the rescue loop into trade, tuning, and roster economy.",
-        "tutorial_tip": "The generated merchant shell lands here as a teaser for the next production pass. This room is calm on purpose: it widens the game's horizon after the combat proof.",
+        "objective": "Step into the market lane and preview how barter, tuning, and habitat care can extend the rescue loop without softening its wasteland edge or its dark detailing.",
+        "tutorial_tip": "This room is calm on purpose. After the combat proof, it widens the horizon with traders, ash cloth, brass fittings, dark awnings, and companion upkeep instead of more immediate violence.",
         "popup": {
           "template": "merchant_shell",
           "title": "Forward Market",
-          "text": "The Reliquary Bazaar is a promise room. It says the expedition loop can widen into barter, roster tuning, shrine upkeep, and companion provisioning without changing the game's rescue-first identity."
+          "text": "Reliquary Bazaar is a promise room, but it still belongs to the same world. The expedition loop can widen into barter, roster tuning, shrine upkeep, and provisioning without losing its rescue-first, dust-scoured, soot-lined identity."
         },
         "palette": [
-          "#30253a",
-          "#6f5d67",
-          "#d8b07d"
+          "#4a3630",
+          "#797274",
+          "#b88a5d"
         ],
         "parallax": [
           {
             "label": "bazaar canopies",
             "x": 26,
             "parallax": 0.22,
-            "color": "#765864"
+            "color": "#7a5a4f"
           },
           {
             "label": "trade braziers",
             "x": 76,
             "parallax": 0.42,
-            "color": "#9d714d"
+            "color": "#7c7d82"
           }
         ],
         "layout": {
@@ -865,14 +865,14 @@
               "x1": 0,
               "x2": 100,
               "y": 0,
-              "color": "#5b4b58"
+              "color": "#66524c"
             },
             {
               "id": "bazaar_stalls",
               "x1": 38,
               "x2": 82,
               "y": 2,
-              "color": "#8c725f"
+              "color": "#8f7966"
             }
           ],
           "encounter_zones": [
@@ -881,8 +881,8 @@
               "x1": 16,
               "x2": 88,
               "pressure_bonus": -0.02,
-              "color": "#564459",
-              "event": "The bazaar quiets the route and turns urgency into observation."
+              "color": "#71584d",
+              "event": "The bazaar quiets the route and turns urgency into observation without letting the dust fully leave your lungs."
             }
           ]
         },
@@ -897,30 +897,30 @@
         "name": "Atlas Choir",
         "safe_room": true,
         "danger": 0,
-        "objective": "End the demo at the overlook where the route stops feeling closed and starts implying a larger pilgrimage map beyond the first teaching corridor.",
-        "tutorial_tip": "This final room uses the map shell to frame scale. The tutorial is complete, but the world now visibly extends past it.",
+        "objective": "End at the overlook where the first corridor opens into a larger pilgrimage map of ash basins, cobalt distances, brass-lit holds, and darker country between them.",
+        "tutorial_tip": "This final room frames scale rather than instruction. The first authored loop is complete, and the world now visibly stretches beyond it in the same palette language and surface logic.",
         "popup": {
           "template": "map_shell",
           "title": "Atlas Overlook",
-          "text": "Atlas Choir closes the tutorial by shifting from instruction to implication. The player has finished the first authored loop, and now the world is presented as something wider than the rooms already conquered."
+          "text": "Atlas Choir shifts from instruction to promise without changing tone. The first route is finished, and the wider world appears as more ash terraces, harsher weather, darker structure, and distant cobalt architecture waiting beyond the known rooms."
         },
         "palette": [
-          "#283545",
-          "#5d7482",
-          "#d9c391"
+          "#45352f",
+          "#667587",
+          "#b8a06a"
         ],
         "parallax": [
           {
             "label": "choir rails",
             "x": 24,
             "parallax": 0.24,
-            "color": "#5a6c77"
+            "color": "#6a554c"
           },
           {
             "label": "map lanterns",
             "x": 82,
             "parallax": 0.44,
-            "color": "#a28358"
+            "color": "#7b8796"
           }
         ],
         "layout": {
@@ -930,14 +930,14 @@
               "x1": 0,
               "x2": 100,
               "y": 0,
-              "color": "#536674"
+              "color": "#65564f"
             },
             {
               "id": "atlas_overlook",
               "x1": 50,
               "x2": 86,
               "y": 3,
-              "color": "#8c8773"
+              "color": "#8f8475"
             }
           ]
         },
@@ -1020,17 +1020,17 @@
       {
         "id": "simiam_compact",
         "title": "SimIAM Compact",
-        "text": "SimIAMs are not harvested powers. They are companion intelligences whose trust is earned through rescue, stabilization, and habitat care."
+        "text": "SimIAMs are not harvested powers. They are companion intelligences pulled back from a hostile frontier through rescue, stabilization, habitat care, and repeated proof that you can move through a bad place without reducing it to extraction."
       },
       {
         "id": "bond_tension_compact",
         "title": "Bond Tension",
-        "text": "Bond tension is the shared stress of expedition and command. Good play is not only survival. It is preserving enough emotional coherence for the roster to keep responding."
+        "text": "Bond tension is the shared stress of expedition, command, and survival under bad weather and worse architecture. Good play is preserving enough coherence for the roster to keep answering you even when the route becomes louder, darker, and less forgiving."
       },
       {
         "id": "bond_weave_compact",
         "title": "Bond Weave",
-        "text": "Bond Weave is a finisher earned through discipline. It resolves boss states using the same verbs the player has been learning all along."
+        "text": "Bond Weave is a finisher earned through discipline. It resolves boss states using the same verbs the player has been learning all along, only now under full ritual pressure with the room itself pressing in around the action."
       }
     ]
   }

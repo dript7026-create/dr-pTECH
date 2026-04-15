@@ -1,0 +1,104 @@
+{
+  "schema": "homelair_runtime_contract/v1",
+  "shell": {
+    "id": "homelair_shell",
+    "label": "HOMElair Shell",
+    "source": "DoENGINE hearth plus HOMElair runtime wrapper",
+    "modes": [
+      "playhub_mode",
+      "nanoplay_t_mode",
+      "homeviuplay_calibration_mode"
+    ]
+  },
+  "orchestration": {
+    "source": "DoENGINE",
+    "entry_roles": [
+      "launcher",
+      "runtime selector",
+      "peer-link coordinator",
+      "telemetry hub",
+      "artifact registry"
+    ],
+    "profile_switches": [
+      "target_family",
+      "power_budget",
+      "session_topology",
+      "display_depth_mode"
+    ]
+  },
+  "render": {
+    "source": "ORBEngine presentation direction plus DoENGINE DODO 3D preview stack",
+    "mode": "full_3d_depth_band",
+    "scene_backend": "python-pillow-cpu-raster preview with ORBEngine-facing descriptors",
+    "asset_loaders": [
+      "builtin",
+      "obj",
+      "glb",
+      "billboard",
+      "scene-manifest"
+    ],
+    "geometry_classes": [
+      "skeletal_mesh",
+      "static_mesh",
+      "landscape_mesh",
+      "prop_mesh",
+      "billboard_fx"
+    ],
+    "rig_support": {
+      "status": "manifest_scaffold",
+      "supported_profiles": [
+        "humanoid_biped_v1",
+        "quadruped_beast_v1",
+        "winged_creature_v1"
+      ],
+      "animation_targets": [
+        "idle",
+        "walk",
+        "run",
+        "attack",
+        "sanctuary_pose"
+      ]
+    },
+    "landscape_policy": {
+      "terrain_mesh": true,
+      "sky_volume": true,
+      "distant_fog_bands": true,
+      "foreground_clarity_priority": true,
+      "low_frequency_depth_modulation": true
+    },
+    "depth_display": {
+      "status": "exploratory",
+      "target_effect": "window_depth_inward_projection",
+      "control_bands": [
+        "foreground_anchor",
+        "midfield_occlusion",
+        "farfield_atmosphere"
+      ]
+    }
+  },
+  "adaptive_control": {
+    "source": "HOPE and egosphere runtime metadata",
+    "control_roles": [
+      "frame pacing",
+      "recursion pressure",
+      "comfort governance",
+      "depth intensity shaping",
+      "matter and causality response"
+    ],
+    "bridge_policy": {
+      "supports_vessel_runtime_bias": true,
+      "supports_handheld_bias": true,
+      "supports_volumetric_bias": true,
+      "supports_render_reactivity": true
+    }
+  },
+  "simulation": {
+    "source": "NeoWakeUP, EgoSphere, ArchesAndAngels",
+    "feeds": [
+      "world_state",
+      "actor_cognition",
+      "campaign_pressure",
+      "adaptive_recommendations"
+    ]
+  }
+}

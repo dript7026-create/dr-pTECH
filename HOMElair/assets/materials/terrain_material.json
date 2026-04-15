@@ -1,0 +1,17 @@
+{
+  "schema": "homelair_material_profile/v1",
+  "material_id": "terrain_material",
+  "label": "Terrain Surface Stack",
+  "texture_layers": [
+    {
+      "id": "ground_albedo",
+      "role": "albedo",
+      "path": "../textures/terrain_ground_albedo.ppm"
+    },
+    {
+      "id": "moss_detail",
+      "role": "detail",
+      "path": "../textures/terrain_moss_detail.ppm"
+    }
+  ]
+}

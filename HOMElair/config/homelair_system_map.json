@@ -1,0 +1,94 @@
+{
+  "schema": "homelair_system_map/v1",
+  "hub": "HOMElair",
+  "productTargets": [
+    {
+      "name": "PlayHub",
+      "role": "primary social dock and living-room runtime"
+    },
+    {
+      "name": "NanoPlay_t",
+      "role": "portable modular handheld runtime"
+    },
+    {
+      "name": "HomeViuPlay",
+      "role": "32-inch detachable monitor-console precursor and depth-display validation target"
+    }
+  ],
+  "layers": [
+    {
+      "name": "Hearth",
+      "role": "orchestration, packaging, telemetry, peer-link and launch control",
+      "sources": [
+        "DoENGINE",
+        "workspace_build.py",
+        "tools/workspace_health.py"
+      ]
+    },
+    {
+      "name": "LairRender",
+      "role": "presentation runtime, depth-band rendering, pseudo-3D and 3D scene composition",
+      "sources": [
+        "ORBEngine",
+        "DoENGINE/packages/hybrid-engine",
+        "IllusionCanvasInteractive"
+      ]
+    },
+    {
+      "name": "BreathControl",
+      "role": "adaptive frame governance, comfort routing, volumetric and causality control",
+      "sources": [
+        "egosphere/tools/hope_framework.py",
+        "egosphere/tools/synthesis_pipeline.py",
+        "KaijuGaiden/kaijugaiden.c"
+      ]
+    },
+    {
+      "name": "MindConductor",
+      "role": "world-state, AI runtime, actor cognition, campaign and scenario pressure",
+      "sources": [
+        "NeoWakeUP",
+        "egosphere",
+        "ArchesAndAngels"
+      ]
+    },
+    {
+      "name": "ForgePipeline",
+      "role": "authoring, generation, refinement, export and bundle translation",
+      "sources": [
+        "drIpTECHBlenderPlug-Ins",
+        "drIpTech_ClipStudio_Plug-Ins",
+        "readAIpolish",
+        "drIpTECH/ReCraftGenerationStreamline",
+        "egosphere/pipeline"
+      ]
+    },
+    {
+      "name": "VesselAdapters",
+      "role": "platform adapters, deploy targets, dock-undock transitions and target-specific constraints",
+      "sources": [
+        "KaijuGaiden",
+        "tommygoomba",
+        "WialWohm",
+        "orbseeker",
+        "android-bootstrap",
+        "gravo-boy-dimenhyde_ps5game"
+      ]
+    }
+  ],
+  "displayDepthProgram": {
+    "status": "exploratory",
+    "principles": [
+      "foreground clarity before decorative depth noise",
+      "low-frequency depth-field modulation",
+      "depth-band rendering instead of flat compositing only",
+      "comfort-aware dynamic tuning"
+    ],
+    "conceptStack": [
+      "crystal-sheet layering",
+      "electroreactive or fluid refraction control",
+      "magnetically pulsed tuning",
+      "inward z-axis occlusion impression"
+    ]
+  }
+}

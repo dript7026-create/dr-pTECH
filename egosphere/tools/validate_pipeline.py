@@ -1,14 +1,18 @@
+continue.
 import argparse
 import json
 
-from validate_pipeline_core import run_validation_suite
+try:
+    from validate_pipeline_core import run_validation_suite
+except ImportError:
+    from egosphere.tools.validate_pipeline_core import run_validation_suite
 
 
-def parse_args() -> argparse.Namespace:
+def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="Validate drIpTECH pipeline outputs")
     parser.add_argument(
         "--suite",
-        choices=["sample", "pertinence", "all"],
+        choices=["sample", "pertinence", "hope", "all"],
         default="sample",
         help="Validation suite to run",
     )
@@ -22,13 +26,16 @@ def parse_args() -> argparse.Namespace:
         action="store_true",
         help="When used with --gui, start the selected suite immediately after launch",
     )
-    return parser.parse_args()
+    return parser.parse_args(argv)
 
 
-def main() -> int:
-    args = parse_args()
+def main(argv: list[str] | None = None) -> int:
+    args = parse_args(argv)
     if args.gui:
-        from validate_pipeline_gui import launch_app
+        try:
+            from validate_pipeline_gui import launch_app
+        except ImportError:
+            from egosphere.tools.validate_pipeline_gui import launch_app
 
         return launch_app(initial_suite=args.suite, auto_run=args.run)
 

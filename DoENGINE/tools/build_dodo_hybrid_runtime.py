@@ -10,6 +10,9 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 WORKSPACE_ROOT = ROOT.parent
 OUTPUT_PATH = ROOT / 'generated' / 'dodogame_hybrid_runtime.json'
+TITLE_SPLASH_METADATA_PATH = ROOT / 'generated' / 'dodogame_gui' / 'splash' / 'dodo_launch_splash.json'
+SHOWCASE_MANIFEST_PATH = ROOT / 'generated' / 'dodogame_bangonow_showcase.json'
+GAMES_ROOT = ROOT / 'games'
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 if str(WORKSPACE_ROOT) not in sys.path:
@@ -28,7 +31,7 @@ DODO_SHADER_PROGRAM = {
     'backend': 'python-pillow-cpu-raster',
     'look': 'illusioncanvas-pseudo3d',
     'asset_loaders': ['builtin', 'obj', 'glb', 'billboard', 'scene-manifest'],
-    'script_capabilities': ['spin', 'bob', 'pulse', 'orbit'],
+    'script_capabilities': ['spin', 'bob', 'pulse', 'orbit', 'drift', 'sway', 'channel_follow', 'threshold_gate'],
     'passes': [
         {'id': 'sky-dome-gradient', 'label': 'Sky Dome Gradient', 'role': 'Establish the amber-jade atmosphere before geometry is drawn.'},
         {'id': 'floor-warp-grid', 'label': 'Floor Warp Grid', 'role': 'Project the curved horizon plane that sells the IllusionCanvas pseudo-3D feel.'},
@@ -52,6 +55,42 @@ def read_json(path: Path) -> dict | list | None:
     return json.loads(path.read_text(encoding='utf-8'))
 
 
+def resolve_profile_path(profile_path: Path, value: object) -> str | None:
+    if not value:
+        return None
+    candidate = Path(str(value))
+    if candidate.is_absolute():
+        return str(candidate)
+    return str((profile_path.parent / candidate).resolve())
+
+
+def scan_registered_games() -> list[dict]:
+    registered_games: list[dict] = []
+    if not GAMES_ROOT.exists():
+        return registered_games
+    for profile_path in sorted(GAMES_ROOT.glob('*/game_profile.json')):
+        payload = read_json(profile_path)
+        if not isinstance(payload, dict):
+            continue
+        registered_games.append(
+            {
+                'gameId': str(payload.get('game_id', profile_path.parent.name)),
+                'label': str(payload.get('title', profile_path.parent.name)),
+                'renderMode': str(payload.get('render_mode', 'full3d-pseudo3d-hybrid')),
+                'gameProfileManifest': str(profile_path),
+                'gamePackageManifest': resolve_profile_path(profile_path, payload.get('game_package_manifest')),
+                'primarySource': resolve_profile_path(profile_path, payload.get('primary_source')),
+                'sourceLanguage': payload.get('source_language'),
+                'sceneManifest': resolve_profile_path(profile_path, payload.get('scene_manifest')),
+                'defaultSavePath': resolve_profile_path(profile_path, payload.get('default_save_path')),
+                'gameplayBridge': resolve_profile_path(profile_path, payload.get('gameplay_bridge')),
+                'controllerProfileId': str(payload.get('controller_profile_id', 'bango-xinput-full')),
+                'supports': list(payload.get('supports', [])),
+            }
+        )
+    return registered_games
+
+
 def build_runtime(asset_root: Path) -> dict:
     playnow_manifest = resolve_playnow_runtime_path(asset_root)
     finalstage_manifest = resolve_playnow_finalstage_path(asset_root)
@@ -61,6 +100,9 @@ def build_runtime(asset_root: Path) -> dict:
     playnow = read_json(playnow_manifest)
     tutorial = read_json(tutorial_spec)
     finalstage = read_json(finalstage_manifest)
+    title_concept = read_json(TITLE_SPLASH_METADATA_PATH)
+    showcase_manifest = read_json(SHOWCASE_MANIFEST_PATH)
+    registered_games = scan_registered_games()
     prompt_count = len(tutorial.get('prompts', [])) if isinstance(tutorial, dict) else 0
     wave_count = len(tutorial.get('waves', [])) if isinstance(tutorial, dict) else 0
     tick_gnosis = build_tick_gnosis_frame(
@@ -79,6 +121,15 @@ def build_runtime(asset_root: Path) -> dict:
         'asset_root': str(asset_root),
         'renderer_philosophy': 'Use ORBEngine for recursive pseudo-3D space presentation, DoENGINE for orchestration/input/telemetry, IllusionCanvas for manifest and perception interoperability, and TickGnosis for frame-buffer relativity moderation.',
         'renderer_backend': DODO_SHADER_PROGRAM['backend'],
+        'concept_art_translation': {
+            'source_title_splash_metadata': str(TITLE_SPLASH_METADATA_PATH) if TITLE_SPLASH_METADATA_PATH.exists() else None,
+            'showcase_manifest': str(SHOWCASE_MANIFEST_PATH) if SHOWCASE_MANIFEST_PATH.exists() else None,
+            'art_direction': title_concept.get('art_direction', []) if isinstance(title_concept, dict) else [],
+            'erp_sequencer': title_concept.get('erp_sequencer', {}) if isinstance(title_concept, dict) else {},
+            'runtime_scene_name': showcase_manifest.get('showcase_name') if isinstance(showcase_manifest, dict) else None,
+            'runtime_scene_version': showcase_manifest.get('scene_version') if isinstance(showcase_manifest, dict) else None,
+            'runtime_state_channels': ['pressure_wave', 'relay_resonance', 'ooze_surge', 'fracture_pulse', 'stall_decay'],
+        },
         'protocol_contract': finalstage.get('protocol_contract') if isinstance(finalstage, dict) else None,
         'shader_program': DODO_SHADER_PROGRAM,
         'tick_gnosis': tick_gnosis,
@@ -128,6 +179,7 @@ def build_runtime(asset_root: Path) -> dict:
                 'controllerProfileId': 'bango-xinput-full',
                 'supports': ['3DS runtime target', 'Windows preview target', 'idTech2 module target', 'PlayNOW tutorial staging', 'TickGnosis-guided frame moderation'],
             },
+            *registered_games,
             {
                 'gameId': 'generic-hybrid-game',
                 'label': 'Generic Hybrid Game Template',
@@ -153,6 +205,23 @@ def build_runtime(asset_root: Path) -> dict:
             'viewport_png': str(ROOT / 'generated' / 'dodogame_gui' / 'dodo_engine_preview.png'),
             'viewport_report': str(ROOT / 'generated' / 'dodogame_gui' / 'dodo_engine_preview.json'),
             'bangonow_showcase': str(ROOT / 'generated' / 'dodogame_bangonow_showcase.json'),
+        },
+        'source_ingest': {
+            'registered_game_sources': [
+                {
+                    'gameId': game['gameId'],
+                    'title': game['label'],
+                    'manifest': game.get('gameProfileManifest'),
+                    'game_package_manifest': game.get('gamePackageManifest'),
+                    'scene_manifest': game.get('sceneManifest'),
+                    'primary_source': game.get('primarySource'),
+                    'source_language': game.get('sourceLanguage'),
+                    'default_save_path': game.get('defaultSavePath'),
+                    'gameplay_bridge': game.get('gameplayBridge'),
+                    'exists': bool(game.get('gameProfileManifest')),
+                }
+                for game in registered_games
+            ]
         },
     }
 

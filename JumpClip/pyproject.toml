@@ -17,6 +17,9 @@ dependencies = [
 [project.scripts]
 jumpclip = "jumpclip.cli:main"
 
+[project.gui-scripts]
+jumpclip-shell = "jumpclip.gui:main"
+
 [tool.setuptools]
 package-dir = {"" = "src"}
 

@@ -1,0 +1,95 @@
+{
+  "trim_language": [
+    "apotropaic knot ties",
+    "reliquary pins",
+    "weather-darkened hems",
+    "small bead and bell clusters used sparingly at silhouette breaks"
+  ],
+  "pixel_exchange_rules": [
+    "A new trim accent must remove equal cloth mass from a nearby fold or hem.",
+    "Armor ridges stay thin by opening more negative space at the joints.",
+    "Weapon tooth and tine detail belongs on the outer arc, not the grip silhouette."
+  ],
+  "armor_sets": [
+    {
+      "id": "shore_wrap_bathing_suit",
+      "role": "starter fully clothed beachwear armor",
+      "detail_notes": [
+        "Use pilgrim-wrap seam breaks instead of broad flat cloth fills.",
+        "Add small knot seals at the throat and hip only if nearby cloth mass is shaved back."
+      ],
+      "pieces": [
+        {"id": "collar_wrap", "anchors": ["head_left", "head_right", "torso_center"], "tracking": "frame_by_frame"},
+        {"id": "torso_wrap", "anchors": ["shoulder_left", "shoulder_right", "hip_left", "hip_right"], "tracking": "frame_by_frame"},
+        {"id": "forearm_cloth_left", "anchors": ["elbow_left", "hand_left"], "tracking": "frame_by_frame"},
+        {"id": "forearm_cloth_right", "anchors": ["elbow_right", "hand_right"], "tracking": "frame_by_frame"},
+        {"id": "leg_wraps", "anchors": ["hip_left", "hip_right", "knee_left", "knee_right"], "tracking": "frame_by_frame"},
+        {"id": "knot_seal", "anchors": ["belt_center", "hip_left", "hip_right"], "tracking": "frame_by_frame"}
+      ]
+    },
+    {
+      "id": "shore_poncho",
+      "role": "travel layer with silhouette flare",
+      "detail_notes": [
+        "Poncho edge cuts should echo torn banner language from the settlement site.",
+        "The hood gets one reliquary pin and no more than two hem tassels in any frame."
+      ],
+      "pieces": [
+        {"id": "hood", "anchors": ["head_crown", "head_left", "head_right"], "tracking": "frame_by_frame"},
+        {"id": "poncho_front", "anchors": ["shoulder_left", "shoulder_right", "torso_center"], "tracking": "frame_by_frame"},
+        {"id": "poncho_back", "anchors": ["shoulder_left", "shoulder_right", "hip_left", "hip_right"], "tracking": "frame_by_frame"},
+        {"id": "reliquary_pin", "anchors": ["head_left", "torso_center"], "tracking": "frame_by_frame"},
+        {"id": "hem_tassels", "anchors": ["hip_left", "belt_center", "hip_right"], "tracking": "frame_by_frame"}
+      ]
+    },
+    {
+      "id": "feather_mail",
+      "role": "mid-tier plated ritual armor",
+      "detail_notes": [
+        "Plate seams should echo ribbed shrine architecture rather than modern armor paneling.",
+        "Any new rivet row must be paid for by opening extra air between skirt scales."
+      ],
+      "pieces": [
+        {"id": "gorget", "anchors": ["head_left", "head_right", "torso_center"], "tracking": "frame_by_frame"},
+        {"id": "shoulder_guard_left", "anchors": ["shoulder_left", "elbow_left"], "tracking": "frame_by_frame"},
+        {"id": "shoulder_guard_right", "anchors": ["shoulder_right", "elbow_right"], "tracking": "frame_by_frame"},
+        {"id": "breastplate", "anchors": ["shoulder_left", "shoulder_right", "hip_left", "hip_right"], "tracking": "frame_by_frame"},
+        {"id": "rib_lames", "anchors": ["shoulder_left", "torso_center", "shoulder_right"], "tracking": "frame_by_frame"},
+        {"id": "skirt_guard", "anchors": ["hip_left", "hip_right", "knee_left", "knee_right"], "tracking": "frame_by_frame"},
+        {"id": "tasset_scales", "anchors": ["hip_left", "belt_center", "hip_right"], "tracking": "frame_by_frame"}
+      ]
+    }
+  ],
+  "weapon_sets": [
+    {
+      "id": "wreck_rake",
+      "role": "starter farming and combat tool",
+      "grip_anchors": ["hand_left", "hand_right"],
+      "folklore_shape_language": [
+        "weathered tines that read like a humble anti-daemon charm",
+        "handle silhouette kept pilgrim-simple so the combat arc carries the ornament"
+      ],
+      "arc_profiles": {
+        "north": "crescent arc occupying the north telegraph band",
+        "south": "forward sweep entering the south telegraph band",
+        "west": "broad left-hook arc in the west telegraph band",
+        "east": "broad right-hook arc in the east telegraph band"
+      }
+    },
+    {
+      "id": "moon_sickle",
+      "role": "later harvest weapon",
+      "grip_anchors": ["hand_right"],
+      "folklore_shape_language": [
+        "hook silhouette borrowing from crescent devotional ironwork",
+        "inner edge kept cleaner than the outer edge so runic or tooth detail never muddies the read"
+      ],
+      "arc_profiles": {
+        "north": "tight overhead hook",
+        "south": "low crescent cut",
+        "west": "reverse elbow sweep",
+        "east": "lunging forward crescent"
+      }
+    }
+  ]
+}

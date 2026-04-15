@@ -1,0 +1,8 @@
+{
+  "id": "dotxt.free.sample",
+  "name": "Sample Free Plugin",
+  "tier": "free",
+  "version": "0.1.0",
+  "entry": "sample_free.dll",
+  "enabledByDefault": false
+}

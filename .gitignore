@@ -20,6 +20,9 @@ __pycache__/
 # Build outputs and generated artifacts
 build/
 **/build/
+**/.gradle/
+**/.cxx/
+**/local.properties
 dist/
 **/dist/
 generated/
@@ -117,6 +120,8 @@ BluninKrabPrototype/bluninkrabvania_release_validation.png
 
 # Large authoring source files better kept out of git mirrors
 *.clip
+pocode/windows/dripwave/toolchain/
+blastminidz/blastminidz.npt/blastminidz.c/blastmonidz_bridge_outbox.txt
 
 # ═══════════════════════════════════════════════════════════════════
 # SECURITY HARDENING — business/financial/credential protection

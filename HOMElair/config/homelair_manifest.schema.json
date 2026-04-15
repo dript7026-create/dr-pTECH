@@ -1,0 +1,63 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "homelair_manifest.schema.json",
+  "title": "HOMElair Runtime Bundle",
+  "type": "object",
+  "required": [
+    "schema",
+    "shell",
+    "runtime_contract",
+    "profile",
+    "scene_manifest"
+  ],
+  "properties": {
+    "schema": {
+      "type": "string"
+    },
+    "shell": {
+      "type": "object",
+      "required": ["id", "label", "source"],
+      "properties": {
+        "id": {"type": "string"},
+        "label": {"type": "string"},
+        "source": {"type": "string"},
+        "modes": {
+          "type": "array",
+          "items": {"type": "string"}
+        }
+      }
+    },
+    "runtime_contract": {
+      "type": "object",
+      "required": ["schema", "orchestration", "render", "adaptive_control", "simulation"],
+      "properties": {
+        "schema": {"type": "string"},
+        "orchestration": {"type": "object"},
+        "render": {"type": "object"},
+        "adaptive_control": {"type": "object"},
+        "simulation": {"type": "object"}
+      }
+    },
+    "profile": {
+      "type": "object",
+      "required": ["profile_id", "label", "target_family", "render_profile"],
+      "properties": {
+        "profile_id": {"type": "string"},
+        "label": {"type": "string"},
+        "target_family": {"type": "string"},
+        "render_profile": {"type": "object"}
+      }
+    },
+    "scene_manifest": {
+      "type": "object",
+      "required": ["name", "scene_entries"],
+      "properties": {
+        "name": {"type": "string"},
+        "scene_entries": {
+          "type": "array",
+          "items": {"type": "object"}
+        }
+      }
+    }
+  }
+}

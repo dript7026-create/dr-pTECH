@@ -3,8 +3,10 @@ from egosphere.tools.hope_framework import (
     HopeConfig,
     KinshipHubProfile,
     MeshProfile,
+    MatterProfile,
     PhysicsProfile,
     PipelineProfile,
+    PlatformTargetProfile,
     evaluate_hope_frame,
     sample_scenarios,
 )
@@ -64,3 +66,21 @@ def test_high_pressure_config_pushes_theta_higher():
 
     assert pressured.theta >= calm.theta
     assert pressured.raw_frame_cost_ms > calm.raw_frame_cost_ms
+
+
+def test_target_and_matter_profiles_feed_game_reality_plans():
+    mesh = MeshProfile("kaiju_hope_field", 320000, 14, 44, 4, 4)
+    physics = PhysicsProfile(46, 120, 12, 0.68, 1.08)
+    pipeline = PipelineProfile(880, 34.0, 0.31, 6, 0.15)
+    cosmic = CosmicProfile(16, 4, 24, 0.52)
+    kinship = KinshipHubProfile(5, 0.7, 0.74, 0.3)
+    matter = MatterProfile(0.58, 0.64, 0.42, 0.47, 72)
+    target = PlatformTargetProfile("n3ds", 13.5, 16.67, 0.82, 0.88, 3, 0.56, 0.72)
+
+    result = evaluate_hope_frame(mesh, physics, pipeline, cosmic, kinship, matter=matter, target=target)
+
+    assert result.target_profile["name"] == "n3ds"
+    assert 0.0 <= result.matter_plan["matter_pressure"] <= 1.0
+    assert 0.0 <= result.causality_plan["input_to_simulation"] <= 1.0
+    assert 0.0 <= result.causality_plan["simulation_to_render"] <= 1.0
+    assert result.causality_plan["volumetric_reactivity"] > 0.0

@@ -4,6 +4,7 @@ import argparse
 import ctypes
 import importlib
 import json
+import math
 import subprocess
 import sys
 import tkinter as tk
@@ -12,10 +13,17 @@ from pathlib import Path
 from tkinter import ttk
 
 try:
-    from PIL import Image, ImageTk
+    from PIL import Image, ImageDraw, ImageFont, ImageTk
 except Exception:
     Image = None
+    ImageDraw = None
+    ImageFont = None
     ImageTk = None
+
+try:
+    import winsound
+except Exception:
+    winsound = None
 
 try:
     from dodo_engine3d import DODO_SHADER_MANIFEST, DodoPseudo3DEngine
@@ -48,6 +56,185 @@ INPUT_ASSET_SPECS = [
     ('world_map_widgets', 'World Map Widgets', (320, 180)),
 ]
 
+TITLE_MENU_NODES: dict[str, dict[str, object]] = {
+    'root': {
+        'title': 'Title Screen',
+        'theme': 'root',
+        'subtitle': 'Three doors only. Pick a path and descend.',
+        'summary': 'The opening surface stays sparse: one hero scene, one current menu, one live status readout.',
+        'options': [
+            {'label': 'Start Game', 'kind': 'node', 'target': 'start_game', 'description': 'Move into runtime and play-facing entry points.'},
+            {'label': 'Tutorial', 'kind': 'node', 'target': 'tutorial_hub', 'description': 'Enter guided onboarding, controls, and intro support.'},
+            {'label': 'Settings', 'kind': 'node', 'target': 'settings_hub', 'description': 'Open visuals, tools, and system maintenance branches.'},
+        ],
+    },
+    'start_game': {
+        'title': 'Start Game',
+        'theme': 'start_game',
+        'subtitle': 'Keep the first decision narrow.',
+        'summary': 'Play-facing entry paths branch away from the title instead of sharing space with tools and reports.',
+        'options': [
+            {'label': 'New Run', 'kind': 'node', 'target': 'new_run', 'description': 'Move toward direct play starts and first-step entry.'},
+            {'label': 'Progress Route', 'kind': 'node', 'target': 'stage_flow', 'description': 'Open pass progression and runtime contract branches.'},
+            {'label': 'Theater Route', 'kind': 'node', 'target': 'runtime_theater', 'description': 'Open showcase, viewport, and live scene routes.'},
+        ],
+    },
+    'new_run': {
+        'title': 'New Run',
+        'theme': 'start_game',
+        'subtitle': 'One more step before launch.',
+        'summary': 'Starting play is now a child room with only three concrete run-entry choices.',
+        'options': [
+            {'label': 'Launch Demo', 'kind': 'action', 'target': 'launch_bango_demo', 'description': 'Start the external Bango executable.'},
+            {'label': 'Tutorial Scene', 'kind': 'tab', 'target': 'Tutorial Sim', 'description': 'Open the current tutorial simulation scene.'},
+            {'label': 'Illusion 3D', 'kind': 'tab', 'target': 'Illusion 3D', 'description': 'Open the DODO viewport directly from the title stack.'},
+        ],
+    },
+    'stage_flow': {
+        'title': 'Stage Flow',
+        'theme': 'start_game',
+        'subtitle': 'Three progression views, no cross-noise.',
+        'summary': 'This branch keeps progression inspection separate from direct launch and showcase staging.',
+        'options': [
+            {'label': 'Runtime Feed', 'kind': 'node', 'target': 'runtime_feed', 'description': 'Inspect current runtime handoff data.'},
+            {'label': 'Pass Gallery', 'kind': 'node', 'target': 'pass_gallery', 'description': 'Review pass cards and focus tools.'},
+            {'label': 'Contract Room', 'kind': 'node', 'target': 'contract_room', 'description': 'Inspect the hybrid runtime contract.'},
+        ],
+    },
+    'runtime_feed': {
+        'title': 'Runtime Feed',
+        'theme': 'start_game',
+        'subtitle': 'The live runtime data room.',
+        'summary': 'This room keeps only the most direct progression-state destinations.',
+        'options': [
+            {'label': 'PlayNOW', 'kind': 'tab', 'target': 'PlayNOW', 'description': 'Inspect runtime pass content and current handoff data.'},
+            {'label': 'Pipeline Overview', 'kind': 'tab', 'target': 'Pipeline Overview', 'description': 'Open the pipeline overview screen.'},
+            {'label': 'Pipeline Verify', 'kind': 'tab', 'target': 'Pipeline Verify', 'description': 'Open the current verification screen.'},
+        ],
+    },
+    'pass_gallery': {
+        'title': 'Pass Gallery',
+        'theme': 'start_game',
+        'subtitle': 'A room for pass review only.',
+        'summary': 'Pass-specific inspection is separated from general runtime and showcase routing.',
+        'options': [
+            {'label': 'Pass Cards', 'kind': 'tab', 'target': 'Pass Cards', 'description': 'Review pass cards and focus cues.'},
+            {'label': 'BangoNOW Showcase', 'kind': 'tab', 'target': 'BangoNOW Showcase', 'description': 'Open the concept runtime gallery.'},
+            {'label': 'Illusion 3D', 'kind': 'tab', 'target': 'Illusion 3D', 'description': 'Open the DODO viewport for scene focus.'},
+        ],
+    },
+    'contract_room': {
+        'title': 'Contract Room',
+        'theme': 'start_game',
+        'subtitle': 'Systems behind progression.',
+        'summary': 'Contract and showcase data are grouped here rather than attached directly to the start screen.',
+        'options': [
+            {'label': 'Hybrid Runtime', 'kind': 'tab', 'target': 'Hybrid Runtime', 'description': 'Inspect the runtime contract that binds concept to scene.'},
+            {'label': 'Pipeline Overview', 'kind': 'tab', 'target': 'Pipeline Overview', 'description': 'Read the compact pipeline state overview.'},
+            {'label': 'Credits', 'kind': 'tab', 'target': 'Credits', 'description': 'Open package, bundle, and execution metadata.'},
+        ],
+    },
+    'runtime_theater': {
+        'title': 'Runtime Theater',
+        'theme': 'start_game',
+        'subtitle': 'Three live scene doors.',
+        'summary': 'Live rendering, showcase staging, and tutorial scene playback each get a dedicated branch exit.',
+        'options': [
+            {'label': 'Viewport Stage', 'kind': 'tab', 'target': 'Illusion 3D', 'description': 'Open the DODO viewport.'},
+            {'label': 'Showcase Hall', 'kind': 'tab', 'target': 'BangoNOW Showcase', 'description': 'Inspect the concept runtime gallery.'},
+            {'label': 'Tutorial Stage', 'kind': 'tab', 'target': 'Tutorial Sim', 'description': 'Open the current tutorial simulation output.'},
+        ],
+    },
+    'tutorial_hub': {
+        'title': 'Tutorial',
+        'theme': 'tutorial_hub',
+        'subtitle': 'Onboarding stays parental too.',
+        'summary': 'Tutorial access splits into simulation, control teaching, and story framing rather than a single catch-all panel.',
+        'options': [
+            {'label': 'Guided Start', 'kind': 'node', 'target': 'guided_start', 'description': 'Move into tutorial start choices and live onboarding routes.'},
+            {'label': 'Control Primer', 'kind': 'node', 'target': 'control_primer', 'description': 'Open controller and input-reference branches.'},
+            {'label': 'Story Briefing', 'kind': 'node', 'target': 'story_briefing', 'description': 'Open tutorial state, prompts, and atmosphere routes.'},
+        ],
+    },
+    'guided_start': {
+        'title': 'Guided Start',
+        'theme': 'tutorial_hub',
+        'subtitle': 'Three simple onboarding entries.',
+        'summary': 'Tutorial start actions live in their own room rather than on the hub itself.',
+        'options': [
+            {'label': 'Run Tutorial', 'kind': 'action', 'target': 'run_tutorial_sim', 'description': 'Execute the tutorial completion simulation.'},
+            {'label': 'Tutorial Scene', 'kind': 'tab', 'target': 'Tutorial Sim', 'description': 'Open the tutorial scene output.'},
+            {'label': 'Controller State', 'kind': 'tab', 'target': 'Controller', 'description': 'Open live controller polling and bindings.'},
+        ],
+    },
+    'control_primer': {
+        'title': 'Control Primer',
+        'theme': 'tutorial_hub',
+        'subtitle': 'Inputs split into three simple doors.',
+        'summary': 'Controller state, visual prompts, and input atlases are intentionally separated for calmer reading.',
+        'options': [
+            {'label': 'Controller State', 'kind': 'tab', 'target': 'Controller', 'description': 'Open live controller polling and bindings.'},
+            {'label': 'Input Assets', 'kind': 'tab', 'target': 'Input Assets', 'description': 'Open diagrams, widget atlases, and material strips.'},
+            {'label': 'Visual Guides', 'kind': 'tab', 'target': 'Visual Assets', 'description': 'Open the display-side guide panels.'},
+        ],
+    },
+    'story_briefing': {
+        'title': 'Story Briefing',
+        'theme': 'tutorial_hub',
+        'subtitle': 'Tutorial context without tool spill.',
+        'summary': 'Prompt stack, simulation state, and archive references stay in a dedicated story room.',
+        'options': [
+            {'label': 'Tutorial Sim', 'kind': 'tab', 'target': 'Tutorial Sim', 'description': 'Read the generated tutorial state and prompt stack.'},
+            {'label': 'Credits', 'kind': 'tab', 'target': 'Credits', 'description': 'Open project and package notes.'},
+            {'label': 'Visual Assets', 'kind': 'tab', 'target': 'Visual Assets', 'description': 'Open the display-side guide panels.'},
+        ],
+    },
+    'settings_hub': {
+        'title': 'Settings',
+        'theme': 'settings_hub',
+        'subtitle': 'Maintenance lives behind its own doorway.',
+        'summary': 'Settings is a parent branch for shell refresh, build tools, and archive/reference browsing.',
+        'options': [
+            {'label': 'Shell Room', 'kind': 'node', 'target': 'shell_room', 'description': 'Open shell refresh and return controls.'},
+            {'label': 'System Tools', 'kind': 'node', 'target': 'system_tools', 'description': 'Open build and validation actions.'},
+            {'label': 'Archive Browser', 'kind': 'node', 'target': 'archive_browser', 'description': 'Open credits and asset archive branches.'},
+        ],
+    },
+    'shell_room': {
+        'title': 'Shell Room',
+        'theme': 'settings_hub',
+        'subtitle': 'Shell-only operations.',
+        'summary': 'Basic shell maintenance and return paths live here instead of cluttering the title root.',
+        'options': [
+            {'label': 'Refresh Shell', 'kind': 'action', 'target': 'refresh_state', 'description': 'Reload launcher state and theme assets.'},
+            {'label': 'Title Screen', 'kind': 'action', 'target': 'title_menu_home', 'description': 'Return to the root title menu.'},
+            {'label': 'Illusion 3D', 'kind': 'tab', 'target': 'Illusion 3D', 'description': 'Jump into the live viewport from shell maintenance.'},
+        ],
+    },
+    'system_tools': {
+        'title': 'System Tools',
+        'theme': 'settings_hub',
+        'subtitle': 'Three maintenance actions per screen.',
+        'summary': 'Validation and build operations are grouped into a small, predictable maintenance branch.',
+        'options': [
+            {'label': 'Verify Pipeline', 'kind': 'action', 'target': 'verify_pipeline', 'description': 'Run the end-to-end manifest verification pass.'},
+            {'label': 'Build Showcase', 'kind': 'action', 'target': 'build_bangonow_showcase', 'description': 'Rebuild the live showcase scene.'},
+            {'label': 'Build Runtime', 'kind': 'action', 'target': 'build_hybrid_runtime', 'description': 'Rebuild the hybrid runtime profile.'},
+        ],
+    },
+    'archive_browser': {
+        'title': 'Archive Browser',
+        'theme': 'settings_hub',
+        'subtitle': 'Reference screens get their own branch.',
+        'summary': 'Credits and asset archives are separated from play and maintenance paths so the title flow stays narrow.',
+        'options': [
+            {'label': 'Visual Assets', 'kind': 'tab', 'target': 'Visual Assets', 'description': 'Browse generated launcher artwork and panels.'},
+            {'label': 'Input Assets', 'kind': 'tab', 'target': 'Input Assets', 'description': 'Browse control and material reference sheets.'},
+            {'label': 'Credits', 'kind': 'tab', 'target': 'Credits', 'description': 'Open manifests, bundle metadata, and execution notes.'},
+        ],
+    },
+}
+
 
 ROOT = Path(__file__).resolve().parent.parent
 WORKSPACE_ROOT = ROOT.parent
@@ -70,6 +257,8 @@ HYBRID_RUNTIME_PATH = GENERATED_DIR / 'dodogame_hybrid_runtime.json'
 DODO_MANIFEST_SUMMARY_PATH = GENERATED_DIR / 'dodogame_gui_asset_summary.json'
 ORB_BANGO_DEMO_PATH = WORKSPACE_ROOT / 'ORBEngine' / 'bango_unchained_bangopatoot_demo.exe'
 DODO_ENGINE_PREVIEW_PATH = GENERATED_DIR / 'dodogame_gui' / 'dodo_engine_preview.png'
+DODO_TITLE_GLB_PREVIEW_PATH = GENERATED_DIR / 'dodogame_gui' / 'splash' / 'dodo_title_glb_preview.png'
+DODO_TITLE_SCENE_PATH = GENERATED_DIR / 'dodogame_gui' / 'splash' / 'dodo_title_hero_scene.json'
 DODO_PASS_PREVIEW_DIR = GENERATED_DIR / 'dodogame_gui' / 'pass_previews'
 DODO_PASS_REBUILD_REPORT_DIR = GENERATED_DIR / 'dodogame_gui' / 'pass_rebuild_reports'
 BANGONOW_SHOWCASE_PATH = GENERATED_DIR / 'dodogame_bangonow_showcase.json'
@@ -107,6 +296,20 @@ BUTTON_NAMES = [
     ('X', XINPUT_GAMEPAD_X),
     ('Y', XINPUT_GAMEPAD_Y),
 ]
+
+TITLE_BRANCH_THEMES = {
+    'root': {'accent': '#d0aa73', 'text': '#f7edd4', 'muted': '#d8c39d', 'overlay': (38, 26, 18, 64)},
+    'start_game': {'accent': '#d88b3c', 'text': '#fff2de', 'muted': '#f0c78f', 'overlay': (72, 38, 16, 76)},
+    'tutorial_hub': {'accent': '#8cb091', 'text': '#eff7f0', 'muted': '#c9e0cc', 'overlay': (22, 48, 34, 72)},
+    'settings_hub': {'accent': '#6de3c8', 'text': '#eefaf8', 'muted': '#b3ece1', 'overlay': (18, 40, 42, 74)},
+}
+
+TITLE_SCENE_PROFILES = {
+    'root': {'orbit': 0.58, 'elevation': 0.17, 'shader_mix': 0.96, 'motion_orbit': 0.08, 'motion_elevation': 0.03, 'tagline': 'threshold foyer'},
+    'start_game': {'orbit': 0.84, 'elevation': 0.15, 'shader_mix': 0.98, 'motion_orbit': 0.06, 'motion_elevation': 0.025, 'tagline': 'ember route'},
+    'tutorial_hub': {'orbit': 0.34, 'elevation': 0.19, 'shader_mix': 0.9, 'motion_orbit': 0.05, 'motion_elevation': 0.02, 'tagline': 'green room guidance'},
+    'settings_hub': {'orbit': 1.12, 'elevation': 0.13, 'shader_mix': 0.88, 'motion_orbit': 0.04, 'motion_elevation': 0.018, 'tagline': 'calibration chamber'},
+}
 
 
 class XINPUT_GAMEPAD(ctypes.Structure):
@@ -162,6 +365,17 @@ def load_json(path: Path) -> dict | list | None:
     if not path.exists():
         return None
     return json.loads(path.read_text(encoding='utf-8'))
+
+
+def load_display_font(size: int, *, bold: bool = False):
+    if ImageFont is None:
+        return None
+    candidates = ['C:/Windows/Fonts/segoeuib.ttf', 'C:/Windows/Fonts/trebucbd.ttf', 'C:/Windows/Fonts/consola.ttf'] if bold else ['C:/Windows/Fonts/segoeui.ttf', 'C:/Windows/Fonts/trebuc.ttf', 'C:/Windows/Fonts/consola.ttf']
+    for candidate in candidates:
+        path = Path(candidate)
+        if path.exists():
+            return ImageFont.truetype(str(path), size=size)
+    return ImageFont.load_default()
 
 
 def run_command(command: list[str]) -> tuple[int, str, str]:
@@ -222,15 +436,6 @@ def load_pass_rebuild_report(pass_label: str) -> dict | None:
     report_path = DODO_PASS_REBUILD_REPORT_DIR / f'{pass_label}.json'
     report = load_json(report_path)
     return report if isinstance(report, dict) else None
-
-
-def preview_cli_kwargs(args: argparse.Namespace, scene_manifest_path: Path | None) -> dict:
-    return {
-        'scene_manifest_path': scene_manifest_path,
-        'orbit': float(args.orbit) if args.orbit is not None else 0.5,
-        'elevation': float(args.elevation) if args.elevation is not None else 0.2,
-        'shader_mix': float(args.shader_mix) if args.shader_mix is not None else 0.85,
-    }
 
 
 def build_bango_pipeline_overview(state: dict) -> dict:
@@ -402,13 +607,33 @@ class DodoGameApp:
         self.poller = XInputPoller()
         self.state = self.collect_state()
         self.images: dict[str, object] = {}
+        self.tab_frames: dict[str, tk.Widget] = {}
         self.asset_preview_labels: dict[str, tuple[tk.Label, tk.Label]] = {}
         self.font_renderers = self.load_font_renderers()
         showcase_path = BANGONOW_SHOWCASE_PATH if BANGONOW_SHOWCASE_PATH.exists() else None
         self.engine = DodoPseudo3DEngine(width=560, height=320, scene_manifest_path=showcase_path) if DodoPseudo3DEngine is not None else None
+        self.title_engine = DodoPseudo3DEngine(width=920, height=540, scene_manifest_path=DODO_TITLE_SCENE_PATH if DODO_TITLE_SCENE_PATH.exists() else showcase_path) if DodoPseudo3DEngine is not None else None
         self.viewport_image_label: tk.Label | None = None
         self.viewport_stats_text: tk.Text | None = None
+        self.title_hero_image_label: tk.Label | None = None
+        self.title_menu_subheading: tk.Label | None = None
+        self.title_menu_info: tk.Label | None = None
+        self.title_status_label: tk.Label | None = None
+        self.title_flavor_label: tk.Label | None = None
         self.notebook: ttk.Notebook | None = None
+        self.title_tab: tk.Frame | None = None
+        self.title_menu_heading: tk.Label | None = None
+        self.title_menu_frame: tk.Frame | None = None
+        self.title_menu_stack: list[str] = ['root']
+        self.title_menu_selected_index = 0
+        self.title_menu_buttons: list[tk.Button] = []
+        self.title_scene_time = 0.0
+        self.title_transition_phase = 0.0
+        self.title_transition_note = 'threshold foyer'
+        self.title_music_active = False
+        self.title_last_buttons: set[str] = set()
+        self.title_trigger_state = {'bango_trigger': 0.0, 'patoot_trigger': 0.0}
+        self.title_gesture_state = {'bango': 'idle watch', 'patoot': 'idle amuse'}
         self.viewport_tab: tk.Frame | None = None
         self.pass_cards_frame: tk.Frame | None = None
         self.pass_detail_text: tk.Text | None = None
@@ -417,13 +642,23 @@ class DodoGameApp:
         self.viewport_shader_var = tk.DoubleVar(value=0.88)
         self.viewport_time = 0.0
         self.viewport_running = True
+        self.master.protocol('WM_DELETE_WINDOW', self._on_close)
+        self.master.bind('<Up>', lambda _event: self._title_menu_move(-1))
+        self.master.bind('<Down>', lambda _event: self._title_menu_move(1))
+        self.master.bind('<Left>', lambda _event: self.title_menu_back())
+        self.master.bind('<BackSpace>', lambda _event: self.title_menu_back())
+        self.master.bind('<Escape>', lambda _event: self.title_menu_back())
+        self.master.bind('<Return>', lambda _event: self._activate_selected_title_option())
+        self.master.bind('<space>', lambda _event: self._activate_selected_title_option())
 
         self._build_header()
         self._build_controls()
         self._build_tabs()
         self.refresh_views()
         self._poll_controller()
+        self._tick_title_scene()
         self._tick_viewport()
+        self._sync_title_audio()
 
     def collect_state(self) -> dict:
         asset_root = resolve_bango_asset_root()
@@ -484,13 +719,27 @@ class DodoGameApp:
         return renderers
 
     def _build_header(self) -> None:
-        self.header = tk.Canvas(self.master, height=154, bg='#182019', highlightthickness=0)
+        self.header = tk.Canvas(self.master, height=132, bg='#182019', highlightthickness=0)
         self.header.pack(fill='x', padx=16, pady=(16, 8))
-        self.header.create_rectangle(8, 10, 1296, 146, fill='#263126', outline='#c39b65', width=3)
-        self.header.create_oval(24, 22, 154, 142, fill='#738560', outline='#f0d9a6', width=4)
-        self.header.create_text(90, 82, text='DODO', fill='#f7edd4', font=('Segoe UI', 18, 'bold'))
-        self.header.create_text(210, 112, text='Hybrid DoENGINE + ORBEngine launcher for Bango: Unchained - Bango&Patoot with TickGnosis-guided runtime telemetry.', fill='#cbd5c7', anchor='w', font=('Segoe UI', 11))
+        self.header.create_rectangle(8, 10, 1296, 124, fill='#263126', outline='#c39b65', width=3)
+        self._render_header_splash()
+        self.header.create_rectangle(22, 18, 448, 114, fill='#101511', outline='#d2b07c', width=2)
+        self.header.create_text(46, 96, text='Integrated Bango title surface with launch, runtime, and pipeline state in one front-door view.', fill='#cbd5c7', anchor='w', font=('Segoe UI', 10))
         self._render_header_fonts()
+
+    def _render_header_splash(self) -> None:
+        theme = self.state.get('theme') if isinstance(self.state, dict) else None
+        splash_path = self._resolve_theme_path(theme.get('splash')) if isinstance(theme, dict) else None
+        if Image is not None and ImageTk is not None and splash_path is not None and splash_path.exists():
+            splash = Image.open(splash_path).convert('RGBA')
+            splash = splash.resize((1288, 114), Image.Resampling.LANCZOS)
+            overlay = Image.new('RGBA', splash.size, (9, 12, 9, 58))
+            splash = Image.alpha_composite(splash, overlay)
+            photo = ImageTk.PhotoImage(splash)
+            self.images['header_splash'] = photo
+            self.header.create_image(10, 10, image=photo, anchor='nw')
+            return
+        self.header.create_rectangle(10, 12, 1294, 122, fill='#2a3429', outline='')
 
     def _render_header_fonts(self) -> None:
         stone = self.font_renderers.get('stone')
@@ -499,32 +748,24 @@ class DodoGameApp:
             image = stone.render_text('DODOGAME', scale=2)
             if image is not None:
                 self.images['stone_header'] = image
-                self.header.create_image(210, 34, image=image, anchor='nw')
-                return
-        self.header.create_text(210, 42, text='DODOGame', fill='#f7edd4', anchor='w', font=('Segoe UI', 30, 'bold'))
+                self.header.create_image(44, 26, image=image, anchor='nw')
+        else:
+            self.header.create_text(44, 34, text='DODOGame', fill='#f7edd4', anchor='w', font=('Segoe UI', 30, 'bold'))
         if bone:
-            image = bone.render_text('BANGO PAToot HYBRID', scale=1)
+            image = bone.render_text('BANGO AND PATOOT TITLE HERO', scale=1)
             if image is not None:
                 self.images['bone_subtitle'] = image
-                self.header.create_image(214, 82, image=image, anchor='nw')
-                return
-        self.header.create_text(214, 84, text='Bango: Unchained - Bango&Patoot', fill='#d8c39d', anchor='w', font=('Segoe UI', 12, 'bold'))
+                self.header.create_image(46, 66, image=image, anchor='nw')
+        else:
+            self.header.create_text(46, 72, text='Bango: Unchained - Bango&Patoot', fill='#d8c39d', anchor='w', font=('Segoe UI', 12, 'bold'))
 
     def _build_controls(self) -> None:
         controls = tk.Frame(self.master, bg='#182019')
         controls.pack(fill='x', padx=16, pady=(0, 8))
         buttons = [
+            ('Title', self.show_title_tab),
+            ('Menu Back', self.title_menu_back),
             ('Refresh', self.refresh_state),
-            ('Launch Bango Demo', self.launch_bango_demo),
-            ('Run BangoNOW Batch', self.run_bangonow_batch),
-            ('Build DODO Manifest', self.build_manifest),
-            ('Build BangoNOW Showcase', self.build_bangonow_showcase),
-            ('Generate Assets', self.generate_assets),
-            ('Run Recraft Pass', self.run_recraft_pass),
-            ('Build Hybrid Runtime', self.build_hybrid_runtime),
-            ('Refresh PlayNOW', self.refresh_playnow),
-            ('Verify Pipeline', self.verify_pipeline),
-            ('Run Tutorial Sim', self.run_tutorial_sim),
         ]
         for label, callback in buttons:
             tk.Button(controls, text=label, command=callback, bg='#334330', fg='#f7edd4', activebackground='#476245', relief='flat', padx=12, pady=8).pack(side='left', padx=(0, 8))
@@ -532,9 +773,12 @@ class DodoGameApp:
         tk.Label(controls, textvariable=self.controller_var, bg='#182019', fg='#d8c39d', font=('Segoe UI', 10)).pack(side='right')
 
     def _build_tabs(self) -> None:
-        notebook = ttk.Notebook(self.master)
+        style = ttk.Style(self.master)
+        style.layout('Tabless.TNotebook.Tab', [])
+        notebook = ttk.Notebook(self.master, style='Tabless.TNotebook')
         self.notebook = notebook
         notebook.pack(fill='both', expand=True, padx=16, pady=(0, 16))
+        self._add_title_surface_tab(notebook, 'Title')
         self.overview_text = self._add_text_tab(notebook, 'Pipeline Overview')
         self.verify_text = self._add_text_tab(notebook, 'Pipeline Verify')
         self._add_passes_tab(notebook, 'Pass Cards')
@@ -551,6 +795,7 @@ class DodoGameApp:
     def _add_viewport_tab(self, notebook: ttk.Notebook, label: str) -> None:
         frame = tk.Frame(notebook, bg='#111611')
         self.viewport_tab = frame
+        self.tab_frames[label] = frame
         notebook.add(frame, text=label)
         frame.grid_columnconfigure(0, weight=3)
         frame.grid_columnconfigure(1, weight=2)
@@ -582,6 +827,7 @@ class DodoGameApp:
 
     def _add_text_tab(self, notebook: ttk.Notebook, label: str) -> tk.Text:
         frame = tk.Frame(notebook, bg='#111611')
+        self.tab_frames[label] = frame
         notebook.add(frame, text=label)
         text = tk.Text(frame, wrap='word', bg='#111611', fg='#dce7da', insertbackground='#dce7da', relief='flat', font=('Cascadia Mono', 10))
         text.pack(fill='both', expand=True)
@@ -589,6 +835,7 @@ class DodoGameApp:
 
     def _add_passes_tab(self, notebook: ttk.Notebook, label: str) -> None:
         frame = tk.Frame(notebook, bg='#111611')
+        self.tab_frames[label] = frame
         notebook.add(frame, text=label)
         toolbar = tk.Frame(frame, bg='#111611')
         toolbar.pack(fill='x', padx=8, pady=(8, 4))
@@ -598,8 +845,51 @@ class DodoGameApp:
         self.pass_detail_text = tk.Text(frame, wrap='word', bg='#111611', fg='#dce7da', insertbackground='#dce7da', relief='flat', font=('Cascadia Mono', 10))
         self.pass_detail_text.pack(fill='both', expand=True, padx=8, pady=(0, 8))
 
+    def _add_title_surface_tab(self, notebook: ttk.Notebook, label: str) -> None:
+        frame = tk.Frame(notebook, bg='#111611')
+        self.title_tab = frame
+        self.tab_frames[label] = frame
+        notebook.add(frame, text=label)
+        frame.grid_columnconfigure(0, weight=5)
+        frame.grid_columnconfigure(1, weight=3)
+        frame.grid_rowconfigure(0, weight=4)
+        frame.grid_rowconfigure(1, weight=3)
+
+        image_card = tk.Frame(frame, bg='#192019', highlightbackground='#4b5c49', highlightthickness=1)
+        image_card.grid(row=0, column=0, rowspan=2, sticky='nsew', padx=(8, 4), pady=8)
+        tk.Label(image_card, text='Bango Title Surface', bg='#192019', fg='#f7edd4', anchor='w', font=('Segoe UI', 11, 'bold')).pack(fill='x', padx=10, pady=(10, 4))
+        self.title_hero_image_label = tk.Label(image_card, bg='#0f140f', text='Title splash unavailable', fg='#d8c39d')
+        self.title_hero_image_label.pack(fill='both', expand=True, padx=10, pady=(4, 10))
+
+        action_card = tk.Frame(frame, bg='#192019', highlightbackground='#4b5c49', highlightthickness=1)
+        action_card.grid(row=0, column=1, sticky='nsew', padx=(4, 8), pady=(8, 4))
+        tk.Label(action_card, text='Menu', bg='#192019', fg='#f7edd4', anchor='w', font=('Segoe UI', 11, 'bold')).pack(fill='x', padx=10, pady=(10, 6))
+        self.title_menu_heading = tk.Label(action_card, text='Title Screen', bg='#192019', fg='#f7edd4', anchor='w', font=('Segoe UI', 13, 'bold'))
+        self.title_menu_heading.pack(fill='x', padx=10, pady=(0, 2))
+        self.title_menu_subheading = tk.Label(action_card, text='Three doors only. Pick a path and descend.', bg='#192019', fg='#d8c39d', anchor='w', justify='left', wraplength=360, font=('Segoe UI', 9))
+        self.title_menu_subheading.pack(fill='x', padx=10, pady=(0, 6))
+        nav_row = tk.Frame(action_card, bg='#192019')
+        nav_row.pack(fill='x', padx=10, pady=(0, 6))
+        tk.Button(nav_row, text='Back', command=self.title_menu_back, bg='#2a3328', fg='#f7edd4', activebackground='#476245', relief='flat', padx=10, pady=6).pack(side='left', padx=(0, 6))
+        tk.Button(nav_row, text='Home', command=self.title_menu_home, bg='#2a3328', fg='#f7edd4', activebackground='#476245', relief='flat', padx=10, pady=6).pack(side='left')
+        self.title_menu_frame = tk.Frame(action_card, bg='#192019')
+        self.title_menu_frame.pack(fill='both', expand=True, padx=10, pady=(0, 10))
+        self.title_menu_info = tk.Label(action_card, text='', bg='#192019', fg='#b9c8b7', anchor='w', justify='left', wraplength=360, font=('Segoe UI', 9))
+        self.title_menu_info.pack(fill='x', padx=10, pady=(0, 10))
+        self._render_title_menu()
+
+        detail_card = tk.Frame(frame, bg='#192019', highlightbackground='#4b5c49', highlightthickness=1)
+        detail_card.grid(row=1, column=1, sticky='nsew', padx=(4, 8), pady=(4, 8))
+        tk.Label(detail_card, text='Scene Pulse', bg='#192019', fg='#f7edd4', anchor='w', font=('Segoe UI', 11, 'bold')).pack(fill='x', padx=10, pady=(10, 4))
+        self.title_status_label = tk.Label(detail_card, bg='#111611', fg='#dce7da', anchor='nw', justify='left', wraplength=332, padx=10, pady=10, font=('Segoe UI', 9))
+        self.title_status_label.pack(fill='x', padx=10, pady=(0, 8))
+        tk.Label(detail_card, text='Mood Read', bg='#192019', fg='#f7edd4', anchor='w', font=('Segoe UI', 11, 'bold')).pack(fill='x', padx=10, pady=(0, 4))
+        self.title_flavor_label = tk.Label(detail_card, bg='#111611', fg='#d8c39d', anchor='nw', justify='left', wraplength=332, padx=10, pady=10, font=('Segoe UI', 9))
+        self.title_flavor_label.pack(fill='both', expand=True, padx=10, pady=(0, 10))
+
     def _add_asset_tab(self, notebook: ttk.Notebook, label: str, specs: list[tuple[str, str, tuple[int, int]]]) -> tk.Frame:
         frame = tk.Frame(notebook, bg='#111611')
+        self.tab_frames[label] = frame
         notebook.add(frame, text=label)
         columns = 3
         for column in range(columns):
@@ -621,6 +911,7 @@ class DodoGameApp:
         widget.insert('1.0', json.dumps(payload, indent=2))
 
     def refresh_views(self) -> None:
+        self._refresh_title_surface()
         self._write_text(self.overview_text, self.state.get('pipeline_overview') or {'status': 'missing'})
         self._write_text(self.verify_text, self.state.get('pipeline_verification') or {'status': 'missing'})
         self._write_text(self.runtime_text, self.state.get('hybrid_runtime') or {'status': 'missing'})
@@ -640,6 +931,272 @@ class DodoGameApp:
         self._refresh_pass_cards()
         self._refresh_asset_previews()
         self._refresh_viewport(force=True)
+
+    def _refresh_title_surface(self) -> None:
+        if self.title_hero_image_label is None:
+            return
+        theme = self.state.get('theme') if isinstance(self.state, dict) else None
+        splash_path = self._resolve_theme_path(theme.get('splash')) if isinstance(theme, dict) else None
+        splash_metadata = load_json(splash_path.with_suffix('.json')) if splash_path is not None and splash_path.exists() else None
+        glb_preview_path = None
+        if isinstance(splash_metadata, dict) and splash_metadata.get('glb_preview'):
+            glb_preview_path = resolve_existing_path(splash_metadata.get('glb_preview'))
+        if glb_preview_path is None and DODO_TITLE_GLB_PREVIEW_PATH.exists():
+            glb_preview_path = DODO_TITLE_GLB_PREVIEW_PATH
+        showcase = self.state.get('bangonow_showcase') if isinstance(self.state.get('bangonow_showcase'), dict) else {}
+        pipeline = self.state.get('pipeline_overview') if isinstance(self.state.get('pipeline_overview'), dict) else {}
+        verification = self.state.get('pipeline_verification') if isinstance(self.state.get('pipeline_verification'), dict) else {}
+        hybrid_runtime = self.state.get('hybrid_runtime') if isinstance(self.state.get('hybrid_runtime'), dict) else {}
+        preview_report = load_json(DODO_ENGINE_PREVIEW_PATH.with_suffix('.json'))
+        preview_stats = preview_report.get('stats', {}) if isinstance(preview_report, dict) else {}
+        runtime_state = preview_stats.get('runtime_state', {}) if isinstance(preview_stats, dict) else {}
+        runtime_payload = {
+            'title_surface': 'integrated',
+            'scene_name': showcase.get('showcase_name'),
+            'scene_entries': len(showcase.get('scene_entries', [])) if isinstance(showcase.get('scene_entries'), list) else 0,
+            'pipeline_status': verification.get('overall_status', 'unknown'),
+            'requested_passes': showcase.get('pipeline', {}).get('requested_passes', []) if isinstance(showcase.get('pipeline'), dict) else [],
+            'runtime_state': runtime_state or {'status': 'preview not generated yet'},
+            'runtime_contract': {
+                'label': hybrid_runtime.get('label'),
+                'renderer_backend': hybrid_runtime.get('renderer_backend'),
+                'runtime_scene_version': hybrid_runtime.get('concept_art_translation', {}).get('runtime_scene_version') if isinstance(hybrid_runtime.get('concept_art_translation'), dict) else None,
+            },
+            'overview': pipeline.get('showcase', {}) if isinstance(pipeline.get('showcase'), dict) else {},
+        }
+        self._refresh_title_live_frame(runtime_payload, splash_path, glb_preview_path, splash_metadata)
+        if self.title_status_label is not None:
+            active_threshold = runtime_state.get('active_threshold') or 'hushfall_hum'
+            self.title_status_label.configure(text=f"Scene: {runtime_payload.get('scene_name') or 'title tableau'}\nThreshold: {active_threshold}\nBango gesture: {self.title_gesture_state.get('bango', 'idle watch')}\nPatoot gesture: {self.title_gesture_state.get('patoot', 'idle amuse')}\nRenderer: {runtime_payload.get('runtime_contract', {}).get('renderer_backend') or 'DODO'}")
+        if self.title_flavor_label is not None:
+            character_direction = splash_metadata.get('character_direction', {}) if isinstance(splash_metadata, dict) else {}
+            bango_direction = character_direction.get('bango', 'concept basis') if isinstance(character_direction, dict) else 'concept basis'
+            patoot_direction = character_direction.get('patoot', 'companion basis') if isinstance(character_direction, dict) else 'companion basis'
+            trigger_line = f"LT {int(self.title_trigger_state.get('bango_trigger', 0.0) * 100):02d}% drives Bango arm-leg lurches | RT {int(self.title_trigger_state.get('patoot_trigger', 0.0) * 100):02d}% drives Patoot assist flares"
+            self.title_flavor_label.configure(text=f"Bango: {bango_direction}.\nPatoot: {patoot_direction}.\nScore direction: ritual percussion, industrial drone, broken choir, reed tones, hive hum.\n{trigger_line}")
+        self._render_title_menu()
+
+    def _refresh_title_live_frame(self, runtime_payload: dict, splash_path: Path | None, glb_preview_path: Path | None, splash_metadata: dict | None) -> None:
+        if self.title_hero_image_label is None:
+            return
+        frame = None
+        if self.title_engine is not None and ImageTk is not None and Image is not None:
+            self.title_engine.set_runtime_overrides(self.title_trigger_state)
+            profile = self._current_title_scene_profile()
+            orbit = float(profile['orbit']) + math.sin(self.title_scene_time * 0.14) * float(profile['motion_orbit'])
+            elevation = float(profile['elevation']) + math.sin(self.title_scene_time * 0.09) * float(profile['motion_elevation'])
+            image, stats = self.title_engine.render_preview(orbit=orbit, elevation=elevation, shader_mix=float(profile['shader_mix']), time_s=self.title_scene_time)
+            frame = self._compose_title_overlay_image(image, stats)
+        if frame is None:
+            preview_path = glb_preview_path or splash_path
+            preview = self._load_preview_image(preview_path, (920, 520), 'title_hero') if preview_path is not None else None
+            if preview is not None:
+                self.title_hero_image_label.configure(image=preview, text='')
+            else:
+                self.title_hero_image_label.configure(image='', text='Title splash unavailable', fg='#d8c39d')
+            return
+        photo = ImageTk.PhotoImage(frame)
+        self.images['title_live_scene'] = photo
+        self.title_hero_image_label.configure(image=photo, text='')
+
+    def _compose_title_overlay_image(self, image, stats: dict):
+        if Image is None or ImageDraw is None:
+            return image
+        theme = self._current_title_theme()
+        composed = image.convert('RGBA')
+        overlay = Image.new('RGBA', composed.size, theme['overlay'])
+        composed = Image.alpha_composite(composed, overlay)
+        draw = ImageDraw.Draw(composed, 'RGBA')
+        title_font = load_display_font(44, bold=True)
+        subtitle_font = load_display_font(18, bold=False)
+        meta_font = load_display_font(16, bold=False)
+        accent = theme['accent']
+        mist_top = composed.height - 168
+        draw.polygon(((0, composed.height), (0, mist_top + 24), (210, mist_top - 6), (472, mist_top + 18), (760, mist_top - 22), (composed.width, mist_top + 16), (composed.width, composed.height)), fill=(12, 18, 15, 84))
+        draw.line((44, mist_top - 12, 316, mist_top - 12), fill=accent, width=3)
+        draw.text((52, mist_top - 96), 'UNDERHIVE NOCTURNE', fill=theme['muted'], font=subtitle_font)
+        draw.text((48, mist_top - 52), 'BANGO: UNCHAINED', fill=(26, 18, 12, 140), font=title_font, stroke_width=6, stroke_fill=(26, 18, 12, 140))
+        draw.text((48, mist_top - 52), 'BANGO: UNCHAINED', fill='#f7edd4', font=title_font, stroke_width=2, stroke_fill=accent)
+        draw.text((54, mist_top + 10), 'tutorial yard vigil / fur-feather-fluid proxy / drifting drones', fill='#f2d7a6', font=meta_font)
+        draw.text((54, mist_top + 34), f"route {self.title_transition_note}  |  faces {stats.get('faces_drawn', 0)}  |  scripted {stats.get('scripted_entries', 0)}", fill=theme['muted'], font=meta_font)
+        if self.title_transition_phase > 0.0:
+            veil = int(180 * min(1.0, self.title_transition_phase))
+            bar = int((composed.width * 0.5) * min(1.0, self.title_transition_phase))
+            draw.rectangle((0, 0, bar, composed.height), fill=(6, 9, 8, veil))
+            draw.rectangle((composed.width - bar, 0, composed.width, composed.height), fill=(6, 9, 8, veil))
+            draw.line((bar + 8, 0, bar + 8, composed.height), fill=accent, width=3)
+            draw.line((composed.width - bar - 8, 0, composed.width - bar - 8, composed.height), fill=accent, width=3)
+        return composed
+
+    def _get_title_menu_node(self, node_id: str | None = None) -> dict[str, object]:
+        node_key = node_id or (self.title_menu_stack[-1] if self.title_menu_stack else 'root')
+        node = TITLE_MENU_NODES.get(node_key)
+        return node if isinstance(node, dict) else TITLE_MENU_NODES['root']
+
+    def _current_title_theme(self) -> dict[str, object]:
+        node = self._get_title_menu_node()
+        theme_key = str(node.get('theme', 'root'))
+        return TITLE_BRANCH_THEMES.get(theme_key, TITLE_BRANCH_THEMES['root'])
+
+    def _current_title_scene_profile(self) -> dict[str, object]:
+        node = self._get_title_menu_node()
+        theme_key = str(node.get('theme', 'root'))
+        return TITLE_SCENE_PROFILES.get(theme_key, TITLE_SCENE_PROFILES['root'])
+
+    def _trigger_title_transition(self, note: str) -> None:
+        self.title_transition_phase = 1.0
+        self.title_transition_note = note
+
+    def _render_title_menu(self) -> None:
+        if self.title_menu_frame is None or self.title_menu_heading is None or self.title_menu_subheading is None or self.title_menu_info is None:
+            return
+        for child in self.title_menu_frame.winfo_children():
+            child.destroy()
+        self.title_menu_buttons = []
+        node = self._get_title_menu_node()
+        theme = self._current_title_theme()
+        self.title_menu_heading.configure(text=str(node.get('title', 'Title Screen')))
+        self.title_menu_heading.configure(fg=theme['text'])
+        self.title_menu_subheading.configure(text=str(node.get('subtitle', '')))
+        self.title_menu_subheading.configure(fg=theme['muted'])
+        options = node.get('options', []) if isinstance(node.get('options'), list) else []
+        self.title_menu_selected_index = min(self.title_menu_selected_index, max(0, len(options[:3]) - 1))
+        for index, option in enumerate(options[:3]):
+            if not isinstance(option, dict):
+                continue
+            text_block = str(option.get('label', 'Option'))
+            description = str(option.get('description', ''))
+            button = tk.Button(
+                self.title_menu_frame,
+                text=f'{text_block}\n{description}' if description else text_block,
+                command=lambda option_index=index, payload=option: self._select_and_activate_title_option(option_index, payload),
+                bg='#232c22',
+                fg=theme['text'],
+                activebackground='#476245',
+                relief='flat',
+                padx=12,
+                pady=10,
+                anchor='w',
+                justify='left',
+                wraplength=320,
+            )
+            button.bind('<Enter>', lambda _event, option_index=index: self._set_title_selection(option_index))
+            button.pack(fill='x', pady=4)
+            self.title_menu_buttons.append(button)
+        breadcrumb = ' > '.join(str(TITLE_MENU_NODES.get(node_id, {}).get('title', node_id)).upper() for node_id in self.title_menu_stack)
+        summary = str(node.get('summary', ''))
+        self.title_menu_info.configure(text=f'{breadcrumb}\n\n{summary}')
+        self.title_menu_info.configure(fg=theme['muted'])
+        self._update_title_menu_focus()
+
+    def _set_title_selection(self, index: int) -> None:
+        self.title_menu_selected_index = index
+        self._update_title_menu_focus()
+
+    def _title_menu_move(self, delta: int) -> None:
+        if not self._is_title_active() or not self.title_menu_buttons:
+            return
+        self.title_menu_selected_index = (self.title_menu_selected_index + delta) % len(self.title_menu_buttons)
+        self._update_title_menu_focus()
+
+    def _update_title_menu_focus(self) -> None:
+        theme = self._current_title_theme()
+        pulse = 0.65 + (math.sin(self.title_scene_time * 2.1) + 1.0) * 0.175
+        for index, button in enumerate(self.title_menu_buttons):
+            if index == self.title_menu_selected_index:
+                button.configure(bg=theme['accent'], fg='#111611', activebackground=theme['accent'], activeforeground='#111611')
+            else:
+                dim_bg = '#223126' if pulse < 0.8 else '#26372a'
+                button.configure(bg=dim_bg, fg=theme['text'], activebackground=theme['accent'], activeforeground='#111611')
+
+    def _select_and_activate_title_option(self, index: int, option: dict[str, object]) -> None:
+        self._set_title_selection(index)
+        self._activate_title_menu_option(option)
+
+    def _activate_selected_title_option(self) -> None:
+        if not self._is_title_active():
+            return
+        options = self._get_title_menu_node().get('options', [])
+        if not isinstance(options, list) or not options:
+            return
+        option = options[min(self.title_menu_selected_index, len(options) - 1)]
+        if isinstance(option, dict):
+            self._activate_title_menu_option(option)
+
+    def _activate_title_menu_option(self, option: dict[str, object]) -> None:
+        kind = str(option.get('kind', 'node'))
+        target = option.get('target')
+        if kind == 'node':
+            self._push_title_menu_node(str(target))
+            return
+        if kind == 'tab':
+            self.navigate_to_tab(str(target))
+            return
+        if kind == 'action':
+            action_map = {
+                'launch_bango_demo': self.launch_bango_demo,
+                'run_tutorial_sim': self.run_tutorial_sim,
+                'refresh_state': self.refresh_state,
+                'title_menu_home': self.title_menu_home,
+                'verify_pipeline': self.verify_pipeline,
+                'build_bangonow_showcase': self.build_bangonow_showcase,
+                'build_hybrid_runtime': self.build_hybrid_runtime,
+            }
+            callback = action_map.get(str(target))
+            if callback is not None:
+                callback()
+
+    def _push_title_menu_node(self, node_id: str) -> None:
+        if node_id not in TITLE_MENU_NODES:
+            self.status_var.set(f'Menu node unavailable: {node_id}.')
+            return
+        self.title_menu_stack.append(node_id)
+        self.title_menu_selected_index = 0
+        target_title = str(TITLE_MENU_NODES[node_id].get('title', node_id))
+        self._trigger_title_transition(target_title.lower())
+        self._render_title_menu()
+        self.status_var.set(f'Opened {target_title} menu.')
+
+    def title_menu_back(self) -> None:
+        if len(self.title_menu_stack) > 1:
+            self.title_menu_stack.pop()
+            parent_title = str(self._get_title_menu_node().get('title', 'parent room'))
+            self._trigger_title_transition(f'back to {parent_title.lower()}')
+            self._render_title_menu()
+            self.status_var.set('Returned to parent menu.')
+        else:
+            self.show_title_tab()
+
+    def title_menu_home(self) -> None:
+        self.title_menu_stack = ['root']
+        self.title_menu_selected_index = 0
+        self._trigger_title_transition('threshold foyer')
+        self._render_title_menu()
+        self.status_var.set('Returned to title root menu.')
+
+    def _is_title_active(self) -> bool:
+        if self.notebook is None or self.title_tab is None:
+            return False
+        return self.notebook.select() == str(self.title_tab)
+
+    def navigate_to_tab(self, label: str) -> None:
+        frame = self.tab_frames.get(label)
+        if frame is None or self.notebook is None:
+            self.status_var.set(f'View unavailable: {label}.')
+            return
+        self.notebook.select(frame)
+        self._sync_title_audio()
+        self.status_var.set(f'Opened {label}.')
+
+    def focus_viewport_tab(self) -> None:
+        self.navigate_to_tab('Illusion 3D')
+        self._refresh_viewport(force=True)
+        self.status_var.set('Viewport tab focused.')
+
+    def show_title_tab(self) -> None:
+        self.title_menu_home()
+        self.navigate_to_tab('Title')
+        self.master.focus_set()
 
     def _refresh_pass_cards(self) -> None:
         if self.pass_cards_frame is None or self.pass_detail_text is None:
@@ -769,9 +1326,14 @@ class DodoGameApp:
         self.font_renderers = self.load_font_renderers()
         if self.engine is not None and BANGONOW_SHOWCASE_PATH.exists():
             self.engine.load_scene_manifest(BANGONOW_SHOWCASE_PATH)
+        if self.title_engine is not None:
+            title_scene = DODO_TITLE_SCENE_PATH if DODO_TITLE_SCENE_PATH.exists() else (BANGONOW_SHOWCASE_PATH if BANGONOW_SHOWCASE_PATH.exists() else None)
+            if title_scene is not None:
+                self.title_engine.load_scene_manifest(title_scene)
         self.header.destroy()
         self._build_header()
         self.refresh_views()
+        self._sync_title_audio()
         self.status_var.set('DODOGame state refreshed.')
 
     def build_manifest(self) -> None:
@@ -908,11 +1470,79 @@ class DodoGameApp:
     def _poll_controller(self) -> None:
         snapshot = self.poller.poll()
         if snapshot.get('connected'):
-            self.controller_var.set('Controller connected.')
+            left_trigger = int(snapshot.get('left_trigger', 0)) if isinstance(snapshot.get('left_trigger'), int) else 0
+            right_trigger = int(snapshot.get('right_trigger', 0)) if isinstance(snapshot.get('right_trigger'), int) else 0
+            self._update_title_trigger_state(left_trigger, right_trigger)
+            self.controller_var.set(f'Controller connected. LT {left_trigger:03d} | RT {right_trigger:03d}')
         else:
+            self._update_title_trigger_state(0, 0)
             self.controller_var.set(snapshot.get('reason', 'Controller unavailable.'))
+        if self._is_title_active() and snapshot.get('connected'):
+            buttons = set(snapshot.get('buttons', [])) if isinstance(snapshot.get('buttons'), list) else set()
+            pressed = buttons - self.title_last_buttons
+            left_stick = snapshot.get('left_stick', {}) if isinstance(snapshot.get('left_stick'), dict) else {}
+            left_y = int(left_stick.get('y', 0)) if isinstance(left_stick.get('y', 0), int) else 0
+            if 'DPadUp' in pressed:
+                self._title_menu_move(-1)
+            if 'DPadDown' in pressed:
+                self._title_menu_move(1)
+            if left_y >= 18000:
+                self._title_menu_move(-1)
+            elif left_y <= -18000:
+                self._title_menu_move(1)
+            if 'A' in pressed or 'Start' in pressed:
+                self._activate_selected_title_option()
+            if 'B' in pressed or 'Back' in pressed:
+                self.title_menu_back()
+            if 'LB' in pressed:
+                self.title_menu_back()
+            if 'RB' in pressed:
+                self.title_menu_home()
+            self.title_last_buttons = buttons
+        else:
+            self.title_last_buttons = set()
         self._write_text(self.controller_text, snapshot)
         self.master.after(120, self._poll_controller)
+
+    def _update_title_trigger_state(self, left_trigger: int, right_trigger: int) -> None:
+        left_value = max(0.0, min(1.0, left_trigger / 255.0))
+        right_value = max(0.0, min(1.0, right_trigger / 255.0))
+        self.title_trigger_state = {
+            'bango_trigger': round(left_value, 4),
+            'patoot_trigger': round(right_value, 4),
+        }
+        self.title_gesture_state = {
+            'bango': 'guardian flourish' if left_value >= 0.72 else ('curious shuffle' if left_value >= 0.2 else 'idle watch'),
+            'patoot': 'crest flare' if right_value >= 0.72 else ('toe shuffle' if right_value >= 0.2 else 'idle amuse'),
+        }
+
+    def _tick_title_scene(self) -> None:
+        self.title_scene_time += 0.08
+        self.title_transition_phase = max(0.0, self.title_transition_phase - 0.08)
+        if self._is_title_active():
+            self._refresh_title_surface()
+        else:
+            self._update_title_menu_focus()
+        self.master.after(90, self._tick_title_scene)
+
+    def _sync_title_audio(self) -> None:
+        if winsound is None:
+            return
+        theme = self.state.get('theme') if isinstance(self.state, dict) else None
+        raw_path = theme.get('title_music') if isinstance(theme, dict) else None
+        music_path = self._resolve_theme_path(raw_path) if raw_path else None
+        if self._is_title_active() and music_path is not None and music_path.exists():
+            if not self.title_music_active:
+                winsound.PlaySound(str(music_path), winsound.SND_FILENAME | winsound.SND_ASYNC | winsound.SND_LOOP | winsound.SND_NODEFAULT)
+                self.title_music_active = True
+        elif self.title_music_active:
+            winsound.PlaySound(None, 0)
+            self.title_music_active = False
+
+    def _on_close(self) -> None:
+        if winsound is not None and self.title_music_active:
+            winsound.PlaySound(None, 0)
+        self.master.destroy()
 
 
 def main() -> int:
@@ -929,7 +1559,13 @@ def main() -> int:
             return 1
         showcase_path = BANGONOW_SHOWCASE_PATH if BANGONOW_SHOWCASE_PATH.exists() else None
         engine = DodoPseudo3DEngine(width=560, height=320, scene_manifest_path=showcase_path)
-        preview_kwargs = preview_cli_kwargs(args, showcase_path)
+        preview_kwargs = {'scene_manifest_path': showcase_path}
+        if args.orbit is not None:
+            preview_kwargs['orbit'] = args.orbit
+        if args.elevation is not None:
+            preview_kwargs['elevation'] = args.elevation
+        if args.shader_mix is not None:
+            preview_kwargs['shader_mix'] = args.shader_mix
         payload = engine.write_preview(args.render_engine_preview, **preview_kwargs)
         print(json.dumps(payload, indent=2))
         return 0

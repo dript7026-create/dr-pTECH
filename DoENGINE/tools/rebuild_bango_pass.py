@@ -114,7 +114,6 @@ def main() -> int:
         'playnow': run_command(playnow_command),
         'showcase': run_command([sys.executable, str(ROOT / 'tools' / 'build_bangonow_showcase.py')]),
         'hybrid_runtime': run_command([sys.executable, str(ROOT / 'tools' / 'build_dodo_hybrid_runtime.py')]),
-        'windows_bundle': run_command([sys.executable, str(ROOT / 'tools' / 'build_dodo_windows_bundle.py'), '--asset-root', str(asset_root)]),
         'pipeline_verify': run_command([sys.executable, str(ROOT / 'tools' / 'validate_bango_pipeline.py')]),
         'preview': run_command([sys.executable, str(ROOT / 'apps' / 'dodogame.py'), '--render-engine-preview', str(PREVIEW_OUTPUT)]),
         'pass_preview': run_command([
@@ -135,10 +134,9 @@ def main() -> int:
     if pass_preview_output.exists() and 'stdout' in steps['pass_preview']:
         try:
             pass_preview_payload = json.loads(steps['pass_preview']['stdout'])
-        except json.JSONDecodeError:
-            pass_preview_payload = load_json(pass_preview_output.with_suffix('.json'))
-        if isinstance(pass_preview_payload, dict):
             pass_preview_json.write_text(json.dumps(pass_preview_payload, indent=2), encoding='utf-8')
+        except json.JSONDecodeError:
+            pass_preview_payload = None
     status = 'pass' if worst_code == 0 else 'fail'
     payload = {
         'pass_label': pass_label,

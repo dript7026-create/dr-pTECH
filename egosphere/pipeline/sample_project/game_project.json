@@ -2,7 +2,7 @@
   "project_name": "EgosphereGame",
   "seed": "URBDEN-ALPHA",
   "authoring": {
-    "clipstudio": {
+    "art_export": {
       "canvas": {
         "width": 2048,
         "height": 2048,
@@ -72,7 +72,7 @@
         { "scene_id": "courtroom_resolution", "collection": "courtroom", "world_mesh": "urbden_courthouse" }
       ]
     },
-    "idtech2": {
+    "engine": {
       "module_name": "g_egospheregame",
       "asset_root": "baseq2/egospheregame",
       "autofactor_prefix": "egosphere",
@@ -102,7 +102,7 @@
     "tilesets": [
       {
         "id": "city_blocks",
-        "path": "authoring/clipstudio/tiles/city_blocks.png",
+        "path": "authoring/art/tiles/city_blocks.png",
         "tile_w": 32,
         "tile_h": 32,
         "semantic_tags": ["street", "sidewalk", "shopfront", "alley"],
@@ -113,7 +113,7 @@
     "sprites": [
       {
         "id": "player_driver",
-        "path": "authoring/clipstudio/sprites/player_driver.png",
+        "path": "authoring/art/sprites/player_driver.png",
         "frames": 8,
         "usage": "player",
         "material_profile": "default_sprite_material",
@@ -121,7 +121,7 @@
       },
       {
         "id": "npc_citizen",
-        "path": "authoring/clipstudio/sprites/npc_citizen.png",
+        "path": "authoring/art/sprites/npc_citizen.png",
         "frames": 4,
         "usage": "npc",
         "material_profile": "default_sprite_material",
@@ -131,13 +131,13 @@
     "portraits": [
       {
         "id": "judge_portrait",
-        "path": "authoring/clipstudio/portraits/judge.png",
+        "path": "authoring/art/portraits/judge.png",
         "usage": "dialogue",
         "precache": false
       },
       {
         "id": "rival_portrait",
-        "path": "authoring/clipstudio/portraits/rival.png",
+        "path": "authoring/art/portraits/rival.png",
         "usage": "dialogue",
         "precache": false
       }
@@ -197,8 +197,8 @@
     ]
   },
   "targets": {
-    "clipstudio_bundle": "clipstudio_bundle",
+    "art_bundle": "art_bundle",
     "blender_bundle": "blender_bundle",
-    "idtech2_bundle": "idtech2_bundle"
+    "engine_bundle": "engine_bundle"
   }
 }

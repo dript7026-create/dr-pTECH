@@ -5,22 +5,25 @@
 ## File Types
 
 ### .ecbmps — Electronic Colour Book Media Playback Shell
+
 A media-book format for rich, paged reading experiences.  
 Features: page turning, bookmarking, passage highlighting, persistent reading state.  
 No in-page gameplay. Read-only interactive content.
 
 ### .ccp — ClipConceptBook
+
 An interactive media-book format with embedded gameplay and interactive scene elements.  
 Extends .ecbmps with per-page scripted interactions and clip-based animations.
 
 ## Components
 
 | Component | Description |
-|-----------|-------------|
+| --- | --- |
 | `compiler/ecbmps_compiler.c` | Assembles source content into `.ecbmps` binary |
 | `compiler/ccp_compiler.c` | Assembles source content into `.ccp` binary |
 | `viewer/ecbmps_viewer.c` | Win32 GUI reader for `.ecbmps` files |
 | `viewer/ccp_viewer.c` | Win32 GUI reader for `.ccp` files |
+| `tools/gply_compiler.py` | Compiles a pipeline-bridge JSON into a `.gply` gameplay binary |
 | `tools/recraft_manifest_generator.py` | Generates the Recraft asset manifest (1500 credits) |
 | `assets/recraft/` | Generated GUI/shell art |
 
@@ -40,3 +43,15 @@ Extends .ecbmps with per-page scripted interactions and clip-based animations.
 python tools\recraft_manifest_generator.py   # Write manifest JSON
 python ..\drIpTECH\ReCraftGenerationStreamline\batch_run_manifest.py assets\ecbmps_ccp_shell_manifest.json
 ```
+
+## GPLY Gameplay Compilation (CCP v3)
+
+```powershell
+# 1. Compile the CSP pipeline-bridge JSON into a .gply binary
+python tools\gply_compiler.py -i clipstudio_runtime_manifest.json -o gameplay.gply
+
+# 2. Pack everything into a v3 CCP file
+.\build\ccp_compiler -o book.ccp -m manifest.json -z source.zip -g gameplay.gply
+```
+
+Run `python tools\gply_compiler.py --help` for the full JSON schema and opcode reference.

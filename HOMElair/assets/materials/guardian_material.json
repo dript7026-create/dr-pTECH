@@ -1,0 +1,17 @@
+{
+  "schema": "homelair_material_profile/v1",
+  "material_id": "guardian_material",
+  "label": "Guardian Surface Stack",
+  "texture_layers": [
+    {
+      "id": "skin_albedo",
+      "role": "albedo",
+      "path": "../textures/guardian_skin_albedo.ppm"
+    },
+    {
+      "id": "cloth_albedo",
+      "role": "fabric",
+      "path": "../textures/guardian_cloth_albedo.ppm"
+    }
+  ]
+}

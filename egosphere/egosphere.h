@@ -166,6 +166,21 @@ typedef struct MindActorProfile {
     MindSphereNarrativeHooks narrative;
 } MindActorProfile;
 
+#define EGOSPHERE_PSEUDOSAPIEN_LABEL_MAX 32
+#define EGOSPHERE_PSEUDOSAPIEN_LIQUID_CHANNELS 4
+
+typedef struct PseudoSapien {
+    char label[EGOSPHERE_PSEUDOSAPIEN_LABEL_MAX];
+    double allegiance;
+    double vigilance;
+    double agitation;
+    double grace;
+    double orbit_phase;
+    double pressure;
+    double dominance;
+    double liquid_share[EGOSPHERE_PSEUDOSAPIEN_LIQUID_CHANNELS];
+} PseudoSapien;
+
 typedef struct MindResonanceLink {
     double frequency[MINDSPHERE_FREQUENCY_BANDS];
     double familiarity;
@@ -247,6 +262,8 @@ void mindsphere_record_player_style(MindSphereRivalary *ms, double pressure, dou
 void mindsphere_record_player_choice(MindSphereRivalary *ms, double mercy_delta, double duty_delta, double candor_delta, double ambition_delta);
 void mindsphere_sync_resonance(MindSphereRivalary *ms);
 void mindsphere_collect_narrative_hooks(const MindSphereRivalary *ms, MindSphereNarrativeHooks *out_hooks);
+void egosphere_seed_pseudosapien(PseudoSapien *guide, const char *label, double allegiance, unsigned int seed);
+void egosphere_drive_pseudosapien(PseudoSapien *guide, double bonded_force, double opposition_force, double predictive_vision, double fluidity, unsigned long tick);
 /* replay rehearsal returns the number of sampled entries consumed for training */
 size_t mindsphere_rehearse_rival(RivalIdentity *rival, size_t sample_count);
 size_t mindsphere_rehearse_all(MindSphereRivalary *ms, size_t sample_count);

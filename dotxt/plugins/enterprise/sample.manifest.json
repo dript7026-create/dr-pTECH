@@ -1,0 +1,10 @@
+{
+  "id": "dotxt.enterprise.sample",
+  "name": "Sample Enterprise Plugin",
+  "tier": "enterprise",
+  "version": "0.1.0",
+  "entry": "sample_enterprise.dll",
+  "licenseRequired": true,
+  "sku": "DOTXT-ENT-PLUGIN-001",
+  "policy": "managed-rollout"
+}

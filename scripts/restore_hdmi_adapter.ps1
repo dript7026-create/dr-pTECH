@@ -1,5 +1,6 @@
 param(
     [switch]$Aggressive,
+    [switch]$ReinstallDriverFromStore,
     [switch]$OpenTools,
     [switch]$SkipRebootPrompt
 )
@@ -80,6 +81,42 @@ function Restart-DisplayDevice {
     Start-Sleep -Seconds 4
 }
 
+function Get-DisplayDriverBindings {
+    param([string]$DeviceId)
+
+    $bindings = Get-CimInstance Win32_PnPSignedDriver | Where-Object {
+        $_.DeviceID -eq $DeviceId -or ($_.DeviceClass -eq 'DISPLAY' -and $_.DeviceName -match 'AMD Radeon')
+    }
+
+    return $bindings | Sort-Object -Property DriverDate, DriverVersion -Descending
+}
+
+function Install-DriverFromStore {
+    param([Parameter(Mandatory = $true)][string]$DeviceId)
+
+    Write-Section 'Reinstalling AMD Driver From Local Driver Store'
+    $bindings = Get-DisplayDriverBindings -DeviceId $DeviceId
+    if (-not $bindings) {
+        throw 'No AMD display driver binding was found in Win32_PnPSignedDriver.'
+    }
+
+    $infNames = $bindings |
+        Where-Object { $_.InfName -and $_.DriverProviderName -match 'Advanced Micro Devices' } |
+        Select-Object -ExpandProperty InfName -Unique
+
+    if (-not $infNames) {
+        throw 'No AMD INF names were found for the display adapter.'
+    }
+
+    foreach ($infName in $infNames) {
+        Write-Host "Installing $infName from the local driver store..." -ForegroundColor Yellow
+        & pnputil /add-driver $infName /install | Out-Host
+        Start-Sleep -Seconds 2
+    }
+
+    Invoke-HardwareRescan
+}
+
 function Invoke-AggressiveRepair {
     param([Parameter(Mandatory = $true)][string]$InstanceId)
 
@@ -127,6 +164,7 @@ if (-not (Test-IsAdmin)) {
     Write-Host 'This repair requires Administrator rights. Relaunching elevated...' -ForegroundColor Yellow
     $argList = @('-ExecutionPolicy', 'Bypass', '-File', ('"' + $PSCommandPath + '"'))
     if ($Aggressive) { $argList += '-Aggressive' }
+    if ($ReinstallDriverFromStore) { $argList += '-ReinstallDriverFromStore' }
     if ($OpenTools) { $argList += '-OpenTools' }
     if ($SkipRebootPrompt) { $argList += '-SkipRebootPrompt' }
     Start-Process -FilePath 'powershell.exe' -Verb RunAs -ArgumentList $argList
@@ -136,6 +174,7 @@ if (-not (Test-IsAdmin)) {
 Write-Section 'System Context'
 Get-CimInstance Win32_ComputerSystem | Select-Object Manufacturer, Model, SystemType | Format-List | Out-String -Width 220 | Write-Host
 Get-ComputerInfo | Select-Object WindowsProductName, WindowsVersion, OsBuildNumber | Format-List | Out-String -Width 220 | Write-Host
+Write-Host 'Tip: Win+Ctrl+Shift+B forces a graphics stack reset without rebooting.' -ForegroundColor DarkYellow
 
 Export-Diagnostics -LogPath $logPath
 $before = Show-DisplayState -Label 'Display State Before Repair'
@@ -153,6 +192,10 @@ Invoke-HardwareRescan
 
 if ($gpu.Status -ne 'OK') {
     Restart-DisplayDevice -InstanceId $gpu.InstanceId
+}
+
+if ($ReinstallDriverFromStore) {
+    Install-DriverFromStore -DeviceId $gpu.InstanceId
 }
 
 $after = Show-DisplayState -Label 'Display State After Safe Repair'
@@ -174,8 +217,9 @@ if ($Aggressive -and $null -ne $after.Gpu) {
 Write-Host 'The adapter is still not healthy.' -ForegroundColor Yellow
 Write-Host 'Next actions:' -ForegroundColor Yellow
 Write-Host '1. Reboot the laptop fully, then rerun this script as Administrator.'
-Write-Host '2. In Device Manager, uninstall only AMD Radeon(TM) Graphics and scan for hardware changes.'
-Write-Host '3. Reinstall the Acer Aspire A315-24PT graphics/chipset package, then reconnect the HDMI adapter.'
+Write-Host '2. Run this script again with -ReinstallDriverFromStore and -Aggressive.'
+Write-Host '3. In Device Manager, uninstall only AMD Radeon(TM) Graphics and scan for hardware changes.'
+Write-Host '4. Reinstall the Acer Aspire A315-24PT graphics/chipset package, then reconnect the HDMI adapter.'
 
 if (-not $SkipRebootPrompt) {
     $restart = Read-Host 'Type REBOOT to restart now, or press Enter to skip'

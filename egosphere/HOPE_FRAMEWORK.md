@@ -135,3 +135,72 @@ The sample scenarios cover:
 - a threshold-run overload scene
 
 Use the prototype for architecture exploration, balancing, and framing further C or engine-side implementations.
+
+## Synthesis Pipeline
+
+`egosphere/tools/synthesis_pipeline.py` extends HOPE from frame governance into world synthesis.
+
+It accepts a world seed, compiles a canonical project manifest, materializes generated source assets, and then hands that generated project into the existing Clip Studio, Blender, and idTech2 bundle pipeline.
+
+Current materialized outputs include:
+
+- procedurally generated PNG tilesets, sprites, and portraits driven by scene type, sanctuary strength, and HOPE pressure state
+- procedurally generated OBJ terrain and sanctuary meshes driven by self-contained mesh grammar functions
+- procedurally generated OBJ structure and prop grammar outputs for gateways, ritual props, and architecture anchors
+- generated JSON materials and physics rigs carrying HOPE-derived rendering and interaction policy
+- procedurally generated JSON animation clips carrying movement cadence, root motion, breath curves, and event markers
+- procedurally generated JSON ecology populations carrying archetypes, temperament, curiosity, and kinship affinity
+- procedurally synthesized WAV ambience driven by scene type, sanctuary strength, recursion pressure, and theta
+- a `generation_manifest.json` ledger for the whole synthesized asset set
+
+That means the current HOPE synthesis path no longer stops at abstract asset references; it now emits a concrete generated asset tree that can serve as the source surface for later higher-fidelity synthesis passes.
+
+## System Of Systems
+
+The synthesis and runtime model should stay explicit as a system of systems, with each layer operating as a self-contained function rather than a monolith.
+
+Current self-contained synthesis functions:
+
+- image synthesis function
+- mesh synthesis function
+- structure synthesis function
+- material synthesis function
+- physics-rig synthesis function
+- animation synthesis function
+- ecology synthesis function
+- audio synthesis function
+
+Current self-contained runtime functions:
+
+- `reality_cell_system`
+- `ecology_state_system`
+- `kinship_hub_system`
+- `sanctuary_state_system`
+- `hope_controller_system`
+- `streaming_system`
+- `physics_system`
+- `presentation_system`
+- `scene_transition_system`
+- `preview_loop_system`
+
+Those functions are composed in sequence so each layer can evolve independently while still participating in one coherent world-generation and runtime pipeline.
+
+## Runtime Sample
+
+`egosphere/tools/hope_runtime_sample.py` consumes a generated HOPE project and simulates the system graph directly from the scene-level HOPE metadata.
+
+The runtime sample now also maintains a persistent sanctuary state across repeated scene cycles and can emit that state to disk as a save-style handoff for future engine-side runtime integration.
+
+`egosphere/tools/hope_preview_app.py` provides a lightweight Tk preview surface over the same generated runtime snapshot so the system graph, sanctuary state, and scene cards are inspectable without reading raw JSON by hand.
+
+`egosphere/tools/validate_pipeline.py --suite hope` now runs the HOPE synthesis build, checks the generated bundle tree, and verifies that the runtime snapshot and sanctuary handoff can be consumed from the validator flow alongside the existing sample and Pertinence suites.
+
+This closes the loop between:
+
+- world seed
+- synthesized source assets
+- canonical project manifest
+- engine bundle outputs
+- runtime scene behavior
+
+The runtime sample is intentionally lightweight, but it proves that the generated scene graph and HOPE metadata can drive a live system-of-systems pass instead of ending at build-time output only.

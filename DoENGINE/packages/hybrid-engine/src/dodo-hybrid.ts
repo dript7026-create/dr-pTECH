@@ -110,6 +110,21 @@ const bangoControllerProfile: HybridControllerProfile = {
 	],
 };
 
+export interface RegisteredHybridGameSeed {
+	gameId: string;
+	label: string;
+	renderMode?: 'full3d-pseudo3d-hybrid';
+	gameProfileManifest?: string;
+	gamePackageManifest?: string;
+	primarySource?: string;
+	sourceLanguage?: 'c' | 'typescript' | 'python' | 'json';
+	sceneManifest?: string;
+	defaultSavePath?: string;
+	gameplayBridge?: string;
+	controllerProfileId?: string;
+	supports?: string[];
+}
+
 export function buildBangoProfile(playnowManifest: string, tutorialSpec: string): HybridGameProfile {
 	return {
 		gameId: 'bango-patoot',
@@ -142,7 +157,53 @@ export function buildGenericProfile(): HybridGameProfile {
 	};
 }
 
-export function buildDefaultDodoHybridRuntime(playnowManifest: string, tutorialSpec: string): HybridEngineRuntimeProfile {
+export function buildRegisteredGameProfile(seed: RegisteredHybridGameSeed): HybridGameProfile {
+	return {
+		gameId: seed.gameId,
+		label: seed.label,
+		renderMode: seed.renderMode ?? 'full3d-pseudo3d-hybrid',
+		gameProfileManifest: seed.gameProfileManifest,
+		gamePackageManifest: seed.gamePackageManifest,
+		primarySource: seed.primarySource,
+		sourceLanguage: seed.sourceLanguage,
+		sceneManifest: seed.sceneManifest,
+		defaultSavePath: seed.defaultSavePath,
+		gameplayBridge: seed.gameplayBridge,
+		controllerProfileId: seed.controllerProfileId ?? bangoControllerProfile.profileId,
+		supports: seed.supports ?? [],
+	};
+}
+
+export function buildToadstoolminProfile(gameProfileManifest: string, primarySource: string): HybridGameProfile {
+	return buildRegisteredGameProfile({
+		gameId: 'toadstoolmin-bubble-swingpush',
+		label: 'toadstoolmin bubble SWINGPUSH',
+		gameProfileManifest,
+		primarySource,
+		sourceLanguage: 'c',
+		supports: [
+			'DODO pipeline source-ingest seed',
+			'C gameplay entrypoint stub',
+			'controller-first action prototype',
+			'fresh game branch scaffold',
+		],
+	});
+}
+
+export function buildDefaultDodoHybridRuntime(
+	playnowManifest: string,
+	tutorialSpec: string,
+	registeredGames: RegisteredHybridGameSeed[] = [],
+): HybridEngineRuntimeProfile {
+	const fallbackGames =
+		registeredGames.length > 0
+			? registeredGames.map((seed) => buildRegisteredGameProfile(seed))
+			: [
+				buildToadstoolminProfile(
+					'games/toadstoolmin_bubble_swingpush/game_profile.json',
+					'games/toadstoolmin_bubble_swingpush/src/toadstoolmin_bubble_swingpush.c',
+				),
+			];
 	return {
 		runtimeId: 'dodogame-orb-do-hybrid',
 		label: 'DODOGame ORB/Do Hybrid Runtime',
@@ -150,7 +211,11 @@ export function buildDefaultDodoHybridRuntime(playnowManifest: string, tutorialS
 		rendererBackend: shaderProgram.backend,
 		renderStages,
 		controllerProfiles: [bangoControllerProfile],
-		games: [buildBangoProfile(playnowManifest, tutorialSpec), buildGenericProfile()],
+		games: [
+			buildBangoProfile(playnowManifest, tutorialSpec),
+			...fallbackGames,
+			buildGenericProfile(),
+		],
 		shaderProgram,
 	};
 }

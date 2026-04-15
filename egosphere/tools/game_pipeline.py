@@ -16,10 +16,29 @@ def write_json(path: Path, payload: dict | list) -> None:
     path.write_text(json.dumps(payload, indent=2), encoding="utf-8")
 
 
+ASSET_TYPE_SINGULAR = {
+    "tilesets": "tileset",
+    "sprites": "sprite",
+    "portraits": "portrait",
+    "meshes": "mesh",
+    "materials": "material",
+    "physics_rigs": "physics_rig",
+    "audio": "audio",
+    "anim_state_machines": "anim_state_machine",
+    "vfx_descriptors": "vfx_descriptor",
+    "interaction_graphs": "interaction_graph",
+    "hitbox_manifests": "hitbox_manifest",
+}
+
+
+def singularize_asset_type(asset_type: str) -> str:
+    return ASSET_TYPE_SINGULAR.get(asset_type, asset_type[:-1] if asset_type.endswith("s") else asset_type)
+
+
 def flatten_assets(project: dict) -> list[dict]:
     assets = []
     for asset_type, items in project["assets"].items():
-        singular_type = asset_type[:-1] if asset_type.endswith("s") else asset_type
+        singular_type = singularize_asset_type(asset_type)
         for item in items:
             asset = dict(item)
             asset.setdefault("asset_type", singular_type)
@@ -29,7 +48,7 @@ def flatten_assets(project: dict) -> list[dict]:
 
 def normalize_systems(project: dict) -> list[dict]:
     systems = []
-    dispatch = project["authoring"]["idtech2"].get("system_dispatch", {})
+    dispatch = project["authoring"]["engine"].get("system_dispatch", {})
     for index, item in enumerate(project["gameplay"]["systems"]):
         if isinstance(item, str):
             system = {"name": item}
@@ -55,7 +74,7 @@ def collect_precache_entries(project: dict) -> list[dict]:
                     "asset_type": asset["asset_type"],
                 }
             )
-    for group in project["authoring"]["idtech2"].get("precache_groups", []):
+    for group in project["authoring"]["engine"].get("precache_groups", []):
         for entry in group.get("entries", []):
             precache.append(
                 {
@@ -144,50 +163,50 @@ def generate_blender_ingest_script(project: dict) -> str:
     )
 
 
-def build_clipstudio_bundle(project: dict, out_dir: Path) -> Path:
+def build_art_bundle(project: dict, out_dir: Path) -> Path:
     ensure_dir(out_dir)
-    clip = project["authoring"]["clipstudio"]
+    art = project["authoring"]["art_export"]
     assets = flatten_assets(project)
     payload = {
         "project_name": project["project_name"],
         "seed": project["seed"],
         "translation_profile": project.get("translation_profile", {}),
-        "canvas": clip["canvas"],
-        "export_profile": clip.get("export_profile", {"color_mode": "rgba", "naming": "asset_id"}),
+        "canvas": art["canvas"],
+        "export_profile": art.get("export_profile", {"color_mode": "rgba", "naming": "asset_id"}),
         "assets": assets,
-        "depth_cards": clip.get("depth_cards", []),
-        "layers": clip.get("layers", []),
+        "depth_cards": art.get("depth_cards", []),
+        "layers": art.get("layers", []),
         "scenes": project["gameplay"]["scenes"],
-        "script_symbols": clip.get("script_symbols", []),
-        "symbol_bindings": clip.get("symbol_bindings", []),
-        "frame_tags": clip.get("frame_tags", []),
-        "hitboxes": clip.get("hitboxes", []),
-        "script_bindings": clip.get("script_bindings", []),
+        "script_symbols": art.get("script_symbols", []),
+        "symbol_bindings": art.get("symbol_bindings", []),
+        "frame_tags": art.get("frame_tags", []),
+        "hitboxes": art.get("hitboxes", []),
+        "script_bindings": art.get("script_bindings", []),
         "export_notes": [
-            "Author 2D art, timeline triggers, and visual-script bindings in Clip Studio Paint.",
+            "Author 2D art, timeline triggers, and visual-script bindings in the drIpTECH art pipeline.",
             "Each asset path is treated as a source-of-truth authoring reference.",
-            "Gameplay symbols should match downstream Blender and idTech2 entity IDs where possible."
+            "Gameplay symbols should match downstream Blender and engine entity IDs where possible."
         ]
     }
-    target = out_dir / "clipstudio_export.json"
+    target = out_dir / "art_export.json"
     write_json(target, payload)
 
-    runtime_manifest = out_dir / "clipstudio_runtime_manifest.json"
+    runtime_manifest = out_dir / "art_runtime_manifest.json"
     write_json(
         runtime_manifest,
         {
             "project_name": project["project_name"],
-            "timeline_fps": clip.get("timeline_fps", 12),
-            "symbol_bindings": clip.get("symbol_bindings", []),
-            "script_bindings": clip.get("script_bindings", []),
+            "timeline_fps": art.get("timeline_fps", 12),
+            "symbol_bindings": art.get("symbol_bindings", []),
+            "script_bindings": art.get("script_bindings", []),
             "scene_events": [scene.get("triggers", []) for scene in project["gameplay"]["scenes"]],
-            "hitboxes": clip.get("hitboxes", []),
+            "hitboxes": art.get("hitboxes", []),
         },
     )
     return target
 
 
-def build_blender_bundle(project: dict, clipstudio_bundle: Path, out_dir: Path) -> Path:
+def build_blender_bundle(project: dict, art_bundle: Path, out_dir: Path) -> Path:
     ensure_dir(out_dir)
     blender = project["authoring"]["blender"]
     lift_plan = []
@@ -214,7 +233,7 @@ def build_blender_bundle(project: dict, clipstudio_bundle: Path, out_dir: Path) 
         "entities": project["gameplay"]["entities"],
         "nodecraft_enabled": True,
         "scale": blender.get("scale", 0.1),
-        "clipstudio_bundle": str(clipstudio_bundle),
+        "art_bundle": str(art_bundle),
         "scene_build": blender.get("scene_build", []),
     }
     payload = {
@@ -226,7 +245,7 @@ def build_blender_bundle(project: dict, clipstudio_bundle: Path, out_dir: Path) 
             {
                 "asset_id": sprite["id"],
                 "frame_count": sprite.get("frames", 1),
-                "fps": project["authoring"]["clipstudio"].get("timeline_fps", 12),
+                "fps": project["authoring"]["art_export"].get("timeline_fps", 12),
             }
             for sprite in project["assets"]["sprites"]
         ],
@@ -242,9 +261,9 @@ def build_blender_bundle(project: dict, clipstudio_bundle: Path, out_dir: Path) 
     return target
 
 
-def generate_idtech2_header(project: dict) -> str:
+def generate_engine_header(project: dict) -> str:
     guards = f"{project['project_name'].upper()}_PIPELINE_AUTOGEN_H".replace("-", "_")
-    prefix = project["authoring"]["idtech2"]["autofactor_prefix"]
+    prefix = project["authoring"]["engine"]["autofactor_prefix"]
     systems = normalize_systems(project)
     declared_functions = []
     lines = [
@@ -313,8 +332,8 @@ def generate_idtech2_header(project: dict) -> str:
     return "\n".join(lines)
 
 
-def generate_idtech2_source(project: dict) -> str:
-    prefix = project["authoring"]["idtech2"]["autofactor_prefix"]
+def generate_engine_source(project: dict) -> str:
+    prefix = project["authoring"]["engine"]["autofactor_prefix"]
     systems = normalize_systems(project)
     entities = project["gameplay"]["entities"]
     assets = flatten_assets(project)
@@ -423,50 +442,50 @@ def generate_idtech2_source(project: dict) -> str:
     return "\n".join(lines)
 
 
-def build_idtech2_bundle(project: dict, blender_bundle: Path, out_dir: Path) -> Path:
+def build_engine_bundle(project: dict, blender_bundle: Path, out_dir: Path) -> Path:
     ensure_dir(out_dir)
-    idtech2 = project["authoring"]["idtech2"]
+    engine = project["authoring"]["engine"]
     systems = normalize_systems(project)
     precache = collect_precache_entries(project)
     assets = flatten_assets(project)
     payload = {
         "project_name": project["project_name"],
         "translation_profile": project.get("translation_profile", {}),
-        "module_name": idtech2["module_name"],
-        "asset_root": idtech2["asset_root"],
+        "module_name": engine["module_name"],
+        "asset_root": engine["asset_root"],
         "assets": assets,
         "precache": precache,
         "systems": systems,
         "entities": project["gameplay"]["entities"],
         "source_blender_bundle": str(blender_bundle),
-        "autofactor_prefix": idtech2["autofactor_prefix"],
-        "bootstrap": idtech2.get("bootstrap", {}),
+        "autofactor_prefix": engine["autofactor_prefix"],
+        "bootstrap": engine.get("bootstrap", {}),
     }
-    manifest_path = out_dir / "idtech2_manifest.json"
+    manifest_path = out_dir / "engine_manifest.json"
     write_json(manifest_path, payload)
 
     header_path = out_dir / "g_driptech_pipeline_autogen.h"
     source_path = out_dir / "g_driptech_pipeline_autogen.c"
-    header_path.write_text(generate_idtech2_header(project), encoding="utf-8")
-    source_path.write_text(generate_idtech2_source(project), encoding="utf-8")
+    header_path.write_text(generate_engine_header(project), encoding="utf-8")
+    source_path.write_text(generate_engine_source(project), encoding="utf-8")
     return manifest_path
 
 
 def build(project_path: Path, out_root: Path) -> None:
     project = load_project(project_path)
-    clip_dir = out_root / project["targets"]["clipstudio_bundle"]
+    art_dir = out_root / project["targets"]["art_bundle"]
     blender_dir = out_root / project["targets"]["blender_bundle"]
-    id_dir = out_root / project["targets"]["idtech2_bundle"]
+    engine_dir = out_root / project["targets"]["engine_bundle"]
 
-    clip_bundle = build_clipstudio_bundle(project, clip_dir)
-    blender_bundle = build_blender_bundle(project, clip_bundle, blender_dir)
-    id_bundle = build_idtech2_bundle(project, blender_bundle, id_dir)
+    art_bundle = build_art_bundle(project, art_dir)
+    blender_bundle = build_blender_bundle(project, art_bundle, blender_dir)
+    engine_bundle = build_engine_bundle(project, blender_bundle, engine_dir)
 
     summary = {
         "project": project["project_name"],
-        "clipstudio_bundle": str(clip_bundle),
+        "art_bundle": str(art_bundle),
         "blender_bundle": str(blender_bundle),
-        "idtech2_bundle": str(id_bundle),
+        "engine_bundle": str(engine_bundle),
     }
     print(json.dumps(summary, indent=2))
 

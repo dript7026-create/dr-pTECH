@@ -18,7 +18,7 @@
     }
   },
   "authoring": {
-    "clipstudio": {
+    "art_export": {
       "canvas": {
         "width": 4096,
         "height": 4096,
@@ -246,7 +246,7 @@
         }
       ]
     },
-    "idtech2": {
+    "engine": {
       "module_name": "g_knaveprototype",
       "asset_root": "baseq2/knaveprototype",
       "autofactor_prefix": "knaveproto",
@@ -762,8 +762,8 @@
     ]
   },
   "targets": {
-    "clipstudio_bundle": "clipstudio_bundle",
+    "art_bundle": "art_bundle",
     "blender_bundle": "blender_bundle",
-    "idtech2_bundle": "idtech2_bundle"
+    "engine_bundle": "engine_bundle"
   }
 }

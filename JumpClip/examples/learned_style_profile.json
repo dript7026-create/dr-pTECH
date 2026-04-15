@@ -1,0 +1,30 @@
+{
+  "subject": "jumpclip-region-amber-delta",
+  "godai": {
+    "earth": 0.12,
+    "water": 0.18,
+    "fire": 0.15,
+    "wind": 0.41,
+    "void": 0.14
+  },
+  "style_signals": {
+    "style_family": "16bit",
+    "silhouette_emphasis": 1.48,
+    "texture_detail": 0.32,
+    "palette_limit": 14,
+    "outline_weight": 1.34,
+    "accessory_density": 0.36,
+    "tracing_bias": 0.08
+  },
+  "motion_signals": {
+    "motion_silhouette_bias": 1.22,
+    "motion_squash_stretch": 0.2,
+    "motion_impact": 0.46,
+    "motion_lift": 1.18,
+    "preferred_key_pose_tags": [
+      "airborne_extension",
+      "landing_catch",
+      "look_focus"
+    ]
+  }
+}

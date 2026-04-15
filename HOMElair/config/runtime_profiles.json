@@ -1,0 +1,86 @@
+[
+  {
+    "profile_id": "playhub_depth_lounge",
+    "label": "PlayHub Depth Lounge",
+    "target_family": "PlayHub",
+    "power_budget": "docked-high",
+    "session_topology": "living-room-peer-host",
+    "scene_manifest": "assets/scenes/playhub_sanctuary_plaza.scene.json",
+    "render_profile": {
+      "scene_scale": "full_3d_landscape",
+      "preferred_loaders": ["glb", "obj", "scene-manifest"],
+      "depth_mode": "window-depth-balanced",
+      "shader_mix": 0.92,
+      "mesh_budget": 240000,
+      "landscape_budget": 180000,
+      "skeletal_rig_budget": 6,
+      "billboard_fx_budget": 32
+    },
+    "adaptive_profile": {
+      "handheld_bias": 0.18,
+      "comfort_floor": 0.72,
+      "volumetric_bias": 0.64,
+      "render_reactivity": 0.78
+    },
+    "notes": [
+      "Primary showcase profile for full 3D habitats and social play.",
+      "Use highest landscape fidelity and widest peer session envelope."
+    ]
+  },
+  {
+    "profile_id": "nanoplay_t_fieldkit",
+    "label": "NanoPlay_t Field Kit",
+    "target_family": "NanoPlay_t",
+    "power_budget": "portable-disciplined",
+    "session_topology": "handheld-offline-first",
+    "scene_manifest": "assets/scenes/nanoplay_t_fieldtrail.scene.json",
+    "render_profile": {
+      "scene_scale": "portable_3d_compressed",
+      "preferred_loaders": ["glb", "obj", "scene-manifest"],
+      "depth_mode": "comfort-forward",
+      "shader_mix": 0.76,
+      "mesh_budget": 90000,
+      "landscape_budget": 64000,
+      "skeletal_rig_budget": 3,
+      "billboard_fx_budget": 18
+    },
+    "adaptive_profile": {
+      "handheld_bias": 0.82,
+      "comfort_floor": 0.88,
+      "volumetric_bias": 0.46,
+      "render_reactivity": 0.58
+    },
+    "notes": [
+      "Portable profile for lower thermal and battery burden.",
+      "Keep environment meshes clean and readable over decorative density."
+    ]
+  },
+  {
+    "profile_id": "homeviuplay_calibration_bay",
+    "label": "HomeViuPlay Calibration Bay",
+    "target_family": "HomeViuPlay",
+    "power_budget": "display-lab",
+    "session_topology": "detachable-monitor-console",
+    "scene_manifest": "assets/scenes/homeviuplay_depth_lair.scene.json",
+    "render_profile": {
+      "scene_scale": "full_3d_depth_lab",
+      "preferred_loaders": ["glb", "obj", "scene-manifest"],
+      "depth_mode": "band-calibration",
+      "shader_mix": 0.9,
+      "mesh_budget": 220000,
+      "landscape_budget": 150000,
+      "skeletal_rig_budget": 4,
+      "billboard_fx_budget": 24
+    },
+    "adaptive_profile": {
+      "handheld_bias": 0.34,
+      "comfort_floor": 0.8,
+      "volumetric_bias": 0.72,
+      "render_reactivity": 0.74
+    },
+    "notes": [
+      "Calibration-forward profile for the 32-inch detachable monitor concept.",
+      "Prioritize depth-band inspection and foreground clarity validation."
+    ]
+  }
+]
